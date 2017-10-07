@@ -32,13 +32,13 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 在 _config.yml 文件里按照说明加上你的信息，例如你的名字和联系方式，网站的标题和描述等等。
 
-在 ./about.md 中写上你的简单介绍，例如我叫小刚之类的。
+在 ./about.md 中写上你的简单介绍，例如我叫小刚之类的。
 
 ## 写博客
 
 使用 Markdown 编写文章，位于 _posts 目录，文件名采用日期 + 标题的形式。（见示例文章）
 
-可以在头信息里设置文章的一些基本信息，包括时间、文件夹和标签等，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
+可以在头信息里设置文章的一些基本信息，包括时间、文件夹和标签等，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
 ## 本地服务器
 
@@ -70,7 +70,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 favicon.ico 和 ./statics/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些场景可能会用到的大图标，如 iOS 和 Android 的固定到主页和 Windows 10 的磁贴。
 
-该主题提供了一个自动化脚本能将 svg 矢量图自动生成 favicon 和 png 文件。你所要做的是：
+该主题提供了一个自动化脚本能将 svg 矢量图自动生成 favicon 和 png 文件。你所要做的是：
 
 1. 安装 Node.js 环境
 
@@ -90,7 +90,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### Google Analytics
 
-在 _config.yml 文件的 ga_tracking_id 项填上你在 [Google Analytics](https://analytics.google.com) 上为该网站建立的媒体资源对应的跟踪 ID。
+在 _config.yml 文件的 ga_tracking_id 项填上你在 [Google Analytics](https://analytics.google.com) 上为该网站建立的媒体资源对应的跟踪 ID。
 
 ### 阅读量统计
 
