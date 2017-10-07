@@ -108,7 +108,7 @@ bundle exec jekyll serve -H 0.0.0.0
 | ---           | ---           | --- |
 | key           |               | 评论系统和阅读量统计使用的文章标识符，如果未设置则评论和统计无效 |
 | picture_frame | shadow        | 该文章的图片框样式，如果为 shadow 则图片带有阴影边框 |
-| picture_max_width | 100px     | 该文章图片的最大宽度，默认为 100%，注意需要带单位 |
+| picture_max_width |           | 该文章图片的最大宽度，默认为 100%，例如 50%，100px |
 | modify_date   |               | 该文章的修改时间，不影响首页文章排序。（date 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
 
