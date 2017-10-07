@@ -7,10 +7,11 @@ TeXt 是一个针对博客的一款简洁的主题，它虽然简洁但并不简
 该主题模仿了 iOS 11 的风格，它有大而突出的标题和圆润的按钮和卡片,它主要有以下功能：
 
 - 响应式
+- 分页
+- RSS
 - 文章目录（使用了 [TOC](http://projects.jga.me/toc/) 插件，nice work !）
 - 评论（[Disqus](https://disqus.com/)）
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
-- RSS
 - Emoji（[EmojiOne](https://www.emojione.com/)）
 - Google Analytics
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
@@ -61,13 +62,13 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ## 部署
 
-推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)，当然你也可以部署到到其他地方。
+推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)，当然你也可以部署到到其他地方。
 
 ## 高级
 
-### 网站图标
+### 网站图标
 
-该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 favicon.ico 和 ./statics/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件，和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些特殊应用可能会用到的大图标，如固定到屏幕和磁贴。
+该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 favicon.ico 和 ./statics/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件，和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些特殊应用可能会用到的大图标，如固定到屏幕和磁贴。
 
 该主题提供了一个自动化脚本能将 svg 矢量图自动的生成 favicon 和那些 png 文件。你所要做的是：
 
@@ -104,9 +105,15 @@ bundle exec jekyll serve -H 0.0.0.0
 ---            |---        |---
 key            |           |评论系统和阅读量统计使用的文章标识符，如果未设置则评论和统计无效
 picture-frame  |shadow     |该文章的图片框，如果为 shadow 则图片带有阴影边框
-modify_date    |           |该文章的修改时间，不影响首页文章排序。（date 代表发表时间，会影响文章排序）
+modify_date    |           |该文章的修改时间，不影响首页文章排序。（date 代表发表时间，会影响文章排序）
 comment        |true/false |该文章是否能够评论，默认为 true
 
 ### 更改颜色
 
-主题的颜色配置位于 _sass/settings/colors.scss 中，其中的 $main-color 和 $extra-color 为主题色，可以修改为你所喜欢的颜色，且这两种颜色最好要有一定的区分度。
+主题的颜色配置位于 _sass/settings/colors.scss 中，其中的 $main-color 和 $extra-color 为主题色，可以修改为你所喜欢的颜色，且这两种颜色最好要有一定的区分度。
+
+## 示例
+
+在线访问：[Qi's blog](https://tianqi.name/blog/)
+
+GitHub：[https://github.com/kitian616/kitian616.github.io/](https://github.com/kitian616/kitian616.github.io/)
