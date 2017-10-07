@@ -1,5 +1,7 @@
 # TeXt Theme
 
+![TeXt Theme](https://wx1.sinaimg.cn/large/73bd9e13ly1fk7dohjut0j21kw0zb114.jpg)
+
 TeXt is a succinct theme for blogging.
 
 TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
