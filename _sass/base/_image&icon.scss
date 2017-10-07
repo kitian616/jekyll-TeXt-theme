@@ -1,0 +1,20 @@
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+/**
+ * Icons
+ */
+.icon {
+    display: block;
+    > svg {
+        display: block;
+    }
+}

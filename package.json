@@ -1,0 +1,36 @@
+{
+  "name": "jekyll-TeXt-theme",
+  "version": "1.0.0",
+  "description": "A theme for Jekyll",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "bundle exec jekyll build --watch",
+    "serve": "bundle exec jekyll serve -H 0.0.0.0",
+    "dev": "(npm run build &) && npm run serve",
+    "favicon": "gulp favicon",
+    "icons": "gulp icons",
+    "artwork": "gulp artwork"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitian616/kitian616.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "jekyll"
+  ],
+  "author": "Tian Qi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kitian616/issues"
+  },
+  "homepage": "https://github.com/kitian616#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-svg2png": "^2.0.2",
+    "gulp-to-ico": "^1.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+.m-all {
+    .yaer-title{
+        font-size: $base-font-size * 1.5;
+        color: $text-clr-d;
+    }
+
+    .year-wrapper {
+        padding: 10px;
+        margin: 15px 0;
+    }
+    .post-date {
+        display: inline-block;
+        font-size: $small-font-size;
+        line-height: 1;
+        color: $text-clr-l;
+        width: 4em;
+    }
+
+    .post-link {
+        font-size: $base-font-size;
+        @include link-normal {
+            color: $text-clr-d;
+        }
+        @include link-emphasize {
+            color: $main-color;
+        }
+        line-height: 1;
+    }
+
+    .post-list {
+        margin-bottom: 1em;
+    }
+    .post-block {
+        list-style-type: none;
+        margin: .4em 0 .4em 0;
+    }
+}

@@ -1,0 +1,130 @@
+/**
+ * Links
+ */
+
+a {
+    font-weight: $bold-font-weight;
+    text-decoration: none;
+    @include link-colors($main-color, $main-color);
+    @include link-normal {
+        color: $main-color;
+    }
+    @include link-emphasize {
+        color: $main-color;
+        text-decoration: underline;
+    }
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+
+}
+
+%cursor-pointer {
+    cursor:pointer;
+}
+
+%cursor-default {
+    cursor: default;
+}
+%cursor-not-allowed {
+    cursor: not-allowed;
+}
+
+.round-button {
+    @extend %cursor-pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $bold-font-weight;
+    line-height: 1;
+    height: 2em;
+    width: 2em;
+    box-sizing: border-box;
+    padding: .4em;
+    border-radius: 50%;
+    @include link-normal {
+        background-color: $text-bg-clr;
+        color: $text-clr;
+        text-decoration: none;
+    }
+    @include link-emphasize {
+        background-color: $main-color;
+        color: $text-odd-clr;
+        text-decoration: none;
+    }
+
+    .icon {
+        @include link-normal {
+            path {
+                fill: $text-clr;
+            }
+        }
+        @include link-emphasize {
+            path {
+                fill: $text-odd-clr;
+            }
+        }
+    }
+    //inactive button (gray)
+    &.inactive {
+        @extend %cursor-not-allowed;
+        @include link-normal {
+            color: $text-clr;
+        }
+        @include link-emphasize {
+            background-color: $text-bg-clr;
+        }
+        .icon {
+            @include link-normal {
+                path {
+                    fill: $text-clr-l;
+                }
+            }
+            @include link-emphasize {
+                path {
+                    fill: $text-clr-l;
+                }
+            }
+        }
+    }
+
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}
+
+.round-rect-button {
+    @extend %cursor-pointer;
+    display: block;
+    font-weight: $bold-font-weight;
+    box-sizing: border-box;
+    padding: .4em .6em;
+    line-height: 1;
+    border-radius: 1em;
+    @include link-normal {
+        background-color: $text-bg-clr;
+        color: $text-clr;
+        text-decoration: none;
+    }
+    @include link-emphasize {
+        background-color: $main-color;
+        color: $text-odd-clr;
+        text-decoration: none;
+
+    }
+    .icon {
+        @include link-normal {
+            path {
+                fill: $text-clr;
+            }
+        }
+        @include link-emphasize {
+            path {
+                fill: $text-odd-clr;
+            }
+        }
+    }
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}

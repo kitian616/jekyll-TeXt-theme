@@ -1,0 +1,40 @@
+/**
+ * Site Info
+ */
+
+.m-page-footer {
+    height: $footer-height;
+    margin-top: - $footer-height;
+    background-color: $text-bg-clr;
+    p {
+        color: $text-clr;
+    }
+    a {
+        color: $text-clr;
+        &:visited {
+            color: $text-clr;
+        }
+        &:hover {
+          color: $main-color;
+        }
+        &:active {
+            color: $text-clr;
+        }
+    }
+    .follow-me {
+        padding: 1.5em 0 0 0;
+        margin: 0 auto;
+        .round-button {
+            box-shadow: $shadow-down;
+        }
+        .mail {
+            display: none;
+        }
+    }
+    .site-info {
+        display: table;
+        font-size: $footer-font-size;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

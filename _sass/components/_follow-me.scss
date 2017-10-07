@@ -1,0 +1,103 @@
+/**
+* Follow ME !! ^^ ^^ (aside)
+*/
+.follow-me {
+    display: table;
+    > div {
+        display: table-cell;
+        text-align: center;
+    }
+    p {
+        margin: 0;
+    }
+    ul{
+        display: block;
+        margin:  0 0 $content-gap 0;
+    }
+    li {
+        float: left;
+        list-style-type: none;
+    }
+    .icon {
+        > svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    //default colors
+    .round-button {
+        width: 2.5em;
+        height: 2.5em;
+        .icon > svg path {
+            fill: $text-odd-clr;
+        }
+        &:not(:last-child){
+            margin-right: $spacing-unit / 6;
+        }
+    }
+    .mail {
+        @include link-normal() {
+            background-color: $mail-color;
+        }
+        @include link-emphasize() {
+            background-color: darken($mail-color, 20%);
+        }
+    }
+    .weibo {
+        @include link-normal() {
+            background-color: $weibo-color;
+        }
+        @include link-emphasize() {
+            background-color: darken($weibo-color, 20%);
+        }
+    }
+    .facebook {
+        @include link-normal() {
+            background-color: $facebook-color;
+        }
+        @include link-emphasize() {
+            background-color: darken($facebook-color, 20%);
+        }
+    }
+    .twitter {
+        @include link-normal() {
+            background-color: $twitter-color;
+        }
+        @include link-emphasize() {
+            background-color: darken($twitter-color, 20%);
+        }
+    }
+    .googlepluse {
+        @include link-normal() {
+            background-color: $google-plus-color;
+        }
+        @include link-emphasize() {
+            background-color: darken($google-plus-color, 20%);
+        }
+    }
+    .github {
+        @include link-normal() {
+            background-color: $github-color;
+        }
+        @include link-emphasize() {
+            background-color: lighten($github-color, 30%);
+        }
+    }
+    .linkedin {
+        @include link-normal() {
+            background-color: $linkedin-color;
+        }
+        @include link-emphasize() {
+            background-color: darken($linkedin-color, 20%);
+        }
+    }
+    .douban {
+        @include link-normal() {
+            background-color: $douban-color;
+        }
+        @include link-emphasize() {
+            background-color: darken($douban-color, 20%);
+        }
+    }
+}

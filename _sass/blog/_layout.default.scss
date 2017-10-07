@@ -1,0 +1,25 @@
+/**
+ * Page content
+ */
+
+.m-page-stage {
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow:auto;
+    padding-bottom: $footer-height;
+    animation: fade-in-down .8s;
+}
+
+.m-page-content {
+    padding: $spacing-unit * 1.4 0 $spacing-unit / 4;
+    @include media-query($on-laptop) {
+        padding: $spacing-unit / 2 0;
+    }
+    @include media-query($on-palm) {
+        padding: $spacing-unit / 4 0;
+    }
+}
+.m-page-main {
+    margin: 0 auto;
+}
+

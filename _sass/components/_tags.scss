@@ -1,0 +1,54 @@
+.m-tags {
+
+    .article-tag {
+        font-size: $base-font-size;
+        display: inline-block;
+        margin: $content-gap / 6 0;
+    }
+
+    .tag-count {
+        font-size: $base-font-size * 0.8;
+        display: inline-block;
+        line-height: 1.2;
+        margin-left: 0.2em;
+        vertical-align: top;
+    }
+
+    .tag-show-all {
+        @include link-normal {
+            color: $text-odd-clr;
+            background-color: $text-clr-l;
+        }
+        @include link-emphasize {
+            color: $text-odd-clr;
+            background-color: $extra-color;
+        }
+    }
+
+    .tag-other{
+        @include link-normal {
+            color: $text-odd-clr;
+            background-color: $main-color;
+        }
+        @include link-emphasize {
+            color: $text-odd-clr;
+            background-color: $extra-color;
+        }
+    }
+
+    .tag-1 {
+        background-color: rgba($main-color, .4);
+    }
+
+    .tag-2 {
+        background-color: rgba($main-color, .55);
+    }
+
+    .tag-3 {
+        background-color: rgba($main-color, .7);
+    }
+
+    .tag-4 {
+        background-color: rgba($main-color, .9);
+    }
+}

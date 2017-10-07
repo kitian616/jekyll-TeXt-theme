@@ -1,0 +1,22 @@
+.m-post-list {
+    & > article {
+        h1 {
+            font-size: $base-font-size * 1.6;
+            & > a {
+                @include link-normal {
+                    color: $text-clr-d;
+                }
+                @include link-emphasize {
+                    color: $main-color;
+                }
+                color: $text-clr-d;
+            }
+        }
+        margin: $spacing-unit 0;
+    }
+    .m-article-content {
+        img {
+            max-height: 200px;
+        }
+    }
+}

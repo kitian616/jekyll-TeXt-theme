@@ -1,0 +1,67 @@
+.home {
+    display: table;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    background:
+        linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.8)),
+        url(https://wx1.sinaimg.cn/large/73bd9e13ly1fjkr4ydmixj21kw123wr0.jpg)
+        #333 no-repeat fixed 50% 50%;
+    background-size: cover;
+
+    .main {
+        display: table-cell;
+        box-sizing: border-box;
+        text-align: center;
+        vertical-align: middle;
+        animation: fade-in-down .8s;
+        .follow-me {
+            margin: $content-gap * 1.5 auto 0 auto;
+            .mail {
+                display: none;
+            }
+        }
+        h1 {
+            margin: 0;
+            color: $text-odd-clr;
+        }
+        a {
+            @include link-normal {
+                color: $text-odd-clr;
+            }
+            @include link-emphasize {
+                color: $main-color;
+            }
+        }
+    }
+
+    .content {
+        display: table;
+        padding: $content-gap 0 $content-gap / 4 0;
+        margin: 0 auto;
+    }
+
+    .my-photo {
+        display: inline-block;
+        &:hover {
+            transform: rotate(360deg);
+        }
+        img {
+            display: block;
+            box-sizing: border-box;
+            height: 140px;
+            width: 140px;
+            border-radius: 70px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        -webkit-transition: transform 0.8s ease 0s;
+        -moz-transition: transform 0.8s ease 0s;
+        transition: transform 0.8s ease 0s;
+    }
+}
+

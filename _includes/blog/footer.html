@@ -1,0 +1,19 @@
+<div class="m-page-footer js-page-footer">
+    <div class="main">
+        <aside class="follow-me">
+            {% include info/follow-me.html %}
+        </aside>
+        <footer class="site-info">
+            <p>© {{ site.title }} 2015 - 2017</p>
+            <p>Powered by <a href="https://pages.github.com/">GitHub Pages</a> & <a href="http://jekyllrb.com/">Jekyll</a>.</p>
+            <p>Theme by <a href="{{ site.baseurl | append: '/' | replace: '//', '/' }}">{{ site.author }}</a>.
+            {% if site.github_username and site.github_repo %}
+            <iframe
+                style="display: inline-block;vertical-align: text-top;"
+                src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="91px" height="20px" >
+            </iframe>
+            {% endif %}
+            </p>
+        </footer>
+    </div>
+</div>

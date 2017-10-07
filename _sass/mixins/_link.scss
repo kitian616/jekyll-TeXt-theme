@@ -1,0 +1,21 @@
+@mixin link-colors ($color-normal, $color-emphasize) {
+    &, &:visited {
+        color: $color-normal;
+    }
+    &:hover, &:active {
+        color: $color-emphasize;
+    }
+}
+
+@mixin link-normal () {
+    &, &:visited {
+        @content;
+    }
+};
+
+@mixin link-emphasize () {
+    &.hover, &.active, &.focus,
+    &:hover, &:active, &:focus {
+        @content;
+    }
+};

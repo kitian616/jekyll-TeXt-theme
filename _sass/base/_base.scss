@@ -1,0 +1,73 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin: $base-font-size / 2 0;
+}
+
+/**
+ * Basic styling
+ */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+    ::-moz-selection {
+        background: $select-clr;
+    }
+    ::-webkit-selection {
+        background: $select-clr;
+    }
+    ::selection {
+        background: $select-clr;
+    }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+button {
+    cursor:pointer;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    border-width: 0;
+    font-size: $base-font-size;
+}

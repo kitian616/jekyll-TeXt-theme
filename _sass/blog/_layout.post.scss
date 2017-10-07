@@ -1,0 +1,38 @@
+.m-post {
+    .m-page-main {
+        padding-right: $aside-width;
+        @include media-query($on-laptop) {
+            padding-right: 0;
+        }
+    }
+    .article-header {
+        color: $text-clr-d;
+        margin-bottom:  $spacing-unit / 6;
+    }
+
+    .article-title {
+        margin-bottom:  $spacing-unit;
+        font-size: $h1-font-size;
+        color: $text-clr-d;
+    }
+
+    .article-license {
+        position: relative;
+        max-width: 500px;
+        margin: 1.5em 0;
+    }
+
+}
+.m-article-aside {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: $aside-width;
+    padding: $spacing-unit * 1.4 $spacing-unit 0 $spacing-unit;
+    overflow: auto;
+    @include media-query($on-laptop) {
+        display: none;
+    }
+}

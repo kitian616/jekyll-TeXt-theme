@@ -1,0 +1,29 @@
+.m-pagination {
+    padding: $spacing-unit / 3 0;
+
+    .icon {
+        display: block;
+         > svg {
+            width: 1.6em;
+            height: 1.6em;
+            margin: -1px;
+        }
+    }
+
+    .cur-page {
+        .round-button {
+            background-color: $main-color;
+            border-color: $main-color;
+            color: $text-odd-clr;
+        }
+    }
+
+    li {
+        list-style-type: none;
+        float: left;
+        &:not(:last-child) {
+            margin-right: $spacing-unit / 6;
+        }
+    }
+
+}

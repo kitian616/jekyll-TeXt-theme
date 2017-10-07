@@ -1,0 +1,32 @@
+.m-license {
+    border-radius: $spacing-unit / 2;
+    background-color: $text-bg-clr;
+    box-shadow: $shadow-down;
+    padding: 0.5em 1em;
+    font-weight: $bold-font-weight;
+
+    img {
+        vertical-align: bottom;
+    }
+
+    .url {
+        word-wrap: break-word;
+    }
+
+    .octocat {
+        float: right;
+    }
+
+    .octocat img{
+        width: 70px;
+        height: auto;
+        margin: 0 $spacing-unit / 3;
+        border-width: 0;
+        border-radius: 35px;
+    }
+
+    .cc-license {
+        float: right;
+        margin-left: $spacing-unit / 3;
+    }
+}
