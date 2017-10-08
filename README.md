@@ -10,15 +10,16 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 - 响应式
 - 分页
-- RSS
 - 文章目录（使用了 [TOC](http://projects.jga.me/toc/) 插件，nice work !）
-- 评论（[Disqus](https://disqus.com/)）
+- 文章标签
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
 - Emoji（[EmojiOne](https://www.emojione.com/)）
+- 评论（[Disqus](https://disqus.com/)）
 - Google Analytics
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
 - 网站图标的自动化工具
+- RSS
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解的话可以直接看后面的高级部分，这是该主题一些特有属性。
 
@@ -109,7 +110,7 @@ bundle exec jekyll serve -H 0.0.0.0
 | key           |               | 评论系统和阅读量统计使用的文章标识符，如果未设置则评论和统计无效 |
 | picture_frame | shadow        | 该文章的图片框样式，如果为 shadow 则图片带有阴影边框 |
 | picture_max_width |           | 该文章图片的最大宽度，默认为 100%，例如 50%，100px |
-| modify_date   |               | 该文章的修改时间，不影响首页文章排序。（date 代表发表时间，会影响文章排序） |
+| modify_date   |               | 该文章的修改时间，不影响首页文章排序（date 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
 
 ### 更改颜色
