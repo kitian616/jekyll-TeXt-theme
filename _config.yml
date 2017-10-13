@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-# hostname: The site's hostname e.g. https://blog.someone.com
+# hostname: The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
 baseurl: "/"
 title: Someone's blog
 description: Someone's Blog
