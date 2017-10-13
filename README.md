@@ -33,7 +33,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ## 配置
 
-在 _config.yml 文件里按照说明加上你的信息，例如网站的协议加域名（https://www.domain.com），这个是必须填的，你的名字和联系方式，网站的标题和描述等等。
+在 _config.yml 文件里按照说明加上你的信息，例如网站的协议加域名，例如 `https://www.domain.com`，这个是必须填的，你的名字和联系方式，网站的标题和描述等等。
 
 在 ./about.md 中写上你的简单介绍，例如我叫小刚之类的。
 
@@ -116,6 +116,10 @@ bundle exec jekyll serve -H 0.0.0.0
 ### 更改颜色
 
 主题的颜色配置位于 _sass/settings/colors.scss 中，其中的 $main-color 和 $extra-color 为主题色，可以修改为你所喜欢的颜色，这两种颜色最好要有一定的区分度。
+
+### 其他资源
+
+_includes/icon/social 有很多的社交产品的图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
 
 ## 示例
 
