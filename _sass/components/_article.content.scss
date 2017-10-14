@@ -67,17 +67,15 @@
         overflow: auto;
         -webkit-overflow-scrolling: touch;
         margin: 0;
-        background-image: linear-gradient(rgba(0, 0, 0, .05) 50%, transparent 50%);
+        border-radius: .4em;
         background-size: auto $code-font-size * $code-line-height * 2;
         background-origin: content-box;
         & > code {
             font-size: $code-font-size;
             padding: $code-font-size;
-            padding-top: 0;
             margin: 0;
             display: block;
             line-height: $code-line-height;
-            border-width: 0;
             background-color: transparent;
         }
     }
