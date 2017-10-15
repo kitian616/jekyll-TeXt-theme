@@ -68,6 +68,8 @@
         -webkit-overflow-scrolling: touch;
         margin: 0;
         border-radius: .4em;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         background-size: auto $code-font-size * $code-line-height * 2;
         background-origin: content-box;
         & > code {

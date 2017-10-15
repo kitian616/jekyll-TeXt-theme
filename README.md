@@ -112,9 +112,13 @@ bundle exec jekyll serve -H 0.0.0.0
 | modify_date   |               | 该文章的修改时间，不影响首页文章排序（date 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
 
-### 更改颜色
+### 颜色主题
 
-主题的颜色配置位于 _sass/settings/colors.scss 中，其中的 $main-color 和 $extra-color 为主题色，可以修改为你所喜欢的颜色，这两种颜色最好要有一定的区分度。
+颜色主题位于文件夹 _sass/colors 中，目前有 2 个主题：default 和 dark。修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
+
+![Dark Color Theme](https://wx3.sinaimg.cn/large/73bd9e13ly1fkjd6rr2z3j211w0sedir.jpg)
+
+更多颜色主题敬请期待。
 
 ### 其他资源
 
