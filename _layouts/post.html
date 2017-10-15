@@ -2,9 +2,9 @@
 layout: blog-base
 ---
 <div class="m-post m-page-content">
+    {% include blog/header.html %}
     <div class="m-page-main">
-        {% include blog/header.html %}
-        <div class="main">
+        <div class="main clearfix js-main">
             <article itemscope itemtype="http://schema.org/BlogPosting">
                 <meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
                 <header class="article-header">
@@ -35,18 +35,135 @@ layout: blog-base
                 <section>{% include utils/comment-disqus.html %}</section>
                 {% endif %}
             </article>
+            <aside class="m-article-aside js-article-aside">
+                <div class="m-toc js-toc"></div>
+            </aside>
         </div>
     </div>
-    <aside class="m-article-aside">
-        <div class="m-toc js-toc"></div>
-    </aside>
 </div>
 
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
 <script type="text/javascript">
+    window.throttle = function(func, wait) {
+        var args,
+            result,
+            thisArg,
+            timeoutId,
+            lastCalled = 0;
+
+        function trailingCall() {
+            lastCalled = new Date;
+            timeoutId = null;
+            result = func.apply(thisArg, args);
+        }
+        return function() {
+            var now = new Date,
+                remaining = wait - (now - lastCalled);
+
+            args = arguments;
+            thisArg = this;
+
+            if (remaining <= 0) {
+                clearTimeout(timeoutId);
+                timeoutId = null;
+                lastCalled = now;
+                result = func.apply(thisArg, args);
+            }
+            else if (!timeoutId) {
+                timeoutId = setTimeout(trailingCall, remaining);
+            }
+            return result;
+        };
+    }
+    window.debounce = function(func, wait, immediate) {
+        var args,
+            result,
+            thisArg,
+            timeoutId;
+
+        function delayed() {
+        timeoutId = null;
+        if (!immediate) {
+            result = func.apply(thisArg, args);
+        }
+        }
+        return function() {
+        var isImmediate = immediate && !timeoutId;
+        args = arguments;
+        thisArg = this;
+
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(delayed, wait);
+
+        if (isImmediate) {
+            result = func.apply(thisArg, args);
+        }
+        return result;
+        };
+    }
     $(function() {
-        // toc //
-        $(".js-toc").toc({
+        var $window = $(window);
+        var $pageMain = $('.js-main');
+        var $pageFooter = $('.js-page-footer');
+        var $articleAside = $('.js-article-aside');
+        var $toc = $('.js-toc');
+
+        function setAsideTOC() {
+            var asideTop,
+                asideLeft,
+                scrollBottom,
+                asideBottomTop,
+                lastScrollTop;
+
+            function init() {
+                var asideOffset = $articleAside.offset();
+                var footerOffset = $pageFooter.offset();
+                var mainOffset = $pageMain.offset();
+                asideTop = mainOffset.top;
+                asideHeight = $toc.outerHeight() + parseInt($articleAside.css('padding-top'), 10) + parseInt($articleAside.css('padding-bottom'), 10);
+                asideLeft = mainOffset.left + $pageMain.outerWidth() - $articleAside.outerWidth() - parseInt($pageMain.css('padding-right'), 10);
+                scrollBottom = footerOffset.top - asideHeight;
+                asideBottomTop = scrollBottom - mainOffset.top;
+            }
+            function setAside(force) {
+                force !== true && (force = false);
+                var scrollTop = $window.scrollTop();
+                if (scrollTop >= asideTop && scrollTop <= scrollBottom) {
+                    (!force && lastScrollTop >= asideTop && lastScrollTop <= scrollBottom) ||
+                        $articleAside.css({
+                            position: 'fixed',
+                            left: asideLeft + 'px',
+                            top: 0
+                        });
+                } else if (scrollTop > scrollBottom) {
+                    (!force && lastScrollTop > scrollBottom) ||
+                        $articleAside.css({
+                            position: 'relative',
+                            left: 0,
+                            top: asideBottomTop + 'px'
+                        });
+                } else {
+                    (!force && lastScrollTop < asideTop) ||
+                        $articleAside.css({
+                            position: 'relative',
+                            left: 0,
+                            top: 0
+                        });
+                }
+                lastScrollTop = scrollTop;
+            }
+            init();
+            setAside();
+            $window.on('resize', throttle(function() {
+                init();
+                setAside(true);
+            }, 100));
+            $window.on('scroll', debounce(setAside, 15, true));
+        }
+
+        setTimeout(setAsideTOC, 1000);
+
+        $toc.toc({
             'selectors': 'h1,h2,h3',
             'container': '.js-article-content',
         });

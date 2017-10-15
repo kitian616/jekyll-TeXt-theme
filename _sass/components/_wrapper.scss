@@ -1,9 +1,7 @@
 .main {
-    box-sizing: border-box;
     margin: 0 auto;
     padding: 0 $spacing-unit;
     max-width: $content-max-width;
-    width: 100%;
     @include media-query($on-laptop) {
         padding: 0 $spacing-unit / 2;
     }
