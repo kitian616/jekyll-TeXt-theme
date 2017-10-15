@@ -10,11 +10,6 @@
                     box-shadow: 0 0 5px rgba(0, 0, 0, .4);
                 }
             {% endif %}
-            {% if page.picture_max_width %}
-                .m-article-content .content-img {
-                    max-width: {{ page.picture_max_width }} !important;
-                }
-            {% endif %}
         </style>
         <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     </head>
@@ -24,7 +19,7 @@
         </div>
         {% include blog/footer.html %}
         <script>
-            $(document).ready(function(){
+            $(function() {
                 // display coding language //
                 $(".highlight").each(function() {
                     $(this).attr("data-lang", $(this).find("code").attr("data-lang"));

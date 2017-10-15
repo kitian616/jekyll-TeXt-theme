@@ -126,13 +126,19 @@ layout: blog-base
                 }
                 lastScrollTop = scrollTop;
             }
-            init();
-            setAside();
+            function isAsideDisplay() {
+                return $articleAside.css('display') !== 'none';
+            }
+
+            isAsideDisplay() && (init(), setAside());
+            $window.on('scroll', function() {
+                isAsideDisplay() && setAside();
+            });
             $window.on('resize', throttle(function() {
                 init();
                 setAside(true);
             }, 100));
-            $window.on('scroll', setAside,);
+            setTimeout(init, 4000);
         }
 
         setTimeout(setAsideTOC, 1000);
