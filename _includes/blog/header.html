@@ -1,18 +1,18 @@
 <header class="m-page-header main clearfix">
     <a class="site-title" title="{% if site.blog.description %}{{ site.blog.description }}{% else %}{{ site.description }}{% endif %}"
-        href="{{ site.blog.baseurl |  prepend: site.baseurl | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}
+        href="{{ site.blog.baseurl |  prepend: site.base_path | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}
     </a>
     <div class="site-logo">
         {% include logo/logo.svg %}
     </div>
     <nav class="site-nav">
         <ul class="clearfix">
-            <li><a href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">Home</a></li>
-            <li><a href="{{ "/all.html" | prepend: site.blog.baseurl | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">All</a></li>
+            <li><a href="{{ "/" | prepend: site.base_path | replace: '//', '/' }}">Home</a></li>
+            <li><a href="{{ "/all.html" | prepend: site.blog.baseurl | prepend: site.base_path | append: "?tag=" | replace: '//', '/'}}">All</a></li>
             {% for list in site.nav_lists %}
                 <li><a href="{{ list.url }}"> {{ list.title }} </a></li>
             {% endfor %}
-            <li><a type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | replace: '//', '/'}}">RSS</a></li>
+            <li><a type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.base_path | replace: '//', '/'}}">RSS</a></li>
         </ul>
     </nav>
 </header>

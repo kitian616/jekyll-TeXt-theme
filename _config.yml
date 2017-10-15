@@ -6,10 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-# hostname: The site's Protocol and Hostname e.g. https://blog.someone.com (!!required!!)
-baseurl: "/"
+# base_url: https://blog.someone.com #*required! The site's Protocol and Hostname e.g. https://blog.someone.com
+base_path: '/'
 title: Someone's blog
-description: Someone's Blog
+description: > #this means to ignore newlines until "nav_lists:"
+  Someone's Blog
+
 nav_lists:
   - title: About
     url: /about.html
@@ -19,30 +21,30 @@ nav_lists:
 # github_repo_tree: e.g. master
 
 ## Language & timezone ##
-lang: zh # the language of your site
+lang: zh #the language of your site
 timezone: Asia/Shanghai
 
 ## Author & social ##
 author: Someone
-# email: your Email address e.g. someone@site.com
-# facebook_username: your Facebook username
-# twitter_username: your Twitter username
-# github_username: your GitHub username
-# googleplus_username: your Google+ username
-# weibo_username: your Weibo username
-# douban_username: your Douban username
-# linkedin_username: your Linkedin username
+# email:  #your Email address e.g. someone@site.com
+# facebook_username:  #your Facebook username
+# twitter_username:  #your Twitter username
+# github_username:  #your GitHub username
+# googleplus_username:  #your Google+ username
+# weibo_username:  #your Weibo username
+# douban_username:  #your Douban username
+# linkedin_username:  #your Linkedin username
 
 ## Comment system (Disqus) ##
-# disqus_shortname: the Disqus shortname for the site
+# disqus_shortname:  #the Disqus shortname for the site
 
 ## Google Analytics ##
-# ga_tracking_id: Google analytics id for the site
+# ga_tracking_id:  #Google analytics id for the site
 
 ## Reading quantity (LeanCloud) ##
-# app_id: LeanCloud App id
-# app_key: LeanCloud App key
-# app_class: LeanCloud App class
+# app_id:  #LeanCloud App id
+# app_key:  #LeanCloud App key
+# app_class:  #LeanCloud App class
 
 ## Paginate ##
 paginate: 7

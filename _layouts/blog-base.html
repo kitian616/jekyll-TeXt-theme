@@ -3,7 +3,7 @@
     <head>
         {% include common-head.html %}
         {% include head-icons-rel.html %}
-        <link rel="stylesheet" href="{{ "/statics/css/blog.css" | prepend: site.baseurl | replace:'//','/' }}">
+        <link rel="stylesheet" href="{{ "/statics/css/blog.css" | prepend: site.base_path | replace:'//','/' }}">
         <style>
             {% if page.picture_frame == 'shadow' %}
                 .m-article-content img {

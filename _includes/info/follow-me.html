@@ -2,7 +2,7 @@
     <div>
         <ul class="clearfix" itemscope itemtype="http://schema.org/Person">
             <meta itemprop="name" content="{{ site.author }}">
-            <link itemprop="url" href="{{ '/' | prepend: site.hostname }}">
+            <link itemprop="url" href="{{ '/' | prepend: site.base_url }}">
             {% if site.email %}
             <li class="round-button mail" title="Send me e-mail.">
                 <a itemprop="sameAs" href="mailto:://{{ site.email }}" target="_blank">
