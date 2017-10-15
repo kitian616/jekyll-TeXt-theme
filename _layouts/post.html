@@ -75,32 +75,6 @@ layout: blog-base
             return result;
         };
     }
-    window.debounce = function(func, wait, immediate) {
-        var args,
-            result,
-            thisArg,
-            timeoutId;
-
-        function delayed() {
-        timeoutId = null;
-        if (!immediate) {
-            result = func.apply(thisArg, args);
-        }
-        }
-        return function() {
-        var isImmediate = immediate && !timeoutId;
-        args = arguments;
-        thisArg = this;
-
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(delayed, wait);
-
-        if (isImmediate) {
-            result = func.apply(thisArg, args);
-        }
-        return result;
-        };
-    }
     $(function() {
         var $window = $(window);
         var $pageMain = $('.js-main');
@@ -135,19 +109,19 @@ layout: blog-base
                             left: asideLeft + 'px',
                             top: 0
                         });
-                } else if (scrollTop > scrollBottom) {
-                    (!force && lastScrollTop > scrollBottom) ||
-                        $articleAside.css({
-                            position: 'relative',
-                            left: 0,
-                            top: asideBottomTop + 'px'
-                        });
-                } else {
+                } else if (scrollTop < asideTop) {
                     (!force && lastScrollTop < asideTop) ||
                         $articleAside.css({
                             position: 'relative',
                             left: 0,
                             top: 0
+                        });
+                } else {
+                    (!force && lastScrollTop > scrollBottom) ||
+                        $articleAside.css({
+                            position: 'relative',
+                            left: 0,
+                            top: asideBottomTop + 'px'
                         });
                 }
                 lastScrollTop = scrollTop;
@@ -158,7 +132,7 @@ layout: blog-base
                 init();
                 setAside(true);
             }, 100));
-            $window.on('scroll', debounce(setAside, 15, true));
+            $window.on('scroll', setAside,);
         }
 
         setTimeout(setAsideTOC, 1000);

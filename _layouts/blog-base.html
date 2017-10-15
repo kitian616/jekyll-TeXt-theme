@@ -23,25 +23,11 @@
             {{ content }}
         </div>
         {% include blog/footer.html %}
-
-        <script src="//cdn.bootcss.com/emojione/2.2.6/lib/js/emojione.min.js"></script>
         <script>
             $(document).ready(function(){
                 // display coding language //
                 $(".highlight").each(function() {
                     $(this).attr("data-lang", $(this).find("code").attr("data-lang"));
-                });
-                // picture lazy load //
-                // $(".article-content img").each(function(){
-                //     $(this).attr('data-src', $(this).attr('src'));
-                // });
-                // $(".article-content img").unveil();
-                //
-                $(".m-article-content").each(function() {
-                    var original = $(this).html();
-                    emojione.imageType = 'svg';
-                    var converted = emojione.toImage(original);
-                    $(this).html(converted);
                 });
             });
         </script>
