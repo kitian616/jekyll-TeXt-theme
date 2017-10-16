@@ -1,46 +1,35 @@
 ///
 // Colors Setting
 ///
-// bg = background
-// bd = border
-// tx = text
-// sd = shadow
-// hv = hover
-// sl = select
-// ac = active
-// m = main
-// l = light
-// d = dark
-// clr = color
 
+// main colors
+$main-color-1:     #ffbf00;
+$text-color-1:     #fff;
 
-// main colors (!! Color THEME !!)
-$main-color:    #ffbf00;
-$extra-color:   #ff0040;
+$main-color-2:     #ff3366;
+$text-color-2:     #fff;
+
+$main-color-3:     #333;
+$text-color-3:     #fff;
 
 // background colors
-$bg-clr:        #111;
+$background-color: #111;
+// text colors
+$text-color-d:     #ddd;
+$text-color:       #bbb;
+$text-color-l:     #999;
 
 // border and shadow colors
-$bd-clr:        rgba(#000, .2);
-$select-clr:    rgba($main-color, .5);
-$shadow-down: 0 2px 10px rgba(#fff, .15), 0 0 16px rgba(#fff, .05);
-
-// text colors
-$text-clr-d:    #eee;
-$text-clr:      #ccc;
-$text-clr-l:    #aaa;
-
-$text-odd-clr:  #111;
-
-$text-bg-clr:   #333;
+$border-color:     rgba(#000, .2);
+$select-color:     rgba($main-color-1, .5);
+$shadow-down:      0 2px 10px rgba(#fff, .15), 0 0 16px rgba(#fff, .05);
 
 // logo colors
-$mail-color:        #0072c5;
-$weibo-color:       #e6162d;
-$facebook-color:    #4267b2;
-$google-plus-color: #ea4335;
-$twitter-color:     #1da1f2;
-$douban-color:      #42bd56;
-$github-color:      #000;
-$linkedin-color:    #1074af;
+$mail-color:       #0072c5;
+$weibo-color:      #e6162d;
+$facebook-color:   #4267b2;
+$google-plus-color:#ea4335;
+$twitter-color:    #1da1f2;
+$douban-color:     #42bd56;
+$github-color:     #000;
+$linkedin-color:   #1074af;

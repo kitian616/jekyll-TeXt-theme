@@ -15,27 +15,27 @@
         font-size: $small-font-size;
         text-decoration: none;
         line-height: $base-line-height;
-        color: $text-clr;
+        color: $text-color;
         font-weight: $base-font-weight;
         @include link-normal {
-            color: $text-clr;
+            color: $text-color;
         }
         @include link-emphasize {
-            color: $main-color;
+            color: $main-color-1;
         }
     }
 
     .toc-h1 {
         padding: 0;
         a {
-            color: $text-clr-d;
+            color: $text-color-d;
             font-weight: $bold-font-weight;
         }
     }
     .toc-h2 {
         padding: 0;
         a {
-            color: $text-clr-d;
+            color: $text-color-d;
             font-weight: $bold-font-weight;
         }
     }
@@ -62,7 +62,7 @@
 
     .toc-active {
         a {
-            color: $main-color;
+            color: $main-color-1;
         }
     }
 
