@@ -56,7 +56,7 @@ a {
     .icon {
         @include link-normal {
             path {
-                fill: $text-color;
+                fill: $text-color-3;
             }
         }
         @include link-emphasize {
@@ -69,20 +69,22 @@ a {
     &.inactive {
         @extend %cursor-not-allowed;
         @include link-normal {
-            color: $text-color;
+            background-color: $main-color-3;
+            color: $text-color-3;
         }
         @include link-emphasize {
             background-color: $main-color-3;
+            color: $text-color-3;
         }
         .icon {
             @include link-normal {
                 path {
-                    fill: $text-color-l;
+                    fill: $text-color-3;
                 }
             }
             @include link-emphasize {
                 path {
-                    fill: $text-color-l;
+                    fill: $text-color-3;
                 }
             }
         }
@@ -103,7 +105,7 @@ a {
     border-radius: 1em;
     @include link-normal {
         background-color: $main-color-3;
-        color: $text-color;
+        color: $text-color-3;
         text-decoration: none;
     }
     @include link-emphasize {
@@ -115,7 +117,7 @@ a {
     .icon {
         @include link-normal {
             path {
-                fill: $text-color;
+                fill: $text-color-3;
             }
         }
         @include link-emphasize {

@@ -9,20 +9,21 @@ $text-color-1:     #fff;
 $main-color-2:     #ff3366;
 $text-color-2:     #fff;
 
-$main-color-3:     #333;
+$main-color-3:     #111;
 $text-color-3:     #fff;
 
 // background colors
-$background-color: #111;
+$background-color: #21252b;
 // text colors
 $text-color-d:     #ddd;
 $text-color:       #bbb;
 $text-color-l:     #999;
+$text-background-color:#111;
 
 // border and shadow colors
 $border-color:     rgba(#000, .2);
 $select-color:     rgba($main-color-1, .5);
-$shadow-down:      0 2px 10px rgba(#fff, .15), 0 0 16px rgba(#fff, .05);
+$shadow-down:      none;
 
 // logo colors
 $mail-color:       #0072c5;

@@ -55,7 +55,7 @@
         padding: .2em .4em;
         border-radius: .4em;
         margin: 0 .1em;
-        background-color: $main-color-3;
+        background-color: $text-background-color;
         span {
             padding: 0;
             margin: 0;
@@ -86,7 +86,7 @@
         margin: $content-gap 0;
         &:before {
             content: attr(data-lang);
-            background-color: $main-color-3;
+            background-color: $text-background-color;
             display: block;
             padding: $content-gap / 4 $code-font-size 0 0;
             color: rgba(0, 0, 0, .2);
@@ -135,7 +135,7 @@
     	width: 100%;
     	margin: $content-gap 0;
     	border-collapse: collapse;
-    	background-color: $main-color-3;
+    	background-color: $text-background-color;
     	th, td {
     		padding: .5em;
         }
