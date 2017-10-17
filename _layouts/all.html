@@ -81,7 +81,7 @@ title: All Posts
                 $(this).show();
             }
         });
-        tag === undefined || window.history.replaceState(null, '', '{{ "/all.html?tag=" | prepend: site.blog.baseurl }}' + tag);
+        tag === undefined || window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + tag);
     }
 
     $(function() {
