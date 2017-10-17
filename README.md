@@ -1,4 +1,7 @@
-# TeXt Theme
+# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+
+[![GitHub release](https://img.shields.io/github/release/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
+[![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
 
 ![TeXt Theme](https://wx1.sinaimg.cn/large/73bd9e13ly1fk7dohjut0j21kw0zb114.jpg)
 
