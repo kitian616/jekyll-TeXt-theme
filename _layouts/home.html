@@ -1,0 +1,91 @@
+---
+layout: blog-default
+title: Blog
+---
+<div class="main">
+    <section class="m-home">
+        <div class="m-post-list">
+            <!-- This loops through the paginated posts -->
+            {% for post in paginator.posts %}
+            <article>
+                <h1>
+                    <a class="article-link" href="{{ post.url | prepend: site.base_path | replace: '//', '/' }}">{{ post.title }}</a>
+                </h1>
+                <div class="m-article-content">
+                    {{ post.excerpt }}
+                </div>
+                {% include blog/article-data.html %}
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination links -->
+        {% if paginator.total_pages > 1 %}
+        <nav class="m-pagination">
+            <p>{{ site.posts | size }} post articles | {{ paginator.total_pages }} pages. </p>
+            <ul class="clearfix">
+            {% if paginator.previous_page %}
+            <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.base_path | replace: '//', '/' }}">
+                <div class="icon icon--previous">{% include icon/previous.svg %}</div>
+            </a></li>
+            {% else %}
+            <li><div class="round-button inactive">
+                <div class="icon icon--prrevious">{% include icon/previous.svg %}</div>
+            </div></li>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                <li><div class="cur-page">
+                    <div class="round-button">
+                        <span>{{ page }}</span>
+                    </div>
+                </div></li>
+                {% elsif page == 1 %}
+                <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.base_path | replace: '//', '/' }}"><span>{{ page }}</span></a></li>
+                {% else %}
+                <li><a class="round-button" href="{{ site.paginate_path | prepend: site.base_path | replace: '//', '/' | replace: ':num', page }}"><span>{{ page }}</span></a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <li><a class="round-button" href="{{ paginator.next_page_path | prepend: site.base_path | replace: '//', '/' }}">
+                <div class="icon icon--next">{% include icon/next.svg %}</div>
+            </a></li>
+            {% else %}
+            <li><div class="round-button inactive">
+                <div class="icon icon--next">{% include icon/next.svg %}</div>
+            </div></li>
+            {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </section>
+</div>
+
+{% if site.isdebug == false %}
+    <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+    <script>
+        $(function() {
+            // 初始化
+            AV.init({
+                appId: '{{ site.app_id }}',
+                appKey: '{{ site.app_key }}'
+            });
+            $(".article-view").each(function() {
+                var curId = this.id;
+                var query = new AV.Query('{{ site.app_class }}');
+                query.equalTo('key', /(.*)-(.*)/.exec(curId)[2]);
+                query.first().then(function(result) {
+                    if (result) {
+                        $('#' + curId).text(result.attributes.views);
+                    }
+                }, function(error) {
+                    if (error) {
+                        throw error;
+                    }
+                });
+            });
+        });
+    </script>
+{% endif %}

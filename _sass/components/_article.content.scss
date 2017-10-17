@@ -89,7 +89,7 @@
             background-color: $text-background-color;
             display: block;
             padding: $content-gap / 4 $code-font-size 0 0;
-            color: rgba(0, 0, 0, .2);
+            color: $decorate-color;
             font-weight: $bold-font-weight;
             font-size: $h3-font-size;
             text-align: right;
@@ -140,7 +140,7 @@
     		padding: .5em;
         }
         tbody > tr:nth-child(odd) {
-            background-color: rgba(0, 0, 0, .05);
+            background-color: $decorate-color;
         }
     }
 

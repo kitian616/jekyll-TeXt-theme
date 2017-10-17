@@ -53,7 +53,9 @@ a {
         text-decoration: none;
     }
 
-    .icon {
+    svg {
+        height: 1em;
+        width: 1em;
         @include link-normal {
             path {
                 fill: $text-color-3;
@@ -70,21 +72,21 @@ a {
         @extend %cursor-not-allowed;
         @include link-normal {
             background-color: $main-color-3;
-            color: $text-color-3;
+            color: rgba($text-color-3, .5);
         }
         @include link-emphasize {
             background-color: $main-color-3;
-            color: $text-color-3;
+            color: rgba($text-color-3, .5);
         }
-        .icon {
+        svg {
             @include link-normal {
                 path {
-                    fill: $text-color-3;
+                    fill: rgba($text-color-3, .5);
                 }
             }
             @include link-emphasize {
                 path {
-                    fill: $text-color-3;
+                    fill: rgba($text-color-3, .5);
                 }
             }
         }
@@ -114,7 +116,9 @@ a {
         text-decoration: none;
 
     }
-    .icon {
+    svg {
+        height: 1em;
+        width: 1em;
         @include link-normal {
             path {
                 fill: $text-color-3;

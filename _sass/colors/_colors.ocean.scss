@@ -1,28 +1,31 @@
 ///
-// Colors Setting
+// Color Theme: Ocean
+// Author: Tian Qi
+// Email: kitian616@outlook.com
 ///
 
 // main colors
-$main-color-1:     #c77c89;
+$main-color-1:     #0094e1;
 $text-color-1:     #fff;
 
-$main-color-2:     #537db5;
-$text-color-2:     #fff;
+$main-color-2:     #ead4d9;
+$text-color-2:     #444;
 
-$main-color-3:     #7cc7bb;
-$text-color-3:     #fff;
+$main-color-3:     #e1f5ff;
+$text-color-3:     #00537f;
 
 // background colors
-$background-color: #f8fcfb;
+$background-color: #f5fcff;
 // text colors
-$text-color-d:     #386b83;
-$text-color:       #5395b5;
-$text-color-l:     #7caec7;
+$text-color-d:     #002030;
+$text-color:       #00537f;
+$text-color-l:     #006da6;
 $text-background-color:#f2f2f2;
 
 // border and shadow colors
-$border-color:     rgba(#000, .2);
+$border-color:     #aeaeae;
 $select-color:     rgba($main-color-1, .5);
+$decorate-color:   rgba(#000, .1);
 $shadow-down:      0 2px 10px rgba(#000, .15), 0 0 16px rgba(#000, .05);
 
 // logo colors

@@ -26,14 +26,14 @@ timezone: Asia/Shanghai
 
 ## Author & social ##
 author: Someone
-# email:  #your Email address e.g. someone@site.com
-# facebook_username:  #your Facebook username
-# twitter_username:  #your Twitter username
-github_username: kitian616 #your GitHub username
-# googleplus_username:  #your Google+ username
-# weibo_username:  #your Weibo username
-# douban_username:  #your Douban username
-# linkedin_username:  #your Linkedin username
+email: 1 #your Email address e.g. someone@site.com
+facebook_username: 1 #your Facebook username
+twitter_username: 1 #your Twitter username
+github_username: 1 #your GitHub username
+googleplus_username: 1 #your Google+ username
+weibo_username: 1 #your Weibo username
+douban_username: 1 #your Douban username
+linkedin_username: 1 #your Linkedin username
 
 ## Comment system (Disqus) ##
 # disqus_shortname:  #the Disqus shortname for the site

@@ -18,16 +18,10 @@
         float: left;
         list-style-type: none;
     }
-    .icon {
-        > svg {
-            width: 24px;
-            height: 24px;
-        }
-    }
 
     .round-button {
-        width: 2.5em;
-        height: 2.5em;
+        width: 2em;
+        height: 2em;
         color: $text-color-1;
         .icon > svg path {
             fill: $text-color-1;
