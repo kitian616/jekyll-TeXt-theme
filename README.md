@@ -124,9 +124,9 @@ bundle exec jekyll serve -H 0.0.0.0
 
 颜色主题位于文件夹 _sass/colors 中，目前有 2 个主题：default 和 dark。修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
 
-| `dark` | `forest` | `ocean` |
-| --- | --- | --- |
-| ![air skin](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.jpg) | ![contrast skin](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.jpg) | ![dark skin](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.jpg) |
+| `default` | `dark` | `forest` | `ocean` |
+| --- |  --- | --- | --- |
+| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.jpg) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.jpg) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.jpg) | ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.jpg) |
 
 更多颜色主题敬请期待。
 
