@@ -149,7 +149,7 @@ layout: blog-base
         });
     });
 </script>
-{% if page.key != null and site.isdebug == false %}
+{% if page.key != null and site.app_id and site.app_key and site.app_class and site.isdebug == false %}
     <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
     <script type="text/javascript">
         $(function() {
