@@ -1,17 +1,15 @@
 
 .m-article-data {
-
+	margin: $content-gap 0;
 	.article-link {
 		display: block;
 		font-size: $h3-font-size;
 	}
-
     .date-wrapper, .tag-wrapper, .view-wrapper {
     	display: inline-block;
 		font-size: $small-font-size;
 		line-height: 2;
 	}
-
 	.tag-wrapper {
 		margin: 0 0.5em 0 0;
 		.article-tag {
@@ -21,17 +19,15 @@
 			}
 		}
 	}
-
 	.date-wrapper {
 		margin: 0 0.5em 0 0;
 		.article-meta {
 			line-height: 1.6;
 		}
 	}
-
 	.other-wrapper {
 		float: right;
-		color: $text-clr-l;
+		color: $text-color-l;
 		margin: 0 0 0 .6em;
 		@include media-query($on-palm) {
 			float: none;

@@ -1,5 +1,5 @@
 {
-  "name": "jekyll-TeXt-theme",
+  "name": "jekyll-text-theme",
   "version": "1.0.0",
   "description": "A theme for Jekyll",
   "directories": {
@@ -22,7 +22,7 @@
     "jekyll"
   ],
   "author": "Tian Qi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kitian616/issues"
   },

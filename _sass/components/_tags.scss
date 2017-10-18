@@ -1,11 +1,9 @@
 .m-tags {
-
     .article-tag {
         font-size: $base-font-size;
         display: inline-block;
         margin: $content-gap / 6 0;
     }
-
     .tag-count {
         font-size: $base-font-size * 0.8;
         display: inline-block;
@@ -13,42 +11,36 @@
         margin-left: 0.2em;
         vertical-align: top;
     }
-
     .tag-show-all {
         @include link-normal {
-            color: $text-odd-clr;
-            background-color: $text-clr-l;
+            color: $text-color-3;
+            background-color: $main-color-3;
         }
         @include link-emphasize {
-            color: $text-odd-clr;
-            background-color: $extra-color;
+            color: $text-color-2;
+            background-color: $main-color-2;
         }
     }
-
     .tag-other{
         @include link-normal {
-            color: $text-odd-clr;
-            background-color: $main-color;
+            color: $text-color-1;
+            background-color: $main-color-1;
         }
         @include link-emphasize {
-            color: $text-odd-clr;
-            background-color: $extra-color;
+            color: $text-color-2;
+            background-color: $main-color-2;
         }
     }
-
     .tag-1 {
-        background-color: rgba($main-color, .4);
+        background-color: rgba($main-color-1, .4);
     }
-
     .tag-2 {
-        background-color: rgba($main-color, .55);
+        background-color: rgba($main-color-1, .55);
     }
-
     .tag-3 {
-        background-color: rgba($main-color, .7);
+        background-color: rgba($main-color-1, .7);
     }
-
     .tag-4 {
-        background-color: rgba($main-color, .9);
+        background-color: rgba($main-color-1, .9);
     }
 }

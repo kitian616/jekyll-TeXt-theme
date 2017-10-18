@@ -26,13 +26,13 @@ body {
     height: 100%;
 
     ::-moz-selection {
-        background: $select-clr;
+        background: $select-color;
     }
     ::-webkit-selection {
-        background: $select-clr;
+        background: $select-color;
     }
     ::selection {
-        background: $select-clr;
+        background: $select-color;
     }
 }
 

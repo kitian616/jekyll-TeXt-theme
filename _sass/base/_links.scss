@@ -5,12 +5,12 @@
 a {
     font-weight: $bold-font-weight;
     text-decoration: none;
-    @include link-colors($main-color, $main-color);
+    @include link-colors($main-color-1, $main-color-1);
     @include link-normal {
-        color: $main-color;
+        color: $main-color-1;
     }
     @include link-emphasize {
-        color: $main-color;
+        color: $main-color-1;
         text-decoration: underline;
     }
     -webkit-transition: all 0.8s ease 0s;
@@ -43,25 +43,27 @@ a {
     padding: .4em;
     border-radius: 50%;
     @include link-normal {
-        background-color: $text-bg-clr;
-        color: $text-clr;
+        background-color: $main-color-3;
+        color: $text-color-3;
         text-decoration: none;
     }
     @include link-emphasize {
-        background-color: $main-color;
-        color: $text-odd-clr;
+        background-color: $main-color-1;
+        color: $text-color-1;
         text-decoration: none;
     }
 
-    .icon {
+    svg {
+        height: 1em;
+        width: 1em;
         @include link-normal {
             path {
-                fill: $text-clr;
+                fill: $text-color-3;
             }
         }
         @include link-emphasize {
             path {
-                fill: $text-odd-clr;
+                fill: $text-color-1;
             }
         }
     }
@@ -69,20 +71,22 @@ a {
     &.inactive {
         @extend %cursor-not-allowed;
         @include link-normal {
-            color: $text-clr;
+            background-color: $main-color-3;
+            color: rgba($text-color-3, .5);
         }
         @include link-emphasize {
-            background-color: $text-bg-clr;
+            background-color: $main-color-3;
+            color: rgba($text-color-3, .5);
         }
-        .icon {
+        svg {
             @include link-normal {
                 path {
-                    fill: $text-clr-l;
+                    fill: rgba($text-color-3, .5);
                 }
             }
             @include link-emphasize {
                 path {
-                    fill: $text-clr-l;
+                    fill: rgba($text-color-3, .5);
                 }
             }
         }
@@ -102,25 +106,27 @@ a {
     line-height: 1;
     border-radius: 1em;
     @include link-normal {
-        background-color: $text-bg-clr;
-        color: $text-clr;
+        background-color: $main-color-3;
+        color: $text-color-3;
         text-decoration: none;
     }
     @include link-emphasize {
-        background-color: $main-color;
-        color: $text-odd-clr;
+        background-color: $main-color-1;
+        color: $text-color-1;
         text-decoration: none;
 
     }
-    .icon {
+    svg {
+        height: 1em;
+        width: 1em;
         @include link-normal {
             path {
-                fill: $text-clr;
+                fill: $text-color-3;
             }
         }
         @include link-emphasize {
             path {
-                fill: $text-odd-clr;
+                fill: $text-color-1;
             }
         }
     }

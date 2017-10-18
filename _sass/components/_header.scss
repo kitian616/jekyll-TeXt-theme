@@ -3,17 +3,17 @@
  */
 .m-page-header {
     position: relative;
-    color: $text-clr;
+    color: $text-color;
     ul {
         list-style-type: none;
     }
     a {
         font-weight: $base-font-weight;
         @include link-normal {
-            color: $text-clr;
+            color: $text-color;
         }
         @include link-emphasize {
-            color: $main-color;
+            color: $main-color-1;
         }
     }
     .site-logo {

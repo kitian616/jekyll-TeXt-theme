@@ -5,20 +5,16 @@
 .m-page-footer {
     height: $footer-height;
     margin-top: - $footer-height;
-    background-color: $text-bg-clr;
+    background-color: $main-color-3;
     p {
-        color: $text-clr;
+        color: $text-color-3;
     }
     a {
-        color: $text-clr;
-        &:visited {
-            color: $text-clr;
+        @include link-normal {
+            color: $text-color-3;
         }
-        &:hover {
-          color: $main-color;
-        }
-        &:active {
-            color: $text-clr;
+        @include link-emphasize {
+            color: $main-color-1;
         }
     }
     .follow-me {
@@ -33,7 +29,7 @@
     }
     .site-info {
         display: table;
-        font-size: $footer-font-size;
+        font-size: $tiny-font-size;
         text-align: center;
         margin: 0 auto;
     }

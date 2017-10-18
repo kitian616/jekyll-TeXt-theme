@@ -15,11 +15,9 @@
     {% assign gap_size = 1 %}
 {% endif %}
 <div class="m-tags">
-    {% if page.title == "All Posts"%}
-        <button type="button" class="article-tag tag-show-all round-rect-button" onclick="tagSelect('')">
-            Show All<div class="tag-count"> {{ site.posts | size }} </div>
-        </button>
-    {% endif %}
+    <button type="button" class="article-tag tag-show-all round-rect-button" onclick="tagSelect('')">
+        Show All<div class="tag-count"> {{ site.posts | size }} </div>
+    </button>
     {% for tag in site.tags %}
         {% assign cur_size = tag[1].size %}
         {% assign m1 = min_size %}
@@ -41,15 +39,8 @@
         {% else %}
             {% assign c_index = 4 %}
         {% endif %}
-
-        {% if page.title == "All Posts"%}
-            <button type="button" class="article-tag tag-{{ tag[0] }} tag-{{ c_index }} tag-other round-rect-button" onclick="tagSelect('{{ tag[0] }}')">
-                    {{ tag[0] | rstrip }}<div class="tag-count">{{ tag[1].size }}</div>
-            </button>
-        {% else %}
-            <a class="article-tag tag-{{ tag[0] }} tag-{{ c_index }} tag-other round-rect-button" href="{{ "/all.html?tag=" | prepend: site.blog.baseurl | append: tag[0] | replace: '//', '/' }}">
-                {{ tag[0] | rstrip}}<div class="tag-count">{{ tag[1].size }}</div>
-            </a>
-        {% endif %}
+        <button type="button" class="article-tag tag-{{ tag[0] }} tag-{{ c_index }} tag-other round-rect-button" onclick="tagSelect('{{ tag[0] }}')">
+                {{ tag[0] | rstrip }}<div class="tag-count">{{ tag[1].size }}</div>
+        </button>
     {% endfor %}
 </div>

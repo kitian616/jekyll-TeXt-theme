@@ -26,14 +26,14 @@
         }
         h1 {
             margin: 0;
-            color: $text-odd-clr;
+            color: $text-color-1;
         }
         a {
             @include link-normal {
-                color: $text-odd-clr;
+                color: $text-color-1;
             }
             @include link-emphasize {
-                color: $main-color;
+                color: $main-color-1;
             }
         }
     }
