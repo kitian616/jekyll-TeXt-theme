@@ -3,9 +3,9 @@
 [![GitHub release](https://img.shields.io/github/release/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshot.png)
+![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
 
-![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshot-details.png)
+![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
 TeXt is a succinct theme for blogging.
 
@@ -24,11 +24,14 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
 - 网站图标的自动化工具
+- Color Theme
 - RSS
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解的话可以直接看后面的高级部分，这是该主题一些特有属性。
 
-## 安装
+## How To Use
+
+### 安装
 
 请确保你的电脑上安装了 Ruby 开发环境。（ Linux 和 macOS 自带）
 
@@ -36,19 +39,19 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 推荐安装 Node.js 环境，可以获得更好的开发体验。
 
-## 配置
+### 配置
 
 在 _config.yml 文件里按照说明加上你的信息，例如网站的协议加域名，例如 `https://www.domain.com`，这个是必须填的。另外还有你的名字和联系方式，网站的标题和描述等等。
 
 在 ./about.md 中写上你的简单介绍，例如我叫小刚之类的。
 
-## 写博客
+### 写博客
 
 使用 Markdown 编写文章，位于 _posts 目录，文件名采用日期 + 标题的形式。（见示例文章）
 
 可以在头信息里设置文章的一些基本信息，包括时间、文件夹和标签等，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
-## 本地服务器
+### 本地服务器
 
 如果你安装了 Node.js 环境，只需要在项目根目录运行 `npm run dev` 即可启动本地服务。
 
@@ -68,7 +71,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 在浏览器中访问 [http://localhost:4000/](http://localhost:4000/) 即可看到页面。
 
-## 部署
+### 部署
 
 推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)，当然你也可以部署到到其他地方。
 
@@ -117,11 +120,13 @@ bundle exec jekyll serve -H 0.0.0.0
 | modify_date   |               | 该文章的修改时间，不影响首页文章排序（date 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
 
-### 颜色主题
+### Color Theme
 
 颜色主题位于文件夹 _sass/colors 中，目前有 2 个主题：default 和 dark。修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
 
-![Dark Color Theme](https://wx3.sinaimg.cn/large/73bd9e13ly1fkjd6rr2z3j211w0sedir.jpg)
+| `dark` | `forest` | `ocean` |
+| --- | --- | --- |
+| ![air skin](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.jpg) | ![contrast skin](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.jpg) | ![dark skin](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.jpg) |
 
 更多颜色主题敬请期待。
 
