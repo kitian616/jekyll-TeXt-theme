@@ -77,6 +77,16 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ## 高级
 
+### Color Theme
+
+颜色主题位于文件夹 _sass/colors 中，目前有 2 个主题：default 和 dark。修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
+
+| `default` | `dark` | `forest` | `ocean` |
+| --- |  --- | --- | --- |
+| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.jpg) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.jpg) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.jpg) | ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.jpg) |
+
+更多颜色主题敬请期待。
+
 ### 网站图标
 
 该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 favicon.ico 和 ./statics/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些场景可能会用到的大图标，如 iOS 和 Android 的固定到屏幕和 Windows 10 的磁贴。
@@ -99,15 +109,15 @@ bundle exec jekyll serve -H 0.0.0.0
 
 > 注意：使用评论系统必须在文章的头信息中设置 key 值。
 
-### Google Analytics
-
-在 _config.yml 文件的 ga_tracking_id 项填上你在 [Google Analytics](https://analytics.google.com) 上为该网站建立的媒体资源对应的跟踪 ID。
-
 ### 阅读量统计
 
 在 _config.yml 文件的 app_id、app_key、app_class 项填上分别写上你在 [LeanCloud](https://leancloud.cn) 上为该网站建立的应用的对应参数。
 
 > 注意：使用阅读量统计必须在文章的头信息中设置 key 值。
+
+### Google Analytics
+
+在 _config.yml 文件的 ga_tracking_id 项填上你在 [Google Analytics](https://analytics.google.com) 上为该网站建立的媒体资源对应的跟踪 ID。
 
 ### Markdown 头信息增强
 
@@ -119,16 +129,6 @@ bundle exec jekyll serve -H 0.0.0.0
 | picture_frame | shadow        | 该文章的图片框样式，如果为 shadow 则图片带有阴影边框 |
 | modify_date   |               | 该文章的修改时间，不影响首页文章排序（date 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
-
-### Color Theme
-
-颜色主题位于文件夹 _sass/colors 中，目前有 2 个主题：default 和 dark。修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
-
-| `default` | `dark` | `forest` | `ocean` |
-| --- |  --- | --- | --- |
-| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.jpg) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.jpg) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.jpg) | ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.jpg) |
-
-更多颜色主题敬请期待。
 
 ### 其他资源
 
