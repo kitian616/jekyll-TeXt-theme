@@ -1,6 +1,6 @@
 {
   "name": "jekyll-text-theme",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A theme for Jekyll",
   "directories": {
     "test": "test"
