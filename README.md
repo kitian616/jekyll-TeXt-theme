@@ -9,13 +9,13 @@
 
 TeXt is a succinct theme for blogging.
 
-TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
+TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，该主题模仿了 iOS 11 的风格，有大而突出的标题和圆润的按钮和卡片。
 
-该主题模仿了 iOS 11 的风格，它有大而突出的标题和圆润的按钮和卡片，它主要有以下功能：
+## Features
 
 - 响应式
 - 分页
-- 文章目录（使用了 [TOC](http://projects.jga.me/toc/) 插件，nice work !）
+- 文章目录（使用了 [Jemoji](https://github.com/jekyll/jemoji) 插件）
 - 文章标签
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
 - Emoji（[EmojiOne](https://www.emojione.com/)）
@@ -31,19 +31,15 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ## How To Use
 
-### 安装
+### 下载
 
-请确保你的电脑上安装了 Ruby 开发环境。（ Linux 和 macOS 自带）
-
-首先安装 github-pages，在项目根目录执行 `bundle install` 即可安装。
-
-推荐安装 Node.js 环境，可以获得更好的开发体验。
+你可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases)下载最新版本源码，或直接 clone 代码到本地。
 
 ### 配置
 
-在 _config.yml 文件里按照说明加上你的信息，例如网站的协议加域名，例如 `https://www.domain.com`，这个是必须填的。另外还有你的名字和联系方式，网站的标题和描述等等。
+在 _config.yml 文件里按照说明加上你的信息，例如网站的协议加域名，例如 `https://www.domain.com`，这个是 **必须填** 的。另外还有你的名字和联系方式，网站的标题和描述等等。
 
-在 ./about.md 中写上你的简单介绍，例如我叫小刚之类的。
+在 ./about.md 中写上你的简单介绍，例如我叫小明之类的。
 
 ### 写博客
 
@@ -51,7 +47,17 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 可以在头信息里设置文章的一些基本信息，包括时间、文件夹和标签等，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
-### 本地服务器
+需要注意的是，该主题的文章列表摘要会默认显示文章的所有内容。若只想显示文章内容，只需在想要显示到的地方加上 `<!--more-->` 行，具体详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
+
+### 安装环境（非必要）
+
+请确保你的电脑上安装了 Ruby 开发环境。（ Linux 和 macOS 自带）
+
+首先安装 github-pages，在项目根目录执行 `bundle install` 即可安装。
+
+推荐安装 Node.js 环境，可以获得更好的开发体验。
+
+### 本地服务（非必要）
 
 如果你安装了 Node.js 环境，只需要在项目根目录运行 `npm run dev` 即可启动本地服务。
 
@@ -73,7 +79,11 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 部署
 
-推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)，当然你也可以部署到到其他地方。
+推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)。
+
+简单来说就把以上修改了的项目代码 push 到 GitHub 的对应分支上（如果是 `<username>.github.io` 命名的项目，对应分支名为 `master` 。其他分支名为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)。
+
+当然你也可以部署到到其他地方。
 
 ## 高级
 
