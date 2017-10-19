@@ -15,10 +15,10 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 
 - 响应式
 - 分页
-- 文章目录（使用了 [Jemoji](https://github.com/jekyll/jemoji) 插件）
+- 文章目录（[TOC](http://projects.jga.me/toc/) :+1:）
 - 文章标签
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
-- Emoji（[EmojiOne](https://www.emojione.com/)）
+- Emoji（[Jemoji](https://github.com/jekyll/jemoji)）
 - 评论（[Disqus](https://disqus.com/)）
 - Google Analytics
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
