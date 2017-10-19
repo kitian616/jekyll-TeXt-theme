@@ -2,13 +2,12 @@
   "name": "jekyll-text-theme",
   "version": "1.1.0",
   "description": "A theme for Jekyll",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "build": "bundle exec jekyll build --watch",
+    "build0": "bundle exec jekyll build --config ./_config.test.yml --watch",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
     "dev": "(npm run build &) && npm run serve",
+    "dev0": "(npm run build0 &) && npm run serve",
     "favicon": "gulp favicon",
     "icons": "gulp icons",
     "artwork": "gulp artwork"
@@ -18,8 +17,9 @@
     "url": "git+https://github.com/kitian616/kitian616.github.io.git"
   },
   "keywords": [
-    "blog",
-    "jekyll"
+    "jekyll",
+    "jekyll-theme",
+    "jekyll-template"
   ],
   "author": "Tian Qi",
   "license": "MIT",
