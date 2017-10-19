@@ -27,7 +27,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 - Color Theme
 - RSS
 
-下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解的话可以直接看后面的高级部分，这是该主题一些特有属性。
+下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
 
 ## How To Use
 
@@ -37,7 +37,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 
 ### 配置
 
-在 _config.yml 文件里按照说明加上你的信息，例如网站的协议加域名，例如 `https://www.domain.com`，这个是 **必须填** 的。另外还有你的名字和联系方式，网站的标题和描述等等。
+在 _config.yml 文件里按照说明加上你的信息，比如 `base_url`，这个是**必填**的。另外还有你的名字和联系方式，网站的标题和描述等等。
 
 在 ./about.md 中写上你的简单介绍，例如我叫小明之类的。
 
@@ -47,7 +47,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 
 可以在头信息里设置文章的一些基本信息，包括时间、文件夹和标签等，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
-需要注意的是，该主题的文章列表摘要会默认显示文章的所有内容。若只想显示文章内容，只需在想要显示到的地方加上 `<!--more-->` 行，具体详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
+需要注意的是，该主题的文章列表摘要会默认显示文章的所有内容。若只想显示部分内容，只需在想要显示到的地方加上 `<!--more-->` 行，具体详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
 
 ### 安装环境（非必要）
 
@@ -81,7 +81,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)。
 
-简单来说就把以上修改了的项目代码 push 到 GitHub 的对应分支上（如果是 `<username>.github.io` 命名的项目，对应分支名为 `master` 。其他分支名为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)。
+简单来说就是把以上修改了的项目代码 push 到 GitHub 的对应分支上（如果是 `<username>.github.io` 命名的项目，对应分支名为 `master` 。其他分支名为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)。
 
 当然你也可以部署到到其他地方。
 
@@ -99,7 +99,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 网站图标
 
-该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 favicon.ico 和 ./statics/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些场景可能会用到的大图标，如 iOS 和 Android 的固定到屏幕和 Windows 10 的磁贴。
+该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 favicon.ico 和 ./statics/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些场景可能会用到的大图标，像 iOS 和 Android 的固定到屏幕和 Windows 10 的磁贴。
 
 该主题提供了一个自动化脚本能将 svg 矢量图自动生成 favicon 和 png 文件。你所要做的是：
 
@@ -115,19 +115,19 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 评论系统
 
-在 _config.yml 文件的 disqus_shortname 项填上你在 [Disqus](https://disqus.com/) 上为该网站建立的 site 对应的 shortname，需要注意的是 Disqus 在大陆是无法直接访问的。
+在 _config.yml 文件的 `disqus_shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname，需要注意的是 Disqus 在大陆是无法直接访问的。
 
 > 注意：使用评论系统必须在文章的头信息中设置 key 值。
 
 ### 阅读量统计
 
-在 _config.yml 文件的 app_id、app_key、app_class 项填上分别写上你在 [LeanCloud](https://leancloud.cn) 上为该网站建立的应用的对应参数。
+在 _config.yml 文件的 `app_id`、`app_key`、`app_class` 项分别填上你在 [LeanCloud](https://leancloud.cn) 为网站建立的应用的对应参数。
 
 > 注意：使用阅读量统计必须在文章的头信息中设置 key 值。
 
 ### Google Analytics
 
-在 _config.yml 文件的 ga_tracking_id 项填上你在 [Google Analytics](https://analytics.google.com) 上为该网站建立的媒体资源对应的跟踪 ID。
+在 _config.yml 文件的 `ga_tracking_id` 项填上你在 [Google Analytics](https://analytics.google.com) 上为网站建立的媒体资源对应的跟踪 ID。
 
 ### Markdown 头信息增强
 
@@ -136,16 +136,16 @@ bundle exec jekyll serve -H 0.0.0.0
 | 变量名称       | 可选值          | 描述 |
 | ---           | ---           | --- |
 | key           |               | 评论系统和阅读量统计使用的文章标识符，如果未设置则评论和统计无效 |
-| picture_frame | shadow        | 该文章的图片框样式，如果为 shadow 则图片带有阴影边框 |
-| modify_date   |               | 该文章的修改时间，不影响首页文章排序（date 代表发表时间，会影响文章排序） |
+| picture_frame | shadow        | 该文章的图片框样式，如果为 `shadow` 则图片带有阴影边框 |
+| modify_date   |               | 该文章的修改时间，不影响首页文章排序（`date` 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
 
 ### 其他资源
 
-_includes/icon/social 有很多的社交产品的图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
+在 _includes/icon/social 目录下有很多的社交产品图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
 
 ## 示例
 
 在线访问：[Qi's blog](https://tianqi.name/blog/)
 
-GitHub：[https://github.com/kitian616/kitian616.github.io/](https://github.com/kitian616/kitian616.github.io/)
+示例源码：[https://github.com/kitian616/kitian616.github.io/](https://github.com/kitian616/kitian616.github.io/)
