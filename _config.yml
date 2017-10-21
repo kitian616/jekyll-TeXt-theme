@@ -27,7 +27,7 @@ timezone: Asia/Shanghai
 ## Author & social ##
 author: Someone
 email: someone@mail.com #your Email address e.g. someone@site.com
-facebook_username: 1 #your Facebook username
+# facebook_username:  #your Facebook username
 # twitter_username:  #your Twitter username
 # github_username: a #your GitHub username
 # googleplus_username:  #your Google+ username

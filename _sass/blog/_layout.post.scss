@@ -31,6 +31,9 @@
             overflow: hidden;
             @include media-query($on-laptop) {
                 display: none;
+                &.fixed {
+                    display: none;
+                }
             }
             &.fixed {
                 position: fixed;

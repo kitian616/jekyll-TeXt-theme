@@ -153,8 +153,7 @@ layout: blog-default
             });
             $window.on('resize', throttle(function() {
                 setTocClass();
-                init();
-                setAside(true);
+                articleAsideDisplay() && (init(), setAside(true));
             }, 100));
             setTimeout(init, 4000);
         }
