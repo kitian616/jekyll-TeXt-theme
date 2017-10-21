@@ -1,5 +1,4 @@
 .m-toc {
-
     ul {
         display: block;
         list-style-type: none;
@@ -9,61 +8,49 @@
             }
         }
     }
-
     a {
         display: block;
+        margin: $small-font-size / 4;
         font-size: $small-font-size;
         text-decoration: none;
-        line-height: $base-line-height;
-        color: $text-color;
+        line-height: $toc-line-height;
         font-weight: $base-font-weight;
         @include link-normal {
-            color: $text-color;
+            color: $text-color-l;
         }
         @include link-emphasize {
             color: $main-color-1;
         }
     }
-
-    .toc-h1 {
+    .toc-h1, .toc-h2 {
         padding: 0;
         a {
-            color: $text-color-d;
-            font-weight: $bold-font-weight;
-        }
-    }
-    .toc-h2 {
-        padding: 0;
-        a {
-            color: $text-color-d;
             font-weight: $bold-font-weight;
         }
     }
     .toc-h3, .toc-h4, .toc-h5, .toc-h6 {
         a {
-            font-size: $small-font-size;
+            font-size: $tiny-font-size;
         }
+    }
+    .toc-h1, .toc-h2 {
+        padding: $small-font-size / 4 0 0 0;
     }
     .toc-h3 {
         padding: 0 0 0 $small-font-size;
     }
-
     .toc-h4 {
         padding: 0 0 0 $small-font-size * 2;
     }
-
     .toc-h5 {
         padding: 0 0 0 $small-font-size * 3;
     }
-
     .toc-h6 {
         padding: 0 0 0 $small-font-size * 4;
     }
-
     .toc-active {
         a {
             color: $main-color-1;
         }
     }
-
 }

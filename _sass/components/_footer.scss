@@ -3,9 +3,15 @@
  */
 
 .m-page-footer {
+    display: flex;
+    align-items: center;
     height: $footer-height;
     margin-top: - $footer-height;
     background-color: $main-color-3;
+    & > .main {
+        display: flex;
+        flex-direction: column;
+    }
     p {
         color: $text-color-3;
     }
@@ -18,8 +24,6 @@
         }
     }
     .follow-me {
-        padding: 1.5em 0 0 0;
-        margin: 0 auto;
         .round-button {
             box-shadow: $shadow-down;
         }

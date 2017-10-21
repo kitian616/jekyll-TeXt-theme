@@ -1,43 +1,55 @@
 .m-post {
-    .main {
-        max-width: $content-max-width + $aside-width;
+    & > div {
+        display: block;
+        flex-direction: row;
         @include media-query($on-laptop) {
-            max-width: $content-max-width;
+            display: block;
         }
     }
-    article {
+    .col-1 {
         max-width: $content-max-width;
-        float: left;
-        @include media-query($on-laptop) {
-            float: none;
+        & > article {
+            & > header {
+                color: $text-color-d;
+                margin-bottom:  $spacing-unit / 6;
+                & > h1 {
+                    margin-bottom:  $spacing-unit;
+                    font-size: $h1-font-size;
+                    color: $text-color-d;
+                }
+            }
         }
     }
-    .article-header {
-        color: $text-color-d;
-        margin-bottom:  $spacing-unit / 6;
-    }
-    .article-title {
-        margin-bottom:  $spacing-unit;
-        font-size: $h1-font-size;
-        color: $text-color-d;
+    .col-2 {
+        width: $aside-width;
+        position: relative;
+        & > aside {
+            box-sizing: border-box;
+            width: $aside-width;
+            position: absolute;
+            padding:  $spacing-unit 0 $spacing-unit $spacing-unit * 2;
+            overflow: hidden;
+            @include media-query($on-laptop) {
+                display: none;
+            }
+            &.fixed {
+                position: fixed;
+                z-index: 2;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+        }
     }
     .article-license {
         position: relative;
         max-width: 500px;
         margin: 1.5em 0;
     }
-    .m-article-aside {
-        float: right;
-        box-sizing: border-box;
-        position: relative;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: $aside-width;
-        padding: $spacing-unit 0 $spacing-unit / 2 $spacing-unit * 2;
-        overflow: hidden;
-        @include media-query($on-laptop) {
-            display: none;
+}
+
+.has-toc {
+    .m-post {
+        & > div {
+            display: flex;
         }
     }
 }

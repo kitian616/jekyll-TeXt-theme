@@ -1,10 +1,9 @@
 ---
-layout: blog-base
+layout: blog-default
 ---
-<div class="m-post m-page-content">
-    {% include blog/header.html %}
-    <div class="m-page-main">
-        <div class="main clearfix js-main">
+<div class="m-post">
+    <div class="main js-main">
+        <div class="col-1">
             <article itemscope itemtype="http://schema.org/BlogPosting">
                 <meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
                 <header class="article-header">
@@ -35,6 +34,8 @@ layout: blog-base
                 <section>{% include utils/comment-disqus.html %}</section>
                 {% endif %}
             </article>
+        </div>
+        <div class="col-2">
             <aside class="m-article-aside js-article-aside">
                 <div class="m-toc js-toc"></div>
             </aside>
@@ -77,11 +78,33 @@ layout: blog-base
     }
     $(function() {
         var $window = $(window);
+        var $pageStage = $('.js-page-stage');
         var $pageMain = $('.js-main');
         var $pageFooter = $('.js-page-footer');
+        var $articleContent = $('.js-article-content');
         var $articleAside = $('.js-article-aside');
         var $toc = $('.js-toc');
 
+        var hasTitle = $articleContent.find('h1, h2, h3').length > 0;
+
+        function articleAsideDisplay() {
+            return $articleAside.css('display') !== 'none';
+        }
+
+        function setTocClass() {
+            if (hasTitle) {
+                (
+                    articleAsideDisplay() &&
+                    !$pageStage.hasClass('has-toc')
+                ) && $pageStage.addClass('has-toc');
+                (
+                    !articleAsideDisplay() &&
+                    $pageStage.hasClass('has-toc')
+                ) && $pageStage.removeClass('has-toc');
+            }
+        }
+
+        setTocClass();
         function setAsideTOC() {
             var asideTop,
                 asideLeft,
@@ -104,43 +127,37 @@ layout: blog-base
                 var scrollTop = $window.scrollTop();
                 if (scrollTop >= asideTop && scrollTop <= scrollBottom) {
                     (!force && lastScrollTop >= asideTop && lastScrollTop <= scrollBottom) ||
-                        $articleAside.css({
-                            position: 'fixed',
+                        $articleAside.addClass('fixed').css({
                             left: asideLeft + 'px',
                             top: 0
                         });
                 } else if (scrollTop < asideTop) {
                     (!force && lastScrollTop < asideTop) ||
-                        $articleAside.css({
-                            position: 'relative',
+                        $articleAside.removeClass('fixed').css({
                             left: 0,
                             top: 0
                         });
                 } else {
                     (!force && lastScrollTop > scrollBottom) ||
-                        $articleAside.css({
-                            position: 'relative',
+                        $articleAside.removeClass('fixed').css({
                             left: 0,
                             top: asideBottomTop + 'px'
                         });
                 }
                 lastScrollTop = scrollTop;
             }
-            function isAsideDisplay() {
-                return $articleAside.css('display') !== 'none';
-            }
-
-            isAsideDisplay() && (init(), setAside());
+            init();
+            setAside();
             $window.on('scroll', function() {
-                isAsideDisplay() && setAside();
+                articleAsideDisplay() && setAside();
             });
             $window.on('resize', throttle(function() {
+                setTocClass();
                 init();
                 setAside(true);
             }, 100));
             setTimeout(init, 4000);
         }
-
         setTimeout(setAsideTOC, 1000);
 
         $toc.toc({

@@ -9,3 +9,10 @@
         padding: 0 $spacing-unit / 2;
     }
 }
+
+.has-toc .main {
+    max-width: $content-max-width + $aside-width;
+    @include media-query($on-laptop) {
+        max-width: $content-max-width;
+    }
+}

@@ -2,20 +2,16 @@
 * Follow ME !! ^^ ^^ (aside)
 */
 .follow-me {
-    display: table;
-    > div {
-        display: table-cell;
-        text-align: center;
-    }
+    text-align: center;
     p {
         margin: 0;
     }
     ul{
-        display: block;
+        display: flex;
+        justify-content: center;
         margin:  0 0 $content-gap 0;
     }
     li {
-        float: left;
         list-style-type: none;
     }
 
