@@ -17,7 +17,7 @@
 	{% if cur_page.tags[0] %}
         <div class="tag-wrapper">
             {% for tag in cur_page.tags %}
-            <a class="article-tag round-rect-button" href="{{ "/all.html?tag=" |prepend: site.base_path | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
+            <a class="article-tag round-rect-button" href="{{ "/all.html?tag=" |prepend: site.baseurl | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
             {% endfor %}
         </div>
 	{% endif %}

@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-# base_url: https://www.someone.com # **required!** The site's Protocol and Hostname e.g. https://blog.someone.com
-base_path: '/'
+# url:  # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl: '/'
 title: Someone's blog
 description: > #this means to ignore newlines until "nav_lists:"
   Someone's Blog
@@ -17,8 +17,8 @@ nav_lists:
     url: /about.html
 
 ## GitHub repository (if the site is hosted by GitHub) ##
-# github_repo: e.g. someone.github.io
-# github_repo_tree: e.g. master
+# repository: e.g. someone.github.io
+# repository_tree: e.g. master
 
 ## Language & timezone ##
 lang: zh #the language of your site
@@ -26,10 +26,10 @@ timezone: Asia/Shanghai
 
 ## Author & social ##
 author: Someone
-# email:  #your Email address e.g. someone@site.com
+email: someone@mail.com #your Email address e.g. someone@site.com
 # facebook_username:  #your Facebook username
 # twitter_username:  #your Twitter username
-# github_username:  #your GitHub username
+# github_username: a #your GitHub username
 # googleplus_username:  #your Google+ username
 # weibo_username:  #your Weibo username
 # douban_username:  #your Douban username

@@ -21,7 +21,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 - Emoji（[Jemoji](https://github.com/jekyll/jemoji)）
 - 评论（[Disqus](https://disqus.com/)）
 - Google Analytics
-- 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
+- 社交网络设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
 - 网站图标的自动化工具
 - Color Theme
@@ -37,7 +37,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 
 ### 配置
 
-在 _config.yml 文件里按照说明加上你的信息，比如 `base_url`，这个是**必填**的。另外还有你的名字和联系方式，网站的标题和描述等等。
+在 _config.yml 文件里按照说明加上你的信息，例如你的名字和联系方式，网站的标题和描述等等。
 
 在 ./about.md 中写上你的简单介绍，例如我叫小明之类的。
 
