@@ -22,10 +22,12 @@
         </div>
 	{% endif %}
     <div class="other-wrapper">
-        <div class="view-wrapper clearfix">
-            <span class="article-view" id="post-key-{{ cur_page.key }}">0</span>
-            views |
-        </div>
+        {% if site.app_id and site.app_key and site.app_class %}
+            <div class="view-wrapper clearfix">
+                <span class="article-view" id="post-key-{{ cur_page.key }}">0</span>
+                views |
+            </div>
+        {% endif %}
         <div class="date-wrapper">
             {% if post %}
                 <span class="article-meta">{{ post.date | date: "%b %d, %Y" }}</span>
