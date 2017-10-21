@@ -14,18 +14,18 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 ## Features
 
 - 响应式
-- 分页
+- 分页（[jekyll-paginate](https://github.com/jekyll/jekyll-paginate)）
 - 文章目录（[TOC](http://projects.jga.me/toc/) :+1:）
 - 文章标签
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
 - Emoji（[Jemoji](https://github.com/jekyll/jemoji)）
 - 评论（[Disqus](https://disqus.com/)）
 - Google Analytics
-- 社交网络设置（Email, Facebook, Twitter, 微博, 知乎……）
+- 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
-- 网站图标的自动化工具
+- 网站图标的自动化工具（[gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico)）
 - Color Theme
-- RSS
+- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
 
@@ -35,6 +35,8 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 
 你可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases)下载最新版本源码，或直接 clone 代码到本地。
 
+当然，最简单的方法是直接 fork 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到页面。接下来你可以在线修改 _config.yml 和 md 文件，或者把它 clone 到本地修改后提交。
+
 ### 配置
 
 在 _config.yml 文件里按照说明加上你的信息，例如你的名字和联系方式，网站的标题和描述等等。
@@ -43,9 +45,9 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单，
 
 ### 写博客
 
-使用 Markdown 编写文章，位于 _posts 目录，文件名采用日期 + 标题的形式。（见示例文章）
+使用 Markdown 编写文章，位于 _posts 目录，文件名采用日期 + 标题的形式，形如 `2017-02-02-Very-Long-Title`。
 
-可以在头信息里设置文章的一些基本信息，包括时间、文件夹和标签等，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
+可以在头信息里设置文章的一些基本信息，包括标题、发布时间和标签等。当然，如果你不设置标题和发布时间，系统会使用文件名中的标题和发布时间，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
 需要注意的是，该主题的文章列表摘要会默认显示文章的所有内容。若只想显示部分内容，只需在想要显示到的地方加上 `<!--more-->` 行，具体详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
 
@@ -77,11 +79,11 @@ bundle exec jekyll serve -H 0.0.0.0
 
 在浏览器中访问 [http://localhost:4000/](http://localhost:4000/) 即可看到页面。
 
-### 部署
+### 部署与提交
 
 推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)。
 
-简单来说就是把以上修改了的项目代码 push 到 GitHub 的对应分支上（如果是 `<username>.github.io` 命名的项目，对应分支名为 `master` 。其他分支名为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)。
+如果你是下载或者 clone 的源码，那么你需要在 GitHub 上建立一个 Repository，然后把项目代码 push 到其对应的分支上（如果以 `<username>.github.io` 命名则对应分支为 `master` ，其他的为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)。
 
 当然你也可以部署到到其他地方。
 
@@ -89,7 +91,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### Color Theme
 
-颜色主题位于文件夹 _sass/colors 中，目前有 2 个主题：default 和 dark。修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
+颜色主题位于文件夹 _sass/colors 中，修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
 
 | `default` | `dark` | `forest` | `ocean` |
 | --- |  --- | --- | --- |
