@@ -121,7 +121,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 阅读量统计
 
-在 _config.yml 文件的 `app_id`、`app_key`、`app_class` 项分别填上你在 [LeanCloud](https://leancloud.cn) 为网站建立的应用的对应参数。
+在 _config.yml 文件 `leancloud` 的 `app_id`、`app_key`、`app_class` 项分别填上你在 [LeanCloud](https://leancloud.cn) 为网站建立的应用的对应参数。
 
 > 注意：使用阅读量统计必须在文章的头信息中设置 key 值。
 
