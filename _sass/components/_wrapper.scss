@@ -16,3 +16,12 @@
         max-width: $content-max-width;
     }
 }
+
+.inline-list {
+    & > li {
+        display: inline-block;
+        list-style-type: none;
+        vertical-align: bottom;
+        margin: $content-gap / 6 0;
+    }
+}

@@ -1,67 +1,74 @@
 <div class="follow-me">
-    <ul class="clearfix" itemscope itemtype="http://schema.org/Person">
+    <ul class="inline-list" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="{{ site.author }}">
         <link itemprop="url" href="{{ '/' | prepend: site.url }}">
-        {% if site.email %}
-        <li class="round-button mail" title="Send me e-mail.">
-            <a itemprop="sameAs" href="mailto:://{{ site.email }}" target="_blank">
-                <div class="icon">{% include icon/mail.svg %}</div>
-            </a>
-        </li>
-        {% endif %}
         {% if site.weibo_username %}
-        <li class="round-button weibo" title="Follow me on Weibo.">
-            <a itemprop="sameAs" href="https://weibo.com/{{ site.weibo_username }}" target="_blank">
-                <div class="icon">{% include icon/social/weibo.svg %}</div>
-            </a>
-        </li>
+            <li title="Follow me on Weibo.">
+                <div class="round-button weibo">
+                    <a itemprop="sameAs" href="https://weibo.com/{{ site.weibo_username }}" target="_blank">
+                        <div class="icon">{% include icon/social/weibo.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
         {% if site.facebook_username %}
-        <li class="round-button facebook" title="Follow me on Facebook.">
-            <a itemprop="sameAs" href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank">
-                <div class="icon">{% include icon/social/facebook.svg %}</div>
-            </a>
-        </li>
+            <li title="Follow me on Facebook.">
+                <div class="round-button facebook">
+                    <a itemprop="sameAs" href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank">
+                        <div class="icon">{% include icon/social/facebook.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
         {% if site.twitter_username %}
-        <li class="round-button twitter" title="Follow me on Twitter.">
-            <a itemprop="sameAs" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-                <div class="icon">{% include icon/social/twitter.svg %}</div>
-            </a>
-        </li>
+            <li title="Follow me on Twitter.">
+                <div class="round-button twitter">
+                    <a itemprop="sameAs" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+                        <div class="icon">{% include icon/social/twitter.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
         {% if site.googleplus_username %}
-        <li class="round-button googlepluse" title="Follow me on Google+.">
-            <a itemprop="sameAs" href="https://plus.google.com/u/0/{{ site.googleplus_username }}" target="_blank">
-                <div class="icon">{% include icon/social/googleplus.svg %}</div>
-            </a>
-        </li>
+            <li title="Follow me on Google+.">
+                <div class="round-button googlepluse">
+                    <a itemprop="sameAs" href="https://plus.google.com/u/0/{{ site.googleplus_username }}" target="_blank">
+                        <div class="icon">{% include icon/social/googleplus.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
         {% if site.github_username %}
-        <li class="round-button github" title="Follow me on Github.">
-            <a itemprop="sameAs" href="https://github.com/{{ site.github_username }}" target="_blank">
-                <div class="icon">{% include icon/social/github.svg %}</div>
-            </a>
-        </li>
+            <li title="Follow me on Github.">
+                <div class="round-button github">
+                    <a itemprop="sameAs" href="https://github.com/{{ site.github_username }}" target="_blank">
+                        <div class="icon">{% include icon/social/github.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
         {% if site.linkedin_username %}
-        <li class="round-button linkedin" title="Follow me on Linkedin.">
-            <a itemprop="sameAs" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
-                <div class="icon">{% include icon/social/linkedin.svg %}</div>
-            </a>
-        </li>
+            <li title="Follow me on Linkedin.">
+                <div class="round-button linkedin">
+                    <a itemprop="sameAs" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+                        <div class="icon">{% include icon/social/linkedin.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
         {% if site.douban_username %}
-        <li class="round-button douban" title="Follow me on Douban.">
-            <a itemprop="sameAs" href="https://www.douban.com/people/{{ site.douban_username }}" target="_blank">
-                <div class="icon">{% include icon/social/douban.svg %}</div>
-            </a>
-        </li>
+            <li title="Follow me on Douban.">
+                <div class="round-button douban">
+                    <a itemprop="sameAs" href="https://www.douban.com/people/{{ site.douban_username }}" target="_blank">
+                        <div class="icon">{% include icon/social/douban.svg %}</div>
+                    </a>
+                </div>
+            </li>
         {% endif %}
     </ul>
     {% if site.email %}
-    <p class="email">
-        <a title="Send me e-mail." href="mailto:{{ site.email }}" target="_self"> {{ site.email }} </a>
-    </p>
+        <p class="email">
+            <a title="Send me Email." href="mailto:{{ site.email }}" target="_self"> {{ site.email }} </a>
+        </p>
     {% endif %}
 </div>

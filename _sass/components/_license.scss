@@ -2,30 +2,25 @@
     border-radius: $spacing-unit / 2;
     background-color: $text-background-color;
     box-shadow: $shadow-down;
-    padding: 0.5em 1em;
+    padding: $base-font-size / 2 $base-font-size;
     font-weight: $bold-font-weight;
-
     img {
         vertical-align: bottom;
     }
-
     .url {
         word-wrap: break-word;
     }
-
     .octocat {
         float: right;
+        img {
+            width: $spacing-unit * 2;
+            height: auto;
+            margin: 0 $spacing-unit / 3;
+            border-width: 0;
+            border-radius: $spacing-unit;
+        }
     }
-
-    .octocat img{
-        width: 70px;
-        height: auto;
-        margin: 0 $spacing-unit / 3;
-        border-width: 0;
-        border-radius: 35px;
-    }
-
-    .cc-license {
+    .license {
         float: right;
         margin-left: $spacing-unit / 3;
     }

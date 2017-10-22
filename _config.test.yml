@@ -28,12 +28,12 @@ timezone: Asia/Shanghai
 author: Someone
 email: someone@mail.com #your Email address e.g. someone@site.com
 facebook_username: someone #your Facebook username
-# twitter_username: someone #your Twitter username
-# github_username: someone #your GitHub username
-# googleplus_username: someone #your Google+ username
-# weibo_username: someone #your Weibo username
-# douban_username: someone #your Douban username
-# linkedin_username: someone #your Linkedin username
+twitter_username: someone #your Twitter username
+github_username: someone #your GitHub username
+googleplus_username: someone #your Google+ username
+weibo_username: someone #your Weibo username
+douban_username: someone #your Douban username
+linkedin_username: someone #your Linkedin username
 
 ## Comment system (Disqus) ##
 # disqus_shortname:  #the Disqus shortname for the site
@@ -42,9 +42,10 @@ facebook_username: someone #your Facebook username
 # ga_tracking_id:  #Google analytics id for the site
 
 ## Reading quantity (LeanCloud) ##
-# app_id:  #LeanCloud App id
-# app_key:  #LeanCloud App key
-# app_class:  #LeanCloud App class
+leancloud:
+  app_id: '1110' #LeanCloud App id
+  app_key: 'qw12e' #LeanCloud App key
+  app_class: 'qqqq' #LeanCloud App class
 
 ## Paginate ##
 paginate: 5

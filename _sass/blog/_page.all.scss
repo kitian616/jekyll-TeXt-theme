@@ -1,21 +1,19 @@
 .m-all {
-    .yaer-title{
-        font-size: $base-font-size * 1.5;
-        color: $text-color-d;
+    & > div > section {
+        margin: $content-gap * 3 0;
+        .year-list {
+            & > li {
+                list-style-type: none;
+                margin: $base-font-size * .4 0;
+            }
+        }
+        .post-date {
+            display: inline-block;
+            font-size: $small-font-size;
+            color: $text-color-l;
+            width: 4em;
+        }
     }
-
-    .year-wrapper {
-        padding: 10px;
-        margin: 15px 0;
-    }
-    .post-date {
-        display: inline-block;
-        font-size: $small-font-size;
-        line-height: 1;
-        color: $text-color-l;
-        width: 4em;
-    }
-
     .post-link {
         font-size: $base-font-size;
         @include link-normal {
@@ -24,14 +22,5 @@
         @include link-emphasize {
             color: $main-color-1;
         }
-        line-height: 1;
-    }
-
-    .post-list {
-        margin-bottom: 1em;
-    }
-    .post-block {
-        list-style-type: none;
-        margin: .4em 0 .4em 0;
     }
 }

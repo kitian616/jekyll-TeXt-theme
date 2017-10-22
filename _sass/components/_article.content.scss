@@ -1,21 +1,19 @@
 .m-article-content {
-    //headings
     line-height: $article-line-height;
     h1, h2, h3, h4, h5, h6 {
         margin: $content-gap * 2 0 $content-gap * .5 0;
     }
-
     h1, h2 {
         padding: 0 0 .3em 0;
         border: 0 dashed $border-color;
         border-bottom-width: 2px;
         margin-bottom: $content-gap;
     }
-    //pargraph
+
     p {
         margin: $content-gap 0;
     }
-    //links
+
     a:active {
         color: $text-color-1;
         background-color: $main-color-1;
@@ -35,14 +33,12 @@
             margin-bottom: 0;
         }
     }
-    //images
-    img {
+
+    img:not(.emoji) {
         max-width: 100%;
         max-height: 600px;
         vertical-align: bottom;
     }
-
-    //emoji
     .emoji {
         display: inline-block;
         vertical-align: baseline;
@@ -50,7 +46,7 @@
         height: 1.3em;
         margin: -.2em 0;
     }
-    //code
+
     code {
         padding: .2em .4em;
         border-radius: .4em;
@@ -61,7 +57,6 @@
             margin: 0;
         }
     }
-
     pre {
         display: block;
         overflow: auto;
@@ -81,7 +76,6 @@
             background-color: transparent;
         }
     }
-
     figure {
         margin: $content-gap 0;
         &:before {
@@ -103,11 +97,9 @@
         }
     }
 
-    //list
     ul {
         list-style-type: circle;
     }
-
     ul, ol {
         margin: $content-gap 0 $content-gap $spacing-unit;
         li {
@@ -115,7 +107,6 @@
             p { margin: 0; }
         }
     }
-
     dl {
        margin: $content-gap 0 $content-gap 0;
        dt, dd {
@@ -130,7 +121,6 @@
        }
     }
 
-    //table
     table {
     	width: 100%;
     	margin: $content-gap 0;

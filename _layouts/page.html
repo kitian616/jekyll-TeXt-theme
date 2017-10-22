@@ -3,12 +3,12 @@ layout: blog-default
 ---
 <div class="m-page">
     <article class="main">
-        <h1 class="page-heading">{{ page.title }}</h1>
+        <h1>{{ page.title }}</h1>
 
         <div class="m-article-content" itemprop="articleBody">
             {{ content }}
         </div>
-        {% if page.comment == null or page.comment == true %}
+        {% if page.comment != false %}
             <section>{% include utils/comment-disqus.html %}</section>
         {% endif %}
     </article>

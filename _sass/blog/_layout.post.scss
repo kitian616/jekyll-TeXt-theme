@@ -1,7 +1,6 @@
 .m-post {
     & > div {
         display: block;
-        flex-direction: row;
         @include media-query($on-laptop) {
             display: block;
         }
@@ -42,17 +41,19 @@
             }
         }
     }
-    .article-license {
-        position: relative;
-        max-width: 500px;
-        margin: 1.5em 0;
+    footer {
+        & > span {
+            color: $text-color-l;
+        }
+        & > .article-license {
+            position: relative;
+            max-width: 500px;
+            margin: 1.5em 0;
+        }
     }
 }
-
-.has-toc {
-    .m-post {
-        & > div {
-            display: flex;
-        }
+.has-toc .m-post {
+    & > div {
+        @include flexbox;
     }
 }

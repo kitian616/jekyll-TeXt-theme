@@ -3,32 +3,28 @@
  */
 
 .m-page-footer {
-    display: flex;
-    align-items: center;
+    @include flexbox;
+    @include align-items(center);
     height: $footer-height;
-    margin-top: - $footer-height;
+    margin-top: -$footer-height;
     background-color: $main-color-3;
     & > .main {
-        display: flex;
-        flex-direction: column;
+        @include flexbox;
+        @include flex-direction(column);
     }
     p {
         color: $text-color-3;
     }
     a {
-        @include link-normal {
-            color: $text-color-3;
-        }
-        @include link-emphasize {
-            color: $main-color-1;
-        }
+        @include link-text-colors (
+            $text-color-3,
+            $main-color-1
+        );
     }
     .follow-me {
+        padding: $content-gap 0 0 0;
         .round-button {
             box-shadow: $shadow-down;
-        }
-        .mail {
-            display: none;
         }
     }
     .site-info {

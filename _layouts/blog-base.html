@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="{{ "/statics/css/blog.css" | prepend: site.baseurl | replace:'//','/' }}">
         <style>
             {% if page.picture_frame == 'shadow' %}
-                .m-article-content img {
+                .m-article-content img:not(.emoji) {
                     box-shadow: 0 0 5px rgba(0, 0, 0, .4);
                 }
             {% endif %}
@@ -26,7 +26,7 @@
                 });
             });
         </script>
-        {% if site.isdebug == false %}
+        {% if ga_tracking_id and site.isdebug == false %}
             {% include utils/google-analytics.html %}
         {% endif %}
     </body>

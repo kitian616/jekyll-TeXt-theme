@@ -1,28 +1,6 @@
-/**
- * Links
- */
-
-a {
-    font-weight: $bold-font-weight;
-    text-decoration: none;
-    @include link-colors($main-color-1, $main-color-1);
-    @include link-normal {
-        color: $main-color-1;
-    }
-    @include link-emphasize {
-        color: $main-color-1;
-        text-decoration: underline;
-    }
-    -webkit-transition: all 0.8s ease 0s;
-    -moz-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s;
-
-}
-
 %cursor-pointer {
     cursor:pointer;
 }
-
 %cursor-default {
     cursor: default;
 }
@@ -30,107 +8,77 @@ a {
     cursor: not-allowed;
 }
 
+a {
+    font-weight: $bold-font-weight;
+    text-decoration: none;
+    @include link-normal {
+        color: $main-color-1;
+    }
+    @include link-emphasize {
+        text-decoration: underline;
+        color: $main-color-1;
+    }
+    @include transition(all .8s ease 0s);
+}
+
 .round-button {
-    @extend %cursor-pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: $bold-font-weight;
     line-height: 1;
-    height: 2em;
-    width: 2em;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
     box-sizing: border-box;
-    padding: .4em;
+    width: $base-font-size * 2;
+    height: $base-font-size * 2;
+    text-decoration: none;
     border-radius: 50%;
+    @extend %cursor-pointer;
+    @include link-colors(
+        $text-color-3, $main-color-3,
+        $text-color-1, $main-color-1
+    );
     @include link-normal {
-        background-color: $main-color-3;
-        color: $text-color-3;
         text-decoration: none;
     }
     @include link-emphasize {
-        background-color: $main-color-1;
-        color: $text-color-1;
         text-decoration: none;
     }
-
+    @include transition(all .8s ease 0s);
     svg {
-        height: 1em;
-        width: 1em;
-        @include link-normal {
-            path {
-                fill: $text-color-3;
-            }
-        }
-        @include link-emphasize {
-            path {
-                fill: $text-color-1;
-            }
-        }
+        width: $base-font-size;
+        height: $base-font-size;
     }
-    //inactive button (gray)
     &.inactive {
         @extend %cursor-not-allowed;
-        @include link-normal {
-            background-color: $main-color-3;
-            color: rgba($text-color-3, .5);
-        }
-        @include link-emphasize {
-            background-color: $main-color-3;
-            color: rgba($text-color-3, .5);
-        }
-        svg {
-            @include link-normal {
-                path {
-                    fill: rgba($text-color-3, .5);
-                }
-            }
-            @include link-emphasize {
-                path {
-                    fill: rgba($text-color-3, .5);
-                }
-            }
-        }
+        @include link-colors(
+            rgba($text-color-3, .5), $main-color-3,
+            rgba($text-color-3, .5), $main-color-3
+        );
     }
-
-    -webkit-transition: all 0.8s ease 0s;
-    -moz-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s;
 }
 
 .round-rect-button {
-    @extend %cursor-pointer;
-    display: block;
     font-weight: $bold-font-weight;
-    box-sizing: border-box;
-    padding: .4em .6em;
     line-height: 1;
-    border-radius: 1em;
+    display: block;
+    box-sizing: border-box;
+    padding: $base-font-size * .4 $base-font-size * .6;
+    text-decoration: none;
+    border-radius: $base-font-size * 2;
+    @extend %cursor-pointer;
+    @include link-colors(
+        $text-color-3, $main-color-3,
+        $text-color-1, $main-color-1
+    );
     @include link-normal {
-        background-color: $main-color-3;
-        color: $text-color-3;
         text-decoration: none;
     }
     @include link-emphasize {
-        background-color: $main-color-1;
-        color: $text-color-1;
         text-decoration: none;
-
     }
+    @include transition(all .8s ease 0s);
     svg {
-        height: 1em;
-        width: 1em;
-        @include link-normal {
-            path {
-                fill: $text-color-3;
-            }
-        }
-        @include link-emphasize {
-            path {
-                fill: $text-color-1;
-            }
-        }
+        width: $base-font-size;
+        height: $base-font-size;
     }
-    -webkit-transition: all 0.8s ease 0s;
-    -moz-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s;
 }

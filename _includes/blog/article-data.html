@@ -15,17 +15,18 @@
     {% assign cur_page = page %}
 	{% endif %}
 	{% if cur_page.tags[0] %}
-        <div class="tag-wrapper">
+        <ul class="inline-list tag-wrapper">
             {% for tag in cur_page.tags %}
-            <a class="article-tag round-rect-button" href="{{ "/all.html?tag=" |prepend: site.baseurl | append: tag | replace: '//', '/' }}"> {{ tag }} </a>
+                <li><a class="round-rect-button"
+                    href="{{ "/all.html?tag=" |prepend: site.baseurl | append: tag | replace: '//', '/' }}">{{ tag }}
+                </a></li>
             {% endfor %}
-        </div>
+        </ul>
 	{% endif %}
     <div class="other-wrapper">
-        {% if site.app_id and site.app_key and site.app_class %}
-            <div class="view-wrapper clearfix">
-                <span class="article-view" id="post-key-{{ cur_page.key }}">0</span>
-                views |
+        {% if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class %}
+            <div class="view-wrapper">
+                <span class="article-view" id="post-key-{{ cur_page.key }}">0</span> views
             </div>
         {% endif %}
         <div class="date-wrapper">

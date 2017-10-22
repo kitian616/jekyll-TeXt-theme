@@ -7,36 +7,34 @@ layout: blog-default
             <article itemscope itemtype="http://schema.org/BlogPosting">
                 <meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
                 <header class="article-header">
-                    <h1 itemprop="headline" class="article-title" itemprop="name headline">{{ page.title }}</h1>
+                    <h1 itemprop="headline" itemprop="name headline">{{ page.title }}</h1>
                     {% include blog/article-data.html %}
                 </header>
-
                 <div class="m-article-content js-article-content" itemprop="articleBody">
                     {{ content }}
                 </div>
-
                 <footer>
                     {% if page.modify_date %}
-                    <div class="article-meta">
-                        Last updated
-                        <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
-                            {{ page.modify_date | date: "%b %-d, %Y" }}
-                        </time>
-                    </div>
+                        <span>
+                            Last updated
+                            <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
+                                {{ page.modify_date | date: "%b %-d, %Y" }}
+                            </time>
+                        </span>
                     {% else %}
-                    <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
+                        <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
                     {% endif %}
                     <div class="article-license">
                         {% include blog/license.html %}
                     </div>
                 </footer>
-                {% if page.comment == null or page.comment == true %}
-                <section>{% include utils/comment-disqus.html %}</section>
+                {% if page.comment != false %}
+                    <section>{% include utils/comment-disqus.html %}</section>
                 {% endif %}
             </article>
         </div>
         <div class="col-2">
-            <aside class="m-article-aside js-article-aside">
+            <aside class="js-article-aside">
                 <div class="m-toc js-toc"></div>
             </aside>
         </div>
@@ -84,13 +82,11 @@ layout: blog-default
         var $articleContent = $('.js-article-content');
         var $articleAside = $('.js-article-aside');
         var $toc = $('.js-toc');
-
         var hasTitle = $articleContent.find('h1, h2, h3').length > 0;
 
         function articleAsideDisplay() {
             return $articleAside.css('display') !== 'none';
         }
-
         function setTocClass() {
             if (hasTitle) {
                 (
@@ -105,6 +101,7 @@ layout: blog-default
         }
 
         setTocClass();
+
         function setAsideTOC() {
             var asideTop,
                 asideLeft,
@@ -165,24 +162,24 @@ layout: blog-default
         });
     });
 </script>
-{% if page.key != null and site.app_id and site.app_key and site.app_class and site.isdebug == false %}
+{% if page.key and site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and site.isdebug == false %}
     <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
     <script type="text/javascript">
         $(function() {
             // 初始化
             AV.init({
-                appId: '{{ site.app_id }}',
-                appKey: '{{ site.app_key }}'
+                appId: '{{ site.leancloud.app_id }}',
+                appKey: '{{ site.leancloud.app_key }}'
             });
             // 查询
-            var query = new AV.Query('{{ site.app_class }}');
+            var query = new AV.Query('{{ site.leancloud.app_class }}');
             query.equalTo('key', '{{ page.key }}');
             query.first().then(function(result) {
                 if (result) {
                     addOne(result)
                 } else {
                     //新建
-                    var Blog = AV.Object.extend('{{ site.app_class }}');
+                    var Blog = AV.Object.extend('{{ site.leancloud.app_class }}');
                     var blog = new Blog();
                     blog.set('title', '{{ page.title }}');
                     blog.set('key', '{{ page.key }}');

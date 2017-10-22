@@ -1,20 +1,11 @@
-/**
- * Site header
- */
 .m-page-header {
     position: relative;
-    color: $text-color;
-    ul {
-        list-style-type: none;
-    }
     a {
         font-weight: $base-font-weight;
-        @include link-normal {
-            color: $text-color;
-        }
-        @include link-emphasize {
-            color: $main-color-1;
-        }
+        @include link-text-colors(
+            $text-color,
+            $main-color-1
+        );
     }
     .site-logo {
         display: inline-block;
@@ -22,33 +13,22 @@
         width: $h3-font-size;
         height: $h3-font-size;
     }
-    /**
-    * Site title
-    */
     .site-title {
         display: inline-block;
         font-size: $h3-font-size;
-        line-height: 1.5;
     }
-    /**
-    * Site nav (nav)
-    */
-    .site-nav {
+    & > nav {
         display: block;
-        opacity: 1;
         float: right;
         font-size: $h5-font-size;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         ul {
-            padding: 0;
             margin: 0;
-            white-space: nowrap;
-            li {
-                display: inline-block;
-                line-height: $h2-font-size * 1.5 / $h4-font-size;
+            & > li {
+                margin: 0;
                 &:not(:last-child) {
-                    margin-right: 16px;
+                    margin: 0 $base-font-size 0 0;
                 }
             }
         }

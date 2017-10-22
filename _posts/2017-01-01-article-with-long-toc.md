@@ -2,7 +2,7 @@
 layout: post
 title: Article With Long TOC
 key: 20170101
-tags: boundary
+tags: test boundary
 ---
 
 Article with long TOC.
