@@ -18,7 +18,7 @@
         <ul class="inline-list tag-wrapper">
             {% for tag in cur_page.tags %}
                 <li><a class="round-rect-button"
-                    href="{{ "/all.html?tag=" |prepend: site.baseurl | append: tag | replace: '//', '/' }}">{{ tag }}
+                    href="{{ "/all.html?tag=" | prepend: site.baseurl | append: tag | replace: '//', '/' }}">{{ tag }}
                 </a></li>
             {% endfor %}
         </ul>

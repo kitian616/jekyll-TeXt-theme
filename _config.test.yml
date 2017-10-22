@@ -45,9 +45,9 @@ disqus:
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
-  app_id: '1110' #LeanCloud App id
-  app_key: 'qw12e' #LeanCloud App key
-  app_class: 'qqqq' #LeanCloud App class
+  # app_id:  #LeanCloud App id
+  # app_key:  #LeanCloud App key
+  # app_class:  #LeanCloud App class
 
 ## Paginate ##
 paginate: 5
