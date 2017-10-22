@@ -1,72 +1,72 @@
 <div class="follow-me">
     <ul class="inline-list" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="{{ site.author }}">
+        <meta itemprop="name" content="{{ site.author.name }}">
         <link itemprop="url" href="{{ '/' | prepend: site.url }}">
-        {% if site.weibo_username %}
+        {% if site.author.weibo %}
             <li title="Follow me on Weibo.">
                 <div class="round-button weibo">
-                    <a itemprop="sameAs" href="https://weibo.com/{{ site.weibo_username }}" target="_blank">
+                    <a itemprop="sameAs" href="https://weibo.com/{{ site.author.weibo }}" target="_blank">
                         <div class="icon">{% include icon/social/weibo.svg %}</div>
                     </a>
                 </div>
             </li>
         {% endif %}
-        {% if site.facebook_username %}
+        {% if site.author.facebook %}
             <li title="Follow me on Facebook.">
                 <div class="round-button facebook">
-                    <a itemprop="sameAs" href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank">
+                    <a itemprop="sameAs" href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank">
                         <div class="icon">{% include icon/social/facebook.svg %}</div>
                     </a>
                 </div>
             </li>
         {% endif %}
-        {% if site.twitter_username %}
+        {% if site.author.twitter %}
             <li title="Follow me on Twitter.">
                 <div class="round-button twitter">
-                    <a itemprop="sameAs" href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+                    <a itemprop="sameAs" href="https://twitter.com/{{ site.author.twitter }}" target="_blank">
                         <div class="icon">{% include icon/social/twitter.svg %}</div>
                     </a>
                 </div>
             </li>
         {% endif %}
-        {% if site.googleplus_username %}
+        {% if site.author.googleplus %}
             <li title="Follow me on Google+.">
                 <div class="round-button googlepluse">
-                    <a itemprop="sameAs" href="https://plus.google.com/u/0/{{ site.googleplus_username }}" target="_blank">
+                    <a itemprop="sameAs" href="https://plus.google.com/u/0/{{ site.author.googleplus }}" target="_blank">
                         <div class="icon">{% include icon/social/googleplus.svg %}</div>
                     </a>
                 </div>
             </li>
         {% endif %}
-        {% if site.github_username %}
+        {% if site.author.github %}
             <li title="Follow me on Github.">
                 <div class="round-button github">
-                    <a itemprop="sameAs" href="https://github.com/{{ site.github_username }}" target="_blank">
+                    <a itemprop="sameAs" href="https://github.com/{{ site.author.github }}" target="_blank">
                         <div class="icon">{% include icon/social/github.svg %}</div>
                     </a>
                 </div>
             </li>
         {% endif %}
-        {% if site.linkedin_username %}
+        {% if site.author.linkedin %}
             <li title="Follow me on Linkedin.">
                 <div class="round-button linkedin">
-                    <a itemprop="sameAs" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
+                    <a itemprop="sameAs" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
                         <div class="icon">{% include icon/social/linkedin.svg %}</div>
                     </a>
                 </div>
             </li>
         {% endif %}
-        {% if site.douban_username %}
+        {% if site.author.douban %}
             <li title="Follow me on Douban.">
                 <div class="round-button douban">
-                    <a itemprop="sameAs" href="https://www.douban.com/people/{{ site.douban_username }}" target="_blank">
+                    <a itemprop="sameAs" href="https://www.douban.com/people/{{ site.author.douban }}" target="_blank">
                         <div class="icon">{% include icon/social/douban.svg %}</div>
                     </a>
                 </div>
             </li>
         {% endif %}
     </ul>
-    {% if site.email %}
+    {% if site.author.email %}
         <p class="email">
             <a title="Send me Email." href="mailto:{{ site.email }}" target="_self"> {{ site.email }} </a>
         </p>

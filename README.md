@@ -115,7 +115,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 评论系统
 
-在 _config.yml 文件的 `disqus_shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname，需要注意的是 Disqus 在大陆是无法直接访问的。
+在 _config.yml 文件的 `disqus.shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname，需要注意的是 Disqus 在大陆是无法直接访问的。
 
 > 注意：使用评论系统必须在文章的头信息中设置 key 值。
 

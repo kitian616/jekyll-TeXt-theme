@@ -3,8 +3,8 @@
         <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
             {% if page.author %}
                 <meta itemprop="name" content="{{ page.author }}"/>
-            {% elsif site.author %}
-                <meta itemprop="name" content="{{ site.author }}"/>
+            {% elsif site.author.name %}
+                <meta itemprop="name" content="{{ site.author.name }}"/>
             {% endif %}
         </meta>
 	{% endif %}

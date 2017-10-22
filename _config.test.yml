@@ -25,18 +25,20 @@ lang: zh #the language of your site
 timezone: Asia/Shanghai
 
 ## Author & social ##
-author: Someone
-email: someone@mail.com #your Email address e.g. someone@site.com
-facebook_username: someone #your Facebook username
-twitter_username: someone #your Twitter username
-github_username: someone #your GitHub username
-googleplus_username: someone #your Google+ username
-weibo_username: someone #your Weibo username
-douban_username: someone #your Douban username
-linkedin_username: someone #your Linkedin username
+author:
+  name: Someone
+  email: someone@mail.com #your Email address e.g. someone@site.com
+  facebook: someone #your Facebook username
+  twitter: someone #your Twitter username
+  github: someone #your GitHub username
+  googleplus: someone #your Google+ username
+  weibo: someone #your Weibo username
+  douban: someone #your Douban username
+  linkedin: someone #your Linkedin username
 
 ## Comment system (Disqus) ##
-# disqus_shortname:  #the Disqus shortname for the site
+disqus:
+  # shortname:  #the Disqus shortname for the site
 
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site
