@@ -16,7 +16,7 @@
         line-height: $toc-line-height;
         font-weight: $base-font-weight;
         @include link-normal {
-            color: $text-color-l;
+            color: $text-color;
         }
         @include link-emphasize {
             color: $main-color-1;

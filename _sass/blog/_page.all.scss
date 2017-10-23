@@ -1,6 +1,14 @@
 .m-all {
     & > div > section {
         margin: $content-gap * 3 0;
+        & > section {
+            &:not(:last-child) {
+                padding: 0 0 $base-font-size * .4 0;
+            }
+        }
+        .year-title {
+            font-size: $base-font-size * 1.6;
+        }
         .year-list {
             & > li {
                 list-style-type: none;
@@ -8,10 +16,11 @@
             }
         }
         .post-date {
+            font-family: $code-font-family;
             display: inline-block;
             font-size: $small-font-size;
             color: $text-color-l;
-            width: 4em;
+            padding: 0 $base-font-size 0 0;
         }
     }
     .post-link {

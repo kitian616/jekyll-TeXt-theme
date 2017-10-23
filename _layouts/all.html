@@ -13,7 +13,7 @@ title: All Posts
                 {% if currentdate != date %}
                     {% unless forloop.first %}</ul></section>{% endunless %}
                     <section id="{{ post.date | date: "%Y" }}">
-                    <h2 id="year-{{ post.date | date: "%Y" }}">{{ currentdate }}</h2>
+                    <h2 class="year-title" id="year-{{ post.date | date: "%Y" }}">{{ currentdate }}</h2>
                     <ul class="year-list">
                     {% assign date = currentdate %}
                 {% endif %}

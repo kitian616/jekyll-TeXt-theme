@@ -9,9 +9,13 @@
     }
     .site-logo {
         display: inline-block;
-        vertical-align: top;
-        width: $h3-font-size;
-        height: $h3-font-size;
+        vertical-align: middle;
+        width: $h3-font-size * 1.2;
+        height: $h3-font-size * 1.2;
+        & > svg {
+            width: 100%;
+            height: 100%;
+        }
     }
     .site-title {
         display: inline-block;

@@ -1,7 +1,3 @@
-/**
- * Headings
- */
-
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
@@ -41,9 +37,6 @@ h6 {
     color: $text-color-l;
 }
 
-/**
- * Code formatting
- */
 pre,
 code {
     font-family: $code-font-family;
