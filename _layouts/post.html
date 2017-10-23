@@ -84,19 +84,12 @@ layout: blog-default
         var $toc = $('.js-toc');
         var hasTitle = $articleContent.find('h1, h2, h3').length > 0;
 
-        function articleAsideDisplay() {
-            return $articleAside.css('display') !== 'none';
+        function asideSticky() {
+            return $window.outerWidth() > 1150 && $pageStage.hasClass('has-toc');
         }
         function setTocClass() {
             if (hasTitle) {
-                (
-                    articleAsideDisplay() &&
-                    !$pageStage.hasClass('has-toc')
-                ) && $pageStage.addClass('has-toc');
-                (
-                    !articleAsideDisplay() &&
-                    $pageStage.hasClass('has-toc')
-                ) && $pageStage.removeClass('has-toc');
+                !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
             }
         }
 
@@ -143,14 +136,13 @@ layout: blog-default
                 }
                 lastScrollTop = scrollTop;
             }
-            init();
-            setAside();
+            asideSticky() && (init(), setAside());
             $window.on('scroll', function() {
-                articleAsideDisplay() && setAside();
+                asideSticky() && setAside();
             });
             $window.on('resize', throttle(function() {
                 setTocClass();
-                articleAsideDisplay() && (init(), setAside(true));
+                asideSticky() && (init(), setAside(true));
             }, 100));
             setTimeout(init, 4000);
         }

@@ -5,18 +5,14 @@
     @include media-query($on-laptop) {
         padding: 0 $spacing-unit / 2;
     }
-    @include media-query($on-palm) {
-        padding: 0 $spacing-unit / 2;
-    }
 }
-
 .has-toc .main {
     max-width: $content-max-width + $aside-width;
     @include media-query($on-laptop) {
         max-width: $content-max-width;
+        padding: 0 $spacing-unit / 2;
     }
 }
-
 .inline-list {
     & > li {
         display: inline-block;
