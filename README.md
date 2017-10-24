@@ -31,9 +31,9 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ## How To Use
 
-最简单的方法是直接 fork 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到页面。接下来你可以在线修改 _config.yml 和 md 文件，或者把它 clone 到本地修改后提交。
+最简单的方法是直接 **Fork** 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到页面。接下来你可以在线修改 _config.yml 和 md 文件，或者把它 Clone 到本地修改后提交。
 
-当然，你可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases)下载最新版本源码，或直接 clone 代码到本地。
+当然，你可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases) 下载最新版本源码，或直接 Clone 代码到本地。
 
 ### 配置
 
@@ -81,7 +81,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)。
 
-如果你是下载或者 clone 的源码，那么你需要在 GitHub 上建立一个 Repository，然后把项目代码 push 到其对应的分支上（如果以 `<username>.github.io` 命名则对应分支为 `master` ，其他的为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)）。
+如果你是下载或者 Clone 的源码，那么你需要在 GitHub 上建立一个 Repository，然后把项目代码 push 到其对应的分支上（如果以 `<username>.github.io` 命名则对应分支为 `master` ，其他的为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)）。
 
 当然你也可以部署到到其他地方。
 
