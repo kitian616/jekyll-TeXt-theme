@@ -10,7 +10,9 @@
 
 ### Bug Fixes
 
-- Issues 4: View count display error when the post key include `=`.
+- Issues 4: View count display error when the post key include =. @yuxianda
+
+- Email url error
 
 ## [1.2.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.0)
 
