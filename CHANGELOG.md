@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## [1.2.1](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.1)
+
+### Enhancements
+
+- Optimize Article TOC.
+
+### Bug Fixes
+
+- Issues 4: View count display error when the post key include `=`.
+
 ## [1.2.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.0)
 
 ### Enhancements
