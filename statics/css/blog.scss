@@ -9,10 +9,10 @@
     "settings/font",
     "settings/highlighting",
 
+    "mixins/prefix",
     "mixins/media",
     "mixins/link",
     "mixins/flex",
-    "mixins/transition",
 
     "base/base",
     "base/text",
@@ -41,5 +41,6 @@
     "blog/layout.post",
 
     "blog/page.all",
-    "blog/page.index"
+    "blog/page.index",
+    "blog/page.error-404"
 ;

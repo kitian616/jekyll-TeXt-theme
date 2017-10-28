@@ -3,7 +3,7 @@
     min-height: 100%;
     overflow:auto;
     padding-bottom: $footer-height;
-    animation: fade-in-down .8s;
+    @include animation(fade-in-down .8s);
 }
 .m-page-content {
     padding: $content-gap * 3 0 $content-gap * 2;
