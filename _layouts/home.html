@@ -38,7 +38,7 @@ title: Blog
                         </div></li>
                     {% elsif page == 1 %}
                         <li><a class="round-button"
-                            href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                            href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">
                             <span>{{ page }}</span>
                         </a></li>
                     {% else %}
