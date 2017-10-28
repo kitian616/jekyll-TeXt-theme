@@ -9,6 +9,9 @@
                 );
             }
         }
+        & > a {
+            font-size: $small-font-size;
+        }
         margin: $content-gap * 3 0;
     }
     .m-article-content {

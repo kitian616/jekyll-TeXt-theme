@@ -13,6 +13,7 @@ title: Blog
                     <div class="m-article-content">
                         {{ post.excerpt | truncatewords: 200 }}
                     </div>
+                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Click to read more ...</a>
                     {% include blog/article-data.html %}
                 </article>
             {% endfor %}

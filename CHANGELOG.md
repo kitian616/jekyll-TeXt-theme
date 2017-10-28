@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Enhancements
+
+- MathJax Support (todo: doc)
+
 ## [1.2.1](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.1)
 
 ### Enhancements
