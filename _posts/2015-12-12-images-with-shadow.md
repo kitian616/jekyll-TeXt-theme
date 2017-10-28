@@ -10,4 +10,4 @@ picture_frame: shadow
 
 smile, smile, smile. :smile:
 
-微笑, 微笑, 微笑. :smile:
+微笑，微笑，微笑。:smile:
