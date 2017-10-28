@@ -59,7 +59,7 @@
         display: block;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-        margin: 0;
+        margin: $content-gap 0;
         border-radius: $code-font-size * .4;;
         background-size: auto $code-font-size * $code-line-height * 2;
         background-origin: content-box;
@@ -90,6 +90,7 @@
         & > pre {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
+            margin: 0;
             & > code {
                 padding-top: 0;
             }
