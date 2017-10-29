@@ -33,7 +33,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 最简单的方法是直接 **Fork** 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到页面。接下来你可以在线修改 _config.yml 和 md 文件，或者把它 Clone 到本地修改后提交。
 
-当然，你可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases) 下载最新版本源码，或直接 Clone 代码到本地。
+当然，你也可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases) 下载最新版本源码，或直接 Clone 代码到本地。
 
 ### 配置
 

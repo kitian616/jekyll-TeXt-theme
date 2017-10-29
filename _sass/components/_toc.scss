@@ -21,7 +21,7 @@
         @include link-normal {
             color: $text-color;
         }
-        @include link-emphasize {
+        @include link-emphasize-no-focus {
             color: $main-color-1;
         }
     }

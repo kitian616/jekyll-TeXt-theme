@@ -11,6 +11,13 @@
     }
 }
 
+@mixin link-emphasize-no-focus {
+    &.hover, &.active,
+    &:hover, &:active {
+        @content;
+    }
+}
+
 @mixin link-colors($nc, $nbc, $ec, $ebc) {
     @include link-normal {
         color: $nc;
