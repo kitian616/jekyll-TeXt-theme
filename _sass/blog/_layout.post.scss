@@ -6,7 +6,8 @@
         }
     }
     .col-1 {
-        width: $content-max-width;
+        @include flex(1);
+        max-width: $content-max-width;
         & > article {
             & > header {
                 color: $text-color-d;
