@@ -1,6 +1,6 @@
 <header class="m-page-header main clearfix">
     <a class="site-title" title="{% if site.blog.description %}{{ site.blog.description }}{% else %}{{ site.description }}{% endif %}"
-        href="{{ site.blog.baseurl |  prepend: site.baseurl | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}
+        href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">{% if site.blog.title %}{{ site.blog.title }}{% else %}{{ site.title }}{% endif %}
     </a>
     <div class="site-logo">
         {% include logo/logo.svg %}
