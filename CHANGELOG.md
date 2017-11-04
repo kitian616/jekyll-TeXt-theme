@@ -2,9 +2,19 @@
 
 ## Unreleased
 
+## [1.2.2](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.2)
+
 ### Enhancements
 
-- MathJax Support (todo: doc)
+- MathJax Support
+
+- Add "Read More" link at the end of article excerpt.
+
+### Bug Fixes
+
+- Fix Email link url error
+
+- Fix Site Title link url error
 
 ## [1.2.1](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.1)
 
