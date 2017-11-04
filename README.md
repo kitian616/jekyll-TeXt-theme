@@ -25,7 +25,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - Web 语意化
 - 网站图标的自动化工具（[gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico)）
 - Color Theme
-- [MathJax](https://www.mathjax.org/)
+- 数学公式([MathJax](https://www.mathjax.org/))
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
