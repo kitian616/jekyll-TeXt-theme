@@ -25,6 +25,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - Web 语意化
 - 网站图标的自动化工具（[gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico)）
 - Color Theme
+- MathJax
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
@@ -51,7 +52,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ### 安装环境（非必须）
 
-请确保你的电脑上安装了 Ruby 开发环境。（ Linux 和 macOS 自带）
+请确保你的电脑上配置好了 Ruby 开发环境。(ruby, bundle, Command Line Tools ...)
 
 首先安装 github-pages，在项目根目录执行 `bundle install` 即可安装。
 
@@ -139,6 +140,7 @@ bundle exec jekyll serve -H 0.0.0.0
 | picture_frame | shadow        | 该文章的图片框样式，如果为 `shadow` 则图片带有阴影边框 |
 | modify_date   |               | 该文章的修改时间，不影响首页文章排序（`date` 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
+| mathjax       | true/false    | 该文章是否需要使用 MathJax 公式，默认为 false，此时只会在该文章页面中解析 MathJax 公式。如果需要首页的摘要也支持公式，可以配置 _config.yml 中的 mathjax 项为 true |
 
 ### 其他资源
 
