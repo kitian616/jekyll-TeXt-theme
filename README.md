@@ -52,15 +52,17 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 #### 摘要
 
-该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 _config.yml 配置项 `excerpt_type` 的值为 `text` 时是 TEXT 模式，为 `html` 时是 HTML 模式。**默认为 TEXT 模式**。
+该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 _config.yml 配置项 `excerpt_type` 的值为 `text` 时是 TEXT 模式，为 `html` 时是 HTML 模式，**默认为 TEXT 模式**。
 
 TEXT 模式的摘要为纯文本，会过滤掉一切非文本元素（标题，链接，列表，表格，图片等等），且截取前 350 个字符。
 
 HTML 模式的摘要为 HTML 文档，与文章内容一致，并且 **默认展示整篇文章的内容**。若想控制摘要内容，需要在文章中想要显示到的地方加上 `<!--more-->` 行，具体详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
 
+> 提示：为了首页更好的展示效果，个人还是推荐使用 HTML 模式，并自己在文章中加上 `<!--more-->` 行。
+
 ### 安装环境（非必须）
 
-请确保你的电脑上配置好了 Ruby 开发环境。(ruby, bundle, Command Line Tools ...)
+请确保你的电脑上配置好了 Ruby 开发环境。(ruby, bundle, Command Line Tools(macOS) ...)
 
 首先安装 github-pages，在项目根目录执行 `bundle install` 即可安装。
 
