@@ -5,4 +5,4 @@ key: 20170202
 tags: boundary
 ---
 
-Article With Very Long Title
+Article With Very Long Title.

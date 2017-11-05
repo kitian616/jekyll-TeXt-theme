@@ -8,7 +8,7 @@ tags: markdown
 Vestibulum posuere, quam sed bibendum posuere, orci est semper libero, nec congue tortor arcu eget velit.
 
 Vestibulum posuere, quam sed bibendum posuere
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 <!--more-->
 

@@ -18,15 +18,15 @@ Sed feugiat faucibus leo, ut iaculis eros ullamcorper vitae. Nulla bibendum, ris
 
 ### Integer suscipit, purus in egestas iaculis, nunc massa facilisis nisi.
 
-Vestibulum posuere, quam sed bibendum posuere
+Vestibulum posuere, quam sed bibendum posuere.
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 #### Integer suscipit (hide)
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.
 
 <!--more-->
 
@@ -40,27 +40,27 @@ Nullam bibendum lectus sed diam fringilla cursus in id lectus. Pellentesque faci
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.
 
 ## Integer suscipit, purus in egestas iaculis, nunc massa facilisis nisi.
 
@@ -68,31 +68,31 @@ In hac habitasse platea dictumst. Morbi non rutrum risus. Proin orci nisi, commo
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.
 
-## Integer suscipit, purus in egestas iaculis, nunc massa facilisis nisi.
+## Integer suscipit, purus in egestas iaculis, nunc massa facilisis nisi
 
 Nulla vulputate, nisi sed placerat consectetur, arcu augue condimentum velit, eu molestie lacus quam ut ante. Nullam leo ipsum, auctor vitae ultrices sed, facilisis a massa. Vestibulum tristique lacus a mauris ullamcorper vel viverra orci aliquam. Proin facilisis, ligula volutpat bibendum mollis, urna dui volutpat est, ut dictum turpis ipsum sed arcu. Aliquam erat volutpat. In eget rutrum massa. Etiam a magna quis dolor eleifend laoreet. Vivamus non semper orci. Phasellus imperdiet sapien posuere purus aliquet consequat consectetur urna sodales. Sed tristique placerat facilisis. Phasellus vitae rutrum arcu.
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.
 
-## Integer suscipit, purus in egestas iaculis, nunc massa facilisis nisi.
+## Integer suscipit, purus in egestas iaculis, nunc massa facilisis nisi
 
 Nulla vulputate, nisi sed placerat consectetur, arcu augue condimentum velit, eu molestie lacus quam ut ante. Nullam leo ipsum, auctor vitae ultrices sed, facilisis a massa. Vestibulum tristique lacus a mauris ullamcorper vel viverra orci aliquam. Proin facilisis, ligula volutpat bibendum mollis, urna dui volutpat est, ut dictum turpis ipsum sed arcu. Aliquam erat volutpat. In eget rutrum massa. Etiam a magna quis dolor eleifend laoreet.
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
@@ -100,15 +100,15 @@ Proin facilisis, ligula volutpat bibendum mollis, urna dui volutpat est, ut dict
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
@@ -116,8 +116,8 @@ Proin facilisis, ligula volutpat bibendum mollis, urna dui volutpat est, ut dict
 
 ### Integer suscipit
 
-Pellentesque habitant morbi tristique senectus
+Pellentesque habitant morbi tristique senectus.
 
 ### Integer suscipit
 
-Pellentesque nulla augue, volutpat vitae
+Pellentesque nulla augue, volutpat vitae.

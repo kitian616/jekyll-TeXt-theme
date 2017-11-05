@@ -5,4 +5,4 @@ tags: test
 modify_date: 2017-09-09
 ---
 
-Article With Modify Date Header.
+Article With Modify Date.
