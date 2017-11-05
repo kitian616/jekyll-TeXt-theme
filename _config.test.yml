@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## Base settings ##
-url: https://www.someone.com # the base hostname & protocol for your site e.g. https://www.someone.com
+# url:  # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: '/'
 title: Someone's blog
 description: > #this means to ignore newlines until "nav_lists:"
@@ -49,12 +49,15 @@ leancloud:
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class
 
+# mathjax: true
+
 ## Paginate ##
 paginate: 5
 paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
+excerpt_type: html
 
 ## Build ##
 markdown: kramdown

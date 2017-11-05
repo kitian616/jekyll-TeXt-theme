@@ -11,7 +11,11 @@ title: Blog
                         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
                     </h1>
                     <div class="m-article-content">
-                        {{ post.excerpt }}
+                        {% if site.excerpt_type == 'html' %}
+                            {{ post.excerpt }}
+                        {% else %}
+                            {{ post.excerpt | strip_html | truncate: 350 }}
+                        {% endif %}
                     </div>
                     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Click to read more ...</a>
                     {% include blog/article-data.html %}
