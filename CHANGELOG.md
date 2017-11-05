@@ -10,11 +10,15 @@
 
 - Add "Read More" link at the end of article excerpt.
 
+- 404 page
+
 ### Bug Fixes
 
 - Fix Email link url error
 
 - Fix Site Title link url error
+
+- Fix table responsive style error
 
 ## [1.2.1](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.1)
 
