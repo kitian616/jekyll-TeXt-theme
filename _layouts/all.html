@@ -17,7 +17,7 @@ title: All Posts
                     <ul class="year-list">
                     {% assign date = currentdate %}
                 {% endif %}
-                <li class="js-post-block {% for tag in post.tags %} tag-{{ tag }} {% endfor %}">
+                <li class="js-post-block" data-tag="{{ post.tags | join: "," }}">
                     <span class="post-date">{{ post.date | date:"%b %d" }}</span><a class="post-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
                 </li>
                 {% if forloop.last %}</ul></section>{% endif %}
@@ -30,26 +30,25 @@ title: All Posts
     // function queryString is copied from
     // http://stackoverflow.com/questions/979975/how-to-get-the-value-from-url-parameter#answer-979995
     function queryString() {
-      // This function is anonymous, is executed immediately and
-      // the return value is assigned to QueryString!
-      var query_string = {};
-      var query = window.location.search.substring(1);
-      var vars = query.split("&");
-      for (var i=0;i<vars.length;i++) {
-        var pair = vars[i].split("=");
-        // If first entry with this name
-        if (typeof query_string[pair[0]] === "undefined") {
-            query_string[pair[0]] = pair[1];
-        // If second entry with this name
-        } else if (typeof query_string[pair[0]] === "string") {
-            var arr = [ query_string[pair[0]], pair[1] ];
-            query_string[pair[0]] = arr;
-        // If third or later entry with this name
-        } else {
-            query_string[pair[0]].push(pair[1]);
+        // This function is anonymous, is executed immediately and
+        // the return value is assigned to QueryString!
+        var i = 0, queryObj = {}, pair;
+        var queryStr = window.location.search.substring(1);
+        var queryArr = queryStr.split("&");
+        for (i = 0; i < queryArr.length; i++) {
+            pair = queryArr[i].split("=");
+            // If first entry with this name
+            if (typeof queryObj[pair[0]] === "undefined") {
+                queryObj[pair[0]] = pair[1];
+            // If second entry with this name
+            } else if (typeof queryObj[pair[0]] === "string") {
+                queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
+            // If third or later entry with this name
+            } else {
+                queryObj[pair[0]].push(pair[1]);
+            }
         }
-      }
-        return query_string;
+        return queryObj;
     }
 
     $(function() {
@@ -60,34 +59,43 @@ title: All Posts
         var $yearSection = $('.js-year-wrapper section');
 
         window.tagSelect = function(tag) {
+            var i = 0, flag = false, cur,
+                tags = [], _tag = '', lis = [];
             if (tag === undefined || tag === '') {
-                $pageHeading.text('All Posts');
-                $tagShowAll.focus();
-                $postBlock.show();
+                $pageHeading.text('All Posts'); $tagShowAll.focus(); $postBlock.show();
             } else {
+                tag = tag.trim();
                 $pageHeading.text('Tag: ' + tag);
-                $postBlock.not('.tag-' + tag).hide();
-                $articleTag.filter('.tag-' + tag).focus();
-                $postBlock.filter('.tag-' + tag).show();
+                // $articleTag.filter('.tag-' + tag).focus();
+                for (i = 0; i < $articleTag.length; i++) {
+                    cur = $articleTag.eq(i); _tag = cur.data('tag');
+                    (typeof _tag === 'string' && _tag.trim() === tag) && cur.focus();
+                }
+                $postBlock.each(function() {
+                    flag = false, cur = $(this);
+                    tags = cur.data('tag').split(',');
+                    for (i = 0; i < tags.length; i++) {
+                        _tag = tags[i].trim();
+                        if (_tag === tag) {
+                            flag = true; cur.show(); break;
+                        }
+                    }
+                    flag || (cur.hide());
+                });
             }
             $yearSection.each(function() {
-                var liAllShow = false;
-                var $this = $(this);
-                var $lis = $this.find('li');
-                for (var i = 0; i < $lis.length; i++) {
-                    if($($lis[i]).css('display') !== 'none') {
-                        liAllShow = true;
-                        break;
+                flag = false, cur = $(this);
+                lis = cur.find('li');
+                for (i = 0; i < lis.length; i++) {
+                    if(lis.eq(i).css('display') !== 'none') {
+                        flag = true; break;
                     }
                 }
-                if (liAllShow === false) {
-                    $this.hide();
-                } else {
-                    $this.show();
-                }
+                flag ? cur.show() : cur.hide();
             });
             tag === undefined || window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + tag);
         }
+
         var query = queryString();
         var tag = undefined;
         query.tag === undefined || (tag = decodeURI(query.tag));
