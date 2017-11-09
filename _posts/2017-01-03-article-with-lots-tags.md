@@ -16,6 +16,7 @@ tags:
 - '\|;:'
 - ',.<>'
 - '?/''"'
+- 天天天天
 ---
 
 Article With Lots Tags.
