@@ -17,7 +17,14 @@ title: All Posts
                     <ul class="year-list">
                     {% assign date = currentdate %}
                 {% endif %}
-                <li class="js-post-block" data-tag="{{ post.tags | join: "," }}">
+                {% assign _tags = "" %}
+                {% for tag in post.tags %}
+                    {% assign _tag = tag | strip | url_encode %}
+                    {% assign _tags = _tags | append: ","" | append: _tag %}
+                {% endfor %}
+                {% assign last = _tags | size | minus: 1 %}
+                {% assign _tags = _tags | slice: 1, last %}
+                <li class="js-post-block" data-tag="{{ _tags }}">
                     <span class="post-date">{{ post.date | date:"%b %d" }}</span><a class="post-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
                 </li>
                 {% if forloop.last %}</ul></section>{% endif %}
@@ -34,14 +41,14 @@ title: All Posts
         // the return value is assigned to QueryString!
         var i = 0, queryObj = {}, pair;
         var queryStr = window.location.search.substring(1);
-        var queryArr = queryStr.split("&");
+        var queryArr = queryStr.split('&');
         for (i = 0; i < queryArr.length; i++) {
-            pair = queryArr[i].split("=");
+            pair = queryArr[i].split('=');
             // If first entry with this name
-            if (typeof queryObj[pair[0]] === "undefined") {
+            if (typeof queryObj[pair[0]] === 'undefined') {
                 queryObj[pair[0]] = pair[1];
             // If second entry with this name
-            } else if (typeof queryObj[pair[0]] === "string") {
+            } else if (typeof queryObj[pair[0]] === 'string') {
                 queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
             // If third or later entry with this name
             } else {
@@ -59,17 +66,20 @@ title: All Posts
         var $yearSection = $('.js-year-wrapper section');
 
         window.tagSelect = function(tag) {
-            var i = 0, flag = false, cur,
+            var i = 0, flag = false, cur, tagStr = '',
                 tags = [], _tag = '', lis = [];
             if (tag === undefined || tag === '') {
                 $pageHeading.text('All Posts'); $tagShowAll.focus(); $postBlock.show();
             } else {
                 tag = tag.trim();
-                $pageHeading.text('Tag: ' + tag);
                 // $articleTag.filter('.tag-' + tag).focus();
                 for (i = 0; i < $articleTag.length; i++) {
                     cur = $articleTag.eq(i); _tag = cur.data('tag');
-                    (typeof _tag === 'string' && _tag.trim() === tag) && cur.focus();
+                    if (typeof _tag === 'string' && _tag.trim() === tag) {
+                        cur.focus(); tagStr = cur.children('span').text();
+                        (typeof tagStr === 'string') && (tagStr = tagStr.trim());
+                        $pageHeading.text('Tag: ' + tagStr); break;
+                    }
                 }
                 $postBlock.each(function() {
                     flag = false, cur = $(this);
@@ -98,7 +108,7 @@ title: All Posts
 
         var query = queryString();
         var tag = undefined;
-        query.tag === undefined || (tag = decodeURI(query.tag));
+        query.tag === undefined || (tag = query.tag);
         tagSelect(tag);
     });
 </script>

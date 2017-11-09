@@ -17,7 +17,7 @@
 	{% if cur_page.tags[0] %}
         <ul class="inline-list tag-wrapper">
             {% for tag in cur_page.tags %}
-                {% assign _tag = tag | strip } %}
+                {% assign _tag = tag | strip | url_encode } %}
                 <li><a class="round-rect-button"
                     href="{{ "/all.html?tag=" | prepend: site.baseurl | append: _tag | replace: '//', '/' }}">{{ tag }}
                 </a></li>

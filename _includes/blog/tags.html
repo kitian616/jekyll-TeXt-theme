@@ -40,8 +40,8 @@
             {% else %}
                 {% assign c_index = 4 %}
             {% endif %}
-            <li><button type="button" class="js-article-tag tag-{{ c_index }} round-rect-button" data-tag="{{ tag[0] | strip }}" onclick="tagSelect('{{ tag[0] | strip }}')">
-                {{ tag[0] | strip }}<div class="tag-count">{{ tag[1].size }}</div>
+            <li><button type="button" class="js-article-tag tag-{{ c_index }} round-rect-button" data-tag="{{ tag[0] | strip | url_encode }}" onclick="tagSelect('{{ tag[0] | strip | url_encode }}')">
+                <span>{{ tag[0] | strip }}</span><div class="tag-count">{{ tag[1].size }}</div>
             </button></li>
         {% endfor %}
     </ul>
