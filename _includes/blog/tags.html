@@ -1,7 +1,8 @@
 {% assign max_size = 1 %}
 {% assign min_size = 1 %}
 {% assign cur_size = 1 %}
-{% for tag in site.tags %}
+{% assign _tags = site.tags | sort %}
+{% for tag in _tags %}
     {% assign cur_size = tag[1].size %}
     {% if  cur_size > max_size%}
         {% assign max_size =  cur_size %}
@@ -19,7 +20,7 @@
         <li><button type="button" class="js-article-tag js-tag-show-all all round-rect-button" onclick="tagSelect('')">
             Show All<div class="tag-count"> {{ site.posts | size }} </div>
         </button></li>
-        {% for tag in site.tags %}
+        {% for tag in _tags %}
             {% assign cur_size = tag[1].size %}
             {% assign m1 = min_size %}
             {% assign n1 = m1 | plus: gap_size %}
