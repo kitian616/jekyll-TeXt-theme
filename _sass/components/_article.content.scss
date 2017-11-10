@@ -21,6 +21,7 @@
         margin: $content-gap 0;
         font-size: $small-font-size;
         color: $text-color-l;
+        background-color: $text-background-color;
         p {
             margin: $content-gap * .5 0;
         }
@@ -75,10 +76,10 @@
             display: block;
             border-top-left-radius: $code-font-size / 2;
             border-top-right-radius: $code-font-size / 2;
-            padding: $code-font-size / 2 $code-font-size 0 0;
+            padding: $code-font-size / 2 $code-font-size $code-font-size / 2 0;
             color: $decorate-color;
             font-weight: $bold-font-weight;
-            font-size: $h3-font-size;
+            font-size: $base-font-size;
             text-align: right;
             text-transform: uppercase;
         }
@@ -121,15 +122,16 @@
         width: 100%;
         overflow-x: auto;
     	margin: $content-gap 0;
-    	border-collapse: collapse;
+        border-collapse: collapse;
     	th, td {
+            border: 1px solid $border-color;
             padding: $base-font-size * .5;
         }
         thead, tbody {
-            background-color: $text-background-color;
+            border: 1px solid $border-color;
         }
-        tbody > tr:nth-child(odd) {
-            background-color: $decorate-color;
+        tbody > tr:nth-child(even) {
+            background-color: $text-background-color;
         }
     }
 
