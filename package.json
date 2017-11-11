@@ -5,8 +5,8 @@
   "scripts": {
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
-    "dev": "bundle exec jekyll serve -H 0.0.0.0 -t",
-    "posts-sp": "cp -rfv ./test/_posts/** ./_posts",
+    "dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.dev.yml",
+    "posts-cp": "cp -rfv ./test/_posts/** ./_posts",
     "posts-rm": "rm -rfv ./_posts/**",
     "favicon": "gulp favicon",
     "icons": "gulp icons",

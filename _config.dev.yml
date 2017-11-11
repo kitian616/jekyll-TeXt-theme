@@ -6,9 +6,6 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-## Use TeXt theme !!!
-theme: jekyll-text-theme
-
 # ,--------.      ,--.   ,--. ,--.
 # '--.  .--',---.  \  `.'  /,-'  '-.
 #    |  |  | .-. :  .'    \ '-.  .-'
@@ -67,7 +64,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: text ## text | html
+excerpt_type: html ## text | html
 
 ## Build ##
 markdown: kramdown
