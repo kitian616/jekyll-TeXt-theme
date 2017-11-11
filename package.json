@@ -6,11 +6,13 @@
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
     "dev": "bundle exec jekyll serve -H 0.0.0.0 -t",
-    "cp-post": "cp -rfv ./test/_posts/** ./_posts",
-    "rm-post": "rm -rfv ./_posts/**",
+    "posts-sp": "cp -rfv ./test/_posts/** ./_posts",
+    "posts-rm": "rm -rfv ./_posts/**",
     "favicon": "gulp favicon",
     "icons": "gulp icons",
-    "artwork": "gulp artwork"
+    "artwork": "gulp artwork",
+    "gem-build": "gem build jekyll-text-theme.gemspec",
+    "gem-push": "gem push jekyll-text-theme-*.gem"
   },
   "repository": {
     "type": "git",
