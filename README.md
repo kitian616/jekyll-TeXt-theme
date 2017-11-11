@@ -34,7 +34,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 最简单的方法是直接 **Fork** 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到一个空的博客页。接下来你可以把 Fork 的仓库 Clone 到本地修改后提交。当然你也可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases) 下载最新版本源码，或直接 Clone 代码到本地。
 
-另外，每个版本的 TeXt 都会发布一个 [Gem 主题包](https://rubygems.org/gems/jekyll-text-theme)，可以通过 jekyll 的主题系统进行安装和升级。这种方式可以很方便的进行升级，但不支持 GitHub 的自动编译，详情可见 [Jekyll: 主题](http://jekyllcn.com/docs/themes/)。项目的 ./test 目录就是一个示例。
+另外，每个版本都会作为一个 [Gem](https://rubygems.org/gems/jekyll-text-theme) 发布，可以通过 jekyll 的主题系统进行安装，这种方式可以很方便的升级保持最新的版本，但不支持 GitHub 的自动编译，详情可见 [Jekyll: 主题](http://jekyllcn.com/docs/themes/)。项目的 ./test 目录就是一个使用主题系统的示例。
 
 ### 配置
 
@@ -44,7 +44,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ### 写博客
 
-使用 Markdown 编写文章，位于 ./\_posts 目录（需要自行创建）下，文件名采用日期 + 标题的形式，形如 `2017-02-02-Very-Long-Title`，可以参考 ./test/\_posts 目录。
+使用 Markdown 编写文章，位于 ./\_posts 目录（需要自行创建）下，文件名采用日期 + 标题的形式，形如 `2017-02-02-Very-Long-Title`，具体可参考 ./test/\_posts 目录。
 
 可以在头信息里设置文章的一些基本信息，包括标题、发布时间和标签等。当然，如果你不设置标题和发布时间，系统会使用文件名中的标题和发布时间，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
