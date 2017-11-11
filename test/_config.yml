@@ -1,9 +1,13 @@
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
+
+## Use TeXt theme !!!
+theme: jekyll-text-theme
 
 ## Base settings ##
 # url:  # the base hostname & protocol for your site e.g. https://www.someone.com
@@ -27,14 +31,14 @@ timezone: Asia/Shanghai
 ## Author & social ##
 author:
   name: Someone
-  email: someone@mail.com #your Email address e.g. someone@site.com
-  facebook: someone #your Facebook username
-  twitter: someone #your Twitter username
-  github: someone #your GitHub username
-  googleplus: someone #your Google+ username
-  weibo: someone #your Weibo username
-  douban: someone #your Douban username
-  linkedin: someone #your Linkedin username
+  email: someone@somemail.com  #your Email address e.g. someone@site.com
+  facebook: someone  #your Facebook username
+  twitter: someone  #your Twitter username
+  github: someone  #your GitHub username
+  googleplus: someone  #your Google+ username
+  weibo: someone  #your Weibo username
+  douban: someone  #your Douban username
+  linkedin: someone  #your Linkedin username
 
 ## Comment system (Disqus) ##
 disqus:
@@ -57,12 +61,20 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: html
+excerpt_type: text ## text | html
 
 ## Build ##
 markdown: kramdown
 highlighter: rouge
 permalink: date
+
+exclude:
+  - CHECKLIST.md
+  - README.md
+  - LICENSE
+  - /docs
+  - /screenshots
+  - /test
 
 ## Plugins ##
 gems:

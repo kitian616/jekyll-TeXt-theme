@@ -64,6 +64,14 @@ markdown: kramdown
 highlighter: rouge
 permalink: date
 
+exclude:
+  - CHECKLIST.md
+  - README.md
+  - LICENSE
+  - /docs
+  - /screenshots
+  - /test
+
 ## Plugins ##
 gems:
   - jekyll-sitemap

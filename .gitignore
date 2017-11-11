@@ -131,3 +131,7 @@ typings/
 _site/
 .sass-cache/
 .jekyll-metadata
+
+_posts/*
+
+jekyll-text-theme-*.gem
