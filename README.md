@@ -9,7 +9,7 @@
 
 TeXt is a succinct theme for blogging.
 
-TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。该主题参考了 iOS 11 的风格，有大而突出的标题和圆润的按钮及卡片。
+TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。它参考了 iOS 11 的风格，有大而突出的标题和圆润的按钮及卡片。
 
 ## Features
 
@@ -32,9 +32,11 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ## How To Use
 
-最简单的方法是直接 **Fork** 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到一个空的博客页。接下来你可以把 Fork 的仓库 Clone 到本地修改后提交。当然你也可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases) 下载最新版本源码，或直接 Clone 代码到本地。
+最简单的方法是直接 **Fork** 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到一个空的博客页，接下来你可以把它 Clone 到本地修改后提交。
 
-另外，每个版本都会作为一个 [Gem](https://rubygems.org/gems/jekyll-text-theme) 发布，可以通过 jekyll 的主题系统进行安装，这种方式可以很方便的升级保持最新的版本，但不支持 GitHub 的自动编译，详情可见 [Jekyll: 主题](http://jekyllcn.com/docs/themes/)。项目的 ./test 目录就是一个使用主题系统的示例。
+当然你也可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases) 下载最新版本源码，或直接 Clone 代码到本地。
+
+另外，因为每个版本都是作为一个 [Gem](https://rubygems.org/gems/jekyll-text-theme) 发布的，所以你也可以通过 Jekyll 的主题系统安装该主题，这种方式可以很方便的升级保持最新，但不支持 GitHub 的自动编译，详见 [Jekyll: 主题](http://jekyllcn.com/docs/themes/)。项目的 ./test 目录就是一个使用主题系统的例子。
 
 ### 配置
 
@@ -44,9 +46,9 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ### 写博客
 
-使用 Markdown 编写文章，位于 ./\_posts 目录（需要自行创建）下，文件名采用日期 + 标题的形式，形如 `2017-02-02-Very-Long-Title`，具体可参考 ./test/\_posts 目录。
+使用 Markdown 编写文章，位于 ./\_posts 目录（需要自行创建）下，文件名采用日期 + 标题的形式，形如 `2017-02-02-Very-Long-Title`，可参考 ./test/\_posts 目录。
 
-可以在头信息里设置文章的一些基本信息，包括标题、发布时间和标签等。当然，如果你不设置标题和发布时间，系统会使用文件名中的标题和发布时间，具体详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
+可以在头信息里设置文章的一些基本信息，包括标题、发布时间和标签等。当然，如果你不设置标题和发布时间，系统会使用文件名中的标题和发布时间，详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
 #### 摘要
 
@@ -54,15 +56,17 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 TEXT 模式的摘要为纯文本，会过滤掉一切非文本元素（标题，链接，列表，表格，图片等等），且截取前 350 个字符。
 
-HTML 模式的摘要为 HTML 文档，与文章内容一致，并且 **默认展示整篇文章的内容**。若想控制摘要内容，需要在文章中想要显示到的地方加上 `<!--more-->` 行，具体详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
+HTML 模式的摘要为 HTML 文档，与文章内容一致，并且 **默认展示整篇文章的内容**。若想控制摘要内容，需要在文章中想要显示到的地方加上 `<!--more-->`，详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
 
-> 提示：为了首页更好的展示效果，个人还是推荐使用 HTML 模式，并自己在文章中加上 `<!--more-->` 行。
+> 提示：为了首页更好的展示效果，个人还是推荐使用 HTML 模式，并自己在文章中加上 `<!--more-->`。
 
 ### 安装环境（非必须）
 
+具体可参考 [Jekyll: 安装](http://jekyllcn.com/docs/installation/)。
+
 请确保你的电脑上配置好了 Ruby 开发环境。(ruby, bundle, Command Line Tools(macOS) ...)
 
-首先安装 github-pages，在项目根目录执行 `bundle install` 即可安装。
+首先安装 github-pages（包含了 Jekyll 以及一些插件），在项目根目录执行 `bundle install` 即可安装。
 
 推荐安装 Node.js 环境，可以获得更好的开发体验。
 
@@ -70,21 +74,13 @@ HTML 模式的摘要为 HTML 文档，与文章内容一致，并且 **默认展
 
 如果你安装了 Node.js 环境，只需要在项目根目录运行 `npm run dev` 即可启动本地服务。
 
-如果不想安装 Node.js 环境，则需要以下两步：
-
-启动编译服务，在文件改变时会自动重新编译：
-
-```console
-bundle exec jekyll build --watch
-```
-
-启动静态服务器：
+如果没有安装 Node.js 环境，则是：
 
 ```console
 bundle exec jekyll serve -H 0.0.0.0
 ```
 
-在浏览器中访问 [http://localhost:4000/](http://localhost:4000/) 即可看到页面。
+命令执行成功后在浏览器中访问 [http://localhost:4000/](http://localhost:4000/) 即可看到页面。
 
 ### 部署与提交
 
@@ -92,13 +88,15 @@ bundle exec jekyll serve -H 0.0.0.0
 
 如果你是下载或者 Clone 的源码，那么你需要在 GitHub 上建立一个 Repository，然后把项目代码 push 到其对应的分支上（如果以 `<username>.github.io` 命名则对应分支为 `master` ，其他的为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)）。
 
+如果你是通过 Jekyll 的主题系统安装的，那么你需要把本地编译好的代码 push 到上文所说的对应分支上。
+
 当然你也可以部署到到其他地方。
 
 ## 高级
 
 ### Color Theme
 
-颜色主题位于文件夹 _sass/colors 中，修改 _sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
+颜色主题位于文件夹 ./\_sass/colors 中，修改 ./\_sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
 
 | `default` | `dark` | `forest` | `ocean` |
 | --- |  --- | --- | --- |
