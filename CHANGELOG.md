@@ -1,6 +1,16 @@
 # Change Log
 
-## Unreleased
+## [1.3.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.3.0)
+
+### Enhancements
+
+- Article tag supports special characters
+
+- Excerpts type (HTML | TEXT)
+
+- Titles on the phone become smaller
+
+- Styles change (table, code, blockquote)
 
 ## [1.2.2](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.2)
 
@@ -14,9 +24,9 @@
 
 ### Bug Fixes
 
-- Fix Email link url error
+- Fix Email link URL error
 
-- Fix Site Title link url error
+- Fix Site Title link URL error
 
 - Fix table responsive style error
 
@@ -28,7 +38,7 @@
 
 ### Bug Fixes
 
-- Issues 4: View count display error when the post key include =. @yuxianda
+- Issues 4: View count display error when the post key include `-`. @yuxianda
 
 - Email url error
 
@@ -36,15 +46,15 @@
 
 ### Enhancements
 
-- Article Excerpt No More Than 200 Words
+- Article excerpt no more than 200 words
 
 - If `leancloud` is not set, 0 view won't display
 
 ### Bug Fixes
 
-- Fix Article TOC 's display error at proper situation.
+- Fix article TOC 's display error at proper situation
 
-- Fix footer social buttons not in the center bug.
+- Fix footer social buttons not in the center bug
 
 ## [1.1.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.1.0)
 

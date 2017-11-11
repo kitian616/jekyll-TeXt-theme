@@ -1,6 +1,6 @@
 {
   "name": "jekyll-text-theme",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "A theme for Jekyll",
   "scripts": {
     "build": "bundle exec jekyll build --watch",

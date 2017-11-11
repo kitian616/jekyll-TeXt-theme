@@ -4,12 +4,12 @@ const svg2png = require('gulp-svg2png');
 const ico = require('gulp-to-ico');
 
 const iconBasename = 'icon';
-const iconDestPath = './statics/images/logo';
+const iconDestPath = './assets/images/logo';
 const faviconDestPath = './';
 
 function coverSvg(width, height) {
     height || (height = width);
-    return gulp.src('./statics/images/logo/logo.svg')
+    return gulp.src('./assets/images/logo/logo.svg')
         .pipe(svg2png({ width: width, height: height }))
         .pipe(rename({
             basename: iconBasename,
