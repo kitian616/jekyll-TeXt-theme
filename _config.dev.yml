@@ -34,13 +34,13 @@ timezone: Asia/Shanghai
 ## Author & social ##
 author:
   name: Someone
-  email: someone@somemail.com  #your Email address e.g. someone@site.com
-  facebook: someone  #your Facebook username
-  twitter: someone  #your Twitter username
-  github: someone  #your GitHub username
-  googleplus: someone  #your Google+ username
-  weibo: someone  #your Weibo username
-  douban: someone  #your Douban username
+  email: 1@somemail.com  #your Email address e.g. someone@site.com
+  # facebook: someone  #your Facebook username
+  # twitter: someone  #your Twitter username
+  # github: someone  #your GitHub username
+  # googleplus: someone  #your Google+ username
+  # weibo: someone  #your Weibo username
+  # douban: someone  #your Douban username
   linkedin: someone  #your Linkedin username
 
 ## Comment system (Disqus) ##

@@ -8,10 +8,6 @@
     height: $footer-height;
     margin-top: -$footer-height;
     background-color: $main-color-3;
-    & > .main {
-        @include flexbox;
-        @include flex-direction(column);
-    }
     p {
         color: $text-color-3;
     }
@@ -22,15 +18,13 @@
         );
     }
     .follow-me {
-        padding: $content-gap 0 0 0;
         .round-button {
             box-shadow: $shadow-down;
         }
     }
     .site-info {
-        display: table;
-        font-size: $tiny-font-size;
         text-align: center;
+        font-size: $tiny-font-size;
         margin: 0 auto;
     }
 }
