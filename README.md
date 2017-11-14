@@ -25,7 +25,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - Web 语意化
 - 网站图标的自动化工具（[gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico)）
 - Color Theme
-- 数学公式([MathJax](https://www.mathjax.org/))
+- 数学公式（[MathJax](https://www.mathjax.org/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
@@ -40,7 +40,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 ### 配置
 
-在 _config.yml 文件里按照说明加上你的信息，例如你的名字和联系方式，网站的标题和描述等等。
+在 ./\_config.yml 文件里按照说明加上你的信息，例如你的名字和联系方式，网站的标题和描述等等。
 
 在 ./about.md 中写上你的简单介绍，例如我叫小明之类的。
 
@@ -52,7 +52,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 
 #### 摘要
 
-该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 _config.yml 配置项 `excerpt_type` 的值为 `text` 时是 TEXT 模式，为 `html` 时是 HTML 模式，**默认为 TEXT 模式**。
+该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 ./\_config.yml 配置项 `excerpt_type` 的值为 `text` 时是 TEXT 模式，为 `html` 时是 HTML 模式，**默认为 TEXT 模式**。
 
 TEXT 模式的摘要为纯文本，会过滤掉一切非文本元素（标题，链接，列表，表格，图片等等），且截取前 350 个字符。
 
@@ -106,7 +106,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 网站图标
 
-该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 favicon.ico 和 ./assets/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些场景可能会用到的大图标，像 iOS 和 Android 的固定到屏幕和 Windows 10 的磁贴。
+该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于根目录的 ./favicon.ico 和 ./assets/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些场景可能会用到的大图标，像 iOS 和 Android 的固定到屏幕和 Windows 10 的磁贴。
 
 该主题提供了一个自动化脚本能将 svg 矢量图自动生成 favicon 和 png 文件。你所要做的是：
 
@@ -122,19 +122,19 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 评论系统
 
-在 \_config.yml 文件的 `disqus.shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname，需要注意的是 Disqus 在大陆是无法直接访问的。
+在 ./\_config.yml 文件的 `disqus.shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname，需要注意的是 Disqus 在大陆是无法直接访问的。
 
 > 注意：使用评论系统必须在文章的头信息中设置 key 值（可用字符集：`字母`、`数字` 及 `- _ : .`）。
 
 ### 阅读量统计
 
-在 \_config.yml 文件 `leancloud` 的 `app_id`、`app_key`、`app_class` 项分别填上你在 [LeanCloud](https://leancloud.cn) 为网站建立的应用的对应参数。
+在 ./\_config.yml 文件 `leancloud` 的 `app_id`、`app_key`、`app_class` 项分别填上你在 [LeanCloud](https://leancloud.cn) 为网站建立的应用的对应参数。
 
 > 注意：使用阅读量统计必须在文章的头信息中设置 key 值（可用字符集：`字母`、`数字` 及 `- _ : .`）。
 
 ### Google Analytics
 
-在 \_config.yml 文件的 `ga_tracking_id` 项填上你在 [Google Analytics](https://analytics.google.com) 上为网站建立的媒体资源对应的跟踪 ID。
+在 ./\_config.yml 文件的 `ga_tracking_id` 项填上你在 [Google Analytics](https://analytics.google.com) 上为网站建立的媒体资源对应的跟踪 ID。
 
 ### Markdown 头信息增强
 
