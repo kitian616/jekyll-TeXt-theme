@@ -33,10 +33,10 @@ timezone: Asia/Shanghai
 ## Author & social ##
 author:
   name: Guan Yife
-   email:  guan.yifei@outlook.com #your Email address e.g. someone@site.com
+  email:  guan.yifei@outlook.com #your Email address e.g. someone@site.com
   # facebook:  #your Facebook username
   # twitter:  #your Twitter username
-   github:  richard2333#your GitHub username
+  github:  richard2333#your GitHub username
   # googleplus:  #your Google+ username
   # weibo:  #your Weibo username
   # douban:  #your Douban username
