@@ -1,4 +1,4 @@
-# Online resume of Guan Yifei
+
 
 | E-mail  |         guan.yifei@outlook.com          |
 | :-----: | :-------------------------------------: |
