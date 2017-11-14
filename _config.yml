@@ -19,7 +19,7 @@ description: > #this means to ignore newlines until "nav_lists:"
   Blog and Online Resume
 
 nav_lists:
-  - title: About
+  - title: Online Resume
     url: /about.html
 
 ## GitHub repository (if the site is hosted by GitHub) ##
