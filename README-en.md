@@ -44,6 +44,13 @@ To create a new post, all you need to do is create a file in the ./_posts direct
 
 ### Excerpt
 
+There are two excerpt types: TEXT type and HTML type. You can change it by setting the value of `excerpt_type` in the ./\_config.yml file.
+
+| excerpt_type | type | description |
+| --- | --- | --- |
+| text | TEXT | the excerpt are plain text that filters out all non-text elements (such as title, link, list, table, picture, etc.) and only show 350 characters most. |
+| html | HTML | the excerpt are HTML document just like the content of the article, This will show all the content by default, except adding `<!--more-->` in the article Markdown file, You can find more info at [Jekyll: Post#post-excerpts](https://jekyllrb.com/docs/posts/#post-excerpts).  |
+
 ### Installation Development Environment (not Necessary)
 
 Find more info at [Jekyll: Installation](https://jekyllrb.com/docs/installation/).
@@ -52,7 +59,7 @@ Find more info at [Jekyll: Installation](https://jekyllrb.com/docs/installation/
 
 if you Installed Node.js, you can start a development server by running `npm run dev` at the root path of the repository.
 
-if you don't, just run
+if not, just run:
 
 ```console
 bundle exec jekyll serve -H 0.0.0.0
@@ -71,6 +78,18 @@ You can find more info at [Jekyll: Usage](https://jekyllrb.com/docs/usage/).
 
 ### Icons
 
+This theme comes with a "ginkgo leaf" icon, you can replace it with your own icon. The site's icons are located in the ./favicon.ico and ./assets/images/logo directories. You can see the logo directory has a lot of png files and a svg vector file. Those png images are actually images of different sizes generated from svg vector images that may used in some scenes, such as pinned to the screen in OS and Android and tiles in Windows 10.
+
+This theme provides an automated script for automatically generating favicon and png files from svg vector graphics. What you have to do is:
+
+1. Install Node.js
+
+2. Run `npm i` command at the root directory.
+
+3. Replacing the logo.svg file in the ./assets/images/logo directory.
+
+4. Run `npm run artwork` command. after it finished, the favicon and png files will be replaced by the new logo.svg generated files.
+
 ### Comment
 
 ### Reading Quantity
@@ -78,6 +97,16 @@ You can find more info at [Jekyll: Usage](https://jekyllrb.com/docs/usage/).
 ### Google Analytics
 
 ### Front Matter Enhancement
+
+In addition to Jekyll's front matters, the theme adds some unique front matters.
+
+| variable      | option values | description |
+| ---           | ---           | ---         |
+| key           | | |
+| picture_frame | shadow        | |
+| modify_date   | | |
+| comment       | true/false    | |
+| mathjax       | true/false    | |
 
 ### Other Resource
 
