@@ -17,7 +17,9 @@ title: Blog
                             {{ post.excerpt | strip_html | truncate: 350 }}
                         {% endif %}
                     </div>
-                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">Click to read more ...</a>
+                    {% assign locale_readmore = site.data.locale.READMORE %}
+                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                        {% if locale_readmore[site.lang] %}{{ locale_readmore[site.lang] }}{% else %}{{ locale_readmore.en }}{% endif %}</a>
                     {% include blog/article-data.html %}
                 </article>
             {% endfor %}

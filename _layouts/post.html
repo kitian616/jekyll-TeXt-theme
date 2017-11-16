@@ -15,12 +15,11 @@ layout: blog-default
                 </div>
                 <footer>
                     {% if page.modify_date %}
-                        <span>
-                            Last updated
-                            <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
-                                {{ page.modify_date | date: "%b %-d, %Y" }}
-                            </time>
-                        </span>
+                        {% assign locale_ADF = site.data.locale.ARTICLE_DATE_FORMAT %}
+                        {% assign locale_LU = site.data.locale.LAST_UPDATED %}
+                        <span>{% if locale_LU[site.lang] %}{{ locale_LU[site.lang] }}{% else %}{{ locale_LU.en }}{% endif %}<time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">
+                            {% if locale_ADF[site.lang] %}{{ page.modify_date | date: locale_ADF[site.lang] }}{% else %}{{ page.modify_date | date: locale_ADF.en }}{% endif %}
+                        </time></span>
                     {% else %}
                         <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
                     {% endif %}

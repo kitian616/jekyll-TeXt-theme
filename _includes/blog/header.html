@@ -7,16 +7,16 @@
     </div>
     <nav>
         <ul class="inline-list">
-            <li><a href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">Home</a></li>
-            <li><a
-                href="{{ "/all.html" | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">All
-            </a></li>
+            {% assign locale_link = site.data.locale.LINKS %}
+            <li><a href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">
+                {% if locale_link.HOME[site.lang] %}{{ locale_link.HOME[site.lang] }}{% else %}{{ locale_link.HOME.en }}{% endif %}</a></li>
+            <li><a href="{{ "/all.html" | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">
+                {% if locale_link.ALL[site.lang] %}{{ locale_link.ALL[site.lang] }}{% else %}{{ locale_link.ALL.en }}{% endif %}</a></li>
             {% for list in site.nav_lists %}
                 <li><a href="{{ list.url }}"> {{ list.title }} </a></li>
             {% endfor %}
-            <li><a type="application/rss+xml"
-                href="{{ "/feed.xml" | prepend: site.baseurl | replace: '//', '/'}}">RSS
-            </a></li>
+            <li><a type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | replace: '//', '/'}}">
+                {% if locale_link.RSS[site.lang] %}{{ locale_link.RSS[site.lang] }}{% else %}{{ locale_link.RSS.en }}{% endif %}</a></li>
         </ul>
     </nav>
 </header>

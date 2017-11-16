@@ -1,0 +1,28 @@
+LINKS:
+  HOME:
+    en: Home
+    zh: 主页
+  ALL:
+    en: All
+    zh: 归档
+  RSS:
+    en: RSS
+    zh: RSS
+
+READMORE:
+  en: Click to read more ...
+  zh: 点我阅读更多...
+
+COPYRIGHT_DATES: 2015 - 2017
+
+LAST_UPDATED:
+  en: 'Last updated'
+  zh: '更新于'
+
+ARTICLE_DATE_FORMAT:
+  en: '%b %d, %Y'
+  zh: '%Y年 %m月%d日'
+
+ARTICLE_LIST_DATA_FORMAT:
+  en: '%b %d'
+  zh: '%m月%d日'

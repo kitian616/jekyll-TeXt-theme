@@ -4,7 +4,7 @@ title: All Posts
 ---
 <div class="m-all">
     <div class="main">
-        <h1 class="js-page-heading">All Posts</h1>
+        <h1 class="js-page-heading">{{ page.title }}</h1>
         {% include blog/tags.html %}
         <!--group by year: http://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year-->
         <section class="js-year-wrapper">
@@ -25,7 +25,10 @@ title: All Posts
                 {% assign last = _tags | size | minus: 1 %}
                 {% assign _tags = _tags | slice: 1, last %}
                 <li class="js-post-block" data-tag="{{ _tags }}">
-                    <span class="post-date">{{ post.date | date:"%b %d" }}</span><a class="post-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+                    {% assign locale_ALDF = site.data.locale.ARTICLE_LIST_DATA_FORMAT } %}
+                    <span class="post-date">
+                        {% if locale_ALDF[site.lang] %}{{ post.date | date: locale_ALDF[site.lang] }}{% else %}{{ post.date | date: locale_ALDF.en }}{% endif %}
+                    </span><a class="post-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
                 </li>
                 {% if forloop.last %}</ul></section>{% endif %}
             {% endfor %}
@@ -69,7 +72,7 @@ title: All Posts
             var i = 0, flag = false, cur, tagStr = '',
                 tags = [], _tag = '', lis = [];
             if (tag === undefined || tag === '') {
-                $pageHeading.text('All Posts'); $tagShowAll.focus(); $postBlock.show();
+                $pageHeading.text('{{ page.title }}'); $tagShowAll.focus(); $postBlock.show();
             } else {
                 tag = tag.trim();
                 // $articleTag.filter('.tag-' + tag).focus();

@@ -27,7 +27,7 @@ nav_lists:
 # repository_tree: e.g. master
 
 ## Language & timezone ##
-lang: zh #the language of your site
+lang: en #the language of your site eg: zh, en
 timezone: Asia/Shanghai
 
 ## Author & social ##
