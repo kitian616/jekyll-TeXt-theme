@@ -1,10 +1,16 @@
 ---
 layout: blog-default
-title: All Posts
+titles:
+  en: All Pages
+  zh: 归档
+  zh-Hans: 归档
+  zh-Hant: 歸檔
 ---
 <div class="m-all">
     <div class="main">
-        <h1 class="js-page-heading">{{ page.title }}</h1>
+        <h1 class="js-page-heading">
+            {% if page.title %}{{ page.title }}{% elsif page.titles[site.lang] %}{{ page.titles[site.lang] }}{% else %}{{ page.titles.en }}{% endif %}
+        </h1>
         {% include blog/tags.html %}
         <!--group by year: http://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year-->
         <section class="js-year-wrapper">
@@ -72,7 +78,8 @@ title: All Posts
             var i = 0, flag = false, cur, tagStr = '',
                 tags = [], _tag = '', lis = [];
             if (tag === undefined || tag === '') {
-                $pageHeading.text('{{ page.title }}'); $tagShowAll.focus(); $postBlock.show();
+                $pageHeading.text('{% if page.title %}{{ page.title }}{% elsif page.titles[site.lang] %}{{ page.titles[site.lang] }}{% else %}{{ page.titles.en }}{% endif %}');
+                $tagShowAll.focus(); $postBlock.show();
             } else {
                 tag = tag.trim();
                 // $articleTag.filter('.tag-' + tag).focus();
