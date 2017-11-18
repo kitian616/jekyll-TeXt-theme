@@ -2,6 +2,7 @@
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
 
@@ -111,8 +112,7 @@ In addition to Jekyll's front matters, the theme adds some unique front matters.
 
 ### Other Resource
 
-## Example
+## Examples
 
-Demo: [Qi's blog](https://tianqi.name/blog/)
-
-Source Code: [https://github.com/kitian616/kitian616.github.io/](https://github.com/kitian616/kitian616.github.io/)
+- [Demo](https://tianqi.name/jekyll-TeXt-theme/)
+- [Qi's blog](https://tianqi.name/blog/)
