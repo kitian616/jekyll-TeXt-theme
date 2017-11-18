@@ -6,6 +6,7 @@
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
     "dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.dev.yml",
+    "demo": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.demo.yml",
     "posts-cp": "mkdir ./_posts && cp -Rfv ./test/_posts/** ./_posts",
     "posts-rm": "rm -Rfv ./_posts/**",
     "favicon": "gulp favicon",

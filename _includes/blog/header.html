@@ -16,7 +16,7 @@
             {% for list in site.nav_lists %}
                 {% assign __locale = list.titles %}
                 {% include snippets/locale-to-string.html %}
-                <li><a href="{{ list.url }}">{% if list.title %}{{ list.title }}{% else %}{{ __return }}{% endif %}</a></li>
+                <li><a href="{{ list.url | prepend: site.baseurl | replace: '//', '/' }}">{% if list.title %}{{ list.title }}{% else %}{{ __return }}{% endif %}</a></li>
             {% endfor %}
             {% assign __locale = site.data.locale.NAV.RSS %}
             {% include snippets/locale-to-string.html %}
