@@ -83,6 +83,7 @@ exclude:
   - CHECKLIST.md
   - README.md
   - LICENSE
+  - /vendor
   - /docs
   - /screenshots
   - /test

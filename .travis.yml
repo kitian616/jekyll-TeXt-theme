@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.4.0
 before_script: mkdir ./_posts && cp -Rfv ./test/_posts/** ./_posts
-script: bundle exec jekyll build
+script: bundle exec jekyll build --config ./_config.demo.yml
 deploy:
   provider: pages
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
