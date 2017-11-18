@@ -34,7 +34,7 @@ titles:
                 {% include snippets/locale-to-string.html %}
                 {% assign post_count = site.posts | size %}
                 {% assign page_count = paginator.total_pages %}
-                <p>{{ __return | replace: '[post_count]', post_count | replace: '[page_count]', page_count }}</p>
+                <p>{{ __return | replace: '[PAGE_COUNT]', post_count | replace: '[PAGE_COUNT]', page_count }}</p>
                 <ul class="inline-list">
                 {% if paginator.previous_page %}
                     <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">

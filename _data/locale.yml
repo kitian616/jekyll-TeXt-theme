@@ -1,4 +1,4 @@
-PAGES:
+NAV:
   HOME:
     en:      Home
     zh:      主页
@@ -35,17 +35,17 @@ ARTICLE_DATE_FORMAT:
   zh-Hans: '%Y年 %m月%d日'
   zh-Hant: '%Y年 %m月%d日'
 
-ARTICLE_LIST_DATA_FORMAT:
+ARTICLE_LIST_DATE_FORMAT:
   en:      '%b %d'
   zh:      '%m月%d日'
   zh-Hans: '%m月%d日'
   zh-Hant: '%m月%d日'
 
 STATISTICS:
-  en:      '[post_count] post articles, [page_count] pages.'
-  zh:      共计 [post_count] 篇文章, [page_count] 页。
-  zh-Hans: 共计 [post_count] 篇文章, [page_count] 页。
-  zh-Hant: 共計 [post_count] 篇文章, [page_count] 頁。
+  en:      '[PAGE_COUNT] post articles, [PAGE_COUNT] pages.'
+  zh:      共计 [PAGE_COUNT] 篇文章, [PAGE_COUNT] 页。
+  zh-Hans: 共计 [PAGE_COUNT] 篇文章, [PAGE_COUNT] 页。
+  zh-Hant: 共計 [PAGE_COUNT] 篇文章, [PAGE_COUNT] 頁。
 
 LICENSE_ANNOUNCE:
   en:      This work is licensed under a [LICENSE] license.
@@ -66,10 +66,10 @@ POST_ON_GITHUB:
   zh-Hant: 在 Github 上查閱此文。
 
 FOLLOW_ME:
-  en:      Follow me on [name].
-  zh:      在 [name] 上关注我。
-  zh-Hans: 在 [name] 上关注我。
-  zh-Hant: 在 [name] 上關注我。
+  en:      Follow me on [NAME].
+  zh:      在 [NAME] 上关注我。
+  zh-Hans: 在 [NAME] 上关注我。
+  zh-Hant: 在 [NAME] 上關注我。
 
 EMAIL_ME:
   en:      Send me Email.

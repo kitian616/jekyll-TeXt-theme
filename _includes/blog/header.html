@@ -7,10 +7,10 @@
     </div>
     <nav>
         <ul class="inline-list">
-            {% assign __locale = site.data.locale.PAGES.HOME %}
+            {% assign __locale = site.data.locale.NAV.HOME %}
             {% include snippets/locale-to-string.html %}
             <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ __return }}</a></li>
-            {% assign __locale = site.data.locale.PAGES.ALL %}
+            {% assign __locale = site.data.locale.NAV.ALL %}
             {% include snippets/locale-to-string.html %}
             <li><a href="{{ '/all.html' | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">{{ __return }}</a></li>
             {% for list in site.nav_lists %}
@@ -18,7 +18,7 @@
                 {% include snippets/locale-to-string.html %}
                 <li><a href="{{ list.url }}">{% if list.title %}{{ list.title }}{% else %}{{ __return }}{% endif %}</a></li>
             {% endfor %}
-            {% assign __locale = site.data.locale.PAGES.RSS %}
+            {% assign __locale = site.data.locale.NAV.RSS %}
             {% include snippets/locale-to-string.html %}
             <li><a type="application/rss+xml" href="{{ '/feed.xml' | prepend: site.baseurl | replace: '//', '/'}}">{{ __return }}</a></li>
         </ul>
