@@ -28,7 +28,7 @@ repository: someone/someone.github.io
 repository_tree: master
 
 ## Language & timezone ##
-lang: zh-Hant #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
+lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
 timezone: Asia/Shanghai
 
 ## Author & social ##

@@ -132,6 +132,6 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
-_posts/
+/_posts/
 
 jekyll-text-theme-*.gem

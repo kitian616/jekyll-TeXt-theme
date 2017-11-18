@@ -1,2 +1,3 @@
-{% assign __return = '' %}
-{% if __locale[site.lang] %}{% assign __return = __locale[site.lang] %}{% else %}{% assign __return = __locale.en %}{% endif %}
+{% include snippets/get-lang.html %}
+{% assign __lang = __return %}
+{% if __locale[__lang] %}{% assign __return = __locale[__lang] %}{% else %}{% assign __return = __locale.en %}{% endif %}

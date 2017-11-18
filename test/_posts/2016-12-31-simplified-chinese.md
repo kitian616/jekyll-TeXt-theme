@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Markdown Example - Chinese | 中文示例
+title: Languages - Simplified Chinese | 简体中文
 key: 20161231
 tags: markdown
+lang: zh-Hans
 ---
 
 ## 标题标题标题标题标题标题标题
