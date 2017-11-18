@@ -31,6 +31,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - Color Theme
 - 数学公式（[MathJax](https://www.mathjax.org/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
+- 多语言
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
 

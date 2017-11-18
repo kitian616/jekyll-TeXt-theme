@@ -2,7 +2,7 @@
 layout: post
 title: Markdown Example - Images With Shadow
 key: 20151212
-tags: test
+tags: test English
 picture_frame: shadow
 ---
 

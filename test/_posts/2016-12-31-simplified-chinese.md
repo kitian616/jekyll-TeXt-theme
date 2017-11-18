@@ -2,7 +2,8 @@
 layout: post
 title: Languages - Simplified Chinese | 简体中文
 key: 20161231
-tags: markdown
+tags:
+  - Simplified Chinese | 简
 lang: zh-Hans
 ---
 

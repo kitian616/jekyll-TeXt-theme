@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Languages - Traditional Chinese | 繁体中文
+title: Languages - Traditional Chinese | 繁體中文
 key: 20161230
-tags: markdown
+tags:
+  - Traditional Chinese | 繁
 lang: zh-Hant
 ---
 

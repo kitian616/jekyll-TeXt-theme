@@ -2,7 +2,7 @@
 layout: post
 title: Markdown Example - Reference Links
 key: 20160505
-tags: markdown
+tags: markdown English
 ---
 
 My Blog is called [Qi's blog][BLOG].

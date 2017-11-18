@@ -2,7 +2,7 @@
 layout: post
 title: Markdown Example - Paragraphs
 key: 20161010
-tags: markdown
+tags: markdown English
 ---
 
 Vestibulum posuere, quam sed bibendum posuere, orci est semper libero, nec congue tortor arcu eget velit.
