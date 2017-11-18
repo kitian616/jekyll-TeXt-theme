@@ -31,13 +31,13 @@
             </div>
         {% endif %}
         <div class="date-wrapper">
-            {% assign locale_ADF = site.data.locale.ARTICLE_DATE_FORMAT } %}
+            {% assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } %}
+            {% include snippets/locale-to-string.html %}
             {% if post %}
-                <span class="article-meta">
-                    {% if locale_ADF[site.lang] %}{{ post.date | date: locale_ADF[site.lang] }}{% else %}{{ post.date | date: locale_ADF.en }}{% endif %}</span>
+                <span class="article-meta">{{ post.date | date: __return }}</span>
             {% elsif page %}
                 <time class="article-meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                    {% if locale_ADF[site.lang] %}{{ page.date | date: locale_ADF[site.lang] }}{% else %}{{ page.date | date: locale_ADF.en }}{% endif %}</time>
+                    {{ page.date | date: __return }}</time>
             {% endif %}
         </div>
     </div>

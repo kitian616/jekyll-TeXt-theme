@@ -30,11 +30,11 @@ titles:
                 {% endfor %}
                 {% assign last = _tags | size | minus: 1 %}
                 {% assign _tags = _tags | slice: 1, last %}
+                {% assign __locale = site.data.locale.ARTICLE_LIST_DATA_FORMAT } %}
+                {% include snippets/locale-to-string.html %}
                 <li class="js-post-block" data-tag="{{ _tags }}">
-                    {% assign locale_ALDF = site.data.locale.ARTICLE_LIST_DATA_FORMAT } %}
-                    <span class="post-date">
-                        {% if locale_ALDF[site.lang] %}{{ post.date | date: locale_ALDF[site.lang] }}{% else %}{{ post.date | date: locale_ALDF.en }}{% endif %}
-                    </span><a class="post-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+                    <span class="post-date">{{ post.date | date: __return }}</span>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
                 </li>
                 {% if forloop.last %}</ul></section>{% endif %}
             {% endfor %}

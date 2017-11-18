@@ -1,1 +1,3 @@
-{% if page.title %}{{ page.title }}{% elsif page.titles[site.lang] %}{{ page.titles[site.lang] }}{% else %}{{ page.titles.en }}{% endif %}
+{% assign __locale = page.titles %}
+{% include snippets/locale-to-string.html %}
+{% if page.title %}{{ page.title }}{% else %}{{ __return }}{% endif %}

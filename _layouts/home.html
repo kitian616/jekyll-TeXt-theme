@@ -21,9 +21,9 @@ titles:
                             {{ post.excerpt | strip_html | truncate: 350 }}
                         {% endif %}
                     </div>
-                    {% assign locale_readmore = site.data.locale.READMORE %}
-                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                        {% if locale_readmore[site.lang] %}{{ locale_readmore[site.lang] }}{% else %}{{ locale_readmore.en }}{% endif %}</a>
+                    {% assign __locale = site.data.locale.READMORE %}
+                    {% include snippets/locale-to-string.html %}
+                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ __return }}</a>
                     {% include blog/article-data.html %}
                 </article>
             {% endfor %}

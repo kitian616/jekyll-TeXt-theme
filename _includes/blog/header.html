@@ -7,16 +7,18 @@
     </div>
     <nav>
         <ul class="inline-list">
-            {% assign locale_pages = site.data.locale.PAGES %}
-            <li><a href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">
-                {% if locale_pages.HOME[site.lang] %}{{ locale_pages.HOME[site.lang] }}{% else %}{{ locale_pages.HOME.en }}{% endif %}</a></li>
-            <li><a href="{{ "/all.html" | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">
-                {% if locale_pages.ALL[site.lang] %}{{ locale_pages.ALL[site.lang] }}{% else %}{{ locale_pages.ALL.en }}{% endif %}</a></li>
+            {% assign __locale = site.data.locale.PAGES.HOME %}
+            {% include snippets/locale-to-string.html %}
+            <li><a href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">{{ __return }}</a></li>
+            {% assign __locale = site.data.locale.PAGES.ALL %}
+            {% include snippets/locale-to-string.html %}
+            <li><a href="{{ "/all.html" | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">{{ __return }}</a></li>
             {% for list in site.nav_lists %}
                 <li><a href="{{ list.url }}"> {{ list.title }} </a></li>
             {% endfor %}
-            <li><a type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | replace: '//', '/'}}">
-                {% if locale_pages.RSS[site.lang] %}{{ locale_pages.RSS[site.lang] }}{% else %}{{ locale_pages.RSS.en }}{% endif %}</a></li>
+            {% assign __locale = site.data.locale.PAGES.RSS %}
+            {% include snippets/locale-to-string.html %}
+            <li><a type="application/rss+xml" href="{{ "/feed.xml" | prepend: site.baseurl | replace: '//', '/'}}">{{ __return }}</a></li>
         </ul>
     </nav>
 </header>

@@ -24,7 +24,7 @@ nav_lists:
     url: /about.html
 
 ## GitHub repository (if the site is hosted by GitHub) ##
-repository: someone.github.io
+repository: someone/someone.github.io
 repository_tree: master
 
 ## Language & timezone ##

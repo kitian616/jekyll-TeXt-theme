@@ -5,15 +5,18 @@
             <a class="octocat" href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
                 <img alt="View on Github" src="{{ "/assets/images/octocat.jpg" | prepend: site.baseurl | replace: '//', '/'}}" />
             </a>
-            <p><a href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
-            {% if locale.POST_ON_GITHUB[site.lang] %}{{ locale.POST_ON_GITHUB[site.lang] }}{% else %}{{ locale.POST_ON_GITHUB.en }}{% endif %}</a></p>
+            {% assign __locale = locale.POST_ON_GITHUB %}
+            {% include snippets/locale-to-string.html %}
+            <p><a href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">{{ __return }}</a></p>
         {% endif %}
-            {% assign LICENSE_ANNOUNCE = '' %}
-        {% if locale.LICENSE_ANNOUNCE[site.lang] %}{% assign LICENSE_ANNOUNCE = locale.LICENSE_ANNOUNCE[site.lang] %}{% else %}{% assign LICENSE_ANNOUNCE = locale.LICENSE_ANNOUNCE.en %}{% endif %}</p>
-        <p>{{ LICENSE_ANNOUNCE | replace: "[LICENSE]", '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>' }}</p>
+        {% assign __locale = locale.LICENSE_ANNOUNCE %}
+        {% include snippets/locale-to-string.html %}
+        <p>{{ __return | replace: "[LICENSE]", '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>' }}</p>
         <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
             <img alt="Creative Commons License" src="{{ '/assets/images/license-cc4.png' | prepend: site.baseurl  | replace: '//', '/'}}" />
         </a>
-        <p>{% if locale.LICENSE_INTRO[site.lang] %}{{ locale.LICENSE_INTRO[site.lang] }}{% else %}{{ locale.LICENSE_INTRO.en }}{% endif %}</p>
+        {% assign __locale = locale.LICENSE_INTRO %}
+        {% include snippets/locale-to-string.html %}
+        <p>{{ __return }}</p>
     </div>
 </div>
