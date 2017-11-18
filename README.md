@@ -31,7 +31,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - Color Theme
 - 数学公式（[MathJax](https://www.mathjax.org/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
-- 多语言
+- 多语言支持（English | 简体中文 | 繁體中文）
 
 下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
 
@@ -99,6 +99,14 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ## 高级
 
+### 多语言
+
+该主题支持 English、简体中文和繁體中文，只需在 ./\_config.yml 中设置对应 `lang` 项即可。设置后整个网站的主题文字（导航，阅读更多，文章数统计，日期格式，文章协议等等）会变为设置的语言，多语言的配置文件为 ./_data/locale.yml，你可以自由的修改、增加语言。
+
+另外，该主题也支持对某篇文章（页面）单独设置语言，只需在 Markdown 或页面 HTML 文件的头信息中设置 `lang` 项，其优先级高于 ./\_config.yml 中设置的值。设置后该文章（页面）的主题文字会变为头信息中设置的语言。
+
+> 提示：当前的 `lang` 值可选值为 en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)。
+
 ### Color Theme
 
 颜色主题位于文件夹 ./\_sass/colors 中，修改 ./\_sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
@@ -148,6 +156,7 @@ bundle exec jekyll serve -H 0.0.0.0
 | 变量名称       | 可选值          | 描述 |
 | ---           | ---           | --- |
 | key           |               | 评论系统和阅读量统计使用的文章标识符，如果未设置则评论和统计无效。可用字符集：`字母`、`数字` 及 `- _ : .` |
+| lang          | en/zh/zh-Hans/zh-Hant | 该文章的语言，其优先级高于  ./\_config.yml 中设置的值 |
 | picture_frame | shadow        | 该文章的图片框样式，如果为 `shadow` 则图片带有阴影边框 |
 | modify_date   |               | 该文章的修改时间，不影响首页文章排序（`date` 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |

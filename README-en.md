@@ -25,6 +25,7 @@ TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and
 - Color Theme
 - Mathematical formula ([MathJax](https://www.mathjax.org/))
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
+- Multi-language support(English | Simplified Chinese | Traditional Chinese)
 
 ## How To Use
 
