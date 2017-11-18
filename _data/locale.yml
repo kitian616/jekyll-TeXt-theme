@@ -58,3 +58,15 @@ POST_ON_GITHUB:
   zh:      在 Github 上查阅此文。
   zh-Hans: 在 Github 上查阅此文。
   zh-Hant: 在 Github 上查閱此文。
+
+FOLLOW_ME:
+  en:      Follow me on [name].
+  zh:      在 [name] 上关注我。
+  zh-Hans: 在 [name] 上关注我。
+  zh-Hant: 在 [name] 上關注我。
+
+EMAIL_ME:
+  en:      Send me Email.
+  zh:      给我发邮件。
+  zh-Hans: 给我发邮件。
+  zh-Hant: 給我發郵件。
