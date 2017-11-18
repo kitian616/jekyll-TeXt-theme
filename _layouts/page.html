@@ -3,7 +3,8 @@ layout: blog-default
 ---
 <div class="m-page">
     <article class="main">
-        <h1>{% include snippets/page-title.html %}</h1>
+        {% include snippets/page-title.html %}
+        <h1>{{ __return }}</h1>
 
         <div class="m-article-content" itemprop="articleBody">
             {{ content }}

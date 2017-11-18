@@ -30,7 +30,11 @@ titles:
         </div>
         {% if paginator.total_pages > 1 %}
             <nav class="m-pagination">
-                <p>{{ site.posts | size }} post articles, {{ paginator.total_pages }} pages.</p>
+                {% assign __locale = site.data.locale.STATISTICS %}
+                {% include snippets/locale-to-string.html %}
+                {% assign post_count = site.posts | size %}
+                {% assign page_count = paginator.total_pages %}
+                <p>{{ __return | replace: '[post_count]', post_count | replace: '[page_count]', page_count }}</p>
                 <ul class="inline-list">
                 {% if paginator.previous_page %}
                     <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">

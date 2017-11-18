@@ -7,7 +7,8 @@ layout: blog-default
             <article itemscope itemtype="http://schema.org/BlogPosting">
                 <meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
                 <header class="article-header">
-                    <h1 itemprop="headline" itemprop="name headline">{% include snippets/page-title.html %}</h1>
+                    {% include snippets/page-title.html %}
+                    <h1 itemprop="headline" itemprop="name headline">{{ __return }}</h1>
                     {% include blog/article-data.html %}
                 </header>
                 <div class="m-article-content js-article-content" itemprop="articleBody">

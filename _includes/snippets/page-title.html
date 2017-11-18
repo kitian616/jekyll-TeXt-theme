@@ -1,3 +1,8 @@
 {% assign __locale = page.titles %}
 {% include snippets/locale-to-string.html %}
-{% if page.title %}{{ page.title }}{% else %}{{ __return }}{% endif %}
+{% assign __localeTitle = __return %}
+{% if page.title %}
+    {% assign __return = page.title %}
+{% else %}
+    {% assign __return = __localeTitle %}
+{% endif %}
