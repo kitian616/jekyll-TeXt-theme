@@ -81,6 +81,7 @@ highlighter: rouge
 permalink: date
 
 exclude:
+  - CHANGELOG.md
   - README.md
   - LICENSE
   - /vendor
