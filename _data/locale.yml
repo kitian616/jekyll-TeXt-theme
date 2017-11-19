@@ -42,10 +42,10 @@ ARTICLE_LIST_DATE_FORMAT:
   zh-Hant: '%m月%d日'
 
 STATISTICS:
-  en:      '[PAGE_COUNT] post articles, [PAGE_COUNT] pages.'
-  zh:      共计 [PAGE_COUNT] 篇文章, [PAGE_COUNT] 页。
-  zh-Hans: 共计 [PAGE_COUNT] 篇文章, [PAGE_COUNT] 页。
-  zh-Hant: 共計 [PAGE_COUNT] 篇文章, [PAGE_COUNT] 頁。
+  en:      '[POST_COUNT] post articles, [PAGE_COUNT] pages.'
+  zh:      共计 [POST_COUNT] 篇文章, [PAGE_COUNT] 页。
+  zh-Hans: 共计 [POST_COUNT] 篇文章, [PAGE_COUNT] 页。
+  zh-Hant: 共計 [POST_COUNT] 篇文章, [PAGE_COUNT] 頁。
 
 LICENSE_ANNOUNCE:
   en:      This work is licensed under a [LICENSE] license.
