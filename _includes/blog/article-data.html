@@ -16,9 +16,14 @@
 	{% endif %}
 	{% if cur_page.tags[0] %}
         <ul class="inline-list tag-wrapper">
+            {% if site.paths.all %}
+                {% assign all_path = site.paths.all %}
+            {% else %}
+                {% assign all_path = '/all.html' %}
+            {% endif %}
             {% for tag in cur_page.tags %}
                 {% assign _tag = tag | strip | url_encode } %}
-                {% assign __path = '/all.html?tag=' %}
+                {% assign __path = all_path | append: '?tag=' %}
                 {% include snippets/prepend-baseurl.html %}
                 <li><a class="round-rect-button"
                     href="{{ __return | append: _tag | replace: '//', '/' }}">{{ tag }}

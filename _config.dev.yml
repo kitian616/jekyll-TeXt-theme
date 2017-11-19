@@ -1,4 +1,3 @@
-
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -13,8 +12,8 @@
 #    `--'   `----''--'   '--' `--'
 
 ## Base settings ##
-# url:  # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl: '/'
+# url:  #!the base hostname & protocol for your site e.g. https://www.someone.com (!!required!!)
+baseurl: /
 title: Someone's blog
 description: > #this means to ignore newlines until "nav_lists:"
   Someone's Blog
@@ -27,6 +26,11 @@ nav_lists:
       zh-Hans: 关于
       zh-Hant: 關於
     url: /about.html
+
+paths:
+  home: /
+  all:  /all.html
+  rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 repository: someone/someone.github.io
@@ -77,7 +81,6 @@ highlighter: rouge
 permalink: date
 
 exclude:
-  - CHECKLIST.md
   - README.md
   - LICENSE
   - /vendor

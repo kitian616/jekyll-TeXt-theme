@@ -12,8 +12,8 @@
 #    `--'   `----''--'   '--' `--'
 
 ## Base settings ##
-# url:  #!the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl: '/'
+# url:  #!the base hostname & protocol for your site e.g. https://www.someone.com (!!required!!)
+baseurl: /
 title: Someone's blog
 description: > #this means to ignore newlines until "nav_lists:"
   Someone's Blog
@@ -28,7 +28,7 @@ nav_lists:
     url: /about.html
 
 ## GitHub repository (if the site is hosted by GitHub) ##
-# repository: e.g. someone/someone.github.ioo
+# repository: e.g. someone/someone.github.io
 # repository_tree: e.g. master
 
 ## Language & timezone ##
@@ -76,7 +76,6 @@ highlighter: rouge
 permalink: date
 
 exclude:
-  - CHECKLIST.md
   - README.md
   - LICENSE
   - /vendor
