@@ -1,26 +1,41 @@
 <header class="m-page-header main clearfix">
+    {% assign __path = '/' %}
+    {% include snippets/prepend-baseurl.html %}
+    {% if site.title %}
     <a class="site-title" title="{% if site.description %}{{ site.description }}{% endif %}"
-        href="{{ "/" | prepend: site.baseurl | replace: '//', '/' }}">{% if site.title %}{{ site.title }}{% endif %}
-    </a>
+        href="{{ __return }}">{{ site.title }}</a>
+    {% endif %}
     <div class="site-logo">
         {% include logo/logo.svg %}
     </div>
     <nav>
         <ul class="inline-list">
+            {% assign __path = '/' %}
+            {% include snippets/prepend-baseurl.html %}
+            {% assign href = __return %}
             {% assign __locale = site.data.locale.NAV.HOME %}
             {% include snippets/locale-to-string.html %}
-            <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ __return }}</a></li>
+            <li><a href="{{ href }}">{{ __return }}</a></li>
+            {% assign __path = '/all.html' %}
+            {% include snippets/prepend-baseurl.html %}
+            {% assign href = __return %}
             {% assign __locale = site.data.locale.NAV.ALL %}
             {% include snippets/locale-to-string.html %}
-            <li><a href="{{ '/all.html' | prepend: site.baseurl | append: "?tag=" | replace: '//', '/'}}">{{ __return }}</a></li>
+            <li><a href="{{ href | append: "?tag=" | replace: '//', '/'}}">{{ __return }}</a></li>
             {% for list in site.nav_lists %}
+                {% assign __path = list.url %}
+                {% include snippets/prepend-baseurl.html %}
+                {% assign href = __return %}
                 {% assign __locale = list.titles %}
                 {% include snippets/locale-to-string.html %}
-                <li><a href="{{ list.url | prepend: site.baseurl | replace: '//', '/' }}">{% if list.title %}{{ list.title }}{% else %}{{ __return }}{% endif %}</a></li>
+                <li><a href="{{ href }}">{% if list.title %}{{ list.title }}{% else %}{{ __return }}{% endif %}</a></li>
             {% endfor %}
+            {% assign __path = '/feed.xml' %}
+            {% include snippets/prepend-baseurl.html %}
+            {% assign href = __return %}
             {% assign __locale = site.data.locale.NAV.RSS %}
             {% include snippets/locale-to-string.html %}
-            <li><a type="application/rss+xml" href="{{ '/feed.xml' | prepend: site.baseurl | replace: '//', '/'}}">{{ __return }}</a></li>
+            <li><a type="application/rss+xml" href="{{ href }}">{{ __return }}</a></li>
         </ul>
     </nav>
 </header>

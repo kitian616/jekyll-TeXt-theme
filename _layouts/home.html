@@ -11,9 +11,10 @@ titles:
         <div class="m-post-list">
             {% for post in paginator.posts %}
                 <article>
-                    <h1>
-                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
-                    </h1>
+                    {% assign __path = post.url %}
+                    {% include snippets/prepend-baseurl.html %}
+                    {% assign href = __return %}
+                    <h1><a href="{{ href }}">{{ post.title }}</a></h1>
                     <div class="m-article-content">
                         {% if site.excerpt_type == 'html' %}
                             {{ post.excerpt }}
@@ -21,9 +22,11 @@ titles:
                             {{ post.excerpt | strip_html | truncate: 350 }}
                         {% endif %}
                     </div>
+                    {% assign __path = post.url %}
+                    {% include snippets/prepend-baseurl.html %}
                     {% assign __locale = site.data.locale.READMORE %}
                     {% include snippets/locale-to-string.html %}
-                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ __return }}</a>
+                    <a href="{{ href }}">{{ __return }}</a>
                     {% include blog/article-data.html %}
                 </article>
             {% endfor %}
@@ -37,38 +40,41 @@ titles:
                 <p>{{ __return | replace: '[PAGE_COUNT]', post_count | replace: '[PAGE_COUNT]', page_count }}</p>
                 <ul class="inline-list">
                 {% if paginator.previous_page %}
-                    <li><a class="round-button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-                        <div class="icon icon--previous">{% include icon/previous.svg %}</div>
-                    </a></li>
+                    {% assign __path = paginator.previous_page_path %}
+                    {% include snippets/prepend-baseurl.html %}
+                    {% assign href = __return %}
+                    <li><a class="round-button" href="{{ href }}">
+                        <div class="icon icon--previous">{% include icon/previous.svg %}</div></a></li>
                 {% else %}
                     <li><div class="round-button inactive">
-                        <div class="icon icon--prrevious">{% include icon/previous.svg %}</div>
-                    </div></li>
+                        <div class="icon icon--prrevious">{% include icon/previous.svg %}</div></div></li>
                 {% endif %}
                 {% for page in (1..paginator.total_pages) %}
                     {% if page == paginator.page %}
                         <li><div class="round-button cur">
-                            <span>{{ page }}</span>
-                        </div></li>
+                            <span>{{ page }}</span></div></li>
                     {% elsif page == 1 %}
+                        {% assign __path = '/' %}
+                        {% include snippets/prepend-baseurl.html %}
+                        {% assign href = __return %}
                         <li><a class="round-button"
-                            href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">
-                            <span>{{ page }}</span>
-                        </a></li>
+                            href="{{ href }}">
+                            <span>{{ page }}</span></a></li>
                     {% else %}
-                        <li><a class="round-button" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">
-                            <span>{{ page }}</span>
-                        </a></li>
+                        {% assign __path = site.paginate_path %}
+                        {% include snippets/prepend-baseurl.html %}
+                        {% assign href = __return %}
+                        <li><a class="round-button" href="{{ href | replace: ':num', page }}">
+                            <span>{{ page }}</span></a></li>
                     {% endif %}
                 {% endfor %}
                 {% if paginator.next_page %}
-                    <li><a class="round-button" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-                        <div class="icon icon--next">{% include icon/next.svg %}</div>
-                    </a></li>
+                    {% assign __path = paginator.next_page_path %}
+                    {% include snippets/prepend-baseurl.html %}
+                    {% assign href = __return %}
+                    <li><a class="round-button" href="{{ href }}"><div class="icon icon--next">{% include icon/next.svg %}</div></a></li>
                 {% else %}
-                    <li><div class="round-button inactive">
-                        <div class="icon icon--next">{% include icon/next.svg %}</div>
-                    </div></li>
+                    <li><div class="round-button inactive"><div class="icon icon--next">{% include icon/next.svg %}</div></div></li>
                 {% endif %}
                 </ul>
             </nav>
