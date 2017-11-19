@@ -1,6 +1,16 @@
 # Change Log
 
-## [1.3.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.3.0)
+## 1.4.0 (2017-11-19)
+
+### Enhancements
+
+- Multi-language support
+
+### Bug Fixes
+
+- Table overflow-x smooth on iOS
+
+## 1.3.0 (2017-11-11)
 
 ### Enhancements
 
@@ -12,7 +22,7 @@
 
 - Styles change (table, code, blockquote)
 
-## [1.2.2](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.2)
+## 1.2.2 (2017-11-04)
 
 ### Enhancements
 
@@ -30,7 +40,7 @@
 
 - Fix table responsive style error
 
-## [1.2.1](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.1)
+## 1.2.1 (2017-10-27)
 
 ### Enhancements
 
@@ -42,7 +52,7 @@
 
 - Email url error
 
-## [1.2.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.2.0)
+## 1.2.0 (2017-10-22)
 
 ### Enhancements
 
@@ -56,7 +66,7 @@
 
 - Fix footer social buttons not in the center bug
 
-## [1.1.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.1.0)
+## 1.1.0 (2017-10-19)
 
 ### Enhancements
 
@@ -64,7 +74,7 @@
 
 - More color themes (dark, forest, ocean)
 
-## [1.0.0](https://github.com/kitian616/jekyll-TeXt-theme/releases/tag/v1.0.0)
+## 1.0.0 (2017-10-17)
 
 ### Enhancements
 

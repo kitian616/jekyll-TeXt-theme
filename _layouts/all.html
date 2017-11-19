@@ -32,7 +32,7 @@ titles:
                 {% assign __path = post.url %}
                 {% include snippets/prepend-baseurl.html %}
                 {% assign href = __return %}
-                {% assign __locale = site.data.locale.ARTICLE_LIST_DATE_FORMAT } %}
+                {% assign __locale = site.data.locale.ARTICLE_LIST_DATE_FORMAT %}
                 {% include snippets/locale-to-string.html %}
                 <li class="js-post-block" data-tag="{{ _tags }}">
                     <span class="post-date">{{ post.date | date: __return }}</span>

@@ -1,10 +1,11 @@
 {
   "name": "jekyll-text-theme",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A text first theme for Jekyll.",
   "scripts": {
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",
+    "default": "bundle exec jekyll serve -H 0.0.0.0 -t",
     "dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.dev.yml",
     "demo": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.demo.yml",
     "posts-cp": "mkdir ./_posts && cp -Rfv ./test/_posts/** ./_posts",
@@ -12,7 +13,7 @@
     "favicon": "gulp favicon",
     "icons": "gulp icons",
     "artwork": "gulp artwork",
-    "gem-build": "gem build jekyll-text-theme.gemspec",
+    "gem-build": "rm -fv jekyll-text-theme-*.gem && gem build jekyll-text-theme.gemspec",
     "gem-push": "gem push jekyll-text-theme-*.gem"
   },
   "repository": {

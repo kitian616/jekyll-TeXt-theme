@@ -15,6 +15,19 @@ theme: jekyll-text-theme
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
+
 ## Base settings ##
 # url:  #!the base hostname & protocol for your site e.g. https://www.someone.com (!!required!!)
 baseurl: /
@@ -31,9 +44,14 @@ nav_lists:
       zh-Hant: 關於
     url: /about.html
 
+paths:
+  home: /
+  all:  /all.html
+  rss:  /feed.xml
+
 ## GitHub repository (if the site is hosted by GitHub) ##
-# repository: e.g. someone/someone.github.io
-# repository_tree: e.g. master
+repository: someone/someone.github.io
+repository_tree: master
 
 ## Language & timezone ##
 lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
@@ -42,14 +60,14 @@ timezone: Asia/Shanghai
 ## Author & social ##
 author:
   name: Someone
-  # email:  #your Email address e.g. someone@site.com
-  # facebook:  #your Facebook username
-  # twitter:  #your Twitter username
-  # github:  #your GitHub username
-  # googleplus:  #your Google+ username
-  # weibo:  #your Weibo username
-  # douban:  #your Douban username
-  # linkedin:  #your Linkedin username
+  email: someone@somemail.com  #your Email address e.g. someone@site.com
+  facebook: someone  #your Facebook username
+  twitter: someone  #your Twitter username
+  github: someone  #your GitHub username
+  googleplus: someone  #your Google+ username
+  weibo: someone  #your Weibo username
+  douban: someone  #your Douban username
+  linkedin: someone  #your Linkedin username
 
 ## Comment system (Disqus) ##
 disqus:
@@ -72,7 +90,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: text ## text | html
+excerpt_type: html ## text | html
 
 ## Build ##
 markdown: kramdown
