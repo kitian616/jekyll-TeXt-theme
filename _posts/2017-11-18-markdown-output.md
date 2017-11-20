@@ -1,7 +1,8 @@
 ---
 layout     : post
 comments   : true
-title      : How to output Markdown file with Rmd
+mathjax    : true
+title      : How to output Markdown file with Rmd
 ---
 
 YML Setup
