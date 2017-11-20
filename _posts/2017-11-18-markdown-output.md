@@ -44,5 +44,5 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
 
 ## Latex
 
-\[/frac{/lambda}{3}\]
+$$\frac{\lambda}{3}$$
 ?
