@@ -41,7 +41,8 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
     geom_histogram(binwidth = 0.5)
 ```
 
-![image](https://github.com/liao961120/liao961120.github.io/blob/master/images/markdown1-1.png)
+![image](https://github.com/liao961120/liao961120.github.io/blob/master/_images/markdown1-1.png)
+![image](_images/markdown1-1.png)
 
 ## Latex
 
