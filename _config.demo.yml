@@ -4,7 +4,7 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
-
+#
 # ,--------.      ,--.   ,--. ,--.
 # '--.  .--',---.  \  `.'  /,-'  '-.
 #    |  |  | .-. :  .'    \ '-.  .-'
@@ -12,20 +12,24 @@
 #    `--'   `----''--'   '--' `--'
 
 ## Base settings ##
-url: https://tianqi.name #!the base hostname & protocol for your site e.g. https://www.someone.com (!!required!!)
+url: https://tianqi.name #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /jekyll-TeXt-theme
 title: Someone's blog
 description: > #this means to ignore newlines until "nav_lists:"
   Someone's Blog
 
 nav_lists:
-  # - title: About
   - titles:
       en: About
       zh: 关于
       zh-Hans: 关于
       zh-Hant: 關於
     url: /about.html
+
+# paths:
+#   home: /
+#   all:  /all.html
+#   rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 repository: kitian616/jekyll-TeXt-theme
@@ -68,7 +72,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: html ## text | html
+excerpt_type: html # text | html
 
 ## Build ##
 markdown: kramdown
@@ -77,12 +81,14 @@ permalink: date
 
 exclude:
   - CHANGELOG.md
+  - CHECKLIST.md
+  - README-*.md
   - README.md
   - LICENSE
-  - /vendor
   - /docs
   - /screenshots
   - /test
+  - /vendor
 
 ## Plugins ##
 gems:

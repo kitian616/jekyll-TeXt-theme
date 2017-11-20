@@ -54,8 +54,12 @@ titles:
                         <li><div class="round-button cur">
                             <span>{{ page }}</span></div></li>
                     {% elsif page == 1 %}
+                    {% if site.paths.home %}
+                        {% assign __path = site.paths.home %}
+                    {% else %}
                         {% assign __path = '/' %}
-                        {% include snippets/prepend-baseurl.html %}
+                    {% endif %}
+                    {% include snippets/prepend-baseurl.html %}
                         {% assign href = __return %}
                         <li><a class="round-button"
                             href="{{ href }}">

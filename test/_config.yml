@@ -8,16 +8,21 @@
 
 ## Use TeXt theme !!!
 theme: jekyll-text-theme
+#
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
 
 ## Base settings ##
-# url:  #!the base hostname & protocol for your site e.g. https://www.someone.com (!!required!!)
+# url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /
 title: Someone's blog
 description: > #this means to ignore newlines until "nav_lists:"
   Someone's Blog
 
 nav_lists:
-  # - title: About
   - titles:
       en: About
       zh: 关于
@@ -25,9 +30,14 @@ nav_lists:
       zh-Hant: 關於
     url: /about.html
 
+# paths:
+#   home: /
+#   all:  /all.html
+#   rss:  /feed.xml
+
 ## GitHub repository (if the site is hosted by GitHub) ##
-# repository: e.g. someone/someone.github.io
-# repository_tree: e.g. master
+# repository:  #e.g. someone/someone.github.io
+# repository_tree:  #e.g. master
 
 ## Language & timezone ##
 lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
@@ -66,7 +76,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: text ## text | html
+excerpt_type: text # text | html
 
 ## Build ##
 markdown: kramdown
@@ -75,12 +85,14 @@ permalink: date
 
 exclude:
   - CHANGELOG.md
+  - CHECKLIST.md
+  - README-*.md
   - README.md
   - LICENSE
-  - /vendor
   - /docs
   - /screenshots
   - /test
+  - /vendor
 
 ## Plugins ##
 gems:
