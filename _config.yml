@@ -49,7 +49,7 @@ author:
 
 ## Comment system (Disqus) ##
 disqus:
-  # shortname:  disqus_LczUFlaMdX
+   shortname:  y-f-liao-s-page
 
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site
@@ -60,7 +60,7 @@ leancloud:
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class
 
-# mathjax: true
+ mathjax: true
 
 ## Paginate ##
 paginate: 5
