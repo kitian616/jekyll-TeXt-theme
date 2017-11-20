@@ -14,9 +14,9 @@
 ## Base settings ##
 # url:  #!the base hostname & protocol for your site e.g. https://www.someone.com (!!required!!)
 baseurl: /
-title: Someone's blog
+title: Y.-F. Liao's blog
 description: > #this means to ignore newlines until "nav_lists:"
-  Someone's Blog
+  About learning and communicating.
 
 nav_lists:
   # - title: About
@@ -32,14 +32,14 @@ nav_lists:
 # repository_tree: e.g. master
 
 ## Language & timezone ##
-lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
+lang: zh-Hant #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
 timezone: Asia/Shanghai
 
 ## Author & social ##
 author:
-  name: Someone
+  name: Y.-F. Liao
   # email:  #your Email address e.g. someone@site.com
-  # facebook:  #your Facebook username
+  # facebook:  pp61202
   # twitter:  #your Twitter username
   # github:  #your GitHub username
   # googleplus:  #your Google+ username
@@ -49,7 +49,7 @@ author:
 
 ## Comment system (Disqus) ##
 disqus:
-  # shortname:  #the Disqus shortname for the site
+  # shortname:  disqus_LczUFlaMdX
 
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site
@@ -68,7 +68,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: text ## text | html
+excerpt_type: html ## text | html
 
 ## Build ##
 markdown: kramdown
