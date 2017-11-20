@@ -1,5 +1,5 @@
 ---
-layout     : post
+layout     : blog-default
 comments   : true
 title      : How to output Markdown file with Rmd
 ---
