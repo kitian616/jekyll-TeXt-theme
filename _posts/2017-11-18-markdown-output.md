@@ -59,6 +59,15 @@ if (TRUE) {
 }
 ```
 
+## R code 2
+``` r
+if (TRUE) {
+   print("a = b") 
+} else {
+   print("I'm not sure!")
+}
+```
+
 ## python code
 ```python
 if a == b:
