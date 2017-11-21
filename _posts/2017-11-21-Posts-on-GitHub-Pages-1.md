@@ -62,8 +62,7 @@ If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks, where the 
 $$\frac{\lambda}{3}$$
 
 If you use only 1 `$`, it would be displayed inline, like \[\frac{\lambda}{3}\[. Note that GitHub Pages(jekyll) doesn't support `$`, you have to use `\[` instead if you want to upload the md file to GitHub Pages.
-$\frac{\lambda}{3}$
-\$$ \frac{\lambda}{3} $$
+\$\$ \frac{\lambda}{3} $$
 
 
 ## Set Image Path
