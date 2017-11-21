@@ -50,3 +50,20 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
 ## Latex
 $$\frac{\lambda}{3}$$
 
+## R code
+```r
+if (TRUE) {
+   print("a = b") 
+} else {
+   print("I'm not sure!")
+}
+```
+
+## python code
+```python
+if a == b:
+   print "a = b"
+else:
+   print "I'm not sure!"
+```
+
