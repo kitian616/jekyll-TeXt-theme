@@ -45,7 +45,7 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
 ```
 
 ![image](https://github.com/liao961120/liao961120.github.io/blob/master/_images/markdown1-1.png)
-![image2]({{ "/_images/markdown1-1.png" | absolute_url }})
+![image2]({{ "/assets/markdown1-1.png" | absolute_url }})
 
 ## Latex
 <div>
