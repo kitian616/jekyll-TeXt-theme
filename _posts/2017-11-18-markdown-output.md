@@ -4,6 +4,8 @@ comments   : true
 mathjax    : true
 title      : How to output Markdown file with Rmd
 ---
+<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 YML Setup
 ---------
