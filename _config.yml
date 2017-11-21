@@ -72,7 +72,7 @@ excerpt_type: html ## text | html
 
 ## Build ##
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: date
 
 exclude:
