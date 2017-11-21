@@ -44,8 +44,8 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
     geom_histogram(binwidth = 0.5)
 ```
 
-![image](https://github.com/liao961120/liao961120.github.io/blob/master/_images/markdown1-1.png)
-![image2]({{ "/assets/images/markdown1-1.png" | absolute_url }})
+
+![]({{ "/assets/images/markdown1-1.png" | absolute_url }})
 
 ## Latex
 $$\frac{\lambda}{3}$$
