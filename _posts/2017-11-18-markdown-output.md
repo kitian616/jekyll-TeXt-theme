@@ -45,12 +45,8 @@ ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
 ```
 
 ![image](https://github.com/liao961120/liao961120.github.io/blob/master/_images/markdown1-1.png)
-![image2]({{ "/assets/markdown1-1.png" | absolute_url }})
+![image2]({{ "/assets/images/markdown1-1.png" | absolute_url }})
 
 ## Latex
-<div>
 $$\frac{\lambda}{3}$$
-</div>
-$$\frac{\lambda}{3}$$
-\frac{\lambda}{3}
-## A <div>$$\frac{1}{3}$$</div>
+
