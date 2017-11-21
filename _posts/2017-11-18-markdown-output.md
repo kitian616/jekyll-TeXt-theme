@@ -13,7 +13,7 @@ YML Setup
 Add the code below to the header in Rmd files.
 <!--more-->
 
-``` r
+```r
 ---
 title: "Title"
 output: github_document
@@ -25,7 +25,7 @@ Set Image Path
 
 Use the code chunk below to set image output path
 
-``` r
+```r
 {r setup, include=FALSE}
 knitr::opts_chunk$set(fig.path = "folder_for_image/")
 ```
@@ -39,7 +39,7 @@ Common Code Chunk Commands
 
 `include=FALSE` runs code but doesn't show anything.
 
-``` r
+```r
 ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
     geom_histogram(binwidth = 0.5)
 ```
