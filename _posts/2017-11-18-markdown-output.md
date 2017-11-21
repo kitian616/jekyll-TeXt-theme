@@ -26,10 +26,8 @@ Set Image Path
 Use the code chunk below to set image output path
 
 {% highlight r linenos %}
-```
 {r setup, include=FALSE}
 knitr::opts_chunk$set(fig.path = "folder_for_image/")
-```
 {% endhighlight %}
 
 Common Code Chunk Commands
@@ -42,10 +40,8 @@ Common Code Chunk Commands
 `include=FALSE` runs code but doesn't show anything.
 
 {% highlight r linenos %}
-```r
 ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
     geom_histogram(binwidth = 0.5)
-```
 {% endhighlight %}
 
 
