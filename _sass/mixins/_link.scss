@@ -1,60 +1,67 @@
 @mixin link-normal {
-    &, &:visited {
-        @content;
-    }
+  &,
+  &:visited {
+    @content;
+  }
 }
 
 @mixin link-emphasize {
-    &.hover, &.active, &.focus,
-    &:hover, &:active, &:focus {
-        @content;
-    }
+  &.hover,
+  &.active,
+  &.focus,
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
 }
 
 @mixin link-emphasize-no-focus {
-    &.hover, &.active,
-    &:hover, &:active {
-        @content;
-    }
+  &.hover,
+  &.active,
+  &:hover,
+  &:active {
+    @content;
+  }
 }
 
 @mixin link-colors($nc, $nbc, $ec, $ebc) {
+  @include link-normal {
+    color: $nc;
+    background-color: $nbc;
+  }
+  @include link-emphasize {
+    color: $ec;
+    background-color: $ebc;
+  }
+  svg {
     @include link-normal {
-        color: $nc;
-        background-color: $nbc;
+      path {
+        fill: $nc;
+      }
     }
     @include link-emphasize {
-        color: $ec;
-        background-color: $ebc;
+      path {
+        fill: $ec;
+      }
     }
-    svg {
-        @include link-normal {
-            path {
-                fill: $nc;
-            }
-        }
-        @include link-emphasize {
-            path {
-                fill: $ec;
-            }
-        }
-    }
+  }
 }
 
 @mixin link-text-colors($nc, $ec) {
-    @include link-normal {
-        color: $nc;
-    }
-    @include link-emphasize {
-        color: $ec;
-    }
+  @include link-normal {
+    color: $nc;
+  }
+  @include link-emphasize {
+    color: $ec;
+  }
 }
 
 @mixin link-background-colors($nbc, $ebc) {
-    @include link-normal {
-        background-color: $nbc;
-    }
-    @include link-emphasize {
-        background-color: $ebc;
-    }
+  @include link-normal {
+    background-color: $nbc;
+  }
+  @include link-emphasize {
+    background-color: $ebc;
+  }
 }

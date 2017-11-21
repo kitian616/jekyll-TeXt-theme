@@ -1,14 +1,14 @@
 @mixin transition($value) {
-    -webkit-transition: $value;
-    transition: $value;
+  -webkit-transition: $value;
+  transition: $value;
 }
 
 @mixin transform($value) {
-    -webkit-transform: $value;
-            transform: $value;
+  -webkit-transform: $value;
+  transform: $value;
 }
 
 @mixin animation($value) {
-    -webkit-animation: $value;
-            animation: $value;
+  -webkit-animation: $value;
+  animation: $value;
 }

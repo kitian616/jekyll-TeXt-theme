@@ -1,44 +1,41 @@
 .m-page-header {
-    position: relative;
-    a {
-        font-weight: $base-font-weight;
-        @include link-text-colors(
-            $text-color,
-            $main-color-1
-        );
+  position: relative;
+  a {
+    font-weight: $base-font-weight;
+    @include link-text-colors( $text-color, $main-color-1);
+  }
+  .site-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: $h3-font-size * 1.2;
+    height: $h3-font-size * 1.2;
+    &>svg {
+      width: 100%;
+      height: 100%;
     }
-    .site-logo {
-        display: inline-block;
-        vertical-align: middle;
-        width: $h3-font-size * 1.2;
-        height: $h3-font-size * 1.2;
-        & > svg {
-            width: 100%;
-            height: 100%;
+  }
+  .site-title {
+    display: inline-block;
+    font-size: $h3-font-size;
+  }
+  &>nav {
+    display: block;
+    float: right;
+    font-size: $h5-font-size;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    ul {
+      margin: 0;
+      &>li {
+        margin: 0;
+        &:not(:last-child) {
+          margin: 0 $base-font-size 0 0;
         }
+      }
     }
-    .site-title {
-        display: inline-block;
-        font-size: $h3-font-size;
+    @include media-query($on-palm) {
+      float: none;
     }
-    & > nav {
-        display: block;
-        float: right;
-        font-size: $h5-font-size;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        ul {
-            margin: 0;
-            & > li {
-                margin: 0;
-                &:not(:last-child) {
-                    margin: 0 $base-font-size 0 0;
-                }
-            }
-        }
-        @include media-query($on-palm) {
-            float: none;
-        }
-    }
+  }
 }

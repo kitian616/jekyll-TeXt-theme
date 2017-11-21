@@ -1,61 +1,66 @@
 .m-toc {
-    ul {
-        display: block;
-        list-style-type: none;
-        & > li {
-            border: 0 solid rgba(0, 0, 0, 0);
-            border-left-width: 4px;
-            margin-left: -4px;
-            &:not(:last-child) {
-                margin-bottom: $content-gap / 4;
-            }
-        }
+  ul {
+    display: block;
+    list-style-type: none;
+    &>li {
+      border: 0 solid rgba(0, 0, 0, 0);
+      border-left-width: 4px;
+      margin-left: -4px;
+      &:not(:last-child) {
+        margin-bottom: $content-gap / 4;
+      }
     }
+  }
+  a {
+    display: block;
+    margin: $small-font-size / 4;
+    font-size: $small-font-size;
+    text-decoration: none;
+    line-height: $toc-line-height;
+    font-weight: $base-font-weight;
+    @include link-normal {
+      color: $text-color;
+    }
+    @include link-emphasize-no-focus {
+      color: $main-color-1;
+    }
+  }
+  .toc-h1,
+  .toc-h2 {
+    padding: 0;
     a {
-        display: block;
-        margin: $small-font-size / 4;
-        font-size: $small-font-size;
-        text-decoration: none;
-        line-height: $toc-line-height;
-        font-weight: $base-font-weight;
-        @include link-normal {
-            color: $text-color;
-        }
-        @include link-emphasize-no-focus {
-            color: $main-color-1;
-        }
+      font-weight: $bold-font-weight;
     }
-    .toc-h1, .toc-h2 {
-        padding: 0;
-        a {
-            font-weight: $bold-font-weight;
-        }
+  }
+  .toc-h3,
+  .toc-h4,
+  .toc-h5,
+  .toc-h6 {
+    a {
+      font-size: $tiny-font-size;
     }
-    .toc-h3, .toc-h4, .toc-h5, .toc-h6 {
-        a {
-            font-size: $tiny-font-size;
-        }
+  }
+  .toc-h1,
+  .toc-h2 {
+    margin-top: $small-font-size / 2;
+  }
+  .toc-h3 {
+    padding-left: $small-font-size;
+  }
+  .toc-h4 {
+    padding-left: $small-font-size * 2;
+  }
+  .toc-h5 {
+    padding-left: $small-font-size * 3;
+  }
+  .toc-h6 {
+    padding-left: $small-font-size * 3;
+  }
+  .toc-active {
+    border-color: $main-color-1;
+    @include transition(border-color ease .8s);
+    a {
+      color: $main-color-1;
     }
-    .toc-h1, .toc-h2 {
-        margin-top: $small-font-size / 2;
-    }
-    .toc-h3 {
-        padding-left: $small-font-size;
-    }
-    .toc-h4 {
-        padding-left: $small-font-size * 2;
-    }
-    .toc-h5 {
-        padding-left: $small-font-size * 3;
-    }
-    .toc-h6 {
-        padding-left: $small-font-size * 3;
-    }
-    .toc-active {
-        border-color: $main-color-1;
-        @include transition(border-color ease .8s);
-        a {
-            color: $main-color-1;
-        }
-    }
+  }
 }
