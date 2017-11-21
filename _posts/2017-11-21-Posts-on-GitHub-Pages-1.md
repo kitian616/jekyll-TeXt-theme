@@ -7,6 +7,7 @@ title      : Create Posts on GitHub Pages with R Studio(Part 1)
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+## Getting Started with R markdown
 First open a new R markdown file in R studio.
 
 ## YML Setup
