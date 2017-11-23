@@ -61,7 +61,7 @@ If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks, where the 
 
 $$\frac{\lambda}{3}$$
 
-If you put `\frac{\lambda}{3}` between `\(` and `\)`, it would be displayed inline,like this\(\frac{\lambda}{3}\). Note that GitHub Pages(jekyll) uses kmarkdown, and it seems that it has problem supporting inline mathematical display. 
+If you put `\frac{\lambda}{3}` between `\(` and `\)`, it would be displayed inline,like this\\(\frac{\lambda}{3}\\). Note that GitHub Pages(jekyll) uses kmarkdown, and it seems that it has problem supporting inline mathematical display. 
 
 
 ## Set Image Path
