@@ -96,6 +96,27 @@ titles:
   </div>
 </div>
 {% if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and site.isdebug == false %}
+<<<<<<< HEAD
+  <script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <script>
+    $(function() {
+      AV.init({
+        appId: '{{ site.leancloud.app_id }}',
+        appKey: '{{ site.leancloud.app_key }}'
+      });
+      $(".article-view").each(function() {
+        var curId = this.id,
+          query = new AV.Query('{{ site.leancloud.app_class }}');
+        query.equalTo('key', curId.substr(9));
+        query.first().then(function(result) {
+          if (result) {
+            $('#' + curId).text(result.attributes.views);
+          }
+        }, function(error) {
+          if (error) {
+            throw error;
+          }
+=======
     <script src="https://cdn1.lncld.net/static/js/3.4.1/av-min.js"></script>
     <script>
         $(function() {
@@ -117,6 +138,9 @@ titles:
                     }
                 });
             });
+>>>>>>> 6641e6bb1bd5093d0c71e190e49ef9fec4e1dd93
         });
-    </script>
+      });
+    });
+  </script>
 {% endif %}
