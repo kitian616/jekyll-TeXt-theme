@@ -4,8 +4,12 @@ comments   : true
 mathjax    : true
 title      : Create Posts on GitHub Pages with R Studio(Part 1)
 ---
-<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
 </script>
+<script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 ## Getting Started with R markdown
 First open a new R markdown file in R studio.
@@ -61,7 +65,7 @@ If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks, where the 
 
 $$\frac{\lambda}{3}$$
 
-If you put `\frac{\lambda}{3}` between `\(` and `\)`, it would be displayed inline,like this\\(\frac{\lambda}{3}\\). Note that GitHub Pages(jekyll) uses kmarkdown, and it seems that it has problem supporting inline mathematical display. 
+If you put `\frac{\lambda}{3}` between `\\(` and `\\)`, it would be displayed inline,like this$\frac{\lambda}{3}$. Note that GitHub Pages(jekyll) uses kmarkdown, and it seems that it has problem supporting inline mathematical display. 
 
 
 ## Set Image Path
