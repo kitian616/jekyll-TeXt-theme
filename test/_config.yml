@@ -86,10 +86,17 @@ permalink: date
 exclude:
   - CHANGELOG.md
   - CHECKLIST.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
   - README-*.md
   - README.md
-  - LICENSE
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
   - /docs
+  - /node_modules
   - /screenshots
   - /test
   - /vendor

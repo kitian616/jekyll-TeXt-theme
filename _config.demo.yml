@@ -14,9 +14,9 @@
 ## Base settings ##
 url: https://tianqi.name #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /jekyll-TeXt-theme
-title: Someone's blog
+title: TeXt Theme
 description: > #this means to ignore newlines until "nav_lists:"
-  Someone's Blog
+  TeXt Theme Demo
 
 nav_lists:
   - titles:
@@ -82,12 +82,19 @@ permalink: date
 exclude:
   - CHANGELOG.md
   - CHECKLIST.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
   - README-*.md
   - README.md
-  - LICENSE
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
   - /docs
+  - /node_modules
   - /screenshots
-  - /test
+  # - /test
   - /vendor
 
 ## Plugins ##
