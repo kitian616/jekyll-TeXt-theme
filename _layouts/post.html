@@ -147,52 +147,52 @@ layout: blog-default
 	});
 </script>
 {% if page.key and site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and site.isdebug == false %}
-    <script src="https://cdn1.lncld.net/static/js/3.4.1/av-min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            // 初始化
-            AV.init({
-                appId: '{{ site.leancloud.app_id }}',
-                appKey: '{{ site.leancloud.app_key }}'
-            });
-            // 查询
-            var query = new AV.Query('{{ site.leancloud.app_class }}');
-            query.equalTo('key', '{{ page.key }}');
-            query.first().then(function(result) {
-                if (result) {
-                    addOne(result)
-                } else {
-                    //新建
-                    var Blog = AV.Object.extend('{{ site.leancloud.app_class }}');
-                    var blog = new Blog();
-                    blog.set('title', '{{ page.title }}');
-                    blog.set('key', '{{ page.key }}');
-                    blog.set('views', 0);
-                    blog.save().then(function(page) {
-                        addOne(page)
-                    }, function(error) {
-                        if (error) {
-                            throw error;
-                        }
-                    });
-                }
+  <script src="https://cdn1.lncld.net/static/js/3.4.1/av-min.js"></script>
+  <script type="text/javascript">
+		$(function() {
+			// 初始化
+			AV.init({
+				appId: '{{ site.leancloud.app_id }}',
+				appKey: '{{ site.leancloud.app_key }}'
+			});
+			// 查询
+			var query = new AV.Query('{{ site.leancloud.app_class }}');
+			query.equalTo('key', '{{ page.key }}');
+			query.first().then(function(result) {
+				if (result) {
+					addOne(result)
+				} else {
+					//新建
+					var Blog = AV.Object.extend('{{ site.leancloud.app_class }}');
+					var blog = new Blog();
+					blog.set('title', '{{ page.title }}');
+					blog.set('key', '{{ page.key }}');
+					blog.set('views', 0);
+					blog.save().then(function(page) {
+						addOne(page)
+					}, function(error) {
+						if (error) {
+							throw error;
+						}
+					});
+				}
 
-		    function addOne(page) {
-		      page.increment('views', 1);
-		      page.fetchWhenSave(true);
-		      page.save().then(function(page) {
-		        $("#post-key-{{ page.key }}").text(page.attributes.views);
-		      }, function(error) {
-		        if (error) {
-		          throw error;
-		        }
-		      });
-		    }
-		  }, function(error) {
-		    if (error) {
-		      throw error;
-		    }
-		  });
+				function addOne(page) {
+					page.increment('views', 1);
+					page.fetchWhenSave(true);
+					page.save().then(function(page) {
+						$("#post-key-{{ page.key }}").text(page.attributes.views);
+					}, function(error) {
+						if (error) {
+							throw error;
+						}
+					});
+				}
+			}, function(error) {
+				if (error) {
+					throw error;
+				}
+			});
 		});
 	</script>
 {% endif %}
