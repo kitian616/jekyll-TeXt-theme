@@ -67,7 +67,7 @@ If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks, where the 
 
 $$\frac{\lambda}{3}$$
 
-If you put `\frac{\lambda}{3}` between two `$`s, it would be displayed inline, like this $\frac{\lambda}{3}$.
+If you put `\frac{\lambda}{3}` between two `$`s, it would be displayed inline,like this $\frac{\lambda}{3}$.
 
 
 ## Set Image Path
