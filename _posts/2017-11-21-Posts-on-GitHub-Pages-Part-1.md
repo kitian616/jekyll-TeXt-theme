@@ -1,7 +1,7 @@
 ---
 layout     : post
 title      : Create Posts on GitHub Pages with R Studio(Part 1)
-key        : page-about
+key        : 20171121
 ---
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
