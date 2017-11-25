@@ -1,8 +1,6 @@
 ---
 layout     : post
-mathjax    : true
 title      : Create Posts on GitHub Pages with R Studio(Part 1)
-comment    : true
 key        : page-about
 ---
 <script type="text/x-mathjax-config">
