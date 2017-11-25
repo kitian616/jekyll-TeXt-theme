@@ -1,7 +1,10 @@
 ---
-layout     : post
-title      : Create Posts on GitHub Pages with R Studio(Part 1)
-key        : 20171121
+layout: post
+title: Create Posts on GitHub Pages with R Studio(Part 1)
+key: 20171121
+tags:
+- Markdown
+- R
 ---
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
