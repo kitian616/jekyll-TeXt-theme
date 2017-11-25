@@ -3,6 +3,7 @@ layout     : post
 comments   : true
 mathjax    : true
 title      : Create Posts on GitHub Pages with R Studio(Part 1)
+key        : post
 ---
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
