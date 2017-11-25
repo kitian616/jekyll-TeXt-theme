@@ -43,6 +43,7 @@ You could insert a code chunk by clicking the **insert** button on upper part of
 
 How a code chunk and its output look like in a markdown file:
 ```r
+library(ggplot2)
 ggplot(data=iris, mapping = aes(x=Sepal.Length, fill=Species))+
     geom_histogram(binwidth = 0.5)
 ```
