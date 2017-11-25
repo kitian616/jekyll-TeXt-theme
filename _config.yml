@@ -16,7 +16,7 @@
 baseurl: /
 title: Y.-F. Liao's blog
 description: > #this means to ignore newlines until "nav_lists:"
-  About learning and communicating.
+  About Learning.
 
 nav_lists:
   # - title: About
