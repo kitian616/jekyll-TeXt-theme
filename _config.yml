@@ -56,7 +56,7 @@ disqus:
   # shortname:  #the Disqus shortname for the site
 
 ## Google Analytics ##
-# ga_tracking_id:  #Google analytics id for the site
+ga_tracking_id: UA-110328203-1
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
