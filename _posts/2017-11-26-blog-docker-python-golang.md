@@ -1,6 +1,8 @@
 ---
 layout: post
 title: An experiment using golang and python to execute command in docker
+tags: golang, python, docker, subprocess, bash
+date: 2017-11-26
 ---
 
 #### Description:
