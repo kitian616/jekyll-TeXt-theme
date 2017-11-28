@@ -82,12 +82,12 @@ The idea is by execute a command in a CLI created by golang, it will call a exec
 
    after execute, you will see something like this. 
 
-   ![no response terminal](../../image/2017-11-27-pyCmd-0.png)
+   ![no response terminal](../image/2017-11-27-pyCmd-0.png)
 
    If you have something like this, it means at least you get rid of the "tty" error, which is annoying. 
 
    This "non-response" situation is actually because of the "print" command print all the response after the docker bash session end. You can try type "ls", "pwd",and "exit". Since "exit" command will quit the bash terminal, you will see all the responses after you type "exit".
-   ![response terminal](../../image/2017-11-27-pyCmd-1.png)
+   ![response terminal](../image/2017-11-27-pyCmd-1.png)
 
    Now we know at least the python can interact with the "docker" freely without the "TTY" error. It is not perfect, we can see the responsivity is crappy. But at least we know it's working.
 
@@ -120,7 +120,7 @@ The idea is by execute a command in a CLI created by golang, it will call a exec
    }
    ```
 
-   ![go terminal](../../image/2017-11-27-pyCmd-2.png)
+   ![go terminal](../image/2017-11-27-pyCmd-2.png)
 
    Why is this?
 
@@ -156,7 +156,7 @@ The idea is by execute a command in a CLI created by golang, it will call a exec
 
     if you compile this and execute the this code in **Docker quickstart terminal**, it will work as before. (Similar to figure1 &2)
 
-   ![go terminal](../../image/2017-11-27-pyCmd-3.png)
+   ![go terminal](../image/2017-11-27-pyCmd-3.png)
 
    Although it is not perfect, we have solved the problem of "is not a TTY".
 
