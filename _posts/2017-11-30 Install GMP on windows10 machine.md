@@ -2,8 +2,7 @@
 layout: post
 title: Install GMP on windows 10 machine
 tags: GMP
-category: blog
-date: 2014-03-03
+date: 2017-11-30
 ---
 
 Recently, I was trying to install [GMP library](https://gmplib.org/#DOWNLOAD) on my windows 10 machine.
