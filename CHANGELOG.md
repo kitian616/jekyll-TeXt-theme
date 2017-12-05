@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.4.1 (2017-12-05)
+
+### Enhancements
+
+- New color themes(Chocolate, Orange)
+
+### Bug Fixes
+
+- Issues 9: the _posts file can't recorded by git
+
 ## 1.4.0 (2017-11-19)
 
 ### Enhancements
