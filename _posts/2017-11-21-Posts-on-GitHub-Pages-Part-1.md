@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create Posts on GitHub Pages with R Studio(Part 1)
+title: Creating Posts on GitHub Pages with R Studio (Part 1)
 key: 20171121
 tags:
 - Markdown
@@ -13,6 +13,9 @@ MathJax.Hub.Config({
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+Below is a quick guide to create posts (markdown files) with R studio (part 1), so that you can post it  on your blog hosted on GitHub Pages (part 2, due).
+<!--more-->
+
 ## Getting Started with R markdown
 First open a new R markdown file in R studio.
 
@@ -20,7 +23,7 @@ First open a new R markdown file in R studio.
 
 By default, Rmd files will output as html files. If you want to post on GitHub pages, you will need markdown(.md) files.
 Add the code below to the header in Rmd files to get a file output as `.md`.
-<!--more-->
+
 ```r
 ---
 title: "Title"
@@ -68,7 +71,7 @@ If you type: `$$\frac{\lambda}{3}$$` in Rmd files(not in code chunks, where the 
 
 $$\frac{\lambda}{3}$$
 
-If you put `\frac{\lambda}{3}` between two `$`s, it would be displayed inline,like this $\frac{\lambda}{3}$.
+If you place `\frac{\lambda}{3}` between two `$`s, it would be displayed inline,like this $\frac{\lambda}{3}$.
 
 
 ## Set Image Path

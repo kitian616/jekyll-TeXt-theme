@@ -42,6 +42,6 @@ Schema很可怕，因為它來去無蹤，在給自己冷靜判斷喜歡、適�
 -----------------
 
 雖然跟上文沒有什麼太大的關係，但希望這句話可以鼓勵害怕數學的人。
-> If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.<br/><P Align="Right">von Neumann</P>
+> If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is. —von Neumann
 
 很喜歡這句話，我覺得von Neumann把人類的複雜形容的太貼切了，尤其在這對比下，特別能顯現數學的單純。
