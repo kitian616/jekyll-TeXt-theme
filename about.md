@@ -12,5 +12,5 @@ Hi, I'm Y.-F. Liao, a psychology major at NTU. I'm fascinated by the possiblity 
 
 ----------------------
 ### Language
-I'll try to make my blog English to reach a wider range of potential audiance (and it's also convenient since many of my notes were originally taken in English). Some posts will be written in Chinese for the intended audiance, and some even bilingually (if I have enough leisure time to do so).
+I'll try to make my blog English to reach a wider range of potential audiance (and it's also convenient since many of my notes were originally taken in English). Some posts will be written in Chinese for the intended audience, and some even bilingually (if I have enough leisure time to do so).
 
