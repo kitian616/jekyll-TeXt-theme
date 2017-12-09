@@ -11,6 +11,8 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
+# config file for demo site, delete it if you want.
+
 ## Base settings ##
 url: https://tianqi.name #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /jekyll-TeXt-theme
