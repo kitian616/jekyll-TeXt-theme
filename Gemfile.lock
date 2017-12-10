@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-text-theme (1.4.1)
+    jekyll-text-theme (1.4.2)
       jekyll (~> 3.5)
       jekyll-feed (~> 0.9.2)
       jekyll-paginate (~> 1.1)

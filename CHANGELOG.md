@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.4.2 (2017-12-10)
+
+### Enhancements
+
+- use new liquid syntax `{%-` `-%}` to avoid unnecessary output whitespace.
+
+- add paths.base config.
+
 ## 1.4.1 (2017-12-05)
 
 ### Enhancements
