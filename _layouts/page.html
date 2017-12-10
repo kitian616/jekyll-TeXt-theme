@@ -3,11 +3,11 @@ layout: blog-default
 ---
 <div class="m-page">
   <article class="main">
-    {% include snippets/page-title.html %}
+    {%- include snippets/page-title.html -%}
     <h1>{{ __return }}</h1>
     <div class="m-article-content" itemprop="articleBody">{{ content }}</div>
-    {% if page.comment != false %}
-      <section>{% include utils/comment-disqus.html %}</section>
-    {% endif %}
+    {%- if page.comment != false -%}
+      <section>{%- include utils/comment-disqus.html -%}</section>
+    {%- endif -%}
   </article>
 </div>
