@@ -20,6 +20,10 @@
     display: inline-block;
     list-style-type: none;
     vertical-align: bottom;
-    margin: $content-gap / 6 0;
+    margin-top: $content-gap / 6;
+    margin-bottom: $content-gap / 6;
+    &:not(:last-child) {
+      margin-right: $spacing-unit / 8;
+    }
   }
 }

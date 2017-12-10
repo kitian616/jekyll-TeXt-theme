@@ -11,7 +11,7 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-# config file for demo site, delete it if you want.
+# config file for demo site, DELETE IT IF YOU WANT.
 
 ## Base settings ##
 url: https://tianqi.name #the base hostname & protocol for your site e.g. https://www.someone.com
@@ -40,7 +40,7 @@ repository_tree: master
 
 ## Language & timezone ##
 lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
-timezone: Asia/Shanghai
+timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 ## Author & social ##
 author:
