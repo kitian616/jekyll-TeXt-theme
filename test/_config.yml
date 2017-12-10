@@ -31,6 +31,7 @@ nav_lists:
     url: /about.html
 
 # paths:
+#   base: /
 #   home: /
 #   all:  /all.html
 #   rss:  /feed.xml

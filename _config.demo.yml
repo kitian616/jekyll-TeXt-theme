@@ -28,10 +28,11 @@ nav_lists:
       zh-Hant: 關於
     url: /about.html
 
-# paths:
-#   home: /
-#   all:  /all.html
-#   rss:  /feed.xml
+paths:
+  base: /
+  home: https://github.com/kitian616/jekyll-TeXt-theme/
+  # all:  /all.html
+  # rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 repository: kitian616/jekyll-TeXt-theme
