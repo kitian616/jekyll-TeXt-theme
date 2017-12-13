@@ -16,10 +16,10 @@
 }
 
 .inline-list {
+  display: flex;
+  flex-wrap: wrap;
   &>li {
-    display: inline-block;
     list-style-type: none;
-    vertical-align: bottom;
     margin-top: $content-gap / 6;
     margin-bottom: $content-gap / 6;
     &:not(:last-child) {
