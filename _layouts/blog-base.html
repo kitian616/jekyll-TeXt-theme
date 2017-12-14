@@ -28,7 +28,7 @@
         });
       });
     </script>
-    {%- if ga_tracking_id and site.isdebug == false -%}
+    {%- if site.isdebug == false -%}
       {%- include utils/google-analytics.html -%}
     {%- endif -%}
   </body>
