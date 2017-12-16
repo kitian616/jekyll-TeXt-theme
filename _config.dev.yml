@@ -49,10 +49,10 @@ author:
   facebook: someone  #your Facebook username
   twitter: someone  #your Twitter username
   github: someone  #your GitHub username
-  googleplus: someone  #your Google+ username
-  weibo: someone  #your Weibo username
-  douban: someone  #your Douban username
-  linkedin: someone  #your Linkedin username
+  googleplus:   #your Google+ username
+  weibo:   #your Weibo username
+  douban:   #your Douban username
+  linkedin:   #your Linkedin username
 
 ## Comment system (Disqus) ##
 disqus:

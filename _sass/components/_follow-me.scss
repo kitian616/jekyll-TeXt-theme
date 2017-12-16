@@ -2,6 +2,7 @@
   text-align: center;
   &>ul {
     margin: 0;
+    justify-content: center;
   }
   .round-button {
     color: $text-color-1;
