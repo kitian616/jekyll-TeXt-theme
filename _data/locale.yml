@@ -43,9 +43,9 @@ ARTICLE_LIST_DATE_FORMAT:
 
 STATISTICS:
   en:      "[POST_COUNT] post articles, [PAGE_COUNT] pages."
-  zh:      "共计 [POST_COUNT] 篇文章, [PAGE_COUNT] 页。"
-  zh-Hans: "共计 [POST_COUNT] 篇文章, [PAGE_COUNT] 页。"
-  zh-Hant: "共計 [POST_COUNT] 篇文章, [PAGE_COUNT] 頁。"
+  zh:      "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
+  zh-Hans: "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
+  zh-Hant: "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
 
 LICENSE_ANNOUNCE:
   en:      "This work is licensed under a [LICENSE] license."
