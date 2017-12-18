@@ -101,7 +101,7 @@ exclude:
   - /vendor
 
 ## Plugins ##
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
