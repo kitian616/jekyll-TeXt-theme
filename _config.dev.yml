@@ -57,6 +57,16 @@ author:
 ## Comment system (Disqus) ##
 disqus:
   # shortname:  #the Disqus shortname for the site
+  
+## Comment system (gitalk) ##
+gitalk:
+  # clientID: 
+  # clientSecret: 
+  # repository: git repo
+  # owner: github name
+  # admin: github user with right to create issue
+
+  # please refer to https://github.com/gitalk/gitalk for more info.
 
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site
