@@ -179,8 +179,9 @@ layout: blog-default
 
 				function addOne(page) {
 					page.increment('views', 1);
-					page.fetchWhenSave(true);
-					page.save().then(function(page) {
+					page.save(null, {
+						fetchWhenSave: true
+					}).then(function (page) {
 						$("#post-key-{{ page.key }}").text(page.attributes.views);
 					}, function(error) {
 						if (error) {
