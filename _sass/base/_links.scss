@@ -13,6 +13,7 @@
 a {
   font-weight: $bold-font-weight;
   text-decoration: none;
+  word-wrap: break-word;
   @include link-normal {
     color: $main-color-1;
   }
