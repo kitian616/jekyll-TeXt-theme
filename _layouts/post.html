@@ -31,6 +31,7 @@ layout: blog-default
 				</footer>
 				{%- if page.comment != false -%}
 						<section>{%- include utils/comment-disqus.html -%}</section>
+						<section>{%- include utils/comment-gitalk.html -%}</section>
 				{%- endif -%}
 			</article>
 		</div>
@@ -39,27 +40,6 @@ layout: blog-default
 		</div>
 	</div>
 </div>
-
-{%- if site.gitalk.clientID and site.gitalk.clientSecret and site.gitalk.repository and site.gitalk.owner and site.gitalk.admin -%}
-
-	<div id='gitalk-container'></div>
-	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-	<script>
-		const gitalk = new Gitalk({
-			clientID: '{{ site.gitalk.clientID }}',
-			clientSecret: '{{ site.gitalk.clientSecret }}',
-			repo: '{{ site.gitalk.repository }}',
-			owner: '{{ site.gitalk.owner }}',
-			admin: ['{{ site.gitalk.admin }}'],
-			distractionFreeMode: false
-		})
-
-		gitalk.render('gitalk-container')
-	</script>
-{%- endif -%}
-
 
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
 <script type="text/javascript">
