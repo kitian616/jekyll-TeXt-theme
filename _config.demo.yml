@@ -58,6 +58,16 @@ author:
 disqus:
   # shortname:  #the Disqus shortname for the site
 
+## Comment system (gitalk) ##
+# please refer to https://github.com/gitalk/gitalk for more info.
+gitalk:
+  clientID: 143666b578a416f82175 #Github Application Client ID
+  clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 #Github Application Client Secret
+  repository: gitalk-demo #Github repo
+  owner: kitian616 #Github repo owner
+  admin:  #Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+    - kitian616
+
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site
 
@@ -101,7 +111,7 @@ exclude:
   - /vendor
 
 ## Plugins ##
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate

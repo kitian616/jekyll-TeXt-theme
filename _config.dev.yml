@@ -65,10 +65,8 @@ gitalk:
   clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 #Github Application Client Secret
   repository: gitalk-demo #Github repo
   owner: kitian616 #Github repo owner
-  admin: #Github repo owner and collaborators, only these guys can initialize github issues
-    - "kitian616"
-    - admin
-    - asd
+  admin:  #Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+    - kitian616
 
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site
