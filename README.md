@@ -24,7 +24,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - 文章标签
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
 - Emoji（[Jemoji](https://github.com/jekyll/jemoji)）
-- 评论（[Disqus](https://disqus.com/)）
+- 评论（[Disqus](https://disqus.com/), [gitalk](https://gitalk.github.io/)）
 - Google Analytics
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
@@ -140,7 +140,15 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### 评论系统
 
-在 ./\_config.yml 文件的 `disqus.shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname，需要注意的是 Disqus 在大陆是无法直接访问的。
+目前支持 Disqus 和 gitalk 评论系统，优先使用 Disqus。
+
+#### Disqus
+
+在 ./\_config.yml 文件的 `disqus.shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname 即可，需要注意的是 Disqus 在大陆是无法直接访问的。
+
+#### gitalk
+
+在 ./\_config.yml 文件的 `gitalk` 的子项（`clientID`,`clientSecret`, `repository`, `owner`, `admin`）填上 gitalk 的对应参数 即可，详见 [gitalk 中文文档](https://github.com/gitalk/gitalk/blob/master/readme-cn.md)。
 
 > 注意：使用评论系统必须在文章的头信息中设置 key 值（可用字符集：`字母`、`数字` 及 `- _ : .`）。
 
