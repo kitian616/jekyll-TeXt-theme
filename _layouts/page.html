@@ -8,6 +8,7 @@ layout: blog-default
     <div class="m-article-content" itemprop="articleBody">{{ content }}</div>
     {%- if page.comment != false -%}
       <section>{%- include utils/comment-disqus.html -%}</section>
+      <section>{%- include utils/comment-gitalk.html -%}</section>
     {%- endif -%}
   </article>
 </div>

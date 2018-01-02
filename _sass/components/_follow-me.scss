@@ -12,30 +12,30 @@
     &:not(:last-child) {
       margin-right: $spacing-unit / 6;
     }
-    @include link-background-colors ( $main-color-1, darken($main-color-1, 20%))
+    @include link-background-colors ( $main-color-1, lighten($main-color-1, 5%))
   }
   .mail {
-    @include link-background-colors ( $mail-color, darken($mail-color, 20%))
+    @include link-background-colors ( $mail-color, lighten($mail-color, 5%))
   }
   .weibo {
-    @include link-background-colors ( $weibo-color, darken($weibo-color, 20%))
+    @include link-background-colors ( $weibo-color, lighten($weibo-color, 5%))
   }
   .facebook {
-    @include link-background-colors ( $facebook-color, darken($facebook-color, 20%))
+    @include link-background-colors ( $facebook-color, lighten($facebook-color, 5%))
   }
   .twitter {
-    @include link-background-colors ( $twitter-color, darken($twitter-color, 20%))
+    @include link-background-colors ( $twitter-color, lighten($twitter-color, 5%))
   }
   .googlepluse {
-    @include link-background-colors ( $google-plus-color, darken($google-plus-color, 20%))
+    @include link-background-colors ( $google-plus-color, lighten($google-plus-color, 5%))
   }
   .github {
-    @include link-background-colors ( $github-color, lighten($github-color, 30%))
+    @include link-background-colors ( $github-color, lighten($github-color, 20%))
   }
   .linkedin {
-    @include link-background-colors ( $linkedin-color, darken($linkedin-color, 20%))
+    @include link-background-colors ( $linkedin-color, lighten($linkedin-color, 5%))
   }
   .douban {
-    @include link-background-colors ( $douban-color, darken($douban-color, 20%))
+    @include link-background-colors ( $douban-color, lighten($douban-color, 5%))
   }
 }
