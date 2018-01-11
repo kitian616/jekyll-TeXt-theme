@@ -61,6 +61,7 @@
     &>code {
       font-size: $code-font-size;
       padding: $code-font-size;
+      word-wrap: normal;
       margin: 0;
       display: block;
       line-height: $code-line-height;
