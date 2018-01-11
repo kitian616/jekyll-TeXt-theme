@@ -15,7 +15,6 @@
     {%- endif -%}
     </style>
     <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    {%- include utils/mathjax.html -%}
   </head>
   <body>
     <div class="m-page-stage js-page-stage">{{ content }}</div>
@@ -28,6 +27,8 @@
         });
       });
     </script>
+    {%- include utils/mathjax.html -%}
+    {%- include utils/mermaid.html -%}
     {%- if site.isdebug == false -%}
       {%- include utils/google-analytics.html -%}
     {%- endif -%}

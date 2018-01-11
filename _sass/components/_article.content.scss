@@ -58,17 +58,15 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     margin: $content-gap 0;
-    border-radius: $code-font-size * .4;
-    ;
-    background-size: auto $code-font-size * $code-line-height * 2;
-    background-origin: content-box;
     &>code {
       font-size: $code-font-size;
       padding: $code-font-size;
       margin: 0;
       display: block;
       line-height: $code-line-height;
-      background-color: transparent;
+      &.language-mermaid {
+        background-color: transparent;
+      }
     }
   }
   figure {
@@ -87,10 +85,11 @@
       text-transform: uppercase;
     }
     &>pre {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
       margin: 0;
       &>code {
+        border-radius: $code-font-size * .4;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         padding-top: 0;
       }
     }
