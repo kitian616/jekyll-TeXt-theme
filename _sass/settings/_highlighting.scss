@@ -1,8 +1,15 @@
 /**
  * Syntax highlighting styles
  */
-pre {
-  code {
+.m-article-content {
+  figure:before {
+    background-color: $text-background-color;
+  }
+  code, pre {
+    background-color: $text-background-color;
+  }
+  pre>code {
+    background-color: transparent;
     color: $text-color;
   }
 }

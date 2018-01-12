@@ -47,34 +47,35 @@
   code {
     padding: $code-font-size * .2 $code-font-size * .5;
     border-radius: $code-font-size * .4;
-    background-color: $text-background-color;
     span {
       padding: 0;
       margin: 0;
     }
   }
+  div.highlighter-rouge, figure, pre {
+    margin: $content-gap 0;
+  }
+  code.language-mermaid {
+    background-color: $background-color;
+  }
   pre {
     display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    margin: $content-gap 0;
+    border-radius: $code-font-size * .4;
     &>code {
+      padding-top: $code-font-size;
+      padding-bottom: $code-font-size;
       font-size: $code-font-size;
-      padding: $code-font-size;
       word-wrap: normal;
       margin: 0;
       display: block;
       line-height: $code-line-height;
-      &.language-mermaid {
-        background-color: transparent;
-      }
     }
   }
   figure {
-    margin: $content-gap 0;
     &:before {
       content: attr(data-lang);
-      background-color: $text-background-color;
       display: block;
       border-top-left-radius: $code-font-size / 2;
       border-top-right-radius: $code-font-size / 2;
@@ -87,10 +88,9 @@
     }
     &>pre {
       margin: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
       &>code {
-        border-radius: $code-font-size * .4;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
         padding-top: 0;
       }
     }
