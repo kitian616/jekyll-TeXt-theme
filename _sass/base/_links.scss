@@ -40,6 +40,9 @@ a {
   svg {
     width: $base-font-size;
     height: $base-font-size;
+    path {
+      @include transition(fill .8s ease 0s);
+    }
   }
 }
 
@@ -52,12 +55,10 @@ a {
 
 .round-button {
   @extend %button;
+  @include round;
   @include flexbox;
   @include justify-content(center);
   @include align-items(center);
-  width: $base-font-size * 2;
-  height: $base-font-size * 2;
-  border-radius: 50%;
 }
 
 .floating-action-round-button {
@@ -65,9 +66,8 @@ a {
   @extend %floating-action;
 }
 
-.round-rect-button {
+.pill-button {
   @extend %button;
+  @include round-rect($base-font-size * 2);
   display: block;
-  padding: $base-font-size * .4 $base-font-size * .6;
-  border-radius: $base-font-size * 2;
 }

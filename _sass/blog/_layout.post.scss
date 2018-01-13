@@ -24,7 +24,8 @@
       box-sizing: border-box;
       width: $aside-width;
       position: absolute;
-      padding: $spacing-unit 0 $spacing-unit $spacing-unit * 2;
+      padding: $spacing-unit;
+      padding-right: 0;
       overflow: hidden;
     }
   }

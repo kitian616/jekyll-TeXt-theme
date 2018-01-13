@@ -29,21 +29,15 @@
   @include link-normal {
     color: $nc;
     background-color: $nbc;
+    svg path {
+      fill: $nc;
+    }
   }
   @include link-emphasize {
     color: $ec;
     background-color: $ebc;
-  }
-  svg {
-    @include link-normal {
-      path {
-        fill: $nc;
-      }
-    }
-    @include link-emphasize {
-      path {
-        fill: $ec;
-      }
+    svg path {
+      fill: $ec;
     }
   }
 }
@@ -51,9 +45,15 @@
 @mixin link-text-colors($nc, $ec) {
   @include link-normal {
     color: $nc;
+    svg path {
+      fill: $nc;
+    }
   }
   @include link-emphasize {
     color: $ec;
+    svg path {
+      fill: $ec;
+    }
   }
 }
 
