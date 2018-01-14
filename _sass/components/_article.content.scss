@@ -62,14 +62,13 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: $round-rect-radius;
-    font-size: $base-font-size;
     &>code {
-      padding: $base-font-size * 1.5 $base-font-size $base-font-size * 1.3 $base-font-size;
-      font-size: $code-font-size;
-      word-wrap: normal;
-      margin: 0;
       display: block;
+      margin: 0;
+      padding: $base-font-size * 1.5 $base-font-size $base-font-size * 1.3 $base-font-size;
       line-height: $code-line-height;
+      word-wrap: normal;
+
     }
   }
   figure {
@@ -91,21 +90,24 @@
       border-top-right-radius: 0;
       &>code {
         padding-top: 0;
-        &>table.rouge-table {
+        &>.rouge-table {
           margin: 0;
           tbody, tr, td {
             border: none;
             padding-top: 0;
             padding-bottom: 0;
           }
-          td.gl {
-            position: absolute;
-            padding-left: 0;
-            padding-right: 0;
-            width: $base-font-size * 2.5;
-          }
-          td.code {
-            padding-left: $base-font-size * 2.5;
+          &>tbody {
+            @include flexbox;
+            &>tr {
+              width: 100%;
+              @include flexbox;
+              &>.code {
+                @include flexbox;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+              }
+            }
           }
           tbody td>pre {
             margin: 0;

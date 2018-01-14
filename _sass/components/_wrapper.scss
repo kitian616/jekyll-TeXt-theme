@@ -16,8 +16,8 @@
 }
 
 .inline-list {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexbox;
+  @include flex-wrap(wrap);
   &>li {
     list-style-type: none;
     margin-top: $content-gap / 6;
