@@ -8,7 +8,7 @@ titles:
 key: page-about
 ---
 
-This is 方镇澎 :+1:
+Just say something about yourself. :+1:
 
 {% highlight javascript %}
 (() => console.log('hello, world!'))();
