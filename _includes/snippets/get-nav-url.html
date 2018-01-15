@@ -1,0 +1,7 @@
+{%- assign pre7 = __path | slice: 0, 7 -%} {%- assign pre8 = __path | slice: 0, 8 -%}
+{%- if pre7 == 'http://' or pre8 == 'https://' -%}
+  {%- assign __return = __path -%}
+{%- else -%}
+  {%- include snippets/prepend-baseurl.html -%}
+  {%- assign __return = __return -%}
+{%- endif -%}

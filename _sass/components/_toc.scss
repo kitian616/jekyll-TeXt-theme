@@ -2,33 +2,23 @@
   ul {
     display: block;
     list-style-type: none;
-    &>li {
-      border: 0 solid rgba(0, 0, 0, 0);
-      border-left-width: 4px;
-      margin-left: -4px;
-      &:not(:last-child) {
-        margin-bottom: $content-gap / 4;
-      }
-    }
   }
   a {
-    display: block;
-    margin: $small-font-size / 4;
+    display: inline-block;
     font-size: $small-font-size;
     text-decoration: none;
     line-height: $toc-line-height;
     font-weight: $base-font-weight;
-    @include link-normal {
-      color: $text-color;
-    }
+    @include round-rect($round-rect-radius, $base-font-size / 5 $base-font-size);
     @include link-emphasize-no-focus {
-      color: $main-color-1;
+      background-color: $text-background-color;
     }
   }
   .toc-h1,
   .toc-h2 {
     padding: 0;
     a {
+      color: $text-color-d;
       font-weight: $bold-font-weight;
     }
   }
@@ -37,29 +27,32 @@
   .toc-h5,
   .toc-h6 {
     a {
+      color: $text-color;
       font-size: $tiny-font-size;
     }
   }
   .toc-h1,
   .toc-h2 {
-    margin-top: $small-font-size / 2;
+    margin-top: $base-font-size * .6;
   }
   .toc-h3 {
-    padding-left: $small-font-size;
+    padding-left: $base-font-size * 1.5;
   }
   .toc-h4 {
-    padding-left: $small-font-size * 2;
+    padding-left: $base-font-size * 3;
   }
   .toc-h5 {
-    padding-left: $small-font-size * 3;
+    color: $text-color-l;
+    padding-left: $base-font-size * 3;
   }
   .toc-h6 {
-    padding-left: $small-font-size * 3;
+    color: $text-color-l;
+    font-size: $tiny-font-size;
+    padding-left: $base-font-size * 3;
   }
   .toc-active {
-    border-color: $main-color-1;
-    @include transition(border-color ease .8s);
     a {
+      background-color: $text-background-color;
       color: $main-color-1;
     }
   }

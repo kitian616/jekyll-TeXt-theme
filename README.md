@@ -31,6 +31,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - 网站图标的自动化工具（[gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico)）
 - Color Theme
 - 数学公式（[MathJax](https://www.mathjax.org/)）
+- 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 - 多语言支持（English | 简体中文 | 繁體中文）
 

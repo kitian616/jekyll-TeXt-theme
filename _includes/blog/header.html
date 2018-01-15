@@ -4,7 +4,7 @@
   {%- else -%}
     {%- assign __path = '/' -%}
   {%- endif -%}
-  {%- include snippets/prepend-baseurl.html -%}
+  {%- include snippets/get-nav-url.html -%}
   {%- if site.title -%}
     <a class="site-title" title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
   {%- endif -%}
@@ -18,13 +18,8 @@
       {%- else -%}
         {%- assign __path = '/' -%}
       {%- endif -%}
-      {%- assign pre7 = __path | slice: 0, 7 -%} {%- assign pre8 = __path | slice: 0, 8 -%}
-      {%- if pre7 == 'http://' or pre8 == 'https://' -%}
-        {%- assign href = __path -%}
-      {%- else -%}
-        {%- include snippets/prepend-baseurl.html -%}
-        {%- assign href = __return -%}
-      {%- endif -%}
+      {%- include snippets/get-nav-url.html -%}
+      {%- assign href = __return -%}
       {%- assign __locale = site.data.locale.NAV.HOME -%}
       {%- include snippets/locale-to-string.html -%}
       <li><a href="{{ href }}">{{ __return }}</a></li>
@@ -33,14 +28,14 @@
       {%- else -%}
         {%- assign __path = '/all.html' -%}
       {%- endif -%}
-      {%- include snippets/prepend-baseurl.html -%}
+      {%- include snippets/get-nav-url.html -%}
       {%- assign href = __return -%}
       {%- assign __locale = site.data.locale.NAV.ALL -%}
       {%- include snippets/locale-to-string.html -%}
       <li><a href="{{ href }}">{{ __return }}</a></li>
       {%- for list in site.nav_lists -%}
         {%- assign __path = list.url -%}
-        {%- include snippets/prepend-baseurl.html -%}
+        {%- include snippets/get-nav-url.html -%}
         {%- assign href = __return -%}
         {%- assign __locale = list.titles -%}
         {%- include snippets/locale-to-string.html -%}
@@ -51,7 +46,7 @@
       {%- else -%}
         {%- assign __path = '/feed.xml' -%}
       {%- endif -%}
-      {%- include snippets/prepend-baseurl.html -%}
+      {%- include snippets/get-nav-url.html -%}
       {%- assign href = __return -%}
       {%- assign __locale = site.data.locale.NAV.RSS -%}
       {%- include snippets/locale-to-string.html -%}

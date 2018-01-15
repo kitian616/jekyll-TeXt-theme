@@ -49,8 +49,10 @@ h6 {
   color: $text-color-l;
 }
 
-pre,
-code {
+pre, code {
   font-family: $code-font-family;
+}
+
+code {
   font-size: $code-font-size;
 }

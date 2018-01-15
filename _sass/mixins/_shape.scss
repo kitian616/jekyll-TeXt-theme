@@ -1,0 +1,19 @@
+$round-length: $base-font-size * 2;
+$round-rect-radius: $base-font-size * .4;
+$round-rect-padding: $base-font-size * .4 $base-font-size * .6;
+
+@mixin round(
+  $length: $round-length
+) {
+  width: $length;
+  height: $length;
+  border-radius: 50%;
+}
+
+@mixin round-rect(
+  $radius: $round-rect-radius,
+  $padding: $round-rect-padding
+) {
+  padding: $padding;
+  border-radius: $radius;
+}

@@ -45,41 +45,39 @@
     height: $base-font-size * $article-line-height * .7;
   }
   code {
-    padding: $code-font-size * .2 $code-font-size * .5;
-    border-radius: $code-font-size * .4;
-    background-color: $text-background-color;
+    @include round-rect($round-rect-radius, $base-font-size * .2 $base-font-size * .5);
     span {
       padding: 0;
       margin: 0;
     }
   }
+  div.highlighter-rouge, figure, pre {
+    margin: $content-gap 0;
+  }
+  code.language-mermaid {
+    background-color: $background-color;
+  }
   pre {
     display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    margin: $content-gap 0;
-    border-radius: $code-font-size * .4;
-    ;
-    background-size: auto $code-font-size * $code-line-height * 2;
-    background-origin: content-box;
+    border-radius: $round-rect-radius;
     &>code {
-      font-size: $code-font-size;
-      padding: $code-font-size;
-      margin: 0;
       display: block;
+      margin: 0;
+      padding: $base-font-size * 1.5 $base-font-size $base-font-size * 1.3 $base-font-size;
       line-height: $code-line-height;
-      background-color: transparent;
+      word-wrap: normal;
+
     }
   }
   figure {
-    margin: $content-gap 0;
     &:before {
       content: attr(data-lang);
-      background-color: $text-background-color;
       display: block;
-      border-top-left-radius: $code-font-size / 2;
-      border-top-right-radius: $code-font-size / 2;
-      padding: $code-font-size / 2 $code-font-size $code-font-size / 2 0;
+      border-top-left-radius: $round-rect-radius;
+      border-top-right-radius: $round-rect-radius;
+      padding: $base-font-size / 2 $base-font-size $base-font-size / 2 0;
       color: $decorate-color;
       font-weight: $bold-font-weight;
       font-size: $base-font-size;
@@ -87,11 +85,39 @@
       text-transform: uppercase;
     }
     &>pre {
+      margin: 0;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      margin: 0;
       &>code {
         padding-top: 0;
+        &>.rouge-table {
+          margin: 0;
+          tbody, tr, td {
+            border: none;
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+          &>tbody {
+            @include flexbox;
+            &>tr {
+              width: 100%;
+              @include flexbox;
+              &>.code {
+                @include flexbox;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+              }
+            }
+          }
+          tbody td>pre {
+            margin: 0;
+            border-radius: 0;
+            &.lineno {
+              color: $text-color-l;
+              @include user-select(none);
+            }
+          }
+        }
       }
     }
   }
@@ -118,7 +144,7 @@
       font-weight: $bold-font-weight;
     }
     dd {
-      margin-left: 2em;
+      margin-left: $base-font-size * 2;
     }
   }
   table {

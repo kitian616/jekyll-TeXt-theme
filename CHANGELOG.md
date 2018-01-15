@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.4.3 (2018-01-13)
+
+### Enhancements
+
+- new TOC style
+
+- gitalk support
+
+- mermaid support
+
+- `site.paths` & `site.nav_lists` support absolute URL
+
 ## 1.4.2 (2017-12-10)
 
 ### Enhancements
