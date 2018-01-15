@@ -18,7 +18,7 @@ theme: jekyll-text-theme
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /
-title: Someone's blog
+title: 方镇澎's blog
 description: > #this means to ignore newlines until "nav_lists:"
   Someone's Blog
 
@@ -46,7 +46,7 @@ timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_t
 
 ## Author & social ##
 author:
-  name: Someone
+  name: Fang Zhenpeng
   # email:  #your Email address e.g. someone@site.com
   # facebook:  #your Facebook username
   # twitter:  #your Twitter username
