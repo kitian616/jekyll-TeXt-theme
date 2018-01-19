@@ -11,15 +11,14 @@
 
     "mixins/prefix",
     "mixins/media",
-    "mixins/link",
     "mixins/flex",
     "mixins/shape",
 
-    "base/base",
-    "base/text",
-    "base/links",
-    "base/image&icon",
-    "base/animate",
+    "common/reset",
+    "common/clearfix",
+    "common/link&button",
+    "common/image&icon",
+    "common/animate",
 
     "components/wrapper",
 
@@ -36,11 +35,10 @@
     "components/article.content",
     "components/license",
 
-    "blog/layout.base",
-    "blog/layout.default",
-    "blog/layout.post",
+    "layout/default",
+    "layout/post",
 
-    "blog/page.all",
-    "blog/page.index",
-    "blog/page.error-404"
+    "page/all",
+    "page/index",
+    "page/404"
 ;

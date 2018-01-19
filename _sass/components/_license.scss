@@ -1,5 +1,5 @@
 .m-license {
-  @include round-rect($base-font-size, $base-font-size / 2 $base-font-size);
+  @include round-rect(1rem, .5rem 1rem);
   background-color: $text-background-color;
   box-shadow: $shadow-base;
   font-weight: $bold-font-weight;
@@ -12,15 +12,15 @@
   .octocat {
     float: right;
     img {
-      width: $spacing-unit * 2;
+      width: 4rem;
       height: auto;
-      margin: 0 $spacing-unit / 3;
+      margin: 0 1rem;
       border-width: 0;
-      border-radius: $spacing-unit;
+      border-radius: 2rem;
     }
   }
   .license {
     float: right;
-    margin-left: $spacing-unit / 3;
+    margin-left: 1rem;
   }
 }

@@ -1,6 +1,6 @@
-$round-length: $base-font-size * 2;
-$round-rect-radius: $base-font-size * .4;
-$round-rect-padding: $base-font-size * .4 $base-font-size * .6;
+$round-length: 2rem;
+$round-rect-radius: .4rem;
+$round-rect-padding: .4rem .6rem;
 
 @mixin round(
   $length: $round-length

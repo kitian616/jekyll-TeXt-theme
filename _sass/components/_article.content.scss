@@ -7,27 +7,26 @@
   h4,
   h5,
   h6 {
-    margin: $content-gap * 2 0 $content-gap * .5 0;
+    margin: 1.8em 0 .8rem 0;
   }
   h1,
   h2 {
-    padding: 0 0 $base-font-size * .3 0;
     border: 0 dashed $border-color;
     border-bottom-width: 2px;
-    margin-bottom: $content-gap;
+    margin-bottom: .1rem;
   }
   p {
-    margin: $content-gap 0;
+    margin: .8rem 0;
   }
   blockquote {
-    padding: 0 0 0 $spacing-unit / 2;
+    padding: 0 0 0 1rem;
     border: 0 solid $border-color;
     border-left-width: 4px;
-    margin: $content-gap 0;
+    margin: .8rem 0;
     font-size: $small-font-size;
     color: $text-color-l;
     p {
-      margin: $content-gap * .5 0;
+      margin: .4rem 0;
     }
     > :last-child {
       margin-bottom: 0;
@@ -35,24 +34,24 @@
   }
   img:not(.emoji) {
     max-width: 100%;
-    max-height: 600px;
+    max-height: 37rem;
     vertical-align: middle;
   }
   .emoji {
     display: inline-block;
     vertical-align: text-bottom;
-    width: $base-font-size * $article-line-height * .7;
-    height: $base-font-size * $article-line-height * .7;
+    width: $article-line-height * .7rem;
+    height: $article-line-height * .7rem;
   }
   code {
-    @include round-rect($round-rect-radius, $base-font-size * .2 $base-font-size * .5);
+    @include round-rect($round-rect-radius, .2rem .5rem);
     span {
       padding: 0;
       margin: 0;
     }
   }
   div.highlighter-rouge, figure, pre {
-    margin: $content-gap 0;
+    margin: .8rem 0;
   }
   code.language-mermaid {
     background-color: $background-color;
@@ -65,7 +64,7 @@
     &>code {
       display: block;
       margin: 0;
-      padding: $base-font-size * 1.5 $base-font-size $base-font-size * 1.3 $base-font-size;
+      padding: 1.5rem 1rem 1.3rem 1rem;
       line-height: $code-line-height;
       word-wrap: normal;
 
@@ -77,10 +76,9 @@
       display: block;
       border-top-left-radius: $round-rect-radius;
       border-top-right-radius: $round-rect-radius;
-      padding: $base-font-size / 2 $base-font-size $base-font-size / 2 0;
+      padding: .5rem 1rem .5rem 0;
       color: $decorate-color;
       font-weight: $bold-font-weight;
-      font-size: $base-font-size;
       text-align: right;
       text-transform: uppercase;
     }
@@ -123,7 +121,7 @@
   }
   ul,
   ol {
-    margin: $content-gap 0 $content-gap $spacing-unit;
+    margin: .8rem 0 .8rem 1rem;
     li {
       margin: 0;
       p {
@@ -132,7 +130,7 @@
     }
   }
   dl {
-    margin: $content-gap 0;
+    margin: .8rem 0;
     dt,
     dd {
       margin: 0;
@@ -144,7 +142,7 @@
       font-weight: $bold-font-weight;
     }
     dd {
-      margin-left: $base-font-size * 2;
+      margin-left: 2rem;
     }
   }
   table {
@@ -152,12 +150,12 @@
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: $content-gap 0;
+    margin: .8rem 0;
     border-collapse: collapse;
     th,
     td {
       border: 1px solid $border-color;
-      padding: $base-font-size * .5;
+      padding: .5rem;
     }
     thead,
     tbody {
@@ -170,6 +168,6 @@
   hr {
     border: 0 dashed $border-color;
     border-top-width: 2px;
-    margin: $base-font-size 0;
+    margin: 1rem 0;
   }
 }

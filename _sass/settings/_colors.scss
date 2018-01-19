@@ -5,5 +5,5 @@
 // @import './colors/_colors.chocolate.scss';
 // @import './colors/_colors.orange.scss';
 
-$shadow-base: 0 2px 10px $shadow-color, 0 0 16px rgba($shadow-color, opacity($shadow-color) * 0.6);
-$shadow-high: 0 4px 10px rgba($shadow-color, opacity($shadow-color) / 3 + 0.3), 0 0 16px $shadow-color;
+$shadow-base: 0 .125rem .6rem $shadow-color, 0 0 1rem rgba($shadow-color, opacity($shadow-color) * 0.6);
+$shadow-high: 0 .25rem .6rem rgba($shadow-color, opacity($shadow-color) / 3 + 0.3), 0 0 1rem $shadow-color;

@@ -1,6 +1,59 @@
+html {
+  height: 100%;
+  font-size: $root-font-size;
+  background-color: $background-color;
+}
+
 body {
+  height: 100%;
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
+  ::-moz-selection {
+    background: $select-color;
+  }
+  ::-webkit-selection {
+    background: $select-color;
+  }
+  ::selection {
+    background: $select-color;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
+  margin: .5rem 0;
 }
 
 h1,
@@ -55,4 +108,14 @@ pre, code {
 
 code {
   font-size: $code-font-size;
+}
+
+button {
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
 }

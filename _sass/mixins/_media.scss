@@ -1,8 +1,8 @@
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
+//         padding-right: 1rem;
+//         padding-left: 1rem;
 //     }
 // }
 @mixin media-query($device) {

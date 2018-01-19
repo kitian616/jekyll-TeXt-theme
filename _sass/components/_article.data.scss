@@ -1,5 +1,5 @@
 .m-article-data {
-  margin: $content-gap 0;
+  margin: .8rem 0;
   .date-wrapper,
   .tag-wrapper,
   .view-wrapper {
@@ -7,7 +7,7 @@
   }
   .tag-wrapper {
     float: left;
-    margin: 0 $base-font-size / 4 0 0;
+    margin: 0 .25rem 0 0;
     @include media-query($on-palm) {
       float: none;
     }
@@ -18,19 +18,19 @@
     @include align-items(center);
     @include flex-wrap(wrap);
     color: $text-color-l;
-    margin: 0 0 0 $base-font-size * .6;
+    margin: 0 0 0 .6rem;
     @include media-query($on-palm) {
       float: none;
     }
   }
   .view-wrapper {
     line-height: 1;
-    padding: 0 $base-font-size / 4 0 0;
+    padding: 0 .25rem 0 0;
     border: 0 solid rgba($text-color-l, .6);
     border-right-width: 1px;
-    margin: 0 $base-font-size / 4 0 0;
+    margin: 0 .25rem 0 0;
   }
   .date-wrapper {
-    margin: 0 $base-font-size 0 0;
+    margin: 0 1rem 0 0;
   }
 }

@@ -11,9 +11,9 @@
     &>article {
       &>header {
         color: $text-color-d;
-        margin-bottom: $spacing-unit / 6;
+        margin-bottom: .4rem;
         &>h1 {
-          margin-bottom: $spacing-unit;
+          margin-bottom: 2rem;
         }
       }
     }
@@ -24,7 +24,7 @@
       box-sizing: border-box;
       width: $aside-width;
       position: absolute;
-      padding: $spacing-unit;
+      padding: 2rem;
       padding-right: 0;
       overflow: hidden;
     }
@@ -35,8 +35,8 @@
     }
     &>.article-license {
       position: relative;
-      max-width: 500px;
-      margin: $content-gap 0;
+      max-width: 30rem;
+      margin: 1rem 0;
     }
   }
 }

@@ -1,18 +1,18 @@
 .m-all {
   &>div>section {
-    margin: $content-gap * 3 0;
+    margin: 2.5rem 0;
     &>section {
       &:not(:last-child) {
-        padding: 0 0 $base-font-size * .4 0;
+        padding: 0 0 .4rem 0;
       }
     }
     .year-title {
-      font-size: $base-font-size * 1.6;
+      font-size: 1.6rem;
     }
     .year-list {
       &>li {
         list-style-type: none;
-        margin: $base-font-size * .4 0;
+        margin: .4rem 0;
       }
     }
     .post-date {
@@ -20,11 +20,11 @@
       display: inline-block;
       font-size: $small-font-size;
       color: $text-color-l;
-      padding: 0 $base-font-size 0 0;
+      padding: 0 1rem 0 0;
     }
   }
   .post-link {
-    font-size: $base-font-size;
+    font-size: 1rem;
     @include link-normal {
       color: $text-color-d;
     }

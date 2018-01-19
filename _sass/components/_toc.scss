@@ -9,7 +9,7 @@
     text-decoration: none;
     line-height: $toc-line-height;
     font-weight: $base-font-weight;
-    @include round-rect($round-rect-radius, $base-font-size / 5 $base-font-size);
+    @include round-rect($round-rect-radius, .2rem 1rem);
     @include link-emphasize-no-focus {
       background-color: $text-background-color;
     }
@@ -33,22 +33,22 @@
   }
   .toc-h1,
   .toc-h2 {
-    margin-top: $base-font-size * .6;
+    margin-top: .6rem;
   }
   .toc-h3 {
-    padding-left: $base-font-size * 1.5;
+    padding-left: 1.5rem;
   }
   .toc-h4 {
-    padding-left: $base-font-size * 3;
+    padding-left: 3rem;
   }
   .toc-h5 {
     color: $text-color-l;
-    padding-left: $base-font-size * 3;
+    padding-left: 3rem;
   }
   .toc-h6 {
     color: $text-color-l;
     font-size: $tiny-font-size;
-    padding-left: $base-font-size * 3;
+    padding-left: 3rem;
   }
   .toc-active {
     a {

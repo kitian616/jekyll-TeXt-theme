@@ -1,9 +1,9 @@
 .main {
   margin: 0 auto;
-  padding: 0 $spacing-unit;
+  padding: 0 2rem;
   max-width: $content-max-width;
   @include media-query($on-laptop) {
-    padding: 0 $spacing-unit / 2;
+    padding: 0 1rem;
   }
 }
 
@@ -11,7 +11,7 @@
   max-width: $content-max-width + $aside-width;
   @include media-query($on-laptop) {
     max-width: $content-max-width;
-    padding: 0 $spacing-unit / 2;
+    padding: 0 1rem;
   }
 }
 
@@ -20,10 +20,10 @@
   @include flex-wrap(wrap);
   &>li {
     list-style-type: none;
-    margin-top: $content-gap / 6;
-    margin-bottom: $content-gap / 6;
+    margin-top: .35rem;
+    margin-bottom: .35rem;
     &:not(:last-child) {
-      margin-right: $spacing-unit / 8;
+      margin-right: .25rem;
     }
   }
 }

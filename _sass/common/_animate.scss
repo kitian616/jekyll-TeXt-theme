@@ -10,7 +10,7 @@
 @keyframes fade-in-down {
   from {
     opacity: 0;
-    @include transform(translateY(-$spacing-unit));
+    @include transform(translateY(-2rem));
   }
   to {
     opacity: 1;
