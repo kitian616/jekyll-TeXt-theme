@@ -29,9 +29,9 @@
 }
 
 %floating-action {
-  box-shadow: $shadow-base;
+  @include box-shadow(2);
   &:hover {
-    box-shadow: $shadow-high;
+    @include box-shadow(3);
   }
 }
 

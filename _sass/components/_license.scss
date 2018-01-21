@@ -1,7 +1,7 @@
 .m-license {
   @include round-rect(1rem, .5rem 1rem);
+  @include box-shadow();
   background-color: $text-background-color;
-  box-shadow: $shadow-base;
   font-weight: map-get($base, font-weight-bold);
   img {
     vertical-align: bottom;
