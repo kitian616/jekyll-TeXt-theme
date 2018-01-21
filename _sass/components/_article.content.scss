@@ -160,6 +160,9 @@
     tbody {
       border: 1px solid $border-color;
     }
+    thead {
+      border-bottom-width: 2px;
+    }
     tbody>tr:nth-child(even) {
       background-color: $text-background-color;
     }
