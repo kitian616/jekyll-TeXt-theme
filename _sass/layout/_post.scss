@@ -1,16 +1,7 @@
 .m-post {
-  &>div {
-    display: block;
-    @include media-breakpoint-down(l) {
-      display: block;
-    }
-  }
-  .col-1 {
-    @include flex(1);
-    overflow: auto;
-  }
   .col-2 {
     display: none;
+    float: right;
     &>aside {
       box-sizing: border-box;
       width: map-get($layout, aside-width);
@@ -18,6 +9,9 @@
       padding: 1.5rem;
       padding-right: 0;
       overflow: hidden;
+    }
+    @include media-breakpoint-down(l) {
+      float: none;
     }
   }
   footer {
@@ -27,17 +21,17 @@
     &>.article-license {
       position: relative;
       max-width: 30rem;
-      margin: 1rem;
+      margin: .8rem 0;
     }
   }
 }
 
 .has-toc {
   .m-post {
-    &>div {
-      @include flexbox;
+    .col-1 {
+      margin-right: map-get($layout, aside-width);
       @include media-breakpoint-down(l) {
-        display: block;
+        margin-right: 0;
       }
     }
     .col-2 {
