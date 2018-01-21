@@ -69,7 +69,7 @@ h1 {
   font-size: map-get($base, font-size-h1);
   color: $text-color-d;
   @include media-breakpoint-down(s) {
-    font-size: map-get($base, font-size-h1-palm);
+    font-size: map-get($base, font-size-h1-s);
   }
 }
 
@@ -77,18 +77,24 @@ h2 {
   font-size: map-get($base, font-size-h2);
   color: $text-color-d;
   @include media-breakpoint-down(s) {
-    font-size: map-get($base, font-size-h2-palm);
+    font-size: map-get($base, font-size-h2-s);
   }
 }
 
 h3 {
   font-size: map-get($base, font-size-h3);
   color: $text-color-d;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h3-s);
+  }
 }
 
 h4 {
   font-size: map-get($base, font-size-h4);
   color: $text-color;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h4-s);
+  }
 }
 
 h5 {

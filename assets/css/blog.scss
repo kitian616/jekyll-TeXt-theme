@@ -4,10 +4,9 @@
 @charset "utf-8";
 
 @import
-    "settings/variables",
-    "settings/colors",
-    "settings/highlighting",
-
+    "common/variables",
+    "common/colors",
+    "common/highlighting",
     "common/classes",
     "common/reset",
     "common/components/button",
