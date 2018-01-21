@@ -1,18 +1,18 @@
 .m-post-list {
   &>article {
     &>h1 {
-      font-size: $article-list-head;
+      font-size: map-get($base, font-size-header-list);
       &>a {
         @include link-text-colors( $text-color-d, $main-color-1);
       }
     }
     &>a {
-      font-size: $small-font-size;
+      font-size: map-get($base, font-size-sub);
     }
     margin: 2.4rem 0;
   }
   .m-article-content {
-    font-size: $small-font-size;
+    font-size: map-get($base, font-size-sub);
     h1,
     h2,
     h3,
@@ -32,16 +32,16 @@
       border: none;
     }
     h1 {
-      font-size: $h1-font-size-excerpt;
+      font-size: map-get($base, font-size-h1-excerpt);
     }
     h2 {
-      font-size: $h2-font-size-excerpt;
+      font-size: map-get($base, font-size-h2-excerpt);
     }
     h3 {
-      font-size: $h3-font-size-excerpt;
+      font-size: map-get($base, font-size-h3-excerpt);
     }
     h4 {
-      font-size: $h4-font-size-excerpt;
+      font-size: map-get($base, font-size-h4-excerpt);
     }
     img {
       max-height: 12rem;

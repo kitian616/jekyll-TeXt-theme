@@ -1,0 +1,9 @@
+@mixin media-breakpoint-down($name, $breakpoints: default) {
+  @if $breakpoints == default {
+    $breakpoints: $responsive;
+  }
+  @media screen and (max-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
+

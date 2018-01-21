@@ -3,12 +3,13 @@
   .date-wrapper,
   .tag-wrapper,
   .view-wrapper {
-    font-size: $small-font-size;
+    font-size: map-get($base, font-size-sub);
   }
   .tag-wrapper {
     float: left;
     margin: 0 .25rem 0 0;
-    @include media-query($on-palm) {
+    @include horizontal-space();
+    @include media-breakpoint-down(s) {
       float: none;
     }
   }
@@ -19,7 +20,7 @@
     @include flex-wrap(wrap);
     color: $text-color-l;
     margin: 0 0 0 .6rem;
-    @include media-query($on-palm) {
+    @include media-breakpoint-down(s) {
       float: none;
     }
   }

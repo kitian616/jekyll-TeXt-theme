@@ -4,23 +4,19 @@
 @charset "utf-8";
 
 @import
-    "settings/base",
+    "settings/variables",
     "settings/colors",
-    "settings/font",
     "settings/highlighting",
 
-    "mixins/prefix",
-    "mixins/media",
-    "mixins/flex",
-    "mixins/shape",
-
+    "common/classes",
     "common/reset",
-    "common/clearfix",
-    "common/link&button",
-    "common/image&icon",
-    "common/animate",
+    "common/components/button",
 
-    "components/wrapper",
+    "animate/fade-in",
+    "animate/fade-in-down",
+
+
+    "components/main",
 
     "components/follow-me",
 

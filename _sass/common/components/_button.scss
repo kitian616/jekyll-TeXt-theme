@@ -1,0 +1,48 @@
+%button {
+  font-weight: map-get($base, font-weight-bold);
+  line-height: 1;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  @include link-colors( $text-color-3, $main-color-3, $text-color-1, $main-color-1);
+  @include link-normal {
+    text-decoration: none;
+  }
+  @include link-emphasize {
+    text-decoration: none;
+  }
+  @include transition(all .8s ease 0s);
+  svg {
+    width: 1rem;
+    height: 1rem;
+    path {
+      @include transition(fill .8s ease 0s);
+    }
+  }
+}
+
+%floating-action {
+  box-shadow: $shadow-base;
+  &:hover {
+    box-shadow: $shadow-high;
+  }
+}
+
+.round-button {
+  @extend %button;
+  @include round;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.floating-action-round-button {
+  @extend .round-button;
+  @extend %floating-action;
+}
+
+.pill-button {
+  @extend %button;
+  @include round-rect(2rem);
+  display: block;
+}

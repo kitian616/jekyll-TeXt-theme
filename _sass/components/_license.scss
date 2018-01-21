@@ -2,7 +2,7 @@
   @include round-rect(1rem, .5rem 1rem);
   background-color: $text-background-color;
   box-shadow: $shadow-base;
-  font-weight: $bold-font-weight;
+  font-weight: map-get($base, font-weight-bold);
   img {
     vertical-align: bottom;
   }

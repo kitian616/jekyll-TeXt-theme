@@ -1,0 +1,52 @@
+$base: (
+  font-family:            (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"),
+  code-font-family:       ("SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace),
+
+  font-size-root:         16px,
+  font-size:              1rem,
+  font-size-sub:          .9rem,
+  font-size-tiny:         .8rem,
+  font-size-header:       2.5rem,
+  font-size-h1:           2.25rem,
+  font-size-h2:           1.5rem,
+  font-size-h3:           1.2rem,
+  font-size-h4:           1.1rem,
+  font-size-h5:           1rem,
+  font-size-h6:           1rem,
+  font-size-header-palm:  1.9rem,
+  font-size-h1-palm:      1.7rem,
+  font-size-h2-palm:      1.4rem,
+  font-size-header-list:  1.6rem,
+  font-size-h1-excerpt:   1.4rem,
+  font-size-h2-excerpt:   1.3rem,
+  font-size-h3-excerpt:   1.2rem,
+  font-size-h4-excerpt:   1.1rem,
+
+  font-weight:            400,
+  font-weight-bold:       700,
+
+  line-height:            1.6,
+  line-height-small:      1.4,
+  line-height-large:      1.8,
+
+  vertical-space:         .5rem,
+  horizontal-space:       .25rem,
+  item-vertical-space:    .2rem
+);
+
+$shape: (
+  round-length:           2rem,
+  round-rect-radius:      .4rem,
+  round-rect-padding:     .4rem .6rem
+);
+
+$layout: (
+  content-max-width:      850px,
+  aside-width:            220px,
+  footer-height:          12rem
+);
+
+$responsive: (
+  s:                      500px,
+  l:                      1024px
+);

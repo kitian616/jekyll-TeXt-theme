@@ -10,7 +10,7 @@ titles:
   <div class="main">
     {%- include snippets/page-title.html -%}
     <h1 class="js-page-heading">{{ __return }}</h1>
-    {%- include blog/tags.html -%}
+    {%- include components/tags.html -%}
     <!--group by year: http://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year-->
     <section class="js-year-wrapper">
       {%- for post in site.posts -%}

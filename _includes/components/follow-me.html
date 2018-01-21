@@ -1,7 +1,7 @@
 <div class="follow-me">
   {%- assign __locale = site.data.locale.FOLLOW_ME -%}
   {%- include snippets/locale-to-string.html -%}
-  <ul class="inline-list" itemscope itemtype="http://schema.org/Person">
+  <ul itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="{{ site.author.name }}">
     <link itemprop="url" href="{{ '/' | prepend: site.url }}">
     {%- if site.author.weibo -%}

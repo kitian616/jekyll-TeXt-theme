@@ -5,11 +5,11 @@
   }
   a {
     display: inline-block;
-    font-size: $small-font-size;
+    font-size: map-get($base, font-size-sub);
     text-decoration: none;
-    line-height: $toc-line-height;
-    font-weight: $base-font-weight;
-    @include round-rect($round-rect-radius, .2rem 1rem);
+    line-height: map-get($base, line-height-small);
+    font-weight: map-get($base, font-weight);
+    @include round-rect(default, .2rem 1rem);
     @include link-emphasize-no-focus {
       background-color: $text-background-color;
     }
@@ -19,7 +19,7 @@
     padding: 0;
     a {
       color: $text-color-d;
-      font-weight: $bold-font-weight;
+      font-weight: map-get($base, font-weight-bold);
     }
   }
   .toc-h3,
@@ -28,7 +28,7 @@
   .toc-h6 {
     a {
       color: $text-color;
-      font-size: $tiny-font-size;
+      font-size: map-get($base, font-size-tiny);
     }
   }
   .toc-h1,
@@ -47,7 +47,7 @@
   }
   .toc-h6 {
     color: $text-color-l;
-    font-size: $tiny-font-size;
+    font-size: map-get($base, font-size-tiny);
     padding-left: 3rem;
   }
   .toc-active {

@@ -1,6 +1,6 @@
 .m-article-content {
   word-wrap: break-word;
-  line-height: $article-line-height;
+  line-height: map-get($base, line-height-large);
   h1,
   h2,
   h3,
@@ -23,7 +23,7 @@
     border: 0 solid $border-color;
     border-left-width: 4px;
     margin: .8rem 0;
-    font-size: $small-font-size;
+    font-size: map-get($base, font-size-sub);
     color: $text-color-l;
     p {
       margin: .4rem 0;
@@ -40,11 +40,11 @@
   .emoji {
     display: inline-block;
     vertical-align: text-bottom;
-    width: $article-line-height * .7rem;
-    height: $article-line-height * .7rem;
+    width: map-get($base, line-height-large) * .7rem;
+    height: map-get($base, line-height-large) * .7rem;
   }
   code {
-    @include round-rect($round-rect-radius, .2rem .5rem);
+    @include round-rect(default, .2rem .5rem);
     span {
       padding: 0;
       margin: 0;
@@ -60,12 +60,12 @@
     display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    border-radius: $round-rect-radius;
+    border-radius: map-get($shape, round-rect-radius);
     &>code {
       display: block;
       margin: 0;
       padding: 1.5rem 1rem 1.3rem 1rem;
-      line-height: $code-line-height;
+      line-height: map-get($base, line-height-small);
       word-wrap: normal;
 
     }
@@ -74,11 +74,11 @@
     &:before {
       content: attr(data-lang);
       display: block;
-      border-top-left-radius: $round-rect-radius;
-      border-top-right-radius: $round-rect-radius;
+      border-top-left-radius: map-get($shape, round-rect-radius);
+      border-top-right-radius: map-get($shape, round-rect-radius);
       padding: .5rem 1rem .5rem 0;
       color: $decorate-color;
-      font-weight: $bold-font-weight;
+      font-weight: map-get($base, font-weight-bold);
       text-align: right;
       text-transform: uppercase;
     }
@@ -139,7 +139,7 @@
       }
     }
     dt {
-      font-weight: $bold-font-weight;
+      font-weight: map-get($base, font-weight-bold);
     }
     dd {
       margin-left: 2rem;

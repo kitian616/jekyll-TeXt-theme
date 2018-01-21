@@ -1,12 +1,12 @@
 html {
   height: 100%;
-  font-size: $root-font-size;
+  font-size: map-get($base, font-size-root);
   background-color: $background-color;
 }
 
 body {
   height: 100%;
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
   color: $text-color;
   ::-moz-selection {
     background: $select-color;
@@ -51,9 +51,8 @@ pre,
 ul,
 ol,
 dl,
-figure,
-%vertical-rhythm {
-  margin: .5rem 0;
+figure {
+  margin: map-get($base, vertical-space) 0;
 }
 
 h1,
@@ -63,51 +62,79 @@ h4,
 h5,
 h6,
 strong {
-  font-weight: $bold-font-weight;
+  font-weight: map-get($base, font-weight-bold);
 }
 
 h1 {
-  font-size: $h1-font-size;
+  font-size: map-get($base, font-size-h1);
   color: $text-color-d;
-  @include media-query($on-palm) {
-    font-size: $h1-font-size-palm;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h1-palm);
   }
 }
 
 h2 {
-  font-size: $h2-font-size;
+  font-size: map-get($base, font-size-h2);
   color: $text-color-d;
-  @include media-query($on-palm) {
-    font-size: $h2-font-size-palm;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h2-palm);
   }
 }
 
 h3 {
-  font-size: $h3-font-size;
+  font-size: map-get($base, font-size-h3);
   color: $text-color-d;
 }
 
 h4 {
-  font-size: $h4-font-size;
+  font-size: map-get($base, font-size-h4);
   color: $text-color;
 }
 
 h5 {
-  font-size: $h5-font-size;
+  font-size: map-get($base, font-size-h5);
   color: $text-color;
 }
 
 h6 {
-  font-size: $h6-font-size;
+  font-size: map-get($base, font-size-h6);
   color: $text-color-l;
 }
 
+a {
+  font-weight: map-get($base, font-weight-bold);
+  text-decoration: none;
+  @include link-normal {
+    color: $main-color-1;
+  }
+  @include link-emphasize {
+    text-decoration: underline;
+    color: $main-color-1;
+  }
+  @include transition(all .8s ease 0s);
+}
+
 pre, code {
-  font-family: $code-font-family;
+  font-family: map-get($base, code-font-family);
 }
 
 code {
-  font-size: $code-font-size;
+  font-size: map-get($base, font-size-tiny);
+}
+
+figure>img {
+  display: block;
+}
+
+figcaption {
+  font-size: map-get($base, font-size-sub);
+}
+
+.icon {
+  display: block;
+  >svg {
+    display: block;
+  }
 }
 
 button {

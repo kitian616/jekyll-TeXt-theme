@@ -3,6 +3,7 @@
   &>ul {
     margin: 0;
     justify-content: center;
+    @include horizontal-space();
   }
   .round-button {
     color: $text-color-1;

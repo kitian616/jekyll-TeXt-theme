@@ -27,7 +27,7 @@ titles:
           {%- assign __locale = site.data.locale.READMORE -%}
           {%- include snippets/locale-to-string.html -%}
           <a href="{{ href }}">{{ __return }}</a>
-          {%- include blog/article-data.html -%}
+          {%- include components/article-data.html -%}
         </article>
       {%- endfor -%}
     </div>
@@ -38,7 +38,7 @@ titles:
           {%- assign post_count = site.posts | size -%}
           {%- assign page_count = paginator.total_pages -%}
           <p>{{ __return | replace: '[POST_COUNT]', post_count | replace: '[PAGE_COUNT]', page_count }}</p>
-          <ul class="inline-list">
+          <ul>
           {%- if paginator.previous_page -%}
             {%- assign __path = paginator.previous_page_path -%}
             {%- include snippets/prepend-baseurl.html -%}

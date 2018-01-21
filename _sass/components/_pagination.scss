@@ -1,4 +1,7 @@
 .m-pagination {
+  &>ul {
+    @include horizontal-space();
+  }
   .round-button.cur {
     background-color: $main-color-1;
     border-color: $main-color-1;

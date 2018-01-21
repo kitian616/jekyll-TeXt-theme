@@ -1,14 +1,14 @@
 .m-page-header {
   position: relative;
   a {
-    font-weight: $base-font-weight;
+    font-weight: map-get($base, font-weight);
     @include link-text-colors( $text-color, $main-color-1);
   }
   .site-logo {
     display: inline-block;
     vertical-align: middle;
-    width: $h3-font-size * 1.2;
-    height: $h3-font-size * 1.2;
+    width: map-get($base, font-size-h3) * 1.2;
+    height: map-get($base, font-size-h3) * 1.2;
     &>svg {
       width: 100%;
       height: 100%;
@@ -16,17 +16,17 @@
   }
   .site-title {
     display: inline-block;
-    font-size: $h3-font-size;
+    font-size: map-get($base, font-size-h3);
   }
   &>nav {
     display: block;
     float: right;
-    font-size: $h5-font-size;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     ul {
       margin: 0;
+      @include horizontal-space();
       &>li {
         margin: 0;
         &:not(:last-child) {
@@ -34,7 +34,7 @@
         }
       }
     }
-    @include media-query($on-palm) {
+    @include media-breakpoint-down(s) {
       float: none;
     }
   }

@@ -1,13 +1,13 @@
 .m-post {
   &>div {
     display: block;
-    @include media-query($on-laptop) {
+    @include media-breakpoint-down(l) {
       display: block;
     }
   }
   .col-1 {
     @include flex(1);
-    max-width: $content-max-width;
+    overflow: auto;
     &>article {
       &>header {
         color: $text-color-d;
@@ -22,9 +22,9 @@
     display: none;
     &>aside {
       box-sizing: border-box;
-      width: $aside-width;
+      width: map-get($layout, aside-width);
       position: absolute;
-      padding: 2rem;
+      padding: 1.5rem;
       padding-right: 0;
       overflow: hidden;
     }
@@ -45,12 +45,12 @@
   .m-post {
     &>div {
       @include flexbox;
-      @include media-query($on-laptop) {
+      @include media-breakpoint-down(l) {
         display: block;
       }
     }
     .col-2 {
-      width: $aside-width;
+      width: map-get($layout, aside-width);
       position: relative;
       display: block;
       &>aside {
@@ -60,7 +60,7 @@
           -webkit-font-smoothing: subpixel-antialiased;
         }
       }
-      @include media-query($on-laptop) {
+      @include media-breakpoint-down(l) {
         display: none;
       }
     }

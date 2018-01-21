@@ -1,15 +1,18 @@
 .m-tags {
-  &>ul>li>button {
-    @include link-colors ( $text-color-1, $main-color-1, $text-color-2, $main-color-2);
-    &.all {
-      @include link-colors ( $text-color-3, $main-color-3, $text-color-2, $main-color-2);
-    }
-    &>.tag-count {
-      font-size: $tiny-font-size;
-      display: inline-block;
-      line-height: 1;
-      margin-left: .2rem;
-      vertical-align: top;
+  &>ul {
+    @include horizontal-space();
+    &>li>button {
+      @include link-colors ( $text-color-1, $main-color-1, $text-color-2, $main-color-2);
+      &.all {
+        @include link-colors ( $text-color-3, $main-color-3, $text-color-2, $main-color-2);
+      }
+      &>.tag-count {
+        font-size: map-get($base, font-size-tiny);
+        display: inline-block;
+        line-height: 1;
+        margin-left: .2rem;
+        vertical-align: top;
+      }
     }
   }
   .tag-1 {

@@ -1,0 +1,67 @@
+@mixin link-normal {
+  &,
+  &:visited {
+    @content;
+  }
+}
+
+@mixin link-emphasize {
+  &.hover,
+  &.active,
+  &.focus,
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin link-emphasize-no-focus {
+  &.hover,
+  &.active,
+  &:hover,
+  &:active {
+    @content;
+  }
+}
+
+@mixin link-colors($nc, $nbc, $ec, $ebc) {
+  @include link-normal {
+    color: $nc;
+    background-color: $nbc;
+    svg path {
+      fill: $nc;
+    }
+  }
+  @include link-emphasize {
+    color: $ec;
+    background-color: $ebc;
+    svg path {
+      fill: $ec;
+    }
+  }
+}
+
+@mixin link-text-colors($nc, $ec) {
+  @include link-normal {
+    color: $nc;
+    svg path {
+      fill: $nc;
+    }
+  }
+  @include link-emphasize {
+    color: $ec;
+    svg path {
+      fill: $ec;
+    }
+  }
+}
+
+@mixin link-background-colors($nbc, $ebc) {
+  @include link-normal {
+    background-color: $nbc;
+  }
+  @include link-emphasize {
+    background-color: $ebc;
+  }
+}

@@ -16,9 +16,9 @@
       }
     }
     .post-date {
-      font-family: $code-font-family;
+      font-family: map-get($base, code-font-family);
       display: inline-block;
-      font-size: $small-font-size;
+      font-size: map-get($base, font-size-sub);
       color: $text-color-l;
       padding: 0 1rem 0 0;
     }

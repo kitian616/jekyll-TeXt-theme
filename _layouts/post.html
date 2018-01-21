@@ -9,7 +9,7 @@ layout: blog-default
 				<header class="article-header">
 					{%- include snippets/page-title.html -%}
 					<h1 itemprop="headline" itemprop="name headline">{{ __return }}</h1>
-					{%- include blog/article-data.html -%}
+					{%- include components/article-data.html -%}
 				</header>
 				<div class="m-article-content js-article-content" itemprop="articleBody">{{ content }}</div>
 				<footer>
@@ -26,7 +26,7 @@ layout: blog-default
 						<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
 					{%- endif -%}
 					<div class="article-license">
-						{%- include blog/license.html -%}
+						{%- include components/license.html -%}
 					</div>
 				</footer>
 				{%- if page.comment != false -%}
@@ -35,12 +35,15 @@ layout: blog-default
 				{%- endif -%}
 			</article>
 		</div>
-		<div class="col-2">
+		<div class="col-2 js-col-2">
 			<aside class="js-article-aside"><div class="m-toc js-toc"></div></aside>
 		</div>
 	</div>
 </div>
-
+{%- assign _toc_selectors = site.toc.selectors -%}
+{%- if _toc_selectors == nil -%}
+	{%- assign _toc_selectors = 'h1,h2,h3' -%}
+{%- endif -%}
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
 <script type="text/javascript">
 	window.throttle = function(func, wait) {
@@ -77,10 +80,10 @@ layout: blog-default
 	  var $articleContent = $('.js-article-content');
 	  var $articleAside = $('.js-article-aside');
 	  var $toc = $('.js-toc');
-	  var hasTitle = $articleContent.find('h1, h2, h3').length > 0;
-
+		var $col2 = $('.js-col-2');
+	  var hasTitle = $articleContent.find('{{ _toc_selectors }}').length > 0;
 	  function asideSticky() {
-	    return $window.outerWidth() > 1150 && $pageStage.hasClass('has-toc');
+	    return $col2.css('display') !== 'none' && $pageStage.hasClass('has-toc');
 	  }
 
 	  function setTocClass() {
@@ -142,7 +145,7 @@ layout: blog-default
 	  setTimeout(setAsideTOC, 1000);
 
 	  $toc.toc({
-	    'selectors': 'h1,h2,h3',
+	    'selectors': '{{ _toc_selectors }}',
 	    'container': '.js-article-content',
 	  });
 	});

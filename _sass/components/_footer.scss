@@ -5,8 +5,8 @@
 .m-page-footer {
   @include flexbox;
   @include align-items(center);
-  height: $footer-height;
-  margin-top: -$footer-height;
+  height: map-get($layout, footer-height);
+  margin-top: - map-get($layout, footer-height);
   background-color: $main-color-3;
   p {
     color: $text-color-3;
@@ -16,7 +16,7 @@
   }
   .site-info {
     text-align: center;
-    font-size: $tiny-font-size;
+    font-size: map-get($base, font-size-tiny);
     margin: 0 auto;
   }
 }
