@@ -17,6 +17,9 @@
   .site-title {
     display: inline-block;
     font-size: map-get($base, font-size-h3);
+    @include media-breakpoint-down(s) {
+      font-size: map-get($base, font-size-h3-s);
+    }
   }
   &>nav {
     display: block;
