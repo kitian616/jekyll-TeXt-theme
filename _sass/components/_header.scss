@@ -7,8 +7,8 @@
   .site-logo {
     display: inline-block;
     vertical-align: middle;
-    width: map-get($base, font-size-h3) * 1.2;
-    height: map-get($base, font-size-h3) * 1.2;
+    width: map-get($base, font-size-h4) * 1.2;
+    height: map-get($base, font-size-h4) * 1.2;
     &>svg {
       width: 100%;
       height: 100%;
@@ -16,9 +16,9 @@
   }
   .site-title {
     display: inline-block;
-    font-size: map-get($base, font-size-h3);
+    font-size: map-get($base, font-size-h4);
     @include media-breakpoint-down(s) {
-      font-size: map-get($base, font-size-h3-s);
+      font-size: map-get($base, font-size-h4-s);
     }
   }
   &>nav {
@@ -29,13 +29,7 @@
     -webkit-overflow-scrolling: touch;
     ul {
       margin: 0;
-      @include horizontal-space();
-      &>li {
-        margin: 0;
-        &:not(:last-child) {
-          margin: 0 1rem 0 0;
-        }
-      }
+      @include horizontal-space(1rem, default, nowrap);
     }
     @include media-breakpoint-down(s) {
       float: none;

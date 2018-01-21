@@ -1,12 +1,15 @@
-@mixin horizontal-space($horizontal-space: default, $item-vertical-space: default) {
+@mixin horizontal-space($horizontal-space: default, $item-vertical-space: default, $wrap: default) {
   @if $horizontal-space == default {
     $horizontal-space: map-get($base, horizontal-space);
   }
   @if $item-vertical-space == default {
     $item-vertical-space: map-get($base, item-vertical-space);
   }
+  @if $wrap == default {
+    $wrap: wrap;
+  }
   @include flexbox;
-  @include flex-wrap(wrap);
+  @include flex-wrap($wrap);
   &>* {
     @if $item-vertical-space != none {
       margin-top: $item-vertical-space;
