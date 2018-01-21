@@ -6,6 +6,9 @@
   @include media-breakpoint-down(l) {
     padding: 0 1rem;
   }
+  .main-header {
+    margin-top: 2rem;
+  }
 }
 
 .has-toc .main {

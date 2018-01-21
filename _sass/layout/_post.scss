@@ -8,15 +8,6 @@
   .col-1 {
     @include flex(1);
     overflow: auto;
-    &>article {
-      &>header {
-        color: $text-color-d;
-        margin-bottom: .4rem;
-        &>h1 {
-          margin-bottom: 2rem;
-        }
-      }
-    }
   }
   .col-2 {
     display: none;
