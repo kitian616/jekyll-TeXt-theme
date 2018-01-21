@@ -52,6 +52,10 @@ author:
   # douban:  #your Douban username
   # linkedin:  #your Linkedin username
 
+## TOC
+toc:
+  # selectors: 'h1,h2,h3'
+
 ## Comment system (Disqus) ##
 disqus:
   # shortname:  #the Disqus shortname for the site

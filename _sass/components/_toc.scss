@@ -17,7 +17,7 @@
   .toc-h1,
   .toc-h2 {
     padding: 0;
-    a {
+    &>a {
       color: $text-color-d;
       font-weight: map-get($base, font-weight-bold);
     }
@@ -26,10 +26,13 @@
   .toc-h4,
   .toc-h5,
   .toc-h6 {
-    a {
+    &>a {
       color: $text-color;
       font-size: map-get($base, font-size-tiny);
     }
+  }
+  .toc-h1>a {
+    font-size: map-get($base, font-size);
   }
   .toc-h1,
   .toc-h2 {
