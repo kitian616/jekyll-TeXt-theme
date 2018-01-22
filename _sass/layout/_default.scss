@@ -7,12 +7,10 @@
 }
 
 .m-page-content {
-  padding: 2.5rem 0 1.6rem;
+  padding: 0;
+  padding-bottom: 1.6rem;
   @include media-breakpoint-down(l) {
-    padding: 2rem 0;
-  }
-  @include media-breakpoint-down(s) {
-    padding: 1rem 0;
+    padding-bottom: 0.8rem;
   }
 }
 
