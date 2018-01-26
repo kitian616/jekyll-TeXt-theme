@@ -52,9 +52,6 @@
   div.highlighter-rouge, figure, pre {
     margin: .8rem 0;
   }
-  code.language-mermaid {
-    background-color: $background-color;
-  }
   pre {
     display: block;
     overflow: auto;
@@ -66,6 +63,13 @@
       padding: 1.5rem 1rem 1.3rem 1rem;
       line-height: map-get($base, line-height-small);
       word-wrap: normal;
+      &.language-mermaid {
+        background-color: $background-color;
+        display: none;
+        &[data-processed] {
+          display: block;
+        }
+      }
 
     }
   }
