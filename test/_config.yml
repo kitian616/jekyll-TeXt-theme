@@ -15,6 +15,7 @@ theme: jekyll-text-theme
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
+text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /

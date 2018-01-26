@@ -13,8 +13,10 @@
 
 # config file for development, DELETE IT IF YOU WANT.
 
+text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
+
 baseurl: /
 title: Someone's blog
 description: > #this means to ignore newlines until "nav_lists:"

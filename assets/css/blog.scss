@@ -4,8 +4,9 @@
 @charset "utf-8";
 
 @import
+    "colors/{{ site.text_color_theme | default: 'default' }}",
+
     "common/variables",
-    "common/colors",
     "common/highlighting",
     "common/classes",
     "common/reset",
@@ -14,21 +15,16 @@
     "animate/fade-in",
     "animate/fade-in-down",
 
-
     "components/main",
-
-    "components/follow-me",
-
     "components/header",
-    "components/footer",
-
-    "components/toc",
-    "components/tags",
-    "components/pagination",
-
     "components/article.data",
     "components/article.content",
+    "components/pagination",
+    "components/tags",
+    "components/toc",
+    "components/follow-me",
     "components/license",
+    "components/footer",
 
     "layout/default",
     "layout/post",
