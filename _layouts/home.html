@@ -95,7 +95,7 @@ titles:
     {%- endif -%}
   </div>
 </div>
-{%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and site.isdebug == false -%}
+{%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and jekyll.environment != "development" -%}
   <script src="//cdn1.lncld.net/static/js/3.4.1/av-min.js"></script>
   <script>
     $(function() {

@@ -13,7 +13,7 @@
 
 # config file for development, DELETE IT IF YOU WANT.
 
-text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
+# text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 
@@ -33,17 +33,17 @@ nav_lists:
     url: https://www.baidu.com
 
 paths:
-  base: /
-  home: /
-  all:  /all.html
-  rss:  /feed.xml
+  # base: /
+  # home: /
+  # all:  /all.html
+  # rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
 repository: someone/someone.github.io
 repository_tree: master
 
 ## Language & timezone ##
-lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
+# lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
 timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 ## Author & social ##
@@ -60,7 +60,7 @@ author:
 
 ## TOC
 toc:
-  selectors: 'h1,h2,h3,h4,h5,h6'
+  # selectors: 'h1,h2,h3,h4,h5,h6'
 
 ## Comment system (Disqus) ##
 disqus:
@@ -127,6 +127,3 @@ plugins:
 
 ## Server ##
 server_url: "0.0.0.0"
-
-## Development ##
-isdebug: false

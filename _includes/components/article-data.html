@@ -33,9 +33,11 @@
 	{%- endif -%}
   <div class="other-wrapper">
     {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
+      {%- assign __locale = site.data.locale.VIEWS } -%}
+      {%- include snippets/locale-to-string.html -%}
       <div class="view-wrapper">
         <span class="article-view" id="post-key-{{ cur_page.key }}">0
-        </span> views
+        </span> {{ __return }}
       </div>
     {%- endif -%}
     <div class="date-wrapper">

@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 @import
-    "colors/{{ site.text_color_theme | default: 'default' }}",
+    "colors/{{ site.text_color_theme | default: site.data.variables.default.text_color_theme }}",
 
     "common/variables",
     "common/highlighting",

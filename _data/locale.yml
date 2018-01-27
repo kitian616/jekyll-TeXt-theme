@@ -21,7 +21,11 @@ READMORE:
   zh-Hans: "点我阅读更多..."
   zh-Hant: "「點我閱讀更多」"
 
-COPYRIGHT_DATES: "2018"
+VIEWS:
+  en:      "views"
+  zh:      "阅读"
+  zh-Hans: "阅读"
+  zh-Hant: "閱讀"
 
 LAST_UPDATED:
   en:      "Last updated"
@@ -76,3 +80,5 @@ EMAIL_ME:
   zh:      "给我发邮件。"
   zh-Hans: "给我发邮件。"
   zh-Hant: "給我發郵件。"
+
+COPYRIGHT_DATES: "2018"

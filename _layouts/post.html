@@ -40,10 +40,7 @@ layout: blog-default
 		</div>
 	</div>
 </div>
-{%- assign _toc_selectors = site.toc.selectors -%}
-{%- if _toc_selectors == nil -%}
-	{%- assign _toc_selectors = 'h1,h2,h3' -%}
-{%- endif -%}
+{%- assign _toc_selectors = site.toc.selectors | default: site.data.variables.default.toc.selectors -%}
 <script src="//cdn.bootcss.com/toc/0.3.2/toc.min.js"></script>
 <script type="text/javascript">
 	window.throttle = function(func, wait) {
@@ -150,7 +147,7 @@ layout: blog-default
 	  });
 	});
 </script>
-{%- if page.key and site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and site.isdebug == false -%}
+{%- if page.key and site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and jekyll.environment != "development" -%}
   <script src="//cdn1.lncld.net/static/js/3.4.1/av-min.js"></script>
   <script type="text/javascript">
 		$(function() {

@@ -29,7 +29,7 @@
     </script>
     {%- include utils/mathjax.html -%}
     {%- include utils/mermaid.html -%}
-    {%- if site.isdebug == false -%}
+    {%- if jekyll.environment != "development" -%}
       {%- include utils/google-analytics.html -%}
     {%- endif -%}
   </body>

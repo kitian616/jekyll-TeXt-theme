@@ -1,0 +1,10 @@
+default:
+  text_color_theme: default
+  paths:
+    base: /
+    home: /
+    all:  /all.html
+    rss:  /feed.xml
+  lang: zh
+  toc:
+    selectors: 'h1,h2,h3'
