@@ -1,18 +1,6 @@
 /**
  * Syntax highlighting styles
  */
-.m-article-content {
-  figure:before {
-    background-color: $text-background-color;
-  }
-  code, pre {
-    background-color: $text-background-color;
-  }
-  pre>code {
-    background-color: transparent;
-    color: $text-color;
-  }
-}
 
 .highlight {
   .c     { color: #998; font-style: italic } // Comment
