@@ -44,7 +44,7 @@ timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_t
 ## Author & social ##
 author:
   name: Kuradeon
-   email: 340620915@qq.com #your Email address e.g. someone@site.com
+#   email: 340620915@qq.com #your Email address e.g. someone@site.com
   # facebook:  #your Facebook username
   # twitter:  #your Twitter username
    github: ImagineBrain #your GitHub username
