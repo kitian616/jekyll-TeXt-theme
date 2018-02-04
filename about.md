@@ -8,7 +8,7 @@ titles:
 key: page-about
 ---
 
-Just say something about yourself. :+1:2015年7月参加工作的Java码农一枚
+:+1:2015年参加工作的Java程序员，曾在传统行业任职2年半，现已跳到知名互联网公司任职。
 
 {% highlight javascript %}
   (() => console.log('hello, world!'))();
