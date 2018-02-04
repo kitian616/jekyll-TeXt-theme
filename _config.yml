@@ -34,7 +34,7 @@ nav_lists:
 #   rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
-  repository: ImagineBrain/imaginebrain.github.io
+#  repository: ImagineBrain/imaginebrain.github.io
 # repository:  #e.g. someone/someone.github.io
 # repository_tree:  #e.g. master
 
