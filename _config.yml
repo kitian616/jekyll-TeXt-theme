@@ -62,6 +62,7 @@ toc:
 
 ## Comment system (Disqus) ##
 disqus:
+  shortname: Kuradeon
   # shortname:  #the Disqus shortname for the site
 
 ## Comment system (gitalk) ##
