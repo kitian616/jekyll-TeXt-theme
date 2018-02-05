@@ -85,6 +85,9 @@ gitalk:
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
+   app_id: 0Xlu1WIKSbgRGQhu991s4aBR-gzGzoHsz
+   app_key: avf1f9rpHQkgkCw61bUNdHXI
+   app_class: 开发版
   # app_id:  #LeanCloud App id
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class
