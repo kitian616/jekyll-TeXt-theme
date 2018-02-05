@@ -68,9 +68,9 @@ disqus:
 ## Comment system (gitalk) ##
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-   clientID: ef3d082378cfea8a38dd
-   clientSecret: b26049e7e40f2227af12c20892c32e10190d203b
-   repository: ImagineBrain/imaginebrain.github.io
+   clientID: 0dc76437ef97e6bb04ed
+   clientSecret: d2356ae10ed4c33e2d36c376ab530cd73d8abf1c
+   repository: https://github.com/ImagineBrain/imaginebrain.github.io
    owner: ImagineBrain
    admin: ImagineBrain
   # clientID:  #Github Application Client ID
