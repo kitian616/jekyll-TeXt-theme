@@ -71,8 +71,8 @@ gitalk:
    clientID: 0dc76437ef97e6bb04ed
    clientSecret: d2356ae10ed4c33e2d36c376ab530cd73d8abf1c
    repository: https://github.com/ImagineBrain/imaginebrain.github.io
-   owner: ImagineBrain
-   admin: ImagineBrain
+   owner: ImagineBrain1
+   admin: ImagineBrain1
   # clientID:  #Github Application Client ID
   # clientSecret:  #Github Application Client Secret
   # repository:  #Github repo
