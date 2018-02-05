@@ -19,13 +19,13 @@ $background-color: #2e3744;
 $text-color-d:     #f1f3f6;
 $text-color:       #dadfe6;
 $text-color-l:     #acb0b4;
-$text-background-color:#1e242d;
+$text-background-color:mix(#fff, $background-color, 5%);
 
 // border and shadow colors
-$border-color:     #161b21;
+$border-color:     mix(#fff, $background-color, 20%);
+$border-color-l:   mix(#fff, $background-color, 10%);
 $select-color:     rgba($main-color-1, .5);
 $decorate-color:   rgba(#fff, .1);
-$shadow-color:     rgba(#000, .1);
 
 // logo colors
 $mail-color:       #0072c5;
