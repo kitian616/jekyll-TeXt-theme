@@ -81,7 +81,7 @@ gitalk:
     # - owner
 
 ## Google Analytics ##
-  ga_tracking_id: UA-113576362-1
+ ga_tracking_id: UA-113576362-1
 # ga_tracking_id:  #Google analytics id for the site
 
 ## Reading quantity (LeanCloud) ##
