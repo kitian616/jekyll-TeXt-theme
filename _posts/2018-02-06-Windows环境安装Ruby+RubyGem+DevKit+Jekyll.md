@@ -8,11 +8,13 @@ tags: Ruby+RubyGem+DevKit+Jekyll安装
 
 1. 下载Rubyinstall安装包https://rubyinstaller.org/downloads/，选择对应版本安装
 
-   ![mark](http://p3pla9n1t.bkt.clouddn.com/blog/180206/eDaHbhG9kb.png-Kuradeon)
+<!--more-->
 
-   ​
+![mark](http://p3pla9n1t.bkt.clouddn.com/blog/180206/eDaHbhG9kb.png-Kuradeon)
 
-2. 配置环境变量
+​
+
+1. 配置环境变量
 
    1. 添加环境变量：RUBY_HOME
 
