@@ -32,7 +32,7 @@ layout: blog-default
 						{%- include components/license.html -%}
 					</div>
 				</footer>
-				{%- if page.comment != false -%}
+				{%- if jekyll.environment != "development" and page.comment != false -%}
 					<section>{%- include utils/comment-disqus.html -%}</section>
 					<section>{%- include utils/comment-gitalk.html -%}</section>
 				{%- endif -%}
