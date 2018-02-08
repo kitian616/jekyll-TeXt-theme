@@ -81,6 +81,8 @@ leancloud:
   # app_class:  #LeanCloud App class
 
 # mathjax: true
+# mermaid: true
+# chart: true
 
 ## Paginate ##
 paginate: 5
