@@ -1,0 +1,33 @@
+.m-article-content {
+  .success {
+    @include round-rect(.4rem, .5rem 1rem);
+    background-color: mix($green, $background-color, 10%);
+    border: 1px solid $green;
+  }
+
+  .info {
+    @include round-rect(.4rem, .5rem 1rem);
+    background-color: mix($blue, $background-color, 10%);
+    border: 1px solid $blue;
+  }
+
+  .warning {
+    @include round-rect(.4rem, .5rem 1rem);
+    background-color: mix($yellow, $background-color, 10%);
+    border: 1px solid $yellow;
+  }
+
+  .error {
+    @include round-rect(.4rem, .5rem 1rem);
+    background-color: mix($red, $background-color, 10%);
+    border: 1px solid $red;
+  }
+
+  .shadow {
+    @include box-shadow(3);
+  }
+
+  .border {
+    border: 1px solid $border-color-l;
+  }
+}

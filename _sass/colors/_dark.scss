@@ -10,6 +10,7 @@ $text-color-1:     #dedede;
 
 $main-color-2:     #ff3366;
 $text-color-2:     #dedede;
+
 $main-color-3:     #21252b;
 $text-color-3:     #dedede;
 
@@ -26,6 +27,12 @@ $border-color:     mix(#fff, $background-color, 20%);
 $border-color-l:   mix(#fff, $background-color, 10%);
 $select-color:     rgba($main-color-1, .5);
 $decorate-color:   rgba(#fff, .1);
+
+// function colors
+$green:           #57c22d;
+$blue:            #2593fc;
+$yellow:          #f8ac30;
+$red:             #f22635;
 
 // logo colors
 $mail-color:       #0072c5;
