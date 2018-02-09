@@ -1,11 +1,19 @@
 ---
 layout: post
-title: TeXt - Extra Styles
+title: TeXt - Additional Styles
 key: 20170808
 tags:
   - TeXt
   - English
 ---
+
+![TeXt](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png "TeXt Theme")
+{:.shadow}
+
+Success Text.
+{:.success}
+
+<!--more-->
 
 ## Alert
 
@@ -21,8 +29,6 @@ Warning Text.
 Error Text.
 {:.error}
 
-<!--more-->
-
     Success Text.
     {:.success}
 ^
@@ -35,7 +41,7 @@ Error Text.
     Error Text.
     {:.error}
 
-## Styles
+## Image
 
 ### border
 

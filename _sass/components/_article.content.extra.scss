@@ -23,11 +23,11 @@
     border: 1px solid $red;
   }
 
-  .shadow {
+  .shadow > img {
     @include box-shadow(3);
   }
 
-  .border {
+  .border > img {
     border: 1px solid $border-color-l;
   }
 }
