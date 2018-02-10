@@ -9,60 +9,60 @@ Article with long TOC.
 
 <!--more-->
 
-## #2 TeXt Heading
+## TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-#### #4 TeXt Heading
+#### TeXt Heading
 
-##### #5 TeXt Heading
+##### TeXt Heading
 
-###### #6 TeXt Heading
+###### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-## #2 Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
+## Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-## #2 TeXt Heading
+## TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
+### Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
 
-## #2 TeXt Heading
+## TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-## #2 TeXt Heading
+## TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
+### Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title
 
-### #3 TeXt Heading
+### TeXt Heading
 
-### #3 TeXt Heading
+### TeXt Heading

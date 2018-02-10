@@ -7,7 +7,21 @@
   h4,
   h5,
   h6 {
+    position: relative;
     margin: map-get($base, vertical-space-large) + .5rem 0 map-get($base, vertical-space-large) 0;
+    & > .anchor {
+      @include link-text-colors($border-color, $main-color-1);
+      @include transform(translate(-100% ,0));
+      text-decoration: none;
+      margin: .5rem;
+      display: none;
+    }
+    &:hover {
+      & > .anchor {
+        display: inline;
+        cursor: pointer;
+      }
+    }
   }
   h1,
   h2 {
