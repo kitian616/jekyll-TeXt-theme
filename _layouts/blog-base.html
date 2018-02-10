@@ -26,13 +26,15 @@
         });
         $articleContent.on('click', '.anchor', function(e) {
           var targetId = $(this).parent().attr('id');
-          scrollAnimateTo($('#' + targetId).offset().top, 400);
-          window.history.replaceState(null, '', window.location.href.split('#')[0] + '#' + targetId);
+          scrollAnimateTo($('#' + targetId).offset().top, 400, function() {
+            console.log(666)
+            window.history.replaceState(null, '', window.location.href.split('#')[0] + '#' + targetId);
+          });
         });
-        function scrollAnimateTo(destination, duration) {
+        function scrollAnimateTo(destination, duration, callback) {
           var $body = $('html, body'), bodyScrollTop = $body.scrollTop();
           if(bodyScrollTop === destination) { return; }
-          $body.animate({ scrollTop: destination }, duration);
+          $body.animate({ scrollTop: destination }, duration, callback);
         }
       });
     </script>
