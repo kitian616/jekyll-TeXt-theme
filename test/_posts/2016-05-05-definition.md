@@ -15,6 +15,8 @@ Maruku
 
 <!--more-->
 
+**markdown:**
+
     kramdown
     : A Markdown-superset converter
 

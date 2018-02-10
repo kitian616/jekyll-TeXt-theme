@@ -6,15 +6,6 @@ tags:
   - TeXt
   - English
 ---
-
-![TeXt](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png "TeXt Theme")
-{:.shadow}
-
-Success Text.
-{:.success}
-
-<!--more-->
-
 ## Alert
 
 Success Text.
@@ -28,6 +19,10 @@ Warning Text.
 
 Error Text.
 {:.error}
+
+<!--more-->
+
+**markdown:**
 
     Success Text.
     {:.success}
@@ -48,6 +43,8 @@ Error Text.
 ![TeXt](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png "TeXt Theme")
 {:.border}
 
+**markdown:**
+
     ![TeXt](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png "TeXt Theme")
     {:.border}
 
@@ -55,6 +52,8 @@ Error Text.
 
 ![TeXt](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png "TeXt Theme")
 {:.shadow}
+
+**markdown:**
 
     ![TeXt](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png "TeXt Theme")
     {:.shadow}

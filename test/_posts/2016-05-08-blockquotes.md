@@ -11,11 +11,13 @@ tags: Jekyll English
 
 <!--more-->
 
+**markdown:**
+
     > "There is nothing either good or bad, but thinking makes it so."
     >
     > —Hamlet in *Hamlet*
 
----
+<br/>
 
 > "From women's eyes this doctrine I derive:
 >

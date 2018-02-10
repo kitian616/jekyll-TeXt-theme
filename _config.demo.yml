@@ -83,6 +83,7 @@ leancloud:
   # app_class:  #LeanCloud App class
 
 mathjax: true
+mathjax_autoNumber: true
 mermaid: true
 chart: true
 
