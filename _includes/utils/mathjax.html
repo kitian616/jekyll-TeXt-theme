@@ -6,3 +6,12 @@
 	</script>
 	<script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {%- endif -%}
+
+{%- if site.mathjax_autoNumber == true or page.mathjax_autoNumber == true % -%}
+	<script type="text/x-mathjax-config">
+  		MathJax.Hub.Config({
+    			TeX: { equationNumbers: { autoNumber: "all" } }
+  		});
+  	</script>
+	<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+{%- endif -%}
