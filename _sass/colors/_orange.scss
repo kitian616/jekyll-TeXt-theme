@@ -20,7 +20,7 @@ $background-color: #fff1eb;
 $text-color-d:     rgba(#000, .95);
 $text-color:       rgba(#000, .85);
 $text-color-l:     rgba(#000, .5);
-$text-background-color:mix(#000, $background-color, 5%);
+$text-background-color: rgba(#000, .05);
 
 // border and shadow colors
 $border-color:     mix(#000, $background-color, 20%);
