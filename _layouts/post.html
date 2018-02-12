@@ -30,14 +30,20 @@ layout: blog-default
 					{%- endif -%}
 					<div class="article-previous-next clearfix">
 					{%- if page.next -%}
+						{%- assign __path = page.next.url -%}
+						{%- include snippets/prepend-baseurl.html -%}
+						{%- assign href = __return -%}
 						{%- assign __locale = site.data.locale.PREVIOUS -%}
         		{%- include snippets/locale-to-string.html -%}
-						<div class="article-previous"><span>{{ __return }}</span><a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
+						<div class="article-previous"><span>{{ __return }}</span><a href="{{ href }}">{{ page.next.title }}</a></div>
 					{%- endif -%}
 					{%- if page.previous -%}
+						{%- assign __path = page.previous.url -%}
+						{%- include snippets/prepend-baseurl.html -%}
+						{%- assign href = __return -%}
 						{%- assign __locale = site.data.locale.NEXT -%}
         		{%- include snippets/locale-to-string.html -%}
-						<div class="article-next"><span>{{ __return }}</span><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
+						<div class="article-next"><span>{{ __return }}</span><a href="{{ href }}">{{ page.previous.title }}</a></div>
 					{%- endif -%}
 					</div>
 					<div class="article-license">
