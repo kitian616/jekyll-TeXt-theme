@@ -117,7 +117,7 @@ a {
     text-decoration: underline;
     color: $main-color-1;
   }
-  @include transition(all .8s ease 0s);
+  @include transition(all map-get($animation, duration) map-get($animation, timing-function));
 }
 
 pre, code {

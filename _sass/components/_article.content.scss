@@ -187,25 +187,12 @@
     -webkit-overflow-scrolling: touch;
     margin: map-get($base, vertical-space-large) 0;
     border-collapse: collapse;
-    th,
-    td {
+    & > thead {
+      background-color: $text-background-color;
+    }
+    th, td {
       border: 1px solid $border-color-l;
       padding: .5rem;
     }
-    thead,
-    tbody {
-      border: 1px solid $border-color-l;
-    }
-    thead {
-      border-bottom-width: 2px;
-    }
-    tbody>tr:nth-child(even) {
-      background-color: $text-background-color;
-    }
-  }
-  hr {
-    border: 0 dashed $border-color;
-    border-top-width: 2px;
-    margin: 1rem 0;
   }
 }

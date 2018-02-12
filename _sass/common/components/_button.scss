@@ -11,12 +11,12 @@
   @include link-emphasize {
     text-decoration: none;
   }
-  @include transition(all .8s ease 0s);
+  @include transition(all map-get($animation, duration) map-get($animation, timing-function));
   svg {
     width: 1rem;
     height: 1rem;
     path {
-      @include transition(fill .8s ease 0s);
+      @include transition(fill map-get($animation, duration) map-get($animation, timing-function));
     }
   }
   &.inactive {
