@@ -12,13 +12,15 @@
     & > .anchor {
       @include link-text-colors($border-color, $main-color-1);
       @include transform(translate(-100% ,0));
-      text-decoration: none;
+      visibility: hidden;
       margin: .5rem;
-      display: none;
+      text-decoration: none;
+      opacity: 0;
     }
     &:hover {
       & > .anchor {
-        display: inline;
+        visibility: visible;
+        opacity: 1;
         cursor: pointer;
       }
     }
