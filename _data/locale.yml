@@ -33,6 +33,18 @@ LAST_UPDATED:
   zh-Hans: "更新于"
   zh-Hant: "更新於"
 
+PREVIOUS:
+  en:      "PREVIOUS"
+  zh:      "上篇"
+  zh-Hans: "上篇"
+  zh-Hant: "上篇"
+
+NEXT:
+  en:      "NEXT"
+  zh:      "下篇"
+  zh-Hans: "下篇"
+  zh-Hant: "下篇"
+
 ARTICLE_DATE_FORMAT:
   en:      "%b %d, %Y"
   zh:      "%Y年 %m月%d日"

@@ -28,6 +28,18 @@ layout: blog-default
 					{%- else -%}
 						<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
 					{%- endif -%}
+					<div class="article-previous-next clearfix">
+					{%- if page.next -%}
+						{%- assign __locale = site.data.locale.PREVIOUS -%}
+        		{%- include snippets/locale-to-string.html -%}
+						<div class="article-previous"><span>{{ __return }}</span><a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
+					{%- endif -%}
+					{%- if page.previous -%}
+						{%- assign __locale = site.data.locale.NEXT -%}
+        		{%- include snippets/locale-to-string.html -%}
+						<div class="article-next"><span>{{ __return }}</span><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
+					{%- endif -%}
+					</div>
 					<div class="article-license">
 						{%- include components/license.html -%}
 					</div>
@@ -142,8 +154,9 @@ layout: blog-default
 	  setTimeout(setAsideTOC, 1000);
 
 	  $toc.toc({
-	    'selectors': '{{ _toc_selectors }}',
-	    'container': '.js-article-content',
+	    selectors: '{{ _toc_selectors }}',
+	    container: '.js-article-content',
+			highlightOffset: 0
 	  });
 	});
 </script>
