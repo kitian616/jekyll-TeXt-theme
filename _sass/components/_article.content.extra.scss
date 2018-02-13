@@ -1,24 +1,24 @@
 .m-article-content {
   .success {
-    @include round-rect(.4rem, .5rem 1rem);
+    @include round-rect(default, .5rem 1rem);
     background-color: mix($green, $background-color, 10%);
     border: 1px solid $green;
   }
 
   .info {
-    @include round-rect(.4rem, .5rem 1rem);
+    @include round-rect(default, .5rem 1rem);
     background-color: mix($blue, $background-color, 10%);
     border: 1px solid $blue;
   }
 
   .warning {
-    @include round-rect(.4rem, .5rem 1rem);
+    @include round-rect(default, .5rem 1rem);
     background-color: mix($yellow, $background-color, 10%);
     border: 1px solid $yellow;
   }
 
   .error {
-    @include round-rect(.4rem, .5rem 1rem);
+    @include round-rect(default, .5rem 1rem);
     background-color: mix($red, $background-color, 10%);
     border: 1px solid $red;
   }
@@ -28,11 +28,11 @@
   }
 
   .border > img {
-    border: 8px solid $border-color-l;
+    border: 1px solid $border-color-l;
   }
 
   .rounded > img {
-    border-radius: .4rem;
+    border-radius: map-get($shape, round-rect-radius);
   }
 
   .circle > img {

@@ -34,13 +34,12 @@ $base: (
   vertical-space:         .5rem,
   vertical-space-large:   1rem,
   horizontal-space:       .25rem,
-  item-vertical-space:    .2rem
+  horizontal-item-vertical-space: .2rem
 );
 
 $shape: (
   round-length:           2rem,
   round-rect-radius:      .4rem,
-  round-rect-padding:     .4rem .6rem
 );
 
 $layout: (

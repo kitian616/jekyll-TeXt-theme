@@ -50,6 +50,6 @@
 
 .pill-button {
   @extend %button;
-  @include round-rect(2rem);
+  @include round-rect(2rem, .4rem .6rem);
   display: block;
 }

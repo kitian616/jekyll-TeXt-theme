@@ -115,7 +115,7 @@
         &>.rouge-table {
           width: auto;
           margin: -1rem;
-          margin-top: 0rem;
+          margin-top: 0;
           tbody, tr, td {
             border: none;
             padding-top: 0;
@@ -138,7 +138,7 @@
               padding-left: 1rem;
             }
             &>pre {
-              @include round-rect(0, 0);
+              @include round-rect(0);
               display: block;
               overflow: visible;
               margin: 0;

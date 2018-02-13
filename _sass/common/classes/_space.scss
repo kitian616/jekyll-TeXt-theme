@@ -1,9 +1,9 @@
-@mixin horizontal-space($horizontal-space: default, $item-vertical-space: default, $wrap: default) {
+@mixin horizontal-space($horizontal-space: default, $horizontal-item-vertical-space: default, $wrap: default) {
   @if $horizontal-space == default {
     $horizontal-space: map-get($base, horizontal-space);
   }
-  @if $item-vertical-space == default {
-    $item-vertical-space: map-get($base, item-vertical-space);
+  @if $horizontal-item-vertical-space == default {
+    $horizontal-item-vertical-space: map-get($base, horizontal-item-vertical-space);
   }
   @if $wrap == default {
     $wrap: wrap;
@@ -11,9 +11,9 @@
   @include flexbox;
   @include flex-wrap($wrap);
   &>* {
-    @if $item-vertical-space != none {
-      margin-top: $item-vertical-space;
-      margin-bottom: $item-vertical-space;
+    @if $horizontal-item-vertical-space != none {
+      margin-top: $horizontal-item-vertical-space;
+      margin-bottom: $horizontal-item-vertical-space;
     }
     list-style-type: none;
     margin-right: $horizontal-space;
