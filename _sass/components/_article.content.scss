@@ -8,7 +8,7 @@
   }
   h1, h2, h3, h4, h5, h6 {
     position: relative;
-    margin-top: map-get($base, vertical-space-large) + .5rem;
+    margin-top: map-get($base, vertical-space-large) + .8rem;
     & > .anchor {
       @include link-text-colors($border-color, $main-color-1);
       @include transform(translate(-100% ,0));
@@ -27,25 +27,26 @@
   }
   h1,
   h2 {
-    border: 0 solid $border-color-l;
-    border-bottom-width: 1px;
+    @include split-line(bottom);
   }
   hr {
-    border: 0 solid $border-color-l;
-    border-bottom-width: 1px;
+    @include split-line();
   }
   blockquote {
-    padding: 0 0 0 1rem;
-    border: 0 solid $border-color;
-    border-left-width: 4px;
+    padding-left: 1rem;
+    @include split-line(left, 4px, $border-color);
     font-size: map-get($base, font-size-sub);
     color: $text-color-l;
     p {
-      margin: .4rem 0;
+      margin: map-get($base, vertical-space) 0;
     }
     &>:last-child {
       margin-bottom: 0;
     }
+  }
+  .footnotes {
+    @include split-line();
+    margin-top: map-get($base, vertical-space-large) * 2;
   }
   img:not(.emoji) {
     max-width: 100%;
