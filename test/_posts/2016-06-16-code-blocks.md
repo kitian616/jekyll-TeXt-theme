@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Jekyll - Code
+title: Jekyll - Code Blocks
 key: 20160616
 tags:
   - Jekyll
   - English
 ---
-
 
 ## Code Spans
 
@@ -117,7 +116,6 @@ var space = ' ';
 {% highlight javascript %}
 (() => console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();
 {% endhighlight %}
-
 
 {% highlight none %}
 (() => console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();
