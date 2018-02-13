@@ -28,6 +28,14 @@
   }
 
   .border > img {
-    border: 1px solid $border-color-l;
+    border: 8px solid $border-color-l;
+  }
+
+  .rounded > img {
+    border-radius: .4rem;
+  }
+
+  .circle > img {
+    border-radius: 50%;
   }
 }
