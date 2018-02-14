@@ -20,13 +20,19 @@ $background-color: #fff1eb;
 $text-color-d:     rgba(#000, .95);
 $text-color:       rgba(#000, .85);
 $text-color-l:     rgba(#000, .5);
-$text-background-color:rgba(#000, .05);
+$text-background-color: rgba(#000, .05);
 
 // border and shadow colors
-$border-color:     rgba(#000, .2);
+$border-color:     mix(#000, $background-color, 20%);
+$border-color-l:   mix(#000, $background-color, 10%);
 $select-color:     rgba($main-color-3, .5);
 $decorate-color:   rgba(#000, .1);
-$shadow-color:     rgba(#000, .15);
+
+// function colors
+$green:           #57c22d;
+$blue:            #2593fc;
+$yellow:          #f8ac30;
+$red:             #f22635;
 
 // logo colors
 $mail-color:       #0072c5;

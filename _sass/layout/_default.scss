@@ -3,7 +3,7 @@
   min-height: 100%;
   overflow: auto;
   padding-bottom: map-get($layout, footer-height);
-  @include animation(fade-in-down .8s);
+  @include animation(fade-in-down map-get($animation, duration) map-get($animation, timing-function));
 }
 
 .m-page-content {

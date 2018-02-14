@@ -14,10 +14,10 @@ $base: (
   font-size-sub:          .9rem,
   font-size-tiny:         .8rem,
 
-  font-size-h1-s:         1.8rem,
-  font-size-h2-s:         1.5rem,
-  font-size-h3-s:         1.35rem,
-  font-size-h4-s:         1.15rem,
+  font-size-h1-small:     1.8rem,
+  font-size-h2-small:     1.5rem,
+  font-size-h3-small:     1.35rem,
+  font-size-h4-small:     1.15rem,
 
   font-size-header-list:  1.6rem,
   font-size-h1-excerpt:   1.4rem,
@@ -29,23 +29,22 @@ $base: (
   font-weight-bold:       700,
 
   line-height:            1.6,
-  line-height-small:      1.4,
   line-height-large:      1.8,
 
   vertical-space:         .5rem,
+  vertical-space-large:   1rem,
   horizontal-space:       .25rem,
-  item-vertical-space:    .2rem
+  horizontal-item-vertical-space: .2rem
 );
 
 $shape: (
   round-length:           2rem,
   round-rect-radius:      .4rem,
-  round-rect-padding:     .4rem .6rem
 );
 
 $layout: (
   header-height:          5rem,
-  header-height-s:        3rem,
+  header-height-small:    3rem,
   content-max-width:      850px,
   aside-width:            220px,
   footer-height:          12rem
@@ -54,4 +53,9 @@ $layout: (
 $responsive: (
   s:                      500px,
   l:                      1024px
+);
+
+$animation: (
+  duration:               .8s,
+  timing-function:        ease
 );

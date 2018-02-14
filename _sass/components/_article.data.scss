@@ -25,10 +25,9 @@
     }
   }
   .view-wrapper {
+    @include split-line(right);
     line-height: 1;
     padding: 0 .25rem 0 0;
-    border: 0 solid rgba($text-color-l, .6);
-    border-right-width: 1px;
     margin: 0 .25rem 0 0;
   }
   .date-wrapper {

@@ -5,6 +5,12 @@
 
 @import
     "colors/{{ site.text_color_theme | default: site.data.variables.default.text_color_theme }}",
+    // "colors/chocolate",
+    // "colors/dark",
+    // "colors/default",
+    // "colors/forest",
+    // "colors/ocean",
+    // "colors/orange",
 
     "common/variables",
     "common/highlighting",
@@ -19,6 +25,7 @@
     "components/header",
     "components/article.data",
     "components/article.content",
+    "components/article.content.extra",
     "components/pagination",
     "components/tags",
     "components/toc",

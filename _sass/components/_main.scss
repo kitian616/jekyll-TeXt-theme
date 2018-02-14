@@ -8,12 +8,6 @@
   }
   .main-header {
     margin-top: 2rem;
-    &>h1 {
-      font-size: map-get($base, font-size-h1);
-      @include media-breakpoint-down(s) {
-        font-size: map-get($base, font-size-h1-s);
-      }
-    }
   }
 }
 

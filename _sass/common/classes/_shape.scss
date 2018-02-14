@@ -1,6 +1,6 @@
 @mixin round($length: default) {
   @if $length == default {
-    $length: map-get($shape, round-length)
+    $length: map-get($shape, round-length);
   }
   width: $length;
   height: $length;
@@ -9,10 +9,10 @@
 
 @mixin round-rect($radius: default, $padding: default) {
   @if $radius == default {
-    $radius: map-get($shape, round-rect-radius)
+    $radius: map-get($shape, round-rect-radius);
   }
   @if $padding == default {
-    $padding: map-get($shape, round-rect-padding)
+    $padding: 0;
   }
   padding: $padding;
   border-radius: $radius;

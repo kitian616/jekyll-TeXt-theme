@@ -4,13 +4,11 @@
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
 [![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
 
-**==> [English (Beta)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md) <==**
-
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-**==> [English (Beta)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md) <==**
+[Demo](https://tianqi.name/jekyll-TeXt-theme/) | [English (Beta)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md)
 
 TeXt is a succinct theme for blogging.
 
@@ -32,6 +30,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - Color Theme
 - 数学公式（[MathJax](https://www.mathjax.org/)）
 - 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
+- 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 - 多语言支持（English | 简体中文 | 繁體中文）
 
@@ -111,7 +110,7 @@ bundle exec jekyll serve -H 0.0.0.0
 
 ### Color Theme
 
-颜色主题位于文件夹 ./\_sass/colors 中，修改 ./\_sass/settings/colors.scss 的 `@import` 路径即可修改主题，默认主题为 default。
+颜色主题位于文件夹 ./\_sass/colors 中，修改 ./\_config.yml 中的 text_color_theme 项为以下值即可更换颜色主题，默认主题为 default。
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
@@ -171,10 +170,11 @@ bundle exec jekyll serve -H 0.0.0.0
 | ---           | ---           | --- |
 | key           |               | 评论系统和阅读量统计使用的文章标识符，如果未设置则评论和统计无效。可用字符集：`字母`、`数字` 及 `- _ : .` |
 | lang          | en/zh/zh-Hans/zh-Hant | 该文章的语言，其优先级高于  ./\_config.yml 中设置的值 |
-| picture_frame | shadow        | 该文章的图片框样式，如果为 `shadow` 则图片带有阴影边框 |
 | modify_date   |               | 该文章的修改时间，不影响首页文章排序（`date` 代表发表时间，会影响文章排序） |
 | comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
 | mathjax       | true/false    | 该文章是否需要使用 MathJax 公式，默认为 false（此时只会在该文章页面中解析 MathJax 公式。当然你也可以配置 _config.yml 中的 `mathjax` 项为 true，让网站全局支持 MathJax 公式） |
+| mermaid       | true/false    | 该文章是否需要使用 Mermaid 绘制流程图 |
+| chart         | true/false    | 该文章是否需要使用 Chart 绘制图标 |
 
 ### 其他资源
 

@@ -7,3 +7,12 @@
   }
 }
 
+@mixin media-breakpoint-up($name, $breakpoints: default) {
+  @if $breakpoints == default {
+    $breakpoints: $responsive;
+  }
+  @media screen and (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
+

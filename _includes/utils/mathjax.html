@@ -1,8 +1,12 @@
 {%- if site.mathjax == true or page.mathjax == true -%}
 	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-		});
+		var _config = { tex2jax: {
+			inlineMath: [['$','$'], ['\\(','\\)']]
+		}};
+		{%- if site.mathjax_autoNumber == true or page.mathjax_autoNumber == true -%}
+			_config.TeX = { equationNumbers: { autoNumber: "all" } };
+		{%- endif -%}
+		MathJax.Hub.Config(_config);
 	</script>
 	<script type="text/javascript" async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {%- endif -%}

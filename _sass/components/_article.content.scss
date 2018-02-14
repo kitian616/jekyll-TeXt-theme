@@ -1,35 +1,52 @@
 .m-article-content {
   word-wrap: break-word;
   line-height: map-get($base, line-height-large);
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 1.5em 0 .8rem 0;
+  h1, h2, h3, h4, h5, h6, p,
+  hr, blockquote, figure, pre, .highlighter-rouge,
+  ul, ol, dl, table, .footnotes {
+    margin: map-get($base, vertical-space-large) 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    margin-top: map-get($base, vertical-space-large) + .8rem;
+    & > .anchor {
+      @include link-text-colors($border-color, $main-color-1);
+      @include transform(translate(-100% ,0));
+      visibility: hidden;
+      margin: .5rem;
+      text-decoration: none;
+      opacity: 0;
+    }
+    &:hover {
+      & > .anchor {
+        visibility: visible;
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
   }
   h1,
   h2 {
-    border: 0 dashed $border-color;
-    border-bottom-width: 2px;
+    @include split-line(bottom);
   }
-  p {
-    margin: .8rem 0;
+  hr {
+    @include split-line();
   }
   blockquote {
-    padding: 0 0 0 1rem;
-    border: 0 solid $border-color;
-    border-left-width: 4px;
-    margin: .8rem 0;
+    padding-left: 1rem;
+    @include split-line(left, 4px, $border-color);
     font-size: map-get($base, font-size-sub);
     color: $text-color-l;
     p {
-      margin: .4rem 0;
+      margin: map-get($base, vertical-space) 0;
     }
-    > :last-child {
+    &>:last-child {
       margin-bottom: 0;
     }
+  }
+  .footnotes {
+    @include split-line();
+    margin-top: map-get($base, vertical-space-large) * 2;
   }
   img:not(.emoji) {
     max-width: 100%;
@@ -44,36 +61,40 @@
   }
   code {
     @include round-rect(default, .2rem .5rem);
+    background-color: $text-background-color;
     span {
       padding: 0;
       margin: 0;
     }
   }
-  div.highlighter-rouge, figure, pre {
-    margin: .8rem 0;
-  }
   pre {
-    display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    border-radius: map-get($shape, round-rect-radius);
     &>code {
-      display: block;
-      margin: 0;
-      padding: 1.5rem 1rem 1.3rem 1rem;
-      line-height: map-get($base, line-height-small);
+      padding: 0;
+      background-color: transparent;
       word-wrap: normal;
-      &.language-mermaid {
-        background-color: $background-color;
+      &.language-mermaid, &.language-chart {
         display: none;
         &[data-processed] {
           display: block;
         }
       }
-
     }
   }
-  figure {
+  .highlighter-rouge>.highlight, figure.highlight {
+    &>pre {
+      @include round-rect(default, 1rem 1rem);
+      margin: 0;
+      background-color: $text-background-color;
+      &>code {
+        display: block;
+        line-height: map-get($base, line-height);
+
+      }
+    }
+  }
+  figure.highlight {
     &:before {
       content: attr(data-lang);
       display: block;
@@ -81,18 +102,20 @@
       border-top-right-radius: map-get($shape, round-rect-radius);
       padding: .5rem 1rem .5rem 0;
       color: $decorate-color;
+      background-color: $text-background-color;
       font-weight: map-get($base, font-weight-bold);
       text-align: right;
       text-transform: uppercase;
     }
     &>pre {
-      margin: 0;
+      padding-top: 0;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       &>code {
-        padding-top: 0;
         &>.rouge-table {
-          margin: 0;
+          width: auto;
+          margin: -1rem;
+          margin-top: 0;
           tbody, tr, td {
             border: none;
             padding-top: 0;
@@ -104,27 +127,33 @@
               width: 100%;
               @include flexbox;
               &>.code {
-                @include flexbox;
+                padding: 0 1rem 1rem 1rem;
                 overflow: auto;
                 -webkit-overflow-scrolling: touch;
               }
             }
           }
-          tbody td>pre {
-            margin: 0;
-            border-radius: 0;
-            &.lineno {
-              color: $text-color-l;
-              @include user-select(none);
+          tbody td {
+            &.gl {
+              padding-left: 1rem;
+            }
+            &>pre {
+              @include round-rect(0);
+              display: block;
+              overflow: visible;
+              margin: 0;
+              &.lineno {
+                color: $text-color-l;
+                @include user-select(none);
+              }
             }
           }
         }
       }
     }
   }
-  ul,
-  ol {
-    margin: .8rem 0 .8rem 1.4rem;
+  ul, ol {
+    margin-left: 1.5rem;
     li {
       margin: 0;
       p {
@@ -133,9 +162,7 @@
     }
   }
   dl {
-    margin: .8rem 0;
-    dt,
-    dd {
+    dt, dd {
       margin: 0;
       p {
         margin: 0;
@@ -153,27 +180,16 @@
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: .8rem 0;
     border-collapse: collapse;
-    th,
-    td {
-      border: 1px solid $border-color;
-      padding: .5rem;
-    }
-    thead,
-    tbody {
-      border: 1px solid $border-color;
-    }
-    thead {
-      border-bottom-width: 2px;
-    }
-    tbody>tr:nth-child(even) {
+    thead, tfoot {
       background-color: $text-background-color;
     }
-  }
-  hr {
-    border: 0 dashed $border-color;
-    border-top-width: 2px;
-    margin: 1rem 0;
+    th, td {
+      border: 1px solid $border-color-l;
+      padding: .5rem;
+    }
+    th {
+      font-weight: map-get($base, font-weight-bold);
+    }
   }
 }

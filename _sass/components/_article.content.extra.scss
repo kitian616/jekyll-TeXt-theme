@@ -1,0 +1,41 @@
+.m-article-content {
+  .success {
+    @include round-rect(default, .5rem 1rem);
+    background-color: mix($green, $background-color, 10%);
+    border: 1px solid $green;
+  }
+
+  .info {
+    @include round-rect(default, .5rem 1rem);
+    background-color: mix($blue, $background-color, 10%);
+    border: 1px solid $blue;
+  }
+
+  .warning {
+    @include round-rect(default, .5rem 1rem);
+    background-color: mix($yellow, $background-color, 10%);
+    border: 1px solid $yellow;
+  }
+
+  .error {
+    @include round-rect(default, .5rem 1rem);
+    background-color: mix($red, $background-color, 10%);
+    border: 1px solid $red;
+  }
+
+  .shadow > img {
+    @include box-shadow(3);
+  }
+
+  .border > img {
+    border: 1px solid $border-color-l;
+  }
+
+  .rounded > img {
+    border-radius: map-get($shape, round-rect-radius);
+  }
+
+  .circle > img {
+    border-radius: 50%;
+  }
+}

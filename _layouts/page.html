@@ -6,7 +6,7 @@ layout: blog-default
     {%- include snippets/page-title.html -%}
     <h1 class="main-header">{{ __return }}</h1>
     <div class="m-article-content" itemprop="articleBody">{{ content }}</div>
-    {%- if page.comment != false -%}
+    {%- if jekyll.environment != "development" and page.comment != false -%}
       <section>{%- include utils/comment-disqus.html -%}</section>
       <section>{%- include utils/comment-gitalk.html -%}</section>
     {%- endif -%}

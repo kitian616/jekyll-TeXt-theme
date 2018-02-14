@@ -24,12 +24,12 @@
       display: inline-block;
       font-size: map-get($base, font-size-h4);
       @include media-breakpoint-down(s) {
-        font-size: map-get($base, font-size-h4-s);
+        font-size: map-get($base, font-size-h4-small);
       }
     }
     @include media-breakpoint-down(s) {
       float: none;
-      height: map-get($layout, header-height-s);
+      height: map-get($layout, header-height-small);
     }
   }
   &>.main>nav {

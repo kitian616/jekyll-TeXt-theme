@@ -7,13 +7,6 @@
     {%- assign __path = '/assets/css/blog.css' -%}
     {%- include snippets/prepend-baseurl.html -%}
     <link rel="stylesheet" href="{{ __return }}">
-    <style>
-    {%- if page.picture_frame == 'shadow' -%}
-      .m-article-content img:not(.emoji) {
-        box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-      }
-    {%- endif -%}
-    </style>
     <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
@@ -22,13 +15,32 @@
     <script>
       $(function() {
         // display coding language
-        $(".highlight").each(function() {
-          $(this).attr("data-lang", $(this).find("code").attr("data-lang"));
+        var $articleContent = $('.m-post, .m-page').find('.m-article-content'), $this;
+        $articleContent.children('.highlight').each(function() {
+          $this = $(this);
+          $this.attr('data-lang', $this.find('code').attr('data-lang'));
         });
+        $articleContent.children('h1, h2, h3, h4, h5, h6').each(function() {
+          $this = $(this);
+          $this.append($('<a class="anchor" aria-hidden="true"></a>').text('#'));
+        });
+        $articleContent.on('click', '.anchor', function(e) {
+          var targetId = $(this).parent().attr('id');
+          scrollAnimateTo($('#' + targetId).offset().top, 400, function() {
+            console.log(666)
+            window.history.replaceState(null, '', window.location.href.split('#')[0] + '#' + targetId);
+          });
+        });
+        function scrollAnimateTo(destination, duration, callback) {
+          var $body = $('html, body'), bodyScrollTop = $body.scrollTop();
+          if(bodyScrollTop === destination) { return; }
+          $body.animate({ scrollTop: destination }, duration, callback);
+        }
       });
     </script>
     {%- include utils/mathjax.html -%}
     {%- include utils/mermaid.html -%}
+    {%- include utils/chart.html -%}
     {%- if jekyll.environment != "development" -%}
       {%- include utils/google-analytics.html -%}
     {%- endif -%}
