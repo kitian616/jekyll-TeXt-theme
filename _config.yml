@@ -15,9 +15,9 @@ text_color_theme: default #eg: default | dark | forest | ocean | chocolate | ora
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /
-title: Someone's blog
+title: Kuradeon's blog
 description: > #this means to ignore newlines until "nav_lists:"
-  Someone's Blog
+  Kuradeon's Blog
 
 nav_lists:
   - titles:
@@ -34,16 +34,19 @@ nav_lists:
 #   rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
+#  repository: ImagineBrain/imaginebrain.github.io
 # repository:  #e.g. someone/someone.github.io
 # repository_tree:  #e.g. master
 
 ## Language & timezone ##
-lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
+lang: zh #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
 timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 ## Author & social ##
 author:
-  name: Someone
+  name: Kuradeon
+  github: ImagineBrain
+  email: 340620915@qq.com
   # email:  #your Email address e.g. someone@site.com
   # facebook:  #your Facebook username
   # twitter:  #your Twitter username
@@ -59,11 +62,17 @@ toc:
 
 ## Comment system (Disqus) ##
 disqus:
+#  shortname: Kuradeon
   # shortname:  #the Disqus shortname for the site
 
 ## Comment system (gitalk) ##
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
+   clientID: 0dc76437ef97e6bb04ed
+   clientSecret: d2356ae10ed4c33e2d36c376ab530cd73d8abf1c
+   repository: imaginebrain.github.io
+   owner: ImagineBrain
+   admin: ImagineBrain
   # clientID:  #Github Application Client ID
   # clientSecret:  #Github Application Client Secret
   # repository:  #Github repo
@@ -72,10 +81,14 @@ gitalk:
     # - owner
 
 ## Google Analytics ##
+ga_tracking_id: UA-113576362-1
 # ga_tracking_id:  #Google analytics id for the site
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
+   app_id: 0Xlu1WIKSbgRGQhu991s4aBR-gzGzoHsz
+   app_key: avf1f9rpHQkgkCw61bUNdHXI
+   app_class: blog
   # app_id:  #LeanCloud App id
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class
@@ -91,7 +104,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: text # text | html
+excerpt_type: html # text | html
 
 ## Build ##
 markdown: kramdown

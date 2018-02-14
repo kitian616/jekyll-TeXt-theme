@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://imaginebrain.github.io/</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/all.html</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/about.html</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/2018/02/06/Windows%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85Ruby+RubyGem+DevKit+Jekyll.html</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/all.html?tag=Ruby%2BRubyGem%2BDevKit%2BJekyll%E5%AE%89%E8%A3%85</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/2018/02/05/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5%E4%B8%ADvolatile%E4%BD%9C%E7%94%A8.html</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/all.html?tag=volatile</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/all.html?tag=%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://imaginebrain.github.io/all.html?tag=%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5</loc>
+  <lastmod>2018-02-06T14:36:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
