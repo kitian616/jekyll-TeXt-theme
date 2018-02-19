@@ -9,7 +9,11 @@
     color: $text-color-1;
   }
   .omit {
-    vertical-align: middle;
-    color: $text-color-l;
+    @include flexbox();
+    & > svg {
+      width: 1rem;
+      height: 1rem;
+      fill: $text-color-l
+    }
   }
 }
