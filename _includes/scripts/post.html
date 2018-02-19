@@ -1,0 +1,128 @@
+{%- assign _toc_selectors = site.toc.selectors | default: site.data.variables.default.toc.selectors -%}
+<script>
+  window.Lazyload.js('{{ site.data.variables.sources.jquery }}', function() {
+    window.Lazyload.js('{{ site.data.variables.sources.toc }}', function() {
+      var $window = $(window);
+      var $pageStage = $('.js-page-stage');
+      var $pageMain = $('.js-main');
+      var $pageFooter = $('.js-page-footer');
+      var $articleContent = $('.js-article-content');
+      var $articleAside = $('.js-article-aside');
+      var $toc = $('.js-toc');
+      var $col2 = $('.js-col-2');
+      var hasTitle = $articleContent.find('{{ _toc_selectors }}').length > 0;
+      function asideSticky() {
+        return $col2.css('display') !== 'none' && $pageStage.hasClass('has-toc');
+      }
+
+      function setTocClass() {
+        if (hasTitle) {
+          !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
+        }
+      }
+
+      setTocClass();
+
+      function setAsideTOC() {
+        var asideTop, asideLeft, scrollBottom, asideBottomTop, lastScrollTop;
+
+        function init() {
+          var asideOffset = $articleAside.offset();
+          var footerOffset = $pageFooter.offset();
+          var mainOffset = $pageMain.offset();
+          asideTop = mainOffset.top;
+          asideHeight = $toc.outerHeight() + parseInt($articleAside.css('padding-top'), 10) + parseInt($articleAside.css('padding-bottom'), 10);
+          asideLeft = mainOffset.left + $pageMain.outerWidth() - $articleAside.outerWidth() - parseInt($pageMain.css('padding-right'), 10);
+          scrollBottom = footerOffset.top - asideHeight;
+          asideBottomTop = scrollBottom - mainOffset.top;
+        }
+
+        function setAside(force) {
+          force !== true && (force = false);
+          var scrollTop = $window.scrollTop();
+          if (scrollTop >= asideTop && scrollTop <= scrollBottom) {
+            (!force && lastScrollTop >= asideTop && lastScrollTop <= scrollBottom) ||
+            $articleAside.addClass('fixed').css({
+              left: asideLeft + 'px',
+              top: 0
+            });
+          } else if (scrollTop < asideTop) {
+            (!force && lastScrollTop < asideTop) ||
+            $articleAside.removeClass('fixed').css({
+              left: 0,
+              top: 0
+            });
+          } else {
+            (!force && lastScrollTop > scrollBottom) ||
+            $articleAside.removeClass('fixed').css({
+              left: 0,
+              top: asideBottomTop + 'px'
+            });
+          }
+          lastScrollTop = scrollTop;
+        }
+        asideSticky() && (init(), setAside());
+        $window.on('scroll', function() {
+          asideSticky() && setAside();
+        });
+        $window.on('resize', window.throttle(function() {
+          setTocClass();
+          asideSticky() && (init(), setAside(true));
+        }, 100));
+        setTimeout(init, 4000);
+      }
+      setTimeout(setAsideTOC, 1000);
+      $toc.toc({
+        selectors: '{{ _toc_selectors }}',
+        container: '.js-article-content',
+        highlightOffset: 0
+      });
+    });
+  });
+
+  {%- if page.key and site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and jekyll.environment != "development" -%}
+  window.Lazyload.js(['{{ site.data.variables.sources.jquery }}', '{{ site.data.variables.sources.leancloud_js_sdk }}'], function() {
+    AV.init({
+      appId: '{{ site.leancloud.app_id }}',
+      appKey: '{{ site.leancloud.app_key }}'
+    });
+    var query = new AV.Query('{{ site.leancloud.app_class }}');
+    query.equalTo('key', '{{ page.key }}');
+    query.first().then(function(result) {
+      if (result) {
+        addOne(result)
+      } else {
+        var Blog = AV.Object.extend('{{ site.leancloud.app_class }}');
+        var blog = new Blog();
+        blog.set('title', '{{ page.title }}');
+        blog.set('key', '{{ page.key }}');
+        blog.set('views', 0);
+        blog.save().then(function(page) {
+          addOne(page)
+        }, function(error) {
+          if (error) {
+            throw error;
+          }
+        });
+      }
+
+      function addOne(page) {
+        page.increment('views', 1);
+        page.save(null, {
+          fetchWhenSave: true
+        }).then(function(page) {
+          $("#post-key-{{ page.key }}").text(page.attributes.views);
+        }, function(error) {
+          if (error) {
+            throw error;
+          }
+        });
+      }
+    }, function(error) {
+      if (error) {
+        throw error;
+      }
+    });
+  });
+  {%- endif -%}
+</script>

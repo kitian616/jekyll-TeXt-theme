@@ -1,5 +1,5 @@
 ---
-layout: blog-default
+layout: base
 titles:
   en: Blog
   zh: 博客
@@ -92,9 +92,9 @@ titles:
               {%- else -%}
                 {%- if _n0 and _n1 -%}
                   {%- if page > 1 and page < _n0 -%}
-                    {%- if page == 2 -%}<li><span class="omit">...</span></li>{%- endif -%}
+                    {%- if page == 2 -%}<li><span class="omit">{%- include icon/omit.svg -%}</span></li>{%- endif -%}
                   {%- elsif page > _n1 and page < _length -%}
-                    {%- if page == _length_mimus_one -%}<li><span class="omit">...</span></li>{%- endif -%}
+                    {%- if page == _length_mimus_one -%}<li><span class="omit">{%- include icon/omit.svg -%}</span></li>{%- endif -%}
                   {%- else -%}
                     {%- assign __path = site.paginate_path -%}
                     {%- include snippets/prepend-baseurl.html -%}
@@ -133,28 +133,3 @@ titles:
     {%- endif -%}
   </div>
 </div>
-{%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and jekyll.environment != "development" -%}
-  <script src="//cdn1.lncld.net/static/js/3.4.1/av-min.js"></script>
-  <script>
-    $(function() {
-      AV.init({
-        appId: '{{ site.leancloud.app_id }}',
-        appKey: '{{ site.leancloud.app_key }}'
-      });
-      $(".article-view").each(function() {
-        var curId = this.id;
-        var query = new AV.Query('{{ site.leancloud.app_class }}');
-        query.equalTo('key', curId.substr(9));
-        query.first().then(function(result) {
-          if (result) {
-            $('#' + curId).text(result.attributes.views);
-          }
-        }, function(error) {
-          if (error) {
-            throw error;
-          }
-        });
-      });
-    });
-  </script>
-{%- endif -%}

@@ -15,10 +15,10 @@
 {%- if gap_size < 1 -%}
   {%- assign gap_size = 1 -%}
 {%- endif -%}
-<div class="m-tags">
+<div class="m-tags js-tags">
   <ul>
     <li>
-      <button type="button" class="js-article-tag js-tag-show-all all pill-button" onclick="tagSelect('')">Show All
+      <button type="button" class="js-article-tag js-tag-show-all all pill-button">Show All
         <div class="tag-count">{{ site.posts | size }}</div>
       </button>
     </li>
@@ -44,7 +44,7 @@
         {%- assign c_index = 4 -%}
       {%- endif -%}
       <li><button type="button" class="js-article-tag tag-{{ c_index }} pill-button"
-        data-tag="{{ tag[0] | strip | url_encode }}" onclick="tagSelect('{{ tag[0] | strip | url_encode }}')">
+        data-tag="{{ tag[0] | strip | url_encode }}">
           <span>{{ tag[0] | strip }}</span><div class="tag-count">{{ tag[1].size }}</div>
         </button>
       </li>
