@@ -1,7 +1,6 @@
 <script>
   window.Lazyload = (function(doc) {
     var queue = {js: [], css: []}, sources = {js: {}, css: {}}, context = this;
-
     var Set = (function() {
       var add = function(item) {
         var i, data = this._data;
@@ -25,9 +24,7 @@
         }
       }
       Set.prototype.add = add;
-      Set.prototype.get = function(index) {
-        return this._data[index];
-      };
+      Set.prototype.get = function(index) { return this._data[index]; };
       Set.prototype.has = function(item) {
         var i, data = this._data;
         for (i = 0; i < data.length; i++) {
@@ -51,10 +48,9 @@
         }
         return true;
       };
-
       Set.prototype.values = function() {
         return this._data;
-      }
+      };
       return Set;
     })();
 
@@ -67,35 +63,33 @@
       }
       return node;
     }
-
     var end = function(type, url, urls) {
-      var s, q, qi, cbs, i, cur,
-        val = urls.values(), flag;
+      var s, q, qi, cbs, i, j, cur,
+        val, flag;
       if (type === 'js' || type ==='css') {
         s = sources[type], q = queue[type];
         s[url] = true;
         for (i = 0; i < q.length; i++) {
           cur = q[i];
-          if (urls.is(cur.urls)) {
-            qi = cur;
-            break;
-          }
-        }
-        qi && (cbs = qi.callbacks);
-        for (flag = true, i = 0; i < val.length; i++) {
-          cur = val[i]
-          if (!s[cur]) {
-            flag = false;
-          }
-        }
-        if (flag && cbs && cbs.length > 0) {
-          for (i = 0; i < cbs.length; i++) {
-            cbs[i].call(context);
+          if (cur.urls.has(url)) {
+            qi = cur, val = qi.urls.values();
+            qi && (cbs = qi.callbacks);
+            for (flag = true, j = 0; j < val.length; j++) {
+              cur = val[j]
+              if (!s[cur]) {
+                flag = false;
+              }
+            }
+            if (flag && cbs && cbs.length > 0) {
+              for (j = 0; j < cbs.length; j++) {
+                cbs[j].call(context);
+              }
+              qi.load = true;
+            }
           }
         }
       }
-    }
-
+    };
     var load = function(type, urls, callback) {
       var s, si, q, qi, node, i, cur, flag,
         _urls = typeof urls === 'string' ? new Set([urls]) : new Set(urls), val, url;
@@ -109,35 +103,34 @@
           }
         }
         val = _urls.values();
-        for (flag = true, i = 0; i < val.length; i++) {
-          url = val[i]
-          if (!s[url]) {
-            flag = false;
-          }
-        }
         if (qi) {
-          callback && (flag || qi.callbacks.push(callback));
-          callback && (flag && callback());
+          callback && (qi.load || qi.callbacks.push(callback));
+          callback && (qi.load && callback());
         } else {
           q.push({
             urls: _urls,
-            callbacks: callback ? [callback] : []
+            callbacks: callback ? [callback] : [],
+            load: false
           });
           for (i = 0; i < val.length; i++) {
             node = null, url = val[i];
-            (type === 'js' && s[url] === undefined) && (s[url] = false, node = createNode('script', { src: url }));
-            (type === 'css'&& s[url] === undefined) && (s[url] = false, node = createNode('link', { rel: 'stylesheet', href: url }));
-            if (node) {
-              node.onload = function(e) {
-                end(type, url, _urls);
-              };
-              (doc.head || doc.body).appendChild(node);
+            if (s[url] === undefined) {
+              (type === 'js' ) && (node = createNode('script', { src: url }));
+              (type === 'css') && (node = createNode('link', { rel: 'stylesheet', href: url }));
+              if (node) {
+                node.onload = (function(type, url) {
+                  return function() {
+                    end(type, url);
+                  }
+                })(type, url);
+                (doc.head || doc.body).appendChild(node);
+                s[url] = false;
+              }
             }
           }
         }
       }
-    }
-
+    };
     return {
       js: function(url, callback) {
         load('js', url, callback);
@@ -145,8 +138,7 @@
       css: function(url, callback) {
         load('css', url, callback);
       }
-    }
-
+    };
   })(this.document);
 
   window.throttle = function(func, wait) {

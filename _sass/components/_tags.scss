@@ -16,15 +16,23 @@
     }
   }
   .tag-1 {
-    background-color: rgba($main-color-1, .4);
+    @include link-normal() {
+      background-color: rgba($main-color-1, .4);
+    }
   }
   .tag-2 {
-    background-color: rgba($main-color-1, .55);
+    @include link-normal() {
+      background-color: rgba($main-color-1, .55);
+    }
   }
   .tag-3 {
-    background-color: rgba($main-color-1, .7);
+    @include link-normal() {
+      background-color: rgba($main-color-1, .7);
+    }
   }
   .tag-4 {
-    background-color: rgba($main-color-1, .9);
+    @include link-normal() {
+      background-color: rgba($main-color-1, .9);
+    }
   }
 }

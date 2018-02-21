@@ -16,8 +16,9 @@
       text-decoration: none;
       opacity: 0;
       & > svg {
-        width: 1rem;
-        height: 1rem;
+        width: map-get($base, font-size);
+        height: map-get($base, font-size);
+        margin-bottom: - .2 * map-get($base, font-size);
       }
     }
     &:hover {
@@ -47,10 +48,6 @@
       margin-bottom: 0;
     }
   }
-  .footnotes {
-    @include split-line();
-    margin-top: map-get($base, vertical-space-large) * 2;
-  }
   img:not(.emoji) {
     max-width: 100%;
     max-height: 37rem;
@@ -61,6 +58,13 @@
     vertical-align: text-bottom;
     width: map-get($base, line-height-large) * .7rem;
     height: map-get($base, line-height-large) * .7rem;
+  }
+  .footnotes {
+    @include split-line();
+    margin-top: map-get($base, vertical-space-large) * 2;
+  }
+  .mjx-chtml {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   code {
     @include round-rect(default, .2rem .5rem);
@@ -78,6 +82,7 @@
       background-color: transparent;
       word-wrap: normal;
       &.language-mermaid, &.language-chart {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         display: none;
         &[data-processed] {
           display: block;
@@ -87,7 +92,7 @@
   }
   .highlighter-rouge>.highlight, figure.highlight {
     &>pre {
-      @include round-rect(default, 1rem 1rem);
+      @include round-rect(default, 1rem 0 1rem 1rem);
       margin: 0;
       background-color: $text-background-color;
       &>code {
@@ -130,7 +135,7 @@
               width: 100%;
               @include flexbox;
               &>.code {
-                padding: 0 1rem 1rem 1rem;
+                padding: 0 0 1rem .5rem;
                 overflow: auto;
                 -webkit-overflow-scrolling: touch;
               }

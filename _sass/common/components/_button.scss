@@ -21,10 +21,20 @@
   }
   &.inactive {
     cursor: not-allowed;
-    @include link-colors(
-        rgba($text-color-3, .5), $main-color-3,
-        rgba($text-color-3, .5), $main-color-3
-    );
+    @include link-normal {
+      color: rgba($text-color-3, .2) !important;
+      background-color: $main-color-3 !important;
+      svg path {
+        fill: rgba($text-color-3, .2) !important;
+      }
+    }
+    @include link-emphasize {
+      color: rgba($text-color-3, .2) !important;
+      background-color: $main-color-3 !important;
+      svg path {
+        fill: rgba($text-color-3, .2) !important;
+      }
+    }
   }
 }
 
