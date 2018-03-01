@@ -1,4 +1,10 @@
 {%- include snippets/page-title.html -%}
+{%- assign _title = __return -%}
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+{%- assign __path = '/search.json' -%}
+{%- include snippets/prepend-baseurl.html -%}
+{%- assign _search_path = __return -%}
 <script>
   (function() {
     function queryString() {
@@ -25,77 +31,105 @@
       return queryObj;
     }
 
-    window.Lazyload.js('{{ site.data.variables.sources.jquery }}', function() {
-      var $pageHeading = $('.js-page-heading');
-      var $tags = $('.js-tags');
-      var $articleTag = $('.js-article-tag');
-      var $tagShowAll = $('.js-tag-show-all');
-      var $postBlock = $('.js-post-block');
-      var $yearSection = $('.js-year-wrapper section');
+    function decodeUrl(str) {
+      return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
+    }
 
-      $tags.on('click', 'button', function() {
-        tagSelect($(this).data('tag'));
-      });
-
-      function tagSelect(tag) {
-        var i = 0,
-          flag = false,
-          cur, tagStr = '',
-          tags = [],
-          _tag = '',
-          lis = [];
-        if (tag === undefined || tag === '') {
-          $pageHeading.text('{{ __return }}');
-          $tagShowAll.focus();
-          $postBlock.show();
-        } else {
-          tag = tag.trim();
-          // $articleTag.filter('.tag-' + tag).focus();
-          for (i = 0; i < $articleTag.length; i++) {
-            cur = $articleTag.eq(i);
-            _tag = cur.data('tag');
-            if (typeof _tag === 'string' && _tag.trim() === tag) {
-              cur.focus();
-              tagStr = cur.children('span').text();
-              (typeof tagStr === 'string') && (tagStr = tagStr.trim());
-              $pageHeading.text('Tag: ' + tagStr);
-              break;
-            }
-          }
-          $postBlock.each(function() {
-            flag = false;
-            cur = $(this);
-            tags = cur.data('tag').split(',');
-            for (i = 0; i < tags.length; i++) {
-              _tag = tags[i].trim();
+    function searchByTag(data, tag) {
+      var i, j, cur, _tags, _tag, _data = {};
+      Object.keys(data).forEach(function(year) {
+        for (i = 0; i < data[year].length; i++) {
+          cur = data[year][i], _tags = cur.tags;
+          if (_tags && _tags.length > 0) {
+            for (j = 0; j < _tags.length; j++) {
+              _tag = _tags[j];
               if (_tag === tag) {
-                flag = true;
-                cur.show();
+                if (!_data[year]) {
+                  _data[year] = []
+                }
+                _data[year].push(cur);
                 break;
               }
             }
-            flag || (cur.hide());
-          });
+          }
         }
-        $yearSection.each(function() {
-          flag = false;
-          cur = $(this);
-          lis = cur.find('li');
-          for (i = 0; i < lis.length; i++) {
-            if (lis.eq(i).css('display') !== 'none') {
-              flag = true;
-              break;
+      });
+      return _data;
+    }
+
+    function initData(json) {
+      var _data = JSON.parse(json), i, j, cur, _tags;
+      Object.keys(_data).forEach(function(year) {
+        for (i = 0; i < _data[year].length; i++) {
+          cur = _data[year][i], _tags = cur.tags;
+          cur.title = decodeUrl(cur.title);
+          if (_tags && _tags.length > 0) {
+            for (j = 0; j < _tags.length; j++) {
+              _tags[j] = decodeUrl(_tags[j]);
             }
           }
-          flag ? cur.show() : cur.hide();
-        });
-        tag === undefined || window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + tag);
+        }
+      });
+      return _data;
+    }
+
+    var data = initData('{%- include scripts/data.html -%}')
+
+    window.Lazyload.js('{{ _sources.jquery }}', function() {
+      var $tags = $('.js-tags');
+      var $articleTags = $('.js-article-tag');
+      var $tagShowAll = $('.js-tag-show-all');
+      var $result = $('.js-result');
+      function renderHeading(year) {
+        return '<h2 class="year">' + year + '</h2>'
+      }
+      function renderItem(title, date, url, tags) {
+        return '<li><span class="date">' + date + '</span><a class="link" href="' + url + '">' + title + '</a><li>';
+      }
+      function render(data) {
+        var html = '', i, cur, date;
+        Object.keys(data).forEach(function(year) {
+          html = html.concat('<section>' + renderHeading(year) + '<ul>');
+          for (i = 0; i < data[year].length; i++) {
+            cur = data[year][i];
+            html = html.concat(renderItem(cur.title, cur.date, cur.url, cur.tags));
+          }
+          html = html.concat('</ul></section>');
+        })
+        return html;
+      }
+      function tagSelect(tag, target) {
+        var _data;
+        if (tag === '' || tag === undefined) {
+          _data = data;
+        } else {
+          _data = searchByTag(data, tag);
+        }
+        $result.html(render(_data));
+        target && target.data && window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + target.data('encode'));
       }
 
-      var query = queryString(),
-        tag = undefined;
-      query.tag === undefined || (tag = query.tag);
-      tagSelect(tag);
+      function searchButtonsByTag(rawTag) {
+        if (!rawTag) {
+          return $tagShowAll;
+        }
+        var _buttons = $articleTags.filter('[data-encode="' + rawTag + '"]');
+        if (_buttons.length === 0) {
+          return $tagShowAll;
+        }
+        return _buttons;
+      }
+
+      $articleTags.removeClass('inactive');
+      var query = queryString(), rawTag;
+      query.tag === undefined || (rawTag = query.tag);
+      tagSelect(decodeUrl(rawTag));
+      searchButtonsByTag(rawTag).focus();
+
+      $tags.on('click', 'button', function() {
+        tagSelect($(this).children('span').text(), $(this));
+      });
+
     });
   })();
 </script>

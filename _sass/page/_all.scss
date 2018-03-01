@@ -1,35 +1,34 @@
 .m-all {
-  &>div>section {
+  margin-top: 2.5rem;
+  & > div > .m-result {
     margin: 2.5rem 0;
-    &>section {
+    & > section {
       &:not(:last-child) {
         padding: 0 0 .4rem 0;
       }
-    }
-    .year-title {
-      font-size: 1.6rem;
-    }
-    .year-list {
-      &>li {
+      .year {
+        font-size: 1.6rem;
+      }
+      ul > li {
         list-style-type: none;
         margin: .4rem 0;
+        .date {
+          font-family: map-get($base, code-font-family);
+          display: inline-block;
+          font-size: map-get($base, font-size-sub);
+          color: $text-color-l;
+          padding: 0 1rem 0 0;
+        }
+        .link {
+          font-size: 1rem;
+          @include link-normal {
+            color: $text-color-d;
+          }
+          @include link-emphasize {
+            color: $main-color-1;
+          }
+        }
       }
-    }
-    .post-date {
-      font-family: map-get($base, code-font-family);
-      display: inline-block;
-      font-size: map-get($base, font-size-sub);
-      color: $text-color-l;
-      padding: 0 1rem 0 0;
-    }
-  }
-  .post-link {
-    font-size: 1rem;
-    @include link-normal {
-      color: $text-color-d;
-    }
-    @include link-emphasize {
-      color: $main-color-1;
     }
   }
 }

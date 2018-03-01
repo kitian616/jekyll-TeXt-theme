@@ -1,12 +1,14 @@
 {%- if site.mathjax == true or page.mathjax == true -%}
-	<script type="text/x-mathjax-config">
-		var _config = { tex2jax: {
-			inlineMath: [['$','$'], ['\\(','\\)']]
-		}};
-		{%- if site.mathjax_autoNumber == true or page.mathjax_autoNumber == true -%}
-			_config.TeX = { equationNumbers: { autoNumber: "all" } };
-		{%- endif -%}
-		MathJax.Hub.Config(_config);
-	</script>
-	<script type="text/javascript" src="{{ site.data.variables.sources.mathjax }}" async></script>
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+<script type="text/x-mathjax-config">
+	var _config = { tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']]
+	}};
+	{%- if site.mathjax_autoNumber == true or page.mathjax_autoNumber == true -%}
+		_config.TeX = { equationNumbers: { autoNumber: "all" } };
+	{%- endif -%}
+	MathJax.Hub.Config(_config);
+</script>
+<script type="text/javascript" src="{{ _sources.mathjax }}" async></script>
 {%- endif -%}

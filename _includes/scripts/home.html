@@ -1,6 +1,8 @@
 {%- if page.key and site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class and jekyll.environment != "development" -%}
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
 <script>
-  window.Lazyload.js('{{ site.data.variables.sources.leancloud_js_sdk }}', function() {
+  window.Lazyload.js('{{ _sources.leancloud_js_sdk }}', function() {
     AV.init({
       appId: '{{ site.leancloud.app_id }}',
       appKey: '{{ site.leancloud.app_key }}'

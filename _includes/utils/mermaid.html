@@ -1,6 +1,8 @@
 {%- if site.mermaid == true or page.mermaid == true -%}
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
 <script>
-  window.Lazyload.js('{{ site.data.variables.sources.mermaid }}', function() {
+  window.Lazyload.js('{{ _sources.mermaid }}', function() {
     mermaid.init(undefined, '.language-mermaid');
     mermaid.initialize({ startOnLoad: true });
   });

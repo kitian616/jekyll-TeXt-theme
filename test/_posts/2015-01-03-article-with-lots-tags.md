@@ -4,10 +4,8 @@ title: Test - Article With Lots Tags
 key: 20150103
 tags:
 - Test
-- test0
-- test a
-- test b
-- test c
+- English
+- S P A C E
 - '~`!@'
 - '#$%^'
 - '&*()'
@@ -16,8 +14,11 @@ tags:
 - '\|;:'
 - ',.<>'
 - '?/''"'
-- 天天天天
-- English
+- αβγδ
+- ÁÀÂÄÃĄÆ
+- あいうえお
+- 😂🤣👻👽
+- ®☃︎⌘✉︎
 ---
 
 Article With Lots Tags.

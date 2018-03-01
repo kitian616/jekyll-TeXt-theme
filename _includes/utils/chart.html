@@ -1,6 +1,8 @@
 {%- if site.chart == true or page.chart == true -%}
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
 <script>
-  window.Lazyload.js(['{{ site.data.variables.sources.jquery }}', '{{ site.data.variables.sources.chart }}'], function() {
+  window.Lazyload.js(['{{ _sources.jquery }}', '{{ _sources.chart }}'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
       $this = $(this);

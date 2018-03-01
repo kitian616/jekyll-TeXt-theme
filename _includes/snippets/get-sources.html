@@ -1,0 +1,5 @@
+{%- assign _sources = site.data.variables.default.sources -%}
+{%- if site.sources -%}
+  {%- assign _sources = site.sources -%}
+{%- endif -%}
+{%- assign __return = site.data.variables.sources[_sources] -%}
