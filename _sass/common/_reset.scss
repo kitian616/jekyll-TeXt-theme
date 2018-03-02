@@ -1,3 +1,9 @@
+*,
+::before,
+::after {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 html {
   height: 100%;
   font-size: map-get($base, font-size-root);
@@ -117,7 +123,7 @@ a {
     text-decoration: underline;
     color: $main-color-1;
   }
-  @include transition(all map-get($animation, duration) map-get($animation, timing-function));
+  @include link-animation();
 }
 
 pre, code {

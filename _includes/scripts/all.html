@@ -80,6 +80,7 @@
       var $articleTags = $('.js-article-tag');
       var $tagShowAll = $('.js-tag-show-all');
       var $result = $('.js-result');
+      var $lastFocusButton = null;
       function renderHeading(year) {
         return '<h2 class="year">' + year + '</h2>'
       }
@@ -88,7 +89,9 @@
       }
       function render(data) {
         var html = '', i, cur, date;
-        Object.keys(data).forEach(function(year) {
+        Object.keys(data).sort(function(a, b) {
+          return b.localeCompare(a);
+        }).forEach(function(year) {
           html = html.concat('<section>' + renderHeading(year) + '<ul>');
           for (i = 0; i < data[year].length; i++) {
             cur = data[year][i];
@@ -106,7 +109,10 @@
           _data = searchByTag(data, tag);
         }
         $result.html(render(_data));
-        target && target.data && window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + target.data('encode'));
+        if (target && target.data) {
+          buttonFoucs(target);
+          window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + target.data('encode'));
+        }
       }
 
       function searchButtonsByTag(rawTag) {
@@ -120,11 +126,19 @@
         return _buttons;
       }
 
+      function buttonFoucs(target) {
+        if (target) {
+          target.addClass('focus');
+          $lastFocusButton && $lastFocusButton.removeClass('focus');
+          $lastFocusButton = target;
+        }
+      }
+
       $articleTags.removeClass('inactive');
       var query = queryString(), rawTag;
       query.tag === undefined || (rawTag = query.tag);
       tagSelect(decodeUrl(rawTag));
-      searchButtonsByTag(rawTag).focus();
+      buttonFoucs(searchButtonsByTag(rawTag));
 
       $tags.on('click', 'button', function() {
         tagSelect($(this).children('span').text(), $(this));

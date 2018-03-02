@@ -1,0 +1,7 @@
+<script>
+  if(window.hasEvent('touchstart')) {
+    var domPageStage = document.getElementsByClassName('js-page-stage')[0];
+    domPageStage && domPageStage.classList && domPageStage.classList.add('is-touch');
+    document.addEventListener("touchstart", function(){}, false);
+  }
+</script>

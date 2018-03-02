@@ -1,3 +1,10 @@
+@mixin link-animation {
+  @include transition(all map-get($animation, duration) map-get($animation, timing-function));
+  .is-touch & {
+    @include transition(none);
+  }
+}
+
 @mixin link-normal {
   &,
   &:visited {
@@ -8,24 +15,20 @@
 @mixin link-emphasize {
   &.hover,
   &.active,
-  &.focus,
-  &:hover,
-  &:active,
-  &:focus {
-    @content;
-  }
-}
-
-@mixin link-emphasize-no-focus {
-  &.hover,
-  &.active,
   &:hover,
   &:active {
     @content;
   }
 }
 
-@mixin link-colors($nc, $nbc, $ec, $ebc) {
+@mixin link-focus {
+  &.focus,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin link-colors($nc, $nbc, $ec, $ebc, $fc: null, $fbc: null) {
   @include link-normal {
     color: $nc;
     background-color: $nbc;
@@ -40,9 +43,18 @@
       fill: $ec;
     }
   }
+  @if $fc and $fbc {
+    @include link-focus {
+      color: $fc;
+      background-color: $fbc;
+      svg path {
+        fill: $fc;
+      }
+    }
+  }
 }
 
-@mixin link-text-colors($nc, $ec) {
+@mixin link-text-colors($nc, $ec, $fc: null) {
   @include link-normal {
     color: $nc;
     svg path {
@@ -55,13 +67,26 @@
       fill: $ec;
     }
   }
+  @if $fc {
+    @include link-focus {
+      color: $fc;
+      svg path {
+        fill: $fc;
+      }
+    }
+  }
 }
 
-@mixin link-background-colors($nbc, $ebc) {
+@mixin link-background-colors($nbc, $ebc, $fbc: null) {
   @include link-normal {
     background-color: $nbc;
   }
   @include link-emphasize {
     background-color: $ebc;
+  }
+  @if $fbc {
+    @include link-focus {
+      background-color: $fbc;
+    }
   }
 }

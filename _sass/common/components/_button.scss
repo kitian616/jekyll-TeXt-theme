@@ -1,22 +1,25 @@
 %button {
   font-weight: map-get($base, font-weight-bold);
   line-height: 1;
-  text-decoration: none;
   box-sizing: border-box;
+  display: block;
   cursor: pointer;
+  @include link-normal() {
+    text-decoration: none;
+  }
+  @include link-emphasize () {
+    text-decoration: none;
+  }
+  @include link-focus() {
+    text-decoration: none;
+  }
   @include link-colors( $text-color-3, $main-color-3, $text-color-1, $main-color-1);
-  @include link-normal {
-    text-decoration: none;
-  }
-  @include link-emphasize {
-    text-decoration: none;
-  }
-  @include transition(all map-get($animation, duration) map-get($animation, timing-function));
+  @include link-animation();
   svg {
     width: 1rem;
     height: 1rem;
     path {
-      @include transition(fill map-get($animation, duration) map-get($animation, timing-function));
+      @include link-animation();
     }
   }
   &.inactive {
@@ -61,5 +64,4 @@
 .pill-button {
   @extend %button;
   @include round-rect(2rem, .4rem .6rem);
-  display: block;
 }

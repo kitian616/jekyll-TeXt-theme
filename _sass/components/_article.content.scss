@@ -63,9 +63,6 @@
     @include split-line();
     margin-top: map-get($base, vertical-space-large) * 2;
   }
-  .mjx-chtml {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
   code {
     @include round-rect(default, .2rem .5rem);
     background-color: $text-background-color;
@@ -82,7 +79,6 @@
       background-color: transparent;
       word-wrap: normal;
       &.language-mermaid, &.language-chart {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         display: none;
         &[data-processed] {
           display: block;
