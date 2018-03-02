@@ -98,6 +98,9 @@ paginate_path: /blog/page:num
 excerpt_separator: <!--more-->
 excerpt_type: html # text | html
 
+## Sources ##
+# sources: bootcss #eg: bootcss | unpkg
+
 ## Build ##
 markdown: kramdown
 highlighter: rouge
