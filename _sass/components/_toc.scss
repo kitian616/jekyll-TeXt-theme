@@ -1,7 +1,13 @@
 .m-toc {
   ul {
     display: block;
+    margin: 0;
     list-style-type: none;
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: .1rem;
+      }
+    }
   }
   a {
     display: inline-block;
@@ -27,16 +33,14 @@
   .toc-h5,
   .toc-h6 {
     &>a {
+      padding-top: .15rem;
+      padding-bottom: .15rem;
       color: $text-color;
       font-size: map-get($base, font-size-tiny);
     }
   }
   .toc-h1>a {
     font-size: map-get($base, font-size);
-  }
-  .toc-h1,
-  .toc-h2 {
-    margin-top: .6rem;
   }
   .toc-h3 {
     padding-left: 1.5rem;
