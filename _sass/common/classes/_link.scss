@@ -37,8 +37,7 @@
 }
 
 @mixin link-focus {
-  &.focus,
-  &:focus {
+  &.focus {
     @content;
   }
 }

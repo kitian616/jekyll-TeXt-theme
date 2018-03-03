@@ -25,8 +25,6 @@
     line-height: map-get($base, line-height-small);
     font-weight: map-get($base, font-weight);
     @include round-rect(default, .2rem 1rem);
-    @include link-emphasize {
-    }
   }
   .toc-h1,
   .toc-h2 {

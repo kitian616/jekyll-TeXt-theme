@@ -7,7 +7,12 @@
   @include link-normal() {
     text-decoration: none;
   }
-  @include link-emphasize() {
+  .not-touch &, .is-touch & {
+    @include link-hover() {
+      text-decoration: none;
+    }
+  }
+  @include link-active() {
     text-decoration: none;
   }
   @include link-focus() {
@@ -24,14 +29,14 @@
   }
   &.inactive {
     cursor: not-allowed;
-    @include link-normal {
+    @include link-normal() {
       color: rgba($text-color-3, .2) !important;
       background-color: $main-color-3 !important;
       svg path {
         fill: rgba($text-color-3, .2) !important;
       }
     }
-    @include link-emphasize {
+    @include link-emphasize() {
       color: rgba($text-color-3, .2) !important;
       background-color: $main-color-3 !important;
       svg path {
