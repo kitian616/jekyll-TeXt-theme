@@ -35,7 +35,33 @@
       return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
     }
 
-    function searchByTag(data, tag) {
+    function memorize(f) {
+      var cache = {};
+      return function () {
+        var key = Array.prototype.join.call(arguments, ',');
+        if (key in cache) return cache[key];
+        else return cache[key] = f.apply(this, arguments);
+      };
+    };
+    function initData(json) {
+      var _data = JSON.parse(json), i, j, cur, _tags;
+      Object.keys(_data).forEach(function(year) {
+        for (i = 0; i < _data[year].length; i++) {
+          cur = _data[year][i], _tags = cur.tags;
+          cur.title = decodeUrl(cur.title);
+          if (_tags && _tags.length > 0) {
+            for (j = 0; j < _tags.length; j++) {
+              _tags[j] = decodeUrl(_tags[j]);
+            }
+          }
+        }
+      });
+      return _data;
+    }
+
+    var data = initData('{%- include scripts/data.html -%}');
+
+    var searchByTag = memorize(function(tag) {
       var i, j, cur, _tags, _tag, _data = {};
       Object.keys(data).forEach(function(year) {
         for (i = 0; i < data[year].length; i++) {
@@ -55,25 +81,7 @@
         }
       });
       return _data;
-    }
-
-    function initData(json) {
-      var _data = JSON.parse(json), i, j, cur, _tags;
-      Object.keys(_data).forEach(function(year) {
-        for (i = 0; i < _data[year].length; i++) {
-          cur = _data[year][i], _tags = cur.tags;
-          cur.title = decodeUrl(cur.title);
-          if (_tags && _tags.length > 0) {
-            for (j = 0; j < _tags.length; j++) {
-              _tags[j] = decodeUrl(_tags[j]);
-            }
-          }
-        }
-      });
-      return _data;
-    }
-
-    var data = initData('{%- include scripts/data.html -%}')
+    });
 
     window.Lazyload.js('{{ _sources.jquery }}', function() {
       var $tags = $('.js-tags');
@@ -81,32 +89,36 @@
       var $tagShowAll = $('.js-tag-show-all');
       var $result = $('.js-result');
       var $lastFocusButton = null;
-      function renderHeading(year) {
-        return '<h2 class="year">' + year + '</h2>'
-      }
-      function renderItem(title, date, url, tags) {
-        return '<li><span class="date">' + date + '</span><a class="link" href="' + url + '">' + title + '</a><li>';
-      }
+
+      var renderHeading = memorize(function (year) {
+        return $('<h2 class="year">' + year + '</h2>');
+      });
+
+      var renderItem = memorize(function (key, title, date, url, tags) {
+        return $('<li><span class="date">' + date + '</span><a class="link" href="' + url + '">' + title + '</a></li>');
+      });
+
       function render(data) {
-        var html = '', i, cur, date;
+        var $dom = $('<div></div>'), $section, $ul, i, cur, date;
         Object.keys(data).sort(function(a, b) {
           return b.localeCompare(a);
         }).forEach(function(year) {
-          html = html.concat('<section>' + renderHeading(year) + '<ul>');
+          $section = $('<section></section>'), $ul = $('<ul></ul>');
+          $section.append(renderHeading(year));
           for (i = 0; i < data[year].length; i++) {
             cur = data[year][i];
-            html = html.concat(renderItem(cur.title, cur.date, cur.url, cur.tags));
+            $ul.append(renderItem(cur.key, cur.title, cur.date, cur.url, cur.tags));
           }
-          html = html.concat('</ul></section>');
+          $dom.append($section.append($ul));
         })
-        return html;
+        return $dom;
       }
       function tagSelect(tag, target) {
         var _data;
         if (tag === '' || tag === undefined) {
           _data = data;
         } else {
-          _data = searchByTag(data, tag);
+          _data = searchByTag(tag);
         }
         $result.html(render(_data));
         if (target && target.data) {
