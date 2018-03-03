@@ -12,7 +12,7 @@
     color: $text-color-3;
   }
   a {
-    @include link-text-colors ( $text-color-3, $main-color-1);
+    @include link-text-colors ( $text-color-3, $main-color-1, $main-color-1);
   }
   .site-info {
     text-align: center;

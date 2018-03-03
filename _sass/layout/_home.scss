@@ -3,7 +3,7 @@
     &>h1 {
       font-size: map-get($base, font-size-header-list);
       &>a {
-        @include link-text-colors( $text-color-d, $main-color-1);
+        @include link-text-colors( $text-color-d, $main-color-1, $main-color-1);
       }
     }
     &>a {

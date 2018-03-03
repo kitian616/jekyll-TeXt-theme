@@ -13,30 +13,30 @@
     &:not(:last-child) {
       margin-right: .4rem;
     }
-    @include link-background-colors ( $main-color-1, lighten($main-color-1, 5%))
+    background-color: $main-color-1;
   }
   .mail {
-    @include link-background-colors ( $mail-color, lighten($mail-color, 5%))
+    background-color: $mail-color;
   }
   .weibo {
-    @include link-background-colors ( $weibo-color, lighten($weibo-color, 5%))
+    background-color: $weibo-color;
   }
   .facebook {
-    @include link-background-colors ( $facebook-color, lighten($facebook-color, 5%))
+    background-color: $facebook-color;
   }
   .twitter {
-    @include link-background-colors ( $twitter-color, lighten($twitter-color, 5%))
+    background-color: $twitter-color;
   }
   .googlepluse {
-    @include link-background-colors ( $google-plus-color, lighten($google-plus-color, 5%))
+    background-color: $google-plus-color;
   }
   .github {
-    @include link-background-colors ( $github-color, lighten($github-color, 20%))
+    background-color: $github-color;
   }
   .linkedin {
-    @include link-background-colors ( $linkedin-color, lighten($linkedin-color, 5%))
+    background-color: $linkedin-color;
   }
   .douban {
-    @include link-background-colors ( $douban-color, lighten($douban-color, 5%))
+    background-color: $douban-color;
   }
 }

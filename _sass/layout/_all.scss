@@ -21,12 +21,7 @@
         }
         .link {
           font-size: 1rem;
-          @include link-normal {
-            color: $text-color-d;
-          }
-          @include link-emphasize {
-            color: $main-color-1;
-          }
+          @include link-text-colors($text-color-d, $main-color-1, $main-color-1);
         }
       }
     }

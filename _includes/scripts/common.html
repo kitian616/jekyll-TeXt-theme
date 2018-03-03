@@ -1,7 +1,14 @@
 <script>
-  if(window.hasEvent('touchstart')) {
+  (function () {
     var domPageStage = document.getElementsByClassName('js-page-stage')[0];
-    domPageStage && domPageStage.classList && domPageStage.classList.add('is-touch');
-    document.addEventListener("touchstart", function(){}, false);
-  }
+    function addClass(dom, classname) {
+      dom.setAttribute('class', dom.getAttribute('class') + ' ' + classname);
+    }
+    if(window.hasEvent('touchstart')) {
+      addClass(domPageStage, 'is-touch');
+      document.addEventListener("touchstart", function(){}, false);
+    } else {
+      addClass(domPageStage, 'not-touch');
+    }
+  })();
 </script>

@@ -10,7 +10,9 @@
     position: relative;
     margin-top: map-get($base, vertical-space-large) + .8rem;
     & > .anchor {
-      @include link-text-colors($border-color, $main-color-1);
+      @include link-normal {
+        color: $border-color;
+      }
       margin-left: .2rem;
       visibility: hidden;
       text-decoration: none;

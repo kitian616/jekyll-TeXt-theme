@@ -115,14 +115,18 @@ h6 {
 
 a {
   font-weight: map-get($base, font-weight-bold);
-  text-decoration: none;
   @include link-normal {
-    color: $main-color-1;
+    text-decoration: none;
   }
-  @include link-emphasize {
+  .not-touch & {
+    @include link-hover {
+      text-decoration: underline;
+    }
+  }
+  @include link-active {
     text-decoration: underline;
-    color: $main-color-1;
   }
+  @include link-text-colors($main-color-1, $main-color-1, $main-color-1);
   @include link-animation();
 }
 

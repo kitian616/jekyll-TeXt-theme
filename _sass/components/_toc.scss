@@ -12,18 +12,26 @@
   a {
     display: inline-block;
     font-size: map-get($base, font-size-sub);
-    text-decoration: none;
+    @include link-normal() {
+      text-decoration: none;
+    }
+    @include link-emphasize() {
+      text-decoration: none;
+    }
+    @include link-focus() {
+      text-decoration: none;
+    }
+    @include link-background-colors(transparent, $text-background-color, $text-background-color);
     line-height: map-get($base, line-height-small);
     font-weight: map-get($base, font-weight);
     @include round-rect(default, .2rem 1rem);
     @include link-emphasize {
-      background-color: $text-background-color;
     }
   }
   .toc-h1,
   .toc-h2 {
     padding: 0;
-    &>a {
+    & > a {
       color: $text-color-d;
       font-weight: map-get($base, font-weight-bold);
     }

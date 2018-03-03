@@ -7,16 +7,31 @@
 
 @mixin link-normal {
   &,
+  &:link,
   &:visited {
     @content;
   }
 }
 
-@mixin link-emphasize {
+@mixin link-hover {
   &.hover,
+  &:hover {
+    @content;
+  }
+}
+
+@mixin link-active {
   &.active,
-  &:hover,
   &:active {
+    @content;
+  }
+}
+
+@mixin link-emphasize {
+  @include link-hover() {
+    @content;
+  }
+  @include link-active() {
     @content;
   }
 }
@@ -28,23 +43,32 @@
   }
 }
 
-@mixin link-colors($nc, $nbc, $ec, $ebc, $fc: null, $fbc: null) {
-  @include link-normal {
+@mixin link-colors($nc, $nbc, $hc, $hbc, $ac, $abc, $fc: null, $fbc: null) {
+  @include link-normal() {
     color: $nc;
     background-color: $nbc;
     svg path {
       fill: $nc;
     }
   }
-  @include link-emphasize {
-    color: $ec;
-    background-color: $ebc;
+  .not-touch & {
+    @include link-hover() {
+      color: $hc;
+      background-color: $hbc;
+      svg path {
+        fill: $hc;
+      }
+    }
+  }
+  @include link-active() {
+    color: $ac;
+    background-color: $abc;
     svg path {
-      fill: $ec;
+      fill: $ac;
     }
   }
   @if $fc and $fbc {
-    @include link-focus {
+    @include link-focus() {
       color: $fc;
       background-color: $fbc;
       svg path {
@@ -54,21 +78,29 @@
   }
 }
 
-@mixin link-text-colors($nc, $ec, $fc: null) {
-  @include link-normal {
+@mixin link-text-colors($nc, $hc, $ac, $fc: null) {
+  @include link-normal() {
     color: $nc;
     svg path {
       fill: $nc;
     }
   }
-  @include link-emphasize {
-    color: $ec;
+  .not-touch & {
+    @include link-hover() {
+      color: $hc;
+      svg path {
+        fill: $hc;
+      }
+    }
+  }
+  @include link-active() {
+    color: $ac;
     svg path {
-      fill: $ec;
+      fill: $ac;
     }
   }
   @if $fc {
-    @include link-focus {
+    @include link-focus() {
       color: $fc;
       svg path {
         fill: $fc;
@@ -77,15 +109,20 @@
   }
 }
 
-@mixin link-background-colors($nbc, $ebc, $fbc: null) {
-  @include link-normal {
+@mixin link-background-colors($nbc, $hbc, $abc, $fbc: null) {
+  @include link-normal() {
     background-color: $nbc;
   }
-  @include link-emphasize {
-    background-color: $ebc;
+  .not-touch & {
+    @include link-hover() {
+      background-color: $hbc;
+    }
+  }
+  @include link-active() {
+    background-color: $abc;
   }
   @if $fbc {
-    @include link-focus {
+    @include link-focus() {
       background-color: $fbc;
     }
   }

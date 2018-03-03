@@ -120,11 +120,11 @@
         } else {
           _data = searchByTag(tag);
         }
-        $result.html(render(_data));
-        if (target && target.data) {
+        if (target) {
           buttonFoucs(target);
           window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + target.data('encode'));
         }
+        $result.html(render(_data));
       }
 
       function searchButtonsByTag(rawTag) {
@@ -141,7 +141,8 @@
       function buttonFoucs(target) {
         if (target) {
           target.addClass('focus');
-          $lastFocusButton && $lastFocusButton.removeClass('focus');
+          target.focus();
+          $lastFocusButton && !$lastFocusButton.is(target) && $lastFocusButton.removeClass('focus');
           $lastFocusButton = target;
         }
       }
@@ -155,7 +156,6 @@
       $tags.on('click', 'button', function() {
         tagSelect($(this).children('span').text(), $(this));
       });
-
     });
   })();
 </script>

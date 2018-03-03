@@ -2,7 +2,7 @@
   background-color: $main-color-3;
   a {
     font-weight: map-get($base, font-weight);
-    @include link-text-colors( $text-color-3, $main-color-1);
+    @include link-text-colors( $text-color-3, $main-color-1, $main-color-1);
   }
   &>.main>.site-logo {
     float: left;

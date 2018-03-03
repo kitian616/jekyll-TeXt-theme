@@ -7,13 +7,13 @@
   @include link-normal() {
     text-decoration: none;
   }
-  @include link-emphasize () {
+  @include link-emphasize() {
     text-decoration: none;
   }
   @include link-focus() {
     text-decoration: none;
   }
-  @include link-colors( $text-color-3, $main-color-3, $text-color-1, $main-color-1);
+  @include link-colors($text-color-3, $main-color-3, $text-color-1, $main-color-1, $text-color-1, $main-color-1);
   @include link-animation();
   svg {
     width: 1rem;
