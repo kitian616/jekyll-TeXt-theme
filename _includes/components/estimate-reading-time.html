@@ -1,0 +1,14 @@
+<div class="view-wrapper reading-time-wrapper"> <!-- use view-wrapper for the sake of CSS -->
+<span class="reading-time">
+  {%- if page.layout == "home" -%}     
+    {% assign count = post.content | strip_html | strip_newlines | size %}
+  {%- elsif page.layout == "post" -%}
+    {% assign count = content | strip_html | strip_newlines | size %}
+  {%- endif -%}
+  {% if count < 400 %}
+    1 min to read
+  {% else %}
+    {{ count | divided_by:200 }} mins to read
+  {% endif %}
+</span>
+</div>
