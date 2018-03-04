@@ -16,7 +16,7 @@ TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and
 
 - Responsive
 - Paginate ([jekyll-paginate](https://github.com/jekyll/jekyll-paginate))
-- Table of contents ([TOC](http://projects.jga.me/toc/))
+- Table of contents
 - Tag
 - Reading quantity ([LeanCloud](https://leancloud.cn/))
 - Emoji ([Jemoji](https://github.com/jekyll/jemoji))
