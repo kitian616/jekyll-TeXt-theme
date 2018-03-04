@@ -7,7 +7,7 @@
   @include link-normal() {
     text-decoration: none;
   }
-  .not-touch &, .is-touch & {
+  .not-touch &, & {
     @include link-hover() {
       text-decoration: none;
     }
