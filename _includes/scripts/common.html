@@ -1,14 +1,30 @@
 <script>
   (function () {
-    var domPageStage = document.getElementsByClassName('js-page-stage')[0];
-    function addClass(dom, classname) {
-      dom.setAttribute('class', dom.getAttribute('class') + ' ' + classname);
+    var root = document.body
+    function classnames(classes) {
+      var i, cur, _classes = '';
+      if (window.isString(classes)) {
+        _classes =  classes;
+      } else if (window.isArray(classes)) {
+        for (i = 0; i < classes.length; i++) {
+          cur = classes[i];
+          if (window.isString(cur)) {
+            _classes = _classes.concat(_classes ? ' ' + cur : cur);
+          }
+        }
+      } else {
+        return '';
+      }
+      return _classes;
     }
-    if(window.hasEvent('touchstart')) {
-      addClass(domPageStage, 'is-touch');
+    function addClass(dom, classname) {
+      dom.setAttribute('class', classnames([dom.getAttribute('class'), classname]));
+    }
+    if (window.hasEvent('touchstart')) {
+      addClass(root, 'is-touch');
       document.addEventListener("touchstart", function(){}, false);
     } else {
-      addClass(domPageStage, 'not-touch');
+      addClass(root, 'not-touch');
     }
   })();
 </script>

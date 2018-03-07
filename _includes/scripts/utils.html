@@ -1,4 +1,10 @@
 <script>
+  window.isArray = function(val) {
+    return Object.prototype.toString.call(val) === '[object Array]';
+  };
+  window.isString = function(val) {
+    return typeof val === 'string';
+  };
   window.Lazyload = (function(doc) {
     var queue = {js: [], css: []}, sources = {js: {}, css: {}}, context = this;
     var Set = (function() {
