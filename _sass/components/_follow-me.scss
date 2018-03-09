@@ -1,42 +1,34 @@
 .follow-me {
   text-align: center;
-  &>ul {
+  & > ul {
     margin: 0;
     justify-content: center;
     @include horizontal-space();
-  }
-  .round-button {
-    color: $text-color-1;
-    .icon>svg path {
-      fill: $text-color-1;
+    & > li > {
+      .mail {
+        @include link-colors($text-color-1, $mail-color);
+      }
+      .weibo {
+        @include link-colors($text-color-1, $weibo-color);
+      }
+      .facebook {
+        @include link-colors($text-color-1, $facebook-color);
+      }
+      .twitter {
+        @include link-colors($text-color-1, $twitter-color);
+      }
+      .googlepluse {
+        @include link-colors($text-color-1, $google-plus-color);
+      }
+      .github {
+        @include link-colors($text-color-1, $github-color);
+      }
+      .linkedin {
+        @include link-colors($text-color-1, $linkedin-color);
+      }
+      .douban {
+        @include link-colors($text-color-1, $douban-color);
+      }
     }
-    &:not(:last-child) {
-      margin-right: .4rem;
-    }
-    background-color: $main-color-1;
-  }
-  .mail {
-    background-color: $mail-color;
-  }
-  .weibo {
-    background-color: $weibo-color;
-  }
-  .facebook {
-    background-color: $facebook-color;
-  }
-  .twitter {
-    background-color: $twitter-color;
-  }
-  .googlepluse {
-    background-color: $google-plus-color;
-  }
-  .github {
-    background-color: $github-color;
-  }
-  .linkedin {
-    background-color: $linkedin-color;
-  }
-  .douban {
-    background-color: $douban-color;
   }
 }

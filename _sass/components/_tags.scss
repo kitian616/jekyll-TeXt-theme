@@ -3,9 +3,12 @@
     @include horizontal-space();
     & > li > button {
       box-sizing: border-box;
-      @include link-colors ($text-color-1, $main-color-1, $text-color-2, $main-color-2, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
+      @include link-colors($text-color-1, $main-color-1, $text-color-2, $main-color-2, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
+      @include link-focus {
+        @include box-shadow(3, $main-color-2);
+      }
       &.all {
-        @include link-colors ($text-color-3, $main-color-3, $text-color-2, $main-color-2, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
+        @include link-colors($text-color-3, $main-color-3, $text-color-2, $main-color-2, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
       }
       & > .tag-count {
         font-size: map-get($base, font-size-tiny);

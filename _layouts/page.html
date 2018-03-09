@@ -4,7 +4,7 @@ layout: base
 <div class="m-page">
   <article class="main">
     {%- include snippets/page-title.html -%}
-    <h1 class="main-header">{{ __return }}</h1>
+    <div class="main-header"><h1>{{ __return }}</h1></div>
     <div class="m-article-content" itemprop="articleBody">{{ content }}</div>
     {%- if jekyll.environment != "development" and page.comment != false -%}
       <section>{%- include utils/comment-disqus.html -%}</section>

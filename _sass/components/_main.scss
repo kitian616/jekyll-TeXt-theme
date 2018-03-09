@@ -7,6 +7,9 @@
     padding: 0 1rem;
   }
   .main-header {
+    & > h1 {
+      font-weight: map-get($base, font-weight-bold);
+    }
     margin-top: 2rem;
   }
 }

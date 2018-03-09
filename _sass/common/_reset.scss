@@ -126,7 +126,7 @@ a {
   @include link-active() {
     text-decoration: underline;
   }
-  @include link-text-colors($main-color-1, $main-color-1, $main-color-1);
+  @include link-text-colors($main-color-1);
   @include link-animation();
 }
 

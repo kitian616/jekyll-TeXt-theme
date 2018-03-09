@@ -1,15 +1,19 @@
 .m-post-list {
-  &>article {
-    &>h1 {
+  & > article {
+    & > h1 {
       font-size: map-get($base, font-size-header-list);
-      &>a {
+      & > a {
         @include link-text-colors( $text-color-d, $main-color-1, $main-color-1);
       }
     }
-    &>a {
+    & > a {
       font-size: map-get($base, font-size-sub);
     }
-    margin: 2.6rem 0;
+    padding-bottom: 1.3rem;
+    margin: 2.6rem 0 1rem 0;
+    &:not(:last-child) {
+      @include split-line(bottom);
+    }
   }
   .m-article-content {
     font-size: map-get($base, font-size-sub);
@@ -20,6 +24,7 @@
     h5,
     h6 {
       margin: .8rem 0;
+      // font-weight: map-get($base, font-weight);
     }
     h1,
     h2,
@@ -42,6 +47,12 @@
     }
     h4 {
       font-size: map-get($base, font-size-h4-excerpt);
+    }
+    h5 {
+      font-size: map-get($base, font-size-h5-excerpt);
+    }
+    h6 {
+      font-size: map-get($base, font-size-h6-excerpt);
     }
     img {
       max-height: 12rem;
