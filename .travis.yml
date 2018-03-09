@@ -6,10 +6,13 @@ branches:
   - master
 script: JEKYLL_ENV=production bundle exec jekyll build --config ./_config.demo.yml
 deploy:
+  edge:
+    branch: v1.8.47
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: _site
+  keep-history: true
   on:
     branch: master
     target_branch: gh-pages
