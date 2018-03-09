@@ -205,11 +205,11 @@ strong {
   font-weight: 700; }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: #111; }
   @media screen and (max-width: 500px) {
     h1 {
-      font-size: 1.8rem; } }
+      font-size: 2rem; } }
 
 h2 {
   font-size: 1.8rem;
@@ -345,9 +345,9 @@ button {
         fill: rgba(51, 51, 51, 0.2) !important; }
 
 .floating-action-round-button {
-  box-shadow: 0 0.18rem 0.36rem rgba(0, 0, 0, 0.16), 0 0.18rem 0.36rem rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06), 0 2px 10px rgba(0, 0, 0, 0.2); }
   .floating-action-round-button:hover {
-    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.19), 0 0.36rem 0.36rem rgba(0, 0, 0, 0.23); }
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.25); }
 
 .round-button, .floating-action-round-button {
   width: 2rem;
@@ -397,6 +397,8 @@ button {
       padding: 0 1rem; } }
   .main .main-header {
     margin-top: 2rem; }
+    .main .main-header > h1 {
+      font-weight: 700; }
 
 .has-toc .main {
   max-width: 1070px; }
@@ -756,7 +758,7 @@ button {
   background-color: #fee9eb;
   border: 1px solid #f22635; }
 .m-article-content img.shadow, .m-article-content .shadow > img {
-  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.19), 0 0.36rem 0.36rem rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.25); }
 .m-article-content img.border, .m-article-content .border > img {
   border: 1px solid #e6e6e6; }
 .m-article-content img.rounded, .m-article-content .rounded > img {
@@ -840,6 +842,8 @@ button {
       background-color: #fca24d; }
       .m-tags > ul > li > button.focus svg path {
         fill: #fff; }
+    .m-tags > ul > li > button.focus {
+      box-shadow: 0 4px 4px rgba(252, 162, 77, 0.16), 0 2px 8px rgba(252, 162, 77, 0.1), 0 4px 12px rgba(252, 162, 77, 0.25); }
     .m-tags > ul > li > button.all, .m-tags > ul > li > button.all:link, .m-tags > ul > li > button.all:visited {
       color: #333;
       background-color: #f2f2f2; }
@@ -954,34 +958,131 @@ button {
       margin-right: 0.25rem; }
       .follow-me > ul > *:last-child {
         margin-right: 0; }
-  .follow-me .round-button, .follow-me .floating-action-round-button {
-    color: #fff;
-    background-color: #fc4d50; }
-    .follow-me .round-button .icon > svg path, .follow-me .floating-action-round-button .icon > svg path {
-      fill: #fff; }
-    .follow-me .round-button:not(:last-child), .follow-me .floating-action-round-button:not(:last-child) {
-      margin-right: .4rem; }
-  .follow-me .mail {
-    background-color: #0072c5; }
-  .follow-me .weibo {
-    background-color: #e6162d; }
-  .follow-me .facebook {
-    background-color: #4267b2; }
-  .follow-me .twitter {
-    background-color: #1da1f2; }
-  .follow-me .googlepluse {
-    background-color: #ea4335; }
-  .follow-me .github {
-    background-color: #000; }
-  .follow-me .linkedin {
-    background-color: #1074af; }
-  .follow-me .douban {
-    background-color: #42bd56; }
+    .follow-me > ul > li > .mail, .follow-me > ul > li > .mail:link, .follow-me > ul > li > .mail:visited {
+      color: #fff;
+      background-color: #0072c5; }
+      .follow-me > ul > li > .mail svg path, .follow-me > ul > li > .mail:link svg path, .follow-me > ul > li > .mail:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .mail.hover, .not-touch .follow-me > ul > li > .mail:hover {
+      color: #fff;
+      background-color: #0072c5; }
+      .not-touch .follow-me > ul > li > .mail.hover svg path, .not-touch .follow-me > ul > li > .mail:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .mail.active, .follow-me > ul > li > .mail:active {
+      color: #fff;
+      background-color: #0072c5; }
+      .follow-me > ul > li > .mail.active svg path, .follow-me > ul > li > .mail:active svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .weibo, .follow-me > ul > li > .weibo:link, .follow-me > ul > li > .weibo:visited {
+      color: #fff;
+      background-color: #e6162d; }
+      .follow-me > ul > li > .weibo svg path, .follow-me > ul > li > .weibo:link svg path, .follow-me > ul > li > .weibo:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .weibo.hover, .not-touch .follow-me > ul > li > .weibo:hover {
+      color: #fff;
+      background-color: #e6162d; }
+      .not-touch .follow-me > ul > li > .weibo.hover svg path, .not-touch .follow-me > ul > li > .weibo:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .weibo.active, .follow-me > ul > li > .weibo:active {
+      color: #fff;
+      background-color: #e6162d; }
+      .follow-me > ul > li > .weibo.active svg path, .follow-me > ul > li > .weibo:active svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .facebook, .follow-me > ul > li > .facebook:link, .follow-me > ul > li > .facebook:visited {
+      color: #fff;
+      background-color: #4267b2; }
+      .follow-me > ul > li > .facebook svg path, .follow-me > ul > li > .facebook:link svg path, .follow-me > ul > li > .facebook:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .facebook.hover, .not-touch .follow-me > ul > li > .facebook:hover {
+      color: #fff;
+      background-color: #4267b2; }
+      .not-touch .follow-me > ul > li > .facebook.hover svg path, .not-touch .follow-me > ul > li > .facebook:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .facebook.active, .follow-me > ul > li > .facebook:active {
+      color: #fff;
+      background-color: #4267b2; }
+      .follow-me > ul > li > .facebook.active svg path, .follow-me > ul > li > .facebook:active svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .twitter, .follow-me > ul > li > .twitter:link, .follow-me > ul > li > .twitter:visited {
+      color: #fff;
+      background-color: #1da1f2; }
+      .follow-me > ul > li > .twitter svg path, .follow-me > ul > li > .twitter:link svg path, .follow-me > ul > li > .twitter:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .twitter.hover, .not-touch .follow-me > ul > li > .twitter:hover {
+      color: #fff;
+      background-color: #1da1f2; }
+      .not-touch .follow-me > ul > li > .twitter.hover svg path, .not-touch .follow-me > ul > li > .twitter:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .twitter.active, .follow-me > ul > li > .twitter:active {
+      color: #fff;
+      background-color: #1da1f2; }
+      .follow-me > ul > li > .twitter.active svg path, .follow-me > ul > li > .twitter:active svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .googlepluse, .follow-me > ul > li > .googlepluse:link, .follow-me > ul > li > .googlepluse:visited {
+      color: #fff;
+      background-color: #ea4335; }
+      .follow-me > ul > li > .googlepluse svg path, .follow-me > ul > li > .googlepluse:link svg path, .follow-me > ul > li > .googlepluse:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .googlepluse.hover, .not-touch .follow-me > ul > li > .googlepluse:hover {
+      color: #fff;
+      background-color: #ea4335; }
+      .not-touch .follow-me > ul > li > .googlepluse.hover svg path, .not-touch .follow-me > ul > li > .googlepluse:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .googlepluse.active, .follow-me > ul > li > .googlepluse:active {
+      color: #fff;
+      background-color: #ea4335; }
+      .follow-me > ul > li > .googlepluse.active svg path, .follow-me > ul > li > .googlepluse:active svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .github, .follow-me > ul > li > .github:link, .follow-me > ul > li > .github:visited {
+      color: #fff;
+      background-color: #000; }
+      .follow-me > ul > li > .github svg path, .follow-me > ul > li > .github:link svg path, .follow-me > ul > li > .github:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .github.hover, .not-touch .follow-me > ul > li > .github:hover {
+      color: #fff;
+      background-color: #000; }
+      .not-touch .follow-me > ul > li > .github.hover svg path, .not-touch .follow-me > ul > li > .github:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .github.active, .follow-me > ul > li > .github:active {
+      color: #fff;
+      background-color: #000; }
+      .follow-me > ul > li > .github.active svg path, .follow-me > ul > li > .github:active svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .linkedin, .follow-me > ul > li > .linkedin:link, .follow-me > ul > li > .linkedin:visited {
+      color: #fff;
+      background-color: #1074af; }
+      .follow-me > ul > li > .linkedin svg path, .follow-me > ul > li > .linkedin:link svg path, .follow-me > ul > li > .linkedin:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .linkedin.hover, .not-touch .follow-me > ul > li > .linkedin:hover {
+      color: #fff;
+      background-color: #1074af; }
+      .not-touch .follow-me > ul > li > .linkedin.hover svg path, .not-touch .follow-me > ul > li > .linkedin:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .linkedin.active, .follow-me > ul > li > .linkedin:active {
+      color: #fff;
+      background-color: #1074af; }
+      .follow-me > ul > li > .linkedin.active svg path, .follow-me > ul > li > .linkedin:active svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .douban, .follow-me > ul > li > .douban:link, .follow-me > ul > li > .douban:visited {
+      color: #fff;
+      background-color: #42bd56; }
+      .follow-me > ul > li > .douban svg path, .follow-me > ul > li > .douban:link svg path, .follow-me > ul > li > .douban:visited svg path {
+        fill: #fff; }
+    .not-touch .follow-me > ul > li > .douban.hover, .not-touch .follow-me > ul > li > .douban:hover {
+      color: #fff;
+      background-color: #42bd56; }
+      .not-touch .follow-me > ul > li > .douban.hover svg path, .not-touch .follow-me > ul > li > .douban:hover svg path {
+        fill: #fff; }
+    .follow-me > ul > li > .douban.active, .follow-me > ul > li > .douban:active {
+      color: #fff;
+      background-color: #42bd56; }
+      .follow-me > ul > li > .douban.active svg path, .follow-me > ul > li > .douban:active svg path {
+        fill: #fff; }
 
 .m-license {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  box-shadow: 0 0.06rem 0.18rem rgba(0, 0, 0, 0.12), 0 0.06rem 0.12rem rgba(0, 0, 0, 0.24);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   background-color: rgba(0, 0, 0, 0.05);
   font-weight: 700; }
   .m-license img {
@@ -1055,9 +1156,10 @@ button {
   margin: 0 auto; }
 
 .m-post-list > article {
-  margin: 2.6rem 0; }
+  padding-bottom: 1.3rem;
+  margin: 2.6rem 0 1rem 0; }
   .m-post-list > article > h1 {
-    font-size: 1.6rem; }
+    font-size: 1.4rem; }
     .m-post-list > article > h1 > a, .m-post-list > article > h1 > a:link, .m-post-list > article > h1 > a:visited {
       color: #111; }
       .m-post-list > article > h1 > a svg path, .m-post-list > article > h1 > a:link svg path, .m-post-list > article > h1 > a:visited svg path {
@@ -1072,6 +1174,9 @@ button {
         fill: #fc4d50; }
   .m-post-list > article > a {
     font-size: 0.9rem; }
+  .m-post-list > article:not(:last-child) {
+    border: 0 solid #e6e6e6;
+    border-bottom-width: 1px; }
 .m-post-list .m-article-content {
   font-size: 0.9rem; }
   .m-post-list .m-article-content h1,
@@ -1090,13 +1195,17 @@ button {
     padding: 0;
     border: none; }
   .m-post-list .m-article-content h1 {
-    font-size: 1.4rem; }
+    font-size: 1rem; }
   .m-post-list .m-article-content h2 {
-    font-size: 1.3rem; }
+    font-size: 0.975rem; }
   .m-post-list .m-article-content h3 {
-    font-size: 1.2rem; }
+    font-size: 0.95rem; }
   .m-post-list .m-article-content h4 {
-    font-size: 1.1rem; }
+    font-size: 0.925rem; }
+  .m-post-list .m-article-content h5 {
+    font-size: 0.9rem; }
+  .m-post-list .m-article-content h6 {
+    font-size: 0.9rem; }
   .m-post-list .m-article-content img {
     max-height: 12rem; }
 
