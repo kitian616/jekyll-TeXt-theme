@@ -83,7 +83,21 @@
       return _data;
     });
 
+    var searchByQuery = function(query) {
+      var i, j, cur, _title, _data = { _: [] };
+      Object.keys(data).forEach(function(year) {
+        for (i = 0; i < data[year].length; i++) {
+          cur = data[year][i], _title = cur.title;
+          if (_title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+            _data._.push(cur);
+          }
+        }
+      });
+      return _data;
+    };
+
     window.Lazyload.js('{{ _sources.jquery }}', function() {
+      var $search = $('.js-search')
       var $tags = $('.js-tags');
       var $articleTags = $('.js-article-tag');
       var $tagShowAll = $('.js-tag-show-all');
@@ -104,7 +118,7 @@
           return b.localeCompare(a);
         }).forEach(function(year) {
           $section = $('<section></section>'), $ul = $('<ul></ul>');
-          $section.append(renderHeading(year));
+          (year === '_') || $section.append(renderHeading(year));
           for (i = 0; i < data[year].length; i++) {
             cur = data[year][i];
             $ul.append(renderItem(cur.key, cur.title, cur.date, cur.url, cur.tags));
@@ -126,18 +140,26 @@
         }
         $result.html(render(_data));
       }
-
-      function searchButtonsByTag(rawTag) {
-        if (!rawTag) {
+      function queryInput(query) {
+        var _data;
+        if (query === '' || query === undefined) {
+          _data = data;
+        } else {
+          _data = searchByQuery(query);
+        }
+        (query === undefined) || window.history.replaceState(null, '', window.location.href.split('?')[0] + '?q=' + query);
+        $result.html(render(_data));
+      }
+      function searchButtonsByTag(_tag) {
+        if (!_tag) {
           return $tagShowAll;
         }
-        var _buttons = $articleTags.filter('[data-encode="' + rawTag + '"]');
+        var _buttons = $articleTags.filter('[data-encode="' + _tag + '"]');
         if (_buttons.length === 0) {
           return $tagShowAll;
         }
         return _buttons;
       }
-
       function buttonFoucs(target) {
         if (target) {
           target.addClass('focus');
@@ -147,11 +169,21 @@
         }
       }
 
-      $articleTags.removeClass('inactive');
-      var query = queryString(), rawTag;
-      query.tag === undefined || (rawTag = query.tag);
-      tagSelect(decodeUrl(rawTag));
-      buttonFoucs(searchButtonsByTag(rawTag));
+      (function() {
+        $articleTags.removeClass('inactive');
+        var query = queryString(), _tag, _q;
+        if ((_q = query.q) === undefined) {
+          query.tag === undefined || (_tag = query.tag);
+          tagSelect(decodeUrl(_tag));
+          buttonFoucs(searchButtonsByTag(_tag));
+        } else {
+          queryInput(_q); $search.val(_q);
+        }
+      })();
+
+      $search.on('input', window.throttle(function() {
+        queryInput($(this).val());
+      }, 400));
 
       $tags.on('click', 'button', function() {
         tagSelect($(this).children('span').text(), $(this));

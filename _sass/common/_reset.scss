@@ -25,6 +25,11 @@ body {
   }
 }
 
+input, textarea, select, button {
+  font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
+  color: $text-color;
+}
+
 body,
 h1,
 h2,
@@ -161,4 +166,13 @@ button {
   padding: 0;
   margin: 0;
   border-width: 0;
+}
+
+input {
+  background-color: $text-background-color;
+  @include round-rect(default, .2rem .6rem);
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
