@@ -97,7 +97,8 @@
     };
 
     window.Lazyload.js('{{ _sources.jquery }}', function() {
-      var $search = $('.js-search')
+      var $root = $('.js-all');
+      var $searchBox = $('.js-search');
       var $tags = $('.js-tags');
       var $articleTags = $('.js-article-tag');
       var $tagShowAll = $('.js-tag-show-all');
@@ -111,7 +112,6 @@
       var renderItem = memorize(function (key, title, date, url, tags) {
         return $('<li><span class="date">' + date + '</span><a class="link" href="' + url + '">' + title + '</a></li>');
       });
-
       function render(data) {
         var $dom = $('<div></div>'), $section, $ul, i, cur, date;
         Object.keys(data).sort(function(a, b) {
@@ -127,28 +127,20 @@
         })
         return $dom;
       }
-      function tagSelect(tag, target) {
-        var _data;
-        if (tag === '' || tag === undefined) {
-          _data = data;
-        } else {
-          _data = searchByTag(tag);
-        }
-        if (target) {
-          buttonFoucs(target);
-          window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + target.data('encode'));
-        }
-        $result.html(render(_data));
+
+      function setIsSearch() {
+        $root.hasClass('search') || $root.addClass('search');
       }
-      function queryInput(query) {
-        var _data;
-        if (query === '' || query === undefined) {
-          _data = data;
-        } else {
-          _data = searchByQuery(query);
+      function setNotSearch() {
+        $root.hasClass('search') && $root.removeClass('search');
+      }
+      function buttonFoucs(target) {
+        if (target) {
+          target.addClass('focus');
+          target.focus();
+          $lastFocusButton && !$lastFocusButton.is(target) && $lastFocusButton.removeClass('focus');
+          $lastFocusButton = target;
         }
-        (query === undefined) || window.history.replaceState(null, '', window.location.href.split('?')[0] + '?q=' + query);
-        $result.html(render(_data));
       }
       function searchButtonsByTag(_tag) {
         if (!_tag) {
@@ -160,13 +152,34 @@
         }
         return _buttons;
       }
-      function buttonFoucs(target) {
-        if (target) {
-          target.addClass('focus');
-          target.focus();
-          $lastFocusButton && !$lastFocusButton.is(target) && $lastFocusButton.removeClass('focus');
-          $lastFocusButton = target;
+      function setSearchBoxVal(val) {
+        ($searchBox.val() === val) || $searchBox.val(val);
+      }
+
+      function tagSelect(tag, target) {
+        var _data;
+        if (tag === '' || tag === undefined) {
+          _data = data;
+        } else {
+          _data = searchByTag(tag);
         }
+        setSearchBoxVal('');
+        setNotSearch();
+        if (target) {
+          buttonFoucs(target);
+          window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + target.data('encode'));
+        }
+        $result.html(render(_data));
+      }
+      function queryInput(query) {
+        var _data;
+        if (query === '' || query === undefined) {
+          _data = data; setNotSearch();
+        } else {
+          _data = searchByQuery(query); setIsSearch();
+        }
+        (typeof query === 'string') && window.history.replaceState(null, '', window.location.href.split('?')[0] + '?q=' + query);
+        $result.html(render(_data));
       }
 
       (function() {
@@ -177,11 +190,11 @@
           tagSelect(decodeUrl(_tag));
           buttonFoucs(searchButtonsByTag(_tag));
         } else {
-          queryInput(_q); $search.val(_q);
+          queryInput(_q); setSearchBoxVal(_q);
         }
       })();
 
-      $search.on('input', window.throttle(function() {
+      $searchBox.on('input', window.throttle(function() {
         queryInput($(this).val());
       }, 400));
 

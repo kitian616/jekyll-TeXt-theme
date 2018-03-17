@@ -1,5 +1,23 @@
 .m-all {
+  &.search > .main {
+    & > .m-tags {
+      display: none;
+    }
+    & > .m-result {
+      section {
+        ul > li {
+          .date {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   & > .main {
+    & > .m-tags {
+      margin-bottom: map-get($base, vertical-space-large) * 2;
+      display: block;
+    }
     & > .m-search {
       & > input {
         margin: 1rem 0;
@@ -12,7 +30,7 @@
       }
     }
     & > .m-result {
-      margin: 2.5rem 0;
+      margin: map-get($base, vertical-space-large) 0;
       section {
         &:not(:last-child) {
           padding: 0 0 .4rem 0;
