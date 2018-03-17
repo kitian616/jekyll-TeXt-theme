@@ -1241,10 +1241,10 @@ input:focus {
   .m-all > .main > .m-search-box > .icon-clear {
     display: none; }
     .m-all > .main > .m-search-box > .icon-clear, .m-all > .main > .m-search-box > .icon-clear:link, .m-all > .main > .m-search-box > .icon-clear:visited {
-      color: #cccccc;
+      color: #9c9c9c;
       background-color: transparent; }
       .m-all > .main > .m-search-box > .icon-clear svg path, .m-all > .main > .m-search-box > .icon-clear:link svg path, .m-all > .main > .m-search-box > .icon-clear:visited svg path {
-        fill: #cccccc; }
+        fill: #9c9c9c; }
     .not-touch .m-all > .main > .m-search-box > .icon-clear.hover, .not-touch .m-all > .main > .m-search-box > .icon-clear:hover {
       color: #111;
       background-color: transparent; }
@@ -1257,7 +1257,7 @@ input:focus {
         fill: #111; }
   .m-all > .main > .m-search-box > .icon-search > svg, .m-all > .main > .m-search-box > .icon-clear > svg {
     display: block;
-    fill: #cccccc; }
+    fill: #9c9c9c; }
   .m-all > .main > .m-search-box > input {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
