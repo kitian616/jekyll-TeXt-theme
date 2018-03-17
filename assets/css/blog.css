@@ -275,6 +275,8 @@ button {
   margin: 0;
   border-width: 0; }
 
+input::-ms-clear {
+  display: none; }
 input:focus {
   outline: none; }
 
