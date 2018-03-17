@@ -16,4 +16,13 @@
       fill: $text-color-l
     }
   }
+  p{ 
+    @extend %grid-center; 
+  } 
+  @extend %grid-center; 
 }
+%grid-center{ 
+display: grid; 
+justify-content: center; 
+align-items: center; 
+} 
