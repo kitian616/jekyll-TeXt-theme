@@ -4,9 +4,36 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/**
+ * 1. Prevent adjustments of font size after orientation changes in iOS.
+ **/
+
 html {
   height: 100%;
   font-size: map-get($base, font-size-root);
+  -webkit-text-size-adjust: 100%; /* 1 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure {
+  margin: map-get($base, vertical-space) 0;
+  padding: 0;
 }
 
 body {
@@ -28,42 +55,6 @@ body {
 input, textarea, select, button {
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
   color: $text-color;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-hr,
-dl,
-dd,
-ol,
-ul,
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-ul,
-ol,
-dl,
-figure {
-  margin: map-get($base, vertical-space) 0;
 }
 
 h1,
