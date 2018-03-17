@@ -37,13 +37,13 @@
       & > .icon-clear {
         display: none;
         @extend %button;
-        @include link-colors($border-color, transparent,
+        @include link-colors($text-color-l, transparent,
           $text-color-d, transparent, $text-color-d, transparent);
       }
       & > .icon-search, & > .icon-clear {
         & > svg {
           display: block;
-          fill: $border-color;
+          fill: $text-color-l;
         }
       }
       & > input {
