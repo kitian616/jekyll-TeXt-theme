@@ -203,13 +203,22 @@
 </svg><a title="TeXt Theme Demo
 " href="/jekyll-TeXt-theme/">TeXt Theme</a></div>
     <nav>
-      <ul><li><a href="https://github.com/kitian616/jekyll-TeXt-theme/">Home</a></li><li><a href="/jekyll-TeXt-theme/all.html">All</a></li><li><a href="/jekyll-TeXt-theme/about.html">About</a></li><li><a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a></li>
+      <ul><li><a href="https://github.com/kitian616/jekyll-TeXt-theme/">Home</a></li><li><a href="/jekyll-TeXt-theme/all.html">Archive</a></li><li><a href="/jekyll-TeXt-theme/about.html">About</a></li><li><a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a></li>
       </ul>
     </nav>
   </div>
 </header>
-<div class="m-page-main"><div class="m-all">
-  <div class="main"><div class="m-tags js-tags">
+<div class="m-page-main"><div class="m-all js-all">
+  <div class="main">
+    <div class="m-search-box js-search-box">
+      <div class="icon-search"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+</svg></div>
+      <input type="text" />
+      <div class="icon-clear"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+</svg></div>
+    </div><div class="m-tags js-tags">
   <ul>
     <li>
       <button type="button" class="js-article-tag js-tag-show-all all pill-button inactive" data-encode="">
@@ -442,6 +451,17 @@
       return _data;
     }
 
+    var setUrlQuery = (function() {
+      var baseUrl =  window.location.href.split('?')[0];
+      return function(query) {
+        if (typeof query === 'string') {
+          window.history.replaceState(null, '', baseUrl + query);
+        } else {
+          window.history.replaceState(null, '', baseUrl);
+        }
+      }
+    })();
+
     var data = initData('{"2017":[{"key":"1","title":"TeXt+-+Additional+Styles","tags":["TeXt","English"],"url":"/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html","date":"Aug 08"},{"key":"2","title":"TeXt+-+MathJax","tags":["TeXt","English"],"url":"/jekyll-TeXt-theme/test/2017/07/07/mathjax.html","date":"Jul 07"},{"key":"3","title":"TeXt+-+Mermaid","tags":["TeXt","English"],"url":"/jekyll-TeXt-theme/test/2017/06/06/mermaid.html","date":"Jun 06"},{"key":"4","title":"TeXt+-+Chart","tags":["TeXt","English"],"url":"/jekyll-TeXt-theme/test/2017/05/05/chart.html","date":"May 05"},{"key":"5","title":"TeXt+-+Simplified+Chinese+%7C+%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87","tags":["TeXt","Simplified+Chinese+%7C+%E7%AE%80"],"url":"/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html","date":"Apr 13"},{"key":"6","title":"TeXt+-+Traditional+Chinese+%7C+%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87","tags":["TeXt","Traditional+Chinese+%7C+%E7%B9%81"],"url":"/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html","date":"Apr 12"},{"key":"7","title":"TeXt+-+English","tags":["TeXt","English"],"url":"/jekyll-TeXt-theme/test/2017/04/03/english.html","date":"Apr 03"}],"2016":[{"key":"8","title":"Jekyll+-+Paragraphs","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html","date":"Oct 10"},{"key":"9","title":"Jekyll+-+Headers","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/09/19/headers.html","date":"Sep 19"},{"key":"10","title":"Jekyll+-+Emphasis","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/09/09/emphasis.html","date":"Sep 09"},{"key":"11","title":"Jekyll+-+Links","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/09/01/links.html","date":"Sep 01"},{"key":"12","title":"Jekyll+-+Images","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/07/07/images.html","date":"Jul 07"},{"key":"13","title":"Jekyll+-+Code+Blocks","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/06/16/code-blocks.html","date":"Jun 16"},{"key":"14","title":"Jekyll+-+Tables","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/06/10/tables.html","date":"Jun 10"},{"key":"15","title":"Jekyll+-+Lists","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/06/06/lists.html","date":"Jun 06"},{"key":"16","title":"Jekyll+-+Blockquotes","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/05/08/blockquotes.html","date":"May 08"},{"key":"17","title":"Jekyll+-+Definition","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/05/05/definition.html","date":"May 05"},{"key":"18","title":"Jekyll+-+Footnote","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/05/04/footnote.html","date":"May 04"},{"key":"19","title":"Jekyll+-+Horizontal+Rules","tags":["Jekyll","English"],"url":"/jekyll-TeXt-theme/test/2016/05/02/horizontal-rules.html","date":"May 02"}],"2015":[{"key":"20","title":"Test+-+Article+With+Modify+Date","tags":["Test","English"],"url":"/jekyll-TeXt-theme/test/2015/03/03/article-with-modify-date.html","date":"Mar 03"},{"key":"21","title":"Test+-+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Extremely+Completely+Extraordinary+Long+Long+Long+Long+Title","tags":["Test","English"],"url":"/jekyll-TeXt-theme/test/2015/02/02/very-long-title.html","date":"Feb 02"},{"key":"22","title":"Test+-+%7E%60%21%40+%23%24%25%5E+%26%2A%28%29+-%3D_%2B+%5B%5D%7B%7D+%5C%7C%3B%3A+%2C.%3C%3E+%3F%2F%27%22+%CE%B1%CE%B2%CE%B3%CE%B4+%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86+%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E+%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD","tags":["Test","English","S+P+A+C+E","%7E%60%21%40","%23%24%25%5E","%26%2A%28%29","-%3D_%2B","%5B%5D%7B%7D","%5C%7C%3B%3A","%2C.%3C%3E","%3F%2F%27%22","%CE%B1%CE%B2%CE%B3%CE%B4","%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86","%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E","%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD"],"url":"/jekyll-TeXt-theme/test/2015/01/06/punctuation-characters.html","date":"Jan 06"},{"key":"23","title":"Test+-+Article+With+Long+TOC","tags":["Test","English"],"url":"/jekyll-TeXt-theme/test/2015/01/01/article-with-long-toc.html","date":"Jan 01"}]}');
 
     var searchByTag = memorize(function(tag) {
@@ -466,28 +486,50 @@
       return _data;
     });
 
+    var searchByQuery = function(query) {
+      var i, j, cur, _title, _data = { _: [] };
+      Object.keys(data).forEach(function(year) {
+        for (i = 0; i < data[year].length; i++) {
+          cur = data[year][i], _title = cur.title;
+          if (_title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+            _data._.push(cur);
+          }
+        }
+      });
+      return _data;
+    };
+
     window.Lazyload.js('https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', function() {
+      var $root = $('.js-all');
+      var $searchBox = $('.js-search-box');
+      var $searchInput = $searchBox.children('input');
+      var $searchClear = $searchBox.children('.icon-clear');
       var $tags = $('.js-tags');
       var $articleTags = $('.js-article-tag');
       var $tagShowAll = $('.js-tag-show-all');
       var $result = $('.js-result');
       var $lastFocusButton = null;
 
+      function addClass(dom, className) {
+        dom.hasClass(className) || dom.addClass(className);
+      }
+      function removeClass(dom, className) {
+        dom.hasClass(className) && dom.removeClass(className);
+      }
+
       var renderHeading = memorize(function (year) {
         return $('<h2 class="year">' + year + '</h2>');
       });
-
       var renderItem = memorize(function (key, title, date, url, tags) {
         return $('<li><span class="date">' + date + '</span><a class="link" href="' + url + '">' + title + '</a></li>');
       });
-
       function render(data) {
         var $dom = $('<div></div>'), $section, $ul, i, cur, date;
         Object.keys(data).sort(function(a, b) {
           return b.localeCompare(a);
         }).forEach(function(year) {
           $section = $('<section></section>'), $ul = $('<ul></ul>');
-          $section.append(renderHeading(year));
+          (year === '_') || $section.append(renderHeading(year));
           for (i = 0; i < data[year].length; i++) {
             cur = data[year][i];
             $ul.append(renderItem(cur.key, cur.title, cur.date, cur.url, cur.tags));
@@ -496,48 +538,98 @@
         })
         return $dom;
       }
-      function tagSelect(tag, target) {
-        var _data;
-        if (tag === '' || tag === undefined) {
-          _data = data;
-        } else {
-          _data = searchByTag(tag);
-        }
-        if (target) {
-          buttonFoucs(target);
-          window.history.replaceState(null, '', window.location.href.split('?')[0] + '?tag=' + target.data('encode'));
-        }
-        $result.html(render(_data));
-      }
 
-      function searchButtonsByTag(rawTag) {
-        if (!rawTag) {
+      function searchButtonsByTag(_tag/*raw tag*/) {
+        if (!_tag) {
           return $tagShowAll;
         }
-        var _buttons = $articleTags.filter('[data-encode="' + rawTag + '"]');
+        var _buttons = $articleTags.filter('[data-encode="' + _tag + '"]');
         if (_buttons.length === 0) {
           return $tagShowAll;
         }
         return _buttons;
       }
-
       function buttonFoucs(target) {
         if (target) {
-          target.addClass('focus');
-          target.focus();
-          $lastFocusButton && !$lastFocusButton.is(target) && $lastFocusButton.removeClass('focus');
+          addClass(target, 'focus');
+          $lastFocusButton && !$lastFocusButton.is(target) && removeClass($lastFocusButton, 'focus');
           $lastFocusButton = target;
         }
       }
 
-      $articleTags.removeClass('inactive');
-      var query = queryString(), rawTag;
-      query.tag === undefined || (rawTag = query.tag);
-      tagSelect(decodeUrl(rawTag));
-      buttonFoucs(searchButtonsByTag(rawTag));
+      function setIsSearch() {
+        addClass($root, 'search');
+      }
+      function setNotSearch() {
+        removeClass($root, 'search');
+      }
+      function setIsEmpty() {
+        removeClass($searchBox, 'not-empty');
+      }
+      function setNotEmpty() {
+        addClass($searchBox, 'not-empty');
+      }
+      function setSearchBoxVal(val) {
+        ($searchInput.val() === val) || $searchInput.val(val);
+      }
+      function clearSearchBox() {
+        setSearchBoxVal(''); queryInput('');
+      }
+
+      function showAll() {
+        setNotSearch(); setIsEmpty(); buttonFoucs($tagShowAll); setUrlQuery();
+        $result.html(render(data));
+      }
+      function tagSelect(tag/*decode tag*/, target) {
+        var _data, _tag;
+        if (tag === '' || tag === undefined) {
+          showAll();
+        } else {
+          $result.html(render(searchByTag(tag)));
+        }
+        if (target) {
+          buttonFoucs(target);
+          _tag = target.data('encode');
+          if (_tag === '' || typeof _tag !== 'string') {
+            setUrlQuery();
+          } else {
+            setUrlQuery('?tag=' + _tag)
+          }
+        }
+      }
+      function queryInput(query) {
+        var _data;
+        if (query === '' || typeof query !== 'string') {
+          showAll();
+        } else {
+          $result.html(render(searchByQuery(query))); setIsSearch(); setNotEmpty(); setUrlQuery('?q=' + query);
+
+        }
+      }
+
+      (function() {
+        $articleTags.removeClass('inactive');
+        var query = queryString(), _tag = query.tag, _q = query.q;
+        if (_tag !== undefined) {
+          query.tag === undefined || (_tag = query.tag);
+          tagSelect(decodeUrl(_tag));
+          buttonFoucs(searchButtonsByTag(_tag));
+        } else if (_q !== undefined) {
+          queryInput(_q); setSearchBoxVal(_q);
+        } else {
+          showAll();
+        }
+      })();
 
       $tags.on('click', 'button', function() {
         tagSelect($(this).children('span').text(), $(this));
+      });
+
+      $searchInput.on('input', window.throttle(function() {
+        queryInput($(this).val());
+      }, 400));
+      $searchClear.on('click', function() {
+        clearSearchBox();
       });
     });
   })();

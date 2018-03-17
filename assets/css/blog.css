@@ -161,6 +161,10 @@ body {
   body ::selection {
     background: rgba(252, 77, 80, 0.5); }
 
+input, textarea, select, button {
+  font: 400 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #333; }
+
 body,
 h1,
 h2,
@@ -289,7 +293,10 @@ button {
   margin: 0;
   border-width: 0; }
 
-.round-button, .floating-action-round-button, .pill-button {
+input:focus {
+  outline: none; }
+
+.round-button, .floating-action-round-button, .pill-button, .m-all > .main > .m-search-box > .icon-clear {
   font-weight: 700;
   line-height: 1;
   box-sizing: border-box;
@@ -297,51 +304,51 @@ button {
   cursor: pointer;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease; }
-  .round-button, .floating-action-round-button, .pill-button, .round-button:link, .floating-action-round-button:link, .pill-button:link, .round-button:visited, .floating-action-round-button:visited, .pill-button:visited {
+  .round-button, .floating-action-round-button, .pill-button, .m-all > .main > .m-search-box > .icon-clear, .round-button:link, .floating-action-round-button:link, .pill-button:link, .m-all > .main > .m-search-box > .icon-clear:link, .round-button:visited, .floating-action-round-button:visited, .pill-button:visited, .m-all > .main > .m-search-box > .icon-clear:visited {
     text-decoration: none; }
-  .not-touch .hover.round-button, .not-touch .hover.floating-action-round-button, .not-touch .hover.pill-button, .not-touch .round-button:hover, .not-touch .floating-action-round-button:hover, .not-touch .pill-button:hover, .hover.round-button, .hover.floating-action-round-button, .hover.pill-button, .round-button:hover, .floating-action-round-button:hover, .pill-button:hover {
+  .not-touch .hover.round-button, .not-touch .hover.floating-action-round-button, .not-touch .hover.pill-button, .not-touch .m-all > .main > .m-search-box > .hover.icon-clear, .not-touch .round-button:hover, .not-touch .floating-action-round-button:hover, .not-touch .pill-button:hover, .not-touch .m-all > .main > .m-search-box > .icon-clear:hover, .hover.round-button, .hover.floating-action-round-button, .hover.pill-button, .m-all > .main > .m-search-box > .hover.icon-clear, .round-button:hover, .floating-action-round-button:hover, .pill-button:hover, .m-all > .main > .m-search-box > .icon-clear:hover {
     text-decoration: none; }
-  .active.round-button, .active.floating-action-round-button, .active.pill-button, .round-button:active, .floating-action-round-button:active, .pill-button:active {
+  .active.round-button, .active.floating-action-round-button, .active.pill-button, .m-all > .main > .m-search-box > .active.icon-clear, .round-button:active, .floating-action-round-button:active, .pill-button:active, .m-all > .main > .m-search-box > .icon-clear:active {
     text-decoration: none; }
-  .focus.round-button, .focus.floating-action-round-button, .focus.pill-button {
+  .focus.round-button, .focus.floating-action-round-button, .focus.pill-button, .m-all > .main > .m-search-box > .focus.icon-clear {
     text-decoration: none; }
-  .round-button, .floating-action-round-button, .pill-button, .round-button:link, .floating-action-round-button:link, .pill-button:link, .round-button:visited, .floating-action-round-button:visited, .pill-button:visited {
+  .round-button, .floating-action-round-button, .pill-button, .m-all > .main > .m-search-box > .icon-clear, .round-button:link, .floating-action-round-button:link, .pill-button:link, .m-all > .main > .m-search-box > .icon-clear:link, .round-button:visited, .floating-action-round-button:visited, .pill-button:visited, .m-all > .main > .m-search-box > .icon-clear:visited {
     color: #333;
     background-color: #f2f2f2; }
-    .round-button svg path, .floating-action-round-button svg path, .pill-button svg path, .round-button:link svg path, .floating-action-round-button:link svg path, .pill-button:link svg path, .round-button:visited svg path, .floating-action-round-button:visited svg path, .pill-button:visited svg path {
+    .round-button svg path, .floating-action-round-button svg path, .pill-button svg path, .m-all > .main > .m-search-box > .icon-clear svg path, .round-button:link svg path, .floating-action-round-button:link svg path, .pill-button:link svg path, .m-all > .main > .m-search-box > .icon-clear:link svg path, .round-button:visited svg path, .floating-action-round-button:visited svg path, .pill-button:visited svg path, .m-all > .main > .m-search-box > .icon-clear:visited svg path {
       fill: #333; }
-  .not-touch .hover.round-button, .not-touch .hover.floating-action-round-button, .not-touch .hover.pill-button, .not-touch .round-button:hover, .not-touch .floating-action-round-button:hover, .not-touch .pill-button:hover {
+  .not-touch .hover.round-button, .not-touch .hover.floating-action-round-button, .not-touch .hover.pill-button, .not-touch .m-all > .main > .m-search-box > .hover.icon-clear, .not-touch .round-button:hover, .not-touch .floating-action-round-button:hover, .not-touch .pill-button:hover, .not-touch .m-all > .main > .m-search-box > .icon-clear:hover {
     color: #fff;
     background-color: #fc4d50; }
-    .not-touch .hover.round-button svg path, .not-touch .hover.floating-action-round-button svg path, .not-touch .hover.pill-button svg path, .not-touch .round-button:hover svg path, .not-touch .floating-action-round-button:hover svg path, .not-touch .pill-button:hover svg path {
+    .not-touch .hover.round-button svg path, .not-touch .hover.floating-action-round-button svg path, .not-touch .hover.pill-button svg path, .not-touch .m-all > .main > .m-search-box > .hover.icon-clear svg path, .not-touch .round-button:hover svg path, .not-touch .floating-action-round-button:hover svg path, .not-touch .pill-button:hover svg path, .not-touch .m-all > .main > .m-search-box > .icon-clear:hover svg path {
       fill: #fff; }
-  .active.round-button, .active.floating-action-round-button, .active.pill-button, .round-button:active, .floating-action-round-button:active, .pill-button:active {
+  .active.round-button, .active.floating-action-round-button, .active.pill-button, .m-all > .main > .m-search-box > .active.icon-clear, .round-button:active, .floating-action-round-button:active, .pill-button:active, .m-all > .main > .m-search-box > .icon-clear:active {
     color: #fff;
     background-color: #fc4d50; }
-    .active.round-button svg path, .active.floating-action-round-button svg path, .active.pill-button svg path, .round-button:active svg path, .floating-action-round-button:active svg path, .pill-button:active svg path {
+    .active.round-button svg path, .active.floating-action-round-button svg path, .active.pill-button svg path, .m-all > .main > .m-search-box > .active.icon-clear svg path, .round-button:active svg path, .floating-action-round-button:active svg path, .pill-button:active svg path, .m-all > .main > .m-search-box > .icon-clear:active svg path {
       fill: #fff; }
-  .round-button svg, .floating-action-round-button svg, .pill-button svg {
+  .round-button svg, .floating-action-round-button svg, .pill-button svg, .m-all > .main > .m-search-box > .icon-clear svg {
     width: 1rem;
     height: 1rem; }
-    .round-button svg path, .floating-action-round-button svg path, .pill-button svg path {
+    .round-button svg path, .floating-action-round-button svg path, .pill-button svg path, .m-all > .main > .m-search-box > .icon-clear svg path {
       -webkit-transition: all 0.6s ease;
       transition: all 0.6s ease; }
-  .inactive.round-button, .inactive.floating-action-round-button, .inactive.pill-button {
+  .inactive.round-button, .inactive.floating-action-round-button, .inactive.pill-button, .m-all > .main > .m-search-box > .inactive.icon-clear {
     cursor: not-allowed; }
-    .inactive.round-button, .inactive.floating-action-round-button, .inactive.pill-button, .inactive.round-button:link, .inactive.floating-action-round-button:link, .inactive.pill-button:link, .inactive.round-button:visited, .inactive.floating-action-round-button:visited, .inactive.pill-button:visited {
+    .inactive.round-button, .inactive.floating-action-round-button, .inactive.pill-button, .m-all > .main > .m-search-box > .inactive.icon-clear, .inactive.round-button:link, .inactive.floating-action-round-button:link, .inactive.pill-button:link, .m-all > .main > .m-search-box > .inactive.icon-clear:link, .inactive.round-button:visited, .inactive.floating-action-round-button:visited, .inactive.pill-button:visited, .m-all > .main > .m-search-box > .inactive.icon-clear:visited {
       color: rgba(51, 51, 51, 0.2) !important;
       background-color: #f2f2f2 !important; }
-      .inactive.round-button svg path, .inactive.floating-action-round-button svg path, .inactive.pill-button svg path, .inactive.round-button:link svg path, .inactive.floating-action-round-button:link svg path, .inactive.pill-button:link svg path, .inactive.round-button:visited svg path, .inactive.floating-action-round-button:visited svg path, .inactive.pill-button:visited svg path {
+      .inactive.round-button svg path, .inactive.floating-action-round-button svg path, .inactive.pill-button svg path, .m-all > .main > .m-search-box > .inactive.icon-clear svg path, .inactive.round-button:link svg path, .inactive.floating-action-round-button:link svg path, .inactive.pill-button:link svg path, .m-all > .main > .m-search-box > .inactive.icon-clear:link svg path, .inactive.round-button:visited svg path, .inactive.floating-action-round-button:visited svg path, .inactive.pill-button:visited svg path, .m-all > .main > .m-search-box > .inactive.icon-clear:visited svg path {
         fill: rgba(51, 51, 51, 0.2) !important; }
-    .inactive.hover.round-button, .inactive.hover.floating-action-round-button, .inactive.hover.pill-button, .inactive.round-button:hover, .inactive.floating-action-round-button:hover, .inactive.pill-button:hover {
+    .inactive.hover.round-button, .inactive.hover.floating-action-round-button, .inactive.hover.pill-button, .m-all > .main > .m-search-box > .inactive.hover.icon-clear, .inactive.round-button:hover, .inactive.floating-action-round-button:hover, .inactive.pill-button:hover, .m-all > .main > .m-search-box > .inactive.icon-clear:hover {
       color: rgba(51, 51, 51, 0.2) !important;
       background-color: #f2f2f2 !important; }
-      .inactive.hover.round-button svg path, .inactive.hover.floating-action-round-button svg path, .inactive.hover.pill-button svg path, .inactive.round-button:hover svg path, .inactive.floating-action-round-button:hover svg path, .inactive.pill-button:hover svg path {
+      .inactive.hover.round-button svg path, .inactive.hover.floating-action-round-button svg path, .inactive.hover.pill-button svg path, .m-all > .main > .m-search-box > .inactive.hover.icon-clear svg path, .inactive.round-button:hover svg path, .inactive.floating-action-round-button:hover svg path, .inactive.pill-button:hover svg path, .m-all > .main > .m-search-box > .inactive.icon-clear:hover svg path {
         fill: rgba(51, 51, 51, 0.2) !important; }
-    .inactive.active.round-button, .inactive.active.floating-action-round-button, .inactive.active.pill-button, .inactive.round-button:active, .inactive.floating-action-round-button:active, .inactive.pill-button:active {
+    .inactive.active.round-button, .inactive.active.floating-action-round-button, .inactive.active.pill-button, .m-all > .main > .m-search-box > .inactive.active.icon-clear, .inactive.round-button:active, .inactive.floating-action-round-button:active, .inactive.pill-button:active, .m-all > .main > .m-search-box > .inactive.icon-clear:active {
       color: rgba(51, 51, 51, 0.2) !important;
       background-color: #f2f2f2 !important; }
-      .inactive.active.round-button svg path, .inactive.active.floating-action-round-button svg path, .inactive.active.pill-button svg path, .inactive.round-button:active svg path, .inactive.floating-action-round-button:active svg path, .inactive.pill-button:active svg path {
+      .inactive.active.round-button svg path, .inactive.active.floating-action-round-button svg path, .inactive.active.pill-button svg path, .m-all > .main > .m-search-box > .inactive.active.icon-clear svg path, .inactive.round-button:active svg path, .inactive.floating-action-round-button:active svg path, .inactive.pill-button:active svg path, .m-all > .main > .m-search-box > .inactive.icon-clear:active svg path {
         fill: rgba(51, 51, 51, 0.2) !important; }
 
 .floating-action-round-button {
@@ -1209,37 +1216,95 @@ button {
   .m-post-list .m-article-content img {
     max-height: 12rem; }
 
-.m-all {
-  margin-top: 2.5rem; }
-  .m-all > div > .m-result {
-    margin: 2.5rem 0; }
-    .m-all > div > .m-result section:not(:last-child) {
-      padding: 0 0 .4rem 0; }
-    .m-all > div > .m-result section .year {
-      font-size: 1.6rem; }
-    .m-all > div > .m-result section ul > li {
-      list-style-type: none;
-      margin: .4rem 0; }
-      .m-all > div > .m-result section ul > li .date {
-        font-family: Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace;
-        display: inline-block;
-        font-size: 0.9rem;
-        color: #9c9c9c;
-        padding: 0 1rem 0 0; }
-      .m-all > div > .m-result section ul > li .link {
-        font-size: 1rem; }
-        .m-all > div > .m-result section ul > li .link, .m-all > div > .m-result section ul > li .link:link, .m-all > div > .m-result section ul > li .link:visited {
-          color: #111; }
-          .m-all > div > .m-result section ul > li .link svg path, .m-all > div > .m-result section ul > li .link:link svg path, .m-all > div > .m-result section ul > li .link:visited svg path {
-            fill: #111; }
-        .not-touch .m-all > div > .m-result section ul > li .link.hover, .not-touch .m-all > div > .m-result section ul > li .link:hover {
-          color: #fc4d50; }
-          .not-touch .m-all > div > .m-result section ul > li .link.hover svg path, .not-touch .m-all > div > .m-result section ul > li .link:hover svg path {
-            fill: #fc4d50; }
-        .m-all > div > .m-result section ul > li .link.active, .m-all > div > .m-result section ul > li .link:active {
-          color: #fc4d50; }
-          .m-all > div > .m-result section ul > li .link.active svg path, .m-all > div > .m-result section ul > li .link:active svg path {
-            fill: #fc4d50; }
+.m-all.search > .main > .m-tags {
+  display: none; }
+.m-all.search > .main > .m-result section ul > li .date {
+  display: none; }
+.m-all > .main > .m-tags {
+  margin-bottom: 2rem;
+  display: block; }
+.m-all > .main > .m-search-box {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  max-width: 22rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: 1rem 0; }
+  @media screen and (max-width: 500px) {
+    .m-all > .main > .m-search-box {
+      max-width: none;
+      width: 100%; } }
+  .m-all > .main > .m-search-box.not-empty > .icon-clear {
+    display: block; }
+  .m-all > .main > .m-search-box > .icon-clear {
+    display: none; }
+    .m-all > .main > .m-search-box > .icon-clear, .m-all > .main > .m-search-box > .icon-clear:link, .m-all > .main > .m-search-box > .icon-clear:visited {
+      color: #cccccc;
+      background-color: transparent; }
+      .m-all > .main > .m-search-box > .icon-clear svg path, .m-all > .main > .m-search-box > .icon-clear:link svg path, .m-all > .main > .m-search-box > .icon-clear:visited svg path {
+        fill: #cccccc; }
+    .not-touch .m-all > .main > .m-search-box > .icon-clear.hover, .not-touch .m-all > .main > .m-search-box > .icon-clear:hover {
+      color: #111;
+      background-color: transparent; }
+      .not-touch .m-all > .main > .m-search-box > .icon-clear.hover svg path, .not-touch .m-all > .main > .m-search-box > .icon-clear:hover svg path {
+        fill: #111; }
+    .m-all > .main > .m-search-box > .icon-clear.active, .m-all > .main > .m-search-box > .icon-clear:active {
+      color: #111;
+      background-color: transparent; }
+      .m-all > .main > .m-search-box > .icon-clear.active svg path, .m-all > .main > .m-search-box > .icon-clear:active svg path {
+        fill: #111; }
+  .m-all > .main > .m-search-box > .icon-search > svg, .m-all > .main > .m-search-box > .icon-clear > svg {
+    display: block;
+    fill: #cccccc; }
+  .m-all > .main > .m-search-box > input {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border: none;
+    background-color: transparent; }
+.m-all > .main > .m-result {
+  margin: 1rem 0; }
+  .m-all > .main > .m-result section:not(:last-child) {
+    padding: 0 0 .4rem 0; }
+  .m-all > .main > .m-result section .year {
+    font-size: 1.6rem; }
+  .m-all > .main > .m-result section ul > li {
+    list-style-type: none;
+    margin: .4rem 0; }
+    .m-all > .main > .m-result section ul > li .date {
+      font-family: Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace;
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #9c9c9c;
+      padding: 0 1rem 0 0; }
+    .m-all > .main > .m-result section ul > li .link {
+      font-size: 1rem; }
+      .m-all > .main > .m-result section ul > li .link, .m-all > .main > .m-result section ul > li .link:link, .m-all > .main > .m-result section ul > li .link:visited {
+        color: #111; }
+        .m-all > .main > .m-result section ul > li .link svg path, .m-all > .main > .m-result section ul > li .link:link svg path, .m-all > .main > .m-result section ul > li .link:visited svg path {
+          fill: #111; }
+      .not-touch .m-all > .main > .m-result section ul > li .link.hover, .not-touch .m-all > .main > .m-result section ul > li .link:hover {
+        color: #fc4d50; }
+        .not-touch .m-all > .main > .m-result section ul > li .link.hover svg path, .not-touch .m-all > .main > .m-result section ul > li .link:hover svg path {
+          fill: #fc4d50; }
+      .m-all > .main > .m-result section ul > li .link.active, .m-all > .main > .m-result section ul > li .link:active {
+        color: #fc4d50; }
+        .m-all > .main > .m-result section ul > li .link.active svg path, .m-all > .main > .m-result section ul > li .link:active svg path {
+          fill: #fc4d50; }
 
 .m-post .col-2 {
   display: none;
