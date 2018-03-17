@@ -169,9 +169,6 @@ button {
 }
 
 input {
-  background-color: $text-background-color;
-  @include round-rect(default, .2rem .6rem);
-  border: none;
   &:focus {
     outline: none;
   }

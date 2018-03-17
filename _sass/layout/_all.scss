@@ -18,15 +18,38 @@
       margin-bottom: map-get($base, vertical-space-large) * 2;
       display: block;
     }
-    & > .m-search {
-      & > input {
-        margin: 1rem 0;
-        box-sizing: border-box;
-        max-width: 22rem;
-        @include media-breakpoint-down(s) {
-          max-width: none;
-          width: 100%;
+    & > .m-search-box {
+      position: relative;
+      @include flexbox;
+      @include align-items(center);
+      @include round-rect(default, .2rem .4rem);
+      box-sizing: border-box;
+      max-width: 22rem;
+      background-color: $text-background-color;
+      @include media-breakpoint-down(s) {
+        max-width: none;
+        width: 100%;
+      }
+      margin: map-get($base, vertical-space-large) 0;
+      &.not-empty > .icon-clear {
+        display: block;
+      }
+      & > .icon-clear {
+        display: none;
+        @extend %button;
+        @include link-colors($border-color, transparent,
+          $text-color-d, transparent, $text-color-d, transparent);
+      }
+      & > .icon-search, & > .icon-clear {
+        & > svg {
+          display: block;
+          fill: $border-color;
         }
+      }
+      & > input {
+        @include flex(1);
+        border: none;
+        background-color: transparent;
       }
     }
     & > .m-result {
