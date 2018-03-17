@@ -78,7 +78,7 @@ Error Text.
 
     ![Lenna](path-to-image.jpg){:.border.rounded}
 
-<br/>
+---
 
 ![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_circle+shadow"){:.circle.shadow}
 
@@ -86,7 +86,7 @@ Error Text.
 
     ![Lenna](path-to-image.jpg){:.circle.shadow}
 
-<br/>
+---
 
 ![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_circle+border+shadow"){:.circle.border.shadow}
 

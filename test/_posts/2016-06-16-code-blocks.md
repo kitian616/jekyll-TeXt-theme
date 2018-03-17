@@ -43,7 +43,7 @@ in the output!).
     This one is separate.
 ```
 
-<br/>
+---
 
 ```
 (() => console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();
@@ -55,7 +55,7 @@ in the output!).
     (() => console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();
     ```
 
-<br/>
+---
 
 ```javascript
 (() => console.log('hello, world!'))();
@@ -67,7 +67,7 @@ in the output!).
     (() => console.log('hello, world!'))();
     ```
 
-<br/>
+---
 
 ```none
 (() => console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();
@@ -111,7 +111,7 @@ var space = ' ';
 {% endraw %}
 ```
 
-<br/>
+---
 
 {% highlight javascript %}
 (() => console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();
@@ -133,7 +133,7 @@ Here comes some code.
     Here comes some code.
     ~~~
 
-<br/>
+---
 
 ~~~~~~~~~~~~
 ~~~~~~~
@@ -167,7 +167,7 @@ end
     ~~~
     {: .language-ruby}
 
-<br/>
+---
 
 ~~~ ruby
 def what?

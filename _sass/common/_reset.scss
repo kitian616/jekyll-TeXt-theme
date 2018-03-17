@@ -1,3 +1,16 @@
+@mixin block-elements {
+  h1, h2, h3, h4, h5, h6, p,
+  hr, blockquote, figure, pre, .highlighter-rouge,
+  ul, ol, dl, table, .footnotes {
+    @content;
+  }
+}
+@mixin heading-elements {
+  h1, h2, h3, h4, h5, h6 {
+    @content;
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -19,19 +32,7 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-ul,
-ol,
-dl,
-figure {
+@include block-elements() {
   margin: map-get($base, vertical-space) 0;
   padding: 0;
 }
@@ -132,6 +133,7 @@ pre, code {
 
 code {
   font-size: map-get($base, font-size-tiny);
+  line-height: map-get($base, line-height-small);
 }
 
 figure>img {

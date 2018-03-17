@@ -17,7 +17,7 @@ tags: Jekyll English
     >
     > —Hamlet in *Hamlet*
 
-<br/>
+---
 
 > "From women's eyes this doctrine I derive:
 >
