@@ -10,7 +10,7 @@
 
 [Demo](https://tianqi.name/jekyll-TeXt-theme/) | [English (Beta)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md)
 
-TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and prominent titles and round buttons & cards.
+TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
 ## Features
 
