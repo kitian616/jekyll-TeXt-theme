@@ -1,6 +1,6 @@
 {
   "name": "jekyll-text-theme",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "A text first theme for Jekyll.",
   "scripts": {
     "build": "bundle exec jekyll build",

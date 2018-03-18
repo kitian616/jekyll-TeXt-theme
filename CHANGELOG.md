@@ -1,5 +1,7 @@
 # Change Log
 
+## 1.5.0 (2018-03-18)
+
 ### Enhancements
 
 - `text_color_theme` config
@@ -12,7 +14,9 @@
 
 - Article heading anchor
 
-- Previous and  next Post
+- Previous and next post
+
+- Search
 
 ## 1.4.3 (2018-01-13)
 
