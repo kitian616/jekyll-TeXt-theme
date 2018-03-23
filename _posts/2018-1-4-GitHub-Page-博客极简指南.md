@@ -11,7 +11,7 @@ tags:
 <!--more-->
 
 ## 构建仓库
-  1. 直接fork主题仓库。
+  1. 直接fork主题仓库。比如本博客的主题仓库：https://github.com/kitian616/jekyll-TeXt-theme
   2. 修改操仓库名为 username.github.io. username是Github账户名。
   3. 按照仓库README进行配置并写作。
   4. 登陆 https://username.github.io 查看你的静态博客。
