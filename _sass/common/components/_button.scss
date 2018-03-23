@@ -1,0 +1,72 @@
+%button {
+  font-weight: map-get($base, font-weight-bold);
+  line-height: 1;
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+  @include link-normal() {
+    text-decoration: none;
+  }
+  .not-touch &, & {
+    @include link-hover() {
+      text-decoration: none;
+    }
+  }
+  @include link-active() {
+    text-decoration: none;
+  }
+  @include link-focus() {
+    text-decoration: none;
+  }
+  @include link-colors($text-color-3, $main-color-3, $text-color-1, $main-color-1, $text-color-1, $main-color-1);
+  @include link-animation();
+  svg {
+    width: 1rem;
+    height: 1rem;
+    path {
+      @include link-animation();
+    }
+  }
+  &.inactive {
+    cursor: not-allowed;
+    @include link-normal() {
+      color: rgba($text-color-3, .2) !important;
+      background-color: $main-color-3 !important;
+      svg path {
+        fill: rgba($text-color-3, .2) !important;
+      }
+    }
+    @include link-emphasize() {
+      color: rgba($text-color-3, .2) !important;
+      background-color: $main-color-3 !important;
+      svg path {
+        fill: rgba($text-color-3, .2) !important;
+      }
+    }
+  }
+}
+
+%floating-action {
+  @include box-shadow(2);
+  &:hover {
+    @include box-shadow(3);
+  }
+}
+
+.round-button {
+  @extend %button;
+  @include round;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.floating-action-round-button {
+  @extend .round-button;
+  @extend %floating-action;
+}
+
+.pill-button {
+  @extend %button;
+  @include round-rect(2rem, .4rem .6rem);
+}

@@ -1,0 +1,40 @@
+@mixin horizontal-space($horizontal-space: default, $horizontal-item-vertical-space: default, $wrap: default) {
+  @if $horizontal-space == default {
+    $horizontal-space: map-get($base, horizontal-space);
+  }
+  @if $horizontal-item-vertical-space == default {
+    $horizontal-item-vertical-space: map-get($base, horizontal-item-vertical-space);
+  }
+  @if $wrap == default {
+    $wrap: wrap;
+  }
+  @include flexbox;
+  @include flex-wrap($wrap);
+  &>* {
+    @if $horizontal-item-vertical-space != none {
+      margin-top: $horizontal-item-vertical-space;
+      margin-bottom: $horizontal-item-vertical-space;
+    }
+    list-style-type: none;
+    margin-right: $horizontal-space;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin vertical-space($vertical-space: default) {
+  @if $vertical-space == default {
+    $vertical-space: map-get($base, vertical-space);
+  }
+  @include flexbox;
+  @include flex-direction(column);
+  @include flex-wrap(wrap);
+  &>* {
+    list-style-type: none;
+    margin-bottom: $vertical-space;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,41 +1,34 @@
 .follow-me {
   text-align: center;
-  &>ul {
+  & > ul {
     margin: 0;
     justify-content: center;
-  }
-  .round-button {
-    color: $text-color-1;
-    .icon>svg path {
-      fill: $text-color-1;
+    @include horizontal-space();
+    & > li > {
+      .mail {
+        @include link-colors($text-color-1, $mail-color);
+      }
+      .weibo {
+        @include link-colors($text-color-1, $weibo-color);
+      }
+      .facebook {
+        @include link-colors($text-color-1, $facebook-color);
+      }
+      .twitter {
+        @include link-colors($text-color-1, $twitter-color);
+      }
+      .googlepluse {
+        @include link-colors($text-color-1, $google-plus-color);
+      }
+      .github {
+        @include link-colors($text-color-1, $github-color);
+      }
+      .linkedin {
+        @include link-colors($text-color-1, $linkedin-color);
+      }
+      .douban {
+        @include link-colors($text-color-1, $douban-color);
+      }
     }
-    &:not(:last-child) {
-      margin-right: $spacing-unit / 6;
-    }
-    @include link-background-colors ( $main-color-1, lighten($main-color-1, 5%))
-  }
-  .mail {
-    @include link-background-colors ( $mail-color, lighten($mail-color, 5%))
-  }
-  .weibo {
-    @include link-background-colors ( $weibo-color, lighten($weibo-color, 5%))
-  }
-  .facebook {
-    @include link-background-colors ( $facebook-color, lighten($facebook-color, 5%))
-  }
-  .twitter {
-    @include link-background-colors ( $twitter-color, lighten($twitter-color, 5%))
-  }
-  .googlepluse {
-    @include link-background-colors ( $google-plus-color, lighten($google-plus-color, 5%))
-  }
-  .github {
-    @include link-background-colors ( $github-color, lighten($github-color, 20%))
-  }
-  .linkedin {
-    @include link-background-colors ( $linkedin-color, lighten($linkedin-color, 5%))
-  }
-  .douban {
-    @include link-background-colors ( $douban-color, lighten($douban-color, 5%))
   }
 }

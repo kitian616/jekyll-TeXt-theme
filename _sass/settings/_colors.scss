@@ -1,9 +1,0 @@
-@import './colors/_colors.default.scss';
-// @import './colors/_colors.dark.scss';
-// @import './colors/_colors.forest.scss';
-// @import './colors/_colors.ocean.scss';
-// @import './colors/_colors.chocolate.scss';
-// @import './colors/_colors.orange.scss';
-
-$shadow-base: 0 2px 10px $shadow-color, 0 0 16px rgba($shadow-color, opacity($shadow-color) * 0.6);
-$shadow-high: 0 4px 10px rgba($shadow-color, opacity($shadow-color) / 3 + 0.3), 0 0 16px $shadow-color;

@@ -1,9 +1,10 @@
 {%- if site.mermaid == true or page.mermaid == true -%}
-<script src="//cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js"></script>
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
 <script>
-  mermaid.init(undefined, '.language-mermaid');
-  $(function() {
-      mermaid.initialize({ startOnLoad: true });
+  window.Lazyload.js('{{ _sources.mermaid }}', function() {
+    mermaid.init(undefined, '.language-mermaid');
+    mermaid.initialize({ startOnLoad: true });
   });
 </script>
 {%- endif -%}

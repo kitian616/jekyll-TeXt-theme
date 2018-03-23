@@ -5,7 +5,7 @@ NAV:
     zh-Hans: "主页"
     zh-Hant: "主頁"
   ALL:
-    en:      "All"
+    en:      "Archive"
     zh:      "归档"
     zh-Hans: "归档"
     zh-Hant: "歸檔"
@@ -21,13 +21,29 @@ READMORE:
   zh-Hans: "点我阅读更多..."
   zh-Hant: "「點我閱讀更多」"
 
-COPYRIGHT_DATES: "2018"
+VIEWS:
+  en:      "views"
+  zh:      "阅读"
+  zh-Hans: "阅读"
+  zh-Hant: "閱讀"
 
 LAST_UPDATED:
   en:      "Last updated"
   zh:      "更新于"
   zh-Hans: "更新于"
   zh-Hant: "更新於"
+
+PREVIOUS:
+  en:      "PREVIOUS"
+  zh:      "上篇"
+  zh-Hans: "上篇"
+  zh-Hant: "上篇"
+
+NEXT:
+  en:      "NEXT"
+  zh:      "下篇"
+  zh-Hans: "下篇"
+  zh-Hant: "下篇"
 
 ARTICLE_DATE_FORMAT:
   en:      "%b %d, %Y"
@@ -76,3 +92,5 @@ EMAIL_ME:
   zh:      "给我发邮件。"
   zh-Hans: "给我发邮件。"
   zh-Hant: "給我發郵件。"
+
+COPYRIGHT_DATES: "2018"

@@ -4,43 +4,38 @@
 @charset "utf-8";
 
 @import
-    "settings/base",
-    "settings/colors",
-    "settings/font",
-    "settings/highlighting",
+    "colors/{{ site.text_color_theme | default: site.data.variables.default.text_color_theme }}",
+    // "colors/chocolate",
+    // "colors/dark",
+    // "colors/default",
+    // "colors/forest",
+    // "colors/ocean",
+    // "colors/orange",
 
-    "mixins/prefix",
-    "mixins/media",
-    "mixins/link",
-    "mixins/flex",
-    "mixins/shape",
+    "common/variables",
+    "common/highlighting",
+    "common/classes",
+    "common/reset",
+    "common/components/button",
 
-    "base/base",
-    "base/text",
-    "base/links",
-    "base/image&icon",
-    "base/animate",
+    "animate/fade-in",
+    "animate/fade-in-down",
 
-    "components/wrapper",
-
-    "components/follow-me",
-
+    "components/main",
     "components/header",
-    "components/footer",
-
-    "components/toc",
-    "components/tags",
-    "components/pagination",
-
     "components/article.data",
     "components/article.content",
+    "components/article.content.extra",
+    "components/pagination",
+    "components/tags",
+    "components/toc",
+    "components/follow-me",
     "components/license",
+    "components/footer",
 
-    "blog/layout.base",
-    "blog/layout.default",
-    "blog/layout.post",
-
-    "blog/page.all",
-    "blog/page.index",
-    "blog/page.error-404"
+    "layout/default",
+    "layout/home",
+    "layout/all",
+    "layout/post",
+    "layout/error-404"
 ;

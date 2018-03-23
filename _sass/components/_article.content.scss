@@ -1,97 +1,128 @@
 .m-article-content {
   word-wrap: break-word;
-  line-height: $article-line-height;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: $content-gap * 2 0 $content-gap * .5 0;
+  line-height: map-get($base, line-height-large);
+  @include block-elements() {
+    margin: map-get($base, vertical-space-large) 0;
+  }
+  @include heading-elements() {
+    position: relative;
+    margin-top: map-get($base, vertical-space-large) * 1.5;
+    & > .anchor {
+      @include link-text-colors($border-color, $main-color-1, $main-color-1);
+      margin-left: .2rem;
+      visibility: hidden;
+      text-decoration: none;
+      opacity: 0;
+      & > svg {
+        width: map-get($base, font-size);
+        height: map-get($base, font-size);
+        margin-bottom: - .2 * map-get($base, font-size);
+      }
+    }
+    &:hover {
+      & > .anchor {
+        visibility: visible;
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
   }
   h1,
   h2 {
-    padding: 0 0 $base-font-size * .3 0;
-    border: 0 dashed $border-color;
-    border-bottom-width: 2px;
-    margin-bottom: $content-gap;
+    @include split-line(bottom);
   }
-  p {
-    margin: $content-gap 0;
+  hr {
+    border: none;
+    &::before {
+      content: '...';
+      font-size: map-get($base, font-size-h3);
+      color: $text-color-l;
+      display: block;
+      letter-spacing: .8em;
+      text-align: center;
+    }
   }
   blockquote {
-    padding: 0 0 0 $spacing-unit / 2;
-    border: 0 solid $border-color;
-    border-left-width: 4px;
-    margin: $content-gap 0;
-    font-size: $small-font-size;
+    padding-left: 1rem;
+    @include split-line(left, 4px, $border-color);
+    font-size: map-get($base, font-size-sub);
     color: $text-color-l;
     p {
-      margin: $content-gap * .5 0;
+      margin: map-get($base, vertical-space) 0;
     }
-    > :last-child {
+    &>:last-child {
       margin-bottom: 0;
     }
   }
   img:not(.emoji) {
     max-width: 100%;
-    max-height: 600px;
+    max-height: 37rem;
     vertical-align: middle;
   }
   .emoji {
     display: inline-block;
     vertical-align: text-bottom;
-    width: $base-font-size * $article-line-height * .7;
-    height: $base-font-size * $article-line-height * .7;
+    width: map-get($base, line-height-large) * .7rem;
+    height: map-get($base, line-height-large) * .7rem;
+  }
+  .footnotes {
+    @include split-line();
+    margin-top: map-get($base, vertical-space-large) * 2;
   }
   code {
-    @include round-rect($round-rect-radius, $base-font-size * .2 $base-font-size * .5);
+    @include round-rect(default, .2rem .5rem);
+    background-color: $text-background-color;
     span {
       padding: 0;
       margin: 0;
     }
   }
-  div.highlighter-rouge, figure, pre {
-    margin: $content-gap 0;
-  }
-  code.language-mermaid {
-    background-color: $background-color;
-  }
   pre {
-    display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    border-radius: $round-rect-radius;
     &>code {
-      display: block;
-      margin: 0;
-      padding: $base-font-size * 1.5 $base-font-size $base-font-size * 1.3 $base-font-size;
-      line-height: $code-line-height;
+      padding: 0;
+      background-color: transparent;
       word-wrap: normal;
-
+      &.language-mermaid, &.language-chart {
+        display: none;
+        &[data-processed] {
+          display: block;
+        }
+      }
     }
   }
-  figure {
+  .highlighter-rouge>.highlight, figure.highlight {
+    &>pre {
+      @include round-rect(default, 1rem 0 1rem 1rem);
+      margin: 0;
+      background-color: $text-background-color;
+      &>code {
+        display: block;
+      }
+    }
+  }
+  figure.highlight {
     &:before {
       content: attr(data-lang);
       display: block;
-      border-top-left-radius: $round-rect-radius;
-      border-top-right-radius: $round-rect-radius;
-      padding: $base-font-size / 2 $base-font-size $base-font-size / 2 0;
+      border-top-left-radius: map-get($shape, round-rect-radius);
+      border-top-right-radius: map-get($shape, round-rect-radius);
+      padding: .5rem 1rem .5rem 0;
       color: $decorate-color;
-      font-weight: $bold-font-weight;
-      font-size: $base-font-size;
+      background-color: $text-background-color;
+      font-weight: map-get($base, font-weight-bold);
       text-align: right;
       text-transform: uppercase;
     }
     &>pre {
-      margin: 0;
+      padding-top: 0;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       &>code {
-        padding-top: 0;
         &>.rouge-table {
-          margin: 0;
+          width: auto;
+          margin: 0 0 -1rem -1rem;
           tbody, tr, td {
             border: none;
             padding-top: 0;
@@ -103,27 +134,37 @@
               width: 100%;
               @include flexbox;
               &>.code {
-                @include flexbox;
+                padding: 0 0 1rem .5rem;
                 overflow: auto;
                 -webkit-overflow-scrolling: touch;
               }
             }
           }
-          tbody td>pre {
-            margin: 0;
-            border-radius: 0;
-            &.lineno {
-              color: $text-color-l;
-              @include user-select(none);
+          tbody td {
+            &.gl {
+              padding-left: 1rem;
+            }
+            &>pre {
+              @include round-rect(0);
+              display: block;
+              overflow: visible;
+              margin: 0;
+              &.lineno {
+                color: $text-color-l;
+                @include user-select(none);
+              }
             }
           }
         }
       }
     }
   }
-  ul,
-  ol {
-    margin: $content-gap 0 $content-gap $spacing-unit;
+  ul, ol {
+    margin-left: 1.5rem;
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     li {
       margin: 0;
       p {
@@ -132,19 +173,17 @@
     }
   }
   dl {
-    margin: $content-gap 0;
-    dt,
-    dd {
+    dt, dd {
       margin: 0;
       p {
         margin: 0;
       }
     }
     dt {
-      font-weight: $bold-font-weight;
+      font-weight: map-get($base, font-weight-bold);
     }
     dd {
-      margin-left: $base-font-size * 2;
+      margin-left: 2rem;
     }
   }
   table {
@@ -152,24 +191,16 @@
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: $content-gap 0;
     border-collapse: collapse;
-    th,
-    td {
-      border: 1px solid $border-color;
-      padding: $base-font-size * .5;
-    }
-    thead,
-    tbody {
-      border: 1px solid $border-color;
-    }
-    tbody>tr:nth-child(even) {
+    thead, tfoot {
       background-color: $text-background-color;
     }
-  }
-  hr {
-    border: 0 dashed $border-color;
-    border-top-width: 2px;
-    margin: $base-font-size 0;
+    th, td {
+      border: 1px solid $border-color-l;
+      padding: .5rem;
+    }
+    th {
+      font-weight: map-get($base, font-weight-bold);
+    }
   }
 }

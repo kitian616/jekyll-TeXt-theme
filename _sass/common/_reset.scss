@@ -1,0 +1,171 @@
+@mixin block-elements {
+  h1, h2, h3, h4, h5, h6, p,
+  hr, blockquote, figure, pre, .highlighter-rouge,
+  ul, ol, dl, table, .footnotes {
+    @content;
+  }
+}
+@mixin heading-elements {
+  h1, h2, h3, h4, h5, h6 {
+    @content;
+  }
+}
+
+*,
+::before,
+::after {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/**
+ * 1. Prevent adjustments of font size after orientation changes in iOS.
+ **/
+
+html {
+  height: 100%;
+  font-size: map-get($base, font-size-root);
+  -webkit-text-size-adjust: 100%; /* 1 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@include block-elements() {
+  margin: map-get($base, vertical-space) 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
+  color: $text-color;
+  background-color: $background-color;
+  ::-moz-selection {
+    background: $select-color;
+  }
+  ::-webkit-selection {
+    background: $select-color;
+  }
+  ::selection {
+    background: $select-color;
+  }
+}
+
+input, textarea, select, button {
+  font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
+  color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: map-get($base, font-weight-bold);
+}
+
+h1 {
+  font-size: map-get($base, font-size-h1);
+  color: $text-color-d;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h1-small);
+  }
+}
+
+h2 {
+  font-size: map-get($base, font-size-h2);
+  color: $text-color-d;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h2-small);
+  }
+}
+
+h3 {
+  font-size: map-get($base, font-size-h3);
+  color: $text-color-d;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h3-small);
+  }
+}
+
+h4 {
+  font-size: map-get($base, font-size-h4);
+  color: $text-color;
+  @include media-breakpoint-down(s) {
+    font-size: map-get($base, font-size-h4-small);
+  }
+}
+
+h5 {
+  font-size: map-get($base, font-size-h5);
+  color: $text-color;
+}
+
+h6 {
+  font-size: map-get($base, font-size-h6);
+  color: $text-color-l;
+}
+
+a {
+  font-weight: map-get($base, font-weight-bold);
+  @include link-normal() {
+    text-decoration: none;
+  }
+  .not-touch & {
+    @include link-hover() {
+      text-decoration: underline;
+    }
+  }
+  @include link-active() {
+    text-decoration: underline;
+  }
+  @include link-text-colors($main-color-1);
+  @include link-animation();
+}
+
+pre, code {
+  font-family: map-get($base, code-font-family);
+}
+
+code {
+  font-size: map-get($base, font-size-tiny);
+  line-height: map-get($base, line-height-small);
+}
+
+figure>img {
+  display: block;
+}
+
+figcaption {
+  font-size: map-get($base, font-size-sub);
+}
+
+.icon {
+  display: block;
+  >svg {
+    display: block;
+  }
+}
+
+button {
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+}
+
+input {
+  &::-ms-clear {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}

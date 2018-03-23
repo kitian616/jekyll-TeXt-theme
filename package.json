@@ -1,6 +1,6 @@
 {
   "name": "jekyll-text-theme",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "A text first theme for Jekyll.",
   "scripts": {
     "build": "bundle exec jekyll build",
@@ -8,6 +8,7 @@
     "default": "bundle exec jekyll serve -H 0.0.0.0 -t",
     "dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.dev.yml",
     "demo": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.demo.yml",
+    "production": "JEKYLL_ENV=production bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.demo.yml",
     "favicon": "gulp favicon",
     "icons": "gulp icons",
     "artwork": "gulp artwork",

@@ -1,0 +1,7 @@
+.m-error-404 {
+  @include flexbox;
+  @include align-items(center);
+  &>.main>h1 {
+    font-size: 7rem;
+  }
+}

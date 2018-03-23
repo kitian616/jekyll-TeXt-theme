@@ -1,0 +1,80 @@
+.m-post {
+  .col-2 {
+    display: none;
+    float: right;
+    &>aside {
+      box-sizing: border-box;
+      width: map-get($layout, aside-width);
+      position: absolute;
+      padding: 1.5rem;
+      padding-right: 0;
+      overflow: hidden;
+    }
+    @include media-breakpoint-down(l) {
+      float: none;
+    }
+  }
+  footer {
+    &>span {
+      color: $text-color-l;
+    }
+    &>.article-license {
+      position: relative;
+      max-width: 30rem;
+      margin: .8rem 0;
+    }
+  }
+  .article-previous-next {
+    word-wrap: break-word;
+    margin: map-get($base, vertical-space-large) * 2 0 map-get($base, vertical-space-large) 0;
+    padding-top: map-get($base, vertical-space-large) / 2;
+    @include split-line(top, 4px);
+    & > .article-previous, & > .article-next {
+      box-sizing: border-box;
+      width: 50%;
+      & > span {
+        font-weight: map-get($base, font-weight-bold);
+        color: $text-color-l;
+      }
+      & > a{
+        display: block;
+        @include link-text-colors($text-color, $main-color-1, $main-color-1);
+      }
+    }
+    & > .article-previous {
+      float: left;
+      padding-right: .5rem;
+    }
+    & > .article-next {
+      float: right;
+      padding-left: .5rem;
+      text-align: right;
+    }
+  }
+}
+
+.has-toc {
+  .m-post {
+    .col-1 {
+      margin-right: map-get($layout, aside-width);
+      @include media-breakpoint-down(l) {
+        margin-right: 0;
+      }
+    }
+    .col-2 {
+      width: map-get($layout, aside-width);
+      position: relative;
+      display: block;
+      &>aside {
+        &.fixed {
+          position: fixed;
+          z-index: 2;
+          -webkit-font-smoothing: subpixel-antialiased;
+        }
+      }
+      @include media-breakpoint-down(l) {
+        display: none;
+      }
+    }
+  }
+}

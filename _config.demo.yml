@@ -13,6 +13,7 @@
 
 # config file for demo site, DELETE IT IF YOU WANT.
 
+text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
 ## Base settings ##
 url: https://tianqi.name #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /jekyll-TeXt-theme
@@ -54,6 +55,10 @@ author:
   douban: someone  #your Douban username
   linkedin: someone  #your Linkedin username
 
+## TOC
+toc:
+  # selectors: 'h1,h2,h3'
+
 ## Comment system (Disqus) ##
 disqus:
   # shortname:  #the Disqus shortname for the site
@@ -73,19 +78,25 @@ gitalk:
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
-  # app_id:  #LeanCloud App id
-  # app_key:  #LeanCloud App key
-  # app_class:  #LeanCloud App class
+  app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+  app_key: Mzf5m9skSwYVWVXhGiYMNyXs
+  app_class: TeXtDemo
 
-# mathjax: true
+mathjax: true
+mathjax_autoNumber: true
+mermaid: true
+chart: true
 
 ## Paginate ##
-paginate: 5
+paginate: 7
 paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
 excerpt_type: html # text | html
+
+## Sources ##
+# sources: bootcss #eg: bootcss | unpkg
 
 ## Build ##
 markdown: kramdown
@@ -119,6 +130,3 @@ plugins:
 
 ## Server ##
 server_url: "0.0.0.0"
-
-## Development ##
-isdebug: false

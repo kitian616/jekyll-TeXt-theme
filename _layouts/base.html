@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%- include snippets/get-lang.html -%}
+<html lang="{{ __return }}">
+  <head>
+    {%- include common-head.html -%}
+    {%- include head-icons-rel.html -%}
+    {%- assign __path = '/assets/css/blog.css' -%}
+    {%- include snippets/prepend-baseurl.html -%}
+    <link rel="stylesheet" href="{{ __return }}">
+    {%- include scripts/utils.html -%}
+  </head>
+  <body>
+    <div class="m-page-stage js-page-stage">
+      <div class="m-page-content">
+        {%- include components/header.html -%}
+        <div class="m-page-main">{{ content }}</div>
+      </div>
+    </div>
+    {%- include components/footer.html -%}
+    {%- include scripts/common.html -%}
+    {%- if page.layout == "home" -%}
+      {%- include scripts/home.html -%}
+    {%- elsif page.layout == "page" -%}
+      {%- include scripts/page-post.html -%}
+    {%- elsif page.layout == "post" -%}
+      {%- include scripts/page-post.html -%}
+      {%- include scripts/post.html -%}
+    {%- elsif page.layout == "all" -%}
+      {%- include scripts/all.html -%}
+    {%- endif -%}
+    {%- include utils/mathjax.html -%}
+    {%- include utils/mermaid.html -%}
+    {%- include utils/chart.html -%}
+    {%- if jekyll.environment != "development" -%}
+      {%- include utils/google-analytics.html -%}
+    {%- endif -%}
+  </body>
+</html>

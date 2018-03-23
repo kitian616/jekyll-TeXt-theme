@@ -1,0 +1,52 @@
+{%- assign max_size = 1 -%}
+{%- assign min_size = 1 -%}
+{%- assign cur_size = 1 -%}
+{%- assign _tags = site.tags | sort -%}
+{%- for tag in _tags -%}
+  {%- assign cur_size = tag[1].size -%}
+  {%- if cur_size > max_size -%}
+    {%- assign max_size =  cur_size -%}
+  {%- endif -%}
+  {%- if cur_size < min_size -%}
+    {%- assign min_size = cur_size -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign gap_size =  max_size | minus: min_size | plus: 1 | divided_by: 4 -%}
+{%- if gap_size < 1 -%}
+  {%- assign gap_size = 1 -%}
+{%- endif -%}
+<div class="m-tags js-tags">
+  <ul>
+    <li>
+      <button type="button" class="js-article-tag js-tag-show-all all pill-button inactive" data-encode="">
+        Show All<div class="tag-count">{{ site.posts | size }}</div>
+      </button>
+    </li>
+    {%- for tag in _tags -%}
+      {%- assign cur_size = tag[1].size -%}
+      {%- assign m1 = min_size -%}
+      {%- assign n1 = m1 | plus: gap_size -%}
+      {%- assign m2 = n1 -%}
+      {%- assign n2 = m2 | plus: gap_size -%}
+      {%- assign m3 = n2 -%}
+      {%- assign n3 = m3 | plus: gap_size -%}
+      {%- assign m4 = n3 -%}
+      {%- assign n4 = m4 | plus: gap_size -%}
+      {%- if cur_size >= m1 and cur_size < n1 -%}
+        {%- assign c_index = 1 -%}
+      {%- elsif cur_size >= m2 and cur_size < n2 -%}
+        {%- assign c_index = 2 -%}
+      {%- elsif cur_size >= m3 and cur_size < n3 -%}
+        {%- assign c_index = 3 -%}
+      {%- elsif cur_size >= m4 and cur_size < n4 -%}
+        {%- assign c_index = 4 -%}
+      {%- else -%}
+        {%- assign c_index = 4 -%}
+      {%- endif -%}
+      <li><button type="button" class="js-article-tag tag-{{ c_index }} pill-button inactive" data-encode="{{ tag[0] | strip | url_encode }}">
+          <span>{{ tag[0] | strip }}</span><div class="tag-count">{{ tag[1].size }}</div>
+        </button>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
