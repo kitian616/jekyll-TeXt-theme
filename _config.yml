@@ -15,7 +15,7 @@ text_color_theme: forest #eg: default | dark | forest | ocean | chocolate | oran
 ## Base settings ##
 # url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: /
-title: 发条青蛙的冥想盆
+title: 方良印的随机存储器
 description: > #this means to ignore newlines until "nav_lists:"
   
 
