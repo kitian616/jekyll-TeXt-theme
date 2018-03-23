@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GitHub Pages 博客极简指南
+key: 20180104
 tags:
   - Web
   - GitHub
