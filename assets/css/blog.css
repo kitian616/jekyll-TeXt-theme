@@ -613,7 +613,6 @@ input:focus {
       margin-bottom: 0; }
   .m-article-content img:not(.emoji) {
     max-width: 100%;
-    max-height: 37rem;
     vertical-align: middle; }
   .m-article-content .emoji {
     display: inline-block;
