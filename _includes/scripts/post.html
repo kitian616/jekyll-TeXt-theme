@@ -56,7 +56,15 @@
         }
         lastScrollTop = scrollTop;
       }
+      setTimeout(function() {
+      }, 100);
       asideSticky() && (init(), setAside());
+      setTimeout(function() {
+        init();
+        $window.on('load', function() {
+          init();
+        });
+      }, 2000);
       $window.on('scroll', function() {
         asideSticky() && setAside();
       });
@@ -64,19 +72,19 @@
         setTocClass();
         asideSticky() && (init(), setAside(true));
       }, 100));
-      setTimeout(init, 4000);
     }
     function toc() {
-      var $tocUl = $('<ul></ul>'), $tocLi, $headings = $articleContent.find('{{ _toc_selectors }}'), headingsTop = [],
+      var $tocUl = $('<ul></ul>'), $tocLi, $headings = $articleContent.find('{{ _toc_selectors }}'), headingsTop = null,
         scrolling, activeLast, activeCur, rendered = false;
       function init() {
+        headingsTop = [];
         $headings.each(function() {
           headingsTop.push(Math.floor($(this).offset().top));
         });
       }
       function setActiveHeading(element, disabled) {
         var scrollTop = $window.scrollTop(), i;
-        if (disabled || headingsTop.length < 1) { return; }
+        if (disabled || !headingsTop || headingsTop.length < 1) { return; }
         if (element) {
           activeCur = element;
         } else {
@@ -112,10 +120,7 @@
         rendered = true;
       }
       asideSticky() && (render(), $window.on('load', function() {
-        setTimeout(function() {
-          init();
-          setActiveHeading(null, scrolling);
-        }, 1000);
+          init(); setActiveHeading(null, scrolling);
       }));
       $window.on('resize', window.throttle(function() {
         if (asideSticky()) {
