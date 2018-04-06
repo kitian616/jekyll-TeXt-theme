@@ -8,7 +8,61 @@
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/jekyll-TeXt-theme/assets/images/logo/icon-192x192.png">
 <!-- for Edge on Windows 10 https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx --><meta name="msapplication-TileImage" content="/jekyll-TeXt-theme/assets/images/logo/icon-144x144.png"><meta name="msapplication-square310x310logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-310x310.png"><meta name="msapplication-wide310x150logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-310x150.png"><meta name="msapplication-square150x150logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-150x150.png"><meta name="msapplication-square70x70logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-70x70.png">
-<meta name="msapplication-TileColor" content="#eeeeee"><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/blog.css"><script>
+<meta name="msapplication-TileColor" content="#eeeeee"><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/blog.css">
+    <script>(function() {
+  var Set = (function() {
+    var add = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (data[i] === item) {
+          return;
+        }
+      }
+      this.size ++;
+      data.push(item);
+      return data;
+    };
+
+    var Set = function(data) {
+      this.size = 0;
+      this._data = [];
+      var i;
+      if (data.length > 0) {
+        for (i = 0; i < data.length; i++) {
+          add.call(this, data[i]);
+        }
+      }
+    };
+    Set.prototype.add = add;
+    Set.prototype.get = function(index) { return this._data[index]; };
+    Set.prototype.has = function(item) {
+      var i, data = this._data;
+      for (i = 0; i < data.length; i++) {
+        if (this.get(i) === item) {
+          return true;
+        }
+      }
+      return false;
+    };
+    Set.prototype.is = function(map) {
+      if (map._data.length !== this._data.length) { return false; }
+      var i, j, flag, tData = this._data, mData = map._data;
+      for (i = 0; i < tData.length; i++) {
+        for (flag = false, j = 0; j < mData.length; j++) {
+          if (tData[i] === mData[j]) {
+            flag = true;
+            break;
+          }
+        }
+        if (!flag) { return false; }
+      }
+      return true;
+    };
+    Set.prototype.values = function() {
+      return this._data;
+    };
+    return Set;
+  })();
   window.isArray = function(val) {
     return Object.prototype.toString.call(val) === '[object Array]';
   };
@@ -17,59 +71,6 @@
   };
   window.Lazyload = (function(doc) {
     var queue = {js: [], css: []}, sources = {js: {}, css: {}}, context = this;
-    var Set = (function() {
-      var add = function(item) {
-        var i, data = this._data;
-        for (i = 0; i < data.length; i++) {
-          if (data[i] === item) {
-            return;
-          }
-        }
-        this.size ++;
-        data.push(item);
-        return data;
-      }
-
-      var Set = function(data) {
-        this.size = 0;
-        this._data = [];
-        if (data.length > 0) {
-          for (i = 0; i < data.length; i++) {
-            add.call(this, data[i]);
-          }
-        }
-      }
-      Set.prototype.add = add;
-      Set.prototype.get = function(index) { return this._data[index]; };
-      Set.prototype.has = function(item) {
-        var i, data = this._data;
-        for (i = 0; i < data.length; i++) {
-          if (this.get(i) === item) {
-            return true;
-          }
-        }
-        return false;
-      };
-      Set.prototype.is = function(map) {
-        if (map._data.length !== this._data.length) { return false; }
-        var i, j, flag, tData = this._data, mData = map._data;
-        for (i = 0; i < tData.length; i++) {
-          for (flag = false, j = 0; j < mData.length; j++) {
-            if (tData[i] === mData[j]) {
-              flag = true;
-              break;
-            }
-          }
-          if (!flag) { return false; }
-        }
-        return true;
-      };
-      Set.prototype.values = function() {
-        return this._data;
-      };
-      return Set;
-    })();
-
     var createNode = function(name, attrs) {
       var node = doc.createElement(name), attr;
       for (attr in attrs) {
@@ -78,10 +79,9 @@
         }
       }
       return node;
-    }
-    var end = function(type, url, urls) {
-      var s, q, qi, cbs, i, j, cur,
-        val, flag;
+    };
+    var end = function(type, url) {
+      var s, q, qi, cbs, i, j, cur, val, flag;
       if (type === 'js' || type ==='css') {
         s = sources[type], q = queue[type];
         s[url] = true;
@@ -91,7 +91,7 @@
             qi = cur, val = qi.urls.values();
             qi && (cbs = qi.callbacks);
             for (flag = true, j = 0; j < val.length; j++) {
-              cur = val[j]
+              cur = val[j];
               if (!s[cur]) {
                 flag = false;
               }
@@ -107,7 +107,7 @@
       }
     };
     var load = function(type, urls, callback) {
-      var s, si, q, qi, node, i, cur, flag,
+      var s, q, qi, node, i, cur,
         _urls = typeof urls === 'string' ? new Set([urls]) : new Set(urls), val, url;
       if (type === 'js' || type ==='css') {
         s = sources[type], q = queue[type];
@@ -137,7 +137,7 @@
                 node.onload = (function(type, url) {
                   return function() {
                     end(type, url);
-                  }
+                  };
                 })(type, url);
                 (doc.head || doc.body).appendChild(node);
                 s[url] = false;
@@ -184,10 +184,15 @@
     };
   };
 
+  window.decodeUrl = function(str) {
+    return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
+  };
+
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
-  }
-</script></head>
+  };
+})();</script>
+  </head>
   <body>
     <div class="m-page-stage js-page-stage">
       <div class="m-page-content"><header class="m-page-header">
@@ -364,50 +369,76 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
         title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.</p>
     </footer>
   </div>
-</div><script>
-  (function () {
-    var root = document.body
-    function classnames(classes) {
-      var i, cur, _classes = '';
-      if (window.isString(classes)) {
-        _classes =  classes;
-      } else if (window.isArray(classes)) {
-        for (i = 0; i < classes.length; i++) {
-          cur = classes[i];
-          if (window.isString(cur)) {
-            _classes = _classes.concat(_classes ? ' ' + cur : cur);
-          }
+</div><script>(function () {
+  var $body = document.body;
+  function classnames(classes) {
+    var i, cur, _classes = '';
+    if (window.isString(classes)) {
+      _classes =  classes;
+    } else if (window.isArray(classes)) {
+      for (i = 0; i < classes.length; i++) {
+        cur = classes[i];
+        if (window.isString(cur)) {
+          _classes = _classes.concat(_classes ? ' ' + cur : cur);
         }
-      } else {
-        return '';
       }
-      return _classes;
-    }
-    function addClass(dom, classname) {
-      dom.setAttribute('class', classnames([dom.getAttribute('class'), classname]));
-    }
-    if (window.hasEvent('touchstart')) {
-      addClass(root, 'is-touch');
-      document.addEventListener("touchstart", function(){}, false);
     } else {
-      addClass(root, 'not-touch');
+      return '';
     }
-  })();
-</script><script>
+    return _classes;
+  }
+  function addClass(dom, classname) {
+    dom.setAttribute('class', classnames([dom.getAttribute('class'), classname]));
+  }
+  if (window.hasEvent('touchstart')) {
+    addClass($body, 'is-touch');
+    document.addEventListener('touchstart', function(){}, false);
+  } else {
+    addClass($body, 'not-touch');
+  }
+})();</script><script>
   (function() {
-    function scrollAnimateTo(destination, duration, callback) {
-      var $body = $('html, body'), bodyScrollTop = $body.scrollTop();
-      if(bodyScrollTop === destination) { return; }
-      $body.animate({ scrollTop: destination }, duration, callback);
-    }
-    window.scrollTopAnchor = function(anchor, callback) {
-      scrollAnimateTo($(anchor).offset().top, 400, function() {
-        window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
-        callback && callback();
-      });
-    }
+    window.TEXT_VARIABLES = {
+      jekyll: {
+        environment: 'production'
+      },
+      sources: {
+        jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
+        leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js',
+        gitalk: {
+          js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
+          css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
+        },
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
+      },
+      site: {
+        leancloud: {
+          app_id: 'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
+          app_key: 'Mzf5m9skSwYVWVXhGiYMNyXs',
+          app_class: 'TeXtDemo'
+        },
+        toc: {
+          selectors: 'h1,h2,h3'
+        }
+      }
+    };
   })();
-  window.Lazyload.js('https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', function() {
+</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  function scrollAnimateTo(destination, duration, callback) {
+    var $body = $('html, body'), bodyScrollTop = $body.scrollTop();
+    if(bodyScrollTop === destination) { return; }
+    $body.animate({ scrollTop: destination }, duration, callback);
+  }
+  window.scrollTopAnchor = function(anchor, callback) {
+    scrollAnimateTo($(anchor).offset().top, 400, function() {
+      window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
+      callback && callback();
+    });
+  };
+  window.Lazyload.js(SOURCES.jquery, function() {
     var $articleContent = $('.m-post, .m-page').find('.m-article-content'), $this;
     $articleContent.children('.highlight').each(function() {
       $this = $(this);
@@ -422,181 +453,307 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
       window.scrollTopAnchor('#' + $(this).parent().attr('id'));
     });
   });
-</script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', function() {
+})();(function() {
+  function errorHandler(error, callback) {
+    if (error) {
+      callback && callback(error);
+      console.error(error);
+    }
+  }
+
+  function pageview(_AV  ,options) {
+    var AV = _AV;
+    var appId, appKey, appClass;
+    appId = options.appId;
+    appKey = options.appKey;
+    appClass = options.appClass;
+    AV.init({
+      appId: appId,
+      appKey: appKey
+    });
+    return {
+      get: get,
+      increase: increase
+    };
+
+    function searchKey(key) {
+      var query = new AV.Query(appClass);
+      query.equalTo('key', key);
+      return query.first();
+    }
+
+    function insert(key, title) {
+      var Blog = AV.Object.extend(appClass);
+      var blog = new Blog();
+      blog.set('title', title);
+      blog.set('key', key);
+      blog.set('views', 0);
+      return blog.save();
+    }
+
+    function increment(result) {
+      result.increment('views', 1);
+      return result.save(null, {
+        fetchWhenSave: true
+      });
+    }
+
+    function get(key, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          callback && callback(result.attributes.views);
+        }
+      }, errorHandler);
+    }
+
+    function increase(key, title, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          increment(result).then(function(result) {
+            callback && callback(result.attributes.views);
+          });
+        } else {
+          insert(key, title).then(function(result) {
+            increment(result).then(function(result) {
+              callback && callback(result.attributes.views);
+            });
+          }, errorHandler);
+        }
+      }, errorHandler);
+    }
+  }
+  window.pageview = pageview;
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $document = $(window.document), $root;
+    var rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop, lastScrollTop;
+    var offsetBottom = 0, disabled = false;
+
+    function setOptions(options) {
+      var _options = options || {};
+      _options.offsetBottom && (offsetBottom = _options.offsetBottom);
+      _options.disabled !== undefined && (disabled = _options.disabled);
+      calc(true);
+    }
+    function init() {
+      top();
+      var rootOffset = $root.offset();
+      rootHeight = $root.outerHeight();
+      rootTop = rootOffset.top;
+      rootLeft = rootOffset.left;
+    }
+    function calc(needInit) {
+      needInit && init();
+      scrollBottom = $document.outerHeight() - offsetBottom - rootHeight;
+      rootBottomTop = scrollBottom - rootTop;
+    }
+    function top() {
+      $root.removeClass('fixed').css({
+        left: 0,
+        top: 0
+      });
+    }
+    function fixed() {
+      $root.addClass('fixed').css({
+        left: rootLeft + 'px',
+        top: 0
+      });
+    }
+    function bottom() {
+      $root.removeClass('fixed').css({
+        left: 0,
+        top: rootBottomTop + 'px'
+      });
+    }
+    function setState(force) {
+      force !== true && (force = false);
+      var scrollTop = $window.scrollTop();
+      if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
+        (!force && lastScrollTop >= rootTop && lastScrollTop <= scrollBottom) || fixed();
+      } else if (scrollTop < rootTop) {
+        (!force && lastScrollTop < rootTop) || top();
+      } else {
+        (!force && lastScrollTop > scrollBottom) || bottom();
+      }
+      lastScrollTop = scrollTop;
+    }
+
+    function affix(options) {
+      $root = this;
+      setOptions(options);
+      setTimeout(function() {
+      }, 100);
+      !disabled && setState();
+      setTimeout(function() {
+        calc();
+        $window.on('load', function() {
+          calc();
+        });
+      }, 2000);
+      $window.on('scroll', function() {
+        !disabled && setState();
+      });
+      $window.on('resize', window.throttle(function() {
+        !disabled && (calc(true), setState(true));
+      }, 100));
+      return {
+        setOptions: setOptions
+      };
+    }
+    $.fn.affix = affix;
+  });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $tocUl = $('<ul></ul>'), $tocLi, $headings, $activeLast, $activeCur;
+    var selectors = 'h1,h2,h3', container = 'body', disabled = false;
+    var headingsPos, scrolling = false, rendered = false;
+    function setOptions(options) {
+      var _options = options || {};
+      _options.selectors && (selectors = _options.selectors);
+      _options.container && (container = _options.container);
+      _options.disabled !== undefined && (disabled = _options.disabled);
+      $headings = $(container).find(selectors);
+      calc();
+    }
+    function calc() {
+      headingsPos = [];
+      $headings.each(function() {
+        headingsPos.push(Math.floor($(this).offset().top));
+      });
+    }
+    function setActiveHeading(element, disabled) {
+      var scrollTop = $window.scrollTop(), i;
+      if (disabled || !headingsPos || headingsPos.length < 1) { return; }
+      if (element) {
+        $activeCur = element;
+      } else {
+        for (i = 0; i < headingsPos.length; i++) {
+          if (scrollTop >= headingsPos[i]) {
+            $activeCur = $tocLi.eq(i);
+          } else {
+            $activeCur || ($activeCur = $tocLi.eq(i));
+            break;
+          }
+        }
+      }
+      $activeLast && $activeLast.removeClass('toc-active');
+      ($activeLast = $activeCur).addClass('toc-active');
+    }
+    function render($root) {
+      $root.append($tocUl);
+      $headings.each(function() {
+        var $this = $(this);
+        $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+          .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
+      });
+      $tocLi = $tocUl.children('li');
+      $tocUl.on('click', 'a', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        scrolling = true;
+        setActiveHeading($this.parent());
+        window.scrollTopAnchor($this.attr('href'), function() {
+          scrolling = false;
+        });
+      });
+      rendered = true;
+    }
+    function toc(options) {
+      setOptions(options);
+      disabled || (render(this), setActiveHeading(null, scrolling),
+        $window.on('load', function() {
+          calc();
+        })
+      );
+      $window.on('resize', window.throttle(function() {
+        console.log('toc', disabled);
+        if (!disabled) {
+          rendered || render();
+          calc();
+          setActiveHeading(null, scrolling);
+        }
+      }));
+      $window.on('scroll', function() {
+        disabled || setActiveHeading(null, scrolling);
+      });
+      return {
+        setOptions: setOptions
+      };
+    }
+    toc.setOptions = setOptions;
+    $.fn.toc = toc;
+  });
+})();(function() {
+  var ENVIRONMENT = window.TEXT_VARIABLES.jekyll.environment;
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  var LEANCLOUD = window.TEXT_VARIABLES.site.leancloud;
+  window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window);
     var $pageStage = $('.js-page-stage');
-    var $pageMain = $('.js-main');
     var $pageFooter = $('.js-page-footer');
     var $articleContent = $('.js-article-content');
     var $articleAside = $('.js-article-aside');
     var $toc = $('.js-toc');
     var $col2 = $('.js-col-2');
-    var hasTitle = $articleContent.find('h1,h2,h3').length > 0;
-    function asideSticky() {
-      return $col2.css('display') !== 'none' && $pageStage.hasClass('has-toc');
-    }
-    function setTocClass() {
-      if (hasTitle) {
-        !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
-      }
-    }
-    function setAsideTOC() {
-      var asideTop, asideLeft, scrollBottom, asideBottomTop, lastScrollTop;
-      function init() {
-        var asideOffset = $articleAside.offset();
-        var footerOffset = $pageFooter.offset();
-        var mainOffset = $pageMain.offset();
-        asideTop = mainOffset.top;
-        asideHeight = $toc.outerHeight() + parseInt($articleAside.css('padding-top'), 10) + parseInt($articleAside.css('padding-bottom'), 10);
-        asideLeft = mainOffset.left + $pageMain.outerWidth() - $articleAside.outerWidth() - parseInt($pageMain.css('padding-right'), 10);
-        scrollBottom = footerOffset.top - asideHeight;
-        asideBottomTop = scrollBottom - mainOffset.top;
-      }
-      function setAside(force) {
-        force !== true && (force = false);
-        var scrollTop = $window.scrollTop();
-        if (scrollTop >= asideTop && scrollTop <= scrollBottom) {
-          (!force && lastScrollTop >= asideTop && lastScrollTop <= scrollBottom) ||
-          $articleAside.addClass('fixed').css({
-            left: asideLeft + 'px',
-            top: 0
-          });
-        } else if (scrollTop < asideTop) {
-          (!force && lastScrollTop < asideTop) ||
-          $articleAside.removeClass('fixed').css({
-            left: 0,
-            top: 0
-          });
-        } else {
-          (!force && lastScrollTop > scrollBottom) ||
-          $articleAside.removeClass('fixed').css({
-            left: 0,
-            top: asideBottomTop + 'px'
-          });
-        }
-        lastScrollTop = scrollTop;
-      }
-      asideSticky() && (init(), setAside());
-      $window.on('scroll', function() {
-        asideSticky() && setAside();
-      });
-      $window.on('resize', window.throttle(function() {
-        setTocClass();
-        asideSticky() && (init(), setAside(true));
-      }, 100));
-      setTimeout(init, 4000);
-    }
-    function toc() {
-      var $tocUl = $('<ul></ul>'), $tocLi, $headings = $articleContent.find('h1,h2,h3'), headingsTop = [],
-        scrolling, activeLast, activeCur, rendered = false;
-      function init() {
-        $headings.each(function() {
-          headingsTop.push(Math.floor($(this).offset().top));
-        });
-      }
-      function setActiveHeading(element, disabled) {
-        var scrollTop = $window.scrollTop(), i;
-        if (disabled || headingsTop.length < 1) { return; }
-        if (element) {
-          activeCur = element;
-        } else {
-          for (i = 0; i < headingsTop.length; i++) {
-            if (scrollTop >= headingsTop[i]) {
-              activeCur = $tocLi.eq(i);
-            } else {
-              activeCur || (activeCur = $tocLi.eq(i));
-              break;
-            }
-          }
-        }
-        activeLast && activeLast.removeClass('toc-active');
-        (activeLast = activeCur).addClass('toc-active');
-      }
-      function render() {
-        $toc.append($tocUl);
-        $headings.each(function() {
-          var $this = $(this);
-          $tocUl.append($('<li></li>').addClass('toc-' + $this.prop("tagName").toLowerCase())
-            .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
-        });
-        $tocLi = $tocUl.children('li');
-        $tocUl.on('click', 'a', function(e) {
-          e.preventDefault();
-          var $this = $(this);
-          scrolling = true;
-          setActiveHeading($this.parent());
-          window.scrollTopAnchor($this.attr('href'), function() {
-            scrolling = false;
-          });
-        });
-        rendered = true;
-      }
-      asideSticky() && (render(), $window.on('load', function() {
-        setTimeout(function() {
-          init();
-          setActiveHeading(null, scrolling);
-        }, 1000);
-      }));
-      $window.on('resize', window.throttle(function() {
-        if (asideSticky()) {
-          rendered || render();
-          init();
-          setActiveHeading(null, scrolling);
-        }
-      }));
-      $window.on('scroll', function() {
-        asideSticky() && setActiveHeading(null, scrolling);
-      });
-    }
-    setTocClass();
-    toc();
-    setTimeout(function() {
-      setAsideTOC();
-    }, 1000);
-  });window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
-    AV.init({
-      appId: 'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
-      appKey: 'Mzf5m9skSwYVWVXhGiYMNyXs'
-    });
-    var query = new AV.Query('TeXtDemo');
-    query.equalTo('key', '20160504');
-    query.first().then(function(result) {
-      if (result) {
-        addOne(result)
-      } else {
-        var Blog = AV.Object.extend('TeXtDemo');
-        var blog = new Blog();
-        blog.set('title', 'Jekyll - Footnote');
-        blog.set('key', '20160504');
-        blog.set('views', 0);
-        blog.save().then(function(page) {
-          addOne(page)
-        }, function(error) {
-          if (error) {
-            throw error;
-          }
-        });
-      }
+    var toc, affix;
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+    var tocDisabled = true;
 
-      function addOne(page) {
-        page.increment('views', 1);
-        page.save(null, {
-          fetchWhenSave: true
-        }).then(function(page) {
-          $("#post-key-20160504").text(page.attributes.views);
-        }, function(error) {
-          if (error) {
-            throw error;
-          }
-        });
-      }
-    }, function(error) {
-      if (error) {
-        throw error;
-      }
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      console.log(tocDisabled);
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    if (hasToc) {
+      !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
+    }
+    setTimeout(function() {
+      toc = $toc.toc({
+        selectors: TOC_SELECTOR,
+        container: $articleContent
+      });
+      affix = $articleAside.affix({
+        offsetBottom: $pageFooter.outerHeight()
+      });
+    }, 1000);
+  });
+
+  // page view
+  if (
+    LEANCLOUD.app_id &&
+    LEANCLOUD.app_key &&
+    LEANCLOUD.app_class &&
+    ENVIRONMENT !== 'development') {
+      window.Lazyload.js([SOURCES.jquery, SOURCES.leancloud_js_sdk], function() {
+      var AV = window.AV;
+
+      var pageview = window.pageview(AV, {
+        appId: LEANCLOUD.app_id,
+        appKey: LEANCLOUD.app_key,
+        appClass: LEANCLOUD.app_class
+      });
+      var key = '20160504';
+      var title = window.decodeUrl('Jekyll+-+Footnote');
+
+      pageview.increase(key, title, function(view) {
+        $('#post-key-20160504').text(view);
+      });
     });
-  });</script><script type="text/x-mathjax-config">
+  }
+})();</script><script type="text/x-mathjax-config">
 	var _config = { tex2jax: {
 		inlineMath: [['$','$'], ['\\(','\\)']]
 	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
