@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "jquery": true
+
+    },
+    "rules": {
+        "no-console": "off",
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
+        "comma-dangle": ["error", "never"],
+        "block-scoped-var": "error",
+        "default-case": "error",
+        "no-extra-bind": "error",
+        "camelcase": "error",
+
+    },
+    "extends": ["eslint:recommended"]
+}

@@ -1,0 +1,33 @@
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+
+<script>
+  (function() {
+    window.TEXT_VARIABLES = {
+      jekyll: {
+        environment: '{{ jekyll.environment }}'
+      },
+      sources: {
+        jquery: '{{ _sources.jquery }}',
+        leancloud_js_sdk: '{{ _sources.leancloud_js_sdk }}',
+        chart: '{{ _sources.chart }}',
+        gitalk: {
+          js: '{{ _sources.gitalk.js }}',
+          css: '{{ _sources.gitalk.css }}'
+        },
+        mathjax: '{{ _sources.mathjax }}',
+        mermaid: '{{ _sources.mermaid }}'
+      },
+      site: {
+        leancloud: {
+          app_id: '{{ site.leancloud.app_id }}',
+          app_key: '{{ site.leancloud.app_key }}',
+          app_class: '{{ site.leancloud.app_class }}'
+        },
+        toc: {
+          selectors: '{{ site.toc.selectors | default: site.data.variables.default.toc.selectors }}'
+        }
+      }
+    };
+  })();
+</script>

@@ -9,6 +9,8 @@ tags: Test English
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
 
+<!--more-->
+
 ## TeXt Theme Details
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)

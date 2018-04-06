@@ -19,7 +19,7 @@ TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and
 - Table of contents
 - Tag
 - Search
-- Reading quantity ([LeanCloud](https://leancloud.cn/))
+- Page views ([LeanCloud](https://leancloud.cn/))
 - Emoji ([Jemoji](https://github.com/jekyll/jemoji))
 - Comment ([Disqus](https://disqus.com/))
 - Google Analytics

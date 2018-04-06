@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/kitian616#readme",
   "devDependencies": {
+    "eslint": "^4.19.1",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-svg2png": "^2.0.2",
