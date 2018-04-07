@@ -1,9 +1,9 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $tocUl = $('<ul></ul>'), $tocLi, $headings, $activeLast, $activeCur;
+    var $window = $(window), $root, $tocUl = $('<ul></ul>'), $tocLi, $headings, $activeLast, $activeCur;
     var selectors = 'h1,h2,h3', container = 'body', disabled = false;
-    var headingsPos, scrolling = false, rendered = false;
+    var headingsPos, scrolling = false, rendered = false, hasInit = false;
     function setOptions(options) {
       var _options = options || {};
       _options.selectors && (selectors = _options.selectors);
@@ -18,7 +18,7 @@
         headingsPos.push(Math.floor($(this).offset().top));
       });
     }
-    function setActiveHeading(element, disabled) {
+    function setState(element, disabled) {
       var scrollTop = $window.scrollTop(), i;
       if (disabled || !headingsPos || headingsPos.length < 1) { return; }
       if (element) {
@@ -36,42 +36,62 @@
       $activeLast && $activeLast.removeClass('toc-active');
       ($activeLast = $activeCur).addClass('toc-active');
     }
-    function render($root) {
-      $root.append($tocUl);
-      $headings.each(function() {
-        var $this = $(this);
-        $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
-          .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
-      });
-      $tocLi = $tocUl.children('li');
-      $tocUl.on('click', 'a', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        scrolling = true;
-        setActiveHeading($this.parent());
-        window.scrollTopAnchor($this.attr('href'), function() {
-          scrolling = false;
+    function render() {
+      if(!rendered) {
+        $root.append($tocUl);
+        $headings.each(function() {
+          var $this = $(this);
+          $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+            .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
         });
-      });
+        $tocLi = $tocUl.children('li');
+        $tocUl.on('click', 'a', function(e) {
+          e.preventDefault();
+          var $this = $(this);
+          scrolling = true;
+          setState($this.parent());
+          window.scrollTopAnchor($this.attr('href'), function() {
+            scrolling = false;
+          });
+        });
+      }
       rendered = true;
     }
+    function init() {
+      var interval, timeout;
+      if(!hasInit) {
+        render(); calc(); setState(null, scrolling);
+        // run calc every 1.5 seconds
+        interval = setInterval(function() {
+          calc();
+        }, 1500);
+        window.pageLoad.then(function() {
+          clearInterval(interval);
+          clearTimeout(timeout);
+        });
+        timeout = setTimeout(function() {
+          clearInterval(interval);
+        }, 50000);
+        $window.on('scroll', function() {
+          disabled || setState(null, scrolling);
+        });
+        $window.on('resize', window.throttle(function() {
+          if (!disabled) {
+            render(); calc(); setState(null, scrolling);
+          }
+        }, 100));
+      }
+      hasInit = true;
+    }
     function toc(options) {
+      $root = this;
       setOptions(options);
-      disabled || (render(this), setActiveHeading(null, scrolling),
-        $window.on('load', function() {
-          calc();
-        })
-      );
+      if (!disabled) {
+        init();
+      }
       $window.on('resize', window.throttle(function() {
-        if (!disabled) {
-          rendered || render();
-          calc();
-          setActiveHeading(null, scrolling);
-        }
-      }));
-      $window.on('scroll', function() {
-        disabled || setActiveHeading(null, scrolling);
-      });
+        init();
+      }, 200));
       return {
         setOptions: setOptions
       };

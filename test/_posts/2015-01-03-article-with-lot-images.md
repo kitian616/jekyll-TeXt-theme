@@ -5,13 +5,13 @@ key: 20150103
 tags: Test English
 ---
 
-## TeXt Theme
+## TeXt Theme - Cover
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
 
 <!--more-->
 
-## TeXt Theme Details
+## TeXt Theme - Details
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
@@ -38,9 +38,3 @@ tags: Test English
 ## Color Theme: Orange
 
 ![orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png)
-
-<script>
-window.onload=function(){
-  console.log('load');
-}
-</script>

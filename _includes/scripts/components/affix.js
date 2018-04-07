@@ -3,7 +3,7 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window), $document = $(window.document), $root;
     var rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop, lastScrollTop;
-    var offsetBottom = 0, disabled = false;
+    var offsetBottom = 0, disabled = false, hasInit = false;
 
     function setOptions(options) {
       var _options = options || {};
@@ -11,15 +11,15 @@
       _options.disabled !== undefined && (disabled = _options.disabled);
       calc(true);
     }
-    function init() {
+    function initData() {
       top();
       var rootOffset = $root.offset();
       rootHeight = $root.outerHeight();
       rootTop = rootOffset.top;
       rootLeft = rootOffset.left;
     }
-    function calc(needInit) {
-      needInit && init();
+    function calc(needInitData) {
+      needInitData && initData();
       scrollBottom = $document.outerHeight() - offsetBottom - rootHeight;
       rootBottomTop = scrollBottom - rootTop;
     }
@@ -53,25 +53,40 @@
       }
       lastScrollTop = scrollTop;
     }
+    function init() {
+      if(!hasInit) {
+        var interval, timeout;
+        calc(true); setState();
+        // run calc every 1.5 seconds
+        interval = setInterval(function() {
+          calc();
+        }, 1500);
+        window.pageLoad.then(function() {
+          clearInterval(interval);
+          clearTimeout(timeout);
+        });
+        timeout = setTimeout(function() {
+          clearInterval(interval);
+        }, 50000);
+        $window.on('scroll', function() {
+          disabled || setState();
+        });
+        $window.on('resize', window.throttle(function() {
+          disabled || (calc(true), setState(true));
+        }, 100));
+        hasInit = true;
+      }
+    }
 
     function affix(options) {
       $root = this;
       setOptions(options);
-      setTimeout(function() {
-      }, 100);
-      !disabled && setState();
-      setTimeout(function() {
-        calc();
-        $window.on('load', function() {
-          calc();
-        });
-      }, 2000);
-      $window.on('scroll', function() {
-        !disabled && setState();
-      });
+      if (!disabled) {
+        init();
+      }
       $window.on('resize', window.throttle(function() {
-        !disabled && (calc(true), setState(true));
-      }, 100));
+        init();
+      }, 200));
       return {
         setOptions: setOptions
       };

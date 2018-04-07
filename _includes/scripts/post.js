@@ -13,7 +13,7 @@
     var $col2 = $('.js-col-2');
     var toc, affix;
     var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
-    var tocDisabled = true;
+    var tocDisabled = false;
 
     function disabled() {
       return $col2.css('display') === 'none' || !hasToc;
@@ -32,13 +32,17 @@
     if (hasToc) {
       !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
     }
+    tocDisabled = disabled();
+
     setTimeout(function() {
       toc = $toc.toc({
         selectors: TOC_SELECTOR,
-        container: $articleContent
+        container: $articleContent,
+        disabled: tocDisabled
       });
       affix = $articleAside.affix({
-        offsetBottom: $pageFooter.outerHeight()
+        offsetBottom: $pageFooter.outerHeight(),
+        disabled: tocDisabled
       });
     }, 1000);
   });
