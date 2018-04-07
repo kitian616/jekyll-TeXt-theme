@@ -2,7 +2,7 @@
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Test - Article With A Lot Of images - TeXt Theme</title>
-<meta name="description" content="TeXt Theme">
+<meta name="description" content="TeXt Theme - Cover">
 <link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2015/01/03/article-with-lot-images.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/jekyll-TeXt-theme/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/jekyll-TeXt-theme/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
@@ -191,6 +191,23 @@
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
   };
+
+  window.pageLoad = (function () {
+    var loaded = false, cbs = [];
+    window.addEventListener('load', function () {
+      var i, cb; loaded = true;
+      if (cbs.length > 0) {
+        for (i = 0; i < cbs.length; i++) {
+          cb = cbs[i]; cb();
+        }
+      }
+    });
+    return {
+      then: function(cb) {
+        cb && (loaded ? cb() : (cbs.push(cb)));
+      }
+    };
+  })();
 })();</script>
   </head>
   <body>
@@ -233,13 +250,13 @@
   </div>
 </div>
 </header>
-				<div class="m-article-content js-article-content" itemprop="articleBody"><h2 id="text-theme">TeXt Theme</h2>
+				<div class="m-article-content js-article-content" itemprop="articleBody"><h2 id="text-theme---cover">TeXt Theme - Cover</h2>
 
 <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png" alt="TeXt Theme" /></p>
 
 <!--more-->
 
-<h2 id="text-theme-details">TeXt Theme Details</h2>
+<h2 id="text-theme---details">TeXt Theme - Details</h2>
 
 <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png" alt="TeXt Theme Details" /></p>
 
@@ -266,13 +283,6 @@
 <h2 id="color-theme-orange">Color Theme: Orange</h2>
 
 <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png" alt="orange" /></p>
-
-<script>
-window.onload=function(){
-  console.log('load');
-}
-</script>
-
 </div>
 				<footer><meta itemprop="dateModified" content="2015-01-03T00:00:00+08:00"><div class="article-license"><div class="m-license"><div class="clearfix"><a class="octocat" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2015-01-03-article-with-lot-images.md">
         <img alt="View on Github" src="/jekyll-TeXt-theme/assets/images/octocat.jpg" />
@@ -410,7 +420,7 @@ window.onload=function(){
   }
 })();</script><script>
   (function() {
-    window.TEXT_VARIABLES = {
+    var TEXT_VARIABLES = {
       jekyll: {
         environment: 'production'
       },
@@ -433,9 +443,48 @@ window.onload=function(){
         },
         toc: {
           selectors: 'h1,h2,h3'
+        },
+        ga_tracking_id: '',
+        chart: 'true',
+        mermaid: 'true',
+        mathjax: 'true',
+        mathjax_autoNumber: 'true',
+      },
+      page_origin: {
+        chart: '',
+        mermaid: '',
+        mathjax: '',
+        mathjax_autoNumber: '',
+      },
+    };
+    var assignKeys = ['chart', 'mermaid', 'mathjax', 'mathjax_autoNumber'];
+    var toBooleanKeys = ['chart', 'mermaid', 'mathjax', 'mathjax_autoNumber'];
+
+    function assign(obj1, obj2, keys) {
+      var i, key;
+      var assignObj = {};
+      if (keys && keys.length > 0) {
+        for (i = 0; i < keys.length; i++) {
+          key = keys[i];
+          if (obj2[key] === '' || obj2 === undefined) {
+            assignObj[key] = obj1[key];
+          } else {
+            assignObj[key] = obj2[key];
+          }
         }
       }
-    };
+      return assignObj;
+    }
+    function toBoolean(obj, keys) {
+      var i, key;
+      for (i = 0; i < keys.length; i++) {
+        key = keys[i];
+        obj[key] = obj[key] === 'true' ? true : false
+      }
+      return obj;
+    }
+    TEXT_VARIABLES.page = toBoolean(assign(TEXT_VARIABLES.site, TEXT_VARIABLES.page_origin, assignKeys), toBooleanKeys);
+    window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -540,7 +589,7 @@ window.onload=function(){
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window), $document = $(window.document), $root;
     var rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop, lastScrollTop;
-    var offsetBottom = 0, disabled = false;
+    var offsetBottom = 0, disabled = false, hasInit = false;
 
     function setOptions(options) {
       var _options = options || {};
@@ -548,15 +597,15 @@ window.onload=function(){
       _options.disabled !== undefined && (disabled = _options.disabled);
       calc(true);
     }
-    function init() {
+    function initData() {
       top();
       var rootOffset = $root.offset();
       rootHeight = $root.outerHeight();
       rootTop = rootOffset.top;
       rootLeft = rootOffset.left;
     }
-    function calc(needInit) {
-      needInit && init();
+    function calc(needInitData) {
+      needInitData && initData();
       scrollBottom = $document.outerHeight() - offsetBottom - rootHeight;
       rootBottomTop = scrollBottom - rootTop;
     }
@@ -590,25 +639,40 @@ window.onload=function(){
       }
       lastScrollTop = scrollTop;
     }
+    function init() {
+      if(!hasInit) {
+        var interval, timeout;
+        calc(true); setState();
+        // run calc every 1.5 seconds
+        interval = setInterval(function() {
+          calc();
+        }, 1500);
+        window.pageLoad.then(function() {
+          clearInterval(interval);
+          clearTimeout(timeout);
+        });
+        timeout = setTimeout(function() {
+          clearInterval(interval);
+        }, 50000);
+        $window.on('scroll', function() {
+          disabled || setState();
+        });
+        $window.on('resize', window.throttle(function() {
+          disabled || (calc(true), setState(true));
+        }, 100));
+        hasInit = true;
+      }
+    }
 
     function affix(options) {
       $root = this;
       setOptions(options);
-      setTimeout(function() {
-      }, 100);
-      !disabled && setState();
-      setTimeout(function() {
-        calc();
-        $window.on('load', function() {
-          calc();
-        });
-      }, 2000);
-      $window.on('scroll', function() {
-        !disabled && setState();
-      });
+      if (!disabled) {
+        init();
+      }
       $window.on('resize', window.throttle(function() {
-        !disabled && (calc(true), setState(true));
-      }, 100));
+        init();
+      }, 200));
       return {
         setOptions: setOptions
       };
@@ -618,9 +682,9 @@ window.onload=function(){
 })();(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $tocUl = $('<ul></ul>'), $tocLi, $headings, $activeLast, $activeCur;
+    var $window = $(window), $root, $tocUl = $('<ul></ul>'), $tocLi, $headings, $activeLast, $activeCur;
     var selectors = 'h1,h2,h3', container = 'body', disabled = false;
-    var headingsPos, scrolling = false, rendered = false;
+    var headingsPos, scrolling = false, rendered = false, hasInit = false;
     function setOptions(options) {
       var _options = options || {};
       _options.selectors && (selectors = _options.selectors);
@@ -635,7 +699,7 @@ window.onload=function(){
         headingsPos.push(Math.floor($(this).offset().top));
       });
     }
-    function setActiveHeading(element, disabled) {
+    function setState(element, disabled) {
       var scrollTop = $window.scrollTop(), i;
       if (disabled || !headingsPos || headingsPos.length < 1) { return; }
       if (element) {
@@ -653,43 +717,62 @@ window.onload=function(){
       $activeLast && $activeLast.removeClass('toc-active');
       ($activeLast = $activeCur).addClass('toc-active');
     }
-    function render($root) {
-      $root.append($tocUl);
-      $headings.each(function() {
-        var $this = $(this);
-        $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
-          .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
-      });
-      $tocLi = $tocUl.children('li');
-      $tocUl.on('click', 'a', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        scrolling = true;
-        setActiveHeading($this.parent());
-        window.scrollTopAnchor($this.attr('href'), function() {
-          scrolling = false;
+    function render() {
+      if(!rendered) {
+        $root.append($tocUl);
+        $headings.each(function() {
+          var $this = $(this);
+          $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+            .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
         });
-      });
+        $tocLi = $tocUl.children('li');
+        $tocUl.on('click', 'a', function(e) {
+          e.preventDefault();
+          var $this = $(this);
+          scrolling = true;
+          setState($this.parent());
+          window.scrollTopAnchor($this.attr('href'), function() {
+            scrolling = false;
+          });
+        });
+      }
       rendered = true;
     }
+    function init() {
+      var interval, timeout;
+      if(!hasInit) {
+        render(); calc(); setState(null, scrolling);
+        // run calc every 1.5 seconds
+        interval = setInterval(function() {
+          calc();
+        }, 1500);
+        window.pageLoad.then(function() {
+          clearInterval(interval);
+          clearTimeout(timeout);
+        });
+        timeout = setTimeout(function() {
+          clearInterval(interval);
+        }, 50000);
+        $window.on('scroll', function() {
+          disabled || setState(null, scrolling);
+        });
+        $window.on('resize', window.throttle(function() {
+          if (!disabled) {
+            render(); calc(); setState(null, scrolling);
+          }
+        }, 100));
+      }
+      hasInit = true;
+    }
     function toc(options) {
+      $root = this;
       setOptions(options);
-      disabled || (render(this), setActiveHeading(null, scrolling),
-        $window.on('load', function() {
-          calc();
-        })
-      );
+      if (!disabled) {
+        init();
+      }
       $window.on('resize', window.throttle(function() {
-        console.log('toc', disabled);
-        if (!disabled) {
-          rendered || render();
-          calc();
-          setActiveHeading(null, scrolling);
-        }
-      }));
-      $window.on('scroll', function() {
-        disabled || setActiveHeading(null, scrolling);
-      });
+        init();
+      }, 200));
       return {
         setOptions: setOptions
       };
@@ -712,7 +795,7 @@ window.onload=function(){
     var $col2 = $('.js-col-2');
     var toc, affix;
     var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
-    var tocDisabled = true;
+    var tocDisabled = false;
 
     function disabled() {
       return $col2.css('display') === 'none' || !hasToc;
@@ -720,7 +803,6 @@ window.onload=function(){
 
     $window.on('resize', window.throttle(function() {
       tocDisabled = disabled();
-      console.log(tocDisabled);
       toc && toc.setOptions({
         disabled: tocDisabled
       });
@@ -732,13 +814,17 @@ window.onload=function(){
     if (hasToc) {
       !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
     }
+    tocDisabled = disabled();
+
     setTimeout(function() {
       toc = $toc.toc({
         selectors: TOC_SELECTOR,
-        container: $articleContent
+        container: $articleContent,
+        disabled: tocDisabled
       });
       affix = $articleAside.affix({
-        offsetBottom: $pageFooter.outerHeight()
+        offsetBottom: $pageFooter.outerHeight(),
+        disabled: tocDisabled
       });
     }, 1000);
   });
@@ -748,44 +834,79 @@ window.onload=function(){
     LEANCLOUD.app_id &&
     LEANCLOUD.app_key &&
     LEANCLOUD.app_class &&
-    ENVIRONMENT !== 'development') {
+    '20150103' &&
+    ENVIRONMENT !== 'development' &&
+    ENVIRONMENT !== 'beta'
+  ) {
       window.Lazyload.js([SOURCES.jquery, SOURCES.leancloud_js_sdk], function() {
-      var AV = window.AV;
-
+      /* global AV */
       var pageview = window.pageview(AV, {
         appId: LEANCLOUD.app_id,
         appKey: LEANCLOUD.app_key,
         appClass: LEANCLOUD.app_class
       });
       var key = '20150103';
-      var title = window.decodeUrl('Test+-+Article+With+A+Lot+Of+images');
+      var title = 'Test - Article With A Lot Of images';
 
       pageview.increase(key, title, function(view) {
         $('#post-key-20150103').text(view);
       });
     });
   }
-})();</script><script type="text/x-mathjax-config">
-	var _config = { tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']]
-	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
-</script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
-    mermaid.init(undefined, '.language-mermaid');
-    mermaid.initialize({ startOnLoad: true });
-  });
-</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
-    var $canvas = null, $this = null, _ctx = null, _text = '';
-    $('.language-chart').each(function(){
-      $this = $(this);
-      $canvas = $('<canvas></canvas>');
-      _text = $this.text();
-      $this.text('').append($canvas);
-      _ctx = $canvas.get(0).getContext('2d');
-      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
+})();</script><script>(function () {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var PAGE = window.TEXT_VARIABLES.page;
+  if (PAGE.mathjax) {
+    var _config = { tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']]
+    }};
+    if (PAGE.mathjax_autoNumber == true) {
+      _config.TeX = { equationNumbers: { autoNumber: 'all' } };
+    }
+    window.MathJax = _config;
+    window.Lazyload.js(SOURCES.mathjax);
+  }
+})();/* global mermaid */
+(function () {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var PAGE = window.TEXT_VARIABLES.page;
+  if (PAGE.mermaid) {
+    window.Lazyload.js(SOURCES.mermaid, function() {
+      mermaid.init(undefined, '.language-mermaid');
+      mermaid.initialize({ startOnLoad: true });
     });
-  });
-</script></body>
+  }
+})();/* global Chart */
+(function () {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var PAGE = window.TEXT_VARIABLES.page;
+  if (PAGE.chart) {
+    window.Lazyload.js([SOURCES.jquery, SOURCES.chart], function() {
+      var $canvas = null, $this = null, _ctx = null, _text = '';
+      $('.language-chart').each(function(){
+        $this = $(this);
+        $canvas = $('<canvas></canvas>');
+        _text = $this.text();
+        $this.text('').append($canvas);
+        _ctx = $canvas.get(0).getContext('2d');
+        (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
+      });
+    });
+  }
+})();/* global ga */
+(function() {
+  var ENVIRONMENT = window.TEXT_VARIABLES.jekyll.environment;
+  var GA_TRACKING_ID = window.TEXT_VARIABLES.site.ga_tracking_id;
+  if(GA_TRACKING_ID && ENVIRONMENT !== 'development') {
+    /* eslint-disable */
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    /* eslint-enable */
+    ga('create', GA_TRACKING_ID, 'auto');
+    ga('send', 'pageview');
+  }
+})();</script>
+  </body>
 </html>
