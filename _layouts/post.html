@@ -52,8 +52,8 @@ layout: base
 				{%- endif -%}
 			</div>
 			{%- if jekyll.environment != "development" and page.comment != false -%}
-				<section>{%- include utils/comment-disqus.html -%}</section>
-				<section>{%- include utils/comment-gitalk.html -%}</section>
+				<section>{%- include components/comment-disqus.html -%}</section>
+				<section>{%- include components/comment-gitalk.html -%}</section>
 			{%- endif -%}
 		</div>
 	</div>

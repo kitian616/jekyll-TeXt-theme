@@ -1,11 +1,11 @@
 {
     "env": {
         "browser": true,
-        "jquery": true
-
+        "jquery": true,
+        "node": true
     },
     "rules": {
-        "no-console": "off",
+        "no-console": "error",
         "semi": ["error", "always"],
         "quotes": ["error", "single"],
         "comma-dangle": ["error", "never"],

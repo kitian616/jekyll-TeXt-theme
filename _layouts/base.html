@@ -25,19 +25,19 @@
     {%- include scripts/variables.html -%}
     {%- if page.layout == "home" -%}
       <script>
-        {%- include scripts/lib/pageview.js -%}
+        {%- include scripts/components/pageview.js -%}
         {%- include scripts/home.js -%}
       </script>
     {%- elsif page.layout == "page" -%}
       <script>
-        {%- include scripts/page.js -%}
+        {%- include scripts/page-post.js -%}
       </script>
     {%- elsif page.layout == "post" -%}
       <script>
-        {%- include scripts/page.js -%}
-        {%- include scripts/lib/pageview.js -%}
-        {%- include scripts/lib/affix.js -%}
-        {%- include scripts/lib/toc.js -%}
+        {%- include scripts/page-post.js -%}
+        {%- include scripts/components/pageview.js -%}
+        {%- include scripts/components/affix.js -%}
+        {%- include scripts/components/toc.js -%}
         {%- include scripts/post.js -%}
       </script>
     {%- elsif page.layout == "all" -%}
@@ -45,11 +45,11 @@
         {%- include scripts/all.js -%}
       </script>
     {%- endif -%}
-    {%- include utils/mathjax.html -%}
-    {%- include utils/mermaid.html -%}
-    {%- include utils/chart.html -%}
-    {%- if jekyll.environment != "development" -%}
-      {%- include utils/google-analytics.html -%}
-    {%- endif -%}
+    <script>
+      {%- include scripts/components/mathjax.js -%}
+      {%- include scripts/components/mermaid.js -%}
+      {%- include scripts/components/chart.js -%}
+      {%- include scripts/components/google-analytics.js -%}
+    </script>
   </body>
 </html>

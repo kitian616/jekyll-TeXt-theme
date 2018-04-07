@@ -63,7 +63,6 @@
         })
       );
       $window.on('resize', window.throttle(function() {
-        console.log('toc', disabled);
         if (!disabled) {
           rendered || render();
           calc();

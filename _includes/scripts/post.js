@@ -21,7 +21,6 @@
 
     $window.on('resize', window.throttle(function() {
       tocDisabled = disabled();
-      console.log(tocDisabled);
       toc && toc.setOptions({
         disabled: tocDisabled
       });
@@ -49,17 +48,19 @@
     LEANCLOUD.app_id &&
     LEANCLOUD.app_key &&
     LEANCLOUD.app_class &&
-    ENVIRONMENT !== 'development') {
+    '{{ page.key }}' &&
+    ENVIRONMENT !== 'development' &&
+    ENVIRONMENT !== 'beta'
+  ) {
       window.Lazyload.js([SOURCES.jquery, SOURCES.leancloud_js_sdk], function() {
-      var AV = window.AV;
-
+      /* global AV */
       var pageview = window.pageview(AV, {
         appId: LEANCLOUD.app_id,
         appKey: LEANCLOUD.app_key,
         appClass: LEANCLOUD.app_class
       });
       var key = '{{ page.key }}';
-      var title = window.decodeUrl('{{ page.title | url_encode }}');
+      var title = '{{ page.title }}';
 
       pageview.increase(key, title, function(view) {
         $('#post-key-{{ page.key }}').text(view);
