@@ -26,6 +26,7 @@ titles:
           {%- include snippets/prepend-baseurl.html -%}
           {%- assign __locale = site.data.locale.READMORE -%}
           {%- include snippets/locale-to-string.html -%}
+          <br/>
           <a href="{{ href }}">{{ __return }}</a>
           {%- include components/article-data.html -%}
         </article>
