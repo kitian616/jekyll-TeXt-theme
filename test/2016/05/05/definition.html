@@ -8,7 +8,8 @@
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/jekyll-TeXt-theme/assets/images/logo/icon-192x192.png">
 <!-- for Edge on Windows 10 https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx --><meta name="msapplication-TileImage" content="/jekyll-TeXt-theme/assets/images/logo/icon-144x144.png"><meta name="msapplication-square310x310logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-310x310.png"><meta name="msapplication-wide310x150logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-310x150.png"><meta name="msapplication-square150x150logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-150x150.png"><meta name="msapplication-square70x70logo" content="/jekyll-TeXt-theme/assets/images/logo/icon-70x70.png">
-<meta name="msapplication-TileColor" content="#eeeeee"><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/blog.css">
+<meta name="msapplication-TileColor" content="#eeeeee">
+<link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/blog.css">
     <script>(function() {
   var Set = (function() {
     var add = function(item) {
@@ -237,12 +238,12 @@
 		<div class="col-1">
 			<article class="js-article" itemscope itemtype="http://schema.org/BlogPosting">
 				<meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
-				<header class="main-header"><h1 itemprop="headline" itemprop="name headline">Jekyll - Definition</h1><div class="m-article-data clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="tag-wrapper"><li>
+				<header class="main-header"><h1 itemprop="headline" itemprop="name headline">Jekyll - Definition</h1><div class="m-article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="tag-wrapper"><li>
           <a class="pill-button" href="/jekyll-TeXt-theme/all.html?tag=Jekyll">Jekyll</a>
         </li><li>
           <a class="pill-button" href="/jekyll-TeXt-theme/all.html?tag=English">English</a>
         </li></ul><div class="other-wrapper"><div class="view-wrapper">
-        <span class="article-view" id="post-key-20160505">0
+        <span class="article-view" data-page-key="20160505">0
         </span> views
       </div><div class="date-wrapper"><time class="article-meta" datetime="2016-05-05T00:00:00+08:00"
           itemprop="datePublished">May 05, 2016
@@ -277,21 +278,20 @@ Maruku
 </div></div>
 				</footer>
 			</article>
-			<div class="article-previous-next clearfix"><div class="article-previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/test/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div><div class="article-next"><span>NEXT</span><a href="/jekyll-TeXt-theme/test/2016/05/04/footnote.html">Jekyll - Footnote</a></div></div><section></section>
-				<section><div id="js-gitalk-container"></div><script>
-	window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
-	window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
-		var gitalk = new Gitalk({
-			clientID: '143666b578a416f82175',
-			clientSecret: '1d1c0604a1a4bff9b59ab7f56724dc0e8b837775',
-			repo: 'gitalk-demo',
-			owner: 'kitian616',
-			admin: ['kitian616'],
-			id: '20160505'
+			<div class="article-previous-next clearfix"><div class="article-previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/test/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div><div class="article-next"><span>NEXT</span><a href="/jekyll-TeXt-theme/test/2016/05/04/footnote.html">Jekyll - Footnote</a></div></div><section><div id="js-gitalk-container"></div><script>
+		window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
+		window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
+			var gitalk = new Gitalk({
+				clientID: '143666b578a416f82175',
+				clientSecret: '1d1c0604a1a4bff9b59ab7f56724dc0e8b837775',
+				repo: 'gitalk-demo',
+				owner: 'kitian616',
+				admin: ['kitian616'],
+				id: '20160505'
+			});
+			gitalk.render('js-gitalk-container');
 		});
-		gitalk.render('js-gitalk-container');
-	});
-</script></section></div>
+	</script></section></div>
 	</div>
 </div></div>
       </div>
@@ -405,9 +405,6 @@ Maruku
 })();</script><script>
   (function() {
     var TEXT_VARIABLES = {
-      jekyll: {
-        environment: 'production'
-      },
       sources: {
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
@@ -420,54 +417,11 @@ Maruku
         mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
       },
       site: {
-        leancloud: {
-          app_id: 'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
-          app_key: 'Mzf5m9skSwYVWVXhGiYMNyXs',
-          app_class: 'TeXtDemo'
-        },
         toc: {
           selectors: 'h1,h2,h3'
-        },
-        ga_tracking_id: '',
-        chart: 'true',
-        mermaid: 'true',
-        mathjax: 'true',
-        mathjax_autoNumber: 'true',
-      },
-      page_origin: {
-        chart: '',
-        mermaid: '',
-        mathjax: '',
-        mathjax_autoNumber: '',
-      },
-    };
-    var assignKeys = ['chart', 'mermaid', 'mathjax', 'mathjax_autoNumber'];
-    var toBooleanKeys = ['chart', 'mermaid', 'mathjax', 'mathjax_autoNumber'];
-
-    function assign(obj1, obj2, keys) {
-      var i, key;
-      var assignObj = {};
-      if (keys && keys.length > 0) {
-        for (i = 0; i < keys.length; i++) {
-          key = keys[i];
-          if (obj2[key] === '' || obj2 === undefined) {
-            assignObj[key] = obj1[key];
-          } else {
-            assignObj[key] = obj2[key];
-          }
         }
       }
-      return assignObj;
-    }
-    function toBoolean(obj, keys) {
-      var i, key;
-      for (i = 0; i < keys.length; i++) {
-        key = keys[i];
-        obj[key] = obj[key] === 'true' ? true : false
-      }
-      return obj;
-    }
-    TEXT_VARIABLES.page = toBoolean(assign(TEXT_VARIABLES.site, TEXT_VARIABLES.page_origin, assignKeys), toBooleanKeys);
+    };
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script><script>(function() {
@@ -498,76 +452,6 @@ Maruku
       window.scrollTopAnchor('#' + $(this).parent().attr('id'));
     });
   });
-})();(function() {
-  function errorHandler(error, callback) {
-    if (error) {
-      callback && callback(error);
-      console.error(error);
-    }
-  }
-
-  function pageview(_AV  ,options) {
-    var AV = _AV;
-    var appId, appKey, appClass;
-    appId = options.appId;
-    appKey = options.appKey;
-    appClass = options.appClass;
-    AV.init({
-      appId: appId,
-      appKey: appKey
-    });
-    return {
-      get: get,
-      increase: increase
-    };
-
-    function searchKey(key) {
-      var query = new AV.Query(appClass);
-      query.equalTo('key', key);
-      return query.first();
-    }
-
-    function insert(key, title) {
-      var Blog = AV.Object.extend(appClass);
-      var blog = new Blog();
-      blog.set('title', title);
-      blog.set('key', key);
-      blog.set('views', 0);
-      return blog.save();
-    }
-
-    function increment(result) {
-      result.increment('views', 1);
-      return result.save(null, {
-        fetchWhenSave: true
-      });
-    }
-
-    function get(key, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          callback && callback(result.attributes.views);
-        }
-      }, errorHandler);
-    }
-
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-    }
-  }
-  window.pageview = pageview;
 })();(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
@@ -631,13 +515,13 @@ Maruku
         interval = setInterval(function() {
           calc();
         }, 1500);
+        timeout = setTimeout(function() {
+          clearInterval(interval);
+        }, 50000);
         window.pageLoad.then(function() {
           clearInterval(interval);
           clearTimeout(timeout);
         });
-        timeout = setTimeout(function() {
-          clearInterval(interval);
-        }, 50000);
         $window.on('scroll', function() {
           disabled || setState();
         });
@@ -730,13 +614,13 @@ Maruku
         interval = setInterval(function() {
           calc();
         }, 1500);
+        timeout = setTimeout(function() {
+          clearInterval(interval);
+        }, 50000);
         window.pageLoad.then(function() {
           clearInterval(interval);
           clearTimeout(timeout);
         });
-        timeout = setTimeout(function() {
-          clearInterval(interval);
-        }, 50000);
         $window.on('scroll', function() {
           disabled || setState(null, scrolling);
         });
@@ -765,10 +649,8 @@ Maruku
     $.fn.toc = toc;
   });
 })();(function() {
-  var ENVIRONMENT = window.TEXT_VARIABLES.jekyll.environment;
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
-  var LEANCLOUD = window.TEXT_VARIABLES.site.leancloud;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window);
     var $pageStage = $('.js-page-stage');
@@ -812,85 +694,119 @@ Maruku
       });
     }, 1000);
   });
-
-  // page view
-  if (
-    LEANCLOUD.app_id &&
-    LEANCLOUD.app_key &&
-    LEANCLOUD.app_class &&
-    '20160505' &&
-    ENVIRONMENT !== 'development' &&
-    ENVIRONMENT !== 'beta'
-  ) {
-      window.Lazyload.js([SOURCES.jquery, SOURCES.leancloud_js_sdk], function() {
-      /* global AV */
-      var pageview = window.pageview(AV, {
-        appId: LEANCLOUD.app_id,
-        appKey: LEANCLOUD.app_key,
-        appClass: LEANCLOUD.app_class
-      });
-      var key = '20160505';
-      var title = 'Jekyll - Definition';
-
-      pageview.increase(key, title, function(view) {
-        $('#post-key-20160505').text(view);
-      });
+})();</script><script>
+  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
+    var $canvas = null, $this = null, _ctx = null, _text = '';
+    $('.language-chart').each(function(){
+      $this = $(this);
+      $canvas = $('<canvas></canvas>');
+      _text = $this.text();
+      $this.text('').append($canvas);
+      _ctx = $canvas.get(0).getContext('2d');
+      (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
     });
-  }
-})();</script><script>(function () {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  var PAGE = window.TEXT_VARIABLES.page;
-  if (PAGE.mathjax) {
-    var _config = { tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']]
-    }};
-    if (PAGE.mathjax_autoNumber == true) {
-      _config.TeX = { equationNumbers: { autoNumber: 'all' } };
+  });
+</script><script type="text/x-mathjax-config">
+	var _config = { tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']]
+	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
+</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
+  window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+    mermaid.init(undefined, '.language-mermaid');
+    mermaid.initialize({ startOnLoad: true });
+  });
+</script><script>(function() {
+  function errorHandler(error, callback) {
+    if (error) {
+      callback && callback(error);
+      throw error;
     }
-    window.MathJax = _config;
-    window.Lazyload.js(SOURCES.mathjax);
   }
-})();/* global mermaid */
-(function () {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  var PAGE = window.TEXT_VARIABLES.page;
-  if (PAGE.mermaid) {
-    window.Lazyload.js(SOURCES.mermaid, function() {
-      mermaid.init(undefined, '.language-mermaid');
-      mermaid.initialize({ startOnLoad: true });
+
+  function pageview(_AV  ,options) {
+    var AV = _AV;
+    var appId, appKey, appClass;
+    appId = options.appId;
+    appKey = options.appKey;
+    appClass = options.appClass;
+    AV.init({
+      appId: appId,
+      appKey: appKey
     });
+    return {
+      get: get,
+      increase: increase
+    };
+
+    function searchKey(key) {
+      var query = new AV.Query(appClass);
+      query.equalTo('key', key);
+      return query.first();
+    }
+
+    function insert(key, title) {
+      var Blog = AV.Object.extend(appClass);
+      var blog = new Blog();
+      blog.set('title', title);
+      blog.set('key', key);
+      blog.set('views', 0);
+      return blog.save();
+    }
+
+    function increment(result) {
+      result.increment('views', 1);
+      return result.save(null, {
+        fetchWhenSave: true
+      });
+    }
+
+    function get(key, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          callback && callback(result.attributes.views);
+        }
+      }, errorHandler);
+    }
+
+    function increase(key, title, callback) {
+      searchKey(key).then(function(result) {
+        if (result) {
+          increment(result).then(function(result) {
+            callback && callback(result.attributes.views);
+          });
+        } else {
+          insert(key, title).then(function(result) {
+            increment(result).then(function(result) {
+              callback && callback(result.attributes.views);
+            });
+          }, errorHandler);
+        }
+      }, errorHandler);
+    }
   }
-})();/* global Chart */
-(function () {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  var PAGE = window.TEXT_VARIABLES.page;
-  if (PAGE.chart) {
-    window.Lazyload.js([SOURCES.jquery, SOURCES.chart], function() {
-      var $canvas = null, $this = null, _ctx = null, _text = '';
-      $('.language-chart').each(function(){
-        $this = $(this);
-        $canvas = $('<canvas></canvas>');
-        _text = $this.text();
-        $this.text('').append($canvas);
-        _ctx = $canvas.get(0).getContext('2d');
-        (_ctx && _text) && (new Chart(_ctx, JSON.parse(_text)) && $this.attr('data-processed', true));
+  window.pageview = pageview;
+})();</script>
+  <script>
+    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
+      var pageview = window.pageview(AV, {
+        appId:    'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
+        appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
+        appClass: 'TeXtDemo'
+      });
+      var key =   '20160505';
+      var title = window.decodeUrl('Jekyll+-+Definition');
+      pageview.increase(key, title, function(view) {
+        $("[data-page-key='20160505']").text(view);
       });
     });
-  }
-})();/* global ga */
-(function() {
-  var ENVIRONMENT = window.TEXT_VARIABLES.jekyll.environment;
-  var GA_TRACKING_ID = window.TEXT_VARIABLES.site.ga_tracking_id;
-  if(GA_TRACKING_ID && ENVIRONMENT !== 'development') {
-    /* eslint-disable */
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    /* eslint-enable */
-    ga('create', GA_TRACKING_ID, 'auto');
-    ga('send', 'pageview');
-  }
-})();</script>
-  </body>
+  </script><script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-71907556-1', 'auto');
+		ga('send', 'pageview');
+	</script></body>
 </html>
