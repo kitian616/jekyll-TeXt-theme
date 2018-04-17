@@ -27,7 +27,7 @@ titles:
           {%- assign __locale = site.data.locale.READMORE -%}
           {%- include snippets/locale-to-string.html -%}
           <a href="{{ href }}">{{ __return }}</a>
-          {%- include components/article-data.html -%}
+          {%- include article-info.html -%}
         </article>
       {%- endfor -%}
     </div>
@@ -65,11 +65,11 @@ titles:
               {%- include snippets/prepend-baseurl.html -%}
               {%- assign href = __return -%}
               <li><a class="round-button" href="{{ href }}">
-                <div class="icon icon--previous">{%- include icon/previous.svg -%}</div></a>
+                <div class="icon icon--previous">{%- include svg/icon/previous.svg -%}</div></a>
               </li>
             {%- else -%}
               <li><div class="round-button inactive">
-                <div class="icon icon--prrevious">{%- include icon/previous.svg -%}</div></div>
+                <div class="icon icon--prrevious">{%- include svg/icon/previous.svg -%}</div></div>
               </li>
             {%- endif -%}
 
@@ -92,9 +92,9 @@ titles:
               {%- else -%}
                 {%- if _n0 and _n1 -%}
                   {%- if page > 1 and page < _n0 -%}
-                    {%- if page == 2 -%}<li><span class="omit">{%- include icon/omit.svg -%}</span></li>{%- endif -%}
+                    {%- if page == 2 -%}<li><span class="omit">{%- include svg/icon/omit.svg -%}</span></li>{%- endif -%}
                   {%- elsif page > _n1 and page < _length -%}
-                    {%- if page == _length_mimus_one -%}<li><span class="omit">{%- include icon/omit.svg -%}</span></li>{%- endif -%}
+                    {%- if page == _length_mimus_one -%}<li><span class="omit">{%- include svg/icon/omit.svg -%}</span></li>{%- endif -%}
                   {%- else -%}
                     {%- assign __path = site.paginate_path -%}
                     {%- include snippets/prepend-baseurl.html -%}
@@ -119,12 +119,12 @@ titles:
               {%- assign href = __return -%}
               <li>
                 <a class="round-button" href="{{ href }}">
-                  <div class="icon icon--next">{%- include icon/next.svg -%}</div>
+                  <div class="icon icon--next">{%- include svg/icon/next.svg -%}</div>
                 </a>
               </li>
             {%- else -%}
                 <li><div class="round-button inactive">
-                  <div class="icon icon--next">{%- include icon/next.svg -%}</div>
+                  <div class="icon icon--next">{%- include svg/icon/next.svg -%}</div>
                   </div>
                 </li>
             {%- endif -%}

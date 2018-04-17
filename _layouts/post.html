@@ -12,7 +12,7 @@ layout: base
 				<header class="main-header">
 					{%- include snippets/page-title.html -%}
 					<h1 itemprop="headline" itemprop="name headline">{{ __return }}</h1>
-					{%- include components/article-data.html -%}
+					{%- include article-info.html -%}
 				</header>
 				<div class="m-article-content js-article-content" itemprop="articleBody">{{ content }}</div>
 				<footer>
@@ -29,7 +29,7 @@ layout: base
 						<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
 					{%- endif -%}
 					<div class="article-license">
-						{%- include components/license.html -%}
+						{%- include license.html -%}
 					</div>
 				</footer>
 			</article>
@@ -52,8 +52,7 @@ layout: base
 				{%- endif -%}
 			</div>
 			{%- if jekyll.environment != "development" and page.comment != false -%}
-				<section>{%- include components/comment-disqus.html -%}</section>
-				<section>{%- include components/comment-gitalk.html -%}</section>
+				<section>{%- include comment.html -%}</section>
 			{%- endif -%}
 		</div>
 	</div>

@@ -1,0 +1,17 @@
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+
+{%- assign __target = site.mathjax_autoNumber -%}
+{%- assign __source = page.mathjax_autoNumber -%}
+{%- include snippets/assign.html -%}
+
+<script type="text/x-mathjax-config">
+	var _config = { tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']]
+	}};
+	{%- if __return == true -%}
+		_config.TeX = { equationNumbers: { autoNumber: "all" } };
+	{%- endif -%}
+	MathJax.Hub.Config(_config);
+</script>
+<script type="text/javascript" src="{{ _sources.mathjax }}" async></script>

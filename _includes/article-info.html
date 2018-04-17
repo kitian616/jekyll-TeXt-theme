@@ -1,4 +1,4 @@
-<div class="m-article-data clearfix">
+<div class="m-article-info clearfix">
 	{%- if page -%}
     <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
       {%- if page.author -%}
@@ -36,7 +36,7 @@
       {%- assign __locale = site.data.locale.VIEWS } -%}
       {%- include snippets/locale-to-string.html -%}
       <div class="view-wrapper">
-        <span class="article-view" id="post-key-{{ cur_page.key }}">0
+        <span class="article-view" data-page-key="{{ cur_page.key }}">0
         </span> {{ __return }}
       </div>
     {%- endif -%}

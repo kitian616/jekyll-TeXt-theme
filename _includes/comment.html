@@ -1,0 +1,9 @@
+{%- if jekyll.environment != "development" -%}
+
+  {%- if site.disqus.shortname -%}
+    {%- include comment-providers/disqus.html -%}
+  {%- elsif site.gitalk.clientID and site.gitalk.clientSecret and site.gitalk.repository and site.gitalk.owner and site.gitalk.admin -%}
+    {%- include comment-providers/gitalk.html -%}
+  {%- endif -%}
+
+{%- endif -%}

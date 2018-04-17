@@ -2,7 +2,7 @@
   function errorHandler(error, callback) {
     if (error) {
       callback && callback(error);
-      console.error(error);
+      throw error;
     }
   }
 

@@ -61,13 +61,13 @@
         interval = setInterval(function() {
           calc();
         }, 1500);
+        timeout = setTimeout(function() {
+          clearInterval(interval);
+        }, 50000);
         window.pageLoad.then(function() {
           clearInterval(interval);
           clearTimeout(timeout);
         });
-        timeout = setTimeout(function() {
-          clearInterval(interval);
-        }, 50000);
         $window.on('scroll', function() {
           disabled || setState();
         });

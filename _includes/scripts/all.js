@@ -58,7 +58,7 @@
     };
   })();
 
-  var data = initData('{%- include scripts/data.html -%}');
+  var data = initData('{%- include scripts/article-list.html -%}');
 
   var searchByTag = memorize(function(tag) {
     var i, j, cur, _tags, _tag, _data = {};
@@ -185,7 +185,7 @@
       }
       if (target) {
         buttonFoucs(target);
-        _tag = target.data('encode');
+        _tag = target.attr('data-encode');
         if (_tag === '' || typeof _tag !== 'string') {
           setUrlQuery();
         } else {

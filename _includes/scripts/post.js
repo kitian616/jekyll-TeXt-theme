@@ -1,8 +1,6 @@
 (function() {
-  var ENVIRONMENT = window.TEXT_VARIABLES.jekyll.environment;
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
-  var LEANCLOUD = window.TEXT_VARIABLES.site.leancloud;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window);
     var $pageStage = $('.js-page-stage');
@@ -46,29 +44,4 @@
       });
     }, 1000);
   });
-
-  // page view
-  if (
-    LEANCLOUD.app_id &&
-    LEANCLOUD.app_key &&
-    LEANCLOUD.app_class &&
-    '{{ page.key }}' &&
-    ENVIRONMENT !== 'development' &&
-    ENVIRONMENT !== 'beta'
-  ) {
-      window.Lazyload.js([SOURCES.jquery, SOURCES.leancloud_js_sdk], function() {
-      /* global AV */
-      var pageview = window.pageview(AV, {
-        appId: LEANCLOUD.app_id,
-        appKey: LEANCLOUD.app_key,
-        appClass: LEANCLOUD.app_class
-      });
-      var key = '{{ page.key }}';
-      var title = '{{ page.title }}';
-
-      pageview.increase(key, title, function(view) {
-        $('#post-key-{{ page.key }}').text(view);
-      });
-    });
-  }
 })();

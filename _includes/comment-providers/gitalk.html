@@ -1,0 +1,32 @@
+{%- if page.key and
+  site.gitalk.clientID and
+	site.gitalk.clientSecret and
+	site.gitalk.repository and
+	site.gitalk.owner and
+	site.gitalk.admin -%}
+
+	{%- include snippets/get-sources.html -%}
+	{%- assign _sources = __return -%}
+	<div id="js-gitalk-container"></div>
+	{%- assign _admin = '' -%}
+	{%- for adminId in site.gitalk.admin -%}
+		{%- assign _admin = _admin | append: ", '" | append: adminId | append: "'" -%}
+	{%- endfor -%}
+	{%- assign last = _admin | size | minus: 1 -%}
+	{%- assign _admin = _admin | slice: 2, last -%}
+	<script>
+		window.Lazyload.css('{{ _sources.gitalk.css }}');
+		window.Lazyload.js('{{ _sources.gitalk.js }}', function() {
+			var gitalk = new Gitalk({
+				clientID: '{{ site.gitalk.clientID }}',
+				clientSecret: '{{ site.gitalk.clientSecret }}',
+				repo: '{{ site.gitalk.repository }}',
+				owner: '{{ site.gitalk.owner }}',
+				admin: [{{ _admin }}],
+				id: '{{ page.key }}'
+			});
+			gitalk.render('js-gitalk-container');
+		});
+	</script>
+
+{%- endif -%}

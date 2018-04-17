@@ -4,9 +4,6 @@
 <script>
   (function() {
     var TEXT_VARIABLES = {
-      jekyll: {
-        environment: '{{ jekyll.environment }}'
-      },
       sources: {
         jquery: '{{ _sources.jquery }}',
         leancloud_js_sdk: '{{ _sources.leancloud_js_sdk }}',
@@ -19,54 +16,11 @@
         mermaid: '{{ _sources.mermaid }}'
       },
       site: {
-        leancloud: {
-          app_id: '{{ site.leancloud.app_id }}',
-          app_key: '{{ site.leancloud.app_key }}',
-          app_class: '{{ site.leancloud.app_class }}'
-        },
         toc: {
           selectors: '{{ site.toc.selectors | default: site.data.variables.default.toc.selectors }}'
-        },
-        ga_tracking_id: '{{ site.ga_tracking_id }}',
-        chart: '{{ site.chart }}',
-        mermaid: '{{ site.mermaid }}',
-        mathjax: '{{ site.mathjax }}',
-        mathjax_autoNumber: '{{ site.mathjax_autoNumber }}',
-      },
-      page_origin: {
-        chart: '{{ page.chart }}',
-        mermaid: '{{ page.mermaid }}',
-        mathjax: '{{ page.mathjax }}',
-        mathjax_autoNumber: '{{ page.mathjax_autoNumber }}',
-      },
-    };
-    var assignKeys = ['chart', 'mermaid', 'mathjax', 'mathjax_autoNumber'];
-    var toBooleanKeys = ['chart', 'mermaid', 'mathjax', 'mathjax_autoNumber'];
-
-    function assign(obj1, obj2, keys) {
-      var i, key;
-      var assignObj = {};
-      if (keys && keys.length > 0) {
-        for (i = 0; i < keys.length; i++) {
-          key = keys[i];
-          if (obj2[key] === '' || obj2 === undefined) {
-            assignObj[key] = obj1[key];
-          } else {
-            assignObj[key] = obj2[key];
-          }
         }
       }
-      return assignObj;
-    }
-    function toBoolean(obj, keys) {
-      var i, key;
-      for (i = 0; i < keys.length; i++) {
-        key = keys[i];
-        obj[key] = obj[key] === 'true' ? true : false
-      }
-      return obj;
-    }
-    TEXT_VARIABLES.page = toBoolean(assign(TEXT_VARIABLES.site, TEXT_VARIABLES.page_origin, assignKeys), toBooleanKeys);
+    };
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script>

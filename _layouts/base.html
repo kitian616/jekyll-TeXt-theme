@@ -2,8 +2,7 @@
 {%- include snippets/get-lang.html -%}
 <html lang="{{ __return }}">
   <head>
-    {%- include common-head.html -%}
-    {%- include head-icons-rel.html -%}
+    {%- include head.html -%}
     {%- assign __path = '/assets/css/blog.css' -%}
     {%- include snippets/prepend-baseurl.html -%}
     <link rel="stylesheet" href="{{ __return }}">
@@ -14,30 +13,29 @@
   <body>
     <div class="m-page-stage js-page-stage">
       <div class="m-page-content">
-        {%- include components/header.html -%}
+        {%- include header.html -%}
         <div class="m-page-main">{{ content }}</div>
       </div>
     </div>
-    {%- include components/footer.html -%}
+    {%- include footer.html -%}
     <script>
       {%- include scripts/common.js -%}
     </script>
     {%- include scripts/variables.html -%}
     {%- if page.layout == "home" -%}
       <script>
-        {%- include scripts/components/pageview.js -%}
         {%- include scripts/home.js -%}
       </script>
     {%- elsif page.layout == "page" -%}
       <script>
-        {%- include scripts/page-post.js -%}
+        {%- include scripts/page-post-common.js -%}
+        {%- include scripts/page.js -%}
       </script>
     {%- elsif page.layout == "post" -%}
       <script>
-        {%- include scripts/page-post.js -%}
-        {%- include scripts/components/pageview.js -%}
-        {%- include scripts/components/affix.js -%}
-        {%- include scripts/components/toc.js -%}
+        {%- include scripts/page-post-common.js -%}
+        {%- include scripts/lib/affix.js -%}
+        {%- include scripts/lib/toc.js -%}
         {%- include scripts/post.js -%}
       </script>
     {%- elsif page.layout == "all" -%}
@@ -45,11 +43,8 @@
         {%- include scripts/all.js -%}
       </script>
     {%- endif -%}
-    <script>
-      {%- include scripts/components/mathjax.js -%}
-      {%- include scripts/components/mermaid.js -%}
-      {%- include scripts/components/chart.js -%}
-      {%- include scripts/components/google-analytics.js -%}
-    </script>
+    {%- include markdown-enhancements.html -%}
+    {%- include pageview.html -%}
+    {%- include analytics.html -%}
   </body>
 </html>

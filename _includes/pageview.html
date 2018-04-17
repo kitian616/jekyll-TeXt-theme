@@ -1,0 +1,14 @@
+{%- if page.layout == "home" -%}
+  {%- if jekyll.environment != "development" -%}
+
+    {%- include pageview-providers/leancloud/home.html -%}
+
+  {%- endif -%}
+{%- elsif page.layout == "post" -%}
+  {%- if jekyll.environment != "development" and
+    jekyll.environment != "beta" -%}
+
+    {%- include pageview-providers/leancloud/post.html -%}
+
+  {%- endif -%}
+{%- endif -%}
