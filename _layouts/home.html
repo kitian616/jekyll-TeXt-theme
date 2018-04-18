@@ -9,27 +9,60 @@ titles:
 <div class="m-home">
   <div class="main">
     <div class="m-post-list">
+      <!-- top blog -->
       {%- for post in paginator.posts -%}
-        <article>
-          {%- assign __path = post.url -%}
-          {%- include snippets/prepend-baseurl.html -%}
-          {%- assign href = __return -%}
-          <h1><a href="{{ href }}">{{ post.title }}</a></h1>
-          <div class="m-article-content">
-            {%- if site.excerpt_type == 'html' -%}
-              {{ post.excerpt }}
-            {%- else -%}
-              {{ post.excerpt | strip_html | truncate: 350 }}
-            {%- endif -%}
-          </div>
-          {%- assign __path = post.url -%}
-          {%- include snippets/prepend-baseurl.html -%}
-          {%- assign __locale = site.data.locale.READMORE -%}
-          {%- include snippets/locale-to-string.html -%}
-          <a href="{{ href }}">{{ __return }}</a>
-          {%- include article-info.html -%}
-        </article>
+        {%- if post.top == true -%}
+            <article>
+              {%- assign __path = post.url -%}
+              {%- include snippets/prepend-baseurl.html -%}
+              {%- assign href = __return -%}
+              <div class="m-top-blog">
+                <!-- top.svg -->
+                <svg t="1524040242509" class="icon" style="" viewBox="0 0 1920 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1731" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="64"><defs><style type="text/css"></style></defs><path d="M367.488 667.904l423.744 0 0 47.232-423.744 0 0-47.232Z" p-id="1732" fill="#d81e06"></path><path d="M320.256 204.352l137.28 0 0 68.992-137.28 0 0-68.992Z" p-id="1733" fill="#d81e06"></path><path d="M367.488 754.112l423.744 0 0 48-423.744 0 0-48Z" p-id="1734" fill="#d81e06"></path><path d="M693.76 204.352l137.984 0 0 68.992-137.984 0 0-68.992Z" p-id="1735" fill="#d81e06"></path><path d="M507.008 204.352l137.28 0 0 68.992-137.28 0 0-68.992Z" p-id="1736" fill="#d81e06"></path><path d="M1792.512 0 127.488 0C57.472 0 0 57.152 0 127.616l0 768.768C0 966.72 57.088 1024 127.488 1024l1665.088 0C1862.528 1024 1920 966.848 1920 896.384L1920 127.616C1920 57.216 1862.912 0 1792.512 0zM1264.512 175.104l446.976 0L1711.488 229.12l-216.768 0L1470.72 330.368l206.976 0 0 359.232-57.728 0 0-305.28-289.472 0 0 308.224-57.728 0 0-362.24 140.224 0 20.992-101.248-169.472 0L1264.512 175.104zM268.48 163.904l614.272 0 0 167.232-51.008 0 0-17.28L320.256 313.856l0 17.28L268.48 331.136 268.48 163.904zM947.264 845.632 203.264 845.632l0-43.52 111.744 0L315.008 454.848l229.504 0L544.512 406.144 221.248 406.144 221.248 364.096l323.264 0L544.512 324.352l54.016 0 0 39.744 331.52 0 0 41.984-331.52 0 0 48.768 245.248 0 0 347.264 103.488 0L947.264 845.632zM1150.528 751.104c0 59.52-30.72 89.28-92.224 89.28-25.472 0-46.016-0.512-61.504-1.472-2.496-22.976-6.528-45.248-12.032-66.752 22.976 5.504 46.72 8.256 71.232 8.256 24 0 35.968-11.52 35.968-34.496L1091.968 247.872l-120.768 0L971.2 193.152l278.976 0 0 54.72-99.776 0L1150.4 751.104zM1671.744 872.64c-67.008-55.488-137.28-108.032-210.752-157.504-4.992 9.984-10.496 19.008-16.512 27.008-41.472 57.024-113.28 101.504-215.232 133.504-9.472-16.512-21.504-34.496-35.968-54.016 94.528-27.008 161.28-64.512 200.256-112.512 34.496-44.992 51.776-113.024 51.776-204.032L1445.312 421.12l57.728 0 0 82.496c0 62.528-6.72 115.776-20.224 159.744 84.48 54.016 161.472 107.008 230.976 158.976L1671.744 872.64z" p-id="1737" fill="#d81e06"></path><path d="M367.488 495.36l423.744 0 0 47.232-423.744 0 0-47.232Z" p-id="1738" fill="#d81e06"></path><path d="M367.488 581.632l423.744 0 0 47.232-423.744 0 0-47.232Z" p-id="1739" fill="#d81e06"></path></svg>
+                <!-- title of top blog -->
+                <h1><a href="{{ href }}">{{ post.title }}</a></h1>
+              </div>
+              <div class="m-article-content">
+                {%- if site.excerpt_type == 'html' -%}
+                  {{ post.excerpt }}
+                {%- else -%}
+                  {{ post.excerpt | strip_html | truncate: 350 }}
+                {%- endif -%}
+              </div>
+              {%- assign __path = post.url -%}
+              {%- include snippets/prepend-baseurl.html -%}
+              {%- assign __locale = site.data.locale.READMORE -%}
+              {%- include snippets/locale-to-string.html -%}
+              <a href="{{ href }}">{{ __return }}</a>
+              {%- include components/article-data.html -%}
+            </article>
+        {%- endif -%}
       {%- endfor -%}
+
+      {%- for post in paginator.posts -%}
+        {%- if post.top == false -%}
+            <article>
+              {%- assign __path = post.url -%}
+              {%- include snippets/prepend-baseurl.html -%}
+              {%- assign href = __return -%}
+              <h1><a href="{{ href }}">{{ post.title }}</a></h1>
+              <div class="m-article-content">
+                {%- if site.excerpt_type == 'html' -%}
+                  {{ post.excerpt }}
+                {%- else -%}
+                  {{ post.excerpt | strip_html | truncate: 350 }}
+                {%- endif -%}
+              </div>
+              {%- assign __path = post.url -%}
+              {%- include snippets/prepend-baseurl.html -%}
+              {%- assign __locale = site.data.locale.READMORE -%}
+              {%- include snippets/locale-to-string.html -%}
+              <a href="{{ href }}">{{ __return }}</a>
+              {%- include components/article-data.html -%}
+            </article>
+        {%- endif -%}
+      {%- endfor -%}
+
     </div>
     {%- if paginator.total_pages > 1 -%}
         <nav class="m-pagination">
