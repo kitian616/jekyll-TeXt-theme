@@ -10,7 +10,8 @@ titles:
   <div class="main">
     <div class="m-post-list">
       <!-- top blog -->
-      {%- for post in paginator.posts -%}
+      {%- if paginator.page == 1 -%}
+      {%- for post in site.posts -%}
         {%- if post.top == true -%}
             <article>
               {%- assign __path = post.url -%}
@@ -38,6 +39,7 @@ titles:
             </article>
         {%- endif -%}
       {%- endfor -%}
+      {%- endif -%}
 
       {%- for post in paginator.posts -%}
         {%- if post.top == false -%}
