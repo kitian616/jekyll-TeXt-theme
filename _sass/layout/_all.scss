@@ -20,36 +20,52 @@
     }
     & > .m-search-box {
       position: relative;
-      @include flexbox;
-      @include align-items(center);
-      @include round-rect(default, .2rem .4rem);
       box-sizing: border-box;
       max-width: 22rem;
-      background-color: $text-background-color;
+      margin: map-get($base, vertical-space-large) 0;
       @include media-breakpoint-down(s) {
         max-width: none;
         width: 100%;
       }
-      margin: map-get($base, vertical-space-large) 0;
+      & > input {
+        @include round-rect(2rem, .2rem 1.8rem);
+        @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
+        -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
+        width: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+        border: none;
+        margin: 0;
+        background-color: $text-background-color;
+        @include link-focus() {
+          @include box-shadow(1);
+        }
+      }
+      & > .icon-search, & > .icon-clear {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        display: inline-block;
+        vertical-align: middle;
+        & > svg {
+          display: block;
+          fill: $text-color-l;
+          height: 1.2rem;
+          width: 1.2rem;
+        }
+      }
       &.not-empty > .icon-clear {
         display: block;
       }
       & > .icon-clear {
         display: none;
+        right: .5rem;
         @extend %button;
         @include link-colors($text-color-l, transparent,
           $text-color-d, transparent, $text-color-d, transparent);
       }
-      & > .icon-search, & > .icon-clear {
-        & > svg {
-          display: block;
-          fill: $text-color-l;
-        }
-      }
-      & > input {
-        @include flex(1);
-        border: none;
-        background-color: transparent;
+      & > .icon-search {
+        left: .5rem;
       }
     }
     & > .m-result {

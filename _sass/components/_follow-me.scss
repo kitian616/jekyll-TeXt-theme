@@ -5,6 +5,15 @@
     justify-content: center;
     @include horizontal-space();
     & > li > {
+      a {
+        .not-touch & {
+          @include link-hover() {
+            @include transform(scale(1.5));
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
       .mail {
         @include link-colors($text-color-1, $mail-color);
       }

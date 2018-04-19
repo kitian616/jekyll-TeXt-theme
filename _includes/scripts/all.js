@@ -223,6 +223,12 @@
     $searchInput.on('input', window.throttle(function() {
       queryInput($(this).val());
     }, 400));
+    $searchInput.on('focus', function() {
+      addClass($(this), 'focus');
+    });
+    $searchInput.on('blur', function() {
+      removeClass($(this), 'focus');
+    });
     $searchClear.on('click', function() {
       clearSearchBox();
     });
