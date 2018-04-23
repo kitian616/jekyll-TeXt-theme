@@ -21,7 +21,7 @@
     {%- assign __path = post.url -%}
     {%- include snippets/prepend-baseurl.html -%}
     {%- assign _url = __return -%}
-      ],"url":"{{ _url }}","date":"{{ post.date | date: _format }}"}
+      ],"url":"{{ _url | url_encode }}","date":"{{ post.date | date: _format }}"}
   {%- endfor -%}
 ]}
 {%- endif -%}
