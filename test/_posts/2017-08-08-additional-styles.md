@@ -36,7 +36,7 @@ Error Text.
     Error Text.
     {:.error}
 
-## Image
+## Photo Frame
 
 ### Border
 

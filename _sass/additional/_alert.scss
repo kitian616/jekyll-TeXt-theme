@@ -22,20 +22,4 @@
     background-color: mix($red, $background-color, 10%);
     border: 1px solid $red;
   }
-
-  img.shadow, .shadow > img {
-    @include box-shadow(3);
-  }
-
-  img.border, .border > img {
-    border: 1px solid $border-color-l;
-  }
-
-  img.rounded, .rounded > img {
-    border-radius: map-get($shape, round-rect-radius);
-  }
-
-  img.circle, .circle > img {
-    border-radius: 50%;
-  }
 }
