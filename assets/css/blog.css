@@ -732,35 +732,6 @@ input:focus {
     .m-article-content table th {
       font-weight: 700; }
 
-.m-article-content p.success {
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  background-color: #eef9ea;
-  border: 1px solid #57c22d; }
-.m-article-content p.info {
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  background-color: #e9f4ff;
-  border: 1px solid #2593fc; }
-.m-article-content p.warning {
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  background-color: #fef7ea;
-  border: 1px solid #f8ac30; }
-.m-article-content p.error {
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  background-color: #fee9eb;
-  border: 1px solid #f22635; }
-.m-article-content img.shadow, .m-article-content .shadow > img {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.25); }
-.m-article-content img.border, .m-article-content .border > img {
-  border: 1px solid #e6e6e6; }
-.m-article-content img.rounded, .m-article-content .rounded > img {
-  border-radius: 0.4rem; }
-.m-article-content img.circle, .m-article-content .circle > img {
-  border-radius: 50%; }
-
 .m-pagination > ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1137,6 +1108,36 @@ input:focus {
     text-align: center;
     font-size: 0.8rem;
     margin: 0 auto; }
+
+.m-article-content p.success {
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #eef9ea;
+  border: 1px solid #57c22d; }
+.m-article-content p.info {
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #e9f4ff;
+  border: 1px solid #2593fc; }
+.m-article-content p.warning {
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #fef7ea;
+  border: 1px solid #f8ac30; }
+.m-article-content p.error {
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #fee9eb;
+  border: 1px solid #f22635; }
+
+.m-article-content img.shadow, .m-article-content .shadow > img {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.25); }
+.m-article-content img.border, .m-article-content .border > img {
+  border: 1px solid #e6e6e6; }
+.m-article-content img.rounded, .m-article-content .rounded > img {
+  border-radius: 0.4rem; }
+.m-article-content img.circle, .m-article-content .circle > img {
+  border-radius: 50%; }
 
 .m-page-stage {
   box-sizing: border-box;
