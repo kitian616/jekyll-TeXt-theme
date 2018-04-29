@@ -1,5 +1,13 @@
 .m-post-list {
-  & > article {
+    & > article {
+    & > div {
+      & > h1 {
+        font-size: map-get($base, font-size-header-list);
+        & > a {
+          @include link-text-colors( $main-color-1, $main-color-1, $main-color-1);
+        }
+      }
+    }
     & > h1 {
       font-size: map-get($base, font-size-header-list);
       & > a {
@@ -57,5 +65,21 @@
     img {
       max-height: 12rem;
     }
+  }
+  .m-top-blog {
+     & > svg{margin-right: .2rem;vertical-align:middle;width:2.5rem;height:2.0rem; margin-top: 0.4rem;}
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-moz-flex;
+     display:-ms-flexbox;
+     display:flex;-webkit-flex-wrap:wrap;
+     -moz-flex-wrap:wrap;-ms-flex-wrap:wrap;
+     flex-wrap:wrap;
+     -webkit-box-align:center;
+     -ms-flex-align:center;
+     -webkit-align-items:center;
+     -moz-align-items:center;
+     align-items:center;
+     height:5rem;
   }
 }
