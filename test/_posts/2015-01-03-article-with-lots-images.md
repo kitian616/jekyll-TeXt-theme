@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test - Article With A Lot Of images
+title: Test - Article with Lots of Images
 key: 20150103
 tags: Test English
 ---

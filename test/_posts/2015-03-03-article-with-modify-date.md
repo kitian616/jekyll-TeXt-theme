@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test - Article With Modify Date
+title: Test - Article with Modify Date
 key: 20150303
 tags: Test English
 modify_date: 2017-09-09

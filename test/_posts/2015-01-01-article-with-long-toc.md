@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test - Article With Long TOC
+title: Test - Article with Long TOC
 key: 20150101
 tags: Test English
 ---
