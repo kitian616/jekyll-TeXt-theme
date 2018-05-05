@@ -1,5 +1,539 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-04-28T22:56:12+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>TeXt Theme Demo
-</subtitle><author><name>Someone</name><email>someone@somemail.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">&lt;h2 id=&quot;alert&quot;&gt;Alert&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-05-05T22:58:39+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>TeXt Theme Demo
+</subtitle><author><name>Someone</name><email>someone@somemail.com</email></author><entry><title type="html">Document - Quick Start</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/document/2018/05/01/quick-start.html" rel="alternate" type="text/html" title="Document - Quick Start" /><published>2018-05-01T00:00:00+08:00</published><updated>2018-05-01T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/document/2018/05/01/quick-start</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/document/2018/05/01/quick-start.html">&lt;p&gt;TeXt Theme is 100% compatible with GitHub Pages and it has been developed as a &lt;a href=&quot;https://jekyllrb.com/docs/themes/&quot;&gt;gem-based themes&lt;/a&gt; for easier use.&lt;/p&gt;
+
+&lt;p&gt;In this document, you will learn how to &lt;strong&gt;install the theme&lt;/strong&gt;, &lt;strong&gt;setup your site&lt;/strong&gt;, &lt;strong&gt;local preview&lt;/strong&gt; for development, &lt;strong&gt;build and publish&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;installing-the-theme&quot;&gt;Installing the Theme&lt;/h2&gt;
+
+&lt;h3 id=&quot;common-method&quot;&gt;Common Method&lt;/h3&gt;
+
+&lt;p&gt;To install it with common method, all you need to do is copying all the theme files to your project. There are several ways to do so:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Clone &lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme&quot;&gt;jekyll-TeXt-theme&lt;/a&gt; from github:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git clone git@github.com:kitian616/jekyll-TeXt-theme.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download and unzip the file to your Jekyll site directory.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip&quot;&gt;==&amp;gt; Download TeXt Theme &amp;lt;==&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you host your site on GitHub Pages, you can just fork &lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme&quot;&gt;jekyll-TeXt-theme&lt;/a&gt;, then rename the repository to &lt;strong&gt;USERNAME.github.io&lt;/strong&gt; — replacing &lt;strong&gt;USERNAME&lt;/strong&gt; with your GitHub username.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/fork.png&quot; alt=&quot;Fork&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/rename.png&quot; alt=&quot;Rename&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;ruby-gem-method&quot;&gt;Ruby Gem Method&lt;/h3&gt;
+
+&lt;p&gt;Add this line to your Jekyll site’s &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-text-theme&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Add this line to your Jekyll site’s &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-text-theme&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then run Bundler to install the theme gem and dependencies:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;setup-your-site&quot;&gt;Setup Your Site&lt;/h2&gt;
+
+&lt;p&gt;If you install the theme with common method, you can go straight to the next step. But &lt;strong&gt;if you install the theme with ruby gem method, you have to do some extra jobs&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;With gem-based themes, some of the site’s directories (such as the assets, _layouts, _includes, and _sass directories) are stored in the theme’s gem, hidden from your immediate view. You need add some files in your Jekyll site directory:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── 404.html
+├── Gemfile
+├── _config.yml
+├── _data
+│   └── locale.yml
+├── _posts
+│   └── ...
+├── about.md
+├── all.html
+└── index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can reffer to the &lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test&quot;&gt;/test folder&lt;/a&gt;, this is a example with gem-based themes.&lt;/p&gt;
+
+&lt;h2 id=&quot;local-preview&quot;&gt;Local Preview&lt;/h2&gt;
+
+&lt;p&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt; to start the development server, then you can visit &lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt; to preview your site.&lt;/p&gt;
+
+&lt;h2 id=&quot;build-and-publish&quot;&gt;Build and Publish&lt;/h2&gt;
+
+&lt;p&gt;If you host your site on GitHub Pages, just push the source to the master branch of your USERNAME.github.io repository, GitHub would build automatically. You can visit your site on &lt;strong&gt;https://USERNAME.github.io&lt;/strong&gt; several minutes later.&lt;/p&gt;
+
+&lt;p&gt;If you host your site on your server, you need first run &lt;code class=&quot;highlighter-rouge&quot;&gt;JEKYLL_ENV=production bundle exec jekyll build&lt;/code&gt; to generated your site, then update the files in _site folder to your server.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;further-reading&quot;&gt;Further Reading&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html&quot;&gt;Configuration&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html&quot;&gt;Writing Posts&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="Document" /><category term="Document" /><category term="English" /><summary type="html">TeXt Theme is 100% compatible with GitHub Pages and it has been developed as a gem-based themes for easier use. In this document, you will learn how to install the theme, setup your site, local preview for development, build and publish.</summary></entry><entry><title type="html">Document - Configuration</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html" rel="alternate" type="text/html" title="Document - Configuration" /><published>2018-04-20T00:00:00+08:00</published><updated>2018-04-20T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html">&lt;p&gt;Jekyll allows you to concoct your sites in any way you can dream up, and it’s thanks to the powerful and flexible configuration options that this is possible. These options can either be specified in a &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file placed in your site’s root directory, or can be specified as flags for the jekyll executable in the terminal.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;For technical reasons, this file is &lt;em&gt;NOT&lt;/em&gt; reloaded automatically when you use &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;. If you change this file, please restart the server process.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;site-settings&quot;&gt;Site Settings&lt;/h2&gt;
+
+&lt;h3 id=&quot;theme&quot;&gt;Theme&lt;/h3&gt;
+
+&lt;p&gt;If you’re using the Ruby gem version of the theme you’ll need this line to activate it:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;minimal-mistakes-jekyll&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;color-theme&quot;&gt;Color Theme&lt;/h3&gt;
+
+&lt;p&gt;You can choose these 6 built-in color themes below:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dark&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;forest&lt;/code&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.png&quot; alt=&quot;default&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.png&quot; alt=&quot;dark&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.png&quot; alt=&quot;forest&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ocean&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;chocolate&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;orange&lt;/code&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.png&quot; alt=&quot;ocean&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_chocolate.png&quot; alt=&quot;chocolate&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png&quot; alt=&quot;orange&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;text_color_theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &quot;default&quot; (default), &quot;dark&quot;, &quot;forest&quot;, &quot;ocean&quot;, &quot;chocolate&quot;, &quot;orange&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;url&quot;&gt;URL&lt;/h3&gt;
+
+&lt;p&gt;The base hostname and protocol for your site. if you are hosting the site on Github Pages this will be set as the GitHub Pages domain (cname or user domain)&lt;sup id=&quot;fnref:gitHub_metadata&quot;&gt;&lt;a href=&quot;#fn:gitHub_metadata&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. For example, https://kitian616.github.io or https://tianqi.name if there is cname file.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;Jekyll 3.3 overrides this value with url: http://localhost:4000 when running &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; in a development environment&lt;sup id=&quot;fnref:jekyll_site_variables&quot;&gt;&lt;a href=&quot;#fn:jekyll_site_variables&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. You can specifying Jekyll environment&lt;sup id=&quot;fnref:jekyll_specifying_environment&quot;&gt;&lt;a href=&quot;#fn:jekyll_specifying_environment&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; to production environment by &lt;code class=&quot;highlighter-rouge&quot;&gt;JEKYLL_ENV=production&lt;/code&gt; to avoid this behavior.&lt;/p&gt;
+
+&lt;h3 id=&quot;base-url&quot;&gt;Base URL&lt;/h3&gt;
+
+&lt;p&gt;The base URL for your site, default to ‘/’. If you are hosting the site on Github Pages this will be set as the project name for project pages if none is set&lt;sup id=&quot;fnref:gitHub_metadata:1&quot;&gt;&lt;a href=&quot;#fn:gitHub_metadata&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;title&quot;&gt;Title&lt;/h3&gt;
+
+&lt;p&gt;The name of your site.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;My&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Awesome&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Website&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+
+&lt;p&gt;Use some words to describe your site.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# this means to ignore newlines until &quot;nav_lists:&quot;&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;A website with awesome stories.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;language-and-timezone&quot;&gt;Language and Timezone&lt;/h2&gt;
+
+&lt;h3 id=&quot;language&quot;&gt;Language&lt;/h3&gt;
+
+&lt;p&gt;The language of your site, you can override it with different ones on specific posts, pages by YAML Front Matter&lt;sup id=&quot;fnref:font_matter&quot;&gt;&lt;a href=&quot;#fn:font_matter&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Language&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;en&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;English(default)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;zh&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Simplified Chinese, 简体中文&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;zh-Hans&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Simplified Chinese, 简体中文&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;zh-Hant&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Traditional Chinese, 繁體中文&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;timezone&quot;&gt;Timezone&lt;/h3&gt;
+
+&lt;p&gt;Set the time zone for site generation. This sets the TZ environment variable, which Ruby uses to handle time and date creation and manipulation. A list of all available values can be found &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&quot;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When serving on a local machine, the default time zone is set by your operating system. But when served on a remote host/server, the default time zone depends on the server’s setting or location.&lt;sup id=&quot;fnref:jekyll_global_configuration&quot;&gt;&lt;a href=&quot;#fn:jekyll_global_configuration&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;timezone&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Asia/Shanghai&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;author-and-social&quot;&gt;Author and Social&lt;/h2&gt;
+
+&lt;p&gt;Information of the site author (a person, a team, an organization or even a cat).&lt;/p&gt;
+
+&lt;h3 id=&quot;name&quot;&gt;Name&lt;/h3&gt;
+
+&lt;p&gt;Used to assign a site author.&lt;/p&gt;
+
+&lt;h3 id=&quot;social&quot;&gt;Social&lt;/h3&gt;
+
+&lt;p&gt;Username or id of site author’s social networks.&lt;/p&gt;
+
+&lt;p&gt;Now we supports Email, Facebook, Twitter, Google Plus, Github, Linkedin, Weibo(微博) and Douban(豆瓣), more to be added.&lt;/p&gt;
+
+&lt;p&gt;Depending on your settings, the social network buttons would show on every pages’ footer.&lt;/p&gt;
+
+&lt;h2 id=&quot;github-repository&quot;&gt;GitHub repository&lt;/h2&gt;
+
+&lt;p&gt;Setting for &lt;a href=&quot;https://github.com/jekyll/github-metadata&quot;&gt;GitHub Metadata&lt;/a&gt; plugin, you can refer to &lt;a href=&quot;https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration&quot;&gt;HERE&lt;/a&gt; for more info.&lt;/p&gt;
+
+&lt;p&gt;In order for jekyll-github-metadata to know what metadata to fetch it must be able to determine the repository NWO (name with owner, e.g. kitian616/jekyll-TeXt-theme) to ask GitHub about.&lt;/p&gt;
+
+&lt;p&gt;“NWO” stands for “name with owner.” It is GitHub lingo for the username of the owner of the repository plus a forward slash plus the name of the repository, e.g. ‘kitian616/jekyll-TeXt-theme’, where ‘kitian616’ is the owner and ‘jekyll-TeXt-theme’ is the repository name.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;repository&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;username/repo-name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;navigation-&quot;&gt;Navigation *&lt;/h2&gt;
+
+&lt;p&gt;Todo …&lt;/p&gt;
+
+&lt;h2 id=&quot;post&quot;&gt;Post&lt;/h2&gt;
+
+&lt;h3 id=&quot;excerpt&quot;&gt;Excerpt&lt;/h3&gt;
+
+&lt;p&gt;Each post automatically takes the first block of text, from the beginning of the content to the first occurrence of excerpt_separator, and sets it as the post’s excerpt.&lt;/p&gt;
+
+&lt;p&gt;The post’s excerpt is show in the articles list in the home layout. There are two excerpt types: text type and html type:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Type Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;text&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;the excerpt are plain text that filters out all non-text elements (such as title, link, list, table, picture, etc.) and only show 350 characters most.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;html&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;the excerpt are HTML document just like the content of the article, This will show all the content by default, except adding &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; in the article Markdown file, You can find more info &lt;a href=&quot;https://jekyllrb.com/docs/posts/#post-excerpts&quot;&gt;HERE&lt;/a&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;excerpt_separator&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;excerpt_type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# text (default), html&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;toc&quot;&gt;TOC&lt;/h3&gt;
+
+&lt;p&gt;Elements to use as headings.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;toc&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;selectors&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;h1,h2,h3&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;markdown-enhancements&quot;&gt;Markdown Enhancements&lt;/h3&gt;
+
+&lt;p&gt;To improve the user experience for both reading and writing posts, TeXt made some enhancements for markdown. By default, all the enhancements for markdown is enabled. you need set the settings to true to enable them:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Mathjax&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;mathjax&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;mathjax_autoNumber&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Mermaid&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;mermaid&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Chart&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;chart&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And also you can override it with different ones on specific posts, pages by YAML Front Matter&lt;sup id=&quot;fnref:font_matter:1&quot;&gt;&lt;a href=&quot;#fn:font_matter&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;/&quot;&gt;Writing Posts&lt;/a&gt; for detail usage.&lt;/p&gt;
+
+&lt;h2 id=&quot;paginate&quot;&gt;Paginate&lt;/h2&gt;
+
+&lt;p&gt;Settings for &lt;a href=&quot;https://github.com/jekyll/jekyll-paginate&quot;&gt;Jekyll Paginate&lt;/a&gt; plugin. to enable pagination for posts on your blog, add a line to the _config.yml file that specifies how many items should be displayed per page:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;paginate&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The number should be the maximum number of Posts you’d like to be displayed per-page in the generated site.&lt;/p&gt;
+
+&lt;p&gt;You may also specify the destination of the pagination pages:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;paginate_path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/blog/page:num&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# don't change this unless for special need&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sources&quot;&gt;Sources&lt;/h2&gt;
+
+&lt;p&gt;TeXt use CDN&lt;sup id=&quot;fnref:cdn&quot;&gt;&lt;a href=&quot;#fn:cdn&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; for speed improvements, You can choose &lt;a href=&quot;http://www.bootcdn.cn/&quot;&gt;BootCDN&lt;/a&gt;(default) or &lt;a href=&quot;https://unpkg.com/&quot;&gt;unpkg&lt;/a&gt; as your site’s CDN provider, both of them are open source and free.&lt;/p&gt;
+
+&lt;p&gt;If your website is mainly for Chinese, just use BootCDN.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bootcdn&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# bootcdn (default), unpkg&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;comments&quot;&gt;Comments&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Comment Provider&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;disqus&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;gitalk&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/gitalk/gitalk/&quot;&gt;Gitalk&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;disqus&quot;&gt;disqus&lt;/h3&gt;
+
+&lt;p&gt;To use Disqus you’ll need to create an account and &lt;a href=&quot;https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-&quot;&gt;shortname&lt;/a&gt;. Once you have both update _config.yml to:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;disqus&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;shortname&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your-disqus-shortname&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;gitalk&quot;&gt;gitalk&lt;/h3&gt;
+
+&lt;p&gt;To use gitalk you need a GitHub application, if you don’t have one, &lt;a href=&quot;https://github.com/settings/applications/new&quot;&gt;Click here to register&lt;/a&gt; a new one. and then update _config.yml to:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;gitalk&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;clientID&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;github-application-client-id&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;clientSecret&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;github-application-client-secret&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;repository&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;github-repo&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;github-repo-owner&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your-github-id&quot;&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;other-admin-github-id&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;pageview&quot;&gt;Pageview&lt;/h2&gt;
+
+&lt;p&gt;TeXt use &lt;a href=&quot;https://leancloud.cn/&quot;&gt;LeanCloud&lt;/a&gt; as back-end service. You need create a app on the dashboard, and config the app’s id, key and class name.&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;The detail guide of LeanCloud will find in Chinese document(not available yet) since LeanCloud haven’t provide an English-language edition.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;leancloud&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;app_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your-leanCloud-app-id&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;app_key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your-leanCloud-app-key&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;app_class&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your-leanCloud-app-class&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;analytics&quot;&gt;Analytics&lt;/h2&gt;
+
+&lt;h3 id=&quot;google-analytics&quot;&gt;Google Analytics&lt;/h3&gt;
+
+&lt;p&gt;In order to use Google Analytics, set &lt;code class=&quot;highlighter-rouge&quot;&gt;ga_tracking_id&lt;/code&gt; to your Google Analytics tracking code.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;ga_tracking_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your-google-analytics-tracking-code&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:gitHub_metadata&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/github-metadata#what-it-does&quot;&gt;GitHub Metadata, a.k.a. site.github&lt;/a&gt; &lt;a href=&quot;#fnref:gitHub_metadata&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:gitHub_metadata:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:jekyll_site_variables&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/variables/#site-variables&quot;&gt;Variables#Site Variables&lt;/a&gt; &lt;a href=&quot;#fnref:jekyll_site_variables&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:jekyll_specifying_environment&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time&quot;&gt;Configuration#Specifying a Jekyll environment at build timePermalink&lt;/a&gt; &lt;a href=&quot;#fnref:jekyll_specifying_environment&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:font_matter&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/frontmatter/&quot;&gt;Front Matter&lt;/a&gt; &lt;a href=&quot;#fnref:font_matter&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:font_matter:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:jekyll_global_configuration&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/configuration/#global-configuration&quot;&gt;Configuration#Global Configuration&lt;/a&gt; &lt;a href=&quot;#fnref:jekyll_global_configuration&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:cdn&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Content_delivery_network&quot;&gt;Content delivery network&lt;/a&gt; &lt;a href=&quot;#fnref:cdn&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="Document" /><category term="Document" /><category term="English" /><summary type="html">Jekyll allows you to concoct your sites in any way you can dream up, and it’s thanks to the powerful and flexible configuration options that this is possible. These options can either be specified in a _config.yml file placed in your site’s root directory, or can be specified as flags for the jekyll executable in the terminal. For technical reasons, this file is NOT reloaded automatically when you use jekyll serve. If you change this file, please restart the server process.</summary></entry><entry><title type="html">Document - Writing Posts</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html" rel="alternate" type="text/html" title="Document - Writing Posts" /><published>2018-04-10T00:00:00+08:00</published><updated>2018-04-10T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html">&lt;p&gt;As explained on the &lt;a href=&quot;https://jekyllrb.com/docs/structure/&quot;&gt;directory structure&lt;/a&gt; page, the _posts folder is where your blog posts will live. These files are generally Markdown or HTML. All posts must have YAML Front Matter, and they will be converted from their source format into an HTML page that is part of your static site.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;creating-post-files&quot;&gt;Creating Post Files&lt;/h2&gt;
+
+&lt;p&gt;To create a new post, all you need to do is create a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Jekyll requires blog post files to be named like these:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2011-12-31-new-years-eve-is-awesome.md
+2012-09-12-how-to-write-a-blog.markdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+
+&lt;p&gt;All blog post files must begin with YAML Front Matter.&lt;/p&gt;
+
+&lt;p&gt;To improve the user experience for both reading and writing posts, TeXt made some enhancements for markdown and some additional styles.&lt;/p&gt;
+
+&lt;h3 id=&quot;yaml-front-matter&quot;&gt;YAML Front Matter&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title: Document - Writing Posts
+mathjax: true
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Between these triple-dashed lines you can set variables. you can consider it as page configuration, these would overrides the global configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Beside Jekyll’s predefined variables, TeXt define some new variables:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Variable&lt;/th&gt;
+      &lt;th&gt;Option Values&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;key&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Unique key for the post&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;modify_date&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;The last modified date of this post, the date is modified in the format &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD HH:MM:SS +/-TTTT&lt;/code&gt;; hours, minutes, seconds, and timezone offset are optional. just like &lt;code class=&quot;highlighter-rouge&quot;&gt;date&lt;/code&gt; variable&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;comment&lt;/td&gt;
+      &lt;td&gt;true(default), false&lt;/td&gt;
+      &lt;td&gt;Set as &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; to disable comment on the post&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mathjax&lt;/td&gt;
+      &lt;td&gt;true, false(default)&lt;/td&gt;
+      &lt;td&gt;Set as &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; to enable Mathjax on the post&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mathjax_autoNumber&lt;/td&gt;
+      &lt;td&gt;true, false(default)&lt;/td&gt;
+      &lt;td&gt;Set as &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; to enable Mathjax autoNumber on the post&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mermaid&lt;/td&gt;
+      &lt;td&gt;true, false(default)&lt;/td&gt;
+      &lt;td&gt;Set as &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; to enable Mermaid on the post&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;chart&lt;/td&gt;
+      &lt;td&gt;true, false(default)&lt;/td&gt;
+      &lt;td&gt;Set as &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; to enable Chart on the post&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;markdown-enhancements&quot;&gt;Markdown Enhancements&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Enhancemen Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Mathjax&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Make it easy to add mathematics in articles&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html&quot;&gt;EXAMPLES&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Mermaid&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Bring diagrams and flowcharts in articles&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html&quot;&gt;EXAMPLES&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Chart&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Bring charts in articles&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/test/2017/05/05/chart.html&quot;&gt;EXAMPLES&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;As mentioned above, you need set the variable true in the _config.yml or in the YAML Front Matter to enable markdown enhancement.&lt;/p&gt;
+
+&lt;h3 id=&quot;additional-styles&quot;&gt;Additional styles&lt;/h3&gt;
+
+&lt;p&gt;Jekyll use kramdown as the default markdown processor. kramdown can adding attributes to block and span-level elements throw ALDs&lt;sup id=&quot;fnref:ALDs&quot;&gt;&lt;a href=&quot;#fn:ALDs&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; feature. with the help of ALDs, we can defined class names to an element by &lt;code class=&quot;highlighter-rouge&quot;&gt;{:.class-name1 .class-name-2}&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;TeXt offer some class names that you can use in the post, refer to &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html&quot;&gt;HERE&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:ALDs&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://kramdown.gettalong.org/syntax.html#attribute-list-definitions&quot;&gt;Attribute List Definitions&lt;/a&gt; &lt;a href=&quot;#fnref:ALDs&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="Document" /><category term="Document" /><category term="English" /><summary type="html">As explained on the directory structure page, the _posts folder is where your blog posts will live. These files are generally Markdown or HTML. All posts must have YAML Front Matter, and they will be converted from their source format into an HTML page that is part of your static site.</summary></entry><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">&lt;h2 id=&quot;alert&quot;&gt;Alert&lt;/h2&gt;
 
 &lt;p class=&quot;success&quot;&gt;Success Text.&lt;/p&gt;
 
@@ -30,7 +564,7 @@
 
 &lt;h3 id=&quot;border&quot;&gt;Border&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_border&quot; class=&quot;border&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_border&quot; class=&quot;border&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -39,7 +573,7 @@
 
 &lt;h3 id=&quot;shadow&quot;&gt;Shadow&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_shadow&quot; class=&quot;shadow&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_shadow&quot; class=&quot;shadow&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -48,7 +582,7 @@
 
 &lt;h3 id=&quot;rounded&quot;&gt;Rounded&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -57,7 +591,7 @@
 
 &lt;h3 id=&quot;circle&quot;&gt;Circle&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_circle&quot; class=&quot;circle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_circle&quot; class=&quot;circle&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -66,7 +600,7 @@
 
 &lt;h3 id=&quot;mixture&quot;&gt;Mixture&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_border+rounded&quot; class=&quot;border rounded&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_border+rounded&quot; class=&quot;border rounded&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -75,7 +609,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -84,7 +618,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;img src=&quot;//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_circle+border+shadow&quot; class=&quot;circle border shadow&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_circle+border+shadow&quot; class=&quot;circle border shadow&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -938,87 +1472,4 @@ tags:
   - English
 lang: en
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">English is the default language of TeXt, if you set lang in _config.yml to the other language but want make the page English, just set lang: en in the front matter.</summary></entry><entry><title type="html">Jekyll - Paragraphs</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html" rel="alternate" type="text/html" title="Jekyll - Paragraphs" /><published>2016-10-10T00:00:00+08:00</published><updated>2016-10-10T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2016/10/10/paragraphs</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html">&lt;p&gt;Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;EEG is most often used to diagnose epilepsy, which causes abnormalities in EEG readings. It is also used to diagnose sleep disorders, depth of anesthesia, coma, encephalopathies, and brain death. EEG used to be a first-line method of diagnosis for tumors, stroke and other focal brain disorders, but this use has decreased with the advent of high-resolution anatomical imaging techniques such as magnetic resonance imaging (MRI) and computed tomography (CT). Despite limited spatial resolution, EEG continues to be a valuable tool for research and diagnosis. It is one of the few mobile techniques available and offers millisecond-range temporal resolution which is not possible with CT, PET or MRI.&lt;/p&gt;
-
-&lt;p&gt;Derivatives of the EEG technique include evoked potentials (EP), which involves averaging the EEG activity time-locked to the presentation of a stimulus of some sort (visual, somatosensory, or auditory). Event-related potentials (ERPs) refer to averaged EEG responses that are time-locked to more complex processing of stimuli; this technique is used in cognitive science, cognitive psychology, and psychophysiological research.&lt;/p&gt;
-
-&lt;h2 id=&quot;very-long-word&quot;&gt;Very Long Word&lt;/h2&gt;
-
-&lt;p&gt;MethionylglutaminylarginyltyrosylglutamylserylleucylphenylalanylalanylglutaminylleucyllysylglutamylarginyllysylglutamylglycylalanylphenylalanylvalylprolyphenylalanYlvalythreonylleucylglycylaspartylprolylglycylisoleucylglutamylglutaminylsErylleucyllysylisoleucylaspartylthreonylleucylIsoleucylglutamylalanylglycylalanylasparthlalanylleucylglutamylleucylglycylisoleucylprolylphenylalanylseRylaspartylprolylleucylalanylaspartylglycylpRolylthreOnylisoleucylglutaminylasPfraginylalanylthreonylleucylarfinylalanylphenylalanylalanylalanylglycylvalythreonylprolylalanylglutaminylcysteinylphenylalanylglutamylmethionylleucylalanylleuOylisoleucylarginylglutaminyllysyhistidylprolylthreonylisoleucylprolylisoleucylglycylleucylmethionyltyrosylalanylasparaginylleucylvalylphenylalanylasparaginyllysyglycylisoleucylaspartylglutamylphenylalanylthrosylalanylglutaminylcysteinylglutamyllysylvalylglycylvalylaspartylserylvalylleucylvalylalnylaspartylvalylprolylvalylglUtaminylglutamylserylalanylprolylphenylalanylarginylglutaminylalanylalanylleucylarginylhistidylasparaginyvalylalanylprolylisoleucylprolylisoleucylphenylalanylisoleucylphenylalanylisoleucylcysteinylprolylprolylaspartylalanylaspartylaspartylaspartylleucylleucylarginylglutaminylisoleucylalanylseryltyrosylglycylarginylglycyltyrosylthreonyltyrOsylleucylleucylserylarginylalanylglycylvalylthreonylglycylalanylglutamYlasparainylarginylalanylalanylleucylprolylleucylasparaginylhistidylleucylValylalanyllysylleucyllysylglutamyltyrosylasparaginylalanylalanylprolylprolylleucylglutaminylglgycylphenylalanylglycylisoleucylserylalanylprolylaspartylglutaminylvalyllysylalanylalanylisoleucylaspartylalanylglycylalanylalanylglycylalanylisoleucylserylglycylserylalanylisoleucylvalyllysylisoIeucylisoleucylglutamylglutaminylHistidylasparaginyliSoleucylglutamylprolylglutamyllysylmethionylleucylalanylalanylleucyllysylvalylphenylalanylcalylglutaminylprolylmethionlysylalanylalanylthreonylarginylserine&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;From Wikipedia, the free encyclopedia&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="Jekyll" /><category term="English" /><summary type="html">Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.</summary></entry><entry><title type="html">Jekyll - Headers</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2016/09/19/headers.html" rel="alternate" type="text/html" title="Jekyll - Headers" /><published>2016-09-19T00:00:00+08:00</published><updated>2016-09-19T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2016/09/19/headers</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2016/09/19/headers.html">&lt;h1 id=&quot;text-theme-heading&quot;&gt;TeXt Theme Heading&lt;/h1&gt;
-
-&lt;h2 id=&quot;text-theme-heading-1&quot;&gt;TeXt Theme Heading&lt;/h2&gt;
-
-&lt;h3 id=&quot;text-theme-heading-2&quot;&gt;TeXt Theme Heading&lt;/h3&gt;
-
-&lt;h4 id=&quot;text-theme-heading-3&quot;&gt;TeXt Theme Heading&lt;/h4&gt;
-
-&lt;h5 id=&quot;text-theme-heading-4&quot;&gt;TeXt Theme Heading&lt;/h5&gt;
-
-&lt;h6 id=&quot;text-theme-heading-5&quot;&gt;TeXt Theme Heading&lt;/h6&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# TeXt Theme Heading
-## TeXt Theme Heading
-### TeXt Theme Heading
-#### TeXt Theme Heading
-##### TeXt Theme Heading
-###### TeXt Theme Heading
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;first-level-header&quot;&gt;First level header&lt;/h1&gt;
-
-&lt;h2 id=&quot;second-level-header&quot;&gt;Second level header&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;First level header
-==================
-
-Second level header
-------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="Jekyll" /><category term="English" /><summary type="html">TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading</summary></entry><entry><title type="html">Jekyll - Emphasis</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2016/09/09/emphasis.html" rel="alternate" type="text/html" title="Jekyll - Emphasis" /><published>2016-09-09T00:00:00+08:00</published><updated>2016-09-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2016/09/09/emphasis</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2016/09/09/emphasis.html">&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*Should Old Acquaintance be forgot*
-_Should Old Acquaintance be forgot_
-**Should Old Acquaintance be forgot**
-__Should Old Acquaintance be forgot__
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This is a &lt;strong&gt;&lt;em&gt;text with light and strong emphasis&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;strong&gt;is &lt;em&gt;emphasized&lt;/em&gt; as well&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;em&gt;does _not_ work&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;strong&gt;does __not__ work either&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a ***text with light and strong emphasis***.
-This **is _emphasized_ as well**.
-This *does _not_ work*.
-This **does __not__ work either**.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="Jekyll" /><category term="English" /><summary type="html">Should Old Acquaintance be forgot Should Old Acquaintance be forgot Should Old Acquaintance be forgot Should Old Acquaintance be forgot</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Someone</name><email>someone@somemail.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">English is the default language of TeXt, if you set lang in _config.yml to the other language but want make the page English, just set lang: en in the front matter.</summary></entry></feed>

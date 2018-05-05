@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Jekyll - Paragraphs - TeXt Theme</title>
-<meta name="description" content="Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the e...">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Document - Writing Posts - TeXt Theme</title>
+<meta name="description" content="As explained on the directory structure page, the _posts folder is where your blog posts will live. These files are generally Markdown or HTML. All posts mus...">
+<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/jekyll-TeXt-theme/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/jekyll-TeXt-theme/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/jekyll-TeXt-theme/assets/images/logo/icon-192x192.png">
@@ -240,45 +240,152 @@
 		<div class="col-1">
 			<article class="js-article" itemscope itemtype="http://schema.org/BlogPosting">
 				<meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
-				<header class="main-header"><h1 itemprop="headline" itemprop="name headline">Jekyll - Paragraphs</h1><div class="m-article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="tag-wrapper"><li>
-          <a class="pill-button" href="/jekyll-TeXt-theme/all.html?tag=Jekyll">Jekyll</a>
+				<header class="main-header"><h1 itemprop="headline" itemprop="name headline">Document - Writing Posts</h1><div class="m-article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="tag-wrapper"><li>
+          <a class="pill-button" href="/jekyll-TeXt-theme/all.html?tag=Document">Document</a>
         </li><li>
           <a class="pill-button" href="/jekyll-TeXt-theme/all.html?tag=English">English</a>
         </li></ul><div class="other-wrapper"><div class="view-wrapper">
-        <span class="article-view" data-page-key="20161010">0
+        <span class="article-view" data-page-key="20180410">0
         </span> views
-      </div><div class="date-wrapper"><time class="article-meta" datetime="2016-10-10T00:00:00+08:00"
-          itemprop="datePublished">Oct 10, 2016
+      </div><div class="date-wrapper"><time class="article-meta" datetime="2018-04-10T00:00:00+08:00"
+          itemprop="datePublished">Apr 10, 2018
         </time></div>
   </div>
 </div>
 </header>
-				<div class="m-article-content js-article-content" itemprop="articleBody"><p>Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.</p>
+				<div class="m-article-content js-article-content" itemprop="articleBody"><p>As explained on the <a href="https://jekyllrb.com/docs/structure/">directory structure</a> page, the _posts folder is where your blog posts will live. These files are generally Markdown or HTML. All posts must have YAML Front Matter, and they will be converted from their source format into an HTML page that is part of your static site.</p>
 
 <!--more-->
 
-<p>EEG is most often used to diagnose epilepsy, which causes abnormalities in EEG readings. It is also used to diagnose sleep disorders, depth of anesthesia, coma, encephalopathies, and brain death. EEG used to be a first-line method of diagnosis for tumors, stroke and other focal brain disorders, but this use has decreased with the advent of high-resolution anatomical imaging techniques such as magnetic resonance imaging (MRI) and computed tomography (CT). Despite limited spatial resolution, EEG continues to be a valuable tool for research and diagnosis. It is one of the few mobile techniques available and offers millisecond-range temporal resolution which is not possible with CT, PET or MRI.</p>
+<h2 id="creating-post-files">Creating Post Files</h2>
 
-<p>Derivatives of the EEG technique include evoked potentials (EP), which involves averaging the EEG activity time-locked to the presentation of a stimulus of some sort (visual, somatosensory, or auditory). Event-related potentials (ERPs) refer to averaged EEG responses that are time-locked to more complex processing of stimuli; this technique is used in cognitive science, cognitive psychology, and psychophysiological research.</p>
+<p>To create a new post, all you need to do is create a file in the <code class="highlighter-rouge">_posts</code> directory. Jekyll requires blog post files to be named like these:</p>
 
-<h2 id="very-long-word">Very Long Word</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2011-12-31-new-years-eve-is-awesome.md
+2012-09-12-how-to-write-a-blog.markdown
+</code></pre></div></div>
 
-<p>MethionylglutaminylarginyltyrosylglutamylserylleucylphenylalanylalanylglutaminylleucyllysylglutamylarginyllysylglutamylglycylalanylphenylalanylvalylprolyphenylalanYlvalythreonylleucylglycylaspartylprolylglycylisoleucylglutamylglutaminylsErylleucyllysylisoleucylaspartylthreonylleucylIsoleucylglutamylalanylglycylalanylasparthlalanylleucylglutamylleucylglycylisoleucylprolylphenylalanylseRylaspartylprolylleucylalanylaspartylglycylpRolylthreOnylisoleucylglutaminylasPfraginylalanylthreonylleucylarfinylalanylphenylalanylalanylalanylglycylvalythreonylprolylalanylglutaminylcysteinylphenylalanylglutamylmethionylleucylalanylleuOylisoleucylarginylglutaminyllysyhistidylprolylthreonylisoleucylprolylisoleucylglycylleucylmethionyltyrosylalanylasparaginylleucylvalylphenylalanylasparaginyllysyglycylisoleucylaspartylglutamylphenylalanylthrosylalanylglutaminylcysteinylglutamyllysylvalylglycylvalylaspartylserylvalylleucylvalylalnylaspartylvalylprolylvalylglUtaminylglutamylserylalanylprolylphenylalanylarginylglutaminylalanylalanylleucylarginylhistidylasparaginyvalylalanylprolylisoleucylprolylisoleucylphenylalanylisoleucylphenylalanylisoleucylcysteinylprolylprolylaspartylalanylaspartylaspartylaspartylleucylleucylarginylglutaminylisoleucylalanylseryltyrosylglycylarginylglycyltyrosylthreonyltyrOsylleucylleucylserylarginylalanylglycylvalylthreonylglycylalanylglutamYlasparainylarginylalanylalanylleucylprolylleucylasparaginylhistidylleucylValylalanyllysylleucyllysylglutamyltyrosylasparaginylalanylalanylprolylprolylleucylglutaminylglgycylphenylalanylglycylisoleucylserylalanylprolylaspartylglutaminylvalyllysylalanylalanylisoleucylaspartylalanylglycylalanylalanylglycylalanylisoleucylserylglycylserylalanylisoleucylvalyllysylisoIeucylisoleucylglutamylglutaminylHistidylasparaginyliSoleucylglutamylprolylglutamyllysylmethionylleucylalanylalanylleucyllysylvalylphenylalanylcalylglutaminylprolylmethionlysylalanylalanylthreonylarginylserine</p>
+<h2 id="content">Content</h2>
 
-<blockquote>
-  <p>From Wikipedia, the free encyclopedia</p>
-</blockquote>
+<p>All blog post files must begin with YAML Front Matter.</p>
+
+<p>To improve the user experience for both reading and writing posts, TeXt made some enhancements for markdown and some additional styles.</p>
+
+<h3 id="yaml-front-matter">YAML Front Matter</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: Document - Writing Posts
+mathjax: true
+---
+</code></pre></div></div>
+
+<p>Between these triple-dashed lines you can set variables. you can consider it as page configuration, these would overrides the global configuration in <code class="highlighter-rouge">_config.yml</code>.</p>
+
+<p>Beside Jekyll’s predefined variables, TeXt define some new variables:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Option Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>key</td>
+      <td>-</td>
+      <td>Unique key for the post</td>
+    </tr>
+    <tr>
+      <td>modify_date</td>
+      <td>-</td>
+      <td>The last modified date of this post, the date is modified in the format <code class="highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code>; hours, minutes, seconds, and timezone offset are optional. just like <code class="highlighter-rouge">date</code> variable</td>
+    </tr>
+    <tr>
+      <td>comment</td>
+      <td>true(default), false</td>
+      <td>Set as <code class="highlighter-rouge">false</code> to disable comment on the post</td>
+    </tr>
+    <tr>
+      <td>mathjax</td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Mathjax on the post</td>
+    </tr>
+    <tr>
+      <td>mathjax_autoNumber</td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Mathjax autoNumber on the post</td>
+    </tr>
+    <tr>
+      <td>mermaid</td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Mermaid on the post</td>
+    </tr>
+    <tr>
+      <td>chart</td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Chart on the post</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="markdown-enhancements">Markdown Enhancements</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Enhancemen Name</th>
+      <th>Description</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Mathjax</strong></td>
+      <td>Make it easy to add mathematics in articles</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">EXAMPLES</a></td>
+    </tr>
+    <tr>
+      <td><strong>Mermaid</strong></td>
+      <td>Bring diagrams and flowcharts in articles</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html">EXAMPLES</a></td>
+    </tr>
+    <tr>
+      <td><strong>Chart</strong></td>
+      <td>Bring charts in articles</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/05/05/chart.html">EXAMPLES</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As mentioned above, you need set the variable true in the _config.yml or in the YAML Front Matter to enable markdown enhancement.</p>
+
+<h3 id="additional-styles">Additional styles</h3>
+
+<p>Jekyll use kramdown as the default markdown processor. kramdown can adding attributes to block and span-level elements throw ALDs<sup id="fnref:ALDs"><a href="#fn:ALDs" class="footnote">1</a></sup> feature. with the help of ALDs, we can defined class names to an element by <code class="highlighter-rouge">{:.class-name1 .class-name-2}</code>.</p>
+
+<p>TeXt offer some class names that you can use in the post, refer to <a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">HERE</a> for details.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:ALDs">
+      <p><a href="https://kramdown.gettalong.org/syntax.html#attribute-list-definitions">Attribute List Definitions</a> <a href="#fnref:ALDs" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
 </div>
-				<footer><meta itemprop="dateModified" content="2016-10-10T00:00:00+08:00"><div class="article-license"><div class="m-license"><div class="clearfix"><a class="octocat" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2016-10-10-paragraphs.md">
+</div>
+				<footer><meta itemprop="dateModified" content="2018-04-10T00:00:00+08:00"><div class="article-license"><div class="m-license"><div class="clearfix"><a class="octocat" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2018-04-10-writing-posts.md">
         <img alt="View on Github" src="/jekyll-TeXt-theme/assets/images/octocat.jpg" />
-      </a><p><a href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2016-10-10-paragraphs.md">View this POST on Github.</a></p><p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> license.</p><a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+      </a><p><a href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2018-04-10-writing-posts.md">View this POST on Github.</a></p><p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> license.</p><a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
       <img alt="Creative Commons License" src="/jekyll-TeXt-theme/assets/images/license-cc4.png" />
     </a><p></p>
   </div>
 </div></div>
 				</footer>
 			</article>
-			<div class="article-previous-next clearfix"><div class="article-previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/test/2017/04/03/english.html">TeXt - English</a></div><div class="article-next"><span>NEXT</span><a href="/jekyll-TeXt-theme/test/2016/09/19/headers.html">Jekyll - Headers</a></div></div><section><div id="js-gitalk-container"></div><script>
+			<div class="article-previous-next clearfix"><div class="article-previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html">Document - Configuration</a></div><div class="article-next"><span>NEXT</span><a href="/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">TeXt - Additional Styles</a></div></div><section><div id="js-gitalk-container"></div><script>
 		window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
 		window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
 			var gitalk = new Gitalk({
@@ -287,7 +394,7 @@
 				repo: 'gitalk-demo',
 				owner: 'kitian616',
 				admin: ['kitian616'],
-				id: '20161010'
+				id: '20180410'
 			});
 			gitalk.render('js-gitalk-container');
 		});
@@ -780,10 +887,10 @@
         appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
         appClass: 'TeXtDemo'
       });
-      var key =   '20161010';
-      var title = window.decodeUrl('Jekyll+-+Paragraphs');
+      var key =   '20180410';
+      var title = window.decodeUrl('Document+-+Writing+Posts');
       pageview.increase(key, title, function(view) {
-        $("[data-page-key='20161010']").text(view);
+        $("[data-page-key='20180410']").text(view);
       });
     });
   </script><script>
