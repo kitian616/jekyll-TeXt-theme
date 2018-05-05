@@ -91,6 +91,6 @@ If you host your site on your server, you need first run `JEKYLL_ENV=production 
 
 ## Further Reading
 
-- Configuration
+- [Configuration](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html)
 
-- Writing Posts
+- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html)

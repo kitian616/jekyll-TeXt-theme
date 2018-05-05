@@ -11,16 +11,52 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-# config file for development, DELETE IT IF YOU WANT.
+# config file for development.
 
-text_color_theme: default #eg: default | dark | forest | ocean | chocolate | orange
-## Base settings ##
-# url:  #the base hostname & protocol for your site e.g. https://www.someone.com
 
-baseurl: /
+## => Site Settings
+##############################
+text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+url: # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl: # does not include hostname
 title: Someone's blog
-description: > #this means to ignore newlines until "nav_lists:"
+description: > # this means to ignore newlines until "Language & timezone"
   Someone's Blog
+
+
+## => Language and Timezone
+##############################
+lang: # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
+timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+
+
+## => Author and Social
+##############################
+author:
+  name: Someone
+  email: someone@somemail.com # your Email address e.g. someone@site.com
+  facebook: someone # your Facebook username
+  twitter: someone # your Twitter username
+  github: someone # your GitHub username
+  linkedin: # your Linkedin username
+  googleplus: # your Google+ username
+  weibo: # your Weibo username
+  douban: # your Douban username
+
+
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: someone/someone.github.io
+repository_tree: master
+
+
+## => Navigation
+##############################
+paths:
+  base: /
+  home: /
+  all:  /all.html
+  rss:  /feed.xml
 
 nav_lists:
   - titles:
@@ -29,79 +65,78 @@ nav_lists:
       zh-Hans: 关于
       zh-Hant: 關於
     url: /about.html
-  - title: Baidu
-    url: https://www.baidu.com
+  - title: Jekyll
+    url: https://jekyllrb.com/
 
-paths:
-  # base: /
-  # home: /
-  # all:  /all.html
-  # rss:  /feed.xml
 
-## GitHub repository (if the site is hosted by GitHub) ##
-repository: someone/someone.github.io
-repository_tree: master
-
-## Language & timezone ##
-# lang: en #the language of your site, eg: en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)
-timezone: Asia/Shanghai #see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
-
-## Author & social ##
-author:
-  name: Someone
-  email: someone@somemail.com  #your Email address e.g. someone@site.com
-  facebook: someone  #your Facebook username
-  twitter: someone  #your Twitter username
-  github: someone  #your GitHub username
-  googleplus:   #your Google+ username
-  weibo:   #your Weibo username
-  douban:   #your Douban username
-  linkedin:   #your Linkedin username
+## => Post
+##############################
+## excerpt
+excerpt_separator: <!--more-->
+excerpt_type: html # text (default), html
 
 ## TOC
 toc:
-  # selectors: 'h1,h2,h3,h4,h5,h6'
+  selectors: # "h1,h2,h3" (default)
 
-## Comment system (Disqus) ##
+## Markdown Enhancements
+
+# Mathjax
+mathjax: true # false (default), true
+mathjax_autoNumber: true # false (default), true
+
+# Mermaid
+mermaid: true # false (default), true
+
+# Chart
+chart: true # false (default), true
+
+
+## => Paginate
+##############################
+paginate: 3
+paginate_path: /blog/page:num # don't change this unless for special need
+
+
+## => Sources
+##############################
+sources: # bootcdn (default), unpkg
+
+
+## => Comments
+##############################
+## Disqus
 disqus:
-  # shortname:  #the Disqus shortname for the site
+  shortname: # the Disqus shortname for the site
 
-## Comment system (gitalk) ##
+## Gitalk
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-  clientID: 143666b578a416f82175 #Github Application Client ID
-  clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 #Github Application Client Secret
-  repository: gitalk-demo #Github repo
-  owner: kitian616 #Github repo owner
-  admin:  #Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+  clientID: 143666b578a416f82175 # GitHub Application Client ID
+  clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 # GitHub Application Client Secret
+  repository: gitalk-demo # GitHub repo
+  owner: kitian616 # GitHub repo owner
+  admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
     - kitian616
 
-## Google Analytics ##
-# ga_tracking_id:  #Google analytics id for the site
 
-## Reading quantity (LeanCloud) ##
+## => Pageview
+##############################
+## Leancloud
 leancloud:
-  # app_id:  #LeanCloud App id
-  # app_key:  #LeanCloud App key
-  # app_class:  #LeanCloud App class
+  app_id: # LeanCloud App id
+  app_key: # LeanCloud App key
+  app_class: # LeanCloud App class
 
-# mathjax: true
-# mathjax_autoNumber: true
-# mermaid: true
-# chart: true
 
-## Paginate ##
-paginate: 3
-paginate_path: /page:num
+## => Analytics
+##############################
+## Google Analytics
+ga_tracking_id: # Google Analytics id for the site
 
-## Post excerpts ##
-excerpt_separator: <!--more-->
-excerpt_type: html # text | html
 
-## Sources ##
-# sources: bootcss #eg: bootcss | unpkg
-
-## Build ##
+## => Build
+##############################
 markdown: kramdown
 highlighter: rouge
 permalink: date
@@ -124,12 +159,11 @@ exclude:
   # - /test
   - /vendor
 
-## Plugins ##
+
+## => Plugins
+##############################
 plugins:
-  - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
   - jemoji
-
-## Server ##
-server_url: "0.0.0.0"

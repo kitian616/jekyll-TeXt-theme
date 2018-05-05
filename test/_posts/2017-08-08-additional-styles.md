@@ -40,7 +40,7 @@ Error Text.
 
 ### Border
 
-![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_border"){:.border}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_border"){:.border}
 
 **markdown:**
 
@@ -48,7 +48,7 @@ Error Text.
 
 ### Shadow
 
-![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_shadow"){:.shadow}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_shadow"){:.shadow}
 
 **markdown:**
 
@@ -56,7 +56,7 @@ Error Text.
 
 ### Rounded
 
-![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_rounded"){:.rounded}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_rounded"){:.rounded}
 
 **markdown:**
 
@@ -64,7 +64,7 @@ Error Text.
 
 ### Circle
 
-![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_circle"){:.circle}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_circle"){:.circle}
 
 **markdown:**
 
@@ -72,7 +72,7 @@ Error Text.
 
 ### Mixture
 
-![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_border+rounded"){:.border.rounded}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_border+rounded"){:.border.rounded}
 
 **markdown:**
 
@@ -80,7 +80,7 @@ Error Text.
 
 ---
 
-![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_circle+shadow"){:.circle.shadow}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_circle+shadow"){:.circle.shadow}
 
 **markdown:**
 
@@ -88,7 +88,7 @@ Error Text.
 
 ---
 
-![Lenna](//ww1.sinaimg.cn/large/73bd9e13ly1fof1u4iaorj2074074gp3.jpg "Lenna_circle+border+shadow"){:.circle.border.shadow}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_circle+border+shadow"){:.circle.border.shadow}
 
 **markdown:**
 

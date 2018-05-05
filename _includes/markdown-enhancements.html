@@ -1,18 +1,18 @@
-{%- assign __target = site.chart -%}
+{%- assign __target = site.chart | default: site.data.variables.default.chart -%}
 {%- assign __source = page.chart -%}
 {%- include snippets/assign.html -%}
 {%- if __return == true -%}
   {%- include markdown-enhancements/chart.html -%}
 {%- endif -%}
 
-{%- assign __target = site.mathjax -%}
+{%- assign __target = site.mathjax | default: site.data.variables.default.mathjax -%}
 {%- assign __source = page.mathjax -%}
 {%- include snippets/assign.html -%}
 {%- if __return == true -%}
   {%- include markdown-enhancements/mathjax.html -%}
 {%- endif -%}
 
-{%- assign __target = site.mermaid -%}
+{%- assign __target = site.mermaid | default: site.data.variables.default.mermaid -%}
 {%- assign __source = page.mermaid -%}
 {%- include snippets/assign.html -%}
 {%- if __return == true -%}

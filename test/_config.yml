@@ -98,7 +98,7 @@ excerpt_separator: <!--more-->
 excerpt_type: text # text | html
 
 ## Sources ##
-# sources: bootcss #eg: bootcss | unpkg
+# sources: bootcdn #eg: bootcdn | unpkg
 
 ## Build ##
 markdown: kramdown

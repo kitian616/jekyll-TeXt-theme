@@ -1,9 +1,11 @@
 <div class="follow-me">
-  {%- assign __locale = site.data.locale.FOLLOW_ME -%}
-  {%- include snippets/locale-to-string.html -%}
   <ul itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="{{ site.author.name }}">
-    <link itemprop="url" href="{{ '/' | prepend: site.url }}">
+    {%- assign __path = '/'-%}
+    {%- include snippets/prepend-baseurl.html -%}
+    <link itemprop="url" href="{{ __return | prepend: site.url }}">
+    {%- assign __locale = site.data.locale.FOLLOW_ME -%}
+    {%- include snippets/locale-to-string.html -%}
     {%- if site.author.weibo -%}
       <li title="{{ __return | replace: '[NAME]', 'Weibo' }}">
         <a class="floating-action-round-button weibo" itemprop="sameAs" href="https://weibo.com/{{ site.author.weibo }}" target="_blank">

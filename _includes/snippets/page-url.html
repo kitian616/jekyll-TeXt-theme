@@ -1,1 +1,3 @@
-{{ page.url | replace:'index.html','' | prepend: site.baseurl | replace:'//','/' | prepend: site.url }}
+{%- assign __path = page.url -%}
+{%- include snippets/prepend-baseurl.html -%}
+{{ __return | prepend: site.url }}

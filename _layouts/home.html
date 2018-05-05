@@ -16,7 +16,8 @@ titles:
           {%- assign href = __return -%}
           <h1><a href="{{ href }}">{{ post.title }}</a></h1>
           <div class="m-article-content">
-            {%- if site.excerpt_type == 'html' -%}
+            {%- assign _excerpt_type = site.excerpt_type | default: site.data.variables.default.excerpt_type  -%}
+            {%- if _excerpt_type == 'html' -%}
               {{ post.excerpt }}
             {%- else -%}
               {{ post.excerpt | strip_html | truncate: 350 }}
@@ -79,10 +80,9 @@ titles:
                   <div class="round-button cur"><span>{{ page }}</span></div>
                 </li>
               {%- elsif page == 1 -%}
+                {%- assign __path = site.data.variables.default.paths.base -%}
                 {%- if site.paths.base -%}
                   {%- assign __path = site.paths.base -%}
-                {%- else -%}
-                  {%- assign __path = '/' -%}
                 {%- endif -%}
                 {%- include snippets/prepend-baseurl.html -%}
                 {%- assign href = __return -%}
