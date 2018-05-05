@@ -8,7 +8,7 @@
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-[Demo](https://tianqi.name/jekyll-TeXt-theme/) | [English (Beta)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md)
+[Demo](https://tianqi.name/jekyll-TeXt-theme/) | [English](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md)
 
 TeXt is a succinct theme for blogging.
 

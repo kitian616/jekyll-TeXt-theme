@@ -40,7 +40,7 @@ Error Text.
 
 ### Border
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_border"){:.border}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_border"){:.border}
 
 **markdown:**
 
@@ -48,7 +48,7 @@ Error Text.
 
 ### Shadow
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_shadow"){:.shadow}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_shadow"){:.shadow}
 
 **markdown:**
 
@@ -56,7 +56,7 @@ Error Text.
 
 ### Rounded
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_rounded"){:.rounded}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.rounded}
 
 **markdown:**
 
@@ -64,7 +64,7 @@ Error Text.
 
 ### Circle
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_circle"){:.circle}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle"){:.circle}
 
 **markdown:**
 
@@ -72,7 +72,7 @@ Error Text.
 
 ### Mixture
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_border+rounded"){:.border.rounded}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_border+rounded"){:.border.rounded}
 
 **markdown:**
 
@@ -80,7 +80,7 @@ Error Text.
 
 ---
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_circle+shadow"){:.circle.shadow}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle+shadow"){:.circle.shadow}
 
 **markdown:**
 
@@ -88,7 +88,7 @@ Error Text.
 
 ---
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.png "Lenna_circle+border+shadow"){:.circle.border.shadow}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle+border+shadow"){:.circle.border.shadow}
 
 **markdown:**
 

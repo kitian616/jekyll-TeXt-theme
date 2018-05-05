@@ -8,8 +8,6 @@
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-[Demo](https://tianqi.name/jekyll-TeXt-theme/) | [English (Beta)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md)
-
 TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
 ## Features
@@ -33,51 +31,9 @@ TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
 - Multi-language support(English | Simplified Chinese | Traditional Chinese)
 
-## How To Use
+## Color Themes
 
-The easiest way is making a fork of the repository and rename it to `<username>.github.io`, then you can clone it to local, commit your changes and push.
-
-And also, you can get the source code of the theme at the [release page](https://github.com/kitian616/jekyll-TeXt-theme/releases).
-
-### Configuration
-
-Add your information in the ./_config.yml file, such as your name, contact, title of the site and so on.
-
-Write your brief introduction in the ./about.md file.
-
-### Writing Posts
-
-To create a new post, all you need to do is create a file in the ./_posts directory. the blog post files need to be named as the format `YEAR-MONTH-DAY-title.MARKUP`, for example `2011-12-31-new-years-eve-is-awesome.md`. You can find more info at [Jekyll: Writing Posts](https://jekyllrb.com/docs/posts/).
-
-### Excerpt
-
-There are two excerpt types: TEXT type and HTML type. You can change it by setting the value of `excerpt_type` in the ./\_config.yml file.
-
-| excerpt_type | type | description |
-| --- | --- | --- |
-| text | TEXT | the excerpt are plain text that filters out all non-text elements (such as title, link, list, table, picture, etc.) and only show 350 characters most. |
-| html | HTML | the excerpt are HTML document just like the content of the article, This will show all the content by default, except adding `<!--more-->` in the article Markdown file, You can find more info at [Jekyll: Post#post-excerpts](https://jekyllrb.com/docs/posts/#post-excerpts).  |
-
-### Installation Development Environment (not Necessary)
-
-Find more info at [Jekyll: Installation](https://jekyllrb.com/docs/installation/).
-
-### Development Server (not Necessary)
-
-if you Installed Node.js, you can start a development server by running `npm run dev` at the root path of the repository.
-
-if not, just run:
-
-```console
-bundle exec jekyll serve -H 0.0.0.0
-```
-after the command finished, you can visit [http://localhost:4000/](http://localhost:4000/) to see the page.
-
-You can find more info at [Jekyll: Usage](https://jekyllrb.com/docs/usage/).
-
-## Advanced
-
-### Color Theme
+You can choose these 6 built-in color themes below:
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
@@ -87,43 +43,19 @@ You can find more info at [Jekyll: Usage](https://jekyllrb.com/docs/usage/).
 | --- |  --- | --- |
 | ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.png) | ![chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_chocolate.png) | ![orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png) |
 
-### Icons
+## Documentation
 
-This theme comes with a "ginkgo leaf" icon, you can replace it with your own icon. The site's icons are located in the ./favicon.ico and ./assets/images/logo directories. You can see the logo directory has a lot of png files and a svg vector file. Those png images are actually images of different sizes generated from svg vector images that may used in some scenes, such as pinned to the screen in OS and Android and tiles in Windows 10.
+- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/05/01/quick-start.html)
+- [Configuration](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html)
+- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html)
 
-This theme provides an automated script for automatically generating favicon and png files from svg vector graphics. What you have to do is:
+## Demo Pages
 
-1. Install Node.js
+| Name | Description |
+| --- | --- |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/) | Home page with posts list |
+| [Archive](https://tianqi.name/jekyll-TeXt-theme/all.html) | You can filter tags and search here |
 
-2. Run `npm i` command at the root directory.
+## License
 
-3. Replacing the logo.svg file in the ./assets/images/logo directory.
-
-4. Run `npm run artwork` command. after it finished, the favicon and png files will be replaced by the new logo.svg generated files.
-
-### Comment
-
-### Reading Quantity
-
-### Google Analytics
-
-### Front Matter Enhancement
-
-In addition to Jekyll's front matters, the theme adds some unique front matters.
-
-| variable      | option values | description |
-| ---           | ---           | ---         |
-| key           | | |
-| picture_frame | shadow        | |
-| modify_date   | | |
-| comment       | true/false    | |
-| mathjax       | true/false    | |
-| mermaid       | true/false    | |
-| chart       | true/false    | |
-
-### Other Resource
-
-## Examples
-
-- [Demo](https://tianqi.name/jekyll-TeXt-theme/)
-- [Qi's blog](https://tianqi.name/blog/)
+TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
