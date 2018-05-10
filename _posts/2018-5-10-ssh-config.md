@@ -32,7 +32,7 @@ ssh config 的格式比较简单, 通过模式匹配的方式匹配相应的配�
 
 配置示例1：
 
-``` ssh config
+```
 Host 192.168.*
     IdentityFile ~/myPrivatekey.pem
     LogLevel QUIET
@@ -69,7 +69,7 @@ Host hello
 
 配置示例2：
 
-``` ssh config
+```
 Host 192.*
     IdentityFile ~/myPrivatekey.pem
     User ubuntu
