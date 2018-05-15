@@ -11,7 +11,7 @@
   }
   a {
     display: inline-block;
-    font-size: map-get($base, font-size-sub);
+    font-size: map-get($base, font-size-small);
     @include link-normal() {
       text-decoration: none;
     }

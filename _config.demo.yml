@@ -59,6 +59,8 @@ paths:
   # rss:  /feed.xml
 
 nav_lists:
+  - title: Documents
+    url: /docs/quick-start
   - titles:
       en: About
       zh: 关于

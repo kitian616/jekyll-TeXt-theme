@@ -128,7 +128,7 @@ a {
 }
 
 pre, code {
-  font-family: map-get($base, code-font-family);
+  font-family: map-get($base, font-family-code);
 }
 
 code {
@@ -141,7 +141,7 @@ figure>img {
 }
 
 figcaption {
-  font-size: map-get($base, font-size-sub);
+  font-size: map-get($base, font-size-small);
 }
 
 .icon {

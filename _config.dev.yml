@@ -95,7 +95,7 @@ chart: true # false (default), true
 ## => Paginate
 ##############################
 paginate: 3
-paginate_path: /blog/page:num # don't change this unless for special need
+paginate_path: /page:num # don't change this unless for special need
 
 
 ## => Sources
@@ -153,7 +153,7 @@ exclude:
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  - /docs
+  # - /docs
   - /node_modules
   - /screenshots
   # - /test

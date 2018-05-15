@@ -3,7 +3,7 @@
   .date-wrapper,
   .tag-wrapper,
   .view-wrapper {
-    font-size: map-get($base, font-size-sub);
+    font-size: map-get($base, font-size-small);
   }
   .tag-wrapper {
     float: left;

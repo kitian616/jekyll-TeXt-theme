@@ -1,0 +1,287 @@
+---
+layout: post
+title: 配置
+permalink: /docs/zh/configuration
+key: 20180420-ch
+lang: zh
+tags:
+- Document
+- Simplified Chinese | 简
+---
+
+Jekyll 允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的  `_config.yml` 文件，也可以作为命令行的标记来配置。
+
+`_config.yml` 包括一些在运行时一次性读入的全局配置和变量定义， 在自动生成的过程中并不会重新加载，除非重新运行。注意 Data Files 包括在自动生成范围内，可以在更改后自动重新加载。
+{:.warning}
+
+<!--more-->
+
+## 网站配置项
+
+### 主题
+
+如果是通过主题方式安装的，你需要这样配置以启用主题:
+
+```yaml
+theme: minimal-mistakes-jekyll
+```
+
+### 颜色主题
+
+TeXt 内置了以下 6 中颜色主题：
+
+| `default` | `dark` | `forest` |
+| --- |  --- | --- |
+| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.png) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.png) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.png) |
+
+| `ocean` | `chocolate` | `orange` |
+| --- |  --- | --- |
+| ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.png) | ![chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_chocolate.png) | ![orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png) |
+
+```yaml
+text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+```
+
+### URL
+
+网站的协议和域名。
+
+如果你的网站是搭建在 Github Pages 上的，这个只会被设置为 GitHub Pages 域名（CNAME 或个人域名）[^gitHub_metadata]. 举个例子, https://kitian616.github.io 或者 https://tianqi.name 如果设置了 CNAME。
+
+在 3.3 及更高版本的 Jekyll 中运行 `jekyll serve` 命令会在开发模式时将其设置为 url: http://localhost:4000，你可以通过 `JEKYLL_ENV=production` 设置生产环境。
+{:.warning}
+
+[^gitHub_metadata]: [GitHub Metadata, a.k.a. site.github](https://github.com/jekyll/github-metadata#what-it-does)
+
+[^jekyll_site_variables]: [Variables#Site Variables](https://jekyllrb.com/docs/variables/#site-variables)
+
+[^jekyll_specifying_environment]: [Configuration#Specifying a Jekyll environment at build timePermalink](https://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time)
+
+### Base URL
+
+网站的根路径，不包含域名，其默认值为“/“。
+
+如果你的网站是搭建在 Github Pages 上的，那么这个值会默认设置为网站对应的项目名[^gitHub_metadata]。
+
+### 网站标题
+
+网站的标题。
+
+```yaml
+title: "My Awesome Website"
+```
+
+### 网站描述
+
+使用一些简短的语言来描述你的网站。
+
+```yaml
+description: > # this means to ignore newlines until "nav_lists:"
+  A website with awesome stories.
+```
+
+## 语言与时区
+
+### 语言
+
+网站的语言，当然你可以在头信息[^font_matter]里指定特定的文章或页面的语言。
+
+| 名称 | 语言 |
+| --- | --- |
+| **en** | 英语（English，默认值） |
+| **zh** | 简体中文 |
+| **zh-Hans** | 简体中文 |
+| **zh-Hant** | 繁體中文 |
+
+```yaml
+lang: en
+```
+
+[^font_matter]: [Front Matter](https://jekyllrb.com/docs/frontmatter/)
+
+### 时区
+
+设置时区，这个设置作用于 TZ 变量， Ruby 用它来处理日期和时间。使用 IANA Time Zone Database 标准，比如 America/New_York 。其默认值为操作系统的时区。可以在 [这里](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 找到可取的值。[^jekyll_global_configuration]
+
+[^jekyll_global_configuration]: [Configuration#Global Configuration](https://jekyllrb.com/docs/configuration/#global-configuration)
+
+```yaml
+timezone: Asia/Shanghai
+```
+
+## 作者信息
+
+网站作者的信息（可以是个人、团队、组织甚至是一只猫）。
+
+### 作者名
+
+用来表明网站的作者。
+
+### 社交
+
+社交网站的用户名或用户 ID。
+
+目前支持邮件、微博、豆瓣、Facebook、Twitter、Google Plus、Github 和 Linkedin，持续添加中。
+
+当你设置了相应项的值后，对应的社交按钮就会出现在页面下方。
+
+## GitHub 源码仓库
+
+[GitHub Metadata](https://github.com/jekyll/github-metadata) 插件的设置, 你可以在[这里](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration)找到更多信息。
+
+这个设置告诉 jekyll-github-metadata 插件应该从哪个项目中获取元数据，其格式为 `项目所有者 ID / 项目名称`，例如：kitian616/jekyll-TeXt-theme。
+
+```yaml
+repository: username/repo-name
+```
+
+## Navigation *
+
+Todo ...
+
+## 文章配置项
+
+### 摘要
+
+该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 ./\_config.yml 配置项 `excerpt_type` 的值为 `text` 时是 TEXT 模式，为 `html` 时是 HTML 模式，**默认为 TEXT 模式**。
+
+| 模式名称 | 描述 |
+| --- | --- |
+| **text** | 此时摘要为纯文本，会过滤掉一切非文本元素（标题，链接，列表，表格，图片等等），且截取前 350 个字符。 |
+| **html** | 此时摘要为 HTML 文档，与文章内容一致，并且 **默认展示整篇文章的内容**。若想控制摘要内容，需要在文章中想要显示到的地方加上 `<!--more-->`，详情请戳[这里](https://jekyllrb.com/docs/posts/#post-excerpts)  |
+
+```yaml
+excerpt_separator: <!--more-->
+excerpt_type: text # text (default), html
+```
+
+### 目录
+
+作为文章目录的元素。
+
+```yaml
+toc:
+  selectors: "h1,h2,h3"
+```
+
+### Markdown 增强
+
+为了增强文章的写作和阅读体验，TeXt 对 Jekyll 现有的 markdown 做了一些增强。当然这些增强都是默认禁止的，你需要设置相应的配置项为 true 来启动它们：
+
+```yaml
+# Mathjax
+mathjax: true
+mathjax_autoNumber: true
+
+# Mermaid
+mermaid: true
+
+# Chart
+chart: true
+```
+
+当然你也可以为某一篇文章或页面通过头信息[^font_matter]来做单独的指定。
+
+在 [撰写博客](/) 篇中有更详细的使用说明。
+
+## 分页
+
+[Jekyll Paginate](https://github.com/jekyll/jekyll-paginate) 插件的配置。
+
+要想对文章列表做分页，你需要在 _config.yml 文件中配置每页显示的文章数：
+
+```yaml
+paginate: 8
+```
+
+这个数字代表了文章列表页每页显示的最大文章数。
+
+你也可以像这样指定分页页面的地址：
+
+```yaml
+paginate_path: /page:num # don't change this unless for special need
+```
+
+## CDN 源
+
+TeXt 使用 CDN[^cdn] 来加快载入速度，你可以选择 [BootCDN](http://www.bootcdn.cn/)（默认项）或者[unpkg](https://unpkg.com/)作为网站的 CDN 源。它们都是开源而免费的。
+
+国内用户请优先使用 BootCDN。
+
+```yaml
+sources: bootcdn # bootcdn (default), unpkg
+```
+
+[^cdn]: [Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_network)
+
+## 评论
+
+| 名字 | 评论提供方 |
+| --- | --- |
+| **disqus** | [Disqus](https://disqus.com/) |
+| **gitalk** | [Gitalk](https://github.com/gitalk/gitalk/) |
+
+### disqus
+
+要想启用 disqus 作为评论系统，你需要注册一个 Disqus 账号然后申请一个针对该网站的 [shortname](https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-)，完成后将 shortname 填入到 _config.yml 中：
+
+```yaml
+disqus:
+  shortname: "your-disqus-shortname"
+```
+
+### gitalk
+
+要想启用 gitalk 作为评论系统，首先你需要一个 GitHub Application，如果没有[点击这里](https://github.com/settings/applications/new)申请。然后将相应的参数添加到 _config.yml 配置中：
+
+```yaml
+gitalk:
+  clientID: "github-application-client-id"
+  clientSecret: "github-application-client-secret"
+  repository: "github-repo"
+  owner: "github-repo-owner"
+  admin: # Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+    - "your-github-id"
+    - "the-other-admin-github-id"
+```
+
+## 文章点击量
+
+TeXt 使用 LeanCloud 作为点击量功能的后台服务。你需要建立一个应用，然后在应用中建立一个 Class，之后将必要的信息填写到 _config.yml 文件中。下面详细介绍其操作步骤。
+
+在进入[主页](https://leancloud.cn/)后点击页面右上角的“访问控制台”，然后注册账号并登录。
+
+在应用面板存储子页中点击“创建应用”按钮，在弹出的对话框中填写应用名称，计价方案选择“开发版”（土豪随意），然后点击“创建”按钮创建应用。
+
+创建完成后应用面板上会出现你刚刚创建的应用卡片，点击进入选择创建 Class：
+
+![Leancloud：创建 Class 0](/test/assets/images/leancloud-create-class-0.jpg){:style="max-height:420px"}{:.border}
+
+在弹出的对话框中填写 Class 的名字，权限选择“无限制”，点击“创建 Class”按钮：
+
+![Leancloud：创建 Class 1](/test/assets/images/leancloud-create-class-1.jpg){:style="max-height:620px"}{:.border}
+
+当然你可以随时更改 Class 的权限，在应用面板存储子页中选择想要修改的 Class，点击上面菜单的其他 -> 权限设置项，即可进入设置页：
+
+![Leancloud：权限设置](/test/assets/images/leancloud-authorization.jpg){:style="max-height:300px"}
+
+最后点击应用面板右侧的“设置”，点击“应用 Key” 选项，即可得到对应的 APP ID 和 APP KEY：
+
+![Leancloud：App Info](/test/assets/images/leancloud-app-info.jpg){:.border}
+
+```yaml
+leancloud:
+  app_id: "your-leanCloud-app-id"
+  app_key: "your-leanCloud-app-key"
+  app_class: "your-leanCloud-app-class"
+```
+
+## 站点统计
+
+### Google Analytics
+
+你需要将 `ga_tracking_id` 设置成你的 Google Analytics 账户中针对该网站的跟踪代码来启动这项功能。
+
+```yaml
+ga_tracking_id: "your-google-analytics-tracking-code"
+```

@@ -1,6 +1,6 @@
 $base: (
   font-family:            (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif),
-  code-font-family:       (Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace),
+  font-family-code:       (Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace),
 
   font-size-root:         16px,
   font-size:              1rem,
@@ -11,7 +11,7 @@ $base: (
   font-size-h4:           1.2rem,
   font-size-h5:           1rem,
   font-size-h6:           1rem,
-  font-size-sub:          .9rem,
+  font-size-small:        .9rem,
   font-size-tiny:         .8rem,
 
   font-size-h1-small:     2rem,
@@ -19,7 +19,7 @@ $base: (
   font-size-h3-small:     1.35rem,
   font-size-h4-small:     1.15rem,
 
-  font-size-header-list:  1.4rem,
+  font-size-heading-list:  1.4rem,
   font-size-h1-excerpt:   1rem,
   font-size-h2-excerpt:   .975rem,
   font-size-h3-excerpt:   .95rem,
@@ -52,6 +52,10 @@ $layout: (
   aside-width:            220px,
   footer-height:          12rem
 );
+
+//     sm       md       lg
+// | ------ | ------ | ------ |
+// 0       500      1024      ∞
 
 $responsive: (
   s:                      500px,

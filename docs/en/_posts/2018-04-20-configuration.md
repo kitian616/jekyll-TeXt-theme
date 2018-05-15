@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 'Document - Configuration'
+permalink: /docs/configuration
 key: 20180420
-category: Document
 tags:
 - Document
 - English
@@ -10,7 +10,7 @@ tags:
 
 Jekyll allows you to concoct your sites in any way you can dream up, and it’s thanks to the powerful and flexible configuration options that this is possible. These options can either be specified in a `_config.yml` file placed in your site’s root directory, or can be specified as flags for the jekyll executable in the terminal.
 
-For technical reasons, this file is *NOT* reloaded automatically when you use `jekyll serve`. If you change this file, please restart the server process.
+For technical reasons, `_config.yml` is *NOT* reloaded automatically when you use `jekyll serve`. If you change this file, please restart the server process.
 {:.warning}
 
 <!--more-->
@@ -126,7 +126,7 @@ Depending on your settings, the social network buttons would show on every pages
 
 Setting for [GitHub Metadata](https://github.com/jekyll/github-metadata) plugin, you can refer to [HERE](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) for more info.
 
-In order for jekyll-github-metadata to know what metadata to fetch it must be able to determine the repository NWO (name with owner, e.g. kitian616/jekyll-TeXt-theme) to ask GitHub about.
+In order for jekyll-github-metadata to know what metadata to fetch it must be able to determine the repository NWO to ask GitHub about.
 
 "NWO" stands for "name with owner." It is GitHub lingo for the username of the owner of the repository plus a forward slash plus the name of the repository, e.g. 'kitian616/jekyll-TeXt-theme', where 'kitian616' is the owner and 'jekyll-TeXt-theme' is the repository name.
 
@@ -198,7 +198,7 @@ The number should be the maximum number of Posts you’d like to be displayed pe
 You may also specify the destination of the pagination pages:
 
 ```yaml
-paginate_path: /blog/page:num # don't change this unless for special need
+paginate_path: /page:num # don't change this unless for special need
 ```
 
 ## Sources
@@ -241,14 +241,14 @@ gitalk:
   owner: "github-repo-owner"
   admin: # Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
     - "your-github-id"
-    - "other-admin-github-id"
+    - "the-other-admin-github-id"
 ```
 
 ## Pageview
 
 TeXt use [LeanCloud](https://leancloud.cn/) as back-end service. You need create a app on the dashboard, and config the app's id, key and class name.
 
-The detail guide of LeanCloud will find in Chinese document(not available yet) since LeanCloud haven't provide an English-language edition.
+The detail guide of LeanCloud will find in [Chinese document](https://tianqi.name/jekyll-TeXt-theme/docs/zh/configuration#%E6%96%87%E7%AB%A0%E7%82%B9%E5%87%BB%E9%87%8F) since LeanCloud haven't provide an English-language edition.
 {:.info}
 
 ```yaml

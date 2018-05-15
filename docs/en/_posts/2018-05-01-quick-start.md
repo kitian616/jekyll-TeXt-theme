@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 'Document - Quick Start'
+permalink: /docs/quick-start
 key: 20180501
-category: Document
 tags:
 - Document
 - English
@@ -32,9 +32,9 @@ To install it with common method, all you need to do is copying all the theme fi
 
 3. If you host your site on GitHub Pages, you can just fork [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme), then rename the repository to **USERNAME.github.io** — replacing **USERNAME** with your GitHub username.
 
-    ![Fork](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/fork.png)
+    ![Fork](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-fork.png)
 
-    ![Rename](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/rename.png)
+    ![Rename](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-rename-repo.png)
 
 ### Ruby Gem Method
 
@@ -91,6 +91,6 @@ If you host your site on your server, you need first run `JEKYLL_ENV=production 
 
 ## Further Reading
 
-- [Configuration](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html)
+- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/quick-start)
 
-- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html)
+- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/writing-posts)

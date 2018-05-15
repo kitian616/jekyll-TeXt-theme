@@ -81,9 +81,9 @@
           list-style-type: none;
           margin: .4rem 0;
           .date {
-            font-family: map-get($base, code-font-family);
+            font-family: map-get($base, font-family-code);
             display: inline-block;
-            font-size: map-get($base, font-size-sub);
+            font-size: map-get($base, font-size-small);
             color: $text-color-l;
             padding: 0 1rem 0 0;
           }

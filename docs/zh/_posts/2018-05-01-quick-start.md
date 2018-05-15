@@ -1,0 +1,99 @@
+---
+layout: post
+title: 快速开始
+permalink: /docs/zh/quick-start
+key: 20180501-ch
+lang: zh
+tags:
+- Document
+- Simplified Chinese | 简
+---
+
+TeXt 是一款 100% 兼容 GitHub Pages 的 Jekyll 主题，你可以通过 Fork、下载或主题等方式安装。
+
+在这篇文章中，你将学到如何安装设置主题，通过本地预览进行开发以及编译和发布网站的方法。
+
+<!--more-->
+
+## 安装
+
+### 普通方式
+
+这种方式要求你的项目里包含所有的主题文件，你可以通过以下途径来安装：
+
+1. 从 GitHub 克隆 [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) 项目:
+
+    ```bash
+    git clone git@github.com:kitian616/jekyll-TeXt-theme.git
+    ```
+
+2. 下载主题压缩包并解压到你的项目目录中：
+
+    [==> Download TeXt Theme <==](https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip)
+
+3. 如果你打算在 GitHub Pages 上搭建你的网站，你可以直接 fork [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) 到你的仓库，然后将其重命名为 **USERNAME.github.io** — 这里的 **USERNAME** 是你的 GitHub 用户名。
+
+    ![Fork](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-fork.png)
+
+    ![Rename](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-rename-repo.png)
+
+### 主题方式
+
+若要安装一套主题，请先将该主题添加到您站点的 Gemfile 中：
+
+```ruby
+gem "jekyll-text-theme"
+```
+
+执行命令行 bundle install 来安装主题。
+
+```bash
+bundle install
+```
+
+最后, 向站点的 _config.yml 中加入下列代码来启用主题：
+
+```yaml
+theme: jekyll-text-theme
+```
+
+## 设置
+
+这里仅针对主题方式的安装，普通方式安装请跳过。
+
+Jekyll 主题含有主题默认的布局文件、包含文件和样式表， 但是有些文件，例如页面、数据和配置文件需要手动添加到项目目录中，这样的好处在于将主题的文件和站点的内容和配置隔离开来，方便主题的升级。
+
+```bash
+├── 404.html
+├── Gemfile
+├── _config.yml
+├── _data
+│   └── locale.yml
+├── _posts
+│   └── ...
+├── about.md
+├── all.html
+└── index.html
+```
+
+你可以参考主题源码的 [/test 目录](https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test), 这是一个使用主题的示例。
+
+## 本地预览
+
+Jekyll 集成了一个开发用的服务器，可以让你使用浏览器在本地进行预览。
+
+通过 `bundle exec jekyll serve` 命令启动开发服务器，然后你就可以访问 [http://localhost:4000/](http://localhost:4000/) 预览你的网站了。
+
+## 编译和发布
+
+如果你打算把网站搭建在 GitHub Pages 上，那你所需要做的就是将项目的源码上传到 USERNAME.github.io 源码仓库的 master 分支，GitHub 会自动的编译，几分钟后你就可以通过 **https://USERNAME.github.io** 访问到你的网站了。
+
+如果你的网站是搭建在其他服务器上的，那么你就需要来自己编译了。首先运行命令 `JEKYLL_ENV=production bundle exec jekyll build` 编译你的网站，然后将编译的文件（位于 _site 目录）更新到你的服务器上。
+
+---
+
+## 进一步的阅读
+
+- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/zh/configuration)
+
+- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/zh/writing-posts)

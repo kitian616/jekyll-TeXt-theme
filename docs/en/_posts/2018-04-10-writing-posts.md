@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Document - Writing Posts'
+permalink: /docs/writing-posts
 key: 20180410
 category: Document
 tags:
@@ -33,29 +34,29 @@ To improve the user experience for both reading and writing posts, TeXt made som
     mathjax: true
     ---
 
-Between these triple-dashed lines you can set variables. you can consider it as page configuration, these would overrides the global configuration in `_config.yml`.
+Between these triple-dashed lines you can set variables. you can consider it as page configuration, these would overrides the global configuration in ``_config.yml``.
 
 Beside Jekyll's predefined variables, TeXt define some new variables:
 
-| Variable      | Option Values         | Description |
-| ---           | ---                   | ---         |
-| key           | -                     | Unique key for the post |
-| modify_date   | -                     | The last modified date of this post, the date is modified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`; hours, minutes, seconds, and timezone offset are optional. just like `date` variable |
-| comment       | true(default), false  | Set as `false` to disable comment on the post |
-| mathjax       | true, false(default)  | Set as `true` to enable Mathjax on the post |
-| mathjax_autoNumber | true, false(default)  | Set as `true` to enable Mathjax autoNumber on the post |
-| mermaid       | true, false(default)  | Set as `true` to enable Mermaid on the post |
-| chart         | true, false(default)  | Set as `true` to enable Chart on the post |
+| Variable          | Option Values         | Description |
+| ---               | ---                   | ---         |
+| **key**           | -                     | Unique key for the post, required by Comment and Pageviews. begin with a letter (`[A-Za-z]`) and may be followed by any number of letters, digits (`[0-9]`), hyphens (`-`), underscores (`_`), colons (`:`), and periods (`.`)|
+| **modify_date**   | -                     | The last modified date of this post, the date is modified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`; hours, minutes, seconds, and timezone offset are optional. just like `date` variable |
+| **comment**       | true(default), false  | Set as `false` to disable comment on the post |
+| **mathjax**       | true, false(default)  | Set as `true` to enable Mathjax on the post |
+| **mathjax_autoNumber** | true, false(default)  | Set as `true` to enable Mathjax autoNumber on the post |
+| **mermaid**       | true, false(default)  | Set as `true` to enable Mermaid on the post |
+| **chart**         | true, false(default)  | Set as `true` to enable Chart on the post |
 
 ### Markdown Enhancements
 
 | Enhancemen Name | Description |
 | --------------- | ----------- |
-| **Mathjax** | Make it easy to add mathematics in articles | [EXAMPLES](https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html) |
+| **Mathjax** | Make it easy to add mathematics in articles, using MathML, LaTeX and ASCIIMathML markup | [EXAMPLES](https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html) |
 | **Mermaid** | Bring diagrams and flowcharts in articles | [EXAMPLES](https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html) |
 | **Chart**   | Bring charts in articles | [EXAMPLES](https://tianqi.name/jekyll-TeXt-theme/test/2017/05/05/chart.html) |
 
-As mentioned above, you need set the variable true in the _config.yml or in the YAML Front Matter to enable markdown enhancement.
+As mentioned above, you need set the variable true in the `_config.yml` or in the YAML Front Matter to enable markdown enhancement.
 
 ### Additional styles
 
