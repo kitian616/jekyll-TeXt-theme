@@ -33,10 +33,10 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ## => Author and Social
 ##############################
 author:
-  name: Someone
-  email: someone@somemail.com # your Email address e.g. someone@site.com
+  name: sgaxun
+  email: sgaxun@gmail.com
   facebook: # your Facebook username
-  twitter: # your Twitter username
+  twitter: sgaxun
   github: # your GitHub username
   linkedin: # your Linkedin username
   googleplus: # your Google+ username
