@@ -19,14 +19,14 @@
 text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 url: # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: # does not include hostname
-title: Someone's blog
+title:sgaxun's blog
 description: > # this means to ignore newlines until "Language & timezone"
-  Someone's Blog
+  sgaxun's Blog
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
+lang: "zh"# the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -46,7 +46,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: someone/someone.github.io
+repository: sgaxun/sgaxun.github.io
 repository_tree: master
 
 
