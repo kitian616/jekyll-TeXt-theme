@@ -65,8 +65,8 @@ disqus:
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
    clientID:  e0fc6c389eae9ead8af1
-   clientSecret:  8a9ed40a78096e4f85afc3fcde4ebc2d972b79e7
-   repository:  blogcomment
+   clientSecret:  d0f220617e9f8e972124212e041fd2c620670fd7
+   repository: blogcomment
    owner:  billtsui
    admin: billtsui
     # - owner
