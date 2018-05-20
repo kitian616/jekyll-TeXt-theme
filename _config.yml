@@ -37,7 +37,7 @@ author:
   email: sgaxun@gmail.com
   facebook: # your Facebook username
   twitter: sgaxun
-  github: # your GitHub username
+  github: sgaxun@163.com
   linkedin: # your Linkedin username
   googleplus: # your Google+ username
   weibo: # your Weibo username
@@ -110,8 +110,8 @@ disqus:
 ## Gitalk
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-  clientID: # GitHub Application Client ID
-  clientSecret: # GitHub Application Client Secret
+  clientID: d1eaf3f5a507f0b6f662
+  clientSecret: 3ab861fc5a425dc738bc9fc8708313954bece325
   repository: # GitHub repo
   owner: # GitHub repo owner
   admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
