@@ -1,19 +1,17 @@
-.m-page-stage {
-  box-sizing: border-box;
+.page__main {
+  position: relative;
+  height: auto !important;
+  height: 100%;
   min-height: 100%;
-  overflow: auto;
-  padding-bottom: map-get($layout, footer-height);
-  @include animation(fade-in-down map-get($animation, duration) map-get($animation, timing-function));
 }
 
-.m-page-content {
-  padding: 0;
-  padding-bottom: 1.6rem;
-  @include media-breakpoint-down(l) {
-    padding-bottom: 0.8rem;
-  }
-}
-
-.m-page-main {
+.page__content {
   margin: 0 auto;
+  padding-bottom: map-get($layout, footer-height);
+}
+
+.page__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

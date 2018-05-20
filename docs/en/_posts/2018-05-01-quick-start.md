@@ -20,21 +20,21 @@ In this document, you will learn how to **install the theme**, **setup your site
 
 To install it with common method, all you need to do is copying all the theme files to your project. There are several ways to do so:
 
-1. Clone [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) from github:
+Clone [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) from github:
 
     ```bash
     git clone git@github.com:kitian616/jekyll-TeXt-theme.git
     ```
 
-2. Download and unzip the file to your Jekyll site directory.
+Download and unzip the file to your Jekyll site directory.
 
-    [==> Download TeXt Theme <==](https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip)
+[Download TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip){:.button .button--success .button--rounded .button--lg}
 
-3. If you host your site on GitHub Pages, you can just fork [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme), then rename the repository to **USERNAME.github.io** — replacing **USERNAME** with your GitHub username.
+If you host your site on GitHub Pages, you can just fork [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme), then rename the repository to **USERNAME.github.io** — replacing **USERNAME** with your GitHub username.
 
-    ![Fork](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-fork.png)
+![Fork](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-fork.png)
 
-    ![Rename](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-rename-repo.png)
+![Rename](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-rename-repo.png)
 
 ### Ruby Gem Method
 

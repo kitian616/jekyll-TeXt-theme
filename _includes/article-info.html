@@ -1,4 +1,4 @@
-<div class="m-article-info clearfix">
+<div class="article-info clearfix">
 	{%- if page -%}
     <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
       {%- if page.author -%}
@@ -26,7 +26,7 @@
         {%- assign __path = all_path | append: '?tag=' -%}
         {%- include snippets/prepend-baseurl.html -%}
         <li>
-          <a class="pill-button" href="{{ __return | append: _tag | replace: '//', '/' }}">{{ tag }}</a>
+          <a class="button button--secondary button--pill button--sm" href="{{ __return | append: _tag | replace: '//', '/' }}">{{ tag }}</a>
         </li>
       {%- endfor -%}
     </ul>

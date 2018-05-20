@@ -1,20 +1,20 @@
 ---
 layout: base
 ---
-<div class="m-post">
+<div class="layout--post">
 	<div class="main clearfix js-main">
 		<div class="col-2 js-col-2">
-			<aside class="js-article-aside"><div class="m-toc js-toc"></div></aside>
+			<aside class="js-article-aside"><div class="toc js-toc"></div></aside>
 		</div>
 		<div class="col-1">
 			<article class="js-article" itemscope itemtype="http://schema.org/BlogPosting">
 				<meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
-				<header class="main-header">
+				<header class="main__header">
 					{%- include snippets/page-title.html -%}
 					<h1 itemprop="headline" itemprop="name headline">{{ __return }}</h1>
 					{%- include article-info.html -%}
 				</header>
-				<div class="m-article-content js-article-content" itemprop="articleBody">{{ content }}</div>
+				<div class="article-content js-article-content" itemprop="articleBody">{{ content }}</div>
 				<footer>
 					{%- if page.modify_date -%}
 						{%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT -%}

@@ -1,11 +1,11 @@
 ---
 layout: base
 ---
-<div class="m-page">
+<div class="layout--page">
   <article class="main">
     {%- include snippets/page-title.html -%}
-    <div class="main-header"><h1>{{ __return }}</h1></div>
-    <div class="m-article-content" itemprop="articleBody">{{ content }}</div>
+    <div class="main__header"><h1>{{ __return }}</h1></div>
+    <div class="article-content" itemprop="articleBody">{{ content }}</div>
     {%- if jekyll.environment != "development" and page.comment != false -%}
       <section>{%- include comment.html -%}</section>
     {%- endif -%}

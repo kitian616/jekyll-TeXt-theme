@@ -1,24 +1,24 @@
-.m-article-content {
+.article-content {
   p.success {
-    @include round-rect(default, .5rem 1rem);
+    @include card(false);
     background-color: mix($green, $background-color, 10%);
     border: 1px solid $green;
   }
 
   p.info {
-    @include round-rect(default, .5rem 1rem);
+    @include card(false);
     background-color: mix($blue, $background-color, 10%);
     border: 1px solid $blue;
   }
 
   p.warning {
-    @include round-rect(default, .5rem 1rem);
+    @include card(false);
     background-color: mix($yellow, $background-color, 10%);
     border: 1px solid $yellow;
   }
 
   p.error {
-    @include round-rect(default, .5rem 1rem);
+    @include card(false);
     background-color: mix($red, $background-color, 10%);
     border: 1px solid $red;
   }

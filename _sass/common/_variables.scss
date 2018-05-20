@@ -3,51 +3,62 @@ $base: (
   font-family-code:       (Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace),
 
   font-size-root:         16px,
-  font-size:              1rem,
 
-  font-size-h1:           2.3rem,
-  font-size-h2:           1.8rem,
+  font-size-lg:           1.25rem,
+  font-size:              1rem,
+  font-size-sm:           .875rem,
+  font-size-xs:           .75rem,
+
+  font-size-h1:           2.5rem,
+  font-size-h2:           1.9rem,
   font-size-h3:           1.5rem,
   font-size-h4:           1.2rem,
   font-size-h5:           1rem,
   font-size-h6:           1rem,
-  font-size-small:        .9rem,
-  font-size-tiny:         .8rem,
 
-  font-size-h1-small:     2rem,
-  font-size-h2-small:     1.5rem,
-  font-size-h3-small:     1.35rem,
-  font-size-h4-small:     1.15rem,
+  font-size-h1-sm:        2rem,
+  font-size-h2-sm:        1.5rem,
+  font-size-h3-sm:        1.35rem,
+  font-size-h4-sm:        1.15rem,
+  font-size-h5-sm:        1rem,
+  font-size-h6-sm:        1rem,
 
-  font-size-heading-list:  1.4rem,
-  font-size-h1-excerpt:   1rem,
-  font-size-h2-excerpt:   .975rem,
-  font-size-h3-excerpt:   .95rem,
-  font-size-h4-excerpt:   .925rem,
-  font-size-h5-excerpt:   .9rem,
-  font-size-h6-excerpt:   .9rem,
+  font-size-h1-xs:        1rem,
+  font-size-h2-xs:        .9rem,
+  font-size-h3-xs:        .85rem,
+  font-size-h4-xs:        .8rem,
+  font-size-h5-xs:        .75rem,
+  font-size-h6-xs:        .75rem,
 
   font-weight:            400,
   font-weight-bold:       700,
 
-  line-height-small:      1.4,
+  line-height-sm:         1.4,
   line-height:            1.6,
-  line-height-large:      1.8,
+  line-height-lg:         1.8,
+
+  spacer:                 1rem,
 
   vertical-space:         .5rem,
-  vertical-space-large:   1.4rem,
-  horizontal-space:       .25rem,
-  horizontal-item-vertical-space: .2rem
+  vertical-space-lg:      1.4rem,
+
+  border-radius-lg:       .8rem,
+  border-radius:          .4rem,
+  border-radius-sm:       .2rem
 );
 
-$shape: (
-  round-length:           2rem,
-  round-rect-radius:      .4rem,
+$spacers: (
+  0:                      0,
+  1:                      map-get($base, spacer) * .25,
+  2:                      map-get($base, spacer) * .5,
+  3:                      map-get($base, spacer),
+  4:                      map-get($base, spacer) * 1.5,
+  5:                      map-get($base, spacer) * 3
 );
 
 $layout: (
   header-height:          5rem,
-  header-height-small:    3rem,
+  header-height-sm:       3rem,
   content-max-width:      850px,
   aside-width:            220px,
   footer-height:          12rem
@@ -58,11 +69,39 @@ $layout: (
 // 0       500      1024      ∞
 
 $responsive: (
-  s:                      500px,
-  l:                      1024px
+  sm:                      500px,
+  lg:                      1024px
 );
 
 $animation: (
   duration:               .6s,
-  timing-function:        ease
+  timing-function:        ease-in-out
+);
+
+$link: (
+  transition:             all .2s ease-in-out
+);
+
+$button: (
+  padding-y-lg:           .5rem,
+  padding-x-lg:           1.2rem,
+
+  padding-y:              .1rem,
+  padding-x:              .55rem,
+
+  padding-y-sm:           .06rem,
+  padding-x-sm:           .35rem,
+
+  font-weight:            map-get($base, font-weight-bold),
+
+  circle-diameter-lg:     3rem,
+  circle-diameter:        2rem,
+  circle-diameter-sm:     1.2rem,
+
+  transition:             all .2s ease-in-out
+);
+
+$menu: (
+  horizontal-spacer:      1,
+  horizontal-item-vertical-spacer: 1
 );

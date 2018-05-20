@@ -2,41 +2,32 @@
   text-align: center;
   & > ul {
     margin: 0;
-    justify-content: center;
-    @include horizontal-space();
+    @include justify-content(center);
+    @include menu();
     & > li > {
-      a {
-        .not-touch & {
-          @include link-hover() {
-            @include transform(scale(1.5));
-            position: relative;
-            z-index: 1;
-          }
-        }
+      .mail-button {
+        @include button-colors($text-color-1, $mail-color);
       }
-      .mail {
-        @include link-colors($text-color-1, $mail-color);
+      .weibo-button {
+        @include button-colors($text-color-1, $weibo-color);
       }
-      .weibo {
-        @include link-colors($text-color-1, $weibo-color);
+      .facebook-button {
+        @include button-colors($text-color-1, $facebook-color);
       }
-      .facebook {
-        @include link-colors($text-color-1, $facebook-color);
+      .twitter-button {
+        @include button-colors($text-color-1, $twitter-color);
       }
-      .twitter {
-        @include link-colors($text-color-1, $twitter-color);
+      .googlepluse-button {
+        @include button-colors($text-color-1, $google-plus-color);
       }
-      .googlepluse {
-        @include link-colors($text-color-1, $google-plus-color);
+      .github-button {
+        @include button-colors($text-color-1, $github-color);
       }
-      .github {
-        @include link-colors($text-color-1, $github-color);
+      .linkedin-button {
+        @include button-colors($text-color-1, $linkedin-color);
       }
-      .linkedin {
-        @include link-colors($text-color-1, $linkedin-color);
-      }
-      .douban {
-        @include link-colors($text-color-1, $douban-color);
+      .douban-button {
+        @include button-colors($text-color-1, $douban-color);
       }
     }
   }

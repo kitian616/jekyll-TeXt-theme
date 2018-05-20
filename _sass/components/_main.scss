@@ -3,10 +3,10 @@
   margin: 0 auto;
   padding: 0 2rem;
   max-width: map-get($layout, content-max-width);
-  @include media-breakpoint-down(l) {
+  @include media-breakpoint-down(lg) {
     padding: 0 1rem;
   }
-  .main-header {
+  .main__header {
     & > h1 {
       font-weight: map-get($base, font-weight-bold);
     }
@@ -16,7 +16,7 @@
 
 .has-toc .main {
   max-width: map-get($layout, content-max-width) + map-get($layout, aside-width);
-  @include media-breakpoint-down(l) {
+  @include media-breakpoint-down(lg) {
     max-width: map-get($layout, content-max-width);
     padding: 0 1rem;
   }

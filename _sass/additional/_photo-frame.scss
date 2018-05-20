@@ -1,6 +1,6 @@
-.m-article-content {
+.article-content {
   img.shadow, .shadow > img {
-    @include box-shadow(3);
+    @include box-shadow();
   }
 
   img.border, .border > img {
@@ -8,7 +8,7 @@
   }
 
   img.rounded, .rounded > img {
-    border-radius: map-get($shape, round-rect-radius);
+    border-radius: map-get($base, border-radius);
   }
 
   img.circle, .circle > img {

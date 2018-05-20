@@ -1,72 +1,140 @@
-%button {
-  font-weight: map-get($base, font-weight-bold);
-  line-height: 1;
-  box-sizing: border-box;
-  display: block;
-  cursor: pointer;
-  @include link-normal() {
-    text-decoration: none;
+@mixin button-colors($clr, $bg-clr, $hover-clr: default, $hover-bg-clr: default, $active-clr: default, $active-bg-clr: default, $focus-clr: default, $focus-bg-clr: default) {
+  @if $hover-clr == default {
+    $hover-clr: $clr
   }
-  .not-touch &, & {
-    @include link-hover() {
-      text-decoration: none;
+  @if $hover-bg-clr == default {
+    $hover-bg-clr: darken($bg-clr, 10%);
+  }
+
+  @if $active-clr == default {
+    $active-clr: $clr
+  }
+  @if $active-bg-clr == default {
+    $active-bg-clr: darken($bg-clr, 10%);
+  }
+
+  @if $focus-clr == default {
+    $focus-clr: $clr
+  }
+  @if $focus-bg-clr == default {
+    $focus-bg-clr: darken($bg-clr, 10%);
+  }
+  @include plain {
+    color: $clr;
+    background-color: $bg-clr;
+    svg path {
+      fill: $clr;
     }
   }
-  @include link-active() {
-    text-decoration: none;
+  @include hover {
+    color: $hover-clr;
+    background-color: $hover-bg-clr;
+    svg path {
+      fill: $hover-clr;
+    }
   }
-  @include link-focus() {
-    text-decoration: none;
+  @include active {
+    color: $active-clr;
+    background-color: $active-bg-clr;
+    svg path {
+      fill: $active-clr;
+    }
   }
-  @include link-colors($text-color-3, $main-color-3, $text-color-1, $main-color-1, $text-color-1, $main-color-1);
-  @include link-animation();
+  @include focus {
+    color: $focus-clr;
+    @include box-shadow(2, $focus-bg-clr);
+    background-color: $focus-bg-clr;
+    svg path {
+      fill: $focus-clr;
+    }
+  }
+}
+
+@mixin button() {
+  font-weight: map-get($button, font-weight);
+  box-sizing: border-box;
+  line-height: map-get($base, line-height);
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  @include transition(map-get($button, transition));
   svg {
     width: 1rem;
     height: 1rem;
     path {
-      @include link-animation();
+      @include transition(map-get($button, transition));
     }
   }
-  &.inactive {
+  &.disabled,
+  &:disabled {
     cursor: not-allowed;
-    @include link-normal() {
-      color: rgba($text-color-3, .2) !important;
-      background-color: $main-color-3 !important;
-      svg path {
-        fill: rgba($text-color-3, .2) !important;
-      }
-    }
-    @include link-emphasize() {
-      color: rgba($text-color-3, .2) !important;
-      background-color: $main-color-3 !important;
-      svg path {
-        fill: rgba($text-color-3, .2) !important;
-      }
+    color: rgba($text-color-3, .2) !important;
+    background-color: $main-color-3 !important;
+    svg path {
+      fill: rgba($text-color-3, .2) !important;
     }
   }
 }
 
-%floating-action {
-  @include box-shadow(2);
-  &:hover {
-    @include box-shadow(3);
-  }
+.button {
+  @include button();
 }
 
-.round-button {
-  @extend %button;
-  @include round;
-  @include flexbox;
+.button--primary {
+  @include button-colors($text-color-1, $main-color-1);
+}
+
+.button--secondary {
+  @include button-colors($text-color-3, $main-color-3);
+}
+
+.button--success {
+  @include button-colors($text-color-1, $green);
+}
+
+.button--info {
+  @include button-colors($text-color-1, $blue);
+}
+
+.button--warning {
+  @include button-colors($text-color-1, $yellow);
+}
+
+.button--error {
+  @include button-colors($text-color-1, $red);
+}
+
+.button--pill {
+  border-radius: 2rem;
+  @extend .button--md;
+}
+
+.button--rounded {
+  border-radius: map-get($base, border-radius);
+  @extend .button--md;
+}
+
+.button--circle {
+  @include flexbox();
   @include justify-content(center);
   @include align-items(center);
+  width: map-get($button, circle-diameter);
+  height: map-get($button, circle-diameter);
+  border-radius: 50%;
 }
 
-.floating-action-round-button {
-  @extend .round-button;
-  @extend %floating-action;
+.button--md {
+  font-size: map-get($base, font-size);
+  padding: map-get($button, padding-y) map-get($button, padding-x);
 }
 
-.pill-button {
-  @extend %button;
-  @include round-rect(2rem, .4rem .6rem);
+.button--sm {
+  font-size: map-get($base, font-size-sm);
+  padding: map-get($button, padding-y-sm) map-get($button, padding-x-sm);
+}
+
+.button--lg {
+  font-size: map-get($base, font-size-lg);
+  padding: map-get($button, padding-y-lg) map-get($button, padding-x-lg);
 }

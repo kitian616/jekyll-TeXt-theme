@@ -1,4 +1,4 @@
-<div class="m-license">
+<div class="license card">
   {%- assign locale = site.data.locale -%}
   <div class="clearfix">
     {%- if site.repository and site.repository_tree -%}
@@ -16,7 +16,7 @@
     <p>{{ __return | replace: "[LICENSE]", '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>' }}</p>
     {%- assign __path = '/assets/images/license-cc4.png' -%}
     {%- include snippets/prepend-baseurl.html -%}
-    <a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+    <a class="license-img" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
       <img alt="Creative Commons License" src="{{ __return }}" />
     </a>
     {%- assign __locale = locale.LICENSE_INTRO -%}

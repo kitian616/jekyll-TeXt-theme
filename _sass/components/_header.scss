@@ -1,38 +1,38 @@
-.m-page-header {
+.header {
   background-color: $main-color-3;
   a {
     font-weight: map-get($base, font-weight);
-    @include link-text-colors( $text-color-3, $main-color-1, $main-color-1);
+    @include link-colors($text-color-3, $main-color-1, $main-color-1);
   }
-  &>.main>.site-logo {
+  & > .main > .logo {
     float: left;
-    @include horizontal-space(1rem, 0);
+    @include menu(3, 0);
     @include align-items(center);
     height: map-get($layout, header-height);
-    &>svg {
+    & > svg {
       margin-right: .8rem;
       vertical-align: middle;
       width: map-get($base, font-size-h4) * 1.6;
       height: map-get($base, font-size-h4) * 1.6;
-      @include media-breakpoint-down(s) {
+      @include media-breakpoint-down(sm) {
         margin-right: .5rem;
         width: map-get($base, font-size-h4) * 1.2;
         height: map-get($base, font-size-h4) * 1.2;
       }
     }
-    &>a {
+    & > a {
       display: inline-block;
       font-size: map-get($base, font-size-h4);
-      @include media-breakpoint-down(s) {
+      @include media-breakpoint-down(sm) {
         font-size: map-get($base, font-size-h4-small);
       }
     }
-    @include media-breakpoint-down(s) {
+    @include media-breakpoint-down(sm) {
       float: none;
-      height: map-get($layout, header-height-small);
+      height: map-get($layout, header-height-sm);
     }
   }
-  &>.main>nav {
+  & > .main > nav {
     display: block;
     float: right;
     overflow-x: auto;
@@ -40,14 +40,14 @@
     -webkit-overflow-scrolling: touch;
     ul {
       margin: 0;
-      @include horizontal-space(1rem, .5rem, nowrap);
+      @include menu(3, 2, nowrap);
       @include align-items(center);
       height: map-get($layout, header-height);
-      @include media-breakpoint-down(s) {
+      @include media-breakpoint-down(sm) {
         height: auto;
       }
     }
-    @include media-breakpoint-down(s) {
+    @include media-breakpoint-down(sm) {
       float: none;
     }
   }

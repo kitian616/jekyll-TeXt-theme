@@ -12,7 +12,7 @@
     });
   };
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $articleContent = $('.m-post, .m-page').find('.m-article-content'), $this;
+    var $articleContent = $('.article-content'), $this;
     $articleContent.children('.highlight').each(function() {
       $this = $(this);
       $this.attr('data-lang', $this.find('code').attr('data-lang'));

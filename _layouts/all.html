@@ -6,15 +6,14 @@ titles:
   zh-Hans: 归档
   zh-Hant: 歸檔
 ---
-<div class="m-all js-all">
+<div class="layout--all js-all">
   <div class="main">
-    <div class="m-search-box js-search-box">
+    <div class="search-box js-search-box">
       <div class="icon-search">{%- include svg/icon/search.svg -%}</div>
       <input type="text" />
-      <div class="icon-clear">{%- include svg/icon/clear.svg -%}</div>
+      <div class="button icon-clear">{%- include svg/icon/clear.svg -%}</div>
     </div>
     {%- include tags.html -%}
-    <!--group by year: http://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year-->
-    <div class="js-result m-result"></div>
+    <div class="js-result layout--all__result"></div>
   </div>
 </div>

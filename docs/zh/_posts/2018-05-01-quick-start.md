@@ -21,21 +21,21 @@ TeXt 是一款 100% 兼容 GitHub Pages 的 Jekyll 主题，你可以通过 Fork
 
 这种方式要求你的项目里包含所有的主题文件，你可以通过以下途径来安装：
 
-1. 从 GitHub 克隆 [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) 项目:
+从 GitHub 克隆 [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) 项目:
 
     ```bash
     git clone git@github.com:kitian616/jekyll-TeXt-theme.git
     ```
 
-2. 下载主题压缩包并解压到你的项目目录中：
+下载主题压缩包并解压到你的项目目录中：
 
-    [==> Download TeXt Theme <==](https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip)
+[Download TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip){:.button .button--success .button--rounded .button--lg}
 
-3. 如果你打算在 GitHub Pages 上搭建你的网站，你可以直接 fork [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) 到你的仓库，然后将其重命名为 **USERNAME.github.io** — 这里的 **USERNAME** 是你的 GitHub 用户名。
+如果你打算在 GitHub Pages 上搭建你的网站，你可以直接 fork [jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) 到你的仓库，然后将其重命名为 **USERNAME.github.io** — 这里的 **USERNAME** 是你的 GitHub 用户名。
 
-    ![Fork](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-fork.png)
+![Fork](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-fork.png)
 
-    ![Rename](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-rename-repo.png)
+![Rename](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-rename-repo.png)
 
 ### 主题方式
 

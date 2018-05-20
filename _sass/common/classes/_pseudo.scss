@@ -1,0 +1,26 @@
+@mixin plain() {
+  &,
+  &:link,
+  &:visited{
+    @content;
+  }
+}
+
+@mixin hover() {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin active() {
+  &.active,
+  &:active {
+    @content;
+  }
+}
+
+@mixin focus() {
+  &.focus {
+    @content;
+  }
+}

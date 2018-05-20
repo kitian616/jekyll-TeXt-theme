@@ -1,5 +1,4 @@
-.m-license {
-  @include round-rect(1rem, .5rem 1rem);
+.license {
   @include box-shadow();
   background-color: $text-background-color;
   font-weight: map-get($base, font-weight-bold);
@@ -19,7 +18,7 @@
       border-radius: 2rem;
     }
   }
-  .license {
+  .license-img {
     float: right;
     margin-left: 1rem;
   }

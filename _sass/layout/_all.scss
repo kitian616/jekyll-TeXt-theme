@@ -1,9 +1,9 @@
-.m-all {
+.layout--all {
   &.search > .main {
-    & > .m-tags {
+    & > .site-tags {
       display: none;
     }
-    & > .m-result {
+    & > .layout--all__result {
       section {
         ul > li {
           .date {
@@ -14,21 +14,22 @@
     }
   }
   & > .main {
-    & > .m-tags {
-      margin-bottom: map-get($base, vertical-space-large) * 2;
+    & > .site-tags {
+      margin-bottom: map-get($base, vertical-space-lg) * 2;
       display: block;
     }
-    & > .m-search-box {
+    & > .search-box {
       position: relative;
       box-sizing: border-box;
       max-width: 22rem;
-      margin: map-get($base, vertical-space-large) 0;
-      @include media-breakpoint-down(s) {
+      margin: map-get($base, vertical-space-lg) 0;
+      @include media-breakpoint-down(sm) {
         max-width: none;
         width: 100%;
       }
       & > input {
-        @include round-rect(2rem, .2rem 1.8rem);
+        border-radius: 2rem;
+        padding: .2rem 1.8rem;
         @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
         -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
         width: 100%;
@@ -37,8 +38,8 @@
         border: none;
         margin: 0;
         background-color: $text-background-color;
-        @include link-focus() {
-          @include box-shadow(1);
+        @include focus() {
+          @include box-shadow();
         }
       }
       & > .icon-search, & > .icon-clear {
@@ -60,16 +61,16 @@
       & > .icon-clear {
         display: none;
         right: .5rem;
-        @extend %button;
-        @include link-colors($text-color-l, transparent,
-          $text-color-d, transparent, $text-color-d, transparent);
+        // @extend %button;
+        // @include link-colors($text-color-l, transparent,
+        //   $text-color-d, transparent, $text-color-d, transparent);
       }
       & > .icon-search {
         left: .5rem;
       }
     }
-    & > .m-result {
-      margin: map-get($base, vertical-space-large) 0;
+    & > .layout--all__result {
+      margin: map-get($base, vertical-space-lg) 0;
       section {
         &:not(:last-child) {
           padding: 0 0 .4rem 0;
@@ -83,13 +84,13 @@
           .date {
             font-family: map-get($base, font-family-code);
             display: inline-block;
-            font-size: map-get($base, font-size-small);
+            font-size: map-get($base, font-size-sm);
             color: $text-color-l;
             padding: 0 1rem 0 0;
           }
           .link {
             font-size: 1rem;
-            @include link-text-colors($text-color-d, $main-color-1, $main-color-1);
+            @include link-colors($text-color-d, $main-color-1, $main-color-1);
           }
         }
       }

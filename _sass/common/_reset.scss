@@ -71,60 +71,64 @@ strong {
 h1 {
   font-size: map-get($base, font-size-h1);
   color: $text-color-d;
-  @include media-breakpoint-down(s) {
-    font-size: map-get($base, font-size-h1-small);
+  @include media-breakpoint-down(sm) {
+    font-size: map-get($base, font-size-h1-sm);
   }
 }
 
 h2 {
   font-size: map-get($base, font-size-h2);
   color: $text-color-d;
-  @include media-breakpoint-down(s) {
-    font-size: map-get($base, font-size-h2-small);
+  @include media-breakpoint-down(sm) {
+    font-size: map-get($base, font-size-h2-sm);
   }
 }
 
 h3 {
   font-size: map-get($base, font-size-h3);
   color: $text-color-d;
-  @include media-breakpoint-down(s) {
-    font-size: map-get($base, font-size-h3-small);
+  @include media-breakpoint-down(sm) {
+    font-size: map-get($base, font-size-h3-sm);
   }
 }
 
 h4 {
   font-size: map-get($base, font-size-h4);
   color: $text-color;
-  @include media-breakpoint-down(s) {
-    font-size: map-get($base, font-size-h4-small);
+  @include media-breakpoint-down(sm) {
+    font-size: map-get($base, font-size-h4-sm);
   }
 }
 
 h5 {
   font-size: map-get($base, font-size-h5);
   color: $text-color;
+  @include media-breakpoint-down(sm) {
+    font-size: map-get($base, font-size-h5-sm);
+  }
 }
 
 h6 {
   font-size: map-get($base, font-size-h6);
   color: $text-color-l;
+  @include media-breakpoint-down(sm) {
+    font-size: map-get($base, font-size-h6-sm);
+  }
 }
 
 a {
   font-weight: map-get($base, font-weight-bold);
-  @include link-normal() {
+  @include plain() {
     text-decoration: none;
   }
-  .not-touch & {
-    @include link-hover() {
-      text-decoration: underline;
-    }
-  }
-  @include link-active() {
+  @include hover() {
     text-decoration: underline;
   }
-  @include link-text-colors($main-color-1);
-  @include link-animation();
+  @include active() {
+    text-decoration: underline;
+  }
+  @include link-colors($main-color-1, $main-color-1, $main-color-1);
+  @include transition(map-get($link, transition));
 }
 
 pre, code {
@@ -132,16 +136,16 @@ pre, code {
 }
 
 code {
-  font-size: map-get($base, font-size-tiny);
-  line-height: map-get($base, line-height-small);
+  font-size: map-get($base, font-size-xs);
+  line-height: map-get($base, line-height-sm);
 }
 
-figure>img {
+figure > img {
   display: block;
 }
 
 figcaption {
-  font-size: map-get($base, font-size-small);
+  font-size: map-get($base, font-size-sm);
 }
 
 .icon {

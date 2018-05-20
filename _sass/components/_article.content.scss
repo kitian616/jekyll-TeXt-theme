@@ -1,14 +1,14 @@
-.m-article-content {
+.article-content {
   word-wrap: break-word;
-  line-height: map-get($base, line-height-large);
+  line-height: map-get($base, line-height-lg);
   @include block-elements() {
-    margin: map-get($base, vertical-space-large) 0;
+    margin: map-get($base, vertical-space-lg) 0;
   }
   @include heading-elements() {
     position: relative;
-    margin-top: map-get($base, vertical-space-large) * 1.5;
+    margin-top: map-get($base, vertical-space-lg) * 1.5;
     & > .anchor {
-      @include link-text-colors($border-color, $main-color-1, $main-color-1);
+      @include link-colors($border-color, $main-color-1, $main-color-1);
       margin-left: .2rem;
       visibility: hidden;
       text-decoration: none;
@@ -45,7 +45,7 @@
   blockquote {
     padding-left: 1rem;
     @include split-line(left, 4px, $border-color);
-    font-size: map-get($base, font-size-small);
+    font-size: map-get($base, font-size-sm);
     color: $text-color-l;
     p {
       margin: map-get($base, vertical-space) 0;
@@ -61,15 +61,16 @@
   .emoji {
     display: inline-block;
     vertical-align: text-bottom;
-    width: map-get($base, line-height-large) * .7rem;
-    height: map-get($base, line-height-large) * .7rem;
+    width: map-get($base, line-height-lg) * .7rem;
+    height: map-get($base, line-height-lg) * .7rem;
   }
   .footnotes {
     @include split-line();
-    margin-top: map-get($base, vertical-space-large) * 2;
+    margin-top: map-get($base, vertical-space-lg) * 2;
   }
   code {
-    @include round-rect(default, .2rem .5rem);
+    border-radius: map-get($base, border-radius);
+    padding: .2rem .5rem;
     background-color: $text-background-color;
     span {
       padding: 0;
@@ -93,7 +94,8 @@
   }
   .highlighter-rouge>.highlight, figure.highlight {
     &>pre {
-      @include round-rect(default, 1rem 0 1rem 1rem);
+      border-radius: map-get($base, border-radius);
+      padding: 1rem 0 1rem 1rem;
       margin: 0;
       background-color: $text-background-color;
       &>code {
@@ -105,8 +107,8 @@
     &:before {
       content: attr(data-lang);
       display: block;
-      border-top-left-radius: map-get($shape, round-rect-radius);
-      border-top-right-radius: map-get($shape, round-rect-radius);
+      border-top-left-radius: map-get($base, border-radius);
+      border-top-right-radius: map-get($base, border-radius);
       padding: .5rem 1rem .5rem 0;
       color: $decorate-color;
       background-color: $text-background-color;
@@ -144,7 +146,7 @@
               padding-left: 1rem;
             }
             &>pre {
-              @include round-rect(0);
+              border-radius: 0;
               display: block;
               overflow: visible;
               margin: 0;

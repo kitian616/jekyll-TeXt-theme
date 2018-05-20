@@ -1,15 +1,15 @@
-.m-article-info {
+.article-info {
   margin: .8rem 0;
   .date-wrapper,
   .tag-wrapper,
   .view-wrapper {
-    font-size: map-get($base, font-size-small);
+    font-size: map-get($base, font-size-sm);
   }
   .tag-wrapper {
     float: left;
     margin: 0 .25rem 0 0;
-    @include horizontal-space();
-    @include media-breakpoint-down(s) {
+    @include menu();
+    @include media-breakpoint-down(sm) {
       float: none;
     }
   }
@@ -19,8 +19,8 @@
     @include align-items(center);
     @include flex-wrap(wrap);
     color: $text-color-l;
-    margin: 0 0 0 .6rem;
-    @include media-breakpoint-down(s) {
+    margin-left: map-get($button, padding-x-sm);
+    @include media-breakpoint-down(sm) {
       float: none;
     }
   }

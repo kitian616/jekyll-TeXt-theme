@@ -1,4 +1,4 @@
-.m-toc {
+.toc {
   ul {
     display: block;
     margin: 0;
@@ -11,20 +11,23 @@
   }
   a {
     display: inline-block;
-    font-size: map-get($base, font-size-small);
-    @include link-normal() {
+    font-size: map-get($base, font-size-sm);
+    @include plain() {
       text-decoration: none;
     }
-    @include link-emphasize() {
+    @include hover() {
       text-decoration: none;
     }
-    @include link-focus() {
+    @include active() {
       text-decoration: none;
     }
-    @include link-background-colors(transparent, $text-background-color, $text-background-color);
-    line-height: map-get($base, line-height-small);
+    @include focus() {
+      text-decoration: none;
+    }
+    line-height: map-get($base, line-height-sm);
     font-weight: map-get($base, font-weight);
-    @include round-rect(default, .2rem 1rem);
+    border-radius: map-get($base, border-radius);
+    padding: .2rem 1rem;
   }
   .toc-h1,
   .toc-h2 {
@@ -38,14 +41,14 @@
   .toc-h4,
   .toc-h5,
   .toc-h6 {
-    &>a {
+    & > a {
       padding-top: .15rem;
       padding-bottom: .15rem;
       color: $text-color;
-      font-size: map-get($base, font-size-tiny);
+      font-size: map-get($base, font-size-xs);
     }
   }
-  .toc-h1>a {
+  .toc-h1 > a {
     font-size: map-get($base, font-size);
   }
   .toc-h3 {
@@ -60,7 +63,7 @@
   }
   .toc-h6 {
     color: $text-color-l;
-    font-size: map-get($base, font-size-tiny);
+    font-size: map-get($base, font-size-xs);
     padding-left: 3rem;
   }
   .toc-active {

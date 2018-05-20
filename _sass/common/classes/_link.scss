@@ -1,161 +1,34 @@
-@mixin link-animation {
-  @include transition(all map-get($animation, duration) map-get($animation, timing-function));
-}
-
-@mixin link-normal {
-  &,
-  &:link,
-  &:visited {
-    @content;
+@mixin link-colors($clr, $hover-clr: default, $active-clr: default, $focus-clr: null) {
+  @if $hover-clr == default {
+    $hover-clr: $clr;
   }
-}
-
-@mixin link-hover {
-  &.hover,
-  &:hover {
-    @content;
+  @if $active-clr == default {
+    $active-clr: $clr;
   }
-}
-
-@mixin link-active {
-  &.active,
-  &:active {
-    @content;
-  }
-}
-
-@mixin link-emphasize {
-  @include link-hover() {
-    @content;
-  }
-  @include link-active() {
-    @content;
-  }
-}
-
-@mixin link-focus {
-  &.focus {
-    @content;
-  }
-}
-
-@mixin link-colors($nc, $nbc, $hc: default, $hbc: default, $ac: default, $abc: default, $fc: null, $fbc: null) {
-  @if $hc == default {
-    $hc: $nc
-  }
-  @if $ac == default {
-    $ac: $nc
-  }
-  @if $fc == default {
-    $fc: $nc
-  }
-  @if $hbc == default {
-    $hbc: $nbc
-  }
-  @if $abc == default {
-    $abc: $nbc
-  }
-  @if $fbc == default {
-    $fbc: $nbc
-  }
-  @include link-normal() {
-    color: $nc;
-    background-color: $nbc;
+  @include plain {
+    color: $clr;
     svg path {
-      fill: $nc;
+      fill: $clr;
     }
   }
-  .not-touch & {
-    @include link-hover() {
-      color: $hc;
-      background-color: $hbc;
-      svg path {
-        fill: $hc;
-      }
-    }
-  }
-  @include link-active() {
-    color: $ac;
-    background-color: $abc;
+  @include hover {
+    color: $hover-clr;
     svg path {
-      fill: $ac;
+      fill: $hover-clr;
     }
   }
-  @if $fc and $fbc {
-    @include link-focus() {
-      color: $fc;
-      background-color: $fbc;
-      svg path {
-        fill: $fc;
-      }
-    }
-  }
-}
-
-@mixin link-text-colors($nc, $hc: default, $ac: default, $fc: null) {
-  @if $hc == default {
-    $hc: $nc
-  }
-  @if $ac == default {
-    $ac: $nc
-  }
-  @if $fc == default {
-    $fc: $nc
-  }
-  @include link-normal() {
-    color: $nc;
+  @include active {
+    color: $active-clr;
     svg path {
-      fill: $nc;
+      fill: $active-clr;
     }
   }
-  .not-touch & {
-    @include link-hover() {
-      color: $hc;
+  @if $focus-clr {
+    @include focus {
+      color: $focus-clr;
       svg path {
-        fill: $hc;
+        fill: $focus-clr;
       }
-    }
-  }
-  @include link-active() {
-    color: $ac;
-    svg path {
-      fill: $ac;
-    }
-  }
-  @if $fc {
-    @include link-focus() {
-      color: $fc;
-      svg path {
-        fill: $fc;
-      }
-    }
-  }
-}
-
-@mixin link-background-colors($nbc, $hbc: default, $abc: default, $fbc: null) {
-  @if $hbc == default {
-    $hbc: $nbc
-  }
-  @if $abc == default {
-    $abc: $nbc
-  }
-  @if $fbc == default {
-    $fbc: $nbc
-  }
-  @include link-normal() {
-    background-color: $nbc;
-  }
-  .not-touch & {
-    @include link-hover() {
-      background-color: $hbc;
-    }
-  }
-  @include link-active() {
-    background-color: $abc;
-  }
-  @if $fbc {
-    @include link-focus() {
-      background-color: $fbc;
     }
   }
 }

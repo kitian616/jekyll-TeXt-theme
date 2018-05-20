@@ -13,13 +13,11 @@
     </script>
   </head>
   <body>
-    <div class="m-page-stage js-page-stage">
-      <div class="m-page-content">
-        {%- include header.html -%}
-        <div class="m-page-main">{{ content }}</div>
-      </div>
+    <div class="page__main js-page-main">
+      {%- include header.html -%}
+      <div class="page__content">{{ content }}</div>
+      <div class="page__footer">{%- include footer.html -%}</div>
     </div>
-    {%- include footer.html -%}
     <script>
       {%- include scripts/common.js -%}
     </script>

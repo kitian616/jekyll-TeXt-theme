@@ -1,12 +1,7 @@
-.m-pagination {
-  &>ul {
-    @include horizontal-space();
+.pagination {
+  & > ul {
+    @include menu();
     @include align-items(center);
-  }
-  .round-button.cur {
-    background-color: $main-color-1;
-    border-color: $main-color-1;
-    color: $text-color-1;
   }
   .omit {
     @include flexbox();

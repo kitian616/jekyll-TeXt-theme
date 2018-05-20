@@ -3,7 +3,7 @@
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window);
-    var $pageStage = $('.js-page-stage');
+    var $pageMain = $('.js-page-main');
     var $pageFooter = $('.js-page-footer');
     var $articleContent = $('.js-article-content');
     var $articleAside = $('.js-article-aside');
@@ -28,7 +28,7 @@
     }, 100));
 
     if (hasToc) {
-      !$pageStage.hasClass('has-toc') && $pageStage.addClass('has-toc');
+      !$pageMain.hasClass('has-toc') && $pageMain.addClass('has-toc');
     }
     tocDisabled = disabled();
 
