@@ -64,11 +64,11 @@ disqus:
 ## Comment system (gitalk) ##
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-  # clientID:  #Github Application Client ID
-  # clientSecret:  #Github Application Client Secret
-  # repository:  #Github repo
-  # owner:  #Github repo owner
-  # admin: #Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+   clientID:  e0fc6c389eae9ead8af1
+   clientSecret:  8a9ed40a78096e4f85afc3fcde4ebc2d972b79e7
+   repository:  blogcomment
+   owner:  billtsui
+   admin: billtsui
     # - owner
 
 ## Google Analytics ##
@@ -80,10 +80,10 @@ leancloud:
   # app_key:  #LeanCloud App key
   # app_class:  #LeanCloud App class
 
-# mathjax: true
-# mathjax_autoNumber: true
-# mermaid: true
-# chart: true
+ mathjax: true
+ mathjax_autoNumber: true
+ mermaid: true
+ chart: true
 
 ## Paginate ##
 paginate: 7
