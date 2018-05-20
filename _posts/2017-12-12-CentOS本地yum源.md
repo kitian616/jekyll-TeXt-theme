@@ -14,7 +14,7 @@ key: 20171212
 ```
   mount /dev/cdrom /mnt/cdrom
 ```
----
+***
 ## 修改yum源
 1. 备份repo
 将/etc/yum.repos.d下CentOS-Base.repo备份
