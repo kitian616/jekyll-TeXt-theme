@@ -16,7 +16,7 @@ key: 20171212
   mount /dev/cdrom /mnt/cdrom
 ```
 
-***
+<!--more-->
 
 ## 修改yum源
 1. 备份repo
@@ -83,6 +83,7 @@ key: 20171212
 
 ```
   yum -y update
+
   已加载插件：fastestmirror, refresh-packagekit, security
   设置更新进程Loading mirror speeds from cached hostfile
   * base: mirrors.aliyun.com
