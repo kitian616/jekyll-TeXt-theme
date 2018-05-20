@@ -122,9 +122,9 @@ gitalk:
 ##############################
 ## Leancloud
 leancloud:
-  app_id: # LeanCloud App id
-  app_key: # LeanCloud App key
-  app_class: # LeanCloud App class
+  app_id: XzEEHAax8r4MzFopNXDMenfW-gzGzoHsz
+  app_key: nfGVtTFkDNmABeoWteJBwB30
+  app_class: github_class
 
 
 ## => Analytics
