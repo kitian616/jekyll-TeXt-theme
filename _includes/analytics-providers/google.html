@@ -8,6 +8,9 @@
 
 		ga('create', '{{ site.ga_tracking_id }}', 'auto');
 		ga('send', 'pageview');
+		{% if site.ga_anonymize_ip == true %}
+		ga('set', 'anonymizeIp', true);
+		{% endif %}
 	</script>
 
 {%- endif -%}
