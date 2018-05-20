@@ -9,7 +9,7 @@ key: page-about
 >笔名方良印，洋名Bill Tsui，职业“救火”队员，旅居广东 --> 移居上海。虽然自称是一名全栈开发人员，但是主要经验集中在服务端开发上。使用C#与Java已有6年的时间，也对Android和iOS开发略知一二。如果你有任何真诚的问题，欢迎给我发送邮件：<a href="mailto:billtsui@programmer.net">billtsui@programmer.net</a>
 
 ## 0x2 工作状况    
->Back-end developer，主要使用.Net&Java，目前在携程旅行网酒店研发部担任高级研发工程师一职。    
+>Back-end developer，主要使用Java，业余使用Python，目前在携程旅行网酒店研发部担任高级研发工程师一职。    
 
 
 ## 0x3 在读书籍    

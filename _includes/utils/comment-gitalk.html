@@ -17,7 +17,8 @@
 			repo: '{{ site.gitalk.repository }}',
 			owner: '{{ site.gitalk.owner }}',
 			admin: [{{ admin }}],
-			id: '{{ page.key }}'
+			id: '{{ page.key }}',
+			language: 'zh-CN'
 		});
 		gitalk.render('js-gitalk-container');
 	});
