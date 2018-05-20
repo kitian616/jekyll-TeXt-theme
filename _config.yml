@@ -110,8 +110,9 @@ disqus:
 ## Gitalk
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-  clientID: d1eaf3f5a507f0b6f662
-  clientSecret: 3ab861fc5a425dc738bc9fc8708313954bece325
+  enable: true
+  clientID: f5ac6843a14deddae4f6
+  clientSecret: 98c1181a3383c47b06176d5bc1ab7d6923aeff40
   repository: sgaxun.github.io
   owner: sgaxun
   admin: sgaxun
