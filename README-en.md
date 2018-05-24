@@ -45,9 +45,9 @@ You can choose these 6 built-in color themes below:
 
 ## Documentation
 
-- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/05/01/quick-start.html)
-- [Configuration](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/20/configuration.html)
-- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/test/document/2018/04/10/writing-posts.html)
+- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
+- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
+- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
 
 ## Demo Pages
 

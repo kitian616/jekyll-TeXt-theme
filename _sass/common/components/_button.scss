@@ -122,6 +122,7 @@
   width: map-get($button, circle-diameter);
   height: map-get($button, circle-diameter);
   border-radius: 50%;
+  @extend .button--md;
 }
 
 .button--md {

@@ -4,6 +4,7 @@ $base: (
 
   font-size-root:         16px,
 
+  font-size-xl:           1.6rem,
   font-size-lg:           1.25rem,
   font-size:              1rem,
   font-size-sm:           .875rem,
@@ -33,9 +34,11 @@ $base: (
   font-weight:            400,
   font-weight-bold:       700,
 
-  line-height-sm:         1.4,
-  line-height:            1.6,
+  line-height-xl:         2.1,
   line-height-lg:         1.8,
+  line-height:            1.6,
+  line-height-sm:         1.4,
+  line-height-xs:         1.2,
 
   spacer:                 1rem,
 
@@ -60,8 +63,9 @@ $layout: (
   header-height:          5rem,
   header-height-sm:       3rem,
   content-max-width:      850px,
+  sidebar-width:          250px,
   aside-width:            220px,
-  footer-height:          12rem
+  footer-height:          10rem
 );
 
 //     sm       md       lg

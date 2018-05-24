@@ -1,3 +1,9 @@
+{%- if post -%}
+  {%- assign cur_page = post -%}
+{%- elsif page -%}
+  {%- assign cur_page = page -%}
+{%- endif -%}
+
 <div class="article-info clearfix">
 	{%- if page -%}
     <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -8,48 +14,41 @@
       {%- endif -%}
     </meta>
 	{%- endif -%}
-
-	{%- if post -%}
-    {%- assign cur_page = post -%}
-    {%- elsif page -%}
-    {%- assign cur_page = page -%}
-	{%- endif -%}
-	{%- if cur_page.tags[0] -%}
-    <ul class="tag-wrapper">
-      {%- if site.paths.all -%}
-        {%- assign all_path = site.paths.all -%}
-      {%- else -%}
-        {%- assign all_path = '/all.html' -%}
-      {%- endif -%}
-      {%- for tag in cur_page.tags -%}
-        {%- assign _tag = tag | strip | url_encode } -%}
-        {%- assign __path = all_path | append: '?tag=' -%}
-        {%- include snippets/prepend-baseurl.html -%}
-        <li>
-          <a class="button button--secondary button--pill button--sm" href="{{ __return | append: _tag | replace: '//', '/' }}">{{ tag }}</a>
-        </li>
-      {%- endfor -%}
-    </ul>
-	{%- endif -%}
-  <div class="other-wrapper">
-    {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
-      {%- assign __locale = site.data.locale.VIEWS } -%}
-      {%- include snippets/locale-to-string.html -%}
-      <div class="view-wrapper">
-        <span class="article-view" data-page-key="{{ cur_page.key }}">0
-        </span> {{ __return }}
-      </div>
+    {%- if cur_page.tags[0] -%}
+      <ul class="article-info__left-col menu">
+        {%- if site.paths.all -%}
+          {%- assign all_path = site.paths.all -%}
+        {%- else -%}
+          {%- assign all_path = '/all.html' -%}
+        {%- endif -%}
+        {%- for tag in cur_page.tags -%}
+          {%- assign _tag = tag | strip | url_encode } -%}
+          {%- assign __path = all_path | append: '?tag=' -%}
+          {%- include snippets/prepend-baseurl.html -%}
+          <li>
+            <a class="button button--secondary button--pill button--sm" href="{{ __return | append: _tag | replace: '//', '/' }}">{{ tag }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
     {%- endif -%}
-    <div class="date-wrapper">
-      {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
-      {%- include snippets/locale-to-string.html -%}
-      {%- if post -%}
-        <span class="article-meta">{{ post.date | date: __return }}</span>
-      {%- elsif page -%}
-        <time class="article-meta" datetime="{{ page.date | date_to_xmlschema }}"
-          itemprop="datePublished">{{ page.date | date: __return }}
-        </time>
+    <ul class="article-info__right-col menu">
+      {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
+        {%- assign __locale = site.data.locale.VIEWS } -%}
+        {%- include snippets/locale-to-string.html -%}
+        <li class="pageview">
+          <span class="js-pageview" data-page-key="{{ cur_page.key }}">0</span> {{ __return }}
+        </li>
       {%- endif -%}
-    </div>
-  </div>
+      <li class="publish-date">
+        {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
+        {%- include snippets/locale-to-string.html -%}
+        {%- if post -%}
+          <span>{{ post.date | date: __return }}</span>
+        {%- elsif page -%}
+          <time datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished">{{ page.date | date: __return }}
+          </time>
+        {%- endif -%}
+      </li>
+    </ul>
 </div>

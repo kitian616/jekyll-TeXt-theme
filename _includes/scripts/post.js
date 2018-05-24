@@ -7,7 +7,7 @@
     var $pageFooter = $('.js-page-footer');
     var $articleContent = $('.js-article-content');
     var $articleAside = $('.js-article-aside');
-    var $toc = $('.js-toc');
+    var $tocRoot = $('.js-toc-root');
     var $col2 = $('.js-col-2');
     var toc, affix;
     var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
@@ -33,7 +33,7 @@
     tocDisabled = disabled();
 
     setTimeout(function() {
-      toc = $toc.toc({
+      toc = $tocRoot.toc({
         selectors: TOC_SELECTOR,
         container: $articleContent,
         disabled: tocDisabled

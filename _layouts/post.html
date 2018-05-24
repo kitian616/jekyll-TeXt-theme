@@ -1,10 +1,10 @@
 ---
-layout: base
+layout: base-single
 ---
 <div class="layout--post">
 	<div class="main clearfix js-main">
 		<div class="col-2 js-col-2">
-			<aside class="js-article-aside"><div class="toc js-toc"></div></aside>
+			<aside class="js-article-aside"><div class="js-toc-root"></div></aside>
 		</div>
 		<div class="col-1">
 			<article class="js-article" itemscope itemtype="http://schema.org/BlogPosting">
@@ -57,3 +57,10 @@ layout: base
 		</div>
 	</div>
 </div>
+
+<script>
+	{%- include scripts/page-post-common.js -%}
+	{%- include scripts/lib/affix.js -%}
+	{%- include scripts/lib/toc.js -%}
+	{%- include scripts/post.js -%}
+</script>

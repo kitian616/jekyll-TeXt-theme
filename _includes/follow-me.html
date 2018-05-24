@@ -1,9 +1,17 @@
 <div class="follow-me">
-  <ul itemscope itemtype="http://schema.org/Person">
+  <ul class="menu menu--nowrap menu--center" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="{{ site.author.name }}">
     {%- assign __path = '/'-%}
     {%- include snippets/prepend-baseurl.html -%}
     <link itemprop="url" href="{{ __return | prepend: site.url }}">
+    {%- assign __locale = site.data.locale.EMAIL_ME -%}
+    {%- include snippets/locale-to-string.html -%}
+    {%- if site.author.email -%}
+      <li title="{{ __return }}">
+      <a class="button button--circle mail-button" itemprop="sameAs" href="mailto:{{ site.author.email }}" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+    {%- endif -%}
     {%- assign __locale = site.data.locale.FOLLOW_ME -%}
     {%- include snippets/locale-to-string.html -%}
     {%- if site.author.weibo -%}
@@ -56,11 +64,4 @@
       </li>
     {%- endif -%}
   </ul>
-  {%- if site.author.email -%}
-  {%- assign __locale = site.data.locale.EMAIL_ME -%}
-  {%- include snippets/locale-to-string.html -%}
-    <p class="email">
-      <a title="{{ __return }}" href="mailto:{{ site.author.email }}" target="_self">{{ site.author.email }}</a>
-    </p>
-  {%- endif -%}
 </div>

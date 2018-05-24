@@ -13,10 +13,8 @@
       visibility: hidden;
       text-decoration: none;
       opacity: 0;
-      & > svg {
-        width: map-get($base, font-size);
-        height: map-get($base, font-size);
-        margin-bottom: - .2 * map-get($base, font-size);
+      & > i {
+        font-size: map-get($base, font-size-sm);
       }
     }
     &:hover {
@@ -85,6 +83,9 @@
       background-color: transparent;
       word-wrap: normal;
       &.language-mermaid, &.language-chart {
+        svg {
+          width: 100%;
+        }
         display: none;
         &[data-processed] {
           display: block;

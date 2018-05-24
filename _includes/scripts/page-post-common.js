@@ -20,7 +20,7 @@
 
     $articleContent.children('h1, h2, h3, h4, h5, h6').each(function() {
       $this = $(this);
-      $this.append($('<a class="anchor" aria-hidden="true"></a>').html('{%- include svg/icon/link.svg -%}'));
+      $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
     });
     $articleContent.on('click', '.anchor', function() {
       window.scrollTopAnchor('#' + $(this).parent().attr('id'));

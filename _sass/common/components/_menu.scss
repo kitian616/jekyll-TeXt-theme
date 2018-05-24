@@ -10,8 +10,11 @@
   }
   @include flexbox();
   @include flex-wrap($wrap);
-  &>* {
-    @if $horizontal-item-vertical-spacer != none {
+  @include align-items(center);
+  margin-top: 0;
+  margin-bottom: 0;
+  & > li {
+    @if $horizontal-item-vertical-spacer {
       margin-top: map-get($spacers, $horizontal-item-vertical-spacer);
       margin-bottom: map-get($spacers, $horizontal-item-vertical-spacer);
     }
@@ -21,4 +24,20 @@
       margin-right: 0;
     }
   }
+}
+
+.menu {
+  @include menu();
+}
+
+.menu--center {
+  @include justify-content(center);
+}
+
+.menu--nowrap {
+  @include flex-wrap(nowrap);
+}
+
+.menu--grow {
+  @include flex-grow(1);
 }

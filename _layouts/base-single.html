@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%- include snippets/get-lang.html -%}
+<html lang="{{ __return }}">
+  <head>
+    {%- include head.html -%}
+    <script>
+      {%- include scripts/utils.js -%}
+      {%- include scripts/lib/throttle.js -%}
+      {%- include scripts/lib/lazyload.js -%}
+      {%- include scripts/common.js -%}
+    </script>
+    {%- include scripts/variables.html -%}
+  </head>
+  <body>
+    <div class="layout--base-single page__main js-page-main">
+      {%- include header.html -%}
+      <div class="page__content">{{ content }}</div>
+      <div class="page__footer">{%- include footer.html -%}</div>
+    </div>
+    {%- include markdown-enhancements.html -%}
+    {%- include pageview.html -%}
+    {%- include analytics.html -%}
+  </body>
+</html>

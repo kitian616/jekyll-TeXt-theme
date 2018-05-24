@@ -46,3 +46,10 @@
 {%- include snippets/prepend-baseurl.html -%}
 <meta name="msapplication-square70x70logo" content="{{ __return }}">
 <meta name="msapplication-TileColor" content="#eeeeee">
+
+{%- assign __path = '/assets/css/blog.css' -%}
+{%- include snippets/prepend-baseurl.html -%}
+<link rel="stylesheet" href="{{ __return }}">
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+<link rel="stylesheet" href="{{ _sources.font_awesome }}" >

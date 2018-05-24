@@ -61,9 +61,7 @@
       & > .icon-clear {
         display: none;
         right: .5rem;
-        // @extend %button;
-        // @include link-colors($text-color-l, transparent,
-        //   $text-color-d, transparent, $text-color-d, transparent);
+        @include link-colors($text-color-l, $text-color-d);
       }
       & > .icon-search {
         left: .5rem;

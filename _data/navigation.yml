@@ -1,0 +1,19 @@
+docs-en:
+  - title: "Start"
+    children:
+      - title: "Quick Start"
+        url: /docs/en/quick-start
+      - title: "Configuration"
+        url: /docs/en/configuration
+      - title: "Writing Posts"
+        url: /docs/en/writing-posts
+
+docs-zh:
+  - title: "开始"
+    children:
+      - title: "快速开始"
+        url: /docs/zh/quick-start
+      - title: "配置"
+        url: /docs/zh/configuration
+      - title: "撰写博客"
+        url: /docs/zh/writing-posts

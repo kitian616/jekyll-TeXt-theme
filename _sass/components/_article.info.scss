@@ -1,36 +1,23 @@
 .article-info {
   margin: .8rem 0;
-  .date-wrapper,
-  .tag-wrapper,
-  .view-wrapper {
-    font-size: map-get($base, font-size-sm);
-  }
-  .tag-wrapper {
+  font-size: map-get($base, font-size-sm);
+  .article-info__left-col {
     float: left;
-    margin: 0 .25rem 0 0;
-    @include menu();
     @include media-breakpoint-down(sm) {
       float: none;
     }
   }
-  .other-wrapper {
+  .article-info__right-col {
     float: right;
-    @include flexbox;
-    @include align-items(center);
-    @include flex-wrap(wrap);
     color: $text-color-l;
     margin-left: map-get($button, padding-x-sm);
     @include media-breakpoint-down(sm) {
       float: none;
     }
   }
-  .view-wrapper {
-    @include split-line(right);
-    line-height: 1;
-    padding: 0 .25rem 0 0;
-    margin: 0 .25rem 0 0;
-  }
-  .date-wrapper {
-    margin: 0 1rem 0 0;
+  .pageview {
+    @include split-line(right, default, $text-color-l);
+    line-height: map-get($base, line-height-xs);
+    padding-right: .3rem;
   }
 }

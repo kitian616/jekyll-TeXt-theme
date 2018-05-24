@@ -19,7 +19,7 @@
         appKey:   '{{ _LEANCLOUD_APP_KEY }}',
         appClass: '{{ _LEANCLOUD_APP_CLASS }}'
       });
-      $('.article-view').each(function() {
+      $('.js-pageview').each(function() {
         var $this = $(this);
         var key = $this.attr('data-page-key');
         pageview.get(key, function(view) {

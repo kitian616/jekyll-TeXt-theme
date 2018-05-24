@@ -59,6 +59,10 @@ paths:
   rss:  /feed.xml
 
 nav_lists:
+  - title: Documentation
+    url: /docs/en/quick-start
+  - title: 文档
+    url: /docs/zh/quick-start
   - titles:
       en: About
       zh: 关于
@@ -77,7 +81,7 @@ excerpt_type: html # text (default), html
 
 ## TOC
 toc:
-  selectors: # "h1,h2,h3" (default)
+  selectors: "h1,h2,h3,h4,h5,h6" # "h1,h2,h3" (default)
 
 ## Markdown Enhancements
 

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: base-single
 titles:
   en: Blog
   zh: 博客
@@ -39,7 +39,7 @@ titles:
           {%- assign post_count = site.posts | size -%}
           {%- assign page_count = paginator.total_pages -%}
           <p>{{ __return | replace: '[POST_COUNT]', post_count | replace: '[PAGE_COUNT]', page_count }}</p>
-          <ul>
+          <ul class="menu menu--nowrap">
             {%- assign _max_show = 5 -%}
             {%- assign _max_show_modulo_two = _max_show | modulo: 2 -%}
             {%- assign _length = paginator.total_pages -%}
@@ -66,12 +66,12 @@ titles:
               {%- include snippets/prepend-baseurl.html -%}
               {%- assign href = __return -%}
               <li><a class="button button--secondary button--circle" href="{{ href }}">
-                <div class="icon icon--previous">{%- include svg/icon/previous.svg -%}</div></a>
-              </li>
+                <i class="fas fa-angle-left"></i>
+              </a></li>
             {%- else -%}
               <li><div class="button button--secondary button--circle disabled">
-                <div class="icon icon--prrevious">{%- include svg/icon/previous.svg -%}</div></div>
-              </li>
+                <i class="fas fa-angle-left"></i>
+              </div></li>
             {%- endif -%}
 
             {%- for page in (1.._length) -%}
@@ -92,9 +92,9 @@ titles:
               {%- else -%}
                 {%- if _n0 and _n1 -%}
                   {%- if page > 1 and page < _n0 -%}
-                    {%- if page == 2 -%}<li><span class="omit">{%- include svg/icon/omit.svg -%}</span></li>{%- endif -%}
+                    {%- if page == 2 -%}<li><span class="pagination__omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
                   {%- elsif page > _n1 and page < _length -%}
-                    {%- if page == _length_mimus_one -%}<li><span class="omit">{%- include svg/icon/omit.svg -%}</span></li>{%- endif -%}
+                    {%- if page == _length_mimus_one -%}<li><span class="omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
                   {%- else -%}
                     {%- assign __path = site.paginate_path -%}
                     {%- include snippets/prepend-baseurl.html -%}
@@ -117,19 +117,20 @@ titles:
               {%- assign __path = paginator.next_page_path -%}
               {%- include snippets/prepend-baseurl.html -%}
               {%- assign href = __return -%}
-              <li>
-                <a class="button button--secondary button--circle" href="{{ href }}">
-                  <div class="icon icon--next">{%- include svg/icon/next.svg -%}</div>
-                </a>
-              </li>
+              <li><a class="button button--secondary button--circle" href="{{ href }}">
+                <i class="fas fa-angle-right"></i>
+              </a></li>
             {%- else -%}
-                <li><div class="button button--secondary button--circle disabled">
-                  <div class="icon icon--next">{%- include svg/icon/next.svg -%}</div>
-                  </div>
-                </li>
+              <li><div class="button button--secondary button--circle disabled">
+                <i class="fas fa-angle-right"></i>
+              </div></li>
             {%- endif -%}
           </ul>
         </nav>
     {%- endif -%}
   </div>
 </div>
+
+<script>
+  {%- include scripts/home.js -%}
+</script>

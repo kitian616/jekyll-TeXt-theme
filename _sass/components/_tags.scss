@@ -1,7 +1,4 @@
 .site-tags {
-  & > ul {
-    @include menu();
-  }
   .tag-button {
     & > .tag-button__count {
       font-size: map-get($base, font-size-xs);

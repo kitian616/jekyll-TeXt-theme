@@ -1,9 +1,6 @@
 .follow-me {
-  text-align: center;
   & > ul {
     margin: 0;
-    @include justify-content(center);
-    @include menu();
     & > li > {
       .mail-button {
         @include button-colors($text-color-1, $mail-color);

@@ -1,7 +1,7 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $root, $tocUl = $('<ul></ul>'), $tocLi, $headings, $activeLast, $activeCur;
+    var $window = $(window), $root, $tocUl = $('<ul class="toc"></ul>'), $tocLi, $headings, $activeLast, $activeCur;
     var selectors = 'h1,h2,h3', container = 'body', disabled = false;
     var headingsPos, scrolling = false, rendered = false, hasInit = false;
     function setOptions(options) {
@@ -33,8 +33,8 @@
           }
         }
       }
-      $activeLast && $activeLast.removeClass('toc-active');
-      ($activeLast = $activeCur).addClass('toc-active');
+      $activeLast && $activeLast.removeClass('active');
+      ($activeLast = $activeCur).addClass('active');
     }
     function render() {
       if(!rendered) {
