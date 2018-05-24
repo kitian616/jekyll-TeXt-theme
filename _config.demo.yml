@@ -135,7 +135,7 @@ leancloud:
 ##############################
 ## Google Analytics
 ga_tracking_id: UA-71907556-1 #Google analytics id for the site
-
+ga_anonymize_ip: false # Anonymize IP tracking for Analytics
 
 ## => Build
 ##############################
