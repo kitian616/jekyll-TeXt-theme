@@ -1,9 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Jekyll - Lists - TeXt Theme</title>
-<meta name="description" content="Unordered list  Aenean  vel          libero      eget        ante">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2016/06/06/lists.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Quick Start - TeXt Theme</title>
+<meta name="description" content="TeXt Theme Demo
+">
+<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/jekyll-TeXt-theme/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/jekyll-TeXt-theme/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/jekyll-TeXt-theme/assets/images/logo/icon-192x192.png">
@@ -241,7 +242,14 @@
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script></head>
-  <body><div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
+  <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__actions">
+    <div class="button button--secondary button--circle box-shadow-2 js-sidebar-button">
+      <i class="fas fa-bars icon--show"></i>
+      <i class="fas fa-times icon--hide"></i>
+    </div>
+  </div>
+  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li></ul></div></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -266,64 +274,91 @@
           <div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title "><h1>Jekyll - Lists</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__left-col menu"><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/all.html?tag=Jekyll">Jekyll</a>
-          </li><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/all.html?tag=English">English</a>
-          </li></ul><ul class="article-info__right-col menu"><li class="pageview">
-            <span class="js-pageview" data-page-key="20160606">0</span> views
-          </li><li class="publish-date"><time datetime="2016-06-06T00:00:00+08:00"
-            itemprop="datePublished">Jun 06, 2016
+            <article><div class="main__title "><h1>Quick Start</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime=""
+            itemprop="datePublished">
           </time></li>
     </ul>
 </div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><h2 id="unordered-list">Unordered list</h2>
+  <div class="article-content" itemprop="articleBody"><p>TeXt Theme is 100% compatible with GitHub Pages and it has been developed as a <a href="https://jekyllrb.com/docs/themes/">gem-based themes</a> for easier use.</p>
 
-<ul>
-  <li>Aenean</li>
-  <li>vel
-    <ul>
-      <li>libero</li>
-      <li>eget</li>
-    </ul>
-  </li>
-  <li>ante</li>
-</ul>
+<p>In this document, you will learn how to <strong>install the theme</strong>, <strong>setup your site</strong>, <strong>local preview</strong> for development, <strong>build and publish</strong>.</p>
 
 <!--more-->
 
-<p><strong>markdown:</strong></p>
+<h2 id="installing-the-theme">Installing the Theme</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Aenean
-* vel
-    * libero
-    * eget
-* ante
+<h3 id="common-method">Common Method</h3>
+
+<p>To install it with common method, all you need to do is copying all the theme files to your project. There are several ways to do so:</p>
+
+<p>Clone <a href="https://github.com/kitian616/jekyll-TeXt-theme">jekyll-TeXt-theme</a> from github:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```bash
+git clone git@github.com:kitian616/jekyll-TeXt-theme.git
+```
 </code></pre></div></div>
 
-<h2 id="ordered-list">Ordered list</h2>
+<p>Download and unzip the file to your Jekyll site directory.</p>
 
-<ol>
-  <li>Aenean</li>
-  <li>vel</li>
-  <li>libero</li>
-  <li>eget</li>
-  <li>ante</li>
-</ol>
+<p><a class="button button--success button--rounded button--lg" href="https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip"><i class="fas fa-download"></i> Download TeXt Theme</a></p>
 
-<p><strong>markdown:</strong></p>
+<p>If you host your site on GitHub Pages, you can just fork <a href="https://github.com/kitian616/jekyll-TeXt-theme">jekyll-TeXt-theme</a>, then rename the repository to <strong>USERNAME.github.io</strong> — replacing <strong>USERNAME</strong> with your GitHub username.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Aenean
-2. vel
-3. libero
-4. eget
-5. ante
+<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-fork.png" alt="Fork" /></p>
+
+<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/github-rename-repo.png" alt="Rename" /></p>
+
+<h3 id="ruby-gem-method">Ruby Gem Method</h3>
+
+<p>Add this line to your Jekyll site’s <code class="highlighter-rouge">Gemfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-text-theme"</span>
 </code></pre></div></div>
+
+<p>Add this line to your Jekyll site’s <code class="highlighter-rouge">_config.yml</code> file:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-text-theme</span>
+</code></pre></div></div>
+
+<p>Then run Bundler to install the theme gem and dependencies:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<h2 id="setup-your-site">Setup Your Site</h2>
+
+<p>If you install the theme with common method, you can go straight to the next step. But <strong>if you install the theme with ruby gem method, you have to do some extra jobs</strong>.</p>
+
+<p>With gem-based themes, some of the site’s directories (such as the assets, _layouts, _includes, and _sass directories) are stored in the theme’s gem, hidden from your immediate view. You need add some files in your Jekyll site directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── 404.html
+├── Gemfile
+├── _config.yml
+├── _data
+│   └── locale.yml
+├── _posts
+│   └── ...
+├── about.md
+├── all.html
+└── index.html
+</code></pre></div></div>
+
+<p>You can reffer to the <a href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test">/test folder</a>, this is a example with gem-based themes.</p>
+
+<h2 id="local-preview">Local Preview</h2>
+
+<p>Run <code class="highlighter-rouge">bundle exec jekyll serve</code> to start the development server, then you can visit <a href="http://localhost:4000/">http://localhost:4000/</a> to preview your site.</p>
+
+<h2 id="build-and-publish">Build and Publish</h2>
+
+<p>If you host your site on GitHub Pages, just push the source to the master branch of your USERNAME.github.io repository, GitHub would build automatically. You can visit your site on <strong>https://USERNAME.github.io</strong> several minutes later.</p>
+
+<p>If you host your site on your server, you need first run <code class="highlighter-rouge">JEKYLL_ENV=production bundle exec jekyll build</code> to generated your site, then update the files in _site folder to your server.</p>
 </div>
 
-  <footer class="article-footer"><meta itemprop="dateModified" content="2016-06-06T00:00:00+08:00"></footer><div class="article-previous-next clearfix"><div class="article-previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/test/2016/06/10/tables.html">Jekyll - Tables</a></div><div class="article-next"><span>NEXT</span><a href="/jekyll-TeXt-theme/test/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div></div></div>
+  <footer class="article-footer"><meta itemprop="dateModified" content=""></footer></div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -357,7 +392,7 @@
 				repo: 'gitalk-demo',
 				owner: 'kitian616',
 				admin: ['kitian616'],
-				id: '20160606'
+				id: '20180501'
 			});
 			gitalk.render('js-gitalk-container');
 		});
@@ -667,6 +702,15 @@
 })();</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $sidebarButton = $('.js-sidebar-button');
+    $sidebarButton.on('click', function() {
+      $pageRoot.toggleClass('show-sidebar');
+    });
+  });
+})();</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window), $pageFooter = $('.js-page-footer');
     var $pageAside = $('.js-page-aside');
     var affix;
@@ -747,91 +791,7 @@
     mermaid.init(undefined, '.language-mermaid');
     mermaid.initialize({ startOnLoad: true });
   });
-</script><script>(function() {
-  function errorHandler(error, callback) {
-    if (error) {
-      callback && callback(error);
-      throw error;
-    }
-  }
-
-  function pageview(_AV  ,options) {
-    var AV = _AV;
-    var appId, appKey, appClass;
-    appId = options.appId;
-    appKey = options.appKey;
-    appClass = options.appClass;
-    AV.init({
-      appId: appId,
-      appKey: appKey
-    });
-    return {
-      get: get,
-      increase: increase
-    };
-
-    function searchKey(key) {
-      var query = new AV.Query(appClass);
-      query.equalTo('key', key);
-      return query.first();
-    }
-
-    function insert(key, title) {
-      var Blog = AV.Object.extend(appClass);
-      var blog = new Blog();
-      blog.set('title', title);
-      blog.set('key', key);
-      blog.set('views', 0);
-      return blog.save();
-    }
-
-    function increment(result) {
-      result.increment('views', 1);
-      return result.save(null, {
-        fetchWhenSave: true
-      });
-    }
-
-    function get(key, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          callback && callback(result.attributes.views);
-        }
-      }, errorHandler);
-    }
-
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-    }
-  }
-  window.pageview = pageview;
-})();</script>
-  <script>
-    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
-      var pageview = window.pageview(AV, {
-        appId:    'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
-        appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
-        appClass: 'TeXtDemo'
-      });
-      var key =   '20160606';
-      var title = window.decodeUrl('Jekyll+-+Lists');
-      pageview.increase(key, title, function(view) {
-        $("[data-page-key='20160606']").text(view);
-      });
-    });
-  </script><script>
+</script><script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

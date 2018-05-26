@@ -1,9 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Jekyll - Lists - TeXt Theme</title>
-<meta name="description" content="Unordered list  Aenean  vel          libero      eget        ante">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2016/06/06/lists.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Configuration - TeXt Theme</title>
+<meta name="description" content="TeXt Theme Demo
+">
+<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/jekyll-TeXt-theme/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/jekyll-TeXt-theme/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/jekyll-TeXt-theme/assets/images/logo/icon-192x192.png">
@@ -241,7 +242,14 @@
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script></head>
-  <body><div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
+  <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__actions">
+    <div class="button button--secondary button--circle box-shadow-2 js-sidebar-button">
+      <i class="fas fa-bars icon--show"></i>
+      <i class="fas fa-times icon--hide"></i>
+    </div>
+  </div>
+  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li></ul></div></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -266,64 +274,339 @@
           <div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title "><h1>Jekyll - Lists</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__left-col menu"><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/all.html?tag=Jekyll">Jekyll</a>
-          </li><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/all.html?tag=English">English</a>
-          </li></ul><ul class="article-info__right-col menu"><li class="pageview">
-            <span class="js-pageview" data-page-key="20160606">0</span> views
-          </li><li class="publish-date"><time datetime="2016-06-06T00:00:00+08:00"
-            itemprop="datePublished">Jun 06, 2016
+            <article><div class="main__title "><h1>Configuration</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime=""
+            itemprop="datePublished">
           </time></li>
     </ul>
 </div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><h2 id="unordered-list">Unordered list</h2>
+  <div class="article-content" itemprop="articleBody"><p>Jekyll allows you to concoct your sites in any way you can dream up, and it’s thanks to the powerful and flexible configuration options that this is possible. These options can either be specified in a <code class="highlighter-rouge">_config.yml</code> file placed in your site’s root directory, or can be specified as flags for the jekyll executable in the terminal.</p>
 
-<ul>
-  <li>Aenean</li>
-  <li>vel
-    <ul>
-      <li>libero</li>
-      <li>eget</li>
-    </ul>
-  </li>
-  <li>ante</li>
-</ul>
+<p class="warning">For technical reasons, <code class="highlighter-rouge">_config.yml</code> is <em>NOT</em> reloaded automatically when you use <code class="highlighter-rouge">jekyll serve</code>. If you change this file, please restart the server process.</p>
 
 <!--more-->
 
-<p><strong>markdown:</strong></p>
+<h2 id="site-settings">Site Settings</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Aenean
-* vel
-    * libero
-    * eget
-* ante
+<h3 id="theme">Theme</h3>
+
+<p>If you’re using the Ruby gem version of the theme you’ll need this line to activate it:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">minimal-mistakes-jekyll</span>
 </code></pre></div></div>
 
-<h2 id="ordered-list">Ordered list</h2>
+<h3 id="color-theme">Color Theme</h3>
 
-<ol>
-  <li>Aenean</li>
-  <li>vel</li>
-  <li>libero</li>
-  <li>eget</li>
-  <li>ante</li>
-</ol>
+<p>You can choose these 6 built-in color themes below:</p>
 
-<p><strong>markdown:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">default</code></th>
+      <th><code class="highlighter-rouge">dark</code></th>
+      <th><code class="highlighter-rouge">forest</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.png" alt="default" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.png" alt="dark" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.png" alt="forest" /></td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Aenean
-2. vel
-3. libero
-4. eget
-5. ante
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">ocean</code></th>
+      <th><code class="highlighter-rouge">chocolate</code></th>
+      <th><code class="highlighter-rouge">orange</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.png" alt="ocean" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_chocolate.png" alt="chocolate" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png" alt="orange" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">text_color_theme</span><span class="pi">:</span> <span class="s">default</span> <span class="c1"># "default" (default), "dark", "forest", "ocean", "chocolate", "orange"</span>
 </code></pre></div></div>
+
+<h3 id="url">URL</h3>
+
+<p>The base hostname and protocol for your site. if you are hosting the site on Github Pages this will be set as the GitHub Pages domain (cname or user domain)<sup id="fnref:gitHub_metadata"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>. For example, https://kitian616.github.io or https://tianqi.name if there is cname file.</p>
+
+<p class="warning">Jekyll 3.3 overrides this value with url: http://localhost:4000 when running <code class="highlighter-rouge">jekyll serve</code> in a development environment<sup id="fnref:jekyll_site_variables"><a href="#fn:jekyll_site_variables" class="footnote">2</a></sup>. You can specifying Jekyll environment<sup id="fnref:jekyll_specifying_environment"><a href="#fn:jekyll_specifying_environment" class="footnote">3</a></sup> to production environment by <code class="highlighter-rouge">JEKYLL_ENV=production</code> to avoid this behavior.</p>
+
+<h3 id="base-url">Base URL</h3>
+
+<p>The base URL for your site, default to ‘/’. If you are hosting the site on Github Pages this will be set as the project name for project pages if none is set<sup id="fnref:gitHub_metadata:1"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>.</p>
+
+<h3 id="title">Title</h3>
+
+<p>The name of your site.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">My</span><span class="nv"> </span><span class="s">Awesome</span><span class="nv"> </span><span class="s">Website"</span>
+</code></pre></div></div>
+
+<h3 id="description">Description</h3>
+
+<p>Use some words to describe your site.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span> <span class="c1"># this means to ignore newlines until "nav_lists:"</span>
+  <span class="no">A website with awesome stories.</span>
+</code></pre></div></div>
+
+<h2 id="language-and-timezone">Language and Timezone</h2>
+
+<h3 id="language">Language</h3>
+
+<p>The language of your site, you can override it with different ones on specific posts, pages by YAML Front Matter<sup id="fnref:font_matter"><a href="#fn:font_matter" class="footnote">4</a></sup>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Language</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>en</strong></td>
+      <td>English(default)</td>
+    </tr>
+    <tr>
+      <td><strong>zh</strong></td>
+      <td>Simplified Chinese, 简体中文</td>
+    </tr>
+    <tr>
+      <td><strong>zh-Hans</strong></td>
+      <td>Simplified Chinese, 简体中文</td>
+    </tr>
+    <tr>
+      <td><strong>zh-Hant</strong></td>
+      <td>Traditional Chinese, 繁體中文</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">lang</span><span class="pi">:</span> <span class="s">en</span>
+</code></pre></div></div>
+
+<h3 id="timezone">Timezone</h3>
+
+<p>Set the time zone for site generation. This sets the TZ environment variable, which Ruby uses to handle time and date creation and manipulation. A list of all available values can be found <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">HERE</a>.</p>
+
+<p>When serving on a local machine, the default time zone is set by your operating system. But when served on a remote host/server, the default time zone depends on the server’s setting or location.<sup id="fnref:jekyll_global_configuration"><a href="#fn:jekyll_global_configuration" class="footnote">5</a></sup></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">timezone</span><span class="pi">:</span> <span class="s">Asia/Shanghai</span>
+</code></pre></div></div>
+
+<h2 id="author-and-social">Author and Social</h2>
+
+<p>Information of the site author (a person, a team, an organization or even a cat).</p>
+
+<h3 id="name">Name</h3>
+
+<p>Used to assign a site author.</p>
+
+<h3 id="social">Social</h3>
+
+<p>Username or id of site author’s social networks.</p>
+
+<p>Now we supports Email, Facebook, Twitter, Google Plus, Github, Linkedin, Weibo(微博) and Douban(豆瓣), more to be added.</p>
+
+<p>Depending on your settings, the social network buttons would show on every pages’ footer.</p>
+
+<h2 id="github-repository">GitHub repository</h2>
+
+<p>Setting for <a href="https://github.com/jekyll/github-metadata">GitHub Metadata</a> plugin, you can refer to <a href="https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration">HERE</a> for more info.</p>
+
+<p>In order for jekyll-github-metadata to know what metadata to fetch it must be able to determine the repository NWO to ask GitHub about.</p>
+
+<p>“NWO” stands for “name with owner.” It is GitHub lingo for the username of the owner of the repository plus a forward slash plus the name of the repository, e.g. ‘kitian616/jekyll-TeXt-theme’, where ‘kitian616’ is the owner and ‘jekyll-TeXt-theme’ is the repository name.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">repository</span><span class="pi">:</span> <span class="s">username/repo-name</span>
+</code></pre></div></div>
+
+<h2 id="navigation-">Navigation *</h2>
+
+<p>Todo …</p>
+
+<h2 id="post">Post</h2>
+
+<h3 id="excerpt">Excerpt</h3>
+
+<p>Each post automatically takes the first block of text, from the beginning of the content to the first occurrence of excerpt_separator, and sets it as the post’s excerpt.</p>
+
+<p>The post’s excerpt is show in the articles list in the home layout. There are two excerpt types: text type and html type:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>text</strong></td>
+      <td>the excerpt are plain text that filters out all non-text elements (such as title, link, list, table, picture, etc.) and only show 350 characters most.</td>
+    </tr>
+    <tr>
+      <td><strong>html</strong></td>
+      <td>the excerpt are HTML document just like the content of the article, This will show all the content by default, except adding <code class="highlighter-rouge">&lt;!--more--&gt;</code> in the article Markdown file, You can find more info <a href="https://jekyllrb.com/docs/posts/#post-excerpts">HERE</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">excerpt_separator</span><span class="pi">:</span> <span class="s">&lt;!--more--&gt;</span>
+<span class="na">excerpt_type</span><span class="pi">:</span> <span class="s">text</span> <span class="c1"># text (default), html</span>
+</code></pre></div></div>
+
+<h3 id="toc">TOC</h3>
+
+<p>Elements to use as headings.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">toc</span><span class="pi">:</span>
+  <span class="na">selectors</span><span class="pi">:</span> <span class="s2">"</span><span class="s">h1,h2,h3"</span>
+</code></pre></div></div>
+
+<h3 id="markdown-enhancements">Markdown Enhancements</h3>
+
+<p>To improve the user experience for both reading and writing posts, TeXt made some enhancements for markdown. By default, all the enhancements for markdown is enabled. you need set the settings to true to enable them:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Mathjax</span>
+<span class="na">mathjax</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">mathjax_autoNumber</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="c1"># Mermaid</span>
+<span class="na">mermaid</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="c1"># Chart</span>
+<span class="na">chart</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>And also you can override it with different ones on specific posts, pages by YAML Front Matter<sup id="fnref:font_matter:1"><a href="#fn:font_matter" class="footnote">4</a></sup>.</p>
+
+<p>Check <a href="/">Writing Posts</a> for detail usage.</p>
+
+<h2 id="paginate">Paginate</h2>
+
+<p>Settings for <a href="https://github.com/jekyll/jekyll-paginate">Jekyll Paginate</a> plugin. to enable pagination for posts on your blog, add a line to the _config.yml file that specifies how many items should be displayed per page:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paginate</span><span class="pi">:</span> <span class="s">8</span>
+</code></pre></div></div>
+
+<p>The number should be the maximum number of Posts you’d like to be displayed per-page in the generated site.</p>
+
+<p>You may also specify the destination of the pagination pages:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paginate_path</span><span class="pi">:</span> <span class="s">/page:num</span> <span class="c1"># don't change this unless for special need</span>
+</code></pre></div></div>
+
+<h2 id="sources">Sources</h2>
+
+<p>TeXt use CDN<sup id="fnref:cdn"><a href="#fn:cdn" class="footnote">6</a></sup> for speed improvements, You can choose <a href="http://www.bootcdn.cn/">BootCDN</a>(default) or <a href="https://unpkg.com/">unpkg</a> as your site’s CDN provider, both of them are open source and free.</p>
+
+<p>If your website is mainly for Chinese, just use BootCDN.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sources</span><span class="pi">:</span> <span class="s">bootcdn</span> <span class="c1"># bootcdn (default), unpkg</span>
+</code></pre></div></div>
+
+<h2 id="comments">Comments</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Comment Provider</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>disqus</strong></td>
+      <td><a href="https://disqus.com/">Disqus</a></td>
+    </tr>
+    <tr>
+      <td><strong>gitalk</strong></td>
+      <td><a href="https://github.com/gitalk/gitalk/">Gitalk</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="disqus">disqus</h3>
+
+<p>To use Disqus you’ll need to create an account and <a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-">shortname</a>. Once you have both update _config.yml to:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">disqus</span><span class="pi">:</span>
+  <span class="na">shortname</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-disqus-shortname"</span>
+</code></pre></div></div>
+
+<h3 id="gitalk">gitalk</h3>
+
+<p>To use gitalk you need a GitHub application, if you don’t have one, <a href="https://github.com/settings/applications/new">Click here to register</a> a new one. and then update _config.yml to:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">gitalk</span><span class="pi">:</span>
+  <span class="na">clientID</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github-application-client-id"</span>
+  <span class="na">clientSecret</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github-application-client-secret"</span>
+  <span class="na">repository</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github-repo"</span>
+  <span class="na">owner</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github-repo-owner"</span>
+  <span class="na">admin</span><span class="pi">:</span> <span class="c1"># Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">your-github-id"</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">the-other-admin-github-id"</span>
+</code></pre></div></div>
+
+<h2 id="pageview">Pageview</h2>
+
+<p>TeXt use <a href="https://leancloud.cn/">LeanCloud</a> as back-end service. You need create a app on the dashboard, and config the app’s id, key and class name.</p>
+
+<p class="info">The detail guide of LeanCloud will find in <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/configuration#%E6%96%87%E7%AB%A0%E7%82%B9%E5%87%BB%E9%87%8F">Chinese document</a> since LeanCloud haven’t provide an English-language edition.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">leancloud</span><span class="pi">:</span>
+  <span class="na">app_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-id"</span>
+  <span class="na">app_key</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-key"</span>
+  <span class="na">app_class</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-class"</span>
+</code></pre></div></div>
+
+<h2 id="analytics">Analytics</h2>
+
+<h3 id="google-analytics">Google Analytics</h3>
+
+<p>In order to use Google Analytics, set <code class="highlighter-rouge">ga_tracking_id</code> to your Google Analytics tracking code.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">ga_tracking_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-google-analytics-tracking-code"</span>
+</code></pre></div></div>
+<div class="footnotes">
+  <ol>
+    <li id="fn:gitHub_metadata">
+      <p><a href="https://github.com/jekyll/github-metadata#what-it-does">GitHub Metadata, a.k.a. site.github</a> <a href="#fnref:gitHub_metadata" class="reversefootnote">&#8617;</a> <a href="#fnref:gitHub_metadata:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:jekyll_site_variables">
+      <p><a href="https://jekyllrb.com/docs/variables/#site-variables">Variables#Site Variables</a> <a href="#fnref:jekyll_site_variables" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:jekyll_specifying_environment">
+      <p><a href="https://jekyllrb.com/docs/configuration/#specifying-a-jekyll-environment-at-build-time">Configuration#Specifying a Jekyll environment at build timePermalink</a> <a href="#fnref:jekyll_specifying_environment" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:font_matter">
+      <p><a href="https://jekyllrb.com/docs/frontmatter/">Front Matter</a> <a href="#fnref:font_matter" class="reversefootnote">&#8617;</a> <a href="#fnref:font_matter:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:jekyll_global_configuration">
+      <p><a href="https://jekyllrb.com/docs/configuration/#global-configuration">Configuration#Global Configuration</a> <a href="#fnref:jekyll_global_configuration" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:cdn">
+      <p><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content delivery network</a> <a href="#fnref:cdn" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 </div>
 
-  <footer class="article-footer"><meta itemprop="dateModified" content="2016-06-06T00:00:00+08:00"></footer><div class="article-previous-next clearfix"><div class="article-previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/test/2016/06/10/tables.html">Jekyll - Tables</a></div><div class="article-next"><span>NEXT</span><a href="/jekyll-TeXt-theme/test/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div></div></div>
+  <footer class="article-footer"><meta itemprop="dateModified" content=""></footer></div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -357,7 +640,7 @@
 				repo: 'gitalk-demo',
 				owner: 'kitian616',
 				admin: ['kitian616'],
-				id: '20160606'
+				id: '20180420'
 			});
 			gitalk.render('js-gitalk-container');
 		});
@@ -667,6 +950,15 @@
 })();</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $sidebarButton = $('.js-sidebar-button');
+    $sidebarButton.on('click', function() {
+      $pageRoot.toggleClass('show-sidebar');
+    });
+  });
+})();</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window), $pageFooter = $('.js-page-footer');
     var $pageAside = $('.js-page-aside');
     var affix;
@@ -747,91 +1039,7 @@
     mermaid.init(undefined, '.language-mermaid');
     mermaid.initialize({ startOnLoad: true });
   });
-</script><script>(function() {
-  function errorHandler(error, callback) {
-    if (error) {
-      callback && callback(error);
-      throw error;
-    }
-  }
-
-  function pageview(_AV  ,options) {
-    var AV = _AV;
-    var appId, appKey, appClass;
-    appId = options.appId;
-    appKey = options.appKey;
-    appClass = options.appClass;
-    AV.init({
-      appId: appId,
-      appKey: appKey
-    });
-    return {
-      get: get,
-      increase: increase
-    };
-
-    function searchKey(key) {
-      var query = new AV.Query(appClass);
-      query.equalTo('key', key);
-      return query.first();
-    }
-
-    function insert(key, title) {
-      var Blog = AV.Object.extend(appClass);
-      var blog = new Blog();
-      blog.set('title', title);
-      blog.set('key', key);
-      blog.set('views', 0);
-      return blog.save();
-    }
-
-    function increment(result) {
-      result.increment('views', 1);
-      return result.save(null, {
-        fetchWhenSave: true
-      });
-    }
-
-    function get(key, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          callback && callback(result.attributes.views);
-        }
-      }, errorHandler);
-    }
-
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-    }
-  }
-  window.pageview = pageview;
-})();</script>
-  <script>
-    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
-      var pageview = window.pageview(AV, {
-        appId:    'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
-        appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
-        appClass: 'TeXtDemo'
-      });
-      var key =   '20160606';
-      var title = window.decodeUrl('Jekyll+-+Lists');
-      pageview.increase(key, title, function(view) {
-        $("[data-page-key='20160606']").text(view);
-      });
-    });
-  </script><script>
+</script><script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

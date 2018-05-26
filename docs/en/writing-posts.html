@@ -1,9 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Jekyll - Lists - TeXt Theme</title>
-<meta name="description" content="Unordered list  Aenean  vel          libero      eget        ante">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2016/06/06/lists.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Writing Posts - TeXt Theme</title>
+<meta name="description" content="TeXt Theme Demo
+">
+<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/jekyll-TeXt-theme/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/jekyll-TeXt-theme/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/jekyll-TeXt-theme/assets/images/logo/icon-192x192.png">
@@ -241,7 +242,14 @@
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script></head>
-  <body><div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
+  <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__actions">
+    <div class="button button--secondary button--circle box-shadow-2 js-sidebar-button">
+      <i class="fas fa-bars icon--show"></i>
+      <i class="fas fa-times icon--hide"></i>
+    </div>
+  </div>
+  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li></ul></div></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -266,64 +274,138 @@
           <div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title "><h1>Jekyll - Lists</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__left-col menu"><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/all.html?tag=Jekyll">Jekyll</a>
-          </li><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/all.html?tag=English">English</a>
-          </li></ul><ul class="article-info__right-col menu"><li class="pageview">
-            <span class="js-pageview" data-page-key="20160606">0</span> views
-          </li><li class="publish-date"><time datetime="2016-06-06T00:00:00+08:00"
-            itemprop="datePublished">Jun 06, 2016
+            <article><div class="main__title "><h1>Writing Posts</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime=""
+            itemprop="datePublished">
           </time></li>
     </ul>
 </div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><h2 id="unordered-list">Unordered list</h2>
-
-<ul>
-  <li>Aenean</li>
-  <li>vel
-    <ul>
-      <li>libero</li>
-      <li>eget</li>
-    </ul>
-  </li>
-  <li>ante</li>
-</ul>
+  <div class="article-content" itemprop="articleBody"><p>As explained on the <a href="https://jekyllrb.com/docs/structure/">directory structure</a> page, the _posts folder is where your blog posts will live. These files are generally Markdown or HTML. All posts must have YAML Front Matter, and they will be converted from their source format into an HTML page that is part of your static site.</p>
 
 <!--more-->
 
-<p><strong>markdown:</strong></p>
+<h2 id="creating-post-files">Creating Post Files</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Aenean
-* vel
-    * libero
-    * eget
-* ante
+<p>To create a new post, all you need to do is create a file in the <code class="highlighter-rouge">_posts</code> directory. Jekyll requires blog post files to be named like these:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2011-12-31-new-years-eve-is-awesome.md
+2012-09-12-how-to-write-a-blog.markdown
 </code></pre></div></div>
 
-<h2 id="ordered-list">Ordered list</h2>
+<h2 id="content">Content</h2>
 
-<ol>
-  <li>Aenean</li>
-  <li>vel</li>
-  <li>libero</li>
-  <li>eget</li>
-  <li>ante</li>
-</ol>
+<p>All blog post files must begin with YAML Front Matter.</p>
 
-<p><strong>markdown:</strong></p>
+<p>To improve the user experience for both reading and writing posts, TeXt made some enhancements for markdown and some additional styles.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Aenean
-2. vel
-3. libero
-4. eget
-5. ante
+<h3 id="yaml-front-matter">YAML Front Matter</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: article
+title: Document - Writing Posts
+mathjax: true
+---
 </code></pre></div></div>
+
+<p>Between these triple-dashed lines you can set variables. you can consider it as page configuration, these would overrides the global configuration in <code class="highlighter-rouge">_config.yml</code>.</p>
+
+<p>Beside Jekyll’s predefined variables, TeXt define some new variables:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Option Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>key</strong></td>
+      <td>-</td>
+      <td>Unique key for the post, required by Comment and Pageviews. begin with a letter (<code class="highlighter-rouge">[A-Za-z]</code>) and may be followed by any number of letters, digits (<code class="highlighter-rouge">[0-9]</code>), hyphens (<code class="highlighter-rouge">-</code>), underscores (<code class="highlighter-rouge">_</code>), colons (<code class="highlighter-rouge">:</code>), and periods (<code class="highlighter-rouge">.</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>modify_date</strong></td>
+      <td>-</td>
+      <td>The last modified date of this post, the date is modified in the format <code class="highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code>; hours, minutes, seconds, and timezone offset are optional. just like <code class="highlighter-rouge">date</code> variable</td>
+    </tr>
+    <tr>
+      <td><strong>comment</strong></td>
+      <td>true(default), false</td>
+      <td>Set as <code class="highlighter-rouge">false</code> to disable comment on the post</td>
+    </tr>
+    <tr>
+      <td><strong>mathjax</strong></td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Mathjax on the post</td>
+    </tr>
+    <tr>
+      <td><strong>mathjax_autoNumber</strong></td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Mathjax autoNumber on the post</td>
+    </tr>
+    <tr>
+      <td><strong>mermaid</strong></td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Mermaid on the post</td>
+    </tr>
+    <tr>
+      <td><strong>chart</strong></td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to enable Chart on the post</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="markdown-enhancements">Markdown Enhancements</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Enhancemen Name</th>
+      <th>Description</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Mathjax</strong></td>
+      <td>Make it easy to add mathematics in articles, using MathML, LaTeX and ASCIIMathML markup</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">EXAMPLES</a></td>
+    </tr>
+    <tr>
+      <td><strong>Mermaid</strong></td>
+      <td>Bring diagrams and flowcharts in articles</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html">EXAMPLES</a></td>
+    </tr>
+    <tr>
+      <td><strong>Chart</strong></td>
+      <td>Bring charts in articles</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/05/05/chart.html">EXAMPLES</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As mentioned above, you need set the variable true in the <code class="highlighter-rouge">_config.yml</code> or in the YAML Front Matter to enable markdown enhancement.</p>
+
+<h3 id="additional-styles">Additional styles</h3>
+
+<p>Jekyll use kramdown as the default markdown processor. kramdown can adding attributes to block and span-level elements throw ALDs<sup id="fnref:ALDs"><a href="#fn:ALDs" class="footnote">1</a></sup> feature. with the help of ALDs, we can defined class names to an element by <code class="highlighter-rouge">{:.class-name1 .class-name-2}</code>.</p>
+
+<p>TeXt offer some class names that you can use in the post, refer to <a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">HERE</a> for details.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:ALDs">
+      <p><a href="https://kramdown.gettalong.org/syntax.html#attribute-list-definitions">Attribute List Definitions</a> <a href="#fnref:ALDs" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 </div>
 
-  <footer class="article-footer"><meta itemprop="dateModified" content="2016-06-06T00:00:00+08:00"></footer><div class="article-previous-next clearfix"><div class="article-previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/test/2016/06/10/tables.html">Jekyll - Tables</a></div><div class="article-next"><span>NEXT</span><a href="/jekyll-TeXt-theme/test/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div></div></div>
+  <footer class="article-footer"><meta itemprop="dateModified" content=""></footer></div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -357,7 +439,7 @@
 				repo: 'gitalk-demo',
 				owner: 'kitian616',
 				admin: ['kitian616'],
-				id: '20160606'
+				id: '20180410'
 			});
 			gitalk.render('js-gitalk-container');
 		});
@@ -667,6 +749,15 @@
 })();</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $sidebarButton = $('.js-sidebar-button');
+    $sidebarButton.on('click', function() {
+      $pageRoot.toggleClass('show-sidebar');
+    });
+  });
+})();</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window), $pageFooter = $('.js-page-footer');
     var $pageAside = $('.js-page-aside');
     var affix;
@@ -747,91 +838,7 @@
     mermaid.init(undefined, '.language-mermaid');
     mermaid.initialize({ startOnLoad: true });
   });
-</script><script>(function() {
-  function errorHandler(error, callback) {
-    if (error) {
-      callback && callback(error);
-      throw error;
-    }
-  }
-
-  function pageview(_AV  ,options) {
-    var AV = _AV;
-    var appId, appKey, appClass;
-    appId = options.appId;
-    appKey = options.appKey;
-    appClass = options.appClass;
-    AV.init({
-      appId: appId,
-      appKey: appKey
-    });
-    return {
-      get: get,
-      increase: increase
-    };
-
-    function searchKey(key) {
-      var query = new AV.Query(appClass);
-      query.equalTo('key', key);
-      return query.first();
-    }
-
-    function insert(key, title) {
-      var Blog = AV.Object.extend(appClass);
-      var blog = new Blog();
-      blog.set('title', title);
-      blog.set('key', key);
-      blog.set('views', 0);
-      return blog.save();
-    }
-
-    function increment(result) {
-      result.increment('views', 1);
-      return result.save(null, {
-        fetchWhenSave: true
-      });
-    }
-
-    function get(key, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          callback && callback(result.attributes.views);
-        }
-      }, errorHandler);
-    }
-
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-    }
-  }
-  window.pageview = pageview;
-})();</script>
-  <script>
-    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
-      var pageview = window.pageview(AV, {
-        appId:    'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
-        appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
-        appClass: 'TeXtDemo'
-      });
-      var key =   '20160606';
-      var title = window.decodeUrl('Jekyll+-+Lists');
-      pageview.increase(key, title, function(view) {
-        $("[data-page-key='20160606']").text(view);
-      });
-    });
-  </script><script>
+</script><script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
