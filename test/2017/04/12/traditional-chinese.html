@@ -266,17 +266,16 @@
           <div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title "><h1>TeXt - Traditional Chinese | 繁體中文</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__left-col menu"><li>
+            <article><div class="main__title"><h1>TeXt - Traditional Chinese | 繁體中文</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__left-col menu"><li>
             <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
           </li><li>
             <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=Traditional+Chinese+%7C+%E7%B9%81">Traditional Chinese | 繁</a>
           </li></ul><ul class="article-info__right-col menu"><li class="pageview">
-            <span class="js-pageview" data-page-key="20170412">0</span> 閱讀
-          </li><li class="publish-date"><time datetime="2017-04-12T00:00:00+08:00"
-            itemprop="datePublished">2017年 04月12日
-          </time></li>
-    </ul>
-</div>
+              <span class="js-pageview" data-page-key="20170412">0</span> 閱讀
+            </li><li class="publish-date"><time datetime="2017-04-12T00:00:00+08:00"
+              itemprop="datePublished">2017年 04月12日
+            </time></li>
+      </ul></div>
 <div class="js-article-content"><div class="layout--article">
 
   <div class="article-content" itemprop="articleBody"><p>在 _config.yml 或者頭信息裏設置 <code class="highlighter-rouge">lang: zh-Hant</code> 後，主題文字變為繁體中文。</p>
@@ -316,11 +315,11 @@ lang: zh-Hant
       var scroll = hasSidebar ? '.js-page-main' : 'html, body';
       $scroll = $(scroll);
 
-      $articleContent.children('.highlight').each(function() {
+      $articleContent.find('.highlight').each(function() {
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.children('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });

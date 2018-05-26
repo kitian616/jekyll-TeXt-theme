@@ -244,7 +244,7 @@
 </script></head>
   <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
   <div class="page__actions">
-    <div class="button button--secondary button--circle box-shadow-2 js-sidebar-button">
+    <div class="button button--secondary button--circle  button--lg box-shadow-2 js-sidebar-button">
       <i class="fas fa-bars icon--show"></i>
       <i class="fas fa-times icon--hide"></i>
     </div>
@@ -262,7 +262,7 @@
 </svg><a title="TeXt Theme Demo
 " href="/jekyll-TeXt-theme/">TeXt Theme</a></div>
     <nav>
-      <ul><li><a href="https://github.com/kitian616/jekyll-TeXt-theme/">主页</a></li><li><a href="/jekyll-TeXt-theme/archive.html">归档</a></li><li><a href="/jekyll-TeXt-theme/docs/en/quick-start">Documentation</a></li><li><a href="/jekyll-TeXt-theme/docs/zh/quick-start">文档</a></li><li><a href="/jekyll-TeXt-theme/about.html">关于</a></li></ul>
+      <ul><li><a href="https://github.com/kitian616/jekyll-TeXt-theme/">主页</a></li><li><a href="/jekyll-TeXt-theme/archive.html">归档</a></li><li><a href="/jekyll-TeXt-theme/docs/en/quick-start">Documentation</a></li><li class="active"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">文档</a></li><li><a href="/jekyll-TeXt-theme/about.html">关于</a></li></ul>
     </nav>
   </div>
 </header>
@@ -274,11 +274,7 @@
           <div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title "><h1>快速开始</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime=""
-            itemprop="datePublished">
-          </time></li>
-    </ul>
-</div>
+            <article><div class="main__title"><h1>快速开始</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta></div>
 <div class="js-article-content"><div class="layout--article">
 
   <div class="article-content" itemprop="articleBody"><p>TeXt 是一款 100% 兼容 GitHub Pages 的 Jekyll 主题，你可以通过 Fork、下载或主题等方式安装。</p>
@@ -372,11 +368,11 @@ git clone git@github.com:kitian616/jekyll-TeXt-theme.git
       var scroll = hasSidebar ? '.js-page-main' : 'html, body';
       $scroll = $(scroll);
 
-      $articleContent.children('.highlight').each(function() {
+      $articleContent.find('.highlight').each(function() {
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.children('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });

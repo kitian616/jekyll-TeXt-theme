@@ -244,7 +244,7 @@
 </script></head>
   <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
   <div class="page__actions">
-    <div class="button button--secondary button--circle box-shadow-2 js-sidebar-button">
+    <div class="button button--secondary button--circle  button--lg box-shadow-2 js-sidebar-button">
       <i class="fas fa-bars icon--show"></i>
       <i class="fas fa-times icon--hide"></i>
     </div>
@@ -274,11 +274,7 @@
           <div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title "><h1>Writing Posts</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta><ul class="article-info__right-col menu"><li class="publish-date"><time datetime=""
-            itemprop="datePublished">
-          </time></li>
-    </ul>
-</div>
+            <article><div class="main__title"><h1>Writing Posts</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Someone"/></meta></div>
 <div class="js-article-content"><div class="layout--article">
 
   <div class="article-content" itemprop="articleBody"><p>As explained on the <a href="https://jekyllrb.com/docs/structure/">directory structure</a> page, the _posts folder is where your blog posts will live. These files are generally Markdown or HTML. All posts must have YAML Front Matter, and they will be converted from their source format into an HTML page that is part of your static site.</p>
@@ -417,11 +413,11 @@ mathjax: true
       var scroll = hasSidebar ? '.js-page-main' : 'html, body';
       $scroll = $(scroll);
 
-      $articleContent.children('.highlight').each(function() {
+      $articleContent.find('.highlight').each(function() {
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.children('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
