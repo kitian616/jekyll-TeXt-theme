@@ -24,7 +24,7 @@
         {%- if site.paths.all -%}
           {%- assign all_path = site.paths.all -%}
         {%- else -%}
-          {%- assign all_path = '/all.html' -%}
+          {%- assign all_path = site.data.variables.default.paths.all -%}
         {%- endif -%}
         {%- for tag in cur_page.tags -%}
           {%- assign _tag = tag | strip | url_encode } -%}
