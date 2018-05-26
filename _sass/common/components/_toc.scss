@@ -6,7 +6,7 @@ ul.toc {
     padding: .2rem 0;
     &.active {
       &, a {
-        color: $main-color-1;
+        color: $main-color-1 !important;
       }
     }
   }

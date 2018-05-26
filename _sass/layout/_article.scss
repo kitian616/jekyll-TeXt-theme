@@ -1,20 +1,5 @@
-.layout--post {
-  .col-2 {
-    display: none;
-    float: right;
-    &>aside {
-      box-sizing: border-box;
-      width: map-get($layout, aside-width);
-      position: absolute;
-      padding: 1.5rem;
-      padding-right: 0;
-      overflow: hidden;
-    }
-    @include media-breakpoint-down(lg) {
-      float: none;
-    }
-  }
-  footer {
+.layout--article {
+  .article-footer {
     &>span {
       color: $text-color-l;
     }
@@ -24,6 +9,7 @@
       margin: .8rem 0;
     }
   }
+
   .article-previous-next {
     word-wrap: break-word;
     margin: map-get($base, vertical-space-lg) * 2 0 map-get($base, vertical-space-lg) 0;
@@ -49,32 +35,6 @@
       float: right;
       padding-left: .5rem;
       text-align: right;
-    }
-  }
-}
-
-.has-toc {
-  .layout--post {
-    .col-1 {
-      margin-right: map-get($layout, aside-width);
-      @include media-breakpoint-down(lg) {
-        margin-right: 0;
-      }
-    }
-    .col-2 {
-      width: map-get($layout, aside-width);
-      position: relative;
-      display: block;
-      & > aside {
-        &.fixed {
-          position: fixed;
-          z-index: 2;
-          -webkit-font-smoothing: subpixel-antialiased;
-        }
-      }
-      @include media-breakpoint-down(lg) {
-        display: none;
-      }
     }
   }
 }

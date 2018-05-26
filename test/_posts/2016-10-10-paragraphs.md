@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Jekyll - Paragraphs
 key: 20161010
 tags: Jekyll English

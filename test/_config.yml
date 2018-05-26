@@ -34,7 +34,7 @@ nav_lists:
 # paths:
 #   base: /
 #   home: /
-#   all:  /all.html
+#   all:  /archive.html
 #   rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
@@ -100,6 +100,7 @@ excerpt_type: text # text | html
 ## Sources ##
 # sources: bootcdn #eg: bootcdn | unpkg
 
+
 ## Build ##
 markdown: kramdown
 highlighter: rouge
@@ -122,6 +123,16 @@ exclude:
   - /screenshots
   - /test
   - /vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      aside:
+        toc: true
+      pageview: true
+
 
 ## Plugins ##
 plugins:

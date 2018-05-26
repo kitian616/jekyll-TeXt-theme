@@ -1,18 +1,97 @@
 ---
-layout: base-single
+layout: base
 ---
-<div class="layout--page">
-  <article class="main">
-    {%- include snippets/page-title.html -%}
-    <div class="main__header"><h1>{{ __return }}</h1></div>
-    <div class="article-content" itemprop="articleBody">{{ content }}</div>
-    {%- if jekyll.environment != "development" and page.comment != false -%}
-      <section>{%- include comment.html -%}</section>
-    {%- endif -%}
-  </article>
+
+{%- if page.sidebar -%}
+<div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__actions">
+    <div class="button button--secondary button--circle box-shadow-2 js-sidebar-button">
+      <i class="fas fa-bars icon--show"></i>
+      <i class="fas fa-times icon--hide"></i>
+    </div>
+  </div>
+  <div class="page__sidebar">
+    {%- include sidebar/toc.html -%}
+  </div>
+
+
+{%- else -%}
+<div class="layout--page clearfix">
+{%- endif -%}
+
+  {%- if page.aside -%}
+    <div class="page__main js-page-main has-aside">
+  {%- else -%}
+    <div class="page__main js-page-main">
+  {%- endif -%}
+    <div class="page__main-inner">
+      <div class="page__header">{%- include header.html -%}</div>
+
+      <div class="page__content">
+        <div class ="main">
+
+          <div class="col-2 js-col-2">
+            {%- if page.aside -%}
+              <aside class="page__aside js-page-aside">
+                {%- include aside/toc.html -%}
+              </aside>
+            {%- endif -%}
+          </div>
+
+          <div class="col-1">
+            <article>
+              {%- include snippets/page-title.html -%}
+              {%- assign _title = __return -%}
+
+              {%- assign __source = page.show_title -%}
+              {%- assign __target = site.data.variables.default.show_title -%}
+              {%- include snippets/assign.html -%}
+              {%- if __return -%}
+                <div class="main__title "><h1>{{ _title }}</h1></div>
+              {%- endif-%}
+
+              {%- include article-info.html -%}
+              <div class="js-article-content">{{ content }}</div>
+
+              {%- if jekyll.environment != "development" and page.comment != false -%}
+                <section class="page__comment">{%- include comment.html -%}</section>
+              {%- endif -%}
+
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="page__footer">{%- include footer.html -%}</div>
+
+    </div>
+  </div>
 </div>
 
+
 <script>
-  {%- include scripts/page-post-common.js -%}
+  {%- include scripts/lib/scroll.js -%}
+  {%- include scripts/lib/affix.js -%}
+  {%- include scripts/lib/toc.js -%}
   {%- include scripts/page.js -%}
 </script>
+
+{%- if page.sidebar -%}
+<script>
+  {%- include scripts/sidebar.js -%}
+</script>
+{%- endif -%}
+
+{%- if page.aside -%}
+<script>
+  {%- include scripts/aside/affix.js -%}
+  {%- if page.aside.toc -%}
+    {%- include scripts/aside/toc.js -%}
+  {%- endif -%}
+</script>
+{%- endif -%}
+
+
+{%- include markdown-enhancements.html -%}
+{%- include pageview.html -%}
+{%- include analytics.html -%}

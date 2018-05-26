@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: TeXt - Simplified Chinese | 简体中文
 key: 20170413
 tags:
@@ -15,7 +15,7 @@ lang: zh-Hans
 **front matter:**
 
     ---
-    layout: post
+    layout: article
     title: TeXt - Simplified Chinese | 简体中文
     tags:
       - TeXt

@@ -1,10 +1,11 @@
 ---
-layout: page-1
+layout: article
 title: TeXt - Additional Styles
 key: 20170808
 tags:
   - TeXt
   - English
+toc: true
 ---
 ## Alert
 

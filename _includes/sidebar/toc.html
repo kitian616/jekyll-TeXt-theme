@@ -1,0 +1,28 @@
+{%- if page.sidebar.nav -%}
+  <div class="sidebar-toc">
+    {%- assign list = site.data.navigation[page.sidebar.nav] -%}
+    {%- if list -%}
+    <ul class="toc toc--navigator">
+      {%- for item in list -%}
+        <li class="toc-h1">{{ item.title }}</li>
+        {%- assign children = item.children -%}
+        {%- if children -%}
+          {%- for child in children -%}
+            {%- assign __path = child.url -%}
+            {%- include snippets/get-nav-url.html -%}
+            {%- assign _nav_url = __return -%}
+            {%- assign __path = page.url -%}
+            {%- include snippets/get-nav-url.html -%}
+            {%- assign _page_url = __return -%}
+            {%- if _nav_url == _page_url -%}
+              <li class="toc-h2 active"><a href="{{ _nav_url }}">{{ child.title }}</a></li>
+            {%- else -%}
+              <li class="toc-h2"><a href="{{ _nav_url }}">{{ child.title }}</a></li>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+{%- endif -%}

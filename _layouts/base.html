@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 <!DOCTYPE html>
 {%- include snippets/get-lang.html -%}
 <html lang="{{ __return }}">
@@ -11,14 +15,5 @@
     </script>
     {%- include scripts/variables.html -%}
   </head>
-  <body>
-    <div class="layout--base-single page__main js-page-main">
-      {%- include header.html -%}
-      <div class="page__content">{{ content }}</div>
-      <div class="page__footer">{%- include footer.html -%}</div>
-    </div>
-    {%- include markdown-enhancements.html -%}
-    {%- include pageview.html -%}
-    {%- include analytics.html -%}
-  </body>
+  <body>{{ content }}</body>
 </html>

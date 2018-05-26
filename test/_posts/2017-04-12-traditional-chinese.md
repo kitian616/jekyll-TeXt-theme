@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: TeXt - Traditional Chinese | 繁體中文
 key: 20170412
 tags:
@@ -15,7 +15,7 @@ lang: zh-Hant
 **front matter:**
 
     ---
-    layout: post
+    layout: article
     title: TeXt - Traditional Chinese | 繁體中文
     tags:
       - TeXt

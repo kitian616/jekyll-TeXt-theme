@@ -61,6 +61,7 @@
 }
 
 .pagination {
+  margin: map-get($base, vertical-space-lg) 0;
   .pagination__omit {
     color: $text-color-l;
   }

@@ -8,7 +8,7 @@
   @include split-line(top);
   height: map-get($layout, footer-height);
   .follow-me {
-    padding-top: 1.2rem;
+    padding-top: 1rem;
   }
   p {
     color: $text-color-3;
@@ -19,12 +19,12 @@
   .site-info {
     text-align: center;
     font-size: map-get($base, font-size-xs);
-    margin: 1.5rem auto 0 auto;
+    margin: 1rem auto 0 auto;
   }
   .site-info__copyright {
     @include split-line(right, default, $text-color-l);
     padding-right: .3rem;
-    margin-right: .3rem;
+    margin-right: .1rem;
   }
   .site-info__copyright, .site-info__rss {
     line-height: map-get($base, line-height-xs);

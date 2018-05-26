@@ -4,7 +4,7 @@ default:
   paths:
     base: /
     home: /
-    all:  /all.html
+    all:  /archive.html
     rss:  /feed.xml
   mathjax: false
   mathjax_autoNumber: false
@@ -12,6 +12,8 @@ default:
   chart: false
   toc:
     selectors: 'h1,h2,h3'
+  show_title: true
+  pageview: false
   excerpt_type: text
   sources: bootcdn
 

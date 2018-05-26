@@ -1,23 +1,11 @@
 .layout--page {
   height: 100%;
 
-  .page__sidebar {
-    display: block;
-    width: 100%;
-    max-width: map-get($layout, sidebar-width);
-    float: left;
+  .page__main {
     height: 100%;
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
-    background-color: $background-color;
-    z-index: 1;
-    @include split-line(right);
-    @include transition(transform .4s);
   }
-
   &.layout--page--sidebar {
     .page__main {
-      height: 100%;
       -webkit-overflow-scrolling: touch;
       overflow: auto;
     }
@@ -44,7 +32,54 @@
     }
   }
 
-  .has-toc {
+  .page__content {
+    margin: 0 auto;
+    padding-bottom: map-get($layout, footer-height);
+  }
+
+  .page__comment {
+    padding-bottom: map-get($base, vertical-space-lg);
+  }
+
+  .page__actions {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    display: none;
+    z-index: 999;
+  }
+
+  .page__sidebar {
+    display: block;
+    width: 100%;
+    max-width: map-get($layout, sidebar-width);
+    float: left;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    background-color: $background-color;
+    z-index: 1;
+    @include split-line(right);
+    @include transition(transform .4s);
+    .sidebar-toc {
+      padding: 1rem 1rem 2rem 2rem;
+    }
+  }
+
+  .page__aside {
+    .toc-aside {
+      padding: 1rem 0 1rem 3rem;
+    }
+
+  }
+
+  .page__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .has-aside {
     .page__main-inner{
       .col-1 {
         margin-right: map-get($layout, aside-width);
@@ -68,25 +103,6 @@
         }
       }
     }
-  }
-
-  .page__content {
-    margin: 0 auto;
-    padding-bottom: map-get($layout, footer-height);
-  }
-
-  .page__footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .page__actions {
-    position: absolute;
-    left: 1rem;
-    bottom: 1rem;
-    display: none;
-    z-index: 999;
   }
 
   @include media-breakpoint-down(lg) {

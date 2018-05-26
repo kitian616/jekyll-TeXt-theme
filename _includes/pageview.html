@@ -1,14 +1,23 @@
-{%- if page.layout == "home" -%}
+{%- assign __source = page.pageview -%}
+{%- assign __target = site.data.variables.default.pageview -%}
+{%- include snippets/assign.html -%}
+{%- assign _pageview = __return -%}
+
+
+{%- if page.layout == "post-list" -%}
+
   {%- if jekyll.environment != "development" -%}
-
-    {%- include pageview-providers/leancloud/home.html -%}
-
+    {%- include pageview-providers/leancloud/post-list.html -%}
   {%- endif -%}
-{%- elsif page.layout == "post" -%}
-  {%- if jekyll.environment != "development" and
-    jekyll.environment != "beta" -%}
 
-    {%- include pageview-providers/leancloud/post.html -%}
+
+{%- elsif page.layout == "article" -%}
+  {%- if _pageview -%}
+
+    {%- if jekyll.environment != "development" and
+      jekyll.environment != "beta" -%}
+      {%- include pageview-providers/leancloud/post.html -%}
+    {%- endif -%}
 
   {%- endif -%}
 {%- endif -%}

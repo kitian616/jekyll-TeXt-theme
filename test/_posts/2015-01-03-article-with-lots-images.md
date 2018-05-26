@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Test - Article with Lots of Images
 key: 20150103
 tags: Test English

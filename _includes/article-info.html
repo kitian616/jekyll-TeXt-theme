@@ -4,6 +4,11 @@
   {%- assign cur_page = page -%}
 {%- endif -%}
 
+{%- assign __source = page.pageview -%}
+{%- assign __target = site.data.variables.default.pageview -%}
+{%- include snippets/assign.html -%}
+{%- assign _pageview = __return -%}
+
 <div class="article-info clearfix">
 	{%- if page -%}
     <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -32,12 +37,14 @@
       </ul>
     {%- endif -%}
     <ul class="article-info__right-col menu">
-      {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
-        {%- assign __locale = site.data.locale.VIEWS } -%}
-        {%- include snippets/locale-to-string.html -%}
-        <li class="pageview">
-          <span class="js-pageview" data-page-key="{{ cur_page.key }}">0</span> {{ __return }}
-        </li>
+      {%- if _pageview or post -%}
+        {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
+          {%- assign __locale = site.data.locale.VIEWS } -%}
+          {%- include snippets/locale-to-string.html -%}
+          <li class="pageview">
+            <span class="js-pageview" data-page-key="{{ cur_page.key }}">0</span> {{ __return }}
+          </li>
+        {%- endif -%}
       {%- endif -%}
       <li class="publish-date">
         {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}

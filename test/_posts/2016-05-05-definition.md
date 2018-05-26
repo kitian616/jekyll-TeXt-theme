@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Jekyll - Definition
 key: 20160505
 tags:

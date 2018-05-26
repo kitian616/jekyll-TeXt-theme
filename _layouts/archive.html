@@ -1,0 +1,22 @@
+---
+layout: page
+titles:
+  en: All Posts
+  zh: 归档
+  zh-Hans: 归档
+  zh-Hant: 歸檔
+show_title: false
+---
+<div class="layout--all js-all">
+  <div class="search-box js-search-box">
+    <div class="icon-search">{%- include svg/icon/search.svg -%}</div>
+    <input type="text" />
+    <div class="button icon-clear">{%- include svg/icon/clear.svg -%}</div>
+  </div>
+  {%- include tags.html -%}
+  <div class="js-result layout--all__result"></div>
+</div>
+
+<script>
+  {%- include scripts/all.js -%}
+</script>

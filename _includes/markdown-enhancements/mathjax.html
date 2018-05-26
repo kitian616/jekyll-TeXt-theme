@@ -1,7 +1,11 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 
-{%- assign __target = site.mathjax_autoNumber | default: site.data.variables.default.mathjax_autoNumber -%}
+{%- assign __target = site.data.variables.default.mathjax_autoNumber -%}
+{%- assign __source = site.mathjax_autoNumber -%}
+{%- include snippets/assign.html -%}
+
+{%- assign __target = __return -%}
 {%- assign __source = page.mathjax_autoNumber -%}
 {%- include snippets/assign.html -%}
 

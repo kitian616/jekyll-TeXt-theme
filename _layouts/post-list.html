@@ -1,0 +1,135 @@
+---
+layout: page
+titles:
+  en: Blog
+  zh: 博客
+  zh-Hans: 博客
+  zh-Hant: 博客
+show_title: false
+---
+<div class="layout--home">
+  <div class="post-list">
+    {%- for post in paginator.posts -%}
+      <article>
+        {%- assign __path = post.url -%}
+        {%- include snippets/prepend-baseurl.html -%}
+        {%- assign href = __return -%}
+        <h1><a href="{{ href }}">{{ post.title }}</a></h1>
+        <div class="article-content">
+          {%- assign _excerpt_type = site.excerpt_type | default: site.data.variables.default.excerpt_type  -%}
+          {%- if _excerpt_type == 'html' -%}
+            {{ post.excerpt }}
+          {%- else -%}
+            {{ post.excerpt | strip_html | truncate: 350 }}
+          {%- endif -%}
+        </div>
+        {%- assign __path = post.url -%}
+        {%- include snippets/prepend-baseurl.html -%}
+        {%- assign __locale = site.data.locale.READMORE -%}
+        {%- include snippets/locale-to-string.html -%}
+        <a href="{{ href }}">{{ __return }}</a>
+        {%- include article-info.html -%}
+      </article>
+    {%- endfor -%}
+  </div>
+  {%- if paginator.total_pages > 1 -%}
+      <nav class="pagination">
+        {%- assign __locale = site.data.locale.STATISTICS -%}
+        {%- include snippets/locale-to-string.html -%}
+        {%- assign post_count = site.posts | size -%}
+        {%- assign page_count = paginator.total_pages -%}
+        <p>{{ __return | replace: '[POST_COUNT]', post_count | replace: '[PAGE_COUNT]', page_count }}</p>
+        <ul class="menu menu--nowrap">
+          {%- assign _max_show = 5 -%}
+          {%- assign _max_show_modulo_two = _max_show | modulo: 2 -%}
+          {%- assign _length = paginator.total_pages -%}
+          {%- assign _length_mimus_one = _length | minus: 1 -%}
+          {%- assign _cur = paginator.page -%}
+          {%- assign _extra = _max_show | minus: 3 -%}
+          {%- assign _extra_half = _extra | divided_by: 2 -%}
+          {%- if  _max_show > 4 and _max_show_modulo_two == 1 and paginator.total_pages > _max_show -%}
+            {%- assign _condition0 = _extra | divided_by: 2 | plus: 1 -%}
+            {%- assign _condition1 = _length | minus: _extra_half  -%}
+            {%- if _cur <= _condition0 -%}
+              {%- assign _n0 = 2 -%}
+              {%- assign _n1 = _extra | plus: 2 -%}
+            {%- elsif _cur >= _condition1 -%}
+              {%- assign _n0 = _length | minus: _extra | minus: 1 -%}
+              {%- assign _n1 = _length | minus: 1 -%}
+            {%- else -%}
+              {%- assign _n0 = _cur | minus: _extra_half -%}
+              {%- assign _n1 = _cur | plus: _extra_half -%}
+            {%- endif -%}
+          {%- endif -%}
+          {%- if paginator.previous_page -%}
+            {%- assign __path = paginator.previous_page_path -%}
+            {%- include snippets/prepend-baseurl.html -%}
+            {%- assign href = __return -%}
+            <li><a class="button button--secondary button--circle" href="{{ href }}">
+              <i class="fas fa-angle-left"></i>
+            </a></li>
+          {%- else -%}
+            <li><div class="button button--secondary button--circle disabled">
+              <i class="fas fa-angle-left"></i>
+            </div></li>
+          {%- endif -%}
+
+          {%- for page in (1.._length) -%}
+            {%- if page == _cur -%}
+              <li>
+                <div class="button button--primary button--circle"><span>{{ page }}</span></div>
+              </li>
+            {%- elsif page == 1 -%}
+              {%- assign __path = site.data.variables.default.paths.base -%}
+              {%- if site.paths.base -%}
+                {%- assign __path = site.paths.base -%}
+              {%- endif -%}
+              {%- include snippets/prepend-baseurl.html -%}
+              {%- assign href = __return -%}
+              <li>
+                <a class="button button--secondary button--circle" href="{{ href }}"><span>{{ page }}</span></a>
+              </li>
+            {%- else -%}
+              {%- if _n0 and _n1 -%}
+                {%- if page > 1 and page < _n0 -%}
+                  {%- if page == 2 -%}<li><span class="pagination__omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
+                {%- elsif page > _n1 and page < _length -%}
+                  {%- if page == _length_mimus_one -%}<li><span class="omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
+                {%- else -%}
+                  {%- assign __path = site.paginate_path -%}
+                  {%- include snippets/prepend-baseurl.html -%}
+                  {%- assign href = __return -%}
+                  <li>
+                    <a class="button button--secondary button--circle" href="{{ href | replace: ':num', page }}"><span>{{ page }}</span></a>
+                  </li>
+                {%- endif -%}
+              {%- else -%}
+                {%- assign __path = site.paginate_path -%}
+                {%- include snippets/prepend-baseurl.html -%}
+                {%- assign href = __return -%}
+                <li>
+                  <a class="button button--secondary button--circle" href="{{ href | replace: ':num', page }}"><span>{{ page }}</span></a>
+                </li>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if paginator.next_page -%}
+            {%- assign __path = paginator.next_page_path -%}
+            {%- include snippets/prepend-baseurl.html -%}
+            {%- assign href = __return -%}
+            <li><a class="button button--secondary button--circle" href="{{ href }}">
+              <i class="fas fa-angle-right"></i>
+            </a></li>
+          {%- else -%}
+            <li><div class="button button--secondary button--circle disabled">
+              <i class="fas fa-angle-right"></i>
+            </div></li>
+          {%- endif -%}
+        </ul>
+      </nav>
+  {%- endif -%}
+</div>
+
+<script>
+  {%- include scripts/post-list.js -%}
+</script>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Jekyll - Horizontal Rules
 key: 20160502
 tags: Jekyll English

@@ -55,7 +55,7 @@ repository_tree: master
 paths:
   base: /
   home: /
-  all:  /all.html
+  all:  /archive.html
   rss:  /feed.xml
 
 nav_lists:
@@ -133,6 +133,7 @@ leancloud:
 ga_tracking_id: # Google Analytics id for the site
 ga_anonymize_ip: false # Anonymize IP tracking for Analytics
 
+
 ## => Build
 ##############################
 markdown: kramdown
@@ -156,6 +157,15 @@ exclude:
   - /screenshots
   - /test
   - /vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      aside:
+        toc: true
+      pageview: true
 
 
 ## => Plugins
