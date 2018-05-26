@@ -5,7 +5,7 @@ layout: base
 {%- if page.sidebar -%}
 <div class="layout--page layout--page--sidebar clearfix js-page-root">
   <div class="page__actions">
-    <div class="button button--secondary button--circle box-shadow-2 js-sidebar-button">
+    <div class="button button--secondary button--circle  button--lg box-shadow-2 js-sidebar-button">
       <i class="fas fa-bars icon--show"></i>
       <i class="fas fa-times icon--hide"></i>
     </div>
@@ -47,7 +47,7 @@ layout: base
               {%- assign __target = site.data.variables.default.show_title -%}
               {%- include snippets/assign.html -%}
               {%- if __return -%}
-                <div class="main__title "><h1>{{ _title }}</h1></div>
+                <div class="main__title"><h1>{{ _title }}</h1></div>
               {%- endif-%}
 
               {%- include article-info.html -%}

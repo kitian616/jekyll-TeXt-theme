@@ -6,7 +6,7 @@
   @include media-breakpoint-down(lg) {
     padding: 0 1rem;
   }
-  .main__header {
+  .main__title {
     & > h1 {
       font-weight: map-get($base, font-weight-bold);
     }

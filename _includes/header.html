@@ -25,10 +25,17 @@
         {%- for list in site.nav_lists -%}
           {%- assign __path = list.url -%}
           {%- include snippets/get-nav-url.html -%}
-          {%- assign href = __return -%}
+          {%- assign _nav_url = __return -%}
+          {%- assign __path = page.url -%}
+          {%- include snippets/get-nav-url.html -%}
+          {%- assign _page_url = __return -%}
           {%- assign __locale = list.titles -%}
           {%- include snippets/locale-to-string.html -%}
-          <li><a href="{{ href }}">{%- if list.title -%}{{ list.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
+          {%- if _nav_url == _page_url -%}
+            <li class="active"><a href="{{ _nav_url }}">{%- if list.title -%}{{ list.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
+          {%- else -%}
+            <li><a href="{{ _nav_url }}">{%- if list.title -%}{{ list.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
+          {%- endif -%}
         {%- endfor -%}
       </ul>
     </nav>

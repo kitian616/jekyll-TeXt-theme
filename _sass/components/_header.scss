@@ -2,7 +2,11 @@
 
   a {
     font-weight: map-get($base, font-weight);
-    @include link-colors($text-color-3, $main-color-1, $main-color-1);
+    @include link-colors($text-color, $main-color-1, $main-color-1);
+  }
+  .active a {
+    font-weight: map-get($base, font-weight-bold);
+    @include link-colors($text-color-d, $main-color-1, $main-color-1);
   }
   & > .main > .logo {
     float: left;

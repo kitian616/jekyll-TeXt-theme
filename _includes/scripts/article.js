@@ -8,11 +8,11 @@
       var scroll = hasSidebar ? '.js-page-main' : 'html, body';
       $scroll = $(scroll);
 
-      $articleContent.children('.highlight').each(function() {
+      $articleContent.find('.highlight').each(function() {
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.children('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });

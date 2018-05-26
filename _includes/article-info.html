@@ -36,26 +36,29 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
-    <ul class="article-info__right-col menu">
-      {%- if _pageview or post -%}
-        {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
-          {%- assign __locale = site.data.locale.VIEWS } -%}
+
+    {%- if (_pageview or post) and cur_page.date -%}
+      <ul class="article-info__right-col menu">
+        {%- if _pageview or post -%}
+          {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
+            {%- assign __locale = site.data.locale.VIEWS } -%}
+            {%- include snippets/locale-to-string.html -%}
+            <li class="pageview">
+              <span class="js-pageview" data-page-key="{{ cur_page.key }}">0</span> {{ __return }}
+            </li>
+          {%- endif -%}
+        {%- endif -%}
+        <li class="publish-date">
+          {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
           {%- include snippets/locale-to-string.html -%}
-          <li class="pageview">
-            <span class="js-pageview" data-page-key="{{ cur_page.key }}">0</span> {{ __return }}
-          </li>
-        {%- endif -%}
-      {%- endif -%}
-      <li class="publish-date">
-        {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
-        {%- include snippets/locale-to-string.html -%}
-        {%- if post -%}
-          <span>{{ post.date | date: __return }}</span>
-        {%- elsif page -%}
-          <time datetime="{{ page.date | date_to_xmlschema }}"
-            itemprop="datePublished">{{ page.date | date: __return }}
-          </time>
-        {%- endif -%}
-      </li>
-    </ul>
+          {%- if post -%}
+            <span>{{ cur_page.date | date: __return }}</span>
+          {%- elsif page -%}
+            <time datetime="{{ page.date | date_to_xmlschema }}"
+              itemprop="datePublished">{{ cur_page.date | date: __return }}
+            </time>
+          {%- endif -%}
+        </li>
+      </ul>
+    {%- endif -%}
 </div>
