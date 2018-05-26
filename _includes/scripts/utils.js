@@ -10,8 +10,13 @@
     return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
   };
 
+
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
+  };
+
+  window.isOverallScroller = function(node) {
+    return node === document.documentElement || node === document.body;
   };
 
   window.pageLoad = (function () {

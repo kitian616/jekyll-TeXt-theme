@@ -1,0 +1,122 @@
+.layout--page {
+  height: 100%;
+
+  .page__sidebar {
+    display: block;
+    width: 100%;
+    max-width: map-get($layout, sidebar-width);
+    float: left;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    background-color: $background-color;
+    z-index: 1;
+    @include split-line(right);
+    @include transition(transform .4s);
+  }
+
+  &.layout--page--sidebar {
+    .page__main {
+      height: 100%;
+      -webkit-overflow-scrolling: touch;
+      overflow: auto;
+    }
+  }
+
+  .page__main-inner {
+    position: relative;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+
+    .col-2 {
+      display: none;
+      float: right;
+      & > aside {
+        box-sizing: border-box;
+        width: map-get($layout, aside-width);
+        position: absolute;
+        overflow: hidden;
+      }
+      @include media-breakpoint-down(lg) {
+        float: none;
+      }
+    }
+  }
+
+  .has-toc {
+    .page__main-inner{
+      .col-1 {
+        margin-right: map-get($layout, aside-width);
+        @include media-breakpoint-down(lg) {
+          margin-right: 0;
+        }
+      }
+      .col-2 {
+        width: map-get($layout, aside-width);
+        position: relative;
+        display: block;
+        &>aside {
+          &.fixed {
+            position: fixed;
+            z-index: 2;
+            -webkit-font-smoothing: subpixel-antialiased;
+          }
+        }
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .page__content {
+    margin: 0 auto;
+    padding-bottom: map-get($layout, footer-height);
+  }
+
+  .page__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .page__actions {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    display: none;
+    z-index: 999;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .page__sidebar {
+      position: fixed;
+      @include transform(translate(- map-get($layout, sidebar-width), 0));
+    }
+
+    .page__actions {
+      display: block;
+    }
+
+    .icon--show {
+      display: inline;
+    }
+    .icon--hide {
+      display: none;
+    }
+
+    &.show-sidebar {
+      .page__sidebar {
+        @include transform(translate(0));
+      }
+
+      .icon--show {
+        display: none;
+      }
+      .icon--hide {
+        display: inline;
+      }
+    }
+  }
+}

@@ -1,26 +1,33 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $document = $(window.document), $root;
+    var $window = $(window), $root, $scrollTarget, $scroller, $scroll;
     var rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop, lastScrollTop;
-    var offsetBottom = 0, disabled = false, hasInit = false;
+    var offsetBottom = 0, disabled = false, scrollTarget = window, scroller = 'html, body', scroll = window.document;
+    var hasInit = false, isOverallScroller = true;
 
     function setOptions(options) {
       var _options = options || {};
       _options.offsetBottom && (offsetBottom = _options.offsetBottom);
+      _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+      _options.scroller && (scroller = _options.scroller);
+      _options.scroll && (scroll = _options.scroll);
       _options.disabled !== undefined && (disabled = _options.disabled);
+      $scrollTarget = $(scrollTarget);
+      $scroller = $(scroller);
+      isOverallScroller = window.isOverallScroller($scroller[0]);
+      $scroll = $(scroll);
       calc(true);
     }
     function initData() {
       top();
-      var rootOffset = $root.offset();
       rootHeight = $root.outerHeight();
-      rootTop = rootOffset.top;
-      rootLeft = rootOffset.left;
+      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scroller.scrollTop());
+      rootLeft = $root.offset().left;
     }
     function calc(needInitData) {
       needInitData && initData();
-      scrollBottom = $document.outerHeight() - offsetBottom - rootHeight;
+      scrollBottom = $scroll.outerHeight() - offsetBottom - rootHeight;
       rootBottomTop = scrollBottom - rootTop;
     }
     function top() {
@@ -43,7 +50,7 @@
     }
     function setState(force) {
       force !== true && (force = false);
-      var scrollTop = $window.scrollTop();
+      var scrollTop = $scrollTarget.scrollTop();
       if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
         (!force && lastScrollTop >= rootTop && lastScrollTop <= scrollBottom) || fixed();
       } else if (scrollTop < rootTop) {
@@ -68,7 +75,7 @@
           clearInterval(interval);
           clearTimeout(timeout);
         });
-        $window.on('scroll', function() {
+        $scrollTarget.on('scroll', function() {
           disabled || setState();
         });
         $window.on('resize', window.throttle(function() {

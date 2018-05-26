@@ -1,25 +1,29 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $root, $tocUl = $('<ul class="toc"></ul>'), $tocLi, $headings, $activeLast, $activeCur;
-    var selectors = 'h1,h2,h3', container = 'body', disabled = false;
+    var $window = $(window), $root, $scrollTarget, $scroller, $tocUl = $('<ul class="toc"></ul>'), $tocLi, $headings, $activeLast, $activeCur;
+    var selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false;
     var headingsPos, scrolling = false, rendered = false, hasInit = false;
     function setOptions(options) {
       var _options = options || {};
       _options.selectors && (selectors = _options.selectors);
       _options.container && (container = _options.container);
+      _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+      _options.scroller && (scroller = _options.scroller);
       _options.disabled !== undefined && (disabled = _options.disabled);
       $headings = $(container).find(selectors);
+      $scrollTarget = $(scrollTarget);
+      $scroller = $(scroller);
       calc();
     }
     function calc() {
       headingsPos = [];
       $headings.each(function() {
-        headingsPos.push(Math.floor($(this).offset().top));
+        headingsPos.push(Math.floor($(this).position().top));
       });
     }
     function setState(element, disabled) {
-      var scrollTop = $window.scrollTop(), i;
+      var scrollTop = $scroller.scrollTop(), i;
       if (disabled || !headingsPos || headingsPos.length < 1) { return; }
       if (element) {
         $activeCur = element;
@@ -50,7 +54,7 @@
           var $this = $(this);
           scrolling = true;
           setState($this.parent());
-          window.scrollTopAnchor($this.attr('href'), function() {
+          $scroller.scrollToAnchor($this.attr('href'), 400, function() {
             scrolling = false;
           });
         });
@@ -72,7 +76,7 @@
           clearInterval(interval);
           clearTimeout(timeout);
         });
-        $window.on('scroll', function() {
+        $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);
         });
         $window.on('resize', window.throttle(function() {

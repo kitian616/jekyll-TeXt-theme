@@ -65,7 +65,7 @@
       width: map-get($layout, aside-width);
       position: relative;
       display: block;
-      &>aside {
+      & > aside {
         &.fixed {
           position: fixed;
           z-index: 2;

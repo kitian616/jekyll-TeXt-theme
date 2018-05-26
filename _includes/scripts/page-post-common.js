@@ -1,18 +1,10 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
-  function scrollAnimateTo(destination, duration, callback) {
-    var $body = $('html, body'), bodyScrollTop = $body.scrollTop();
-    if(bodyScrollTop === destination) { return; }
-    $body.animate({ scrollTop: destination }, duration, callback);
-  }
-  window.scrollTopAnchor = function(anchor, callback) {
-    scrollAnimateTo($(anchor).offset().top, 400, function() {
-      window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
-      callback && callback();
-    });
-  };
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $articleContent = $('.article-content'), $this;
+    var $this, $articleContent = $('.article-content'), $scroll;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+    $scroll = $(scroll);
     $articleContent.children('.highlight').each(function() {
       $this = $(this);
       $this.attr('data-lang', $this.find('code').attr('data-lang'));
@@ -23,7 +15,7 @@
       $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
     });
     $articleContent.on('click', '.anchor', function() {
-      window.scrollTopAnchor('#' + $(this).parent().attr('id'));
+      $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
     });
   });
 })();
