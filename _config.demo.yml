@@ -167,6 +167,7 @@ defaults:
       path: ""
       type: "posts"
     values:
+      license: true
       aside:
         toc: true
       pageview: true
