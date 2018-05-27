@@ -50,27 +50,10 @@ repository: someone/someone.github.io
 repository_tree: master
 
 
-## => Navigation
+## => Paths
 ##############################
 paths:
   base: /
-  home: /
-  all:  /archive.html
-  rss:  /feed.xml
-
-nav_lists:
-  - title: Documentation
-    url: /docs/en/quick-start
-  - title: 文档
-    url: /docs/zh/quick-start
-  - titles:
-      en: About
-      zh: 关于
-      zh-Hans: 关于
-      zh-Hant: 關於
-    url: /about.html
-  - title: Jekyll
-    url: https://jekyllrb.com/
 
 
 ## => Post
@@ -182,3 +165,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+data_dir: /docs/_data

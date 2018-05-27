@@ -21,7 +21,7 @@ url: https://tianqi.name # the base hostname & protocol for your site e.g. https
 baseurl: /jekyll-TeXt-theme # does not include hostname
 title: TeXt Theme
 description: > # this means to ignore newlines until "Language & timezone"
-  TeXt Theme Demo
+  A customizable Jekyll theme for your blog or site
 
 
 # => Language and Timezone
@@ -33,15 +33,12 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 ## => Author and Social
 ##############################
 author:
-  name: Someone
-  email: someone@somemail.com # your Email address e.g. someone@site.com
-  facebook: someone # your Facebook username
-  twitter: someone # your Twitter username
-  github: someone # your GitHub username
-  googleplus: someone # your Google+ username
-  weibo: someone # your Weibo username
-  douban: someone # your Douban username
-  linkedin: someone # your Linkedin username
+  name: Tian Qi
+  email: kitian616@outlook.com # your Email address e.g. someone@site.com
+  twitter: kitian616 # your Twitter username
+  github: kitian616/jekyll-TeXt-theme # your GitHub username
+  googleplus: 101827554735084402671 # your Google+ username
+  weibo: 234695683
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
@@ -50,26 +47,10 @@ repository: kitian616/jekyll-TeXt-theme
 repository_tree: master
 
 
-## => Navigation
+## => Paths
 ##############################
 paths:
   base: /
-  home: https://github.com/kitian616/jekyll-TeXt-theme/
-  # all:  /archive.html
-  # rss:  /feed.xml
-
-nav_lists:
-  - title: Documentation
-    url: /docs/en/quick-start
-  - title: 文档
-    url: /docs/zh/quick-start
-  - titles:
-      en: About
-      zh: 关于
-      zh-Hans: 关于
-      zh-Hant: 關於
-    url: /about.html
-
 
 ## => Post
 ##############################
@@ -180,3 +161,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+data_dir: /docs/_data

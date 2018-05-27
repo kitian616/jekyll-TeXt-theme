@@ -50,21 +50,10 @@ repository: someone/someone.github.io
 repository_tree: master
 
 
-## => Navigation
+## => Paths
 ##############################
 paths:
   base: /
-  home: /
-  all:  /archive.html
-  rss:  /feed.xml
-
-nav_lists:
-  - titles:
-      en: About
-      zh: 关于
-      zh-Hans: 关于
-      zh-Hant: 關於
-    url: /about.html
 
 
 ## => Post

@@ -8,36 +8,27 @@
       <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
     {%- endif -%}
     </div>
+    {%- assign list = site.data.navigation.header -%}
+    {%- if list -%}
     <nav>
       <ul>
-        {%- assign __path = site.paths.home | default: site.data.variables.default.paths.home -%}
-        {%- include snippets/get-nav-url.html -%}
-        {%- assign href = __return -%}
-        {%- assign __locale = site.data.locale.NAV.HOME -%}
-        {%- include snippets/locale-to-string.html -%}
-        <li><a href="{{ href }}">{{ __return }}</a></li>
-        {%- assign __path = site.paths.all | default: site.data.variables.default.paths.all -%}
-        {%- include snippets/get-nav-url.html -%}
-        {%- assign href = __return -%}
-        {%- assign __locale = site.data.locale.NAV.ALL -%}
-        {%- include snippets/locale-to-string.html -%}
-        <li><a href="{{ href }}">{{ __return }}</a></li>
-        {%- for list in site.nav_lists -%}
-          {%- assign __path = list.url -%}
+        {%- for item in list -%}
+          {%- assign __path = item.url -%}
           {%- include snippets/get-nav-url.html -%}
           {%- assign _nav_url = __return -%}
           {%- assign __path = page.url -%}
           {%- include snippets/get-nav-url.html -%}
           {%- assign _page_url = __return -%}
-          {%- assign __locale = list.titles -%}
+          {%- assign __locale = item.titles -%}
           {%- include snippets/locale-to-string.html -%}
           {%- if _nav_url == _page_url -%}
-            <li class="active"><a href="{{ _nav_url }}">{%- if list.title -%}{{ list.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
+            <li class="active"><a href="{{ _nav_url }}">{%- if item.title -%}{{ item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
           {%- else -%}
-            <li><a href="{{ _nav_url }}">{%- if list.title -%}{{ list.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
+            <li><a href="{{ _nav_url }}">{%- if item.title -%}{{ item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
           {%- endif -%}
         {%- endfor -%}
       </ul>
     </nav>
+    {%- endif -%}
   </div>
 </header>

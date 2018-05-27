@@ -29,7 +29,7 @@ ul.toc {
 
   .toc-h1 {
     @include split-line(bottom);
-    padding: .6rem 0 .3rem 0;
+    padding: .8rem 0 .3rem 0;
     margin-bottom: .6rem;
     &, a {
       color: $text-color-d;
