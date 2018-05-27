@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="zh-Hans">
+<!DOCTYPE html><html lang="zh">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>TeXt - Simplified Chinese | 简体中文 - TeXt Theme</title>
-<meta name="description" content="在 _config.yml 或者头信息里设置 lang: zh-Hans 或 lang: zh 后，主题文字变为简体中文。">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>布局 - TeXt Theme</title>
+<meta name="description" content="A customizable Jekyll theme for your blog or site
+">
+<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/jekyll-TeXt-theme/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/jekyll-TeXt-theme/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/jekyll-TeXt-theme/assets/images/logo/icon-192x192.png">
@@ -241,7 +242,14 @@
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script></head>
-  <body><div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
+  <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__actions">
+    <div class="button button--secondary button--circle  button--lg box-shadow-2 js-sidebar-button">
+      <i class="fas fa-bars icon--show"></i>
+      <i class="fas fa-times icon--hide"></i>
+    </div>
+  </div>
+  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">开始</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">快速开始</a></li><li class="toc-h1">定制</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/configuration">配置</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/navigation">导航栏</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/zh/layouts">布局</a></li><li class="toc-h1">内容</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/writing-posts">撰写博客</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/markdown-enhancements">Markdown 增强</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/additional-styles">附加样式</a></li><li class="toc-h1">开发</li></ul></div></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -264,44 +272,128 @@
           <div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
           <div class="col-1">
-            <article><div class="main__title"><h1>TeXt - Simplified Chinese | 简体中文</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Tian Qi"/></meta><ul class="article-info__left-col menu"><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
-          </li><li>
-            <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=Simplified+Chinese+%7C+%E7%AE%80">Simplified Chinese | 简</a>
-          </li></ul><ul class="article-info__right-col menu"><li class="pageview">
-              <span class="js-pageview" data-page-key="20170413">0</span> 阅读
-            </li><li class="publish-date"><time datetime="2017-04-13T00:00:00+08:00"
-              itemprop="datePublished">2017年 04月13日
-            </time></li>
-      </ul></div>
+            <article><div class="main__title"><h1>布局</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Tian Qi"/></meta></div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><p>在 _config.yml 或者头信息里设置 <code class="highlighter-rouge">lang: zh-Hans</code> 或 <code class="highlighter-rouge">lang: zh</code> 后，主题文字变为简体中文。</p>
+  <div class="article-content" itemprop="articleBody"><pre><code class="language-mermaid">graph TB;
+    NONE[none]
+    BASE[base]
+    PAGE[page]
+    ARTICLE[article]
+    POST_LIST[post-list]
+    ARCHIVE[archive]
+    404[404]
+    NONE--&gt;BASE;
+    BASE--&gt;PAGE;
+    PAGE--&gt;ARTICLE;
+    PAGE--&gt;POST_LIST;
+    PAGE--&gt;ARCHIVE;
+    PAGE--&gt;404;
+</code></pre>
 
-<!--more-->
+<h2 id="base-布局">Base 布局</h2>
 
-<p><strong>front matter:</strong></p>
+<p>继承于 none.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: article
-title: TeXt - Simplified Chinese | 简体中文
-tags:
-  - TeXt
-  - Simplified Chinese | 简
-lang: zh-Hans
----
-</code></pre></div></div>
+<h2 id="page-布局">Page 布局</h2>
 
-<p>可以看到这个页面的导航和版权信息都变成了简体中文。</p>
+<p>继承于 Base 布局.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Option Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>key</strong></td>
+      <td>-</td>
+      <td>页面的唯一标识符，供评给评论系统和点击量统计使用。必须以字母（<code class="highlighter-rouge">[A-Za-z]</code>）开头，其后可以接若干字母、数字（<code class="highlighter-rouge">[0-9]</code>）、连字符（<code class="highlighter-rouge">-</code>）、下划线（<code class="highlighter-rouge">_</code>）、冒号（<code class="highlighter-rouge">:</code>）和小数点（<code class="highlighter-rouge">.</code>）</td>
+    </tr>
+    <tr>
+      <td><strong>show_title</strong></td>
+      <td>true(default), false</td>
+      <td>该页是否显示标题，默认显示，设置为 <code class="highlighter-rouge">false</code> 隐藏</td>
+    </tr>
+    <tr>
+      <td><strong>modify_date</strong></td>
+      <td>-</td>
+      <td>该文章的最后修改时间, 其格式为 <code class="highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code> 和 <code class="highlighter-rouge">date</code> 的格式相同</td>
+    </tr>
+    <tr>
+      <td><strong>comment</strong></td>
+      <td>true(default), false</td>
+      <td>该页是否开启评论支持，默认开启，设置为 <code class="highlighter-rouge">false</code> 关闭</td>
+    </tr>
+    <tr>
+      <td><strong>mathjax</strong></td>
+      <td>true, false(default)</td>
+      <td>该页是否开启 Mathjax 公式支持，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+    </tr>
+    <tr>
+      <td><strong>mathjax_autoNumber</strong></td>
+      <td>true, false(default)</td>
+      <td>该页的 Mathjax 公式是否自动编号，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+    </tr>
+    <tr>
+      <td><strong>mermaid</strong></td>
+      <td>true, false(default)</td>
+      <td>该页是否开启 Mermaid 流程图支持，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+    </tr>
+    <tr>
+      <td><strong>chart</strong></td>
+      <td>true, false(default)</td>
+      <td>该页是否开启 Chart 图表支持，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+    </tr>
+    <tr>
+      <td><strong>sidebar</strong></td>
+      <td>-</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>aside</strong></td>
+      <td>-</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="article-布局">Article 布局</h2>
+
+<p>继承于 Page 布局.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Variable</td>
+      <td>Option Values</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td><strong>modify_date</strong></td>
+      <td>-</td>
+      <td>该文章的最后修改时间, 其格式为 <code class="highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code> 和 <code class="highlighter-rouge">date</code> 的格式相同</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="post-list-布局">Post List 布局</h2>
+
+<p>继承于 Page 布局.</p>
+
+<h2 id="archive-布局">Archive 布局</h2>
+
+<p>继承于 Page 布局.</p>
+
+<h2 id="404-布局">404 布局</h2>
+
+<p>继承于 Page 布局.</p>
 </div>
 
-  <footer class="article-footer"><meta itemprop="dateModified" content="2017-04-13T00:00:00+08:00"><div class="article-license"><div class="license card"><div class="clearfix"><a class="octocat" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2017-04-13-simplified-chinese.md">
-        <img alt="View on Github" src="/jekyll-TeXt-theme/assets/images/octocat.jpg" />
-      </a><p><a href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2017-04-13-simplified-chinese.md">在 Github 上查阅此文。</a></p><p>本文遵守 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 许可协议。</p><a class="license-img" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-      <img alt="Creative Commons License" src="/jekyll-TeXt-theme/assets/images/license-cc4.png" />
-    </a><p>欢迎转载，转载需注明出处，且禁止用于商业目的。</p>
-  </div>
-</div></div></footer><div class="article-previous-next clearfix"><div class="article-previous"><span>上篇</span><a href="/jekyll-TeXt-theme/test/2017/05/05/chart.html">TeXt - Chart</a></div><div class="article-next"><span>下篇</span><a href="/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html">TeXt - Traditional Chinese | 繁體中文</a></div></div></div>
+  <footer class="article-footer"><meta itemprop="dateModified" content=""></footer></div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -335,7 +427,7 @@ lang: zh-Hans
 				repo: 'gitalk-demo',
 				owner: 'kitian616',
 				admin: ['kitian616'],
-				id: '20170413'
+				id: 'docs-layouts'
 			});
 			gitalk.render('js-gitalk-container');
 		});
@@ -624,6 +716,15 @@ lang: zh-Hans
 })();</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $sidebarButton = $('.js-sidebar-button');
+    $sidebarButton.on('click', function() {
+      $pageRoot.toggleClass('show-sidebar');
+    });
+  });
+})();</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window), $pageFooter = $('.js-page-footer');
     var $pageAside = $('.js-page-aside');
     var affix;
@@ -704,91 +805,7 @@ lang: zh-Hans
     mermaid.init(undefined, '.language-mermaid');
     mermaid.initialize({ startOnLoad: true });
   });
-</script><script>(function() {
-  function errorHandler(error, callback) {
-    if (error) {
-      callback && callback(error);
-      throw error;
-    }
-  }
-
-  function pageview(_AV  ,options) {
-    var AV = _AV;
-    var appId, appKey, appClass;
-    appId = options.appId;
-    appKey = options.appKey;
-    appClass = options.appClass;
-    AV.init({
-      appId: appId,
-      appKey: appKey
-    });
-    return {
-      get: get,
-      increase: increase
-    };
-
-    function searchKey(key) {
-      var query = new AV.Query(appClass);
-      query.equalTo('key', key);
-      return query.first();
-    }
-
-    function insert(key, title) {
-      var Blog = AV.Object.extend(appClass);
-      var blog = new Blog();
-      blog.set('title', title);
-      blog.set('key', key);
-      blog.set('views', 0);
-      return blog.save();
-    }
-
-    function increment(result) {
-      result.increment('views', 1);
-      return result.save(null, {
-        fetchWhenSave: true
-      });
-    }
-
-    function get(key, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          callback && callback(result.attributes.views);
-        }
-      }, errorHandler);
-    }
-
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-    }
-  }
-  window.pageview = pageview;
-})();</script>
-  <script>
-    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
-      var pageview = window.pageview(AV, {
-        appId:    'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
-        appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
-        appClass: 'TeXtDemo'
-      });
-      var key =   '20170413';
-      var title = window.decodeUrl('TeXt+-+Simplified+Chinese+%7C+%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87');
-      pageview.increase(key, title, function(view) {
-        $("[data-page-key='20170413']").text(view);
-      });
-    });
-  </script><script>
+</script><script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
