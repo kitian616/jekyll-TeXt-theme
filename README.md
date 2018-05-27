@@ -47,9 +47,21 @@ You can choose these 6 built-in color themes below:
 
 ## Documentation
 
+### Start
+
 - [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
+
+### Customization
+
 - [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
+- [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
+- [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
+
+### Content
+
 - [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
+- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
+- [Additional styles](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
 
 ## Demo Pages
 
