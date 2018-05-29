@@ -216,9 +216,9 @@
       }
     };
   })(this.document);
-})();(function () {
+})();// (function () {
 
-})();</script><script>
+// })();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -277,7 +277,7 @@
 
   <div class="article-content" itemprop="articleBody"><p>TeXt Theme is 100% compatible with GitHub Pages and it has been developed as a <a href="https://jekyllrb.com/docs/themes/">gem-based themes</a> for easier use.</p>
 
-<p>In this document, you will learn how to <strong>install the theme</strong>, <strong>setup your site</strong>, <strong>local preview</strong> for development, <strong>build and publish</strong>.</p>
+<p>In this document, you will learn how to <strong>install the theme</strong>, <strong>setup your site</strong>, <strong>local preview</strong> for development, <strong>build</strong> and <strong>publish</strong>.</p>
 
 <!--more-->
 
@@ -672,7 +672,9 @@ git clone git@github.com:kitian616/jekyll-TeXt-theme.git
     toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
-})();</script><script>(function() {
+})();// (function () {
+
+// })();</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageRoot = $('.js-page-root');
@@ -681,36 +683,12 @@ git clone git@github.com:kitian616/jekyll-TeXt-theme.git
       $pageRoot.toggleClass('show-sidebar');
     });
   });
-})();</script><script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageFooter = $('.js-page-footer');
-    var $pageAside = $('.js-page-aside');
-    var affix;
-    var tocDisabled = false;
-    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
-
-    setTimeout(function() {
-      affix = $pageAside.affix({
-        offsetBottom: $pageFooter.outerHeight(),
-        scrollTarget: hasSidebar ? '.js-page-main' : null,
-        scroller: hasSidebar ? '.js-page-main' : null,
-        scroll: hasSidebar ? $('.js-page-main').children() : null,
-        disabled: tocDisabled
-      });
-    }, 1000);
-
-    $window.on('resize', window.throttle(function() {
-      affix && affix.setOptions({
-        disabled: tocDisabled
-      });
-    }, 100));
-  });
-})();(function() {
+})();</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageMain = $('.js-page-main');
+    var $window = $(window);
     var $articleContent = $('.js-article-content');
     var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
     var toc;
@@ -741,6 +719,31 @@ git clone git@github.com:kitian616/jekyll-TeXt-theme.git
       });
     }, 100));
 
+  });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    setTimeout(function() {
+      affix = $pageAside.affix({
+        offsetBottom: $pageFooter.outerHeight(),
+        scrollTarget: hasSidebar ? '.js-page-main' : null,
+        scroller: hasSidebar ? '.js-page-main' : null,
+        scroll: hasSidebar ? $('.js-page-main').children() : null,
+        disabled: tocDisabled
+      });
+    }, 1000);
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
   });
 })();</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {

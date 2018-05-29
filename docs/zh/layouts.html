@@ -216,9 +216,9 @@
       }
     };
   })(this.document);
-})();(function () {
+})();// (function () {
 
-})();</script><script>
+// })();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -280,13 +280,13 @@
     BASE[base]
     PAGE[page]
     ARTICLE[article]
-    POST_LIST[post-list]
+    HOME[home]
     ARCHIVE[archive]
     404[404]
     NONE--&gt;BASE;
     BASE--&gt;PAGE;
     PAGE--&gt;ARTICLE;
-    PAGE--&gt;POST_LIST;
+    PAGE--&gt;HOME;
     PAGE--&gt;ARCHIVE;
     PAGE--&gt;404;
 </code></pre>
@@ -312,6 +312,11 @@
       <td><strong>key</strong></td>
       <td>-</td>
       <td>页面的唯一标识符，供评给评论系统和点击量统计使用。必须以字母（<code class="highlighter-rouge">[A-Za-z]</code>）开头，其后可以接若干字母、数字（<code class="highlighter-rouge">[0-9]</code>）、连字符（<code class="highlighter-rouge">-</code>）、下划线（<code class="highlighter-rouge">_</code>）、冒号（<code class="highlighter-rouge">:</code>）和小数点（<code class="highlighter-rouge">.</code>）</td>
+    </tr>
+    <tr>
+      <td><strong>lang</strong></td>
+      <td>en</td>
+      <td>该页的语言</td>
     </tr>
     <tr>
       <td><strong>show_title</strong></td>
@@ -380,7 +385,7 @@
   </tbody>
 </table>
 
-<h2 id="post-list-布局">Post List 布局</h2>
+<h2 id="home-布局">Home 布局</h2>
 
 <p>继承于 Page 布局.</p>
 
@@ -713,7 +718,9 @@
     toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
-})();</script><script>(function() {
+})();// (function () {
+
+// })();</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageRoot = $('.js-page-root');
@@ -722,36 +729,12 @@
       $pageRoot.toggleClass('show-sidebar');
     });
   });
-})();</script><script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageFooter = $('.js-page-footer');
-    var $pageAside = $('.js-page-aside');
-    var affix;
-    var tocDisabled = false;
-    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
-
-    setTimeout(function() {
-      affix = $pageAside.affix({
-        offsetBottom: $pageFooter.outerHeight(),
-        scrollTarget: hasSidebar ? '.js-page-main' : null,
-        scroller: hasSidebar ? '.js-page-main' : null,
-        scroll: hasSidebar ? $('.js-page-main').children() : null,
-        disabled: tocDisabled
-      });
-    }, 1000);
-
-    $window.on('resize', window.throttle(function() {
-      affix && affix.setOptions({
-        disabled: tocDisabled
-      });
-    }, 100));
-  });
-})();(function() {
+})();</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageMain = $('.js-page-main');
+    var $window = $(window);
     var $articleContent = $('.js-article-content');
     var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
     var toc;
@@ -782,6 +765,31 @@
       });
     }, 100));
 
+  });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    setTimeout(function() {
+      affix = $pageAside.affix({
+        offsetBottom: $pageFooter.outerHeight(),
+        scrollTarget: hasSidebar ? '.js-page-main' : null,
+        scroller: hasSidebar ? '.js-page-main' : null,
+        scroll: hasSidebar ? $('.js-page-main').children() : null,
+        disabled: tocDisabled
+      });
+    }, 1000);
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
   });
 })();</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {

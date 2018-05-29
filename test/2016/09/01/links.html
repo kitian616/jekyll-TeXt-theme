@@ -215,9 +215,9 @@
       }
     };
   })(this.document);
-})();(function () {
+})();// (function () {
 
-})();</script><script>
+// })();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -641,36 +641,14 @@
     toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
-})();</script><script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageFooter = $('.js-page-footer');
-    var $pageAside = $('.js-page-aside');
-    var affix;
-    var tocDisabled = false;
-    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+})();// (function () {
 
-    setTimeout(function() {
-      affix = $pageAside.affix({
-        offsetBottom: $pageFooter.outerHeight(),
-        scrollTarget: hasSidebar ? '.js-page-main' : null,
-        scroller: hasSidebar ? '.js-page-main' : null,
-        scroll: hasSidebar ? $('.js-page-main').children() : null,
-        disabled: tocDisabled
-      });
-    }, 1000);
-
-    $window.on('resize', window.throttle(function() {
-      affix && affix.setOptions({
-        disabled: tocDisabled
-      });
-    }, 100));
-  });
-})();(function() {
+// })();</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageMain = $('.js-page-main');
+    var $window = $(window);
     var $articleContent = $('.js-article-content');
     var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
     var toc;
@@ -701,6 +679,31 @@
       });
     }, 100));
 
+  });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    setTimeout(function() {
+      affix = $pageAside.affix({
+        offsetBottom: $pageFooter.outerHeight(),
+        scrollTarget: hasSidebar ? '.js-page-main' : null,
+        scroller: hasSidebar ? '.js-page-main' : null,
+        scroll: hasSidebar ? $('.js-page-main').children() : null,
+        disabled: tocDisabled
+      });
+    }, 1000);
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
   });
 })();</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {

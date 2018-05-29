@@ -292,6 +292,9 @@ input::-ms-clear {
 input:focus {
   outline: none; }
 
+.mermaidTooltip {
+  display: none; }
+
 .button {
   font-weight: 700;
   box-sizing: border-box;

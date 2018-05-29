@@ -216,9 +216,9 @@
       }
     };
   })(this.document);
-})();(function () {
+})();// (function () {
 
-})();</script><script>
+// })();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -434,7 +434,9 @@
             </a></li></ul>
       </nav></div>
 
-<script></script></div><section class="page__comment"></section></article>
+<script>// (function () {
+
+// })();</script></div><section class="page__comment"></section></article>
           </div>
         </div>
       </div>
@@ -716,7 +718,9 @@
     toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
-})();</script><script>
+})();// (function () {
+
+// })();</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
@@ -738,93 +742,7 @@
     mermaid.init(undefined, '.language-mermaid');
     mermaid.initialize({ startOnLoad: true });
   });
-</script><script>(function() {
-  function errorHandler(error, callback) {
-    if (error) {
-      callback && callback(error);
-      throw error;
-    }
-  }
-
-  function pageview(_AV  ,options) {
-    var AV = _AV;
-    var appId, appKey, appClass;
-    appId = options.appId;
-    appKey = options.appKey;
-    appClass = options.appClass;
-    AV.init({
-      appId: appId,
-      appKey: appKey
-    });
-    return {
-      get: get,
-      increase: increase
-    };
-
-    function searchKey(key) {
-      var query = new AV.Query(appClass);
-      query.equalTo('key', key);
-      return query.first();
-    }
-
-    function insert(key, title) {
-      var Blog = AV.Object.extend(appClass);
-      var blog = new Blog();
-      blog.set('title', title);
-      blog.set('key', key);
-      blog.set('views', 0);
-      return blog.save();
-    }
-
-    function increment(result) {
-      result.increment('views', 1);
-      return result.save(null, {
-        fetchWhenSave: true
-      });
-    }
-
-    function get(key, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          callback && callback(result.attributes.views);
-        }
-      }, errorHandler);
-    }
-
-    function increase(key, title, callback) {
-      searchKey(key).then(function(result) {
-        if (result) {
-          increment(result).then(function(result) {
-            callback && callback(result.attributes.views);
-          });
-        } else {
-          insert(key, title).then(function(result) {
-            increment(result).then(function(result) {
-              callback && callback(result.attributes.views);
-            });
-          }, errorHandler);
-        }
-      }, errorHandler);
-    }
-  }
-  window.pageview = pageview;
-})();</script>
-  <script>
-    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
-      var pageview = window.pageview(AV, {
-        appId:    'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
-        appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
-        appClass: 'TeXtDemo'
-      });
-      $('.js-pageview').each(function() {
-        var $this = $(this);
-        var key = $this.attr('data-page-key');
-        pageview.get(key, function(view) {
-          $this.text(view);
-        });
-      });
-    });
-  </script><script>
+</script><script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

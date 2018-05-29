@@ -216,9 +216,9 @@
       }
     };
   })(this.document);
-})();(function () {
+})();// (function () {
 
-})();</script><script>
+// })();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -275,7 +275,7 @@
             <article><div class="main__title"><h1>Writing Posts</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Tian Qi"/></meta></div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><p>As explained on the <a href="https://jekyllrb.com/docs/structure/">directory structure</a> page, the _posts folder is where your blog posts will live. These files are generally Markdown or HTML. All posts must have YAML Front Matter, and they will be converted from their source format into an HTML page that is part of your static site.</p>
+  <div class="article-content" itemprop="articleBody"><p>As explained on the <a href="https://jekyllrb.com/docs/structure/">directory structure</a> page, <strong>the _posts folder is where your blog posts will live</strong>. These files are generally Markdown or HTML. All posts must have YAML Front Matter, and they will be converted from their source format into an HTML page that is part of your static site.</p>
 
 <!--more-->
 
@@ -627,7 +627,9 @@ mathjax: true
     toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
-})();</script><script>(function() {
+})();// (function () {
+
+// })();</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageRoot = $('.js-page-root');
@@ -636,36 +638,12 @@ mathjax: true
       $pageRoot.toggleClass('show-sidebar');
     });
   });
-})();</script><script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageFooter = $('.js-page-footer');
-    var $pageAside = $('.js-page-aside');
-    var affix;
-    var tocDisabled = false;
-    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
-
-    setTimeout(function() {
-      affix = $pageAside.affix({
-        offsetBottom: $pageFooter.outerHeight(),
-        scrollTarget: hasSidebar ? '.js-page-main' : null,
-        scroller: hasSidebar ? '.js-page-main' : null,
-        scroll: hasSidebar ? $('.js-page-main').children() : null,
-        disabled: tocDisabled
-      });
-    }, 1000);
-
-    $window.on('resize', window.throttle(function() {
-      affix && affix.setOptions({
-        disabled: tocDisabled
-      });
-    }, 100));
-  });
-})();(function() {
+})();</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageMain = $('.js-page-main');
+    var $window = $(window);
     var $articleContent = $('.js-article-content');
     var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
     var toc;
@@ -696,6 +674,31 @@ mathjax: true
       });
     }, 100));
 
+  });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    setTimeout(function() {
+      affix = $pageAside.affix({
+        offsetBottom: $pageFooter.outerHeight(),
+        scrollTarget: hasSidebar ? '.js-page-main' : null,
+        scroller: hasSidebar ? '.js-page-main' : null,
+        scroll: hasSidebar ? $('.js-page-main').children() : null,
+        disabled: tocDisabled
+      });
+    }, 1000);
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
   });
 })();</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
