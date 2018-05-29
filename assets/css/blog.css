@@ -1447,64 +1447,63 @@ ul.toc--navigator > .toc-h2.active, ul.toc--navigator > .toc-h2.active a {
     .layout--page.show-sidebar .icon--hide {
       display: inline; } }
 
-.post-list > article {
+.layout--home .post-list > article {
   padding-bottom: 1.3rem;
   margin: 2.6rem 0 1rem 0; }
-  .post-list > article > h1 {
+  .layout--home .post-list > article > h1 {
     font-size: 1.5rem; }
-    .post-list > article > h1 > a, .post-list > article > h1 > a:link, .post-list > article > h1 > a:visited {
+    .layout--home .post-list > article > h1 > a, .layout--home .post-list > article > h1 > a:link, .layout--home .post-list > article > h1 > a:visited {
       color: #000; }
-      .post-list > article > h1 > a svg path, .post-list > article > h1 > a:link svg path, .post-list > article > h1 > a:visited svg path {
+      .layout--home .post-list > article > h1 > a svg path, .layout--home .post-list > article > h1 > a:link svg path, .layout--home .post-list > article > h1 > a:visited svg path {
         fill: #000; }
-    .post-list > article > h1 > a:hover {
+    .layout--home .post-list > article > h1 > a:hover {
       color: #fc4d50; }
-      .post-list > article > h1 > a:hover svg path {
+      .layout--home .post-list > article > h1 > a:hover svg path {
         fill: #fc4d50; }
-    .post-list > article > h1 > a.active, .post-list > article > h1 > a:active {
+    .layout--home .post-list > article > h1 > a.active, .layout--home .post-list > article > h1 > a:active {
       color: #fc4d50; }
-      .post-list > article > h1 > a.active svg path, .post-list > article > h1 > a:active svg path {
+      .layout--home .post-list > article > h1 > a.active svg path, .layout--home .post-list > article > h1 > a:active svg path {
         fill: #fc4d50; }
-  .post-list > article > a {
+  .layout--home .post-list > article > a {
     font-size: 0.875rem; }
-  .post-list > article:not(:last-child) {
+  .layout--home .post-list > article:not(:last-child) {
     border: 0 solid #e6e6e6;
     border-bottom-width: 1px; }
-.post-list .article-content {
+.layout--home .post-list .article-content {
   font-size: 0.875rem;
   line-height: 1.6; }
-  .post-list .article-content h1, .post-list .article-content h2, .post-list .article-content h3, .post-list .article-content h4, .post-list .article-content h5, .post-list .article-content h6, .post-list .article-content p,
-  .post-list .article-content hr, .post-list .article-content blockquote, .post-list .article-content figure, .post-list .article-content pre, .post-list .article-content .highlighter-rouge,
-  .post-list .article-content ul, .post-list .article-content ol, .post-list .article-content dl, .post-list .article-content table, .post-list .article-content .footnotes {
+  .layout--home .post-list .article-content h1, .layout--home .post-list .article-content h2, .layout--home .post-list .article-content h3, .layout--home .post-list .article-content h4, .layout--home .post-list .article-content h5, .layout--home .post-list .article-content h6, .layout--home .post-list .article-content p,
+  .layout--home .post-list .article-content hr, .layout--home .post-list .article-content blockquote, .layout--home .post-list .article-content figure, .layout--home .post-list .article-content pre, .layout--home .post-list .article-content .highlighter-rouge,
+  .layout--home .post-list .article-content ul, .layout--home .post-list .article-content ol, .layout--home .post-list .article-content dl, .layout--home .post-list .article-content table, .layout--home .post-list .article-content .footnotes {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem; }
-  .post-list .article-content h1, .post-list .article-content h2, .post-list .article-content h3, .post-list .article-content h4, .post-list .article-content h5, .post-list .article-content h6 {
+  .layout--home .post-list .article-content h1, .layout--home .post-list .article-content h2, .layout--home .post-list .article-content h3, .layout--home .post-list .article-content h4, .layout--home .post-list .article-content h5, .layout--home .post-list .article-content h6 {
     margin-top: 0.75rem; }
-  .post-list .article-content h1,
-  .post-list .article-content h2,
-  .post-list .article-content h3 {
+  .layout--home .post-list .article-content h1,
+  .layout--home .post-list .article-content h2,
+  .layout--home .post-list .article-content h3 {
     color: #222; }
-  .post-list .article-content h1,
-  .post-list .article-content h2 {
+  .layout--home .post-list .article-content h1,
+  .layout--home .post-list .article-content h2 {
     padding: 0;
     border: none; }
-  .post-list .article-content h1 {
+  .layout--home .post-list .article-content h1 {
     font-size: 1rem; }
-  .post-list .article-content h2 {
+  .layout--home .post-list .article-content h2 {
     font-size: 0.9rem; }
-  .post-list .article-content h3 {
+  .layout--home .post-list .article-content h3 {
     font-size: 0.85rem; }
-  .post-list .article-content h4 {
+  .layout--home .post-list .article-content h4 {
     font-size: 0.8rem; }
-  .post-list .article-content h5 {
+  .layout--home .post-list .article-content h5 {
     font-size: 0.75rem; }
-  .post-list .article-content h6 {
+  .layout--home .post-list .article-content h6 {
     font-size: 0.75rem; }
-  .post-list .article-content img {
+  .layout--home .post-list .article-content img {
     max-height: 12rem; }
-
-.pagination {
+.layout--home .pagination {
   margin: 1.4rem 0; }
-  .pagination .pagination__omit {
+  .layout--home .pagination .pagination__omit {
     color: #888; }
 
 .layout--all .site-tags {
