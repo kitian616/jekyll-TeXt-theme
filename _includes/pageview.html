@@ -4,10 +4,10 @@
 {%- assign _pageview = __return -%}
 
 
-{%- if page.layout == "post-list" -%}
+{%- if page.layout == "home" -%}
 
   {%- if jekyll.environment != "development" -%}
-    {%- include pageview-providers/leancloud/post-list.html -%}
+    {%- include pageview-providers/leancloud/home.html -%}
   {%- endif -%}
 
 

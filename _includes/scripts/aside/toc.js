@@ -2,7 +2,7 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $pageMain = $('.js-page-main');
+    var $window = $(window);
     var $articleContent = $('.js-article-content');
     var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
     var toc;

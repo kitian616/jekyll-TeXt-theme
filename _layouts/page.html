@@ -84,10 +84,11 @@ layout: base
 
 {%- if page.aside -%}
 <script>
-  {%- include scripts/aside/affix.js -%}
+  /* toc must before affix, since affix need to konw toc' height. */
   {%- if page.aside.toc -%}
     {%- include scripts/aside/toc.js -%}
   {%- endif -%}
+  {%- include scripts/aside/affix.js -%}
 </script>
 {%- endif -%}
 
