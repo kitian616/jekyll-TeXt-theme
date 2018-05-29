@@ -216,9 +216,9 @@
       }
     };
   })(this.document);
-})();// (function () {
+})();/*(function () {
 
-// })();</script><script>
+})();*/</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -280,13 +280,13 @@
     BASE[base]
     PAGE[page]
     ARTICLE[article]
-    POST_LIST[post-list]
+    HOME[home]
     ARCHIVE[archive]
     404[404]
     NONE--&gt;BASE;
     BASE--&gt;PAGE;
     PAGE--&gt;ARTICLE;
-    PAGE--&gt;POST_LIST;
+    PAGE--&gt;HOME;
     PAGE--&gt;ARCHIVE;
     PAGE--&gt;404;
 </code></pre>
@@ -375,7 +375,7 @@
   </tbody>
 </table>
 
-<h2 id="post-list-layout">Post List Layout</h2>
+<h2 id="home-layout">Home Layout</h2>
 
 <p>Base on Page Layout.</p>
 
@@ -708,9 +708,9 @@
     toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
-})();// (function () {
+})();/*(function () {
 
-// })();</script><script>(function() {
+})();*/</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageRoot = $('.js-page-root');
