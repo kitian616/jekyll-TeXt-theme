@@ -31,7 +31,7 @@ TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and
 - Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))
 - Line Chart, Bar Chart, Radar Chart, Pie Chart ([chartjs](http://www.chartjs.org/))
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
-- Multi-language support(English | Simplified Chinese | Traditional Chinese)
+- Multi-language support(English, Simplified Chinese, Traditional Chinese)
 
 ## Color Themes
 

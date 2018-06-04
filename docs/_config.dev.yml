@@ -17,11 +17,11 @@
 ## => Site Settings
 ##############################
 text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-url: # the base hostname & protocol for your site e.g. https://www.someone.com
+url: # the base hostname & protocol for your site e.g. https://www.neo.com
 baseurl: # does not include hostname
-title: Someone's blog
+title: TeXt Dev
 description: > # this means to ignore newlines until "Language & timezone"
-  Someone's Blog
+  TeXt Dev Site
 
 
 ## => Language and Timezone
@@ -33,11 +33,11 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ## => Author and Social
 ##############################
 author:
-  name: Someone
-  email: someone@somemail.com # your Email address e.g. someone@site.com
-  facebook: someone # your Facebook username
-  twitter: someone # your Twitter username
-  github: someone # your GitHub username
+  name: TeXt
+  email: # your Email address e.g. neo@site.com
+  facebook: # your Facebook username
+  twitter: # your Twitter username
+  github: # your GitHub username
   linkedin: # your Linkedin username
   googleplus: # your Google+ username
   weibo: # your Weibo username
@@ -46,7 +46,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: someone/someone.github.io
+repository: neo/neo.github.io
 repository_tree: master
 
 
@@ -99,12 +99,12 @@ disqus:
 ## Gitalk
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-  clientID: 143666b578a416f82175 # GitHub Application Client ID
-  clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 # GitHub Application Client Secret
-  repository: gitalk-demo # GitHub repo
-  owner: kitian616 # GitHub repo owner
+  clientID: # GitHub Application Client ID
+  clientSecret: # GitHub Application Client Secret
+  repository: # GitHub repo
+  owner: # GitHub repo owner
   admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-    - kitian616
+    # - your GitHub Id
 
 
 ## => Pageview
@@ -150,7 +150,7 @@ exclude:
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
       license: true
       aside:

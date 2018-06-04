@@ -46,24 +46,42 @@
     left: 1rem;
     bottom: 1rem;
     display: none;
-    z-index: 999;
+    z-index: 996;
+  }
+
+  .sidebar-button {
+    @include button-colors($text-color-d, rgba($main-color-3, .75));
+    border: 1px $border-color solid;
   }
 
   .page__sidebar {
     display: block;
-    width: 100%;
+    width: 80%;
     max-width: map-get($layout, sidebar-width);
     float: left;
     height: 100%;
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
     background-color: $background-color;
     z-index: 998;
     @include split-line(right);
     @include transition(transform .4s);
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    box-sizing: border-box;
     .sidebar-toc {
       padding: 1rem 1rem 2rem 2rem;
     }
+  }
+
+  .page__mask {
+    background-color: $mask-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 997;
+    display: none;
+    cursor: pointer;
   }
 
   .page__aside {
@@ -115,23 +133,12 @@
       display: block;
     }
 
-    .icon--show {
-      display: inline;
-    }
-    .icon--hide {
-      display: none;
-    }
-
     &.show-sidebar {
       .page__sidebar {
         @include transform(translate(0));
       }
-
-      .icon--show {
-        display: none;
-      }
-      .icon--hide {
-        display: inline;
+      .page__mask {
+        display: block;
       }
     }
   }

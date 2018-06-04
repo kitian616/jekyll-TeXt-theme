@@ -150,7 +150,7 @@ exclude:
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
       license: true
       aside:

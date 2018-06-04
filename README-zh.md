@@ -31,7 +31,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
 - 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
-- 多语言支持（English | 简体中文 | 繁體中文）
+- 多语言支持（English, 简体中文, 繁體中文）
 
 ## Color Theme
 

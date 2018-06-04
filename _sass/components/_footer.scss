@@ -5,7 +5,7 @@
 .footer {
   @include flexbox;
   @include align-items(center);
-  @include split-line(top);
+  background-color: $main-color-3;
   height: map-get($layout, footer-height);
   .follow-me {
     padding-top: 1rem;
@@ -22,7 +22,7 @@
     margin: 1rem auto 0 auto;
   }
   .site-info__copyright {
-    @include split-line(right, default, $text-color-l);
+    @include split-line(right, default, $text-color-3);
     padding-right: .3rem;
     margin-right: .1rem;
   }

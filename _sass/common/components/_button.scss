@@ -1,23 +1,41 @@
-@mixin button-colors($clr, $bg-clr, $hover-clr: default, $hover-bg-clr: default, $active-clr: default, $active-bg-clr: default, $focus-clr: default, $focus-bg-clr: default) {
+@mixin button-colors($clr, $bg-clr, $hover-clr: default, $hover-bg-clr: default, $active-clr: default, $active-bg-clr: default, $focus-clr: default, $focus-bg-clr: default, $theme: default) {
+  @if $theme == default {
+    $theme: light;
+  }
   @if $hover-clr == default {
     $hover-clr: $clr
   }
   @if $hover-bg-clr == default {
-    $hover-bg-clr: darken($bg-clr, 10%);
+    @if $theme == 'light' {
+      $hover-bg-clr: darken($bg-clr, 13%);
+    }
+    @if $theme == 'dark' {
+      $hover-bg-clr: lighten($bg-clr, 23%);
+    }
   }
 
   @if $active-clr == default {
     $active-clr: $clr
   }
   @if $active-bg-clr == default {
-    $active-bg-clr: darken($bg-clr, 10%);
+    @if $theme == 'light' {
+      $active-bg-clr: darken($bg-clr, 13%);
+    }
+    @if $theme == 'dark' {
+      $active-bg-clr: lighten($bg-clr, 23%);
+    }
   }
 
   @if $focus-clr == default {
     $focus-clr: $clr
   }
   @if $focus-bg-clr == default {
-    $focus-bg-clr: darken($bg-clr, 10%);
+    @if $theme == 'light' {
+      $focus-bg-clr: darken($bg-clr, 13%);
+    }
+    @if $theme == 'dark' {
+      $focus-bg-clr: lighten($bg-clr, 23%);
+    }
   }
   @include plain {
     color: $clr;

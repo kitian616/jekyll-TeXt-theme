@@ -5,14 +5,14 @@ layout: base
 {%- if page.sidebar -%}
 <div class="layout--page layout--page--sidebar clearfix js-page-root">
   <div class="page__actions">
-    <div class="button button--secondary button--circle  button--lg box-shadow-2 js-sidebar-button">
+    <div class="button button--circle  button--lg box-shadow-2 sidebar-button js-sidebar-show">
       <i class="fas fa-bars icon--show"></i>
-      <i class="fas fa-times icon--hide"></i>
     </div>
   </div>
   <div class="page__sidebar">
     {%- include sidebar/toc.html -%}
   </div>
+  <div class="page__mask js-sidebar-hide"></div>
 
 
 {%- else -%}

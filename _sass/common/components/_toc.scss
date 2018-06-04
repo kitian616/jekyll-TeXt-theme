@@ -3,20 +3,25 @@ ul.toc {
   margin: 0;
   list-style-type: none;
   & > li {
-    padding: .2rem 0;
-    &.active {
-      &, a {
+    margin: .1rem 0;
+    @include active() {
+      a {
+        background-color: $main-color-3;
         color: $main-color-1;
       }
     }
   }
 
   a {
-    @include link-colors($text-color, $main-color-1);
+    display: inline-block;
+    padding: .2rem .8rem .2rem .8rem;
+    border-radius: map-get($base, border-radius);
+    @include link-colors($text-color);
     @include plain() {
       text-decoration: none;
     }
     @include hover() {
+      background-color: $main-color-3;
       text-decoration: none;
     }
     @include active() {
@@ -91,10 +96,10 @@ ul.toc {
 ul.toc--navigator {
   & > .toc-h2 {
     &, a {
-      @include link-colors($text-color-l, $main-color-1);
+      @include link-colors($text-color-l);
     }
     &.active {
-      &, a {
+      a {
         color: $text-color-d;
       }
     }
