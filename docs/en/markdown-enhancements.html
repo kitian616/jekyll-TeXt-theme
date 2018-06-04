@@ -244,12 +244,12 @@
 </script></head>
   <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
   <div class="page__actions">
-    <div class="button button--secondary button--circle  button--lg box-shadow-2 js-sidebar-button">
+    <div class="button button--circle  button--lg box-shadow-2 sidebar-button js-sidebar-show">
       <i class="fas fa-bars icon--show"></i>
-      <i class="fas fa-times icon--hide"></i>
     </div>
   </div>
-  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h1">Customization</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/navigation">Navigation</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/layouts">Layouts</a></li><li class="toc-h1">Content</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/markdown-enhancements">Markdown Enhancements</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/additional-styles">Additional styles</a></li><li class="toc-h1">Dev</li></ul></div></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
+  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h1">Customization</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/navigation">Navigation</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/layouts">Layouts</a></li><li class="toc-h1">Content</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/markdown-enhancements">Markdown Enhancements</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/additional-styles">Additional styles</a></li><li class="toc-h1">Dev</li></ul></div></div>
+  <div class="page__mask js-sidebar-hide"></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -631,9 +631,13 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageRoot = $('.js-page-root');
-    var $sidebarButton = $('.js-sidebar-button');
-    $sidebarButton.on('click', function() {
-      $pageRoot.toggleClass('show-sidebar');
+    var $sidebarShow = $('.js-sidebar-show');
+    var $sidebarHide = $('.js-sidebar-hide');
+    $sidebarShow.on('click', function() {
+      $pageRoot.addClass('show-sidebar');
+    });
+    $sidebarHide.on('click', function() {
+      $pageRoot.removeClass('show-sidebar');
     });
   });
 })();</script><script>

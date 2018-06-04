@@ -244,12 +244,12 @@
 </script></head>
   <body><div class="layout--page layout--page--sidebar clearfix js-page-root">
   <div class="page__actions">
-    <div class="button button--secondary button--circle  button--lg box-shadow-2 js-sidebar-button">
+    <div class="button button--circle  button--lg box-shadow-2 sidebar-button js-sidebar-show">
       <i class="fas fa-bars icon--show"></i>
-      <i class="fas fa-times icon--hide"></i>
     </div>
   </div>
-  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">开始</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">快速开始</a></li><li class="toc-h1">定制</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/configuration">配置</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/navigation">导航栏</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/layouts">布局</a></li><li class="toc-h1">内容</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/writing-posts">撰写博客</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/markdown-enhancements">Markdown 增强</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/zh/additional-styles">附加样式</a></li><li class="toc-h1">开发</li></ul></div></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
+  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">开始</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">快速开始</a></li><li class="toc-h1">定制</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/configuration">配置</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/navigation">导航栏</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/layouts">布局</a></li><li class="toc-h1">内容</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/writing-posts">撰写博客</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/markdown-enhancements">Markdown 增强</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/zh/additional-styles">附加样式</a></li><li class="toc-h1">开发</li></ul></div></div>
+  <div class="page__mask js-sidebar-hide"></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -614,9 +614,13 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageRoot = $('.js-page-root');
-    var $sidebarButton = $('.js-sidebar-button');
-    $sidebarButton.on('click', function() {
-      $pageRoot.toggleClass('show-sidebar');
+    var $sidebarShow = $('.js-sidebar-show');
+    var $sidebarHide = $('.js-sidebar-hide');
+    $sidebarShow.on('click', function() {
+      $pageRoot.addClass('show-sidebar');
+    });
+    $sidebarHide.on('click', function() {
+      $pageRoot.removeClass('show-sidebar');
     });
   });
 })();</script><script>
