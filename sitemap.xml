@@ -17,10 +17,6 @@
 <lastmod>2015-02-02T00:00:00+08:00</lastmod>
 </url>
 <url>
-<loc>https://tianqi.name/jekyll-TeXt-theme/test/2015/03/03/article-with-modify-date.html</loc>
-<lastmod>2015-03-03T00:00:00+08:00</lastmod>
-</url>
-<url>
 <loc>https://tianqi.name/jekyll-TeXt-theme/test/2016/05/02/horizontal-rules.html</loc>
 <lastmod>2016-05-02T00:00:00+08:00</lastmod>
 </url>
@@ -79,6 +75,10 @@
 <url>
 <loc>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html</loc>
 <lastmod>2017-04-13T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/19/modify-date.html</loc>
+<lastmod>2017-04-19T00:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>https://tianqi.name/jekyll-TeXt-theme/test/2017/05/05/chart.html</loc>

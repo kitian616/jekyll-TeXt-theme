@@ -275,9 +275,196 @@
             <article><div class="main__title"><h1>Additional styles</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Tian Qi"/></meta></div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><p>Jekyll use kramdown as the default markdown processor. kramdown can adding attributes to block and span-level elements throw ALDs<sup id="fnref:ALDs"><a href="#fn:ALDs" class="footnote">1</a></sup> feature. with the help of ALDs, we can defined class names to an element by <code class="highlighter-rouge">{:.class-name1 .class-name-2}</code>.</p>
+  <div class="article-content" itemprop="articleBody"><p>Jekyll use kramdown as the default markdown processor. kramdown can adding attributes to block and span-level elements throw ALDs<sup id="fnref:ALDs"><a href="#fn:ALDs" class="footnote">1</a></sup> feature. with the help of ALDs, we can defined class names to an element by <code class="highlighter-rouge">{:.class-name1.class-name-2}</code>.</p>
 
-<p>TeXt offer some class names that you can use in the post, refer to <a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">HERE</a> for details.</p>
+<p>TeXt offer some class names that you can use in the post.</p>
+
+<h2 id="alert">Alert</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class Names</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>success</strong></td>
+    </tr>
+    <tr>
+      <td><strong>info</strong></td>
+    </tr>
+    <tr>
+      <td><strong>warning</strong></td>
+    </tr>
+    <tr>
+      <td><strong>error</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="success">Success Text.</p>
+
+<p class="info">Info Text.</p>
+
+<p class="warning">Warning Text.</p>
+
+<p class="error">Error Text.</p>
+
+<p><strong>markdown:</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Success Text.
+{:.success}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Info Text.
+{:.info}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Warning Text.
+{:.warning}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error Text.
+{:.error}
+</code></pre></div></div>
+
+<h2 id="photo-frame">Photo Frame</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class Names</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>border</strong></td>
+    </tr>
+    <tr>
+      <td><strong>shadow</strong></td>
+    </tr>
+    <tr>
+      <td><strong>rounded</strong></td>
+    </tr>
+    <tr>
+      <td><strong>circle</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Border</th>
+      <th>Shadow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="border" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="shadow" /></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.border}</code></td>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.shadow}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rounded</th>
+      <th>Circle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="circle" /></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.rounded}</code></td>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.circle}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Border + Rounded</th>
+      <th>Circle + Shadow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border+rounded" class="border rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="circle shadow" /></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.border.rounded}</code></td>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.circle.shadow}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="button">Button</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Class Names</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>base</strong></td>
+      <td>button</td>
+    </tr>
+    <tr>
+      <td><strong>type</strong></td>
+      <td>button--primary, button--secondary, button--success, button--info, button--warning, button--error</td>
+    </tr>
+    <tr>
+      <td><strong>shape</strong></td>
+      <td>button--pill, button--rounded, button--circle</td>
+    </tr>
+    <tr>
+      <td><strong>size</strong></td>
+      <td>button--md(default), button--sm, button--lg</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="#" class="button button--primary button--pill">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--pill}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--secondary button--pill">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--pill}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--primary button--rounded">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--rounded}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--primary button--circle">X</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[X](#){:.button.button--primary.button--circle}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--secondary button--rounded button--sm">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--rounded.button--sm}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--secondary button--rounded button--lg">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--rounded.button--lg}
+</code></pre></div></div>
 
 <div class="footnotes">
   <ol>

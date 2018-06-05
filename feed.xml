@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.2">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-06-04T23:39:17+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for your blog or site
-</subtitle><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">&lt;h2 id=&quot;alert&quot;&gt;Alert&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-06-06T01:03:38+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for your blog or site
+</subtitle><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;button button--success button--rounded button--lg&quot;&gt;BUTTON&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;alert&quot;&gt;Alert&lt;/h2&gt;
 
 &lt;p class=&quot;success&quot;&gt;Success Text.&lt;/p&gt;
 
@@ -8,8 +16,6 @@
 &lt;p class=&quot;warning&quot;&gt;Warning Text.&lt;/p&gt;
 
 &lt;p class=&quot;error&quot;&gt;Error Text.&lt;/p&gt;
-
-&lt;!--more--&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -89,13 +95,111 @@
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![Lenna](path-to-image.jpg){:.circle.border.shadow}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">Alert Success Text. Info Text. Warning Text. Error Text.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;button&quot;&gt;Button&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Primary&lt;/th&gt;
+      &lt;th&gt;Secondary&lt;/th&gt;
+      &lt;th&gt;Success&lt;/th&gt;
+      &lt;th&gt;Info&lt;/th&gt;
+      &lt;th&gt;Warning&lt;/th&gt;
+      &lt;th&gt;Error&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--primary button--pill&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--pill&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--success button--pill&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--info button--pill&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--warning button--pill&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--error button--pill&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Primary&lt;/th&gt;
+      &lt;th&gt;Secondary&lt;/th&gt;
+      &lt;th&gt;Success&lt;/th&gt;
+      &lt;th&gt;Info&lt;/th&gt;
+      &lt;th&gt;Warning&lt;/th&gt;
+      &lt;th&gt;Error&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--primary button--rounded&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--rounded&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--success button--rounded&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--info button--rounded&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--warning button--rounded&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--error button--rounded&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Primary&lt;/th&gt;
+      &lt;th&gt;Secondary&lt;/th&gt;
+      &lt;th&gt;Success&lt;/th&gt;
+      &lt;th&gt;Info&lt;/th&gt;
+      &lt;th&gt;Warning&lt;/th&gt;
+      &lt;th&gt;Error&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--primary button--circle&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--circle&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--success button--circle&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--info button--circle&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--warning button--circle&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--error button--circle&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Small&lt;/th&gt;
+      &lt;th&gt;Middle&lt;/th&gt;
+      &lt;th&gt;Large&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--pill button--sm&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--pill button--md&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--pill button--lg&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--rounded button--sm&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--rounded button--md&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--rounded button--lg&quot;&gt;BUTTON&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--circle button--sm&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--circle button--md&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;button button--secondary button--circle button--lg&quot;&gt;X&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">Success! BUTTON</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;x_1 = {-b + \sqrt{b^2-4ac} \over 2a}&lt;/script&gt;
 
-&lt;!--more--&gt;
-
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;x_2 = {-b - \sqrt{b^2-4ac} \over 2a} \notag&lt;/script&gt;
+
+&lt;!--more--&gt;
 
 &lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;highlighter-rouge&quot;&gt;mathjax: true&lt;/code&gt; in the _config.yml or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
 
@@ -111,11 +215,7 @@
 &lt;p&gt;&lt;strong&gt;front matter:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: article
-title: TeXt - MathJax
-tags:
-  - TeXt
-  - English
+...
 mathjax: true
 mathjax_autoNumber: true
 ---
@@ -148,8 +248,6 @@ mathjax_autoNumber: true
     C--&amp;gt;D;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://mermaidjs.github.io/flowchart.html&quot;&gt;Documentation for Flowchart&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```mermaid
@@ -175,8 +273,6 @@ graph TD;
     John-&amp;gt;Bob: How about you?
     Bob--&amp;gt;John: Jolly good!
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mermaidjs.github.io/sequenceDiagram.html&quot;&gt;Documentation for Sequence Diagram&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -213,8 +309,6 @@ sequenceDiagram
     Create tests for renderer           :2d
     Add to mermaid                      :1d
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mermaidjs.github.io/gantt.html&quot;&gt;Documentation for Gant Diagram&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -287,7 +381,6 @@ gantt
 &lt;!--more--&gt;
 
 &lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;highlighter-rouge&quot;&gt;chart: true&lt;/code&gt; in the _config.yml or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
-&lt;p&gt;Simple HTML5 Charts using the canvas element &lt;a href=&quot;http://www.chartjs.org/&quot;&gt;chartjs.org&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;line-chart&quot;&gt;Line Chart&lt;/h2&gt;
 
@@ -339,8 +432,6 @@ gantt
   &quot;options&quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.chartjs.org/docs/latest/charts/line.html&quot;&gt;Documentation for Line Chart&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -442,8 +533,6 @@ gantt
   &quot;options&quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.chartjs.org/docs/latest/charts/bar.html&quot;&gt;Documentation for Bar Chart&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -552,8 +641,6 @@ gantt
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chartjs.org/docs/latest/charts/radar.html&quot;&gt;Documentation for Radar Chart&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
@@ -649,8 +736,6 @@ gantt
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chartjs.org/latest/charts/polar.html&quot;&gt;Documentation for Polar Area Chart&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
@@ -723,8 +808,6 @@ gantt
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chartjs.org/docs/latest/charts/doughnut.html&quot;&gt;Documentation for Pie Chart&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
@@ -757,7 +840,8 @@ gantt
     ]
   },
   &quot;options&quot;: {}
-} ```
+}
+```
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;doughnut-chart&quot;&gt;Doughnut Chart&lt;/h2&gt;
@@ -793,8 +877,6 @@ gantt
   &quot;options&quot;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.chartjs.org/docs/latest/charts/doughnut.html&quot;&gt;Documentation for Doughnut Chart&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -861,8 +943,6 @@ gantt
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.chartjs.org/docs/latest/charts/bubble.html&quot;&gt;Documentation for Bubble Chart&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
@@ -892,7 +972,7 @@ gantt
   &quot;options&quot;: {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">{ &quot;type&quot;: &quot;line&quot;, &quot;data&quot;: { &quot;labels&quot;: [ &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot; ], &quot;datasets&quot;: [ { &quot;label&quot;: &quot;# of bugs&quot;, &quot;fill&quot;: false, &quot;lineTension&quot;: 0.1, &quot;backgroundColor&quot;: &quot;rgba(75,192,192,0.4)&quot;, &quot;borderColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;borderCapStyle&quot;: &quot;butt&quot;, &quot;borderDash&quot;: [], &quot;borderDashOffset&quot;: 0, &quot;borderJoinStyle&quot;: &quot;miter&quot;, &quot;pointBorderColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;pointBackgroundColor&quot;: &quot;#fff&quot;, &quot;pointBorderWidth&quot;: 1, &quot;pointHoverRadius&quot;: 5, &quot;pointHoverBackgroundColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;pointHoverBorderColor&quot;: &quot;rgba(220,220,220,1)&quot;, &quot;pointHoverBorderWidth&quot;: 2, &quot;pointRadius&quot;: 1, &quot;pointHitRadius&quot;: 10, &quot;data&quot;: [ 65, 59, 80, 81, 56, 55, 40 ], &quot;spanGaps&quot;: false } ] }, &quot;options&quot;: {} }</summary></entry><entry xml:lang="zh-Hans"><title type="html">TeXt - Simplified Chinese | 简体中文</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html" rel="alternate" type="text/html" title="TeXt - Simplified Chinese | 简体中文" /><published>2017-04-13T00:00:00+08:00</published><updated>2017-04-13T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html">&lt;p&gt;在 _config.yml 或者头信息里设置 &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: zh-Hans&lt;/code&gt; 或 &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: zh&lt;/code&gt; 后，主题文字变为简体中文。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">{ &quot;type&quot;: &quot;line&quot;, &quot;data&quot;: { &quot;labels&quot;: [ &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot; ], &quot;datasets&quot;: [ { &quot;label&quot;: &quot;# of bugs&quot;, &quot;fill&quot;: false, &quot;lineTension&quot;: 0.1, &quot;backgroundColor&quot;: &quot;rgba(75,192,192,0.4)&quot;, &quot;borderColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;borderCapStyle&quot;: &quot;butt&quot;, &quot;borderDash&quot;: [], &quot;borderDashOffset&quot;: 0, &quot;borderJoinStyle&quot;: &quot;miter&quot;, &quot;pointBorderColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;pointBackgroundColor&quot;: &quot;#fff&quot;, &quot;pointBorderWidth&quot;: 1, &quot;pointHoverRadius&quot;: 5, &quot;pointHoverBackgroundColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;pointHoverBorderColor&quot;: &quot;rgba(220,220,220,1)&quot;, &quot;pointHoverBorderWidth&quot;: 2, &quot;pointRadius&quot;: 1, &quot;pointHitRadius&quot;: 10, &quot;data&quot;: [ 65, 59, 80, 81, 56, 55, 40 ], &quot;spanGaps&quot;: false } ] }, &quot;options&quot;: {} }</summary></entry><entry><title type="html">TeXt - Modify Date</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/19/modify-date.html" rel="alternate" type="text/html" title="TeXt - Modify Date" /><published>2017-04-19T00:00:00+08:00</published><updated>2017-04-19T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/19/modify-date</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/19/modify-date.html">&lt;p&gt;Article With Modify Date.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -900,10 +980,18 @@ gantt
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
 layout: article
-title: TeXt - Simplified Chinese | 简体中文
-tags:
-  - TeXt
-  - Simplified Chinese | 简
+title: Test - Article With Modify Date
+tags: Test English
+modify_date: 2017-09-09
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="Test" /><category term="English" /><summary type="html">Article With Modify Date.</summary></entry><entry xml:lang="zh-Hans"><title type="html">TeXt - Simplified Chinese | 简体中文</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html" rel="alternate" type="text/html" title="TeXt - Simplified Chinese | 简体中文" /><published>2017-04-13T00:00:00+08:00</published><updated>2017-04-13T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html">&lt;p&gt;在 _config.yml 或者头信息里设置 &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: zh-Hans&lt;/code&gt; 或 &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: zh&lt;/code&gt; 后，主题文字变为简体中文。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;strong&gt;front matter:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+...
 lang: zh-Hans
 ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -915,11 +1003,7 @@ lang: zh-Hans
 &lt;p&gt;&lt;strong&gt;front matter:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: article
-title: TeXt - Traditional Chinese | 繁體中文
-tags:
-  - TeXt
-  - Traditional Chinese | 繁
+...
 lang: zh-Hant
 ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -931,11 +1015,7 @@ lang: zh-Hant
 &lt;p&gt;&lt;strong&gt;front matter:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-layout: article
-title: TeXt - English
-tags:
-  - TeXt
-  - English
+...
 lang: en
 ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">English is the default language of TeXt, if you set lang in _config.yml to the other language but want make the page English, just set lang: en in the front matter.</summary></entry><entry><title type="html">Jekyll - Paragraphs</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html" rel="alternate" type="text/html" title="Jekyll - Paragraphs" /><published>2016-10-10T00:00:00+08:00</published><updated>2016-10-10T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2016/10/10/paragraphs</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html">&lt;p&gt;Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.&lt;/p&gt;
@@ -987,38 +1067,4 @@ lang: en
 
 Second level header
 ------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="Jekyll" /><category term="English" /><summary type="html">TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading</summary></entry><entry><title type="html">Jekyll - Emphasis</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2016/09/09/emphasis.html" rel="alternate" type="text/html" title="Jekyll - Emphasis" /><published>2016-09-09T00:00:00+08:00</published><updated>2016-09-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2016/09/09/emphasis</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2016/09/09/emphasis.html">&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*Should Old Acquaintance be forgot*
-_Should Old Acquaintance be forgot_
-**Should Old Acquaintance be forgot**
-__Should Old Acquaintance be forgot__
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This is a &lt;strong&gt;&lt;em&gt;text with light and strong emphasis&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;strong&gt;is &lt;em&gt;emphasized&lt;/em&gt; as well&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;em&gt;does _not_ work&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;strong&gt;does __not__ work either&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a ***text with light and strong emphasis***.
-This **is _emphasized_ as well**.
-This *does _not_ work*.
-This **does __not__ work either**.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="Jekyll" /><category term="English" /><summary type="html">Should Old Acquaintance be forgot Should Old Acquaintance be forgot Should Old Acquaintance be forgot Should Old Acquaintance be forgot</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="Jekyll" /><category term="English" /><summary type="html">TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading</summary></entry></feed>

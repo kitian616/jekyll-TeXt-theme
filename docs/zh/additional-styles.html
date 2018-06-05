@@ -275,9 +275,196 @@
             <article><div class="main__title"><h1>附加样式</h1></div><div class="article-info clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Tian Qi"/></meta></div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><p>Jekyll 使用 kramdown 作为默认 Markdown 解释器。kramdown 可以通过 ALDs<sup id="fnref:ALDs"><a href="#fn:ALDs" class="footnote">1</a></sup> 来设置块级元素或行内元素的属性。例如，可以通过 <code class="highlighter-rouge">{:.class-name1 .class-name-2}</code> 来给元素定义样式类。</p>
+  <div class="article-content" itemprop="articleBody"><p>Jekyll 使用 kramdown 作为默认 Markdown 解释器。kramdown 可以通过 ALDs<sup id="fnref:ALDs"><a href="#fn:ALDs" class="footnote">1</a></sup> 来设置块级元素或行内元素的属性。例如，可以通过 <code class="highlighter-rouge">{:.class-name1.class-name-2}</code> 来给元素定义样式类。</p>
 
 <p>TeXt 定义了一些样式类，你可以在文章和页面的方便的使用，可以在<a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">这里</a>看到示例和详细的说明.</p>
+
+<h2 id="提示">提示</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>样式名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>success</strong></td>
+    </tr>
+    <tr>
+      <td><strong>info</strong></td>
+    </tr>
+    <tr>
+      <td><strong>warning</strong></td>
+    </tr>
+    <tr>
+      <td><strong>error</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="success">Success Text.</p>
+
+<p class="info">Info Text.</p>
+
+<p class="warning">Warning Text.</p>
+
+<p class="error">Error Text.</p>
+
+<p><strong>markdown:</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Success Text.
+{:.success}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Info Text.
+{:.info}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Warning Text.
+{:.warning}
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error Text.
+{:.error}
+</code></pre></div></div>
+
+<h2 id="图片边框">图片边框</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>样式名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>border</strong></td>
+    </tr>
+    <tr>
+      <td><strong>shadow</strong></td>
+    </tr>
+    <tr>
+      <td><strong>rounded</strong></td>
+    </tr>
+    <tr>
+      <td><strong>circle</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Border</th>
+      <th>Shadow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="border" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="shadow" /></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.border}</code></td>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.shadow}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rounded</th>
+      <th>Circle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="circle" /></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.rounded}</code></td>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.circle}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Border + Rounded</th>
+      <th>Circle + Shadow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border+rounded" class="border rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="circle shadow" /></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.border.rounded}</code></td>
+      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.circle.shadow}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="按钮">按钮</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别</th>
+      <th>样式名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>base</strong></td>
+      <td>button</td>
+    </tr>
+    <tr>
+      <td><strong>type</strong></td>
+      <td>button--primary, button--secondary, button--success, button--info, button--warning, button--error</td>
+    </tr>
+    <tr>
+      <td><strong>shape</strong></td>
+      <td>button--pill, button--rounded, button--circle</td>
+    </tr>
+    <tr>
+      <td><strong>size</strong></td>
+      <td>button--md(default), button--sm, button--lg</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="#" class="button button--primary button--pill">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--pill}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--secondary button--pill">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--pill}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--primary button--rounded">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--rounded}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--primary button--circle">X</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[X](#){:.button.button--primary.button--circle}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--secondary button--rounded button--sm">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--rounded.button--sm}
+</code></pre></div></div>
+
+<p><a href="#" class="button button--secondary button--rounded button--lg">BUTTON</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--rounded.button--lg}
+</code></pre></div></div>
 
 <div class="footnotes">
   <ol>

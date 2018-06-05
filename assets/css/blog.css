@@ -551,9 +551,20 @@ ul.toc {
   list-style-type: none; }
   ul.toc > li {
     margin: .1rem 0; }
-    ul.toc > li.active a, ul.toc > li:active a {
-      background-color: #f2f2f2;
-      color: #fc4d50; }
+    ul.toc > li.active a {
+      background-color: #f2f2f2; }
+      ul.toc > li.active a, ul.toc > li.active a:link, ul.toc > li.active a:visited {
+        color: #fc4d50; }
+        ul.toc > li.active a svg path, ul.toc > li.active a:link svg path, ul.toc > li.active a:visited svg path {
+          fill: #fc4d50; }
+      ul.toc > li.active a:hover {
+        color: #fc4d50; }
+        ul.toc > li.active a:hover svg path {
+          fill: #fc4d50; }
+      ul.toc > li.active a.active, ul.toc > li.active a:active {
+        color: #fc4d50; }
+        ul.toc > li.active a.active svg path, ul.toc > li.active a:active svg path {
+          fill: #fc4d50; }
   ul.toc a {
     display: inline-block;
     padding: .2rem .8rem .2rem .8rem;
@@ -624,20 +635,89 @@ ul.toc {
     font-size: 0.75rem;
     line-height: 1.2; }
 
-ul.toc--navigator > .toc-h2, ul.toc--navigator > .toc-h2:link, ul.toc--navigator > .toc-h2:visited, ul.toc--navigator > .toc-h2 a, ul.toc--navigator > .toc-h2 a:link, ul.toc--navigator > .toc-h2 a:visited {
+ul.toc--navigator > li.active a {
+  background-color: transparent;
+  border: 0 solid #fc4d50;
+  border-left-width: 4px;
+  margin-left: -4px; }
+  ul.toc--navigator > li.active a, ul.toc--navigator > li.active a:link, ul.toc--navigator > li.active a:visited {
+    color: #fc4d50; }
+    ul.toc--navigator > li.active a svg path, ul.toc--navigator > li.active a:link svg path, ul.toc--navigator > li.active a:visited svg path {
+      fill: #fc4d50; }
+  ul.toc--navigator > li.active a:hover {
+    color: #fc4d50; }
+    ul.toc--navigator > li.active a:hover svg path {
+      fill: #fc4d50; }
+  ul.toc--navigator > li.active a.active, ul.toc--navigator > li.active a:active {
+    color: #fc4d50; }
+    ul.toc--navigator > li.active a.active svg path, ul.toc--navigator > li.active a:active svg path {
+      fill: #fc4d50; }
+ul.toc--navigator .toc-h2, ul.toc--navigator .toc-h2:link, ul.toc--navigator .toc-h2:visited, ul.toc--navigator .toc-h2 a, ul.toc--navigator .toc-h2 a:link, ul.toc--navigator .toc-h2 a:visited,
+ul.toc--navigator .toc-h3,
+ul.toc--navigator .toc-h3:link,
+ul.toc--navigator .toc-h3:visited,
+ul.toc--navigator .toc-h3 a,
+ul.toc--navigator .toc-h3 a:link,
+ul.toc--navigator .toc-h3 a:visited,
+ul.toc--navigator .toc-h4,
+ul.toc--navigator .toc-h4:link,
+ul.toc--navigator .toc-h4:visited,
+ul.toc--navigator .toc-h4 a,
+ul.toc--navigator .toc-h4 a:link,
+ul.toc--navigator .toc-h4 a:visited {
   color: #888; }
-  ul.toc--navigator > .toc-h2 svg path, ul.toc--navigator > .toc-h2:link svg path, ul.toc--navigator > .toc-h2:visited svg path, ul.toc--navigator > .toc-h2 a svg path, ul.toc--navigator > .toc-h2 a:link svg path, ul.toc--navigator > .toc-h2 a:visited svg path {
+  ul.toc--navigator .toc-h2 svg path, ul.toc--navigator .toc-h2:link svg path, ul.toc--navigator .toc-h2:visited svg path, ul.toc--navigator .toc-h2 a svg path, ul.toc--navigator .toc-h2 a:link svg path, ul.toc--navigator .toc-h2 a:visited svg path,
+  ul.toc--navigator .toc-h3 svg path,
+  ul.toc--navigator .toc-h3:link svg path,
+  ul.toc--navigator .toc-h3:visited svg path,
+  ul.toc--navigator .toc-h3 a svg path,
+  ul.toc--navigator .toc-h3 a:link svg path,
+  ul.toc--navigator .toc-h3 a:visited svg path,
+  ul.toc--navigator .toc-h4 svg path,
+  ul.toc--navigator .toc-h4:link svg path,
+  ul.toc--navigator .toc-h4:visited svg path,
+  ul.toc--navigator .toc-h4 a svg path,
+  ul.toc--navigator .toc-h4 a:link svg path,
+  ul.toc--navigator .toc-h4 a:visited svg path {
     fill: #888; }
-ul.toc--navigator > .toc-h2:hover, ul.toc--navigator > .toc-h2 a:hover {
-  color: #888; }
-  ul.toc--navigator > .toc-h2:hover svg path, ul.toc--navigator > .toc-h2 a:hover svg path {
-    fill: #888; }
-ul.toc--navigator > .toc-h2.active, ul.toc--navigator > .toc-h2:active, ul.toc--navigator > .toc-h2 a.active, ul.toc--navigator > .toc-h2 a:active {
-  color: #888; }
-  ul.toc--navigator > .toc-h2.active svg path, ul.toc--navigator > .toc-h2:active svg path, ul.toc--navigator > .toc-h2 a.active svg path, ul.toc--navigator > .toc-h2 a:active svg path {
-    fill: #888; }
-ul.toc--navigator > .toc-h2.active a {
-  color: #000; }
+ul.toc--navigator .toc-h2:hover, ul.toc--navigator .toc-h2 a:hover,
+ul.toc--navigator .toc-h3:hover,
+ul.toc--navigator .toc-h3 a:hover,
+ul.toc--navigator .toc-h4:hover,
+ul.toc--navigator .toc-h4 a:hover {
+  color: #fc4d50; }
+  ul.toc--navigator .toc-h2:hover svg path, ul.toc--navigator .toc-h2 a:hover svg path,
+  ul.toc--navigator .toc-h3:hover svg path,
+  ul.toc--navigator .toc-h3 a:hover svg path,
+  ul.toc--navigator .toc-h4:hover svg path,
+  ul.toc--navigator .toc-h4 a:hover svg path {
+    fill: #fc4d50; }
+ul.toc--navigator .toc-h2.active, ul.toc--navigator .toc-h2:active, ul.toc--navigator .toc-h2 a.active, ul.toc--navigator .toc-h2 a:active,
+ul.toc--navigator .toc-h3.active,
+ul.toc--navigator .toc-h3:active,
+ul.toc--navigator .toc-h3 a.active,
+ul.toc--navigator .toc-h3 a:active,
+ul.toc--navigator .toc-h4.active,
+ul.toc--navigator .toc-h4:active,
+ul.toc--navigator .toc-h4 a.active,
+ul.toc--navigator .toc-h4 a:active {
+  color: #fc4d50; }
+  ul.toc--navigator .toc-h2.active svg path, ul.toc--navigator .toc-h2:active svg path, ul.toc--navigator .toc-h2 a.active svg path, ul.toc--navigator .toc-h2 a:active svg path,
+  ul.toc--navigator .toc-h3.active svg path,
+  ul.toc--navigator .toc-h3:active svg path,
+  ul.toc--navigator .toc-h3 a.active svg path,
+  ul.toc--navigator .toc-h3 a:active svg path,
+  ul.toc--navigator .toc-h4.active svg path,
+  ul.toc--navigator .toc-h4:active svg path,
+  ul.toc--navigator .toc-h4 a.active svg path,
+  ul.toc--navigator .toc-h4 a:active svg path {
+    fill: #fc4d50; }
+ul.toc--navigator a {
+  padding: 0 0 0 .5rem;
+  margin: .2rem 0;
+  border-radius: 0; }
+  ul.toc--navigator a:hover {
+    background-color: transparent; }
 
 @-webkit-keyframes fade-in {
   from {
@@ -688,7 +768,8 @@ ul.toc--navigator > .toc-h2.active a {
       padding: 0 1rem; } }
 
 .header a {
-  font-weight: 400; }
+  font-weight: 400;
+  text-decoration: none; }
   .header a, .header a:link, .header a:visited {
     color: #222; }
     .header a svg path, .header a:link svg path, .header a:visited svg path {
@@ -700,20 +781,6 @@ ul.toc--navigator > .toc-h2.active a {
   .header a.active, .header a:active {
     color: #fc4d50; }
     .header a.active svg path, .header a:active svg path {
-      fill: #fc4d50; }
-.header .active a {
-  font-weight: 700; }
-  .header .active a, .header .active a:link, .header .active a:visited {
-    color: #000; }
-    .header .active a svg path, .header .active a:link svg path, .header .active a:visited svg path {
-      fill: #000; }
-  .header .active a:hover {
-    color: #fc4d50; }
-    .header .active a:hover svg path {
-      fill: #fc4d50; }
-  .header .active a.active, .header .active a:active {
-    color: #fc4d50; }
-    .header .active a.active svg path, .header .active a:active svg path {
       fill: #fc4d50; }
 .header > .main > .logo {
   float: left;
@@ -766,8 +833,8 @@ ul.toc--navigator > .toc-h2.active a {
 .header > .main > nav {
   display: block;
   float: right;
-  overflow-x: auto;
   white-space: nowrap;
+  overflow: auto;
   -webkit-overflow-scrolling: touch; }
   .header > .main > nav ul {
     margin: 0;
@@ -803,6 +870,24 @@ ul.toc--navigator > .toc-h2.active a {
     @media screen and (max-width: 500px) {
       .header > .main > nav ul {
         height: auto; } }
+    .header > .main > nav ul > li {
+      border: 0 solid transparent;
+      border-bottom-width: 4px; }
+      .header > .main > nav ul > li.active {
+        border: 0 solid #fc4d50;
+        border-bottom-width: 4px; }
+        .header > .main > nav ul > li.active a, .header > .main > nav ul > li.active a:link, .header > .main > nav ul > li.active a:visited {
+          color: #fc4d50; }
+          .header > .main > nav ul > li.active a svg path, .header > .main > nav ul > li.active a:link svg path, .header > .main > nav ul > li.active a:visited svg path {
+            fill: #fc4d50; }
+        .header > .main > nav ul > li.active a:hover {
+          color: #fc4d50; }
+          .header > .main > nav ul > li.active a:hover svg path {
+            fill: #fc4d50; }
+        .header > .main > nav ul > li.active a.active, .header > .main > nav ul > li.active a:active {
+          color: #fc4d50; }
+          .header > .main > nav ul > li.active a.active svg path, .header > .main > nav ul > li.active a:active svg path {
+            fill: #fc4d50; }
   @media screen and (max-width: 500px) {
     .header > .main > nav {
       float: none; } }
@@ -994,9 +1079,9 @@ ul.toc--navigator > .toc-h2.active a {
   .article-content table {
     display: block;
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-collapse: collapse; }
+    border-collapse: collapse;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; }
     .article-content table thead, .article-content table tfoot {
       background-color: rgba(0, 0, 0, 0.05); }
     .article-content table th, .article-content table td {
@@ -1323,34 +1408,30 @@ ul.toc--navigator > .toc-h2.active a {
     text-align: center;
     font-size: 0.75rem;
     margin: 1rem auto 0 auto; }
-  .footer .site-info__copyright {
+  .footer .site-info__rss {
     border: 0 solid #333;
-    border-right-width: 1px;
-    padding-right: .3rem;
-    margin-right: .1rem; }
+    border-left-width: 1px;
+    padding-left: .3rem;
+    margin-left: .1rem; }
   .footer .site-info__copyright, .footer .site-info__rss {
     line-height: 1.2; }
 
 .article-content p.success {
   border-radius: 0.4rem;
   padding: .5rem 1rem;
-  background-color: #eef9ea;
-  border: 1px solid #57c22d; }
+  background-color: #e6f6e0; }
 .article-content p.info {
   border-radius: 0.4rem;
   padding: .5rem 1rem;
-  background-color: #e9f4ff;
-  border: 1px solid #2593fc; }
+  background-color: #deefff; }
 .article-content p.warning {
   border-radius: 0.4rem;
   padding: .5rem 1rem;
-  background-color: #fef7ea;
-  border: 1px solid #f8ac30; }
+  background-color: #fef3e0; }
 .article-content p.error {
   border-radius: 0.4rem;
   padding: .5rem 1rem;
-  background-color: #fee9eb;
-  border: 1px solid #f22635; }
+  background-color: #fddee1; }
 
 .article-content img.shadow, .article-content .shadow > img {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
@@ -1366,8 +1447,8 @@ ul.toc--navigator > .toc-h2.active a {
   .layout--page .page__main {
     height: 100%; }
   .layout--page.layout--page--sidebar .page__main {
-    -webkit-overflow-scrolling: touch;
-    overflow: auto; }
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; }
   .layout--page .page__main-inner {
     position: relative;
     height: auto !important;
@@ -1430,8 +1511,8 @@ ul.toc--navigator > .toc-h2.active a {
     border-right-width: 1px;
     -webkit-transition: transform 0.4s;
     transition: transform 0.4s;
-    -webkit-overflow-scrolling: touch;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     box-sizing: border-box; }
     .layout--page .page__sidebar .sidebar-toc {
       padding: 1rem 1rem 2rem 2rem; }

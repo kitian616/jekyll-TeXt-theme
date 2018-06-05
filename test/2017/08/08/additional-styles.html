@@ -2,7 +2,7 @@
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>TeXt - Additional Styles - TeXt Theme</title>
-<meta name="description" content="AlertSuccess Text.Info Text.Warning Text.Error Text.">
+<meta name="description" content="Success!BUTTON">
 <link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="https://tianqi.name/jekyll-TeXt-theme/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/jekyll-TeXt-theme/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/jekyll-TeXt-theme/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
@@ -276,7 +276,15 @@
       </ul></div>
 <div class="js-article-content"><div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody"><h2 id="alert">Alert</h2>
+  <div class="article-content" itemprop="articleBody"><p class="success">Success!</p>
+
+<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="rounded" /></p>
+
+<p><a href="#" class="button button--success button--rounded button--lg">BUTTON</a></p>
+
+<!--more-->
+
+<h2 id="alert">Alert</h2>
 
 <p class="success">Success Text.</p>
 
@@ -285,8 +293,6 @@
 <p class="warning">Warning Text.</p>
 
 <p class="error">Error Text.</p>
-
-<!--more-->
 
 <p><strong>markdown:</strong></p>
 
@@ -367,6 +373,104 @@
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.circle.border.shadow}
 </code></pre></div></div>
+
+<h2 id="button">Button</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Primary</th>
+      <th>Secondary</th>
+      <th>Success</th>
+      <th>Info</th>
+      <th>Warning</th>
+      <th>Error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#" class="button button--primary button--pill">BUTTON</a></td>
+      <td><a href="#" class="button button--secondary button--pill">BUTTON</a></td>
+      <td><a href="#" class="button button--success button--pill">BUTTON</a></td>
+      <td><a href="#" class="button button--info button--pill">BUTTON</a></td>
+      <td><a href="#" class="button button--warning button--pill">BUTTON</a></td>
+      <td><a href="#" class="button button--error button--pill">BUTTON</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Primary</th>
+      <th>Secondary</th>
+      <th>Success</th>
+      <th>Info</th>
+      <th>Warning</th>
+      <th>Error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#" class="button button--primary button--rounded">BUTTON</a></td>
+      <td><a href="#" class="button button--secondary button--rounded">BUTTON</a></td>
+      <td><a href="#" class="button button--success button--rounded">BUTTON</a></td>
+      <td><a href="#" class="button button--info button--rounded">BUTTON</a></td>
+      <td><a href="#" class="button button--warning button--rounded">BUTTON</a></td>
+      <td><a href="#" class="button button--error button--rounded">BUTTON</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Primary</th>
+      <th>Secondary</th>
+      <th>Success</th>
+      <th>Info</th>
+      <th>Warning</th>
+      <th>Error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#" class="button button--primary button--circle">X</a></td>
+      <td><a href="#" class="button button--secondary button--circle">X</a></td>
+      <td><a href="#" class="button button--success button--circle">X</a></td>
+      <td><a href="#" class="button button--info button--circle">X</a></td>
+      <td><a href="#" class="button button--warning button--circle">X</a></td>
+      <td><a href="#" class="button button--error button--circle">X</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Small</th>
+      <th>Middle</th>
+      <th>Large</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#" class="button button--secondary button--pill button--sm">BUTTON</a></td>
+      <td><a href="#" class="button button--secondary button--pill button--md">BUTTON</a></td>
+      <td><a href="#" class="button button--secondary button--pill button--lg">BUTTON</a></td>
+    </tr>
+    <tr>
+      <td><a href="#" class="button button--secondary button--rounded button--sm">BUTTON</a></td>
+      <td><a href="#" class="button button--secondary button--rounded button--md">BUTTON</a></td>
+      <td><a href="#" class="button button--secondary button--rounded button--lg">BUTTON</a></td>
+    </tr>
+    <tr>
+      <td><a href="#" class="button button--secondary button--circle button--sm">X</a></td>
+      <td><a href="#" class="button button--secondary button--circle button--md">X</a></td>
+      <td><a href="#" class="button button--secondary button--circle button--lg">X</a></td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
   <footer class="article-footer"><meta itemprop="dateModified" content="2017-08-08T00:00:00+08:00"><div class="article-license"><div class="license card"><div class="clearfix"><a class="octocat" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2017-08-08-additional-styles.md">

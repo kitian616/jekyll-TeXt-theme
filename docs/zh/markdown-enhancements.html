@@ -305,6 +305,180 @@
     </tr>
   </tbody>
 </table>
+
+<h2 id="mathjax">Mathjax</h2>
+
+<p>When <script type="math/tex">a \ne 0</script>, there are two solutions to <script type="math/tex">ax^2 + bx + c = 0</script> and they are</p>
+
+<script type="math/tex; mode=display">x_1 = {-b + \sqrt{b^2-4ac} \over 2a}</script>
+
+<script type="math/tex; mode=display">x_2 = {-b - \sqrt{b^2-4ac} \over 2a} \notag</script>
+
+<p><strong>markdown:</strong></p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>When <span class="p">$$</span><span class="nb">a </span><span class="nv">\ne</span><span class="nb"> </span><span class="m">0</span><span class="p">$$</span>, there are two solutions to <span class="p">$$</span><span class="nb">ax</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> bx </span><span class="o">+</span><span class="nb"> c </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="p">$$</span> and they are
+<span class="p">$$</span><span class="nb">x</span><span class="p">_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="p">{</span><span class="o">-</span><span class="nb">b </span><span class="o">+</span><span class="nb"> </span><span class="nv">\sqrt</span><span class="p">{</span><span class="nb">b</span><span class="p">^</span><span class="m">2</span><span class="o">-</span><span class="m">4</span><span class="nb">ac</span><span class="p">}</span><span class="nb"> </span><span class="nv">\over</span><span class="nb"> </span><span class="m">2</span><span class="nb">a</span><span class="p">}$$</span>
+<span class="p">$$</span><span class="nb">x</span><span class="p">_</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="p">{</span><span class="o">-</span><span class="nb">b </span><span class="o">-</span><span class="nb"> </span><span class="nv">\sqrt</span><span class="p">{</span><span class="nb">b</span><span class="p">^</span><span class="m">2</span><span class="o">-</span><span class="m">4</span><span class="nb">ac</span><span class="p">}</span><span class="nb"> </span><span class="nv">\over</span><span class="nb"> </span><span class="m">2</span><span class="nb">a</span><span class="p">}</span><span class="nb"> </span><span class="nv">\notag</span><span class="p">$$</span>
+</code></pre></div></div>
+
+<p class="info"><strong>当 MathJax 激活后</strong>，你可以设置 <code class="highlighter-rouge">mathjax_autoNumber: true</code> 让公式自动编号，你可以使用 \notag 或者 \nonumber 阻止某条公式自动编号。</p>
+
+<h2 id="mermaid">Mermaid</h2>
+
+<pre><code class="language-mermaid">graph TB;
+    A[Do you have a problem in your life?]
+    B[Then don't worry]
+    C[Can you do something about it?]
+    A--no--&gt;B;
+    A--yes--&gt;C;
+    C--no--&gt;B;
+    C--yes--&gt;B;
+</code></pre>
+
+<p><strong>markdown:</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```mermaid
+graph TB;
+    A[Do you have a problem in your life?]
+    B[Then don't worry]
+    C[Can you do something about it?]
+    A--no--&gt;B;
+    A--yes--&gt;C;
+    C--no--&gt;B;
+    C--yes--&gt;B;
+```
+</code></pre></div></div>
+
+<p><a href="https://mermaidjs.github.io/">Mermaid</a> 支持以下三种示意图:</p>
+
+<ul>
+  <li>
+    <p><a href="https://mermaidjs.github.io/flowchart.html">Flowchart</a></p>
+  </li>
+  <li>
+    <p><a href="https://mermaidjs.github.io/sequenceDiagram.html">Sequence Diagram</a></p>
+  </li>
+  <li>
+    <p><a href="https://mermaidjs.github.io/gantt.html">Gant Diagram</a></p>
+  </li>
+</ul>
+
+<p>你可以在 <a href="https://tianqi.name/jekyll-TeXt-theme/test/2017/06/06/mermaid.html">这里</a>找到更多的示例。</p>
+
+<h2 id="chart">Chart</h2>
+
+<pre><code class="language-chart">{
+  "type": "line",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "label": "# of bugs",
+        "fill": false,
+        "lineTension": 0.1,
+        "backgroundColor": "rgba(75,192,192,0.4)",
+        "borderColor": "rgba(75,192,192,1)",
+        "borderCapStyle": "butt",
+        "borderDash": [],
+        "borderDashOffset": 0,
+        "borderJoinStyle": "miter",
+        "pointBorderColor": "rgba(75,192,192,1)",
+        "pointBackgroundColor": "#fff",
+        "pointBorderWidth": 1,
+        "pointHoverRadius": 5,
+        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
+        "pointHoverBorderColor": "rgba(220,220,220,1)",
+        "pointHoverBorderWidth": 2,
+        "pointRadius": 1,
+        "pointHitRadius": 10,
+        "data": [
+          65,
+          59,
+          80,
+          81,
+          56,
+          55,
+          40
+        ],
+        "spanGaps": false
+      }
+    ]
+  },
+  "options": {}
+}
+</code></pre>
+
+<p><strong>markdown:</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
+{
+  "type": "polarArea",
+  "data": {
+    "datasets": [
+      {
+        "data": [
+          11,
+          16,
+          7,
+          3,
+          14
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#4BC0C0",
+          "#FFCE56",
+          "#E7E9ED",
+          "#36A2EB"
+        ],
+        "label": "My dataset"
+      }
+    ],
+    "labels": [
+      "Red",
+      "Green",
+      "Yellow",
+      "Grey",
+      "Blue"
+    ]
+  },
+  "options": {}
+}
+```
+</code></pre></div></div>
+
+<p><a href="http://www.chartjs.org/docs/latest/">Chart.js</a> 支持以下 7 种图表:</p>
+
+<ul>
+  <li>
+    <p><a href="http://www.chartjs.org/docs/latest/charts/line.html">Line Chart</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.chartjs.org/docs/latest/charts/bar.html">Bar Chart</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.chartjs.org/docs/latest/charts/radar.html">Radar Chart</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.chartjs.org/latest/charts/polar.html">Polar Area Chart</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.chartjs.org/docs/latest/charts/doughnut.html">Pie Chart</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.chartjs.org/docs/latest/charts/doughnut.html">Doughnut Chart</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.chartjs.org/docs/latest/charts/bubble.html">Bubble Chart</a></p>
+  </li>
+</ul>
 </div>
 
   <footer class="article-footer"><meta itemprop="dateModified" content=""></footer></div>
