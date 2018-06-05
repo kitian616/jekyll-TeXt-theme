@@ -15,11 +15,7 @@ lang: zh-Hans
 **front matter:**
 
     ---
-    layout: article
-    title: TeXt - Simplified Chinese | 简体中文
-    tags:
-      - TeXt
-      - Simplified Chinese | 简
+    ...
     lang: zh-Hans
     ---
 

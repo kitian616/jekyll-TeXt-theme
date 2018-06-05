@@ -15,11 +15,7 @@ lang: zh-Hant
 **front matter:**
 
     ---
-    layout: article
-    title: TeXt - Traditional Chinese | 繁體中文
-    tags:
-      - TeXt
-      - Traditional Chinese | 繁
+    ...
     lang: zh-Hant
     ---
 

@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Test - Article with Modify Date
-key: 20150303
+title: TeXt - Modify Date
+key: 20170419
 tags: Test English
 modify_date: 2017-09-09
 ---
