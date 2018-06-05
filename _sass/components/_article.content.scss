@@ -76,8 +76,7 @@
     }
   }
   pre {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    @include overflow(auto);
     & > code {
       padding: 0;
       background-color: transparent;
@@ -137,8 +136,7 @@
               @include flexbox;
               & > .code {
                 padding: 0 0 1rem .5rem;
-                overflow: auto;
-                -webkit-overflow-scrolling: touch;
+                @include overflow(auto);
               }
             }
           }
@@ -191,9 +189,8 @@
   table {
     display: block;
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     border-collapse: collapse;
+    @include overflow(auto);
     thead, tfoot {
       background-color: $text-background-color;
     }

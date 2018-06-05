@@ -1,25 +1,21 @@
 .article-content {
   p.success {
     @include card(false);
-    background-color: mix($green, $background-color, 10%);
-    border: 1px solid $green;
+    background-color: mix($green, $background-color, 15%);
   }
 
   p.info {
     @include card(false);
-    background-color: mix($blue, $background-color, 10%);
-    border: 1px solid $blue;
+    background-color: mix($blue, $background-color, 15%);
   }
 
   p.warning {
     @include card(false);
-    background-color: mix($yellow, $background-color, 10%);
-    border: 1px solid $yellow;
+    background-color: mix($yellow, $background-color, 15%);
   }
 
   p.error {
     @include card(false);
-    background-color: mix($red, $background-color, 10%);
-    border: 1px solid $red;
+    background-color: mix($red, $background-color, 15%);
   }
 }

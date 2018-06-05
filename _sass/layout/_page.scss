@@ -6,8 +6,7 @@
   }
   &.layout--page--sidebar {
     .page__main {
-      -webkit-overflow-scrolling: touch;
-      overflow: auto;
+      @include overflow(auto);
     }
   }
 
@@ -64,8 +63,7 @@
     z-index: 998;
     @include split-line(right);
     @include transition(transform .4s);
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
+    @include overflow(auto);
     box-sizing: border-box;
     .sidebar-toc {
       padding: 1rem 1rem 2rem 2rem;

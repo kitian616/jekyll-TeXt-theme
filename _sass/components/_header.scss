@@ -1,12 +1,8 @@
 .header {
-
   a {
     font-weight: map-get($base, font-weight);
+    text-decoration: none;
     @include link-colors($text-color, $main-color-1, $main-color-1);
-  }
-  .active a {
-    font-weight: map-get($base, font-weight-bold);
-    @include link-colors($text-color-d, $main-color-1, $main-color-1);
   }
   & > .main > .logo {
     float: left;
@@ -39,9 +35,8 @@
   & > .main > nav {
     display: block;
     float: right;
-    overflow-x: auto;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    @include overflow(auto);
     ul {
       margin: 0;
       @include menu(3, 2, nowrap);
@@ -49,6 +44,15 @@
       height: map-get($layout, header-height);
       @include media-breakpoint-down(sm) {
         height: auto;
+      }
+      & > li {
+        @include split-line(bottom, 4px, transparent);
+        &.active {
+          @include split-line(bottom, 4px, $main-color-1);
+          a {
+            @include link-colors($main-color-1, $main-color-1, $main-color-1);
+          }
+        }
       }
     }
     @include media-breakpoint-down(sm) {

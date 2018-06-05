@@ -4,10 +4,10 @@ ul.toc {
   list-style-type: none;
   & > li {
     margin: .1rem 0;
-    @include active() {
+    &.active {
       a {
         background-color: $main-color-3;
-        color: $main-color-1;
+        @include link-colors($main-color-1);
       }
     }
   }
@@ -94,14 +94,31 @@ ul.toc {
 }
 
 ul.toc--navigator {
-  & > .toc-h2 {
-    &, a {
-      @include link-colors($text-color-l);
-    }
+  & > li {
     &.active {
       a {
-        color: $text-color-d;
+        background-color: transparent;
+        @include link-colors($main-color-1);
+        @include split-line(left, 4px, $main-color-1);
+        margin-left: -4px;
       }
+    }
+  }
+
+  .toc-h2,
+  .toc-h3,
+  .toc-h4 {
+    &, a {
+      @include link-colors($text-color-l, $main-color-1, $main-color-1);
+    }
+  }
+
+  a {
+    padding: 0 0 0 .5rem;
+    margin: .2rem 0;
+    border-radius: 0;
+    @include hover() {
+      background-color: transparent;
     }
   }
 }
