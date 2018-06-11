@@ -8,44 +8,32 @@
 {%- assign __path = '/feed.xml' -%}
 {%- include snippets/prepend-baseurl.html -%}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ __return | prepend: site.url }}">
-<!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ -->
-{%- assign __path = '/assets/images/logo/icon-180x180.png' -%}
+
+<!-- begin favicon -->
+{%- assign __path = '/assets/apple-touch-icon.png' -%}
 {%- include snippets/prepend-baseurl.html -%}
 <link rel="apple-touch-icon" sizes="180x180" href="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-167x167.png' -%}
+{%- assign __path = '/assets/favicon-32x32.png' -%}
 {%- include snippets/prepend-baseurl.html -%}
-<link rel="apple-touch-icon" sizes="167x167" href="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-152x152.png' -%}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ __return }}">
+{%- assign __path = '/assets/favicon-16x16.png' -%}
 {%- include snippets/prepend-baseurl.html -%}
-<link rel="apple-touch-icon" sizes="152x152" href="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-120x120.png' -%}
+<link rel="icon" type="image/png" sizes="16x16" href="{{ __return }}">
+{%- assign __path = '/assets/site.webmanifest' -%}
 {%- include snippets/prepend-baseurl.html -%}
-<link rel="apple-touch-icon" sizes="120x120" href="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-120x120.png' -%}
+<link rel="manifest" href="{{ __return }}">
+{%- assign __path = '/assets/safari-pinned-tab.svg' -%}
+{%- include snippets/prepend-baseurl.html -%}
+<link rel="mask-icon" href="{{ __return }}" color="#fc4d50">
+{%- assign __path = '/assets/favicon.ico' -%}
 {%- include snippets/prepend-baseurl.html -%}
 <link rel="shortcut icon" href="{{ __return }}">
-<!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
-<meta name="mobile-web-app-capable" content="yes">
-{%- assign __path = '/assets/images/logo/icon-192x192.png' -%}
+<meta name="msapplication-TileColor" content="#ffc40d">
+{%- assign __path = '/assets/browserconfig.xml' -%}
 {%- include snippets/prepend-baseurl.html -%}
-<link rel="icon" sizes="192x192" href="{{ __return }}">
-<!-- for Edge on Windows 10 https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx -->
-{%- assign __path = '/assets/images/logo/icon-144x144.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
-<meta name="msapplication-TileImage" content="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-310x310.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
-<meta name="msapplication-square310x310logo" content="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-310x150.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
-<meta name="msapplication-wide310x150logo" content="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-150x150.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
-<meta name="msapplication-square150x150logo" content="{{ __return }}">
-{%- assign __path = '/assets/images/logo/icon-70x70.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
-<meta name="msapplication-square70x70logo" content="{{ __return }}">
-<meta name="msapplication-TileColor" content="#eeeeee">
+<meta name="msapplication-config" content="{{ __return }}">
+<meta name="theme-color" content="#ffffff">
+<!-- end favicon -->
 
 {%- assign __path = '/assets/css/blog.css' -%}
 {%- include snippets/prepend-baseurl.html -%}

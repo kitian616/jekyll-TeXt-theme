@@ -10,9 +10,6 @@
     "demo-dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
     "demo-beta": "JEKYLL_ENV=beta bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
     "demo-production": "JEKYLL_ENV=production bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
-    "favicon": "gulp favicon",
-    "icons": "gulp icons",
-    "artwork": "gulp artwork",
     "gem-build": "rm -fv jekyll-text-theme-*.gem && gem build jekyll-text-theme.gemspec",
     "gem-push": "gem push jekyll-text-theme-*.gem"
   },
@@ -32,10 +29,6 @@
   },
   "homepage": "https://github.com/kitian616#readme",
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-svg2png": "^2.0.2",
-    "gulp-to-ico": "^1.0.0"
+    "eslint": "^4.19.1"
   }
 }

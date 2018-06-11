@@ -24,6 +24,8 @@ docs-en:
     children:
       - title:  Quick Start
         url:    /docs/en/quick-start
+      - title:  Structure
+        url:    /docs/en/structure
   - title:      Customization
     children:
       - title:  Configuration
@@ -32,6 +34,8 @@ docs-en:
         url:    /docs/en/navigation
       - title:  Layouts
         url:    /docs/en/layouts
+      - title:  Favicon
+        url:    /docs/en/favicon
   - title:      Content
     children:
       - title:  Writing Posts
