@@ -34,8 +34,8 @@ docs-en:
         url:    /docs/en/navigation
       - title:  Layouts
         url:    /docs/en/layouts
-      - title:  Favicon
-        url:    /docs/en/favicon
+      - title:  Logo and Favicon
+        url:    /docs/en/logo-and-favicon
   - title:      Content
     children:
       - title:  Writing Posts
@@ -59,6 +59,8 @@ docs-zh:
         url:    /docs/zh/navigation
       - title:  布局
         url:    /docs/zh/layouts
+      - title:  Logo 和 Favicon
+        url:    /docs/zh/logo-and-favicon
   - title:      内容
     children:
       - title:  撰写博客

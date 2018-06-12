@@ -56,6 +56,7 @@ You can choose these 6 built-in color themes below:
 - [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
 - [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
 - [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
+- [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
 
 ### Content
 

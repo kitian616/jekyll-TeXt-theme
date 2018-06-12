@@ -34,19 +34,14 @@
       @include transform(translateY(-50%));
       display: inline-block;
       vertical-align: middle;
-      & > svg {
-        display: block;
-        fill: $text-color-l;
-        height: 1.2rem;
-        width: 1.2rem;
-      }
+      font-size: map-get($base , font-size-sm);
     }
     &.not-empty > .icon-clear {
       display: block;
     }
     & > .icon-clear {
       display: none;
-      right: .5rem;
+      right: .8rem;
       @include link-colors($text-color-l, $text-color-d);
     }
     & > .icon-search {

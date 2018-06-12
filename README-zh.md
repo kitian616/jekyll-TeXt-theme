@@ -56,6 +56,7 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - [配置](https://tianqi.name/jekyll-TeXt-theme/docs/zh/configuration)
 - [导航栏](https://tianqi.name/jekyll-TeXt-theme/docs/zh/navigation)
 - [布局](https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts)
+- [Logo 和 Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/zh/logo-and-favicon)
 
 ### 内容
 
