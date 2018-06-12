@@ -1653,17 +1653,13 @@ ul.toc--navigator a {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     display: inline-block;
-    vertical-align: middle; }
-    .layout--all .search-box > .icon-search > svg, .layout--all .search-box > .icon-clear > svg {
-      display: block;
-      fill: #888;
-      height: 1.2rem;
-      width: 1.2rem; }
+    vertical-align: middle;
+    font-size: 0.875rem; }
   .layout--all .search-box.not-empty > .icon-clear {
     display: block; }
   .layout--all .search-box > .icon-clear {
     display: none;
-    right: .5rem; }
+    right: .8rem; }
     .layout--all .search-box > .icon-clear, .layout--all .search-box > .icon-clear:link, .layout--all .search-box > .icon-clear:visited {
       color: #888; }
       .layout--all .search-box > .icon-clear svg path, .layout--all .search-box > .icon-clear:link svg path, .layout--all .search-box > .icon-clear:visited svg path {
