@@ -1,0 +1,52 @@
+@mixin make-spacing($type, $direction, $spacer) {
+
+  $_type: null;
+  $_dirs: null;
+
+  @if ($type == 'm') {
+    $_type: 'margin';
+  } @else if ($type == 'p') {
+    $_type: 'padding';
+  }
+
+  @if ($direction == 't') {
+    $_dirs: ('top');
+  }
+  @else if ($direction == 'b') {
+    $_dirs: ('bottom');
+  }
+  @else if ($direction == 'l') {
+    $_dirs: ('left');
+  }
+  @else if ($direction == 'r') {
+    $_dirs: ('right');
+  }
+  @else if ($direction == 'x') {
+    $_dirs: ('left', 'right');
+  }
+  @else if ($direction == 'y') {
+    $_dirs: ('top', 'bottom');
+  }
+  @else if ($direction == '') {
+    $_dirs: ('top', 'bottom', 'left', 'right');
+  }
+
+  @each $dir in $_dirs {
+    #{$_type}-#{$dir} : map-get($spacers, $spacer);
+  }
+}
+
+
+$_types: ('m', 'p');
+$_directions: ('t', 'b', 'l', 'r', 'x', 'y', '');
+$_spacers: (0, 1, 2, 3, 4, 5);
+
+@each $i in $_types {
+  @each $j in $_directions {
+    @each $k in $_spacers {
+      .#{$i}#{$j}-#{$k} {
+        @include make-spacing($i, $j, $k);
+      }
+    }
+  }
+}

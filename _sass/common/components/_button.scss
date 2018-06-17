@@ -70,7 +70,6 @@
 
 @mixin button() {
   font-weight: map-get($button, font-weight);
-  box-sizing: border-box;
   line-height: map-get($base, line-height);
   outline: none;
   display: inline-block;

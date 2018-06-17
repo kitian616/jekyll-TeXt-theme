@@ -13,7 +13,7 @@ Success!
 
 ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.rounded}
 
-[BUTTON](#){:.button.button--success.button--rounded.button--lg}
+[BUTTON](#){:.button.button--info.button--rounded.button--lg}
 
 <!--more-->
 
@@ -47,61 +47,24 @@ Error Text.
 
 ## Photo Frame
 
-### Border
+| `Border` | `Shadow` |
+| ---- | ---- |
+| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_border"){:.border} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_shadow"){:.shadow} |
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_border"){:.border}
 
-**markdown:**
-
-    ![Lenna](path-to-image.jpg){:.border}
-
-### Shadow
-
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_shadow"){:.shadow}
-
-**markdown:**
-
-    ![Lenna](path-to-image.jpg){:.shadow}
-
-### Rounded
-
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.rounded}
-
-**markdown:**
-
-    ![Lenna](path-to-image.jpg){:.rounded}
-
-### Circle
-
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle"){:.circle}
-
-**markdown:**
-
-    ![Lenna](path-to-image.jpg){:.circle}
+| `Rounded` | `Circle` |
+| ---- | ---- |
+| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.rounded} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle"){:.circle} |
 
 ### Mixture
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_border+rounded"){:.border.rounded}
+| `Border+Rounded` | `Circle+Shadow` |
+| ---- | ---- |
+| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_border+rounded"){:.border.rounded} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle+shadow"){:.circle.shadow} |
 
-**markdown:**
-
-    ![Lenna](path-to-image.jpg){:.border.rounded}
-
----
-
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle+shadow"){:.circle.shadow}
-
-**markdown:**
-
-    ![Lenna](path-to-image.jpg){:.circle.shadow}
-
----
-
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle+border+shadow"){:.circle.border.shadow}
-
-**markdown:**
-
-    ![Lenna](path-to-image.jpg){:.circle.border.shadow}
+| `Rounded+Shadow` | `Circle+Border+Shadow` |
+| ---- | ---- |
+| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded+shadow"){:.circle.rounded.shadow} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle+border+shadow"){:.circle.border.shadow}
 
 ## Button
 

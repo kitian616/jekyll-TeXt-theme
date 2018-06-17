@@ -2,7 +2,7 @@
   font-size: map-get($base, font-size-sm);
   .article-info__left-col {
     float: left;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       float: none;
     }
   }
@@ -10,7 +10,7 @@
     float: right;
     color: $text-color-l;
     margin-left: map-get($button, padding-x-sm);
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       float: none;
     }
   }

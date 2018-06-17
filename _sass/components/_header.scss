@@ -14,7 +14,7 @@
       vertical-align: middle;
       width: map-get($base, font-size-h4) * 1.6;
       height: map-get($base, font-size-h4) * 1.6;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         margin-right: .5rem;
         width: map-get($base, font-size-h4) * 1.2;
         height: map-get($base, font-size-h4) * 1.2;
@@ -23,11 +23,11 @@
     & > a {
       display: inline-block;
       font-size: map-get($base, font-size-h4);
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         font-size: map-get($base, font-size-h4-small);
       }
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       float: none;
       height: map-get($layout, header-height-sm);
     }
@@ -42,7 +42,7 @@
       @include menu(3, 2, nowrap);
       @include align-items(center);
       height: map-get($layout, header-height);
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         height: auto;
       }
       & > li {
@@ -55,7 +55,7 @@
         }
       }
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       float: none;
     }
   }

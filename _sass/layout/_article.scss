@@ -16,7 +16,6 @@
     padding-top: map-get($base, vertical-space-lg) / 2;
     @include split-line(top, 4px);
     & > .article-previous, & > .article-next {
-      box-sizing: border-box;
       width: 50%;
       & > span {
         font-weight: map-get($base, font-weight-bold);

@@ -20,7 +20,6 @@
       display: none;
       float: right;
       & > aside {
-        box-sizing: border-box;
         width: map-get($layout, aside-width);
         position: absolute;
         overflow: hidden;
@@ -64,7 +63,6 @@
     @include split-line(right);
     @include transition(transform .4s);
     @include overflow(auto);
-    box-sizing: border-box;
     .sidebar-toc {
       padding: 1rem 1rem 2rem 2rem;
     }

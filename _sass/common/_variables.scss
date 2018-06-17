@@ -74,7 +74,8 @@ $layout: (
 // 0       500      1024      ∞
 
 $responsive: (
-  sm:                      500px,
+  sm:                      0px,
+  md:                      500px,
   lg:                      1024px
 );
 

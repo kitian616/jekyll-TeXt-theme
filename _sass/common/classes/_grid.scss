@@ -1,0 +1,48 @@
+$grid-columns: 12;
+
+@mixin make-col($columns) {
+  .col-#{$columns} {
+    display: inline-block;
+    letter-spacing: normal;
+    width: percentage($columns / $grid-columns);
+  }
+}
+
+@mixin make-md-col($columns) {
+  @include media-breakpoint-down(lg) {
+    .col-md-#{$columns} {
+      display: inline-block;
+      letter-spacing: normal;
+      width: percentage($columns / $grid-columns);
+    }
+  }
+}
+
+@mixin make-sm-col($columns) {
+  @include media-breakpoint-down(md) {
+    .col-sm-#{$columns} {
+      display: inline-block;
+      letter-spacing: normal;
+      width: percentage($columns / $grid-columns);
+    }
+  }
+}
+
+.grid {
+  & > .row {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    letter-spacing: -.31em;
+    & > {
+      @for $i from 1 through $grid-columns {
+        @include make-col($i);
+      }
+      @for $i from 1 through $grid-columns {
+        @include make-md-col($i);
+      }
+      @for $i from 1 through $grid-columns {
+        @include make-sm-col($i);
+      }
+    }
+  }
+}
