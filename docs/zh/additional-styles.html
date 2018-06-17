@@ -252,7 +252,7 @@
   <div class="page__mask js-sidebar-hide"></div><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
-    <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <div class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
 <style type="text/css">
 	.st0{fill:#666666;}
@@ -350,62 +350,99 @@
   </tbody>
 </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Border</th>
-      <th>Shadow</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="border" /></td>
-      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="shadow" /></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.border}</code></td>
-      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.shadow}</code></td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="border">Border</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Rounded</th>
-      <th>Circle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="rounded" /></td>
-      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="circle" /></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.rounded}</code></td>
-      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.circle}</code></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div class="col-5 col-md-4 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="border" /></p>
+    </div>
+<div class="col-7 col-md-8 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.border}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Border + Rounded</th>
-      <th>Circle + Shadow</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border+rounded" class="border rounded" /></td>
-      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="circle shadow" /></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.border.rounded}</code></td>
-      <td><code class="highlighter-rouge">![Lenna](path-to-image.jpg){:.circle.shadow}</code></td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="shadow">Shadow</h3>
+
+<div class="grid">
+<div class="row">
+<div class="col-5 col-md-4 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="shadow" /></p>
+    </div>
+<div class="col-7 col-md-8 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.shadow}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
+
+<h3 id="rounded">Rounded</h3>
+
+<div class="grid">
+<div class="row">
+<div class="col-5 col-md-4 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="rounded" /></p>
+    </div>
+<div class="col-7 col-md-8 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.rounded}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
+
+<h3 id="circle">Circle</h3>
+
+<div class="grid">
+<div class="row">
+<div class="col-5 col-md-4 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle" class="circle" /></p>
+    </div>
+<div class="col-7 col-md-8 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.circle}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
+
+<h3 id="mixture">Mixture</h3>
+
+<div class="grid">
+<div class="row">
+<div class="col-5 col-md-4 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border+rounded" class="border rounded" /></p>
+    </div>
+<div class="col-7 col-md-8 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.border.rounded}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
+
+<div class="grid">
+<div class="row">
+<div class="col-5 col-md-4 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle+shadow" class="circle shadow" /></p>
+    </div>
+<div class="col-7 col-md-8 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.circle.shadow}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
+
+<div class="grid">
+<div class="row">
+<div class="col-5 col-md-4 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle+border+shadow" class="circle border shadow" /></p>
+    </div>
+<div class="col-7 col-md-8 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.circle.border.shadow}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
 <h2 id="按钮">按钮</h2>
 
@@ -436,35 +473,107 @@
   </tbody>
 </table>
 
-<p><a href="#" class="button button--primary button--pill">BUTTON</a></p>
+<h3 id="type">Type</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--pill}
-</code></pre></div></div>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--primary button--pill">BUTTON</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--pill}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<p><a href="#" class="button button--secondary button--pill">BUTTON</a></p>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--secondary button--pill">BUTTON</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--pill}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--pill}
-</code></pre></div></div>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--success button--pill">BUTTON</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--success.button--pill}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<p><a href="#" class="button button--primary button--rounded">BUTTON</a></p>
+<h3 id="shape">Shape</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--rounded}
-</code></pre></div></div>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--primary button--pill">BUTTON</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--pill}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<p><a href="#" class="button button--primary button--circle">X</a></p>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--primary button--rounded">BUTTON</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--rounded}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[X](#){:.button.button--primary.button--circle}
-</code></pre></div></div>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--primary button--circle">X</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[X](#){:.button.button--primary.button--circle}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<p><a href="#" class="button button--secondary button--rounded button--sm">BUTTON</a></p>
+<h3 id="size">Size</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--rounded.button--sm}
-</code></pre></div></div>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--primary button--rounded button--sm">BUTTON</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--primary.button--rounded.button--sm}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
-<p><a href="#" class="button button--secondary button--rounded button--lg">BUTTON</a></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BUTTON](#){:.button.button--secondary.button--rounded.button--lg}
-</code></pre></div></div>
+<div class="grid">
+<div class="row">
+<div class="col-3 col-md-3 col-sm-12">
+      <p><a href="#" class="button button--primary button--circle button--lg">X</a></p>
+    </div>
+<div class="col-9 col-md-9 col-sm-12 pl-2">
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[X](#){:.button.button--primary.button--circle.button--lg}
+</code></pre></div>      </div>
+    </div>
+</div>
+</div>
 
 <div class="footnotes">
   <ol>

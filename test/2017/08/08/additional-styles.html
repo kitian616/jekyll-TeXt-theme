@@ -244,7 +244,7 @@
   <body><div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
       <div class="page__header"><header class="header">
   <div class="main clearfix">
-    <div class='logo'><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <div class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
 <style type="text/css">
 	.st0{fill:#666666;}
@@ -280,7 +280,7 @@
 
 <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="rounded" /></p>
 
-<p><a href="#" class="button button--success button--rounded button--lg">BUTTON</a></p>
+<p><a href="#" class="button button--info button--rounded button--lg">BUTTON</a></p>
 
 <!--more-->
 
@@ -311,68 +311,67 @@
 
 <h2 id="photo-frame">Photo Frame</h2>
 
-<h3 id="border">Border</h3>
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">Border</code></th>
+      <th><code class="highlighter-rouge">Shadow</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="border" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="shadow" /></td>
+    </tr>
+  </tbody>
+</table>
 
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border" class="border" /></p>
-
-<p><strong>markdown:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.border}
-</code></pre></div></div>
-
-<h3 id="shadow">Shadow</h3>
-
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_shadow" class="shadow" /></p>
-
-<p><strong>markdown:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.shadow}
-</code></pre></div></div>
-
-<h3 id="rounded">Rounded</h3>
-
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="rounded" /></p>
-
-<p><strong>markdown:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.rounded}
-</code></pre></div></div>
-
-<h3 id="circle">Circle</h3>
-
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle" class="circle" /></p>
-
-<p><strong>markdown:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.circle}
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">Rounded</code></th>
+      <th><code class="highlighter-rouge">Circle</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle" class="circle" /></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="mixture">Mixture</h3>
 
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border+rounded" class="border rounded" /></p>
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">Border+Rounded</code></th>
+      <th><code class="highlighter-rouge">Circle+Shadow</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_border+rounded" class="border rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle+shadow" class="circle shadow" /></td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>markdown:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.border.rounded}
-</code></pre></div></div>
-
-<hr />
-
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle+shadow" class="circle shadow" /></p>
-
-<p><strong>markdown:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.circle.shadow}
-</code></pre></div></div>
-
-<hr />
-
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle+border+shadow" class="circle border shadow" /></p>
-
-<p><strong>markdown:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Lenna](path-to-image.jpg){:.circle.border.shadow}
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th><code class="highlighter-rouge">Rounded+Shadow</code></th>
+      <th><code class="highlighter-rouge">Circle+Border+Shadow</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded+shadow" class="circle rounded shadow" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_circle+border+shadow" class="circle border shadow" /></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="button">Button</h2>
 
