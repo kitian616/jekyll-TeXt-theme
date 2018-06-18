@@ -1,0 +1,104 @@
+.layout--landing {
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .section {
+    text-align: center;
+    background-color: $text-background-color;
+    @include flexbox();
+    @include align-items(center);
+    h1 {
+      font-size: map-get($base, font-size-h1-lg);
+    }
+    h2 {
+      font-size: map-get($base, font-size-h2-lg);
+    }
+    h3 {
+      font-size: map-get($base, font-size-h3-lg);
+    }
+    p {
+      font-size: map-get($base, font-size-lg);
+    }
+  }
+
+  .section--light {
+    h1, h2, h3 {
+      color: $text-color-theme-light-d;
+    }
+    h4, h5 {
+      color: $text-color-theme-light;
+    }
+    h6 {
+      color: $text-color-theme-light-l;
+    }
+    color: $text-color-theme-light;
+  }
+
+  .section--dark {
+    h1, h2, h3 {
+      color: $text-color-theme-dark-d;
+    }
+    h4, h5 {
+      color: $text-color-theme-dark;
+    }
+    h6 {
+      color: $text-color-theme-dark-l;
+    }
+    color: $text-color-theme-dark;
+  }
+
+  .section__content {
+    width: 100%;
+  }
+
+  .content__cover {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .content__row {
+    margin-bottom: map-get($spacers, 5);
+  }
+  .content__col {
+    padding: 0 map-get($spacers, 2);
+  }
+
+  .overlay {
+    min-height: 40rem;
+    padding: map-get($spacers, 5) 0;
+    background-image: url(/docs/assets/images/cover1.jpeg);
+    background-size: cover;
+    @include media-breakpoint-down(md) {
+      min-height: 28rem;
+    }
+    .section__content {
+      min-width: 400px;
+      @include media-breakpoint-down(md) {
+        min-width: auto;
+        width: 100%;
+        padding: 0 map-get($spacers, 3);
+      }
+    }
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  .feature {
+    margin: map-get($spacers, 5);
+    padding: map-get($spacers, 5);
+    padding-bottom: 0;
+    @include media-breakpoint-down(lg) {
+      margin: map-get($spacers, 3);
+      padding: map-get($spacers, 5) map-get($spacers, 3);
+      padding-bottom: 0;
+    }
+    @include media-breakpoint-down(md) {
+      margin: map-get($spacers, 2) 0;
+      padding: map-get($spacers, 4) map-get($spacers, 3);
+      padding-bottom: 0;
+    }
+  }
+}

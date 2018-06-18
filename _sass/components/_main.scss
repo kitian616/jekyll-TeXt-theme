@@ -13,10 +13,19 @@
   }
 }
 
-.has-aside .main {
-  max-width: map-get($layout, content-max-width) + map-get($layout, aside-width);
-  @include media-breakpoint-down(lg) {
-    max-width: map-get($layout, content-max-width);
-    padding: 0 1rem;
+.has-aside {
+  .main {
+    max-width: map-get($layout, content-max-width) + map-get($layout, aside-width);
+    @include media-breakpoint-down(lg) {
+      max-width: map-get($layout, content-max-width);
+      padding: 0 1rem;
+    }
+  }
+}
+
+.full-width {
+  .main {
+    max-width: 100%;
+    width: 100%;
   }
 }

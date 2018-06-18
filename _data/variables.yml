@@ -13,6 +13,8 @@ default:
   toc:
     selectors: 'h1,h2,h3'
   show_title: true
+  show_header: true
+  full_width: false
   pageview: false
   excerpt_type: text
   sources: bootcdn

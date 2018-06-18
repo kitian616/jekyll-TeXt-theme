@@ -3,18 +3,10 @@ header:
     url:        /docs/en/quick-start
   - title:      文档
     url:        /docs/zh/quick-start
-  - titles:
-      en:       Archive
-      zh:       归档
-      zh-Hans:  归档
-      zh-Hant:  歸檔
+  - title:      Archive
     url:        /archive.html
-  - titles:
-      en:       About
-      zh:       关于
-      zh-Hans:  关于
-      zh-Hant:  關於
-    url:        /about.html
+  - title:      About
+    url:        /about/
   - title:      GitHub
     url:        https://github.com/kitian616/jekyll-TeXt-theme
 

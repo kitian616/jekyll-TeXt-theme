@@ -21,6 +21,7 @@ ul.toc {
       text-decoration: none;
     }
     @include hover() {
+      color: $text-color-3;
       background-color: $main-color-3;
       text-decoration: none;
     }

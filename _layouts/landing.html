@@ -1,0 +1,115 @@
+---
+layout: page
+show_title: false
+show_header: false
+full_width: true
+---
+<div class="layout--landing">
+{%- if page.data.theme == 'light' -%}
+  <section class="section section--light overlay" style="background-image: url({{ page.data.background_image.src }});">
+{%- elsif page.data.theme == 'dark' -%}
+  <section class="section section--dark overlay" style="background-image: url({{ page.data.background_image.src }});">
+{%- else -%}
+  <section class="section overlay" style="background-image: url({{ page.data.background_image.src }});">
+{%- endif -%}
+    <div class="section__content">
+      <h1>{{ page.data.title }}</h1>
+      {%- if page.data.sub_title -%}
+      <h2>{{ page.data.sub_title }}</h2>
+      {%- endif -%}
+      {%- if page.data.actions -%}
+      <ul class="menu menu--center">
+      {%- for action in page.data.actions -%}
+        {%- assign _type = action.type | default: 'info' -%}
+        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
+      {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
+  </section>
+
+  {%- for feature in page.data.features -%}
+  {%- if feature.theme == 'light' -%}
+    <section class="section section--light feature">
+  {%- elsif feature.theme == 'dark' -%}
+    <section class="section section--dark feature">
+  {%- else -%}
+    <section class="section feature">
+  {%- endif -%}
+      <div class="section__content">
+        <div class="content__row">
+
+          <h3>{{ feature.title }}</h3>
+            {%- if feature.description-%}
+          <p>{{ feature.description }}</p>
+          {%- endif -%}
+
+          {%- if feature.actions -%}
+            <ul class="menu menu--center">
+              {%- for action in feature.actions -%}
+                {%- assign _type = action.type | default: 'info' -%}
+                <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+        </div>
+
+        {%- if feature.children -%}
+          {%- assign _size = feature.children | size  -%}
+          <div class="grid">
+            <div class="row">
+            {%- for item in feature.children -%}
+              <div class="content__col col-{{ 12 | divided_by: _size }} col-sm-12">
+
+                <div class="content__row">
+                  <h4>{{ item.title }}</h4>
+
+                  {%- if item.description-%}
+                    <p>{{ item.description }}</p>
+                  {%- endif -%}
+
+                  {%- if item.actions -%}
+                    <ul class="menu menu--center">
+                      {%- for action in item.actions -%}
+                        {%- assign _type = action.type | default: 'info' -%}
+                        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </div>
+
+                {%- if item.image -%}
+                  {%- if item.image.is_row -%}
+                    <div class="content__row">
+                  {%- endif -%}
+                      <img class="content__cover" src="{{ item.image.src }}" style="{{ item.image.style }}"></img>
+                  {%- if item.image.is_row -%}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+
+              </div>
+            {%- endfor-%}
+
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if feature.image -%}
+          {%- if feature.image.is_row -%}
+            <div class="content__row">
+          {%- endif -%}
+              <img class="content__cover" src="{{ feature.image.src }}" style="{{ feature.image.style }}"></img>
+          {%- if feature.image.is_row -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+
+      </div>
+    </section>
+  {%- endfor -%}
+  <div class="page__footer">{%- include footer.html -%}</div>
+</div>
+
+{{ content }}

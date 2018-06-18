@@ -5,35 +5,45 @@
 ///
 
 // main colors
-$main-color-1:     #fca24d;
+$main-color-1:     #fa510f;
 $text-color-1:     #fff;
 
 $main-color-2:     #fc4d50;
 $text-color-2:     #fff;
 
-$main-color-3:     #fa510f;
-$text-color-3:     #fff;
+$main-color-3:     #f2f2f2;
+$text-color-3:     #333;
 
 // background colors
-$background-color: #fff1eb;
+$background-color: #fff;
 // text colors
-$text-color-d:     rgba(#000, .95);
-$text-color:       rgba(#000, .85);
-$text-color-l:     rgba(#000, .5);
+$text-color-theme-light-d: rgba(#000, .95);
+$text-color-theme-light:   rgba(#000, .85);
+$text-color-theme-light-l: rgba(#000, .5);
+
+$text-color-theme-dark-d:  #fff;
+$text-color-theme-dark:    rgba(#fff, .95);
+$text-color-theme-dark-l:  rgba(#fff, .85);
+
+$text-color-d:     $text-color-theme-light-d;
+$text-color:       $text-color-theme-light;
+$text-color-l:     $text-color-theme-light-l;
+
 $text-background-color: rgba(#000, .05);
 
 // border and shadow colors
 $border-color:     mix(#000, $background-color, 20%);
 $border-color-l:   mix(#000, $background-color, 10%);
-$select-color:     rgba($main-color-3, .5);
 $decorate-color:   rgba(#000, .1);
 $mask-color:       rgba(#000, .8);
+$select-color:     rgba($main-color-3, .5);
 
 // function colors
 $green:           #57c22d;
 $blue:            #2593fc;
 $yellow:          #f8ac30;
 $red:             #f22635;
+$text-color-function: #fff;
 
 // logo colors
 $mail-color:       #0072c5;

@@ -107,19 +107,19 @@
 }
 
 .button--success {
-  @include button-colors($text-color-1, $green);
+  @include button-colors($text-color-function, $green);
 }
 
 .button--info {
-  @include button-colors($text-color-1, $blue);
+  @include button-colors($text-color-function, $blue);
 }
 
 .button--warning {
-  @include button-colors($text-color-1, $yellow);
+  @include button-colors($text-color-function, $yellow);
 }
 
 .button--error {
-  @include button-colors($text-color-1, $red);
+  @include button-colors($text-color-function, $red);
 }
 
 .button--pill {

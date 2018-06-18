@@ -1,0 +1,78 @@
+---
+layout: landing
+title: About
+show_header: false
+show_title: false
+full_width: true
+permalink: /about/
+data:
+  title: TeXt
+  sub_title: 'a Jekyll theme for <span class="tips"></span>.'
+  theme: light
+  actions:
+    - text: Getting Started
+      type: primary
+      href: https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start
+    - text: GitHub
+      href: https://github.com/kitian616/jekyll-TeXt-theme
+  background_image:
+    src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/cover1.jpeg
+  features:
+    - title: Fully Responsive
+      description: This theme will look great on any device, no matter the size!
+      image:
+        src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/TeXt-responsive.png
+    - title: Super Customizable
+      description: Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.
+      actions:
+        - text: Learn More
+          href: https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration
+    - title: Plenty Layouts
+      description: With the help of layouts, you can easily make different type of pages.
+      actions:
+        - text: Learn More
+          href: https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts
+    - title: Enhanced User Experience
+      children:
+        - title: Additional styles
+          description: TeXt offer some CSS classes that you can use in the post, including alert, photo frame, button and grid.
+          actions:
+            - text: Learn More
+              href: https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles
+        - title: Markdown Enhancements
+          description: You can easily add Mathjax, Mermaid and Charts in TeXt.
+          actions:
+            - text: Learn More
+              href: https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements
+    - title: 100% Free
+      description: Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!
+    - title: Tip Me
+      children:
+        - title: WeChat
+          image:
+            src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg
+            style: 'max-width: 200px; max-height: 200px'
+            is_row: true
+        - title: Alipay
+          image:
+            src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg
+            style: 'max-width: 200px; max-height: 200px'
+            is_row: true
+        - title: PayPal
+          image:
+            src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_paypal.png
+            style: 'max-width: 200px; max-height: 200px'
+            is_row: true
+
+---
+
+<script src="https://cdn.jsdelivr.net/npm/typeit@5.10.1/dist/typeit.min.js"></script>
+<script>
+new TypeIt('.tips', {
+    strings: ['Personal Site', 'Blog', 'Project', 'Documentation'],
+    speed: 100,
+    breakLines: false,
+    autoStart: true,
+    loop: true
+});
+</script>
