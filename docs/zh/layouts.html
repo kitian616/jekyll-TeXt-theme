@@ -276,22 +276,24 @@
     ARTICLE[article]
     HOME[home]
     ARCHIVE[archive]
+    LANDING[landing]
     404[404]
     NONE--&gt;BASE;
     BASE--&gt;PAGE;
     PAGE--&gt;ARTICLE;
     PAGE--&gt;HOME;
     PAGE--&gt;ARCHIVE;
+    PAGE--&gt;LANDING;
     PAGE--&gt;404;
 </code></pre>
 
 <h2 id="base-布局">Base 布局</h2>
 
-<p>继承于 none.</p>
+<p>继承于 None。</p>
 
 <h2 id="page-布局">Page 布局</h2>
 
-<p>继承于 Base 布局.</p>
+<p>继承于 Base 布局。</p>
 
 <table>
   <thead>
@@ -313,14 +315,19 @@
       <td>该页的语言</td>
     </tr>
     <tr>
+      <td><strong>show_header</strong></td>
+      <td>true(default), false</td>
+      <td>该页是否显示 Header， 设置为 <code class="highlighter-rouge">false</code> 隐藏</td>
+    </tr>
+    <tr>
       <td><strong>show_title</strong></td>
       <td>true(default), false</td>
       <td>该页是否显示标题，默认显示，设置为 <code class="highlighter-rouge">false</code> 隐藏</td>
     </tr>
     <tr>
-      <td><strong>modify_date</strong></td>
-      <td>-</td>
-      <td>该文章的最后修改时间, 其格式为 <code class="highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code> 和 <code class="highlighter-rouge">date</code> 的格式相同</td>
+      <td><strong>full_width</strong></td>
+      <td>true, false(default)</td>
+      <td>该页内容是否占据全部宽度，设置为 <code class="highlighter-rouge">true</code> 开启</td>
     </tr>
     <tr>
       <td><strong>comment</strong></td>
@@ -362,7 +369,7 @@
 
 <h2 id="article-布局">Article 布局</h2>
 
-<p>继承于 Page 布局.</p>
+<p>继承于 Page 布局。</p>
 
 <table>
   <tbody>
@@ -381,15 +388,19 @@
 
 <h2 id="home-布局">Home 布局</h2>
 
-<p>继承于 Page 布局.</p>
+<p>继承于 Page 布局。</p>
 
 <h2 id="archive-布局">Archive 布局</h2>
 
-<p>继承于 Page 布局.</p>
+<p>继承于 Page 布局。</p>
+
+<h2 id="landing-布局">Landing 布局</h2>
+
+<p>继承于 Page 布局。</p>
 
 <h2 id="404-布局">404 布局</h2>
 
-<p>继承于 Page 布局.</p>
+<p>继承于 Page 布局。</p>
 </div>
 
   <footer class="article-footer"><meta itemprop="dateModified" content=""></footer></div>

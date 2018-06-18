@@ -276,18 +276,20 @@
     ARTICLE[article]
     HOME[home]
     ARCHIVE[archive]
+    LANDING[landing]
     404[404]
     NONE--&gt;BASE;
     BASE--&gt;PAGE;
     PAGE--&gt;ARTICLE;
     PAGE--&gt;HOME;
     PAGE--&gt;ARCHIVE;
+    PAGE--&gt;LANDING;
     PAGE--&gt;404;
 </code></pre>
 
 <h2 id="base-layout">Base Layout</h2>
 
-<p>Base on none.</p>
+<p>Base on None.</p>
 
 <h2 id="page-layout">Page Layout</h2>
 
@@ -305,12 +307,27 @@
     <tr>
       <td><strong>key</strong></td>
       <td>-</td>
-      <td>Unique key for the post, required by Comment and Pageviews. begin with a letter (<code class="highlighter-rouge">[A-Za-z]</code>) and may be followed by any number of letters, digits (<code class="highlighter-rouge">[0-9]</code>), hyphens (<code class="highlighter-rouge">-</code>), underscores (<code class="highlighter-rouge">_</code>), colons (<code class="highlighter-rouge">:</code>), and periods (<code class="highlighter-rouge">.</code>)</td>
+      <td>Unique key for the post, required by Comment and Pageview. begin with a letter (<code class="highlighter-rouge">[A-Za-z]</code>) and may be followed by any number of letters, digits (<code class="highlighter-rouge">[0-9]</code>), hyphens (<code class="highlighter-rouge">-</code>), underscores (<code class="highlighter-rouge">_</code>), colons (<code class="highlighter-rouge">:</code>), and periods (<code class="highlighter-rouge">.</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>lang</strong></td>
+      <td>en</td>
+      <td>Language of this page</td>
+    </tr>
+    <tr>
+      <td><strong>show_header</strong></td>
+      <td>true(default), false</td>
+      <td>Set as <code class="highlighter-rouge">false</code> to hide header on this page</td>
     </tr>
     <tr>
       <td><strong>show_title</strong></td>
       <td>true(default), false</td>
-      <td>Set as false to hide title on this page</td>
+      <td>Set as <code class="highlighter-rouge">false</code> to hide title on this page</td>
+    </tr>
+    <tr>
+      <td><strong>full_width</strong></td>
+      <td>true, false(default)</td>
+      <td>Set as <code class="highlighter-rouge">true</code> to make main full width on this page</td>
     </tr>
     <tr>
       <td><strong>comment</strong></td>
@@ -374,6 +391,10 @@
 <p>Base on Page Layout.</p>
 
 <h2 id="archive-layout">Archive Layout</h2>
+
+<p>Base on Page Layout.</p>
+
+<h2 id="landing-layout">Landing Layout</h2>
 
 <p>Base on Page Layout.</p>
 
