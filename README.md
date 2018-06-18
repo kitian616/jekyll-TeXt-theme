@@ -8,7 +8,7 @@
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+TeXt is a Jekyll theme for personal site, blog, project, documentation and so on. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
 [中文文档](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)
 
@@ -25,7 +25,6 @@ TeXt is a succinct theme for blogging. Similar to iOS 11 style, it has large and
 - Google Analytics
 - Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
 - Semantic HTML
-- Icon automation tool ([gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico))
 - Color Theme
 - Mathematical formula ([MathJax](https://www.mathjax.org/))
 - Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))

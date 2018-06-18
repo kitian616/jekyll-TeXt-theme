@@ -46,10 +46,10 @@ full_width: true
 
           {%- if feature.actions -%}
             <ul class="menu menu--center">
-              {%- for action in feature.actions -%}
-                {%- assign _type = action.type | default: 'info' -%}
-                <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
-              {%- endfor -%}
+            {%- for action in feature.actions -%}
+              {%- assign _type = action.type | default: 'info' -%}
+              <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
+            {%- endfor -%}
             </ul>
           {%- endif -%}
 
@@ -80,13 +80,19 @@ full_width: true
                 </div>
 
                 {%- if item.image -%}
-                  {%- if item.image.is_row -%}
-                    <div class="content__row">
+                {%- if item.image.is_row -%}
+                  <div class="content__row">
+                {%- endif -%}
+                  {%- if item.image.href -%}
+                    <a href="{{ item.image.href }}">
                   {%- endif -%}
                       <img class="content__cover" src="{{ item.image.src }}" style="{{ item.image.style }}"></img>
-                  {%- if item.image.is_row -%}
-                    </div>
+                  {%- if item.image.href -%}
+                    </a>
                   {%- endif -%}
+                {%- if item.image.is_row -%}
+                  </div>
+                {%- endif -%}
                 {%- endif -%}
 
               </div>
@@ -100,7 +106,13 @@ full_width: true
           {%- if feature.image.is_row -%}
             <div class="content__row">
           {%- endif -%}
-              <img class="content__cover" src="{{ feature.image.src }}" style="{{ feature.image.style }}"></img>
+            {%- if item.image.href -%}
+              <a href="{{ item.image.href }}">
+            {%- endif -%}
+                <img class="content__cover" src="{{ feature.image.src }}" style="{{ feature.image.style }}"></img>
+            {%- if item.image.href -%}
+              </a>
+            {%- endif -%}
           {%- if feature.image.is_row -%}
             </div>
           {%- endif -%}

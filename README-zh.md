@@ -8,7 +8,7 @@
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。它参考了 iOS 11 的风格，有大而突出的标题和圆润的按钮及卡片。
+TeXt 是针对个人网站、博客、项目、文档等等的一款 Jekyll 主题。它参考了 iOS 11 的风格，有大而突出的标题和圆润的按钮及卡片。
 
 [English Documentation](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README.md)
 
@@ -25,7 +25,6 @@ TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。
 - Google Analytics
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
-- 网站图标的自动化工具（[gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico)）
 - Color Theme
 - 数学公式（[MathJax](https://www.mathjax.org/)）
 - 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
