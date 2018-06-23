@@ -1,4 +1,4 @@
-.article-content {
+.article__content {
   word-wrap: break-word;
   line-height: map-get($base, line-height-lg);
   @include block-elements() {
@@ -31,14 +31,7 @@
   }
   hr {
     border: none;
-    &::before {
-      content: '...';
-      font-size: map-get($base, font-size-h3);
-      color: $text-color-l;
-      display: block;
-      letter-spacing: .8em;
-      text-align: center;
-    }
+    @include horizontal-rules();
   }
   blockquote {
     padding-left: 1rem;

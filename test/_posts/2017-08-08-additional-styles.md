@@ -1,5 +1,4 @@
 ---
-layout: article
 title: TeXt - Additional Styles
 key: 20170808
 tags:

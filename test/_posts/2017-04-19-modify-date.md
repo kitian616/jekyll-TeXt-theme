@@ -1,5 +1,4 @@
 ---
-layout: article
 title: TeXt - Modify Date
 key: 20170419
 tags: Test English

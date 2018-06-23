@@ -12,12 +12,15 @@ default:
   chart: false
   toc:
     selectors: 'h1,h2,h3'
-  show_title: true
-  show_header: true
-  full_width: false
-  pageview: false
-  excerpt_type: text
   sources: bootcdn
+  excerpt_type: text
+
+  page:
+    show_header: true
+    show_title: true
+    show_edit_on_github: false
+    full_width: false
+    pageview: false
 
 sources:
   bootcdn:

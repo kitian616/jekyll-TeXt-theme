@@ -21,7 +21,7 @@ TeXt is a Jekyll theme for personal site, blog, project, documentation and so on
 - Search
 - Page views ([LeanCloud](https://leancloud.cn/))
 - Emoji ([Jemoji](https://github.com/jekyll/jemoji))
-- Comment ([Disqus](https://disqus.com/))
+- Comments ([Disqus](https://disqus.com/))
 - Google Analytics
 - Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
 - Semantic HTML

@@ -4,9 +4,9 @@ layout: page
 
 <div class="layout--article">
 
-  <div class="article-content" itemprop="articleBody">{{ content }}</div>
+  <div class="article__content" itemprop="articleBody">{{ content }}</div>
 
-  <footer class="article-footer">
+  <footer class="article__footer">
     {%- if page.modify_date -%}
       {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT -%}
       {%- include snippets/locale-to-string.html -%}
@@ -19,21 +19,20 @@ layout: page
     {%- else -%}
       <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
     {%- endif -%}
-
     {%- if page.license -%}
-      <div class="article-license">{%- include license.html -%}</div>
+      <div class="article__license">{%- include article-footer/license.html -%}</div>
     {%- endif -%}
   </footer>
 
   {%- if page.next or page.previous -%}
-    <div class="article-previous-next clearfix">
+    <div class="article__previous-next clearfix">
     {%- if page.next -%}
       {%- assign __path = page.next.url -%}
       {%- include snippets/prepend-baseurl.html -%}
       {%- assign href = __return -%}
       {%- assign __locale = site.data.locale.PREVIOUS -%}
       {%- include snippets/locale-to-string.html -%}
-      <div class="article-previous"><span>{{ __return }}</span><a href="{{ href }}">{{ page.next.title }}</a></div>
+      <div class="previous"><span>{{ __return }}</span><a href="{{ href }}">{{ page.next.title }}</a></div>
     {%- endif -%}
     {%- if page.previous -%}
       {%- assign __path = page.previous.url -%}
@@ -41,7 +40,7 @@ layout: page
       {%- assign href = __return -%}
       {%- assign __locale = site.data.locale.NEXT -%}
       {%- include snippets/locale-to-string.html -%}
-      <div class="article-next"><span>{{ __return }}</span><a href="{{ href }}">{{ page.previous.title }}</a></div>
+      <div class="next"><span>{{ __return }}</span><a href="{{ href }}">{{ page.previous.title }}</a></div>
     {%- endif -%}
     </div>
   {%- endif -%}

@@ -1,5 +1,5 @@
 {%- if page.key and
-  site.disqus.shortname -%}
+  site.comments.disqus.shortname -%}
 
   <div id="disqus_thread"></div>
   <script>
@@ -12,7 +12,7 @@
   };
   (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+    s.src = 'https://{{ site.comments.disqus.shortname }}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
   })();

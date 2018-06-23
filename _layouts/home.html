@@ -15,7 +15,7 @@ show_title: false
         {%- include snippets/prepend-baseurl.html -%}
         {%- assign href = __return -%}
         <h1><a href="{{ href }}">{{ post.title }}</a></h1>
-        <div class="article-content">
+        <div class="article__content">
           {%- assign _excerpt_type = site.excerpt_type | default: site.data.variables.default.excerpt_type  -%}
           {%- if _excerpt_type == 'html' -%}
             {{ post.excerpt }}

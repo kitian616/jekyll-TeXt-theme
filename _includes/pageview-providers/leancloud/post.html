@@ -1,9 +1,9 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 
-{%- assign _LEANCLOUD_APP_ID = site.leancloud.app_id -%}
-{%- assign _LEANCLOUD_APP_KEY = site.leancloud.app_key -%}
-{%- assign _LEANCLOUD_APP_CLASS = site.leancloud.app_class -%}
+{%- assign _LEANCLOUD_APP_ID = site.pageview.leancloud.app_id -%}
+{%- assign _LEANCLOUD_APP_KEY = site.pageview.leancloud.app_key -%}
+{%- assign _LEANCLOUD_APP_CLASS = site.pageview.leancloud.app_class -%}
 
 {%- if page.key and
   _LEANCLOUD_APP_ID and

@@ -35,7 +35,21 @@
     padding-bottom: map-get($layout, footer-height);
   }
 
-  .page__comment {
+  .article__header {
+    margin-top: map-get($spacers, 4);
+    h1 {
+      display: inline;
+    }
+    .edit-on-github-button {
+      vertical-align: text-bottom;
+      margin-left: map-get($spacers, 3);
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+
+  .page__comments {
     padding-bottom: map-get($base, vertical-space-lg);
   }
 

@@ -1,0 +1,14 @@
+<div class="license">
+  {%- assign locale = site.data.locale -%}
+  {%- assign __locale = locale.LICENSE_ANNOUNCE -%}
+  {%- include snippets/locale-to-string.html -%}
+  {%- assign _license_announce = __return -%}
+  {%- assign __path = '/assets/images/license-cc4.png' -%}
+  {%- include snippets/prepend-baseurl.html -%}
+  {%- assign _license_img_src = __return -%}
+  <p>{{ _license_announce | replace: "[LICENSE]", '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>' }}
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+      <img alt="Creative Commons License" src="{{ _license_img_src }}" />
+    </a>
+  </p>
+</div>

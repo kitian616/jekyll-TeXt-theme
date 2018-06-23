@@ -1,15 +1,15 @@
 {%- if page.key and
-  site.gitalk.clientID and
-	site.gitalk.clientSecret and
-	site.gitalk.repository and
-	site.gitalk.owner and
-	site.gitalk.admin -%}
+  site.comments.gitalk.clientID and
+	site.comments.gitalk.clientSecret and
+	site.comments.gitalk.repository and
+	site.comments.gitalk.owner and
+	site.comments.gitalk.admin -%}
 
 	{%- include snippets/get-sources.html -%}
 	{%- assign _sources = __return -%}
 	<div id="js-gitalk-container"></div>
 	{%- assign _admin = '' -%}
-	{%- for adminId in site.gitalk.admin -%}
+	{%- for adminId in site.comments.gitalk.admin -%}
 		{%- assign _admin = _admin | append: ", '" | append: adminId | append: "'" -%}
 	{%- endfor -%}
 	{%- assign last = _admin | size | minus: 1 -%}
@@ -18,10 +18,10 @@
 		window.Lazyload.css('{{ _sources.gitalk.css }}');
 		window.Lazyload.js('{{ _sources.gitalk.js }}', function() {
 			var gitalk = new Gitalk({
-				clientID: '{{ site.gitalk.clientID }}',
-				clientSecret: '{{ site.gitalk.clientSecret }}',
-				repo: '{{ site.gitalk.repository }}',
-				owner: '{{ site.gitalk.owner }}',
+				clientID: '{{ site.comments.gitalk.clientID }}',
+				clientSecret: '{{ site.comments.gitalk.clientSecret }}',
+				repo: '{{ site.comments.gitalk.repository }}',
+				owner: '{{ site.comments.gitalk.owner }}',
 				admin: [{{ _admin }}],
 				id: '{{ page.key }}'
 			});

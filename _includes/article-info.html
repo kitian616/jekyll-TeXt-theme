@@ -9,7 +9,7 @@
 {%- include snippets/assign.html -%}
 {%- assign _pageview = __return -%}
 
-<div class="article-info clearfix">
+<div class="article__info clearfix">
 	{%- if page -%}
     <meta itemprop="author" itemscope itemtype="https://schema.org/Person">
       {%- if page.author -%}
@@ -20,7 +20,7 @@
     </meta>
 	{%- endif -%}
     {%- if cur_page.tags[0] -%}
-      <ul class="article-info__left-col menu">
+      <ul class="left-col menu">
         {%- if site.paths.all -%}
           {%- assign all_path = site.paths.all -%}
         {%- else -%}
@@ -36,11 +36,10 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
-
-    {%- if (_pageview or post) and cur_page.date -%}
-      <ul class="article-info__right-col menu">
+    {%- if (_pageview or post) or cur_page.date -%}
+      <ul class="right-col menu">
         {%- if _pageview or post -%}
-          {%- if site.leancloud.app_id and site.leancloud.app_key and site.leancloud.app_class -%}
+          {%- if site.pageview.provider -%}
             {%- assign __locale = site.data.locale.VIEWS } -%}
             {%- include snippets/locale-to-string.html -%}
             <li class="pageview">
@@ -48,17 +47,19 @@
             </li>
           {%- endif -%}
         {%- endif -%}
-        <li class="publish-date">
-          {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
-          {%- include snippets/locale-to-string.html -%}
-          {%- if post -%}
-            <span>{{ cur_page.date | date: __return }}</span>
-          {%- elsif page -%}
-            <time datetime="{{ page.date | date_to_xmlschema }}"
-              itemprop="datePublished">{{ cur_page.date | date: __return }}
-            </time>
-          {%- endif -%}
-        </li>
+        {%- if cur_page.date -%}
+          <li class="publish-date">
+            {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
+            {%- include snippets/locale-to-string.html -%}
+            {%- if post -%}
+              <span>{{ cur_page.date | date: __return }}</span>
+            {%- elsif page -%}
+              <time datetime="{{ page.date | date_to_xmlschema }}"
+                itemprop="datePublished">{{ cur_page.date | date: __return }}
+              </time>
+            {%- endif -%}
+          </li>
+        {%- endif -%}
       </ul>
     {%- endif -%}
 </div>

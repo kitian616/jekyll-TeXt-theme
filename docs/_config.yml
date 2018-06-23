@@ -88,35 +88,45 @@ sources: # bootcdn (default), unpkg
 
 ## => Comments
 ##############################
-## Disqus
-disqus:
-  shortname: # the Disqus shortname for the site
+comments:
+  provider: "gitalk" # false (default), "disqus", "gitalk", "custom"
 
-## Gitalk
-# please refer to https://github.com/gitalk/gitalk for more info.
-gitalk:
-  clientID: 143666b578a416f82175 # Github Application Client ID
-  clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 # Github Application Client Secret
-  repository: gitalk-demo # Github repo
-  owner: kitian616 # Github repo owner
-  admin: # Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
-    - kitian616
+  ## Disqus
+  disqus:
+    shortname: # the Disqus shortname for the site
+
+  ## Gitalk
+  # please refer to https://github.com/gitalk/gitalk for more info.
+  gitalk:
+    clientID: 143666b578a416f82175 # Github Application Client ID
+    clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 # Github Application Client Secret
+    repository: gitalk-demo # Github repo
+    owner: kitian616 # Github repo owner
+    admin: # Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+      - kitian616
 
 
 ## => Pageview
 ##############################
-## Leancloud
-leancloud:
-  app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-  app_key: Mzf5m9skSwYVWVXhGiYMNyXs
-  app_class: TeXtDemo
+pageview:
+  provider: "leancloud" # false (default), "leancloud", "custom"
+
+  ## Leancloud
+  leancloud:
+    app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+    app_key: Mzf5m9skSwYVWVXhGiYMNyXs
+    app_class: TeXtDemo
 
 
 ## => Analytics
 ##############################
-## Google Analytics
-ga_tracking_id: UA-71907556-1 #Google analytics id for the site
-ga_anonymize_ip: false # Anonymize IP tracking for Analytics
+analytics:
+  provider: "google" # false (default), "google", "custom"
+
+  ## Google Analytics
+  google:
+    tracking_id: UA-71907556-1 #Google analytics id for the site
+    anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
 ## => Build
@@ -148,9 +158,34 @@ defaults:
       path: ""
       type: posts
     values:
+      layout: article
       license: true
       aside:
         toc: true
+      show_edit_on_github: true
+      pageview: true
+  - scope:
+      path: "docs/en"
+    values:
+      layout: article
+      sidebar:
+        nav: docs-en
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      pageview: true
+  - scope:
+      path: "docs/zh"
+    values:
+      layout: article
+      sidebar:
+        nav: docs-zh
+      license: true
+      aside:
+        toc: true
+      lang: zh
+      show_edit_on_github: true
       pageview: true
 
 
@@ -160,6 +195,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-github-metadata
   - jemoji
 
 data_dir: /docs/_data

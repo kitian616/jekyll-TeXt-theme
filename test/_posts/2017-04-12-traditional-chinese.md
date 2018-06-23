@@ -1,5 +1,4 @@
 ---
-layout: article
 title: TeXt - Traditional Chinese | 繁體中文
 key: 20170412
 tags:

@@ -152,9 +152,11 @@ defaults:
       path: ""
       type: posts
     values:
+      layout: article
       license: true
       aside:
         toc: true
+      show_edit_on_github: true
       pageview: true
 
 

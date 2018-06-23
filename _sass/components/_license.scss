@@ -1,25 +1,2 @@
 .license {
-  @include box-shadow();
-  background-color: $text-background-color;
-  font-weight: map-get($base, font-weight-bold);
-  img {
-    vertical-align: bottom;
-  }
-  .url {
-    word-wrap: break-word;
-  }
-  .octocat {
-    float: right;
-    img {
-      width: 4rem;
-      height: auto;
-      margin: 0 1rem;
-      border-width: 0;
-      border-radius: 2rem;
-    }
-  }
-  .license-img {
-    float: right;
-    margin-left: 1rem;
-  }
 }

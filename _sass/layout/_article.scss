@@ -1,36 +1,41 @@
 .layout--article {
-  .article-footer {
-    &>span {
-      color: $text-color-l;
-    }
-    &>.article-license {
+
+  .article__footer {
+    margin: map-get($base, vertical-space-lg) 0;
+    font-size: map-get($base, font-size-sm);
+    color: $text-color-l;
+    .article__license {
       position: relative;
-      max-width: 30rem;
-      margin: .8rem 0;
+      img {
+        height: map-get($base, font-size-sm) * 1.5;
+        vertical-align: text-bottom;
+      }
+      a {
+        @include link-colors($text-color, $main-color-1, $main-color-1);
+      }
     }
   }
-
-  .article-previous-next {
+  .article__previous-next {
     word-wrap: break-word;
-    margin: map-get($base, vertical-space-lg) * 2 0 map-get($base, vertical-space-lg) 0;
+    margin: map-get($spacers, 4) 0 map-get($spacers, 3) 0;
     padding-top: map-get($base, vertical-space-lg) / 2;
     @include split-line(top, 4px);
-    & > .article-previous, & > .article-next {
+    & > .previous, & > .next {
       width: 50%;
       & > span {
         font-weight: map-get($base, font-weight-bold);
         color: $text-color-l;
       }
-      & > a{
+      & > a {
         display: block;
         @include link-colors($text-color, $main-color-1, $main-color-1);
       }
     }
-    & > .article-previous {
+    & > .previous {
       float: left;
       padding-right: .5rem;
     }
-    & > .article-next {
+    & > .next {
       float: right;
       padding-left: .5rem;
       text-align: right;

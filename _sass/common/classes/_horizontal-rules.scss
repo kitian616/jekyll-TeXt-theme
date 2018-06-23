@@ -1,0 +1,14 @@
+@mixin horizontal-rules() {
+  &::before {
+    content: '...';
+    font-size: map-get($base, font-size-h2);
+    color: $text-color-l;
+    display: block;
+    letter-spacing: map-get($spacers, 4);
+    text-align: center;
+  }
+}
+
+.horizontal-rules {
+  @include horizontal-rules();
+}

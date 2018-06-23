@@ -1,5 +1,4 @@
 ---
-layout: article
 title: TeXt - Simplified Chinese | 简体中文
 key: 20170413
 tags:

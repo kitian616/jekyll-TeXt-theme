@@ -1,5 +1,4 @@
 ---
-layout: article
 title: Jekyll - Blockquotes
 key: 20160508
 tags: Jekyll English

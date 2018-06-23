@@ -47,7 +47,7 @@ full_width: true
           {%- if feature.actions -%}
             <ul class="menu menu--center">
             {%- for action in feature.actions -%}
-              {%- assign _type = action.type | default: 'info' -%}
+              {%- assign _type = action.type | default: 'outline-info' -%}
               <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
             {%- endfor -%}
             </ul>
@@ -72,7 +72,7 @@ full_width: true
                   {%- if item.actions -%}
                     <ul class="menu menu--center">
                       {%- for action in item.actions -%}
-                        {%- assign _type = action.type | default: 'info' -%}
+                        {%- assign _type = action.type | default: 'outline-info' -%}
                         <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
                       {%- endfor -%}
                     </ul>

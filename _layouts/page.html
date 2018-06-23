@@ -2,23 +2,43 @@
 layout: base
 ---
 
+{%- assign locale = site.data.locale -%}
+
 {%- include snippets/page-title.html -%}
 {%- assign _title = __return -%}
 
 {%- assign __source = page.show_header -%}
-{%- assign __target = site.data.variables.default.show_header -%}
+{%- assign __target = layout.show_header -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_header -%}
 {%- include snippets/assign.html -%}
 {%- assign _show_header = __return -%}
 
 {%- assign __source = page.full_width -%}
-{%- assign __target = site.data.variables.default.full_width -%}
+{%- assign __target = layout.full_width -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.full_width -%}
 {%- include snippets/assign.html -%}
 {%- assign _full_width = __return -%}
 
 {%- assign __source = page.show_title -%}
-{%- assign __target = site.data.variables.default.show_title -%}
+{%- assign __target = layout.show_title -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_title -%}
 {%- include snippets/assign.html -%}
 {%- assign _show_title = __return -%}
+
+
+{%- assign __source = page.show_edit_on_github -%}
+{%- assign __target = layout.show_edit_on_github -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_edit_on_github -%}
+{%- include snippets/assign.html -%}
+{%- assign _show_edit_on_github = __return -%}
 
 {%- if page.sidebar -%}
 <div class="layout--page layout--page--sidebar clearfix js-page-root">
@@ -66,15 +86,28 @@ layout: base
 
           <div class="col-1">
             <article>
-              {%- if _show_title -%}
-                <div class="main__title"><h1>{{ _title }}</h1></div>
-              {%- endif-%}
+              {%- if _show_title or _show_edit_on_github -%}
+                <div class="article__header">
+                  {%- if _show_title -%}
+                    <h1>{{ _title }}</h1>
+                  {%- endif-%}
+                  {%- if _show_edit_on_github -%}
+                    {%- if site.repository and site.repository_tree -%}
+                      {%- assign __locale = locale.POST_ON_GITHUB -%}
+                      {%- include snippets/locale-to-string.html -%}
+                      <a class="edit-on-github-button button button--secondary button--rounded button--sm"
+                        href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
+                        <i class="fab fa-github"></i> {{ __return }}</a>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
 
               {%- include article-info.html -%}
               <div class="js-article-content">{{ content }}</div>
 
               {%- if jekyll.environment != "development" and page.comment != false -%}
-                <section class="page__comment">{%- include comment.html -%}</section>
+                <section class="page__comments">{%- include comments.html -%}</section>
               {%- endif -%}
 
             </article>
