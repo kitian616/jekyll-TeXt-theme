@@ -73,11 +73,23 @@ Error Text.
 
 | Primary | Secondary | Success | Info | Warning | Error |
 | ---- | ---- | ---- | ---- | ---- | ---- |
+| [BUTTON](#){:.button.button--outline-primary.button--pill} | [BUTTON](#){:.button.button--outline-secondary.button--pill} | [BUTTON](#){:.button.button--outline-success.button--pill} | [BUTTON](#){:.button.button--outline-info.button--pill} | [BUTTON](#){:.button.button--outline-warning.button--pill} | [BUTTON](#){:.button.button--outline-error.button--pill} |
+
+| Primary | Secondary | Success | Info | Warning | Error |
+| ---- | ---- | ---- | ---- | ---- | ---- |
 | [BUTTON](#){:.button.button--primary.button--rounded} | [BUTTON](#){:.button.button--secondary.button--rounded} | [BUTTON](#){:.button.button--success.button--rounded} | [BUTTON](#){:.button.button--info.button--rounded} | [BUTTON](#){:.button.button--warning.button--rounded} | [BUTTON](#){:.button.button--error.button--rounded} |
 
 | Primary | Secondary | Success | Info | Warning | Error |
 | ---- | ---- | ---- | ---- | ---- | ---- |
+| [BUTTON](#){:.button.button--outline-primary.button--rounded} | [BUTTON](#){:.button.button--outline-secondary.button--rounded} | [BUTTON](#){:.button.button--outline-success.button--rounded} | [BUTTON](#){:.button.button--outline-info.button--rounded} | [BUTTON](#){:.button.button--outline-warning.button--rounded} | [BUTTON](#){:.button.button--outline-error.button--rounded} |
+
+| Primary | Secondary | Success | Info | Warning | Error |
+| ---- | ---- | ---- | ---- | ---- | ---- |
 | [X](#){:.button.button--primary.button--circle} | [X](#){:.button.button--secondary.button--circle} | [X](#){:.button.button--success.button--circle} | [X](#){:.button.button--info.button--circle} | [X](#){:.button.button--warning.button--circle} | [X](#){:.button.button--error.button--circle} |
+
+| Primary | Secondary | Success | Info | Warning | Error |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| [X](#){:.button.button--outline-primary.button--circle} | [X](#){:.button.button--outline-secondary.button--circle} | [X](#){:.button.button--outline-success.button--circle} | [X](#){:.button.button--outline-info.button--circle} | [X](#){:.button.button--outline-warning.button--circle} | [X](#){:.button.button--outline-error.button--circle} |
 
 | Small | Middle | Large |
 | ---- | ---- | ---- |
