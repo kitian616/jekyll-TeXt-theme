@@ -2,6 +2,9 @@
   @if $color == default {
     $color: #000;
   }
+  @if $level == 0 {
+    box-shadow: none;
+  }
   @if $level == 1 or $level == default {
     box-shadow: 0 4px 6px rgba($color, .11), 0 1px 3px rgba($color, .08);
   }

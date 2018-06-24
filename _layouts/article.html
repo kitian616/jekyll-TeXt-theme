@@ -2,7 +2,24 @@
 layout: page
 ---
 
+{%- assign __source = page.show_author_profile -%}
+{%- assign __target = layout.show_author_profile -%}
+{%- include snippets/assign.html -%}
+{%- assign __source = __return -%}
+{%- assign __target = site.data.variables.default.page.show_author_profile -%}
+{%- include snippets/assign.html -%}
+{%- assign _show_author_profile = __return -%}
+
 <div class="layout--article">
+
+  {%- if _show_author_profile -%}
+    {%- if page.author -%}
+      {%- assign __author = site.data.authors[page.author] -%}
+    {%- else -%}
+      {%- assign __author = site.author -%}
+    {%- endif -%}
+    {%- include author-profile.html -%}
+  {%- endif -%}
 
   <div class="article__content" itemprop="articleBody">{{ content }}</div>
 
@@ -14,7 +31,7 @@ layout: page
       {%- assign __locale = site.data.locale.LAST_UPDATED -%}
       {%- include snippets/locale-to-string.html -%}
       <span>{{ __return }}
-        <time datetime="{{ page.modify_date | date_to_xmlschema }}" itemprop="dateModified">{{ page.modify_date | date: date_format }}</time>
+        <time itemprop="dateModified" datetime="{{ page.modify_date | date_to_xmlschema }}">{{ page.modify_date | date: date_format }}</time>
       </span>
     {%- else -%}
       <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">

@@ -12,3 +12,7 @@
 .card {
   @include card();
 }
+
+.card--no-shadow {
+  @include box-shadow(0);
+}

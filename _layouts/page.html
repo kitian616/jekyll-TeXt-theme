@@ -85,11 +85,13 @@ layout: base
           </div>
 
           <div class="col-1">
-            <article>
+            <article itemscope itemtype="http://schema.org/Article">
               {%- if _show_title or _show_edit_on_github -%}
                 <div class="article__header">
                   {%- if _show_title -%}
-                    <h1>{{ _title }}</h1>
+                    <header><h1 itemprop="name">{{ _title }}</h1></header>
+                  {%- else -%}
+                    <meta itemprop="name" content="_title" />
                   {%- endif-%}
                   {%- if _show_edit_on_github -%}
                     {%- if site.repository and site.repository_tree -%}

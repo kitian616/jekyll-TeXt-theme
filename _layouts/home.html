@@ -10,12 +10,12 @@ show_title: false
 <div class="layout--home">
   <div class="post-list">
     {%- for post in paginator.posts -%}
-      <article>
+      <article itemscope itemtype="http://schema.org/BlogPosting">
         {%- assign __path = post.url -%}
         {%- include snippets/prepend-baseurl.html -%}
         {%- assign href = __return -%}
-        <h1><a href="{{ href }}">{{ post.title }}</a></h1>
-        <div class="article__content">
+        <header><h2 itemprop="name"><a href="{{ href }}">{{ post.title }}</a></h2></header>
+        <div class="article__content" itemprop="description articleBody">
           {%- assign _excerpt_type = site.excerpt_type | default: site.data.variables.default.excerpt_type  -%}
           {%- if _excerpt_type == 'html' -%}
             {{ post.excerpt }}

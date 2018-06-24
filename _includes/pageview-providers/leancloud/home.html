@@ -23,7 +23,7 @@
         var $this = $(this);
         var key = $this.attr('data-page-key');
         pageview.get(key, function(view) {
-          $this.text(view);
+          $this.attr('itemprop', 'userInteractionCount').attr('content', view).text(view);
         });
       });
     });

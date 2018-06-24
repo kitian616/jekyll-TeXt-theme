@@ -1,0 +1,43 @@
+.author-profile {
+  max-width: 25rem;
+  background-color: $text-background-color;
+  font-size: map-get($base, font-size-sm);
+  margin: map-get($base, vertical-space-lg) 0;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+  img {
+    width: 5rem;
+    border-radius: 50%;
+    margin-top: map-get($base, vertical-space);
+  }
+  .author-profile__name {
+    font-size: map-get($base, font-size-lg);
+    font-weight: map-get($base, font-weight-bold);
+    a {
+      @include link-colors($text-color, $text-color, $text-color);
+    }
+  }
+  .left-col {
+    float: left;
+    @include media-breakpoint-down(md) {
+      float: none;
+    }
+  }
+  .right-col {
+    margin-left: 5rem;
+    padding-left: map-get($spacers, 4);
+    @include media-breakpoint-down(md) {
+      float: none;
+      margin-left: 0;
+      padding-left: 0;
+      margin-left: 0;
+    }
+    .follow-me {
+      float: left;
+      @include media-breakpoint-down(md) {
+        float: none;
+      }
+    }
+  }
+}

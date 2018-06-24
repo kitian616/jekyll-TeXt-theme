@@ -1,7 +1,27 @@
 
 <div class="footer js-page-footer">
   <div class="main">
-    <aside> {%- include follow-me.html -%} </aside>
+    {%- assign __author = site.author -%}
+    {%- if __author.type == 'organization' -%}
+      {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
+    {%- else -%}
+      {%- assign _author_itemtype = 'http://schema.org/Person' -%}
+    {%- endif -%}
+    <aside  itemscope itemtype="{{ _author_itemtype }}">
+      <meta itemprop="name" content="{{ __author.name }}">
+      {%- if __author.url -%}
+        {%- assign _author_url = __author.url -%}
+      {%- else -%}
+        {%- assign __path = '/'-%}
+        {%- include snippets/prepend-baseurl.html -%}
+        {%- assign _author_url = __return -%}
+      {%- endif -%}
+      <meta itemprop="url" content="{{ _author_url }}">
+      {%- if __author.bio -%}
+        <meta itemprop="description" content="{{ __author.bio }}">
+      {%- endif -%}
+      {%- include follow-me.html -%}
+    </aside>
     <footer class="site-info">
       {%- assign __path = site.paths.rss | default: site.data.variables.default.paths.rss -%}
       {%- include snippets/get-nav-url.html -%}

@@ -1,0 +1,40 @@
+{%- if __author -%}
+  {%- assign _author = __author -%}
+{%- else -%}
+  {%- assign _author = site.author -%}
+{%- endif -%}
+
+{%- if _author.type == 'organization' -%}
+  {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
+{%- else -%}
+  {%- assign _author_itemtype = 'http://schema.org/Person' -%}
+{%- endif -%}
+<div itemscope itemtype="{{ _author_itemtype }}" class="author-profile card card--no-shadow clearfix">
+  {%- if _author.avatar -%}
+    {%- if _author.url -%}
+    <a href="{{ _author.url }}">
+    {%- endif -%}
+      <img itemprop="image" class="left-col" src="{{ _author.avatar }}"></img>
+    {%- if _author.url -%}
+    </a>
+    {%- endif -%}
+  {%- endif -%}
+  <div class="right-col clearfix">
+    {%- if _author.name -%}
+    <meta itemprop="name" content="{{ _author.name }}">
+    <p class="author-profile__name">
+      {%- if _author.url -%}
+      <meta itemprop="name" content="{{ _author.url }}">
+      <a href="{{ _author.url }}">
+      {%- endif -%}
+        {{ _author.name }}
+      {%- if _author.url -%}
+      </a>
+      {%- endif -%}
+    </p>
+    {%- endif -%}
+    {%- if _author.bio -%}<p itemprop="description">{{ _author.bio }}</p>{%- endif -%}
+    {%- assign __author = _author -%}
+    {%- include follow-me.html -%}
+  </div>
+</div>

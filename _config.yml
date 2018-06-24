@@ -33,8 +33,11 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ## => Author and Social
 ##############################
 author:
-  name: Someone
-  email: someone@somemail.com # your Email address e.g. someone@site.com
+  type: # "person" (default), "organization"
+  name: Someone # your name
+  avatar:  # your Photo or Logo
+  bio: # your biographical work
+  email: # your Email address e.g. neo@site.com
   facebook: # your Facebook username
   twitter: # your Twitter username
   github: # your GitHub username
@@ -95,35 +98,45 @@ sources: # bootcdn (default), unpkg
 
 ## => Comments
 ##############################
-## Disqus
-disqus:
-  shortname: # the Disqus shortname for the site
+comments:
+  provider: false # false (default), "disqus", "gitalk", "custom"
 
-## Gitalk
-# please refer to https://github.com/gitalk/gitalk for more info.
-gitalk:
-  clientID: # GitHub Application Client ID
-  clientSecret: # GitHub Application Client Secret
-  repository: # GitHub repo
-  owner: # GitHub repo owner
-  admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-    # - your GitHub Id
+  ## Disqus
+  disqus:
+    shortname: # the Disqus shortname for the site
+
+  ## Gitalk
+  # please refer to https://github.com/gitalk/gitalk for more info.
+  gitalk:
+    clientID: # GitHub Application Client ID
+    clientSecret: # GitHub Application Client Secret
+    repository: # GitHub repo
+    owner: # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+      # - your GitHub Id
 
 
 ## => Pageview
 ##############################
-## Leancloud
-leancloud:
-  app_id: # LeanCloud App id
-  app_key: # LeanCloud App key
-  app_class: # LeanCloud App class
+pageview:
+  provider: false # false (default), "leancloud", "custom"
+
+  ## Leancloud
+  leancloud:
+    app_id: # LeanCloud App id
+    app_key: # LeanCloud App key
+    app_class: # LeanCloud App class
 
 
 ## => Analytics
 ##############################
-## Google Analytics
-ga_tracking_id: # Google Analytics id for the site
-ga_anonymize_ip: false # Anonymize IP tracking for Analytics
+analytics:
+  provider: false # false (default), "google", "custom"
+
+  ## Google Analytics
+  google:
+    tracking_id: # Google Analytics id for the site
+    anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
 ## => Build

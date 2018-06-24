@@ -33,12 +33,20 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 ## => Author and Social
 ##############################
 author:
-  name: Tian Qi
-  email: kitian616@outlook.com # your Email address e.g. someone@site.com
+  type: organization # "person" (default), "organization"
+  name: TeXt # your name
+  avatar: /assets/apple-touch-icon.png # your Photo or Logo
+  bio: > # your biographical work
+    TeXt is a Jekyll theme for personal site, blog, project, documentation and so on.
+    Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+  email: kitian616@outlook.com # your Email address e.g. neo@site.com
+  facebook: # your Facebook username
   twitter: kitian616 # your Twitter username
   github: kitian616/jekyll-TeXt-theme # your GitHub username
+  linkedin: # your Linkedin username
   googleplus: 101827554735084402671 # your Google+ username
-  weibo: 234695683
+  weibo: 234695683 # your Weibo username
+  douban: # your Douban username
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
@@ -51,6 +59,7 @@ repository_tree: master
 ##############################
 paths:
   base: /
+
 
 ## => Post
 ##############################
@@ -81,7 +90,7 @@ chart: true # false (default), true
 ## => Paginate
 ##############################
 paginate: 8
-paginate_path: /page:num
+paginate_path: /page:num # don't change this unless for special need
 
 
 ## => Sources
@@ -92,7 +101,7 @@ sources: # bootcdn (default), unpkg
 ## => Comments
 ##############################
 comments:
-  provider: "gitalk" # false (default), "disqus", "gitalk", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "custom"
 
   ## Disqus
   disqus:
@@ -101,34 +110,34 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID: 143666b578a416f82175 # Github Application Client ID
-    clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 # Github Application Client Secret
-    repository: gitalk-demo # Github repo
-    owner: kitian616 # Github repo owner
-    admin: # Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+    clientID: 143666b578a416f82175 # GitHub Application Client ID
+    clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 # GitHub Application Client Secret
+    repository: gitalk-demo # GitHub repo
+    owner: kitian616 # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       - kitian616
 
 
 ## => Pageview
 ##############################
 pageview:
-  provider: "leancloud" # false (default), "leancloud", "custom"
+  provider: leancloud # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
-    app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-    app_key: Mzf5m9skSwYVWVXhGiYMNyXs
-    app_class: TeXtDemo
+    app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz # LeanCloud App id
+    app_key: Mzf5m9skSwYVWVXhGiYMNyXs # LeanCloud App key
+    app_class: TeXtDemo # LeanCloud App class
 
 
 ## => Analytics
 ##############################
 analytics:
-  provider: "google" # false (default), "google", "custom"
+  provider: google # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id: UA-71907556-1 #Google analytics id for the site
+    tracking_id: UA-71907556-1 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 

@@ -37,7 +37,7 @@
 
   .article__header {
     margin-top: map-get($spacers, 4);
-    h1 {
+    header, h1 {
       display: inline;
     }
     .edit-on-github-button {

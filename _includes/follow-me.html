@@ -1,64 +1,69 @@
+{%- if __author -%}
+  {%- assign _author = __author -%}
+{%- else -%}
+  {%- assign _author = site.author -%}
+{%- endif -%}
+
 <div class="follow-me">
-  <ul class="menu menu--nowrap menu--center" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="{{ site.author.name }}">
-    {%- assign __path = '/'-%}
-    {%- include snippets/prepend-baseurl.html -%}
-    <link itemprop="url" href="{{ __return | prepend: site.url }}">
+  <ul class="menu menu--nowrap menu--center">
+    {%- if _author.url -%}
+      <link itemprop="url" href="{{ _author.url }}">
+    {%- endif -%}
     {%- assign __locale = site.data.locale.EMAIL_ME -%}
     {%- include snippets/locale-to-string.html -%}
-    {%- if site.author.email -%}
+    {%- if _author.email -%}
       <li title="{{ __return }}">
-      <a class="button button--circle mail-button" itemprop="sameAs" href="mailto:{{ site.author.email }}" target="_blank">
+      <a class="button button--circle mail-button" itemprop="email" href="mailto:{{ _author.email }}" target="_blank">
         <i class="fas fa-envelope"></i>
       </a>
     {%- endif -%}
     {%- assign __locale = site.data.locale.FOLLOW_ME -%}
     {%- include snippets/locale-to-string.html -%}
-    {%- if site.author.weibo -%}
+    {%- if _author.weibo -%}
       <li title="{{ __return | replace: '[NAME]', 'Weibo' }}">
-        <a class="button button--circle weibo-button" itemprop="sameAs" href="https://weibo.com/{{ site.author.weibo }}" target="_blank">
+        <a class="button button--circle weibo-button" itemprop="sameAs" href="https://weibo.com/{{ _author.weibo }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/weibo.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
-    {%- if site.author.facebook -%}
+    {%- if _author.facebook -%}
       <li title="{{ __return | replace: '[NAME]', 'Facebook' }}">
-        <a class="button button--circle facebook-button" itemprop="sameAs" href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank">
+        <a class="button button--circle facebook-button" itemprop="sameAs" href="https://www.facebook.com/{{ _author.facebook }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/facebook.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
-    {%- if site.author.twitter -%}
+    {%- if _author.twitter -%}
       <li title="{{ __return | replace: '[NAME]', 'Twitter' }}">
-        <a class="button button--circle twitter-button" itemprop="sameAs" href="https://twitter.com/{{ site.author.twitter }}" target="_blank">
+        <a class="button button--circle twitter-button" itemprop="sameAs" href="https://twitter.com/{{ _author.twitter }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/twitter.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
-    {%- if site.author.googleplus -%}
+    {%- if _author.googleplus -%}
       <li title="{{ __return | replace: '[NAME]', 'Google+' }}">
-        <a class="button button--circle googlepluse-button" itemprop="sameAs" href="https://plus.google.com/u/0/{{ site.author.googleplus }}" target="_blank">
+        <a class="button button--circle googlepluse-button" itemprop="sameAs" href="https://plus.google.com/u/0/{{ _author.googleplus }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/googleplus.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
-    {%- if site.author.github -%}
+    {%- if _author.github -%}
       <li title="{{ __return | replace: '[NAME]', 'Github' }}">
-        <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/{{ site.author.github }}" target="_blank">
+        <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/{{ _author.github }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/github.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
-    {%- if site.author.linkedin -%}
+    {%- if _author.linkedin -%}
       <li title="{{ __return | replace: '[NAME]', 'Linkedin' }}">
-        <a class="button button--circle linkedin-button" itemprop="sameAs" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
+        <a class="button button--circle linkedin-button" itemprop="sameAs" href="https://www.linkedin.com/in/{{ _author.linkedin }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/linkedin.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
-    {%- if site.author.douban -%}
+    {%- if _author.douban -%}
       <li title="{{ __return | replace: '[NAME]', 'Douban' }}">
-        <a class="button button--circle douban-button" itemprop="sameAs" href="https://www.douban.com/people/{{ site.author.douban }}" target="_blank">
+        <a class="button button--circle douban-button" itemprop="sameAs" href="https://www.douban.com/people/{{ _author.douban }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/douban.svg -%}</div>
         </a>
       </li>

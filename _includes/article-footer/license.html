@@ -13,7 +13,7 @@
 
 {%- if _license -%}
 
-  {%-assign _license_name = '<a rel="license" href="[URL]">[NAME]</a>' | replace: "[URL]", _license.url | replace: "[NAME]", _license.name -%}
+  {%-assign _license_name = '<a itemprop="license" rel="license" href="[URL]">[NAME]</a>' | replace: "[URL]", _license.url | replace: "[NAME]", _license.name -%}
   <div class="license">
     <p>{{ _license_announce | replace: "[LICENSE]", _license_name }}
       <a rel="license" href="{{ _license.url }}">

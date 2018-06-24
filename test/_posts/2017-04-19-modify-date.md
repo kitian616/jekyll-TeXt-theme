@@ -5,15 +5,13 @@ tags: Test English
 modify_date: 2017-09-09
 ---
 
-Article With Modify Date.
+Article with modify date.
 
 <!--more-->
 
 **front matter:**
 
     ---
-    layout: article
-    title: Test - Article With Modify Date
-    tags: Test English
+    ...
     modify_date: 2017-09-09
     ---
