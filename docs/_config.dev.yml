@@ -17,9 +17,9 @@
 ## => Site Settings
 ##############################
 text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-url: # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl: # does not include hostname
-title: TeXt Dev
+url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl : # does not include hostname
+title   : TeXt Dev
 description: > # this means to ignore newlines until "Language & timezone"
   TeXt Dev
 
@@ -33,20 +33,21 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ## => Author and Social
 ##############################
 author:
-  type: organization # "person" (default), "organization"
-  name: TeXt # your name
-  avatar: /assets/apple-touch-icon.png # your Photo or Logo
-  bio: > # your biographical work
+  type      : organization # "person" (default), "organization"
+  name      : TeXt
+  url       :
+  avatar    : /assets/apple-touch-icon.png
+  bio: >
     TeXt is a Jekyll theme for personal site, blog, project, documentation and so on.
     Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
-  email: # your Email address e.g. neo@site.com
-  facebook: # your Facebook username
-  twitter: # your Twitter username
-  github: kitian616/jekyll-TeXt-theme # your GitHub username
-  linkedin: # your Linkedin username
-  googleplus: # your Google+ username
-  weibo: # your Weibo username
-  douban: # your Douban username
+  email     :
+  facebook  :
+  twitter   :
+  github    : kitian616/jekyll-TeXt-theme
+  linkedin  :
+  googleplus:
+  weibo     :
+  douban    :
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
@@ -58,7 +59,9 @@ repository_tree: master
 ## => Paths
 ##############################
 paths:
-  base: /
+  base    : # "/"" (default)
+  archive :  # "/archive.html" (default)
+  rss     :  # "/feed.xml" (default)
 
 
 ## => Post
@@ -110,11 +113,11 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID: # GitHub Application Client ID
+    clientID    : # GitHub Application Client ID
     clientSecret: # GitHub Application Client Secret
-    repository: # GitHub repo
-    owner: # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    repository  : # GitHub repo
+    owner       : # GitHub repo owner
+    admin       : # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
 
@@ -125,9 +128,9 @@ pageview:
 
   ## Leancloud
   leancloud:
-    app_id: # LeanCloud App id
-    app_key: # LeanCloud App key
-    app_class: # LeanCloud App class
+    app_id    : # LeanCloud App id
+    app_key   : # LeanCloud App key
+    app_class : # LeanCloud App class
 
 
 ## => Analytics
@@ -137,15 +140,15 @@ analytics:
 
   ## Google Analytics
   google:
-    tracking_id: # Google Analytics id for the site
+    tracking_id : # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
 ## => Build
 ##############################
-markdown: kramdown
-highlighter: rouge
-permalink: date
+markdown    : kramdown
+highlighter : rouge
+permalink   : date
 
 exclude:
   - CHANGELOG.md

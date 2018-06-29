@@ -21,17 +21,17 @@ full_width: true
       <ul class="menu menu--center">
       {%- for action in page.data.actions -%}
         {%- assign _type = action.type | default: 'info' -%}
-        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
+        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.url }}">{{ action.text }}</a></li>
       {%- endfor -%}
       </ul>
       {%- endif -%}
     </div>
   </section>
 
-  {%- for feature in page.data.features -%}
-  {%- if feature.theme == 'light' -%}
+  {%- for section in page.data.sections -%}
+  {%- if section.theme == 'light' -%}
     <section class="section section--light feature">
-  {%- elsif feature.theme == 'dark' -%}
+  {%- elsif section.theme == 'dark' -%}
     <section class="section section--dark feature">
   {%- else -%}
     <section class="section feature">
@@ -39,27 +39,27 @@ full_width: true
       <div class="section__content">
         <div class="content__row">
 
-          <h3>{{ feature.title }}</h3>
-            {%- if feature.description-%}
-          <p>{{ feature.description }}</p>
+          <h3>{{ section.title }}</h3>
+            {%- if section.description-%}
+          <p>{{ section.description }}</p>
           {%- endif -%}
 
-          {%- if feature.actions -%}
+          {%- if section.actions -%}
             <ul class="menu menu--center">
-            {%- for action in feature.actions -%}
+            {%- for action in section.actions -%}
               {%- assign _type = action.type | default: 'outline-info' -%}
-              <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
+              <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.url }}">{{ action.text }}</a></li>
             {%- endfor -%}
             </ul>
           {%- endif -%}
 
         </div>
 
-        {%- if feature.children -%}
-          {%- assign _size = feature.children | size  -%}
+        {%- if section.children -%}
+          {%- assign _size = section.children | size  -%}
           <div class="grid">
             <div class="row">
-            {%- for item in feature.children -%}
+            {%- for item in section.children -%}
               <div class="content__col col-{{ 12 | divided_by: _size }} col-sm-12">
 
                 <div class="content__row">
@@ -73,7 +73,7 @@ full_width: true
                     <ul class="menu menu--center">
                       {%- for action in item.actions -%}
                         {%- assign _type = action.type | default: 'outline-info' -%}
-                        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.href }}">{{ action.text }}</a></li>
+                        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.url }}">{{ action.text }}</a></li>
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
@@ -83,11 +83,11 @@ full_width: true
                 {%- if item.image.is_row -%}
                   <div class="content__row">
                 {%- endif -%}
-                  {%- if item.image.href -%}
-                    <a href="{{ item.image.href }}">
+                  {%- if item.image.url -%}
+                    <a href="{{ item.image.url }}">
                   {%- endif -%}
                       <img class="content__cover" src="{{ item.image.src }}" style="{{ item.image.style }}"></img>
-                  {%- if item.image.href -%}
+                  {%- if item.image.url -%}
                     </a>
                   {%- endif -%}
                 {%- if item.image.is_row -%}
@@ -102,18 +102,18 @@ full_width: true
           </div>
         {%- endif -%}
 
-        {%- if feature.image -%}
-          {%- if feature.image.is_row -%}
+        {%- if section.image -%}
+          {%- if section.image.is_row -%}
             <div class="content__row">
           {%- endif -%}
-            {%- if item.image.href -%}
-              <a href="{{ item.image.href }}">
+            {%- if item.image.url -%}
+              <a href="{{ item.image.url }}">
             {%- endif -%}
-                <img class="content__cover" src="{{ feature.image.src }}" style="{{ feature.image.style }}"></img>
-            {%- if item.image.href -%}
+                <img class="content__cover" src="{{ section.image.src }}" style="{{ section.image.style }}"></img>
+            {%- if item.image.url -%}
               </a>
             {%- endif -%}
-          {%- if feature.image.is_row -%}
+          {%- if section.image.is_row -%}
             </div>
           {%- endif -%}
         {%- endif -%}

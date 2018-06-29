@@ -3,8 +3,7 @@ default:
   lang: en
   paths:
     base: /
-    home: /
-    all:  /archive.html
+    archive:  /archive.html
     rss:  /feed.xml
   mathjax: false
   mathjax_autoNumber: false

@@ -17,36 +17,37 @@
 ## => Site Settings
 ##############################
 text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-url: https://tianqi.name # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl: /jekyll-TeXt-theme # does not include hostname
-title: TeXt Theme
-description: > # this means to ignore newlines until "Language & timezone"
+url     : https://tianqi.name
+baseurl : /jekyll-TeXt-theme
+title   : TeXt Theme
+description: >
   A customizable Jekyll theme for your blog or site
 
 
 # => Language and Timezone
 ##############################
 lang: en # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
-timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone: Asia/Shanghai
 
 
 ## => Author and Social
 ##############################
 author:
-  type: organization # "person" (default), "organization"
-  name: TeXt # your name
-  avatar: /assets/apple-touch-icon.png # your Photo or Logo
-  bio: > # your biographical work
+  type      : organization # "person" (default), "organization"
+  name      : TeXt
+  url       :
+  avatar    : /assets/apple-touch-icon.png
+  bio: >
     TeXt is a Jekyll theme for personal site, blog, project, documentation and so on.
     Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
-  email: kitian616@outlook.com # your Email address e.g. neo@site.com
-  facebook: # your Facebook username
-  twitter: kitian616 # your Twitter username
-  github: kitian616/jekyll-TeXt-theme # your GitHub username
-  linkedin: # your Linkedin username
-  googleplus: 101827554735084402671 # your Google+ username
-  weibo: 234695683 # your Weibo username
-  douban: # your Douban username
+  email     : kitian616@outlook.com
+  facebook  :
+  twitter   : kitian616
+  github    : kitian616/jekyll-TeXt-theme
+  linkedin  :
+  googleplus: 101827554735084402671
+  weibo     : 234695683
+  douban    :
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
@@ -58,7 +59,9 @@ repository_tree: master
 ## => Paths
 ##############################
 paths:
-  base: /
+  base    : # "/"" (default)
+  archive :  # "/archive.html" (default)
+  rss     :  # "/feed.xml" (default)
 
 
 ## => Post
@@ -110,11 +113,11 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID: 143666b578a416f82175 # GitHub Application Client ID
-    clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775 # GitHub Application Client Secret
-    repository: gitalk-demo # GitHub repo
-    owner: kitian616 # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    clientID    : 143666b578a416f82175
+    clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775
+    repository  : gitalk-demo
+    owner       : kitian616
+    admin:
       - kitian616
 
 
@@ -125,9 +128,9 @@ pageview:
 
   ## Leancloud
   leancloud:
-    app_id: uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz # LeanCloud App id
-    app_key: Mzf5m9skSwYVWVXhGiYMNyXs # LeanCloud App key
-    app_class: TeXtDemo # LeanCloud App class
+    app_id    : uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+    app_key   : Mzf5m9skSwYVWVXhGiYMNyXs
+    app_class : TeXtDemo
 
 
 ## => Analytics
@@ -137,15 +140,15 @@ analytics:
 
   ## Google Analytics
   google:
-    tracking_id: UA-71907556-1 # Google Analytics id for the site
-    anonymize_ip: false # Anonymize IP tracking for Analytics
+    tracking_id : UA-71907556-1
+    anonymize_ip: false
 
 
 ## => Build
 ##############################
-markdown: kramdown
-highlighter: rouge
-permalink: date
+markdown    : kramdown
+highlighter : rouge
+permalink   : date
 
 exclude:
   - CHANGELOG.md

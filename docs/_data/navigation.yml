@@ -18,6 +18,8 @@ docs-en:
         url:    /docs/en/quick-start
       - title:  Structure
         url:    /docs/en/structure
+      - title:  Update form 1.x to 2.x
+        url:    /docs/en/update-form-1-to-2
   - title:      Customization
     children:
       - title:  Configuration
@@ -28,6 +30,8 @@ docs-en:
         url:    /docs/en/layouts
       - title:  Logo and Favicon
         url:    /docs/en/logo-and-favicon
+      - title:  Authors
+        url:    /docs/en/authors
   - title:      Content
     children:
       - title:  Writing Posts
@@ -43,6 +47,8 @@ docs-zh:
     children:
       - title:  快速开始
         url:    /docs/zh/quick-start
+      - title:  从 1.x 升级到 2.x
+        url:    /docs/zh/update-form-1-to-2
   - title:      定制
     children:
       - title:  配置
@@ -53,6 +59,8 @@ docs-zh:
         url:    /docs/zh/layouts
       - title:  Logo 和 Favicon
         url:    /docs/zh/logo-and-favicon
+      - title:  作者
+        url:    /docs/zh/authors
   - title:      内容
     children:
       - title:  撰写博客

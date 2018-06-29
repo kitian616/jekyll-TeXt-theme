@@ -96,3 +96,9 @@ Error Text.
 | [BUTTON](#){:.button.button--secondary.button--pill.button--sm} | [BUTTON](#){:.button.button--secondary.button--pill.button--md} | [BUTTON](#){:.button.button--secondary.button--pill.button--lg} |
 | [BUTTON](#){:.button.button--secondary.button--rounded.button--sm} | [BUTTON](#){:.button.button--secondary.button--rounded.button--md} | [BUTTON](#){:.button.button--secondary.button--rounded.button--lg} |
 | [X](#){:.button.button--secondary.button--circle.button--sm} | [X](#){:.button.button--secondary.button--circle.button--md} | [X](#){:.button.button--secondary.button--circle.button--lg} |
+
+## Font Awesome
+
+<i class="fas fa-download"></i>
+
+<a class="button button--success button--rounded button--lg" href="#"><i class="fas fa-download"></i> Download TeXt Theme</a>
