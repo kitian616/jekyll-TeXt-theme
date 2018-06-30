@@ -1,11 +1,10 @@
 ---
 layout: base
 ---
-
-{%- assign locale = site.data.locale -%}
+{%- assign _page_type = page.type | default: layout.type | default: site.data.variables.default.page.type -%}
 
 {%- include snippets/page-title.html -%}
-{%- assign _title = __return -%}
+{%- assign _page_title = __return -%}
 
 {%- assign __source = page.show_header -%}
 {%- assign __target = layout.show_header -%}
@@ -31,7 +30,6 @@ layout: base
 {%- include snippets/assign.html -%}
 {%- assign _show_title = __return -%}
 
-
 {%- assign __source = page.show_edit_on_github -%}
 {%- assign __target = layout.show_edit_on_github -%}
 {%- include snippets/assign.html -%}
@@ -51,7 +49,6 @@ layout: base
     {%- include sidebar/toc.html -%}
   </div>
   <div class="page__mask js-sidebar-hide"></div>
-
 
 {%- else -%}
 <div class="layout--page clearfix">
@@ -85,27 +82,36 @@ layout: base
           </div>
 
           <div class="col-1">
-            <article itemscope itemtype="http://schema.org/Article">
+            {%- if _page_type == 'article' -%}
+              <article itemscope itemtype="http://schema.org/Article">
+            {%- elsif _page_type == 'webpage' -%}
+              <article itemscope itemtype="http://schema.org/WebPage">
+            {%- else -%}
+              <article>
+            {%- endif -%}
               {%- if _show_title or _show_edit_on_github -%}
                 <div class="article__header">
+              {%- endif -%}
                   {%- if _show_title -%}
-                    <header><h1 itemprop="name">{{ _title }}</h1></header>
+                    <header><h1 itemprop="headline">{{ _page_title }}</h1></header>
                   {%- else -%}
-                    <meta itemprop="name" content="_title" />
+                    <header style="display: none;"><h1 itemprop="headline">{{ _page_title }}</h1></header>
                   {%- endif-%}
                   {%- if _show_edit_on_github -%}
                     {%- if site.repository and site.repository_tree -%}
-                      {%- assign __locale = locale.POST_ON_GITHUB -%}
+                      {%- assign __locale = site.data.locale.POST_ON_GITHUB -%}
                       {%- include snippets/locale-to-string.html -%}
                       <a class="edit-on-github-button button button--secondary button--rounded button--sm"
                         href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
                         <i class="fab fa-github"></i> {{ __return }}</a>
                     {%- endif -%}
                   {%- endif -%}
+              {%- if _show_title or _show_edit_on_github -%}
                 </div>
               {%- endif -%}
 
               {%- include article-info.html -%}
+
               <div class="js-article-content">{{ content }}</div>
 
               {%- if jekyll.environment != "development" and page.comment != false -%}

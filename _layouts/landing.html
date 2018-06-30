@@ -1,37 +1,47 @@
 ---
 layout: page
+title: TeXt
 show_title: false
 show_header: false
 full_width: true
 ---
+{%- include snippets/page-title.html -%}
+{%- assign _title = __return -%}
+
 <div class="layout--landing">
+{%- assign __path = page.data.background_image.src -%}
+{%- include snippets/get-nav-url.html -%}
+{%- assign _url = __return -%}
 {%- if page.data.theme == 'light' -%}
-  <section class="section section--light overlay" style="background-image: url({{ page.data.background_image.src }});">
+  <section class="section section--light overlay" style="background-image: url({{ _url }});">
 {%- elsif page.data.theme == 'dark' -%}
-  <section class="section section--dark overlay" style="background-image: url({{ page.data.background_image.src }});">
+  <section class="section section--dark overlay" style="background-image: url({{ _url }});">
 {%- else -%}
   <section class="section overlay" style="background-image: url({{ page.data.background_image.src }});">
 {%- endif -%}
     <div class="section__content">
-      <h1>{{ page.data.title }}</h1>
+      <h1>{{ _title }}</h1>
       {%- if page.data.sub_title -%}
-      <h2>{{ page.data.sub_title }}</h2>
+      <h2 itemprop="alternativeHeadline">{{ page.data.sub_title }}</h2>
       {%- endif -%}
       {%- if page.data.actions -%}
       <ul class="menu menu--center">
-      {%- for action in page.data.actions -%}
-        {%- assign _type = action.type | default: 'info' -%}
-        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.url }}">{{ action.text }}</a></li>
+      {%- for _action in page.data.actions -%}
+        {%- assign __path = _action.url -%}
+        {%- include snippets/get-nav-url.html -%}
+        {%- assign _url = __return -%}
+        {%- assign _type = _action.type | default: 'info' -%}
+        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
       {%- endfor -%}
       </ul>
       {%- endif -%}
     </div>
   </section>
 
-  {%- for section in page.data.sections -%}
-  {%- if section.theme == 'light' -%}
+  {%- for _section in page.data.sections -%}
+  {%- if _section.theme == 'light' -%}
     <section class="section section--light feature">
-  {%- elsif section.theme == 'dark' -%}
+  {%- elsif _section.theme == 'dark' -%}
     <section class="section section--dark feature">
   {%- else -%}
     <section class="section feature">
@@ -39,60 +49,87 @@ full_width: true
       <div class="section__content">
         <div class="content__row">
 
-          <h3>{{ section.title }}</h3>
-            {%- if section.description-%}
-          <p>{{ section.description }}</p>
+          <h3>{{ _section.title }}</h3>
+            {%- if _section.description-%}
+          <p>{{ _section.description }}</p>
           {%- endif -%}
 
-          {%- if section.actions -%}
+          {%- if _section.actions -%}
             <ul class="menu menu--center">
-            {%- for action in section.actions -%}
-              {%- assign _type = action.type | default: 'outline-info' -%}
-              <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.url }}">{{ action.text }}</a></li>
+            {%- for _action in _section.actions -%}
+              {%- assign __path = _action.url -%}
+              {%- include snippets/get-nav-url.html -%}
+              {%- assign _url = __return -%}
+              {%- assign _type = _action.type | default: 'outline-info' -%}
+              <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
             {%- endfor -%}
             </ul>
           {%- endif -%}
 
         </div>
 
-        {%- if section.children -%}
-          {%- assign _size = section.children | size  -%}
+        {%- if _section.children -%}
+          {%- assign _size = _section.children | size  -%}
           <div class="grid">
             <div class="row">
-            {%- for item in section.children -%}
+
+
+            {%- for child in _section.children -%}
               <div class="content__col col-{{ 12 | divided_by: _size }} col-sm-12">
 
                 <div class="content__row">
-                  <h4>{{ item.title }}</h4>
+                  <h4>{{ child.title }}</h4>
 
-                  {%- if item.description-%}
-                    <p>{{ item.description }}</p>
+                  {%- if child.description-%}
+                    <p>{{ child.description }}</p>
                   {%- endif -%}
 
-                  {%- if item.actions -%}
+                  {%- if child.actions -%}
                     <ul class="menu menu--center">
-                      {%- for action in item.actions -%}
-                        {%- assign _type = action.type | default: 'outline-info' -%}
-                        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ action.url }}">{{ action.text }}</a></li>
+                      {%- for _action in child.actions -%}
+                        {%- assign __path = _action.url -%}
+                        {%- include snippets/get-nav-url.html -%}
+                        {%- assign _url = __return -%}
+                        {%- assign _type = _action.type | default: 'outline-info' -%}
+                        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
                 </div>
 
-                {%- if item.image -%}
-                {%- if item.image.is_row -%}
-                  <div class="content__row">
-                {%- endif -%}
-                  {%- if item.image.url -%}
-                    <a href="{{ item.image.url }}">
+                {%- if child.image -%}
+
+                  {%- if child.image.url -%}
+                    {%- assign __path = child.image.url -%}
+                    {%- include snippets/get-nav-url.html -%}
+                    {%- assign _item_image_url = __return -%}
+                  {%- else -%}
+                    {%- assign _item_image_url = nil -%}
                   {%- endif -%}
-                      <img class="content__cover" src="{{ item.image.src }}" style="{{ item.image.style }}"></img>
-                  {%- if item.image.url -%}
-                    </a>
+
+                  {%- if child.image.src -%}
+                    {%- assign __path = child.image.src -%}
+                    {%- include snippets/get-nav-url.html -%}
+                    {%- assign _item_image_src = __return -%}
+                  {%- else -%}
+                    {%- assign _item_image_src = nil -%}
                   {%- endif -%}
-                {%- if item.image.is_row -%}
-                  </div>
-                {%- endif -%}
+
+                  {%- if child.image.is_row -%}
+                    <div class="content__row">
+                  {%- endif -%}
+                  {%- if _item_image_url -%}
+                      <a href="{{ _item_image_url }}">
+                  {%- endif -%}
+                  {%- if _item_image_src -%}
+                        <img class="content__cover" src="{{ _item_image_src }}" style="{{ child.image.style }}"></img>
+                  {%- endif -%}
+                  {%- if _item_image_url -%}
+                      </a>
+                  {%- endif -%}
+                  {%- if child.image.is_row -%}
+                    </div>
+                  {%- endif -%}
                 {%- endif -%}
 
               </div>
@@ -102,18 +139,18 @@ full_width: true
           </div>
         {%- endif -%}
 
-        {%- if section.image -%}
-          {%- if section.image.is_row -%}
+        {%- if _section.image -%}
+          {%- if _section.image.is_row -%}
             <div class="content__row">
           {%- endif -%}
-            {%- if item.image.url -%}
-              <a href="{{ item.image.url }}">
+            {%- if child.image.url -%}
+              <a href="{{ child.image.url }}">
             {%- endif -%}
-                <img class="content__cover" src="{{ section.image.src }}" style="{{ section.image.style }}"></img>
-            {%- if item.image.url -%}
+                <img class="content__cover" src="{{ _section.image.src }}" style="{{ _section.image.style }}"></img>
+            {%- if child.image.url -%}
               </a>
             {%- endif -%}
-          {%- if section.image.is_row -%}
+          {%- if _section.image.is_row -%}
             </div>
           {%- endif -%}
         {%- endif -%}
@@ -121,7 +158,6 @@ full_width: true
       </div>
     </section>
   {%- endfor -%}
-  <div class="page__footer">{%- include footer.html -%}</div>
 </div>
 
 {{ content }}

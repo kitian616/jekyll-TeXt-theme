@@ -21,10 +21,10 @@ url     : https://tianqi.name
 baseurl : /jekyll-TeXt-theme
 title   : TeXt Theme
 description: >
-  A customizable Jekyll theme for your blog or site
+  A customizable Jekyll theme for blog or site
 
 
-# => Language and Timezone
+## => Language and Timezone
 ##############################
 lang: en # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
 timezone: Asia/Shanghai
@@ -59,9 +59,10 @@ repository_tree: master
 ## => Paths
 ##############################
 paths:
-  base    : # "/"" (default)
-  archive :  # "/archive.html" (default)
-  rss     :  # "/feed.xml" (default)
+  root    : # title link url, "/" (default)
+  home    : /test/ # home layout url, "/" (default)
+  archive : # "/archive.html" (default)
+  rss     : # "/feed.xml" (default)
 
 
 ## => Post
@@ -77,23 +78,24 @@ license: CC-BY-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 toc:
   selectors: # "h1,h2,h3" (default)
 
-## Markdown Enhancements
 
-# Mathjax
+## => Markdown Enhancements
+##############################
+## Mathjax
 mathjax: true # false (default), true
 mathjax_autoNumber: true # false (default), true
 
-# Mermaid
+## Mermaid
 mermaid: true # false (default), true
 
-# Chart
+## Chart
 chart: true # false (default), true
 
 
 ## => Paginate
 ##############################
 paginate: 8
-paginate_path: /page:num # don't change this unless for special need
+paginate_path: /test/page:num # don't change this unless for special need
 
 
 ## => Sources
@@ -167,6 +169,7 @@ exclude:
   - /screenshots
   # - /test
   - /vendor
+  - /index.html
 
 defaults:
   - scope:

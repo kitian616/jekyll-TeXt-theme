@@ -1,60 +1,70 @@
 {%- if post -%}
-  {%- assign cur_page = post -%}
+  {%- assign _cur_page = post -%}
 {%- elsif page -%}
-  {%- assign cur_page = page -%}
+  {%- assign _cur_page = page -%}
 {%- endif -%}
 
-{%- assign __source = page.pageview -%}
 {%- assign __target = site.data.variables.default.pageview -%}
+{%- assign __source = page.pageview -%}
 {%- include snippets/assign.html -%}
 {%- assign _pageview = __return -%}
 
+{%- assign __target = site.data.variables.default.paths.archive -%}
+{%- assign __source = site.paths.archive -%}
+{%- include snippets/assign.html -%}
+{%- assign _all_path = __return -%}
+
+{%- if _cur_page.author -%}
+  {%- assign _author = site.data.authors[_cur_page.author] -%}
+{%- else -%}
+  {%- assign _author = site.author -%}
+{%- endif -%}
+
+
 <div class="article__info clearfix">
-  {%- if cur_page.tags[0] -%}
+
+  {%- if _author -%}
+    <meta itemprop="author" content="{{ _author.name }}"/>
+  {%- endif -%}
+
+  {%- if _cur_page.tags[0] -%}
     <ul class="left-col menu">
-      {%- if site.paths.all -%}
-        {%- assign all_path = site.paths.all -%}
-      {%- else -%}
-        {%- assign all_path = site.data.variables.default.paths.all -%}
-      {%- endif -%}
+
       {%- assign _keywords = '' -%}
-      {%- for _tag in cur_page.tags -%}
+      {%- for _tag in _cur_page.tags -%}
         {%- assign _tag_encode = _tag | strip | url_encode } -%}
         {%- if forloop.last -%}
           {%- assign _keywords = _keywords | append: _tag -%}
         {%- else -%}
           {%- assign _keywords = _keywords | append: _tag | append: ',' -%}
         {%- endif -%}
-        {%- assign __path = all_path | append: '?tag=' -%}
+        {%- assign __path = _all_path | append: '?tag=' -%}
         {%- include snippets/prepend-baseurl.html -%}
         <li>
-          <a class="button button--secondary button--pill button--sm" href="{{ __return | append: _tag_encode | replace: '//', '/' }}">{{ _tag }}</a>
+          <a class="button button--secondary button--pill button--sm"
+            href="{{ __return | append: _tag_encode | replace: '//', '/' }}">{{ _tag }}</a>
         </li>
       {%- endfor -%}
       <meta itemprop="keywords" content="{{ _keywords }}">
     </ul>
   {%- endif -%}
-  {%- if (_pageview or post) or cur_page.date -%}
+
+
+  {%- if (_pageview or post) or _cur_page.date -%}
     <ul class="right-col menu">
-      {%- if cur_page.author -%}
-        {%- assign _author = site.data.authors[cur_page.author] -%}
+      {%- if !_cur_page.author -%}
         <li><i class="fas fa-user"></i>  <span>{{ _author.name }}</span></li>
-      {%- else -%}
-        {%- assign _author = site.author -%}
-      {%- endif -%}
-      {%- if _author -%}
-        <meta itemprop="author" content="{{ _author.name }}"/>
       {%- endif -%}
 
-      {%- if cur_page.date -%}
+      {%- if _cur_page.date -%}
         <li>
           {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
           {%- include snippets/locale-to-string.html -%}
           {%- if post -%}
-            <i class="far fa-calendar-alt"></i> <span itemprop="datePublished">{{ cur_page.date | date: __return }}</span>
+            <i class="far fa-calendar-alt"></i> <span itemprop="datePublished">{{ _cur_page.date | date: __return }}</span>
           {%- elsif page -%}
             <i class="far fa-calendar-alt"></i> <time datetime="{{ page.date | date_to_xmlschema }}"
-              itemprop="datePublished">{{ cur_page.date | date: __return }}
+              itemprop="datePublished">{{ _cur_page.date | date: __return }}
             </time>
           {%- endif -%}
         </li>
@@ -62,14 +72,19 @@
 
       {%- if _pageview or post -%}
         {%- if site.pageview.provider -%}
+
           {%- assign __locale = site.data.locale.VIEWS } -%}
           {%- include snippets/locale-to-string.html -%}
+          {%- assign _locale_views = __return -%}
+
           <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction"/>
-            <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="{{ cur_page.key }}">0</span> {{ __return }}
+            <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="{{ _cur_page.key }}">0</span> {{ _locale_views }}
           </li>
         {%- endif -%}
       {%- endif -%}
+
     </ul>
   {%- endif -%}
+
 </div>

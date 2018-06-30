@@ -1,4 +1,6 @@
 header:
+  - title:      Home
+    url:        /test/
   - title:      Docs
     url:        /docs/en/quick-start
   - title:      文档
@@ -6,7 +8,7 @@ header:
   - title:      Archive
     url:        /archive.html
   - title:      About
-    url:        /about/
+    url:        /about.html
   - title:      GitHub
     url:        https://github.com/kitian616/jekyll-TeXt-theme
 

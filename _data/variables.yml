@@ -2,7 +2,8 @@ default:
   text_color_theme: default
   lang: en
   paths:
-    base: /
+    root: /
+    home: /
     archive:  /archive.html
     rss:  /feed.xml
   mathjax: false

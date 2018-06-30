@@ -1,17 +1,21 @@
 ---
 layout: landing
-title: About
-permalink: /about/
+permalink: /index.html
 data:
-  title: TeXt
-  sub_title: 'A Jekyll Theme for <span class="tips" style="display: inline-block; text-align: left; width: 8.5em;"></span>'
+  sub_title: >
+    A Jekyll Theme for
+    <span style="display: none;">Personal Site, Team Site, Blog, Project, Documentation, etc</span>
+    <span class="tips" style="display: inline-block; text-align: left; width: 8.5em;"></span>
   theme: light
   actions:
     - text: Getting Started
       type: primary
-      url: https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start
+      url: /docs/en/quick-start
     - text: '<i class="fab fa-github"></i> GitHub'
       url: https://github.com/kitian616/jekyll-TeXt-theme
+    - text: Demo
+      type: outline-info
+      url: /test/
   background_image:
     src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/cover1.jpeg
   sections:
@@ -23,24 +27,24 @@ data:
       description: Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.
       actions:
         - text: Learn More
-          url: https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration
+          url: /docs/en/configuration
     - title: Plenty Layouts
       description: With the help of layouts, you can easily make different type of pages.
       actions:
         - text: Learn More
-          url: https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts
+          url: /docs/en/layouts
     - title: Enhanced User Experience
       children:
         - title: Additional styles
           description: TeXt offer some CSS classes that you can use in the post, including alert, photo frame, button and grid.
           actions:
             - text: Learn More
-              url: https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles
+              url: /docs/en/additional-styles
         - title: Markdown Enhancements
           description: You can easily add Mathjax, Mermaid and Charts in TeXt.
           actions:
             - text: Learn More
-              url: https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements
+              url: /docs/en/markdown-enhancements
     - title: 100% Free
       description: Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!
     - title: Tip Me
@@ -67,7 +71,7 @@ data:
 <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.1/dist/typeit.min.js"></script>
 <script>
 new TypeIt('.tips', {
-    strings: ['Personal Site.', 'Blog.', 'Project.', 'Documentation.'],
+    strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
     speed: 150,
     breakLines: false,
     autoStart: true,

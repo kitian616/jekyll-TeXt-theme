@@ -6,9 +6,12 @@
 
 <div class="follow-me">
   <ul class="menu menu--nowrap menu--center">
+
+
     {%- if _author.url -%}
       <link itemprop="url" href="{{ _author.url }}">
     {%- endif -%}
+
     {%- assign __locale = site.data.locale.EMAIL_ME -%}
     {%- include snippets/locale-to-string.html -%}
     {%- if _author.email -%}
@@ -17,8 +20,10 @@
         <i class="fas fa-envelope"></i>
       </a>
     {%- endif -%}
+
     {%- assign __locale = site.data.locale.FOLLOW_ME -%}
     {%- include snippets/locale-to-string.html -%}
+
     {%- if _author.weibo -%}
       <li title="{{ __return | replace: '[NAME]', 'Weibo' }}">
         <a class="button button--circle weibo-button" itemprop="sameAs" href="https://weibo.com/{{ _author.weibo }}" target="_blank">
@@ -26,6 +31,7 @@
         </a>
       </li>
     {%- endif -%}
+
     {%- if _author.facebook -%}
       <li title="{{ __return | replace: '[NAME]', 'Facebook' }}">
         <a class="button button--circle facebook-button" itemprop="sameAs" href="https://www.facebook.com/{{ _author.facebook }}" target="_blank">
@@ -33,6 +39,7 @@
         </a>
       </li>
     {%- endif -%}
+
     {%- if _author.twitter -%}
       <li title="{{ __return | replace: '[NAME]', 'Twitter' }}">
         <a class="button button--circle twitter-button" itemprop="sameAs" href="https://twitter.com/{{ _author.twitter }}" target="_blank">
@@ -40,6 +47,7 @@
         </a>
       </li>
     {%- endif -%}
+
     {%- if _author.googleplus -%}
       <li title="{{ __return | replace: '[NAME]', 'Google+' }}">
         <a class="button button--circle googlepluse-button" itemprop="sameAs" href="https://plus.google.com/u/0/{{ _author.googleplus }}" target="_blank">
@@ -47,6 +55,7 @@
         </a>
       </li>
     {%- endif -%}
+
     {%- if _author.github -%}
       <li title="{{ __return | replace: '[NAME]', 'Github' }}">
         <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/{{ _author.github }}" target="_blank">
@@ -54,6 +63,7 @@
         </a>
       </li>
     {%- endif -%}
+
     {%- if _author.linkedin -%}
       <li title="{{ __return | replace: '[NAME]', 'Linkedin' }}">
         <a class="button button--circle linkedin-button" itemprop="sameAs" href="https://www.linkedin.com/in/{{ _author.linkedin }}" target="_blank">
@@ -61,6 +71,7 @@
         </a>
       </li>
     {%- endif -%}
+
     {%- if _author.douban -%}
       <li title="{{ __return | replace: '[NAME]', 'Douban' }}">
         <a class="button button--circle douban-button" itemprop="sameAs" href="https://www.douban.com/people/{{ _author.douban }}" target="_blank">
@@ -68,5 +79,6 @@
         </a>
       </li>
     {%- endif -%}
+
   </ul>
 </div>

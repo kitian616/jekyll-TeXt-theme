@@ -9,11 +9,11 @@
 	{%- assign _sources = __return -%}
 	<div id="js-gitalk-container"></div>
 	{%- assign _admin = '' -%}
-	{%- for adminId in site.comments.gitalk.admin -%}
-		{%- assign _admin = _admin | append: ", '" | append: adminId | append: "'" -%}
+	{%- for _admin_id in site.comments.gitalk.admin -%}
+		{%- assign _admin = _admin | append: ", '" | append: _admin_id | append: "'" -%}
 	{%- endfor -%}
-	{%- assign last = _admin | size | minus: 1 -%}
-	{%- assign _admin = _admin | slice: 2, last -%}
+	{%- assign _last = _admin | size | minus: 1 -%}
+	{%- assign _admin = _admin | slice: 2, _last -%}
 	<script>
 		window.Lazyload.css('{{ _sources.gitalk.css }}');
 		window.Lazyload.js('{{ _sources.gitalk.js }}', function() {

@@ -1,12 +1,5 @@
-{%- assign __source = page.title -%}
-{%- assign __target = layout.title -%}
-{%- include snippets/assign.html -%}
-{%- assign _title = __return -%}
-
-{%- assign __source = page.titles -%}
-{%- assign __target = layout.titles -%}
-{%- include snippets/assign.html -%}
-{%- assign _titles = __return -%}
+{%- assign _title = page.title | default: layout.title -%}
+{%- assign _titles = page.titles | default: layout.titles -%}
 
 {%- if _title -%}
   {%- assign __return = _title -%}
@@ -15,4 +8,6 @@
   {%- include snippets/locale-to-string.html -%}
   {%- assign __localeTitle = __return -%}
   {%- assign __return = __localeTitle -%}
+{%- else -%}
+  {%- assign __return = nil -%}
 {%- endif -%}

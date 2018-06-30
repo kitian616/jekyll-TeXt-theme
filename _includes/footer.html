@@ -1,21 +1,19 @@
 
 <div class="footer js-page-footer">
   <div class="main">
+
     {%- assign __author = site.author -%}
     {%- if __author.type == 'organization' -%}
       {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
     {%- else -%}
       {%- assign _author_itemtype = 'http://schema.org/Person' -%}
     {%- endif -%}
+
     <aside  itemscope itemtype="{{ _author_itemtype }}">
       <meta itemprop="name" content="{{ __author.name }}">
-      {%- if __author.url -%}
-        {%- assign _author_url = __author.url -%}
-      {%- else -%}
-        {%- assign __path = '/'-%}
-        {%- include snippets/prepend-baseurl.html -%}
-        {%- assign _author_url = __return -%}
-      {%- endif -%}
+      {%- assign __path = __author.url | default: '/'-%}
+      {%- include snippets/get-nav-url.html -%}
+      {%- assign _author_url = __return -%}
       <meta itemprop="url" content="{{ _author_url }}">
       {%- if __author.bio -%}
         <meta itemprop="description" content="{{ __author.bio }}">
@@ -25,12 +23,13 @@
     <footer class="site-info">
       {%- assign __path = site.paths.rss | default: site.data.variables.default.paths.rss -%}
       {%- include snippets/get-nav-url.html -%}
-      {%- assign href = __return -%}
+      {%- assign _href = __return -%}
       {%- assign __locale = site.data.locale.NAV.RSS -%}
       {%- include snippets/locale-to-string.html -%}
+      {%- assign _locale_nav_rss = __return -%}
       <p>
         <span class="site-info__copyright">© {{ site.title }} {{ site.data.locale.COPYRIGHT_DATES }}</span>
-        <a class="site-info__rss" type="application/rss+xml" href="{{ href }}">{{ __return }}</a>
+        <a class="site-info__rss" type="application/rss+xml" href="{{ _href }}">{{ _locale_nav_rss }}</a>
       </p>
       <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.

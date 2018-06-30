@@ -11,7 +11,7 @@
         font-size: map-get($base, font-size-sm);
       }
       padding-bottom: map-get($spacers, 4);
-      margin: map-get($spacers, 4) 0 map-get($spacers, 3) 0;
+      margin-bottom: map-get($spacers, 4);
       &:not(:last-child) {
         @include split-line(bottom);
       }
