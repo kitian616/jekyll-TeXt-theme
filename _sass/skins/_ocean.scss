@@ -1,25 +1,25 @@
 ///
-// Color Theme: Forest
+// Skin: Ocean
 // Author: Tian Qi
 // Email: kitian616@outlook.com
 ///
 
 // main colors
-$main-color-1:     #bb6170;
+$main-color-1:     #09abff;
 $text-color-1:     #fff;
 
-$main-color-2:     #f3c584;
-$text-color-2:     #fff;
+$main-color-2:     #ead4d9;
+$text-color-2:     #444;
 
-$main-color-3:     #7cc7bb;
-$text-color-3:     #fff;
+$main-color-3:     #e1f5ff;
+$text-color-3:     #00537f;
 
 // background colors
-$background-color: #f8fcfb;
+$background-color: #f5fcff;
 // text colors
-$text-color-theme-light-d: #325f74;
-$text-color-theme-light:   #3e758f;
-$text-color-theme-light-l: #619dbb;
+$text-color-theme-light-d: #32434c;
+$text-color-theme-light:   #00537f;
+$text-color-theme-light-l: #0079ba;
 
 $text-color-theme-dark-d:  #fff;
 $text-color-theme-dark:    rgba(#fff, .95);
@@ -34,7 +34,7 @@ $text-background-color: rgba(#000, .05);
 // border and shadow colors
 $border-color:     mix(#000, $background-color, 20%);
 $border-color-l:   mix(#000, $background-color, 10%);
-$decorate-color:   rgba(#bb6170, .15);
+$decorate-color:   rgba(#000, .1);
 $mask-color:       rgba(#000, .8);
 $select-color:     rgba($main-color-1, .5);
 

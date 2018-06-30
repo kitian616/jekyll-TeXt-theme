@@ -16,7 +16,7 @@
 
 ## => Site Settings
 ##############################
-text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 url     : https://tianqi.name
 baseurl : /jekyll-TeXt-theme
 title   : TeXt Theme

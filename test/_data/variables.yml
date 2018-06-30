@@ -1,8 +1,9 @@
 default:
-  text_color_theme: default
+  text_skin: default
   lang: en
   paths:
     root: /
+    home: /
     archive:  /archive.html
     rss:  /feed.xml
   mathjax: false
@@ -15,6 +16,7 @@ default:
   excerpt_type: text
 
   page:
+    type: webpage
     show_header: true
     show_title: true
     show_edit_on_github: false

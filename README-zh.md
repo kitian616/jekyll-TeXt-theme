@@ -25,24 +25,24 @@ TeXt 是针对个人网站、博客、项目、文档等等的一款 Jekyll 主�
 - Google Analytics
 - 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
 - Web 语意化
-- Color Theme
+- 皮肤
 - 数学公式（[MathJax](https://www.mathjax.org/)）
 - 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
 - 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 - 多语言支持（English, 简体中文, 繁體中文）
 
-## Color Theme
+## 皮肤
 
-TeXt 内置以下 6 套颜色主题：
+TeXt 内置以下 6 套皮肤：
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
-| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.png) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.png) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.png) |
+| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.png) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.png) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.png) |
 
 | `ocean` | `chocolate` | `orange` |
 | --- |  --- | --- |
-| ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.png) | ![chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_chocolate.png) | ![orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png) |
+| ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.png) | ![chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.png) | ![orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.png) |
 
 ## 文档
 
