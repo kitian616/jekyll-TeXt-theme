@@ -34,7 +34,7 @@ TeXt 是针对个人网站、博客、项目、文档等等的一款 Jekyll 主�
 
 ## Color Theme
 
-颜色主题位于文件夹 ./\_sass/colors 中，修改 ./\_config.yml 中的 text_color_theme 项为以下值即可更换颜色主题，默认主题为 default。
+TeXt 内置以下 6 套颜色主题：
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
@@ -65,7 +65,7 @@ TeXt 是针对个人网站、博客、项目、文档等等的一款 Jekyll 主�
 
 ## 其他资源
 
-在 ./\_includes/icon/social 目录下有很多的社交产品图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
+在 *_includes/icon/social* 目录下有很多的社交产品图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
 
 ## 示例
 

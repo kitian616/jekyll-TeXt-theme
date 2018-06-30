@@ -7,7 +7,7 @@ tags:
 lang: zh-Hant
 ---
 
-在 _config.yml 或者頭信息裏設置 `lang: zh-Hant` 後，主題文字變為繁體中文。
+在 *_config.yml* 或者頭信息裏設置 `lang: zh-Hant` 後，主題文字變為繁體中文。
 
 <!--more-->
 

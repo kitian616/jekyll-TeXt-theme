@@ -7,7 +7,7 @@ tags:
 lang: zh-Hans
 ---
 
-在 _config.yml 或者头信息里设置 `lang: zh-Hans` 或 `lang: zh` 后，主题文字变为简体中文。
+在 *_config.yml* 或者头信息里设置 `lang: zh-Hans` 或 `lang: zh` 后，主题文字变为简体中文。
 
 <!--more-->
 
