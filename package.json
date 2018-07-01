@@ -1,7 +1,7 @@
 {
   "name": "jekyll-text-theme",
-  "version": "1.5.0",
-  "description": "A text first theme for Jekyll.",
+  "version": "2.0.0",
+  "description": "A customizable Jekyll theme for blog or site.",
   "scripts": {
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -H 0.0.0.0",

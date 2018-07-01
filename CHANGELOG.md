@@ -1,21 +1,25 @@
 # Change Log
 
+## 2.0.0 (2018-07-01)
+
+Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-form-1-to-2) for details.
+
+### Enhancements
+
+- Authors
+- License
+- New layouts (page, article, landing, etc)
+
 ## 1.5.0 (2018-03-18)
 
 ### Enhancements
 
 - `text_color_theme` config
-
 - Long pagination
-
 - Additional styles (Alert, Image)
-
 - Mathjax autoNumber config (@liao961120)
-
 - Article heading anchor
-
 - Previous and next post
-
 - Search
 
 ## 1.4.3 (2018-01-13)
@@ -23,11 +27,8 @@
 ### Enhancements
 
 - New TOC style
-
 - Gitalk support (@WangQiru)
-
 - Mermaid support
-
 - `site.paths` & `site.nav_lists` support absolute URL
 
 ## 1.4.2 (2017-12-10)
@@ -35,7 +36,6 @@
 ### Enhancements
 
 - Use new liquid syntax `{%-` `-%}` to avoid unnecessary output whitespace
-
 - Add paths.base config
 
 ## 1.4.1 (2017-12-05)
@@ -63,11 +63,8 @@
 ### Enhancements
 
 - Article tag supports special characters
-
 - Excerpts type (HTML | TEXT)
-
 - Titles on the phone become smaller
-
 - Styles change (table, code, blockquote)
 
 ## 1.2.2 (2017-11-04)
@@ -75,17 +72,13 @@
 ### Enhancements
 
 - MathJax Support
-
 - Add "Read More" link at the end of article excerpt.
-
 - 404 page
 
 ### Bug Fixes
 
 - Fix Email link URL error
-
 - Fix Site Title link URL error
-
 - Fix table responsive style error
 
 ## 1.2.1 (2017-10-27)
@@ -97,7 +90,6 @@
 ### Bug Fixes
 
 - Issues 4: View count display error when the post key include `-` (@yuxianda)
-
 - Email url error
 
 ## 1.2.0 (2017-10-22)
@@ -105,13 +97,11 @@
 ### Enhancements
 
 - Article excerpt no more than 200 words
-
 - If `leancloud` is not set, 0 view won't display
 
 ### Bug Fixes
 
 - Fix article TOC 's display error at proper situation
-
 - Fix footer social buttons not in the center bug
 
 ## 1.1.0 (2017-10-19)
@@ -119,7 +109,6 @@
 ### Enhancements
 
 - Color variables
-
 - More color themes (dark, forest, ocean)
 
 ## 1.0.0 (2017-10-17)
@@ -127,5 +116,4 @@
 ### Enhancements
 
 - Better article directories
-
 - Dark color theme

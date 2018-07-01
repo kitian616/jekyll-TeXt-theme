@@ -8,29 +8,27 @@
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-TeXt is a Jekyll theme for personal site, blog, project, documentation and so on. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
 [中文文档](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)
 
 ## Features
 
 - Responsive
-- Paginate ([jekyll-paginate](https://github.com/jekyll/jekyll-paginate))
-- Table of contents
-- Tag
-- Search
-- Page views ([LeanCloud](https://leancloud.cn/))
-- Emoji ([Jemoji](https://github.com/jekyll/jemoji))
-- Comments ([Disqus](https://disqus.com/))
-- Google Analytics
-- Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
-- Semantic HTML
 - Skins
+- Table of contents
+- Authors
+- Multi-language support(English, Simplified Chinese, Traditional Chinese)
+- Search
+- Semantic HTML
+- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
+- Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
 - Mathematical formula ([MathJax](https://www.mathjax.org/))
 - Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))
 - Line Chart, Bar Chart, Radar Chart, Pie Chart ([chartjs](http://www.chartjs.org/))
-- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
-- Multi-language support(English, Simplified Chinese, Traditional Chinese)
+- Page views ([LeanCloud](https://leancloud.cn/))
+- Comments ([Disqus](https://disqus.com/))
+- Google Analytics
 
 ## Skins
 
@@ -49,6 +47,7 @@ You can choose these 6 built-in skins below:
 ### Start
 
 - [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
+- [Update form 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-form-1-to-2)
 
 ### Customization
 
@@ -56,6 +55,7 @@ You can choose these 6 built-in skins below:
 - [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
 - [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
 - [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
+- [Authors](https://tianqi.name/jekyll-TeXt-theme/docs/en/authors)
 
 ### Content
 
@@ -67,7 +67,7 @@ You can choose these 6 built-in skins below:
 
 | Name | Description |
 | --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/) | Home page with posts list |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page with posts list |
 | [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | You can filter tags and search here |
 
 ## License

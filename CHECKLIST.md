@@ -1,7 +1,5 @@
 # CHECKLIST
 
 - CHANGELOG
-
-- _config.yml unchanged
-
-- _sass/settings/_colors.scss use default skin
+- config files and _data
+- *assets/css/main.scss* use configurable skin
