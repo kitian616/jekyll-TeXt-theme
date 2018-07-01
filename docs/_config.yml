@@ -169,6 +169,7 @@ exclude:
   - /screenshots
   # - /test
   - /vendor
+  - /_posts
   - /index.html
 
 defaults:
@@ -192,7 +193,6 @@ defaults:
       aside:
         toc: true
       show_edit_on_github: true
-      pageview: true
   - scope:
       path: "docs/zh"
     values:
@@ -204,7 +204,6 @@ defaults:
         toc: true
       lang: zh
       show_edit_on_github: true
-      pageview: true
 
 
 ## => Plugins

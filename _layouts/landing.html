@@ -39,124 +39,125 @@ full_width: true
   </section>
 
   {%- for _section in page.data.sections -%}
-  {%- if _section.theme == 'light' -%}
-    <section class="section section--light feature">
-  {%- elsif _section.theme == 'dark' -%}
-    <section class="section section--dark feature">
-  {%- else -%}
-    <section class="section feature">
-  {%- endif -%}
-      <div class="section__content">
-        <div class="content__row">
+    {%- if _section.theme == 'light' -%}
+      <section class="section section--light feature" id="section-{{ forloop.index }}">
+    {%- elsif _section.theme == 'dark' -%}
+      <section class="section section--dark feature" id="section-{{ forloop.index }}">
+    {%- else -%}
+      <section class="section feature" id="section-{{ forloop.index }}">
+    {%- endif -%}
 
-          <h3>{{ _section.title }}</h3>
-            {%- if _section.description-%}
-          <p>{{ _section.description }}</p>
+        <div class="section__content">
+          <div class="content__row">
+
+            <h3>{{ _section.title }}</h3>
+              {%- if _section.description-%}
+            <p>{{ _section.description }}</p>
+            {%- endif -%}
+
+            {%- if _section.actions -%}
+              <ul class="menu menu--center">
+              {%- for _action in _section.actions -%}
+                {%- assign __path = _action.url -%}
+                {%- include snippets/get-nav-url.html -%}
+                {%- assign _url = __return -%}
+                {%- assign _type = _action.type | default: 'outline-info' -%}
+                <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+              {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+          </div>
+
+          {%- if _section.children -%}
+            {%- assign _size = _section.children | size  -%}
+            <div class="grid">
+              <div class="row">
+
+
+              {%- for child in _section.children -%}
+                <div class="content__col col-{{ 12 | divided_by: _size }} col-sm-12">
+
+                  <div class="content__row">
+                    <h4>{{ child.title }}</h4>
+
+                    {%- if child.description-%}
+                      <p>{{ child.description }}</p>
+                    {%- endif -%}
+
+                    {%- if child.actions -%}
+                      <ul class="menu menu--center">
+                        {%- for _action in child.actions -%}
+                          {%- assign __path = _action.url -%}
+                          {%- include snippets/get-nav-url.html -%}
+                          {%- assign _url = __return -%}
+                          {%- assign _type = _action.type | default: 'outline-info' -%}
+                          <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </div>
+
+                  {%- if child.image -%}
+
+                    {%- if child.image.url -%}
+                      {%- assign __path = child.image.url -%}
+                      {%- include snippets/get-nav-url.html -%}
+                      {%- assign _item_image_url = __return -%}
+                    {%- else -%}
+                      {%- assign _item_image_url = nil -%}
+                    {%- endif -%}
+
+                    {%- if child.image.src -%}
+                      {%- assign __path = child.image.src -%}
+                      {%- include snippets/get-nav-url.html -%}
+                      {%- assign _item_image_src = __return -%}
+                    {%- else -%}
+                      {%- assign _item_image_src = nil -%}
+                    {%- endif -%}
+
+                    {%- if child.image.is_row -%}
+                      <div class="content__row">
+                    {%- endif -%}
+                    {%- if _item_image_url -%}
+                        <a href="{{ _item_image_url }}">
+                    {%- endif -%}
+                    {%- if _item_image_src -%}
+                          <img class="content__cover" src="{{ _item_image_src }}" style="{{ child.image.style }}"></img>
+                    {%- endif -%}
+                    {%- if _item_image_url -%}
+                        </a>
+                    {%- endif -%}
+                    {%- if child.image.is_row -%}
+                      </div>
+                    {%- endif -%}
+                  {%- endif -%}
+
+                </div>
+              {%- endfor-%}
+
+              </div>
+            </div>
           {%- endif -%}
 
-          {%- if _section.actions -%}
-            <ul class="menu menu--center">
-            {%- for _action in _section.actions -%}
-              {%- assign __path = _action.url -%}
-              {%- include snippets/get-nav-url.html -%}
-              {%- assign _url = __return -%}
-              {%- assign _type = _action.type | default: 'outline-info' -%}
-              <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
-            {%- endfor -%}
-            </ul>
+          {%- if _section.image -%}
+            {%- if _section.image.is_row -%}
+              <div class="content__row">
+            {%- endif -%}
+              {%- if child.image.url -%}
+                <a href="{{ child.image.url }}">
+              {%- endif -%}
+                  <img class="content__cover" src="{{ _section.image.src }}" style="{{ _section.image.style }}"></img>
+              {%- if child.image.url -%}
+                </a>
+              {%- endif -%}
+            {%- if _section.image.is_row -%}
+              </div>
+            {%- endif -%}
           {%- endif -%}
 
         </div>
-
-        {%- if _section.children -%}
-          {%- assign _size = _section.children | size  -%}
-          <div class="grid">
-            <div class="row">
-
-
-            {%- for child in _section.children -%}
-              <div class="content__col col-{{ 12 | divided_by: _size }} col-sm-12">
-
-                <div class="content__row">
-                  <h4>{{ child.title }}</h4>
-
-                  {%- if child.description-%}
-                    <p>{{ child.description }}</p>
-                  {%- endif -%}
-
-                  {%- if child.actions -%}
-                    <ul class="menu menu--center">
-                      {%- for _action in child.actions -%}
-                        {%- assign __path = _action.url -%}
-                        {%- include snippets/get-nav-url.html -%}
-                        {%- assign _url = __return -%}
-                        {%- assign _type = _action.type | default: 'outline-info' -%}
-                        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                </div>
-
-                {%- if child.image -%}
-
-                  {%- if child.image.url -%}
-                    {%- assign __path = child.image.url -%}
-                    {%- include snippets/get-nav-url.html -%}
-                    {%- assign _item_image_url = __return -%}
-                  {%- else -%}
-                    {%- assign _item_image_url = nil -%}
-                  {%- endif -%}
-
-                  {%- if child.image.src -%}
-                    {%- assign __path = child.image.src -%}
-                    {%- include snippets/get-nav-url.html -%}
-                    {%- assign _item_image_src = __return -%}
-                  {%- else -%}
-                    {%- assign _item_image_src = nil -%}
-                  {%- endif -%}
-
-                  {%- if child.image.is_row -%}
-                    <div class="content__row">
-                  {%- endif -%}
-                  {%- if _item_image_url -%}
-                      <a href="{{ _item_image_url }}">
-                  {%- endif -%}
-                  {%- if _item_image_src -%}
-                        <img class="content__cover" src="{{ _item_image_src }}" style="{{ child.image.style }}"></img>
-                  {%- endif -%}
-                  {%- if _item_image_url -%}
-                      </a>
-                  {%- endif -%}
-                  {%- if child.image.is_row -%}
-                    </div>
-                  {%- endif -%}
-                {%- endif -%}
-
-              </div>
-            {%- endfor-%}
-
-            </div>
-          </div>
-        {%- endif -%}
-
-        {%- if _section.image -%}
-          {%- if _section.image.is_row -%}
-            <div class="content__row">
-          {%- endif -%}
-            {%- if child.image.url -%}
-              <a href="{{ child.image.url }}">
-            {%- endif -%}
-                <img class="content__cover" src="{{ _section.image.src }}" style="{{ _section.image.style }}"></img>
-            {%- if child.image.url -%}
-              </a>
-            {%- endif -%}
-          {%- if _section.image.is_row -%}
-            </div>
-          {%- endif -%}
-        {%- endif -%}
-
-      </div>
-    </section>
+      </section>
   {%- endfor -%}
 </div>
 
