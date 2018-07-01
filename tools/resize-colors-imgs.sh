@@ -1,1 +1,1 @@
-mogrify -resize 800 -path screenshots screenshots/origin/colors_*.png
+mogrify -resize 800 -path screenshots screenshots/origin/skins_*.png
