@@ -5,25 +5,25 @@
 ///
 
 // main colors
-$main-color-1:     #ffbf00;
-$text-color-1:     rgba(#fff, .95);
+$main-color-1:     #FF9500;
+$text-color-1:     rgba(#fff, .8);
 
-$main-color-2:     #ff3366;
-$text-color-2:     rgba(#fff, .95);
+$main-color-2:     #FF3B30;
+$text-color-2:     rgba(#fff, .8);
 
-$main-color-3:     #21252b;
-$text-color-3:     rgba(#fff, .95);
+$main-color-3:     #202020;
+$text-color-3:     rgba(#fff, .8);
 
 // background colors
-$background-color: #2e3744;
+$background-color: #121212;
 // text colors
 $text-color-theme-light-d: #000;
 $text-color-theme-light:   #222;
 $text-color-theme-light-l: #888;
 
-$text-color-theme-dark-d:  #fff;
-$text-color-theme-dark:    rgba(#fff, .95);
-$text-color-theme-dark-l:  rgba(#fff, .85);
+$text-color-theme-dark-d:  rgba(#fff, .8);
+$text-color-theme-dark:    rgba(#fff, .7);
+$text-color-theme-dark-l:  rgba(#fff, .5);
 
 $text-color-d:     $text-color-theme-dark-d;
 $text-color:       $text-color-theme-dark;
@@ -39,10 +39,10 @@ $mask-color:       rgba(#fff, .8);
 $select-color:     rgba($main-color-1, .5);
 
 // function colors
-$green:           #98c379;
-$blue:            #56b6c2;
-$yellow:          #e5c07b;
-$red:             #e06c75;
+$green:           #5c7829;
+$blue:            #087099;
+$yellow:          #b7b327;
+$red:             #cc3333;
 $text-color-function: rgba(#fff, .9);
 
 // logo colors
