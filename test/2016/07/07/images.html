@@ -229,9 +229,7 @@
       }
     };
   })(this.document);
-})();/*(function () {
-
-})();*/</script><script>
+})();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -257,7 +255,8 @@
 </script>
 </head>
   <body>
-<div class="layout--page clearfix">
+    <div class="root" data-is-touch="false">
+      <div class="layout--page clearfix">
 <div class="page__main js-page-main has-aside">
 <div class="page__main-inner">
     <div></div>
@@ -288,9 +287,9 @@
 </header>
 </div>
 <div class="page__content"><div class="main">
-<div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
+<div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-          <div class="col-1">
+          <div class="col-main">
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header">
 <header><h1 itemprop="headline">Jekyll - Images</h1></header><a class="edit-on-github-button button button--secondary button--rounded button--sm" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2016-07-07-images.md">
                         <i class="fab fa-github"></i> Edit on Github</a>
@@ -434,7 +433,7 @@
 <aside itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt">
 <meta itemprop="url" content="/jekyll-TeXt-theme/">
-<meta itemprop="description" content="TeXt is a Jekyll theme for personal site, blog, project, documentation and so on. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+<meta itemprop="description" content="TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 ">
 <div class="follow-me">
   <ul class="menu menu--nowrap menu--center">
@@ -729,7 +728,7 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window);
     var $articleContent = $('.js-article-content');
-    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
     var toc;
     var tocDisabled = false;
     var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
@@ -900,5 +899,13 @@
 		ga('send', 'pageview');
 		
 	</script>
-</body>
+    </div>
+    <script>(function () {
+  var $root = document.getElementsByClassName('root')[0];
+  if (window.hasEvent('touchstart')) {
+    $root.dataset.isTouch = true;
+    document.addEventListener('touchstart', function(){}, false);
+  }
+})();</script>
+  </body>
 </html>

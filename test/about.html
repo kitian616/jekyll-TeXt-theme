@@ -230,9 +230,7 @@
       }
     };
   })(this.document);
-})();/*(function () {
-
-})();*/</script><script>
+})();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -258,7 +256,8 @@
 </script>
 </head>
   <body>
-<div class="layout--page clearfix">
+    <div class="root" data-is-touch="false">
+      <div class="layout--page clearfix">
 <div class="page__main js-page-main">
 <div class="page__main-inner">
     <div></div>
@@ -289,9 +288,9 @@
 </header>
 </div>
 <div class="page__content"><div class="main">
-<div class="col-2 js-col-2"></div>
+<div class="col-aside js-col-aside"></div>
 
-          <div class="col-1">
+          <div class="col-main">
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">About</h1></header></div>
 <div class="article__info clearfix"><meta itemprop="author" content="TeXt"></div>
 <div class="js-article-content">
@@ -355,7 +354,7 @@
 <aside itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt">
 <meta itemprop="url" content="/jekyll-TeXt-theme/">
-<meta itemprop="description" content="TeXt is a Jekyll theme for personal site, blog, project, documentation and so on. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+<meta itemprop="description" content="TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 ">
 <div class="follow-me">
   <ul class="menu menu--nowrap menu--center">
@@ -675,5 +674,13 @@
 		ga('send', 'pageview');
 		
 	</script>
-</body>
+    </div>
+    <script>(function () {
+  var $root = document.getElementsByClassName('root')[0];
+  if (window.hasEvent('touchstart')) {
+    $root.dataset.isTouch = true;
+    document.addEventListener('touchstart', function(){}, false);
+  }
+})();</script>
+  </body>
 </html>

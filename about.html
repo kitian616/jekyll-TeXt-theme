@@ -218,9 +218,7 @@
       }
     };
   })(this.document);
-})();/*(function () {
-
-})();*/</script><script>
+})();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -244,7 +242,9 @@
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script></head>
-  <body><div class="layout--page clearfix"><div class="page__main js-page-main"><div class="page__main-inner">
+  <body>
+    <div class="root" data-is-touch="false">
+      <div class="layout--page clearfix"><div class="page__main js-page-main"><div class="page__main-inner">
     <div></div><div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -259,12 +259,12 @@
       <ul><li><a href="/jekyll-TeXt-theme/test/">Home</a></li><li><a href="/jekyll-TeXt-theme/docs/en/quick-start">Docs</a></li><li><a href="/jekyll-TeXt-theme/docs/zh/quick-start">文档</a></li><li><a href="/jekyll-TeXt-theme/archive.html">Archive</a></li><li class="active"><a href="/jekyll-TeXt-theme/about.html">About</a></li><li><a href="https://github.com/kitian616/jekyll-TeXt-theme">GitHub</a></li></ul>
     </nav></div>
 </header>
-</div><div class="page__content"><div class ="main"><div class="col-2 js-col-2"></div>
+</div><div class="page__content"><div class ="main"><div class="col-aside js-col-aside"></div>
 
-          <div class="col-1"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">About</h1></header></div><div class="article__info clearfix"><meta itemprop="author" content="Tian Qi"/></div>
+          <div class="col-main"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">About</h1></header></div><div class="article__info clearfix"><meta itemprop="author" content="Tian Qi"/></div>
 <div class="js-article-content"><div class="layout--article"><div class="article__content" itemprop="articleBody"><p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png" alt="TeXt Theme" /></p>
 
-<p>TeXt is succinct Jekyll theme, Perfect for hosting your personal site, blog, documentation on GitHub or self-hosting on your own server.</p>
+<p>TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Hello, World!'</span><span class="p">))();</span>
 </code></pre></div></div>
@@ -273,23 +273,20 @@
 
 <ul>
   <li>Responsive</li>
-  <li>Paginate (<a href="https://github.com/jekyll/jekyll-paginate">jekyll-paginate</a>)</li>
-  <li>Table of contents</li>
-  <li>Tag</li>
-  <li>Search</li>
-  <li>Page views (<a href="https://leancloud.cn/">LeanCloud</a>)</li>
-  <li>Emoji (<a href="https://github.com/jekyll/jemoji">Jemoji</a>)</li>
-  <li>Comments (<a href="https://disqus.com/">Disqus</a>)</li>
-  <li>Google Analytics</li>
-  <li>Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)</li>
-  <li>Semantic HTML</li>
-  <li>Icon automation tool (<a href="https://www.npmjs.com/package/gulp-svg2png">gulp-svg2png</a>, <a href="https://www.npmjs.com/package/gulp-to-ico">gulp-to-ico</a>)</li>
   <li>Skins</li>
+  <li>Table of contents</li>
+  <li>Authors</li>
+  <li>Multi-language support(English, Simplified Chinese, Traditional Chinese)</li>
+  <li>Search</li>
+  <li>Semantic HTML</li>
+  <li>RSS（<a href="https://github.com/jekyll/jekyll-feed">jekyll-feed</a>)</li>
+  <li>Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)</li>
   <li>Mathematical formula (<a href="https://www.mathjax.org/">MathJax</a>)</li>
   <li>Flowchart, Sequence diagram, Gantt diagram (<a href="https://mermaidjs.github.io/">mermaid</a>)</li>
   <li>Line Chart, Bar Chart, Radar Chart, Pie Chart (<a href="http://www.chartjs.org/">chartjs</a>)</li>
-  <li>RSS（<a href="https://github.com/jekyll/jekyll-feed">jekyll-feed</a>)</li>
-  <li>Multi-language support(English, Simplified Chinese, Traditional Chinese)</li>
+  <li>Page views (<a href="https://leancloud.cn/">LeanCloud</a>)</li>
+  <li>Comments (<a href="https://disqus.com/">Disqus</a>)</li>
+  <li>Google Analytics</li>
 </ul>
 
 <h2 id="skins">Skins</h2>
@@ -375,7 +372,7 @@
       <div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a Jekyll theme for personal site, blog, project, documentation and so on. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+      <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 "><div class="follow-me">
   <ul class="menu menu--nowrap menu--center"><li title="Send me Email.">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:kitian616@outlook.com" target="_blank">
@@ -682,5 +679,14 @@
 		ga('create', 'UA-71907556-1', 'auto');
 		ga('send', 'pageview');
 		
-	</script></body>
+	</script>
+    </div>
+    <script>(function () {
+  var $root = document.getElementsByClassName('root')[0];
+  if (window.hasEvent('touchstart')) {
+    $root.dataset.isTouch = true;
+    document.addEventListener('touchstart', function(){}, false);
+  }
+})();</script>
+  </body>
 </html>

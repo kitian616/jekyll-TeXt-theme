@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>TeXt - Additional Styles - TeXt Theme</title>
 
-<meta name="description" content="Success!BUTTON">
+<meta name="description" content="Success!                     BUTTON BUTTON BUTTON BUTTON">
 <link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
@@ -217,9 +217,7 @@
       }
     };
   })(this.document);
-})();/*(function () {
-
-})();*/</script><script>
+})();</script><script>
   (function() {
     var TEXT_VARIABLES = {
       sources: {
@@ -243,7 +241,9 @@
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
 </script></head>
-  <body><div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
+  <body>
+    <div class="root" data-is-touch="false">
+      <div class="layout--page clearfix"><div class="page__main js-page-main has-aside"><div class="page__main-inner">
     <div></div><div class="page__header"><header class="header">
   <div class="main clearfix">
     <div class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -258,9 +258,9 @@
       <ul><li><a href="/jekyll-TeXt-theme/test/">Home</a></li><li><a href="/jekyll-TeXt-theme/docs/en/quick-start">Docs</a></li><li><a href="/jekyll-TeXt-theme/docs/zh/quick-start">文档</a></li><li><a href="/jekyll-TeXt-theme/archive.html">Archive</a></li><li><a href="/jekyll-TeXt-theme/about.html">About</a></li><li><a href="https://github.com/kitian616/jekyll-TeXt-theme">GitHub</a></li></ul>
     </nav></div>
 </header>
-</div><div class="page__content"><div class ="main"><div class="col-2 js-col-2"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
+</div><div class="page__content"><div class ="main"><div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-          <div class="col-1"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">TeXt - Additional Styles</h1></header><a class="edit-on-github-button button button--secondary button--rounded button--sm"
+          <div class="col-main"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">TeXt - Additional Styles</h1></header><a class="edit-on-github-button button button--secondary button--rounded button--sm"
                         href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2017-08-08-additional-styles.md">
                         <i class="fab fa-github"></i> Edit on Github</a></div><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
@@ -277,9 +277,33 @@
           </li></ul></div>
 <div class="js-article-content"><div class="layout--article"><div class="article__content" itemprop="articleBody"><p class="success">Success!</p>
 
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="rounded" /></p>
+<div class="grid">
+<div class="row">
+<div class="col-4 col-md-5 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="rounded" /></p>
+    </div>
+<div class="col-4 col-md-5 col-sm-12">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt="Lenna" title="Lenna_rounded" class="circle shadow" /></p>
+    </div>
+</div>
+</div>
 
-<p><a href="#" class="button button--info button--rounded button--lg">BUTTON</a></p>
+<div class="grid">
+<div class="row">
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--primary button--pill my-2"><i class="fas fa-space-shuttle"></i> BUTTON</div>
+</div>
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> BUTTON</div>
+</div>
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--success button--rounded my-2"><i class="fas fa-user-astronaut"></i> BUTTON</div>
+</div>
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> BUTTON</div>
+</div>
+</div>
+</div>
 
 <!--more-->
 
@@ -374,176 +398,238 @@
 
 <h2 id="button">Button</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Primary</th>
-      <th>Secondary</th>
-      <th>Success</th>
-      <th>Info</th>
-      <th>Warning</th>
-      <th>Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="#" class="button button--primary button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--secondary button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--success button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--info button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--warning button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--error button--pill">BUTTON</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--primary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--secondary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--success button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--info button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--warning button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--error button--pill my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Primary</th>
-      <th>Secondary</th>
-      <th>Success</th>
-      <th>Info</th>
-      <th>Warning</th>
-      <th>Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="#" class="button button--outline-primary button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-secondary button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-success button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-info button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-warning button--pill">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-error button--pill">BUTTON</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--outline-primary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--outline-secondary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--outline-success button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--outline-info button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--outline-warning button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--outline-error button--pill my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Primary</th>
-      <th>Secondary</th>
-      <th>Success</th>
-      <th>Info</th>
-      <th>Warning</th>
-      <th>Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="#" class="button button--primary button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--secondary button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--success button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--info button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--warning button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--error button--rounded">BUTTON</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--primary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--secondary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--success button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--info button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--warning button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--error button--rounded my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Primary</th>
-      <th>Secondary</th>
-      <th>Success</th>
-      <th>Info</th>
-      <th>Warning</th>
-      <th>Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="#" class="button button--outline-primary button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-secondary button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-success button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-info button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-warning button--rounded">BUTTON</a></td>
-      <td><a href="#" class="button button--outline-error button--rounded">BUTTON</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--outline-primary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--outline-secondary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--outline-success button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--outline-info button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--outline-warning button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--outline-error button--rounded my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Primary</th>
-      <th>Secondary</th>
-      <th>Success</th>
-      <th>Info</th>
-      <th>Warning</th>
-      <th>Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="#" class="button button--primary button--circle">X</a></td>
-      <td><a href="#" class="button button--secondary button--circle">X</a></td>
-      <td><a href="#" class="button button--success button--circle">X</a></td>
-      <td><a href="#" class="button button--info button--circle">X</a></td>
-      <td><a href="#" class="button button--warning button--circle">X</a></td>
-      <td><a href="#" class="button button--error button--circle">X</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--primary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--secondary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--success button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--info button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--warning button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--error button--circle my-2 mx-auto">X</div>
+</div>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Primary</th>
-      <th>Secondary</th>
-      <th>Success</th>
-      <th>Info</th>
-      <th>Warning</th>
-      <th>Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="#" class="button button--outline-primary button--circle">X</a></td>
-      <td><a href="#" class="button button--outline-secondary button--circle">X</a></td>
-      <td><a href="#" class="button button--outline-success button--circle">X</a></td>
-      <td><a href="#" class="button button--outline-info button--circle">X</a></td>
-      <td><a href="#" class="button button--outline-warning button--circle">X</a></td>
-      <td><a href="#" class="button button--outline-error button--circle">X</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--outline-primary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--outline-secondary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--outline-success button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--outline-info button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--outline-warning button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--outline-error button--circle my-2 mx-auto">X</div>
+</div>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Small</th>
-      <th>Middle</th>
-      <th>Large</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="#" class="button button--secondary button--pill button--sm">BUTTON</a></td>
-      <td><a href="#" class="button button--secondary button--pill button--md">BUTTON</a></td>
-      <td><a href="#" class="button button--secondary button--pill button--lg">BUTTON</a></td>
-    </tr>
-    <tr>
-      <td><a href="#" class="button button--secondary button--rounded button--sm">BUTTON</a></td>
-      <td><a href="#" class="button button--secondary button--rounded button--md">BUTTON</a></td>
-      <td><a href="#" class="button button--secondary button--rounded button--lg">BUTTON</a></td>
-    </tr>
-    <tr>
-      <td><a href="#" class="button button--secondary button--circle button--sm">X</a></td>
-      <td><a href="#" class="button button--secondary button--circle button--md">X</a></td>
-      <td><a href="#" class="button button--secondary button--circle button--lg">X</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Large</strong></div>
+<div class="button button--secondary button--pill button--lg my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Middle</strong></div>
+<div class="button button--secondary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Small</strong></div>
+<div class="button button--secondary button--pill button--sm my-2">BUTTON</div>
+</div>
+</div>
+</div>
+
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Large</strong></div>
+<div class="button button--secondary button--rounded button--lg my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Middle</strong></div>
+<div class="button button--secondary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Small</strong></div>
+<div class="button button--secondary button--rounded button--sm my-2">BUTTON</div>
+</div>
+</div>
+</div>
+
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Large</strong></div>
+<div class="button button--secondary button--circle button--lg my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Middle</strong></div>
+<div class="button button--secondary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Small</strong></div>
+<div class="button button--secondary button--circle button--sm my-2 mx-auto">X</div>
+</div>
+</div>
+</div>
 
 <h2 id="font-awesome">Font Awesome</h2>
 
-<p><i class="fas fa-download"></i></p>
+<p><i class="fas fa-space-shuttle"></i></p>
 
-<p><a class="button button--success button--rounded button--lg" href="#"><i class="fas fa-download"></i> Download TeXt Theme</a></p>
+<p><i class="fas fa-user-astronaut"></i></p>
+
+<div class="button button--success button--rounded button--lg"><i class="fas fa-download"></i> Download TeXt Theme</div>
 </div>
 
   <footer class="article__footer"><meta itemprop="dateModified" content="2017-08-08T00:00:00+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
@@ -596,7 +682,7 @@
       <div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a Jekyll theme for personal site, blog, project, documentation and so on. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+      <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 "><div class="follow-me">
   <ul class="menu menu--nowrap menu--center"><li title="Send me Email.">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:kitian616@outlook.com" target="_blank">
@@ -879,7 +965,7 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window);
     var $articleContent = $('.js-article-content');
-    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-2');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
     var toc;
     var tocDisabled = false;
     var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
@@ -1049,5 +1135,14 @@
 		ga('create', 'UA-71907556-1', 'auto');
 		ga('send', 'pageview');
 		
-	</script></body>
+	</script>
+    </div>
+    <script>(function () {
+  var $root = document.getElementsByClassName('root')[0];
+  if (window.hasEvent('touchstart')) {
+    $root.dataset.isTouch = true;
+    document.addEventListener('touchstart', function(){}, false);
+  }
+})();</script>
+  </body>
 </html>
