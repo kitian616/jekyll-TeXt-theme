@@ -10,9 +10,34 @@ toc: true
 Success!
 {:.success}
 
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.rounded}
 
-[BUTTON](#){:.button.button--info.button--rounded.button--lg}
+<div class="grid">
+<div class="row">
+<div class="col-4 col-md-5 col-sm-12" markdown="1">
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.rounded}
+</div>
+<div class="col-4 col-md-5 col-sm-12" markdown="1">
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.circle.shadow}
+</div>
+</div>
+</div>
+
+<div class="grid">
+<div class="row">
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--primary button--pill my-2"><i class="fas fa-space-shuttle"></i> BUTTON</div>
+</div>
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> BUTTON</div>
+</div>
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--success button--rounded my-2"><i class="fas fa-user-astronaut"></i> BUTTON</div>
+</div>
+<div class="col-2 col-md-4 col-sm-6">
+<div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> BUTTON</div>
+</div>
+</div>
+</div>
 
 <!--more-->
 
@@ -67,38 +92,238 @@ Error Text.
 
 ## Button
 
-| Primary | Secondary | Success | Info | Warning | Error |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| [BUTTON](#){:.button.button--primary.button--pill} | [BUTTON](#){:.button.button--secondary.button--pill} | [BUTTON](#){:.button.button--success.button--pill} | [BUTTON](#){:.button.button--info.button--pill} | [BUTTON](#){:.button.button--warning.button--pill} | [BUTTON](#){:.button.button--error.button--pill} |
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--primary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--secondary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--success button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--info button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--warning button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--error button--pill my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-| Primary | Secondary | Success | Info | Warning | Error |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| [BUTTON](#){:.button.button--outline-primary.button--pill} | [BUTTON](#){:.button.button--outline-secondary.button--pill} | [BUTTON](#){:.button.button--outline-success.button--pill} | [BUTTON](#){:.button.button--outline-info.button--pill} | [BUTTON](#){:.button.button--outline-warning.button--pill} | [BUTTON](#){:.button.button--outline-error.button--pill} |
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--outline-primary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--outline-secondary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--outline-success button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--outline-info button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--outline-warning button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--outline-error button--pill my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-| Primary | Secondary | Success | Info | Warning | Error |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| [BUTTON](#){:.button.button--primary.button--rounded} | [BUTTON](#){:.button.button--secondary.button--rounded} | [BUTTON](#){:.button.button--success.button--rounded} | [BUTTON](#){:.button.button--info.button--rounded} | [BUTTON](#){:.button.button--warning.button--rounded} | [BUTTON](#){:.button.button--error.button--rounded} |
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--primary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--secondary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--success button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--info button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--warning button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--error button--rounded my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-| Primary | Secondary | Success | Info | Warning | Error |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| [BUTTON](#){:.button.button--outline-primary.button--rounded} | [BUTTON](#){:.button.button--outline-secondary.button--rounded} | [BUTTON](#){:.button.button--outline-success.button--rounded} | [BUTTON](#){:.button.button--outline-info.button--rounded} | [BUTTON](#){:.button.button--outline-warning.button--rounded} | [BUTTON](#){:.button.button--outline-error.button--rounded} |
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--outline-primary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--outline-secondary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--outline-success button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--outline-info button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--outline-warning button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--outline-error button--rounded my-2">BUTTON</div>
+</div>
+</div>
+</div>
 
-| Primary | Secondary | Success | Info | Warning | Error |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| [X](#){:.button.button--primary.button--circle} | [X](#){:.button.button--secondary.button--circle} | [X](#){:.button.button--success.button--circle} | [X](#){:.button.button--info.button--circle} | [X](#){:.button.button--warning.button--circle} | [X](#){:.button.button--error.button--circle} |
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--primary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--secondary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--success button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--info button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--warning button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--error button--circle my-2 mx-auto">X</div>
+</div>
+</div>
+</div>
 
-| Primary | Secondary | Success | Info | Warning | Error |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| [X](#){:.button.button--outline-primary.button--circle} | [X](#){:.button.button--outline-secondary.button--circle} | [X](#){:.button.button--outline-success.button--circle} | [X](#){:.button.button--outline-info.button--circle} | [X](#){:.button.button--outline-warning.button--circle} | [X](#){:.button.button--outline-error.button--circle} |
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Primary</strong></div>
+<div class="button button--outline-primary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Secondary</strong></div>
+<div class="button button--outline-secondary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Success</strong></div>
+<div class="button button--outline-success button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Info</strong></div>
+<div class="button button--outline-info button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Warning</strong></div>
+<div class="button button--outline-warning button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Error</strong></div>
+<div class="button button--outline-error button--circle my-2 mx-auto">X</div>
+</div>
+</div>
+</div>
 
-| Small | Middle | Large |
-| ---- | ---- | ---- |
-| [BUTTON](#){:.button.button--secondary.button--pill.button--sm} | [BUTTON](#){:.button.button--secondary.button--pill.button--md} | [BUTTON](#){:.button.button--secondary.button--pill.button--lg} |
-| [BUTTON](#){:.button.button--secondary.button--rounded.button--sm} | [BUTTON](#){:.button.button--secondary.button--rounded.button--md} | [BUTTON](#){:.button.button--secondary.button--rounded.button--lg} |
-| [X](#){:.button.button--secondary.button--circle.button--sm} | [X](#){:.button.button--secondary.button--circle.button--md} | [X](#){:.button.button--secondary.button--circle.button--lg} |
+
+
+
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Large</strong></div>
+<div class="button button--secondary button--pill button--lg my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Middle</strong></div>
+<div class="button button--secondary button--pill my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Small</strong></div>
+<div class="button button--secondary button--pill button--sm my-2">BUTTON</div>
+</div>
+</div>
+</div>
+
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Large</strong></div>
+<div class="button button--secondary button--rounded button--lg my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Middle</strong></div>
+<div class="button button--secondary button--rounded my-2">BUTTON</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Small</strong></div>
+<div class="button button--secondary button--rounded button--sm my-2">BUTTON</div>
+</div>
+</div>
+</div>
+
+<div class="grid">
+<div class="row">
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Large</strong></div>
+<div class="button button--secondary button--circle button--lg my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Middle</strong></div>
+<div class="button button--secondary button--circle my-2 mx-auto">X</div>
+</div>
+<div style="text-align: center;" class="col-2 col-md-4 col-sm-6">
+<div class="mt-3"><strong>Small</strong></div>
+<div class="button button--secondary button--circle button--sm my-2 mx-auto">X</div>
+</div>
+</div>
+</div>
 
 ## Font Awesome
 
-<i class="fas fa-download"></i>
+<i class="fas fa-space-shuttle"></i>
 
-<a class="button button--success button--rounded button--lg" href="#"><i class="fas fa-download"></i> Download TeXt Theme</a>
+<i class="fas fa-user-astronaut"></i>
+
+<div class="button button--success button--rounded button--lg"><i class="fas fa-download"></i> Download TeXt Theme</div>

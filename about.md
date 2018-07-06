@@ -11,7 +11,7 @@ key: page-about
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
 
-TeXt is succinct Jekyll theme, Perfect for hosting your personal site, blog, documentation on GitHub or self-hosting on your own server.
+TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
 ```javascript
 (() => console.log('Hello, World!'))();
@@ -20,23 +20,20 @@ TeXt is succinct Jekyll theme, Perfect for hosting your personal site, blog, doc
 ## Features
 
 - Responsive
-- Paginate ([jekyll-paginate](https://github.com/jekyll/jekyll-paginate))
-- Table of contents
-- Tag
-- Search
-- Page views ([LeanCloud](https://leancloud.cn/))
-- Emoji ([Jemoji](https://github.com/jekyll/jemoji))
-- Comments ([Disqus](https://disqus.com/))
-- Google Analytics
-- Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
-- Semantic HTML
-- Icon automation tool ([gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico))
 - Skins
+- Table of contents
+- Authors
+- Multi-language support(English, Simplified Chinese, Traditional Chinese)
+- Search
+- Semantic HTML
+- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
+- Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
 - Mathematical formula ([MathJax](https://www.mathjax.org/))
 - Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))
 - Line Chart, Bar Chart, Radar Chart, Pie Chart ([chartjs](http://www.chartjs.org/))
-- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
-- Multi-language support(English, Simplified Chinese, Traditional Chinese)
+- Page views ([LeanCloud](https://leancloud.cn/))
+- Comments ([Disqus](https://disqus.com/))
+- Google Analytics
 
 ## Skins
 
