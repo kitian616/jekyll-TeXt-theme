@@ -7,20 +7,20 @@
 }
 
 @mixin hover() {
-  &:hover {
+  .root[data-is-touch="false"] &:hover {
     @content;
   }
 }
 
 @mixin active() {
-  &.active,
-  &:active {
+  .root[data-is-touch] &.active,
+  .root[data-is-touch] &:active {
     @content;
   }
 }
 
 @mixin focus() {
-  &.focus {
+  .root[data-is-touch] &.focus {
     @content;
   }
 }

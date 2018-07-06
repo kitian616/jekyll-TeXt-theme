@@ -1,10 +1,40 @@
-@mixin link-colors($clr, $hover-clr: default, $active-clr: default, $focus-clr: null) {
+@mixin link-colors($clr, $hover-clr: default, $active-clr: default, $focus-clr: null, $theme: default) {
+
+  @if $theme == default {
+    @if $hover-clr == default {
+      $theme: get-color-theme($clr);
+    } @else {
+      $theme: get-color-theme($hover-clr);
+    }
+  }
+
   @if $hover-clr == default {
-    $hover-clr: $clr;
+    @if $theme == 'light' {
+      $hover-clr: darken($clr, 14%);
+    }
+    @if $theme == 'dark' {
+      $hover-clr: lighten($clr, 18%);
+    }
   }
+
   @if $active-clr == default {
-    $active-clr: $clr;
+    @if $theme == 'light' {
+      $active-clr: darken($hover-clr, 15%);
+    }
+    @if $theme == 'dark' {
+      $active-clr: lighten($hover-clr, 16%);
+    }
   }
+
+  @if $focus-clr == default {
+    @if $theme == 'light' {
+      $focus-clr: $hover-clr;
+    }
+    @if $theme == 'dark' {
+      $focus-clr: $hover-clr;
+    }
+  }
+
   @include plain {
     color: $clr;
     svg path {

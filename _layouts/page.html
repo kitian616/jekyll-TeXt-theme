@@ -73,7 +73,7 @@ layout: base
         <div class ="main">
       {%- endif -%}
 
-          <div class="col-2 js-col-2">
+          <div class="col-aside js-col-aside">
             {%- if page.aside -%}
               <aside class="page__aside js-page-aside">
                 {%- include aside/toc.html -%}
@@ -81,7 +81,7 @@ layout: base
             {%- endif -%}
           </div>
 
-          <div class="col-1">
+          <div class="col-main">
             {%- if _page_type == 'article' -%}
               <article itemscope itemtype="http://schema.org/Article">
             {%- elsif _page_type == 'webpage' -%}

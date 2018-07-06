@@ -31,7 +31,7 @@ full_width: true
         {%- include snippets/get-nav-url.html -%}
         {%- assign _url = __return -%}
         {%- assign _type = _action.type | default: 'info' -%}
-        <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+        <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
       {%- endfor -%}
       </ul>
       {%- endif -%}
@@ -62,7 +62,7 @@ full_width: true
                 {%- include snippets/get-nav-url.html -%}
                 {%- assign _url = __return -%}
                 {%- assign _type = _action.type | default: 'outline-info' -%}
-                <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+                <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
               {%- endfor -%}
               </ul>
             {%- endif -%}
@@ -92,7 +92,7 @@ full_width: true
                           {%- include snippets/get-nav-url.html -%}
                           {%- assign _url = __return -%}
                           {%- assign _type = _action.type | default: 'outline-info' -%}
-                          <li><a class="button button--{{ _type }} button--rounded button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+                          <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
                         {%- endfor -%}
                       </ul>
                     {%- endif -%}

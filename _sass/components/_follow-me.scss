@@ -18,7 +18,7 @@
         @include button-colors($text-color-1, $google-plus-color);
       }
       .github-button {
-        @include button-colors($text-color-1, $github-color, default, default, default, default, default, default, 'dark');
+        @include button-colors($text-color-1, $github-color);
       }
       .linkedin-button {
         @include button-colors($text-color-1, $linkedin-color);

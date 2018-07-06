@@ -1,8 +1,8 @@
 .header {
   a {
     font-weight: map-get($base, font-weight);
-    text-decoration: none;
-    @include link-colors($text-color, $main-color-1, $main-color-1);
+    text-decoration: none !important;
+    @include link-colors($text-color, $main-color-1);
   }
   & > .main > .logo {
     float: left;
@@ -50,7 +50,7 @@
         &.active {
           @include split-line(bottom, 4px, $main-color-1);
           a {
-            @include link-colors($main-color-1, $main-color-1, $main-color-1);
+            @include link-colors($main-color-1, $main-color-1);
           }
         }
       }

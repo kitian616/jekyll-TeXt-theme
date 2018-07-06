@@ -28,11 +28,23 @@
     $_dirs: ('top', 'bottom');
   }
   @else if ($direction == '') {
-    $_dirs: ('top', 'bottom', 'left', 'right');
+    $_dirs: ('');
   }
 
   @each $dir in $_dirs {
-    #{$_type}-#{$dir} : map-get($spacers, $spacer);
+    @if ($spacer == 'auto') {
+      @if ($dir == '') {
+        #{$_type}: auto;
+      } @else {
+        #{$_type}-#{$dir}: auto;
+      }
+    } @else {
+      @if ($dir == '') {
+        #{$_type}: map-get($spacers, $spacer);
+      } @else {
+        #{$_type}-#{$dir}: map-get($spacers, $spacer);
+      }
+    }
   }
 }
 
@@ -48,5 +60,11 @@ $_spacers: (0, 1, 2, 3, 4, 5);
         @include make-spacing($i, $j, $k);
       }
     }
+  }
+}
+
+@each $j in $_directions {
+  .m#{$j}-auto {
+    @include make-spacing('m', $j, 'auto');
   }
 }

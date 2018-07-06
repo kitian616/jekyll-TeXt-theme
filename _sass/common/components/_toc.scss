@@ -16,20 +16,10 @@ ul.toc {
     display: inline-block;
     padding: .2rem .8rem .2rem .8rem;
     border-radius: map-get($base, border-radius);
+    text-decoration: none !important;
     @include link-colors($text-color);
-    @include plain() {
-      text-decoration: none;
-    }
     @include hover() {
-      color: $text-color-3;
       background-color: $main-color-3;
-      text-decoration: none;
-    }
-    @include active() {
-      text-decoration: none;
-    }
-    @include focus() {
-      text-decoration: none;
     }
   }
 
@@ -38,7 +28,7 @@ ul.toc {
     padding: .8rem 0 .3rem 0;
     margin-bottom: .6rem;
     &, a {
-      color: $text-color-d;
+      @include link-colors($text-color-d);
     }
   }
   .toc-h1,
@@ -58,7 +48,7 @@ ul.toc {
   .toc-h5,
   .toc-h6 {
     &, a {
-      color: $text-color-l;
+      @include link-colors($text-color-l);
     }
   }
   .toc-h3 {
@@ -110,7 +100,7 @@ ul.toc--navigator {
   .toc-h3,
   .toc-h4 {
     &, a {
-      @include link-colors($text-color-l, $main-color-1, $main-color-1);
+      @include link-colors($text-color-l);
     }
   }
 

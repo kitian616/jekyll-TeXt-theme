@@ -8,7 +8,7 @@
     position: relative;
     margin-top: map-get($base, vertical-space-lg) * 1.5;
     & > .anchor {
-      @include link-colors($border-color, $main-color-1, $main-color-1);
+      @include link-colors($border-color, $main-color-1);
       margin-left: .2rem;
       visibility: hidden;
       text-decoration: none;
@@ -17,7 +17,7 @@
         font-size: map-get($base, font-size-sm);
       }
     }
-    &:hover {
+    @include hover() {
       & > .anchor {
         visibility: visible;
         opacity: 1;

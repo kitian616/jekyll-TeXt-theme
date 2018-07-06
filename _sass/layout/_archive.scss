@@ -1,4 +1,4 @@
-.layout--all {
+.layout--archive {
   .site-tags {
     margin-bottom: map-get($base, vertical-space-lg) * 2;
     display: block;
@@ -13,17 +13,17 @@
       width: 100%;
     }
     & > input {
-      border-radius: 2rem;
-      padding: .2rem 1.8rem;
-      @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
       -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
-      width: 100%;
       display: inline-block;
-      border: none;
+      width: 100%;
+      padding: .2rem 1.8rem;
       margin: 0;
+      border: none;
+      border-radius: 2rem;
       background-color: $text-background-color;
+      @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
       @include focus() {
-        @include box-shadow();
+        box-shadow: 0 0 0 2px rgba($border-color, .4);
       }
     }
     & > .icon-search, & > .icon-clear {
@@ -40,14 +40,14 @@
     & > .icon-clear {
       display: none;
       right: .8rem;
-      @include link-colors($text-color-l, $text-color-d);
+      @include link-colors($text-color-l);
     }
     & > .icon-search {
       left: .5rem;
     }
   }
 
-  & > .layout--all__result {
+  & > .layout--archive__result {
     margin: map-get($base, vertical-space-lg) 0;
     section {
       &:not(:last-child) {
@@ -68,7 +68,7 @@
         }
         .link {
           font-size: 1rem;
-          @include link-colors($text-color-d, $main-color-1, $main-color-1);
+          @include link-colors($text-color-d, $main-color-1);
         }
       }
     }
@@ -77,7 +77,7 @@
     & > .site-tags {
       display: none;
     }
-    & > .layout--all__result {
+    & > .layout--archive__result {
       section {
         ul > li {
           .date {

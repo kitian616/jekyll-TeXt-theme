@@ -54,6 +54,10 @@ body {
   }
 }
 
+.root {
+  height: 100%;
+}
+
 input, textarea, select, button {
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
   color: $text-color;
@@ -126,9 +130,9 @@ a {
     text-decoration: underline;
   }
   @include active() {
-    text-decoration: underline;
+    text-decoration: none;
   }
-  @include link-colors($main-color-1, $main-color-1, $main-color-1);
+  @include link-colors($main-color-1);
   @include transition(map-get($link, transition));
 }
 

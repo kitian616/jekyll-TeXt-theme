@@ -11,7 +11,7 @@
         vertical-align: text-bottom;
       }
       a {
-        @include link-colors($text-color, $main-color-1, $main-color-1);
+        @include link-colors($text-color, $main-color-1);
       }
     }
   }
@@ -28,7 +28,7 @@
       }
       & > a {
         display: block;
-        @include link-colors($text-color, $main-color-1, $main-color-1);
+        @include link-colors($text-color, $main-color-1);
       }
     }
     & > .previous {

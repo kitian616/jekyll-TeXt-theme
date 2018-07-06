@@ -96,7 +96,7 @@ $link: (
 );
 
 $button: (
-  padding-y-lg:           .5rem,
+  padding-y-lg:           .3rem,
   padding-x-lg:           1.2rem,
 
   padding-y:              .1rem,
@@ -107,9 +107,9 @@ $button: (
 
   font-weight:            map-get($base, font-weight-bold),
 
-  circle-diameter-lg:     3rem,
+  circle-diameter-lg:     2.8rem,
   circle-diameter:        2rem,
-  circle-diameter-sm:     1.2rem,
+  circle-diameter-sm:     1.5rem,
 
   transition:             all .2s ease-in-out
 );

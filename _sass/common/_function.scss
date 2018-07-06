@@ -1,0 +1,7 @@
+@function get-color-theme($color) {
+  @if lightness($color) < 15% {
+    @return 'dark';
+  } @else {
+    @return 'light';
+  }
+}

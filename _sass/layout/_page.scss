@@ -16,7 +16,7 @@
     height: 100%;
     min-height: 100%;
 
-    .col-2 {
+    .col-aside {
       display: none;
       float: right;
       & > aside {
@@ -98,7 +98,6 @@
     .toc-aside {
       padding: 1rem 0 1rem 3rem;
     }
-
   }
 
   .page__footer {
@@ -109,13 +108,13 @@
 
   .has-aside {
     .page__main-inner{
-      .col-1 {
+      .col-main {
         margin-right: map-get($layout, aside-width);
         @include media-breakpoint-down(lg) {
           margin-right: 0;
         }
       }
-      .col-2 {
+      .col-aside {
         width: map-get($layout, aside-width);
         position: relative;
         display: block;

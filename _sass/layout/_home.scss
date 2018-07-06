@@ -4,7 +4,7 @@
       & > h1, h2  {
         font-size: map-get($base, font-size-h3);
         & > a {
-          @include link-colors($text-color-d, $main-color-1, $main-color-1);
+          @include link-colors($text-color-d, $main-color-1);
         }
       }
       & > a {
