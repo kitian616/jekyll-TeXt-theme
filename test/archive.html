@@ -264,9 +264,11 @@
           <div class="col-main"><article itemscope itemtype="http://schema.org/WebPage"><header style="display: none;"><h1 itemprop="headline">All Posts</h1></header><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/></div>
 <div class="js-article-content"><div class="layout--archive js-all">
   <div class="search-box js-search-box">
-    <div class="icon-search"><i class="fas fa-search"></i></div>
+    <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
     <input type="text" />
-    <div class="button icon-clear"><i class="fas fa-times"></i></div>
+    <div class="search-box__icon-clear js-icon-clear">
+      <div class="button button--secondary button--circle button--sm"><i class="fas fa-times"></i></div>
+    </div>
   </div><div class="site-tags js-tags">
   <ul class="menu">
     <li>
@@ -437,7 +439,7 @@
     var $root = $('.js-all');
     var $searchBox = $('.js-search-box');
     var $searchInput = $searchBox.children('input');
-    var $searchClear = $searchBox.children('.icon-clear');
+    var $searchClear = $searchBox.children('.js-icon-clear');
     var $tags = $('.js-tags');
     var $articleTags = $('.js-article-tag');
     var $tagShowAll = $('.js-tag-show-all');

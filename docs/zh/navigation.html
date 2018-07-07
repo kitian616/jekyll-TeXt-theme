@@ -304,6 +304,33 @@
 </code></pre></div></div>
 
 <p>你可以用 <code class="highlighter-rouge">titles</code> 来定义一个支持多语言的标题名。</p>
+
+<h2 id="侧边栏导航栏">侧边栏导航栏</h2>
+
+<p>要想在某篇文章或页面中使用侧边栏导航栏，首先你需要在 <em>data/navigation.yml</em> 中定义一个导航栏。</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">docs-en</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>      <span class="s">Start</span>
+    <span class="na">children</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Quick Start</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/quick-start</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Structure</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/structure</span>
+      <span class="s">...</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>      <span class="s">Customization</span>
+    <span class="na">children</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Configuration</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/configuration</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Navigation</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/navigation</span>
+      <span class="s">...</span>
+</code></pre></div></div>
+
+<p>然后在头信息中将定义的导航作为这篇文章或页面的侧边栏导航栏：</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sidebar</span><span class="pi">:</span>
+  <span class="na">nav</span><span class="pi">:</span> <span class="s">docs-en</span>
+</code></pre></div></div>
 </div>
 
   <footer class="article__footer"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">

@@ -304,6 +304,33 @@
 </code></pre></div></div>
 
 <p>You can use <code class="highlighter-rouge">titles</code> for a multi-language name.</p>
+
+<h2 id="sidebar-navigation">Sidebar Navigation</h2>
+
+<p>To use sidebar navigation, you should first defined a navigation iin <em>data/navigation.yml</em>.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">docs-en</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>      <span class="s">Start</span>
+    <span class="na">children</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Quick Start</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/quick-start</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Structure</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/structure</span>
+      <span class="s">...</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>      <span class="s">Customization</span>
+    <span class="na">children</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Configuration</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/configuration</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span>  <span class="s">Navigation</span>
+        <span class="na">url</span><span class="pi">:</span>    <span class="s">/docs/en/navigation</span>
+      <span class="s">...</span>
+</code></pre></div></div>
+
+<p>And then use the defined navigation as article’s sidebar navigation in the Front Matter:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sidebar</span><span class="pi">:</span>
+  <span class="na">nav</span><span class="pi">:</span> <span class="s">docs-en</span>
+</code></pre></div></div>
 </div>
 
   <footer class="article__footer"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
