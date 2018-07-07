@@ -100,7 +100,7 @@
     var $root = $('.js-all');
     var $searchBox = $('.js-search-box');
     var $searchInput = $searchBox.children('input');
-    var $searchClear = $searchBox.children('.icon-clear');
+    var $searchClear = $searchBox.children('.js-icon-clear');
     var $tags = $('.js-tags');
     var $articleTags = $('.js-article-tag');
     var $tagShowAll = $('.js-tag-show-all');

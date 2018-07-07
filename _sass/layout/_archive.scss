@@ -23,23 +23,20 @@
       @include clickable($text-color, $text-background-color);
       @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
     }
-    & > .icon-search, & > .icon-clear {
+    & > .search-box__icon-search, & > .search-box__icon-clear {
       position: absolute;
+      vertical-align: middle;
       top: 50%;
       @include transform(translateY(-50%));
-      display: inline-block;
-      vertical-align: middle;
-      font-size: map-get($base , font-size-sm);
     }
-    &.not-empty > .icon-clear {
+    &.not-empty > .search-box__icon-clear {
       display: block;
     }
-    & > .icon-clear {
+    & > .search-box__icon-clear {
       display: none;
-      right: .8rem;
-      @include link-colors($text-color-l);
+      right: .3rem;
     }
-    & > .icon-search {
+    & > .search-box__icon-search {
       left: .5rem;
     }
   }

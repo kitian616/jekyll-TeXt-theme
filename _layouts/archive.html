@@ -10,9 +10,11 @@ show_title: false
 
 <div class="layout--archive js-all">
   <div class="search-box js-search-box">
-    <div class="icon-search"><i class="fas fa-search"></i></div>
+    <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
     <input type="text" />
-    <div class="button icon-clear"><i class="fas fa-times"></i></div>
+    <div class="search-box__icon-clear js-icon-clear">
+      <div class="button button--secondary button--circle button--sm"><i class="fas fa-times"></i></div>
+    </div>
   </div>
   {%- include tags.html -%}
   <div class="js-result layout--archive__result"></div>
