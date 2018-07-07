@@ -5,10 +5,8 @@
     font-size: map-get($base, font-size-sm);
     color: $text-color-l;
     .article__license {
-      position: relative;
       img {
-        height: map-get($base, font-size-sm) * 1.5;
-        vertical-align: text-bottom;
+        height: map-get($base, font-size) * 1.6;
       }
       a {
         @include link-colors($text-color, $main-color-1);

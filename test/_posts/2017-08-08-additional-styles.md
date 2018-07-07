@@ -17,7 +17,7 @@ Success!
 ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.rounded}
 </div>
 <div class="col-4 col-md-5 col-sm-12" markdown="1">
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_rounded"){:.circle.shadow}
+![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg "Lenna_circle+shadow"){:.circle.shadow}
 </div>
 </div>
 </div>
@@ -25,16 +25,16 @@ Success!
 <div class="grid">
 <div class="row">
 <div class="col-2 col-md-4 col-sm-6">
-<div class="button button--primary button--pill my-2"><i class="fas fa-space-shuttle"></i> BUTTON</div>
+<div class="button button--primary button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
 </div>
 <div class="col-2 col-md-4 col-sm-6">
-<div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> BUTTON</div>
+<div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
 </div>
 <div class="col-2 col-md-4 col-sm-6">
-<div class="button button--success button--rounded my-2"><i class="fas fa-user-astronaut"></i> BUTTON</div>
+<div class="button button--success button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
 <div class="col-2 col-md-4 col-sm-6">
-<div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> BUTTON</div>
+<div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
 </div>
 </div>
@@ -322,8 +322,6 @@ Error Text.
 
 ## Font Awesome
 
-<i class="fas fa-space-shuttle"></i>
-
-<i class="fas fa-user-astronaut"></i>
+<i class="fas fa-space-shuttle"></i> <i class="fas fa-user-astronaut"></i>
 
 <div class="button button--success button--rounded button--lg"><i class="fas fa-download"></i> Download TeXt Theme</div>
