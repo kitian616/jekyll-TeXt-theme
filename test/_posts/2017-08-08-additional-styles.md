@@ -34,7 +34,7 @@ Success!
 <div class="button button--success button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
 <div class="col-2 col-md-4 col-sm-6">
-<div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
+<div class="button button--outline-warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
 </div>
 </div>
@@ -322,6 +322,12 @@ Error Text.
 
 ## Font Awesome
 
-<i class="fas fa-space-shuttle"></i> <i class="fas fa-user-astronaut"></i>
+ <i class="fas fa-at"></i>
+ <i class="fas fa-space-shuttle"></i>
+ <i class="fas fa-thumbs-up"></i>
+ <i class="fas fa-coffee"></i>
+ <i class="fas fa-gamepad"></i>
+ <i class="fas fa-beer"></i>
+ <i class="fas fa-universal-access"></i>
 
 <div class="button button--success button--rounded button--lg"><i class="fas fa-download"></i> Download TeXt Theme</div>

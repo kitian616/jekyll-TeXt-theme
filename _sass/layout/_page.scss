@@ -58,7 +58,7 @@
   }
 
   .sidebar-button {
-    @include button-colors($text-color-d, rgba($main-color-3, .75));
+    @include clickable($text-color-d, rgba($main-color-3, .75));
     border: 1px $border-color solid;
   }
 

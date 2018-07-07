@@ -3,28 +3,28 @@
     margin: 0;
     & > li > {
       .mail-button {
-        @include button-colors($text-color-1, $mail-color);
+        @include clickable($text-color-1, $mail-color);
       }
       .weibo-button {
-        @include button-colors($text-color-1, $weibo-color);
+        @include clickable($text-color-1, $weibo-color);
       }
       .facebook-button {
-        @include button-colors($text-color-1, $facebook-color);
+        @include clickable($text-color-1, $facebook-color);
       }
       .twitter-button {
-        @include button-colors($text-color-1, $twitter-color);
+        @include clickable($text-color-1, $twitter-color);
       }
       .googlepluse-button {
-        @include button-colors($text-color-1, $google-plus-color);
+        @include clickable($text-color-1, $google-plus-color);
       }
       .github-button {
-        @include button-colors($text-color-1, $github-color);
+        @include clickable($text-color-1, $github-color);
       }
       .linkedin-button {
-        @include button-colors($text-color-1, $linkedin-color);
+        @include clickable($text-color-1, $linkedin-color);
       }
       .douban-button {
-        @include button-colors($text-color-1, $douban-color);
+        @include clickable($text-color-1, $douban-color);
       }
     }
   }

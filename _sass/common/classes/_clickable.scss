@@ -1,0 +1,115 @@
+@mixin clickable($clr, $bg-clr, $hover-clr: default, $hover-bg-clr: default, $active-clr: default, $active-bg-clr: default, $focus-clr: default, $focus-bg-clr: default, $theme: default) {
+
+  @if $theme == default {
+    @if $bg-clr == null and $hover-bg-clr == null {
+      @if $hover-clr == default {
+        $theme: get-color-theme($clr);
+      } @else {
+        $theme: get-color-theme($hover-clr);
+      }
+    } @else {
+      @if $hover-bg-clr == default {
+        $theme: get-color-theme($bg-clr);
+      } @else {
+        $theme: get-color-theme($hover-bg-clr);
+      }
+    }
+  }
+
+  // hover
+  @if $hover-clr == default {
+    @if $hover-bg-clr == null {
+      @if $theme == 'light' {
+        $hover-clr: darken($clr, 14%);
+      }
+      @if $theme == 'dark' {
+        $hover-clr: lighten($clr, 18%);
+      }
+    } @else if $hover-bg-clr == default {
+      $hover-clr: $clr
+    }
+  }
+
+  @if $hover-bg-clr == default {
+    @if $theme == 'light' {
+      $hover-bg-clr: darken($bg-clr, 14%);
+    }
+    @if $theme == 'dark' {
+      $hover-bg-clr: lighten($bg-clr, 18%);
+    }
+  }
+
+  // active
+  @if $active-clr == default {
+    @if $active-bg-clr == null {
+      @if $theme == 'light' {
+        $active-clr: darken($hover-clr, 15%);
+      }
+      @if $theme == 'dark' {
+        $active-clr: lighten($hover-clr, 16%);
+      }
+    } @else if $active-bg-clr == default {
+      $active-clr: $hover-clr;
+    }
+  }
+
+  @if $active-bg-clr == default {
+    @if $theme == 'light' {
+      $active-bg-clr: darken($hover-bg-clr, 15%);
+    }
+    @if $theme == 'dark' {
+      $active-bg-clr: lighten($hover-bg-clr, 16%);
+    }
+  }
+
+  // focus
+  @if $focus-clr == default {
+    @if $focus-bg-clr == null {
+      $focus-clr: $hover-clr;
+    } @else if $hover-bg-clr == default {
+      $focus-clr: $hover-clr;
+    }
+  }
+
+  @if $focus-bg-clr == default {
+    $focus-bg-clr: $hover-bg-clr;
+  }
+
+  @include plain {
+    color: $clr;
+    @if $bg-clr {
+      background-color: $bg-clr;
+    }
+    svg path {
+      fill: $clr;
+    }
+  }
+  @include hover {
+    color: $hover-clr;
+    @if $hover-bg-clr {
+      background-color: $hover-bg-clr;
+    }
+    svg path {
+      fill: $hover-clr;
+    }
+  }
+  @include active {
+    color: $active-clr;
+    @if $active-bg-clr {
+      background-color: $active-bg-clr;
+    }
+    svg path {
+      fill: $active-clr;
+    }
+  }
+  @include focus {
+    color: $focus-clr;
+    @if $focus-bg-clr{
+      box-shadow: 0 0 0 2px rgba($focus-bg-clr, .4);
+      background-color: $focus-bg-clr;
+    }
+    svg path {
+      fill: $focus-clr;
+    }
+  }
+}

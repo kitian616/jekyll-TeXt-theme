@@ -19,12 +19,9 @@
       padding: .2rem 1.8rem;
       margin: 0;
       border: none;
-      border-radius: 2rem;
-      background-color: $text-background-color;
+      border-radius: map-get($button, pill-radius);
+      @include clickable($text-color, $text-background-color);
       @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
-      @include focus() {
-        box-shadow: 0 0 0 2px rgba($border-color, .4);
-      }
     }
     & > .icon-search, & > .icon-clear {
       position: absolute;

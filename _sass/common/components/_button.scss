@@ -1,86 +1,3 @@
-@mixin button-colors($clr, $bg-clr, $hover-clr: default, $hover-bg-clr: default, $active-clr: default, $active-bg-clr: default, $focus-clr: default, $focus-bg-clr: default, $theme: default) {
-
-  @if $theme == default {
-    @if $hover-bg-clr == default {
-      $theme: get-color-theme($bg-clr);
-    } @else {
-      $theme: get-color-theme($hover-bg-clr);
-    }
-  }
-
-
-  @if $hover-clr == default {
-    $hover-clr: $clr
-  }
-
-  @if $hover-bg-clr == default {
-    @if $theme == 'light' {
-      $hover-bg-clr: darken($bg-clr, 14%);
-    }
-    @if $theme == 'dark' {
-      $hover-bg-clr: lighten($bg-clr, 18%);
-    }
-  }
-
-
-  @if $active-clr == default {
-    $active-clr: $hover-clr
-  }
-
-  @if $active-bg-clr == default {
-    @if $theme == 'light' {
-      $active-bg-clr: darken($hover-bg-clr, 15%);
-    }
-    @if $theme == 'dark' {
-      $active-bg-clr: lighten($hover-bg-clr, 16%);
-    }
-  }
-
-
-  @if $focus-clr == default {
-    $focus-clr: $hover-clr;
-  }
-
-  @if $focus-bg-clr == default {
-    @if $theme == 'light' {
-      $focus-bg-clr: $hover-bg-clr;
-    }
-    @if $theme == 'dark' {
-      $focus-bg-clr: $hover-bg-clr;
-    }
-  }
-
-  @include plain {
-    color: $clr;
-    background-color: $bg-clr;
-    svg path {
-      fill: $clr;
-    }
-  }
-  @include hover {
-    color: $hover-clr;
-    background-color: $hover-bg-clr;
-    svg path {
-      fill: $hover-clr;
-    }
-  }
-  @include active {
-    color: $active-clr;
-    background-color: $active-bg-clr;
-    svg path {
-      fill: $active-clr;
-    }
-  }
-  @include focus {
-    color: $focus-clr;
-    box-shadow: 0 0 0 2px rgba($focus-bg-clr, .4);
-    background-color: $focus-bg-clr;
-    svg path {
-      fill: $focus-clr;
-    }
-  }
-}
-
 @mixin button() {
   font-weight: map-get($button, font-weight);
   line-height: map-get($base, line-height);
@@ -113,67 +30,67 @@
 }
 
 .button--primary {
-  @include button-colors($text-color-1, $main-color-1);
+  @include clickable($text-color-1, $main-color-1);
 }
 
 .button--secondary {
-  @include button-colors($text-color-3, $main-color-3);
+  @include clickable($text-color-3, $main-color-3);
 }
 
 .button--success {
-  @include button-colors($text-color-function, $green);
+  @include clickable($text-color-function, $green);
 }
 
 .button--info {
-  @include button-colors($text-color-function, $blue);
+  @include clickable($text-color-function, $blue);
 }
 
 .button--warning {
-  @include button-colors($text-color-function, $yellow);
+  @include clickable($text-color-function, $yellow);
 }
 
 .button--error {
-  @include button-colors($text-color-function, $red);
+  @include clickable($text-color-function, $red);
 }
 
 .button--outline-primary {
   color: $main-color-1;
   border: 1px solid $main-color-1;
-  @include button-colors($main-color-1, transparent, $text-color-1, $main-color-1);
+  @include clickable($main-color-1, transparent, $text-color-1, $main-color-1);
 }
 
 .button--outline-secondary {
   color: $main-color-3;
   border: 1px solid $main-color-3;
-  @include button-colors($main-color-3, transparent, $text-color-3, $main-color-3);
+  @include clickable($main-color-3, transparent, $text-color-3, $main-color-3);
 }
 
 .button--outline-success {
   color: $green;
   border: 1px solid $green;
-  @include button-colors($green, transparent, $text-color-function, $green);
+  @include clickable($green, transparent, $text-color-function, $green);
 }
 
 .button--outline-info {
   color: $blue;
   border: 1px solid $blue;
-  @include button-colors($blue, transparent, $text-color-function, $blue);
+  @include clickable($blue, transparent, $text-color-function, $blue);
 }
 
 .button--outline-warning {
   color: $yellow;
   border: 1px solid $yellow;
-  @include button-colors($yellow, transparent, $text-color-function, $yellow);
+  @include clickable($yellow, transparent, $text-color-function, $yellow);
 }
 
 .button--outline-error {
   color: $red;
   border: 1px solid $red;
-  @include button-colors($red, transparent, $text-color-function, $red);
+  @include clickable($red, transparent, $text-color-function, $red);
 }
 
 .button--pill {
-  border-radius: 2rem;
+  border-radius: map-get($button, pill-radius);
   @extend .button--md;
 }
 
