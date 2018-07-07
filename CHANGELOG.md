@@ -1,5 +1,19 @@
 # Change Log
 
+## 2.0.1 (2018-07-07)
+
+> "All elements that respond to press should have a visual feedback when touched."
+>
+> —TouchableWithoutFeedback in *React Native Docs*
+
+### Enhancements
+
+- Some interaction details optimize: button and link add feedback when clicked, cancel button of input in archive layout, button focus style, etc.
+
+### Bug Fixes
+
+- `mathjax` and `mermaid` config may not work.
+
 ## 2.0.0 (2018-07-01)
 
 Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-form-1-to-2) for details.

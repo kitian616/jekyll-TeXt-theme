@@ -1,6 +1,6 @@
 {
   "name": "jekyll-text-theme",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A customizable Jekyll theme for blog or site.",
   "scripts": {
     "build": "bundle exec jekyll build",
