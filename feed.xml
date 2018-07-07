@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-07-07T00:44:28+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for blog or site
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-07-07T15:33:55+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for blog or site
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;div class=&quot;grid&quot;&gt;
@@ -7,7 +7,7 @@
       &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class=&quot;col-4 col-md-5 col-sm-12&quot;&gt;
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_rounded&quot; class=&quot;circle shadow&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg&quot; alt=&quot;Lenna&quot; title=&quot;Lenna_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -15,16 +15,16 @@
 &lt;div class=&quot;grid&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-2 col-md-4 col-sm-6&quot;&gt;
-&lt;div class=&quot;button button--primary button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; BUTTON&lt;/div&gt;
+&lt;div class=&quot;button button--primary button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-2 col-md-4 col-sm-6&quot;&gt;
-&lt;div class=&quot;button button--outline-info button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; BUTTON&lt;/div&gt;
+&lt;div class=&quot;button button--outline-info button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-2 col-md-4 col-sm-6&quot;&gt;
-&lt;div class=&quot;button button--success button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; BUTTON&lt;/div&gt;
+&lt;div class=&quot;button button--success button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-2 col-md-4 col-sm-6&quot;&gt;
-&lt;div class=&quot;button button--warning button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; BUTTON&lt;/div&gt;
+&lt;div class=&quot;button button--outline-warning button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -349,11 +349,15 @@
 
 &lt;h2 id=&quot;font-awesome&quot;&gt;Font Awesome&lt;/h2&gt;
 
-&lt;p&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&quot;fas fa-at&quot;&gt;&lt;/i&gt;
+ &lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt;
+ &lt;i class=&quot;fas fa-thumbs-up&quot;&gt;&lt;/i&gt;
+ &lt;i class=&quot;fas fa-coffee&quot;&gt;&lt;/i&gt;
+ &lt;i class=&quot;fas fa-gamepad&quot;&gt;&lt;/i&gt;
+ &lt;i class=&quot;fas fa-beer&quot;&gt;&lt;/i&gt;
+ &lt;i class=&quot;fas fa-universal-access&quot;&gt;&lt;/i&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt;&lt;/p&gt;
-
-&lt;div class=&quot;button button--success button--rounded button--lg&quot;&gt;&lt;i class=&quot;fas fa-download&quot;&gt;&lt;/i&gt; Download TeXt Theme&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">Success! BUTTON BUTTON BUTTON BUTTON</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
+&lt;div class=&quot;button button--success button--rounded button--lg&quot;&gt;&lt;i class=&quot;fas fa-download&quot;&gt;&lt;/i&gt; Download TeXt Theme&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="English" /><summary type="html">Success! CLICK ME CLICK ME CLICK ME CLICK ME</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;x_1 = {-b + \sqrt{b^2-4ac} \over 2a}&lt;/script&gt;
 
