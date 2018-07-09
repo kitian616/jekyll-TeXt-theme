@@ -15,10 +15,10 @@
     }
     & > li {
       &:not(:last-child) {
-        @include split-line(right, default, $border-color);
+        @include split-line(right, default, $text-color-l);
         line-height: map-get($base, line-height-xs);
-        padding-right: .6rem;
-        margin-right: .8rem;
+        padding-right: .7rem;
+        margin-right: .7rem;
       }
     }
   }

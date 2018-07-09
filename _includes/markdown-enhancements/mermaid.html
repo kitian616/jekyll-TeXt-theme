@@ -2,7 +2,9 @@
 {%- assign _sources = __return -%}
 <script>
   window.Lazyload.js('{{ _sources.mermaid }}', function() {
+    mermaid.initialize({
+      startOnLoad: true
+    });
     mermaid.init(undefined, '.language-mermaid');
-    mermaid.initialize({ startOnLoad: true });
   });
 </script>

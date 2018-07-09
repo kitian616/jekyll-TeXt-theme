@@ -18,10 +18,12 @@
       width: 100%;
       padding: .2rem 1.8rem;
       margin: 0;
-      border: none;
+      border: 2px solid $border-color;
       border-radius: map-get($button, pill-radius);
-      @include clickable($text-color, $text-background-color);
       @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
+      @include focus {
+        box-shadow: 0 0 0 2px rgba($border-color, .4);
+      }
     }
     & > .search-box__icon-search, & > .search-box__icon-clear {
       position: absolute;
@@ -34,10 +36,10 @@
     }
     & > .search-box__icon-clear {
       display: none;
-      right: .3rem;
+      right: .35rem;
     }
     & > .search-box__icon-search {
-      left: .5rem;
+      left: .6rem;
     }
   }
 

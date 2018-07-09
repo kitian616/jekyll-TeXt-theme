@@ -101,7 +101,7 @@ layout: base
                     {%- if site.repository and site.repository_tree -%}
                       {%- assign __locale = site.data.locale.POST_ON_GITHUB -%}
                       {%- include snippets/locale-to-string.html -%}
-                      <a class="edit-on-github ml-3"
+                      &nbsp<a class="edit-on-github"
                         title="{{ __return }}"
                         href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
                         <i class="far fa-edit"></i></a>
