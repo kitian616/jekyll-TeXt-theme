@@ -1,0 +1,59 @@
+---
+title:  "The meaning of iowait"
+date:   2018-07-06 00:51:32 +0800
+tags: Linux CPU
+---
+
+Several days ago, one colleague asked the meaning of `iowait`. We want to set a threshhold as we want to monitor system health. He cited following from an [article][article_discussed] which I could not understand.
+
+> ~~If your I/O wait percentage is greater than (1/# of CPU cores) then your CPUs are waiting a significant amount of time for the disk subsystem to catch up.~~
+
+Therefore, I digged into `iowait` a bit more to understand the meaning. Although I can not say the above citation is incorrect, at least, that is misleading and doesn't provide helpful information in system monitoring.
+
+# What is iowait?
+
+`top` command can display percentage of cpu time. We can also type `1` to display percentage of each CPU core. `26.7 wa` is the percentage of `iowait` time.
+
+{% highlight shell %}
+%Cpu(s): 23.7 us, 12.4 sy,  0.0 ni, 37.0 id, 26.7 wa,  0.0 hi,  0.3 si,  0.0 st
+{% endhighlight %}
+
+`top` is part of [`procps` package](http://procps.sourceforge.net/index.html), which reads `/proc/stat` to do some calculation and then dispaly the percentage. 
+
+The [kernel doc][kernel_proc_doc] says 
+
+    - iowait: In a word, iowait stands for waiting for I/O to complete. But there
+      are several problems:
+      1. Cpu will not wait for I/O to complete, iowait is the time that a task is
+        waiting for I/O to complete. When cpu goes into idle state for
+        outstanding task io, another task will be scheduled on this CPU.
+      2. In a multi-core CPU, the task waiting for I/O to complete is not running
+        on any CPU, so the iowait of each CPU is difficult to calculate.
+      3. The value of iowait field in /proc/stat will decrease in certain
+        conditions.
+      So, the iowait is not reliable by reading from /proc/stat.
+
+Oh, it says `the iowait is not reliable by reading from /proc/stat`. In which case it is not reliable?
+
+# Unreliable iowait in `/proc/stat` and `top`
+
+## iowait drops to 0.0% even if there is a I/O task
+
+# Common misleading deduction on `iowait`
+
+## High `iowait` doesn't mean the system is blocked in I/O
+
+## Low `iowait` doesn't mean the system is not blocked in I/O
+
+# How to use `iowait` in a good way?
+
+# Further Reading
+
+## How does `top` calculate percentage from `/proc/stat`?
+
+## How `/proc/stat` is updated?
+
+# References
+
+[article_discussed]: http://blog.scoutapp.com/articles/2011/02/10/understanding-disk-i-o-when-should-you-be-worried
+[kernel_proc_doc]: https://www.kernel.org/doc/Documentation/filesystems/proc.txt
