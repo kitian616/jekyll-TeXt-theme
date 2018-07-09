@@ -346,7 +346,7 @@
       </li></ul>
 </div>
 </aside>
-    <footer class="site-info"><p>
+    <footer class="site-info"><p class="menu menu--center">
         <span class="site-info__copyright">© TeXt Theme 2018</span>
         <a class="site-info__rss" type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
       </p>
@@ -602,8 +602,10 @@
 </script>
 <script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
   window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+    mermaid.initialize({
+      startOnLoad: true
+    });
     mermaid.init(undefined, '.language-mermaid');
-    mermaid.initialize({ startOnLoad: true });
   });
 </script><script>(function() {
   function errorHandler(error, callback) {

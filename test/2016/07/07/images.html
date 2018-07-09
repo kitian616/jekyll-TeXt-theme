@@ -291,7 +291,7 @@
 
           <div class="col-main">
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header">
-<header><h1 itemprop="headline">Jekyll - Images</h1></header><a class="edit-on-github ml-3" title="Edit on Github" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2016-07-07-images.md">
+<header><h1 itemprop="headline">Jekyll - Images</h1></header>&amp;nbsp<a class="edit-on-github" title="Edit on Github" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test/_posts/2016-07-07-images.md">
                         <i class="far fa-edit"></i></a>
 </div>
 <div class="article__info clearfix">
@@ -485,7 +485,7 @@
 </ul>
 </div>
 </aside>
-    <footer class="site-info"><p>
+    <footer class="site-info"><p class="menu menu--center">
         <span class="site-info__copyright">© TeXt Theme 2018</span>
         <a class="site-info__rss" type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
       </p>
@@ -803,8 +803,10 @@
 </script>
 <script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
   window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+    mermaid.initialize({
+      startOnLoad: true
+    });
     mermaid.init(undefined, '.language-mermaid');
-    mermaid.initialize({ startOnLoad: true });
   });
 </script><script>(function() {
   function errorHandler(error, callback) {

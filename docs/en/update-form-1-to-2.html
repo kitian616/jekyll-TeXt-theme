@@ -268,7 +268,7 @@
 </header>
 </div><div class="page__content"><div class ="main"><div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-          <div class="col-main"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">Update form 1.x to 2.x</h1></header><a class="edit-on-github ml-3"
+          <div class="col-main"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">Update form 1.x to 2.x</h1></header>&nbsp<a class="edit-on-github"
                         title="Edit on Github"
                         href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/en/1.7-update-form-1-to-2.md">
                         <i class="far fa-edit"></i></a></div><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/></div>
@@ -554,7 +554,7 @@
       </li></ul>
 </div>
 </aside>
-    <footer class="site-info"><p>
+    <footer class="site-info"><p class="menu menu--center">
         <span class="site-info__copyright">© TeXt Theme 2018</span>
         <a class="site-info__rss" type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
       </p>
@@ -885,8 +885,10 @@
 </script>
 <script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
   window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+    mermaid.initialize({
+      startOnLoad: true
+    });
     mermaid.init(undefined, '.language-mermaid');
-    mermaid.initialize({ startOnLoad: true });
   });
 </script><script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
