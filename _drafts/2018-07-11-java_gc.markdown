@@ -1,0 +1,25 @@
+---
+title:  "Java GC"
+date:   2018-07-11 09:18:32 +0800
+tags: Java GC
+---
+
+{% highlight JAVA %}
+public class Test {
+    public static void main(String[] args) {
+        int[] arrOld = new int[1 << 20]; // 4 MiB
+
+        System.out.println(arrOld.length);
+
+        arrOld = null;
+        
+        int[] arrLarge = new int[1 << 22]; // 16 MiB
+
+        System.out.println(arrLarge.length);
+    }
+}
+{% endhighlight %}
+
+{% highlight BASH %}
+java -Xmn2M -Xmx20M -XX:+PrintGCDetails -XX:+PrintGCDateStamps Test
+{% endhighlight %}
