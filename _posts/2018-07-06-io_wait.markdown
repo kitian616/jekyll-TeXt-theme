@@ -14,7 +14,7 @@ Therefore, I digged into `iowait` a bit more to understand the meaning. Although
 
 `top` command can display percentage of cpu time. We can also type `1` to display percentage of each CPU core. `26.7 wa` is the percentage of `iowait` time.
 
-{% highlight shell %}
+{% highlight bash %}
 %Cpu(s): 23.7 us, 12.4 sy,  0.0 ni, 37.0 id, 26.7 wa,  0.0 hi,  0.3 si,  0.0 st
 {% endhighlight %}
 
@@ -35,7 +35,17 @@ The [kernel doc][kernel_proc_doc] says
 
 Oh, it says `the iowait is not reliable by reading from /proc/stat`. In which case it is not reliable?
 
-# Unreliable iowait in `/proc/stat` and `top`
+# Unreliable iowait in /proc/stat and top
+
+There are several articles describing unreliable iowait. For example, [this artice][io_wait_article_dd] gives an example
+
+Using the following command 
+
+{% highlight bash %}
+taskset 1 dd if=/dev/sda of=/dev/null bs=1MB
+{% endhighlight %}
+
+
 
 ## iowait drops to 0.0% even if there is a I/O task
 
@@ -57,3 +67,4 @@ Oh, it says `the iowait is not reliable by reading from /proc/stat`. In which ca
 
 [article_discussed]: http://blog.scoutapp.com/articles/2011/02/10/understanding-disk-i-o-when-should-you-be-worried
 [kernel_proc_doc]: https://www.kernel.org/doc/Documentation/filesystems/proc.txt
+[io_wait_article_dd]: http://veithen.github.io/2013/11/18/iowait-linux.html
