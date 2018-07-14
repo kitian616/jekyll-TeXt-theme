@@ -268,7 +268,8 @@
 </header>
 </div><div class="page__content"><div class ="main"><div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-          <div class="col-main"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">Quick Start</h1></header>&nbsp<a class="edit-on-github"
+          <div class="col-main"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1 itemprop="headline">Quick Start</h1></header><span class="split-space">&nbsp</span>
+                      <a class="edit-on-github"
                         title="Edit on Github"
                         href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/en/1.1-quick-start.md">
                         <i class="far fa-edit"></i></a></div><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/></div>
@@ -286,37 +287,49 @@
 
 <p>To install it with common method, all you need to do is copying all the theme files to your project. There are several ways to do so:</p>
 
-<p>Clone <a href="https://github.com/kitian616/jekyll-TeXt-theme">jekyll-TeXt-theme</a> from github:</p>
+<ol>
+  <li>
+    <p>Clone <a href="https://github.com/kitian616/jekyll-TeXt-theme">jekyll-TeXt-theme</a> from github:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone git@github.com:kitian616/jekyll-TeXt-theme.git
-</code></pre></div></div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git clone git@github.com:kitian616/jekyll-TeXt-theme.git
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Download and unzip the file to your Jekyll site directory.</p>
 
-<p>Download and unzip the file to your Jekyll site directory.</p>
+    <p><a class="button button--success button--rounded button--lg" href="https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip"><i class="fas fa-download"></i> Download TeXt Theme</a></p>
+  </li>
+  <li>
+    <p>If you host your site on GitHub Pages, you can just fork <a href="https://github.com/kitian616/jekyll-TeXt-theme">jekyll-TeXt-theme</a>, then rename the repository to <strong>USERNAME.github.io</strong> — replacing <strong>USERNAME</strong> with your GitHub username.</p>
 
-<p><a class="button button--success button--rounded button--lg" href="https://github.com/kitian616/jekyll-TeXt-theme/archive/master.zip"><i class="fas fa-download"></i> Download TeXt Theme</a></p>
+    <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/github-fork.png" alt="Fork" /></p>
 
-<p>If you host your site on GitHub Pages, you can just fork <a href="https://github.com/kitian616/jekyll-TeXt-theme">jekyll-TeXt-theme</a>, then rename the repository to <strong>USERNAME.github.io</strong> — replacing <strong>USERNAME</strong> with your GitHub username.</p>
-
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/github-fork.png" alt="Fork" /></p>
-
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/github-rename-repo.png" alt="Rename" /></p>
+    <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/github-rename-repo.png" alt="Rename" /></p>
+  </li>
+</ol>
 
 <h3 id="ruby-gem-method">Ruby Gem Method</h3>
 
-<p>Add this line to your Jekyll site’s Gemfile:</p>
+<ol>
+  <li>
+    <p>Add this line to your Jekyll site’s Gemfile:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-text-theme"</span>
-</code></pre></div></div>
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">gem</span> <span class="s2">"jekyll-text-theme"</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add this line to your Jekyll site’s <em>_config.yml</em> file:</p>
 
-<p>Add this line to your Jekyll site’s <em>_config.yml</em> file:</p>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-text-theme</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Then run Bundler to install the theme gem and dependencies:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-text-theme</span>
-</code></pre></div></div>
-
-<p>Then run Bundler to install the theme gem and dependencies:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle install
-</code></pre></div></div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle install
+</code></pre></div>    </div>
+  </li>
+</ol>
 
 <h2 id="setup-your-site">Setup Your Site</h2>
 
@@ -332,7 +345,7 @@
 ├── _posts
 │   └── ...
 ├── about.md
-├── all.html
+├── archive.html
 └── index.html
 </code></pre></div></div>
 
