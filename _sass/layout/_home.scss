@@ -27,6 +27,10 @@
         margin-top: map-get($base, vertical-space) * 1.5;
       }
 
+      figure.highlight > pre {
+        margin-top: 0rem;
+      }
+
       h1,
       h2,
       h3 {
