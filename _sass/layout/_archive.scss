@@ -20,6 +20,7 @@
       margin: 0;
       border: 2px solid $border-color;
       border-radius: map-get($button, pill-radius);
+      background-color: transparent;
       @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
       @include focus {
         box-shadow: 0 0 0 2px rgba($border-color, .4);
