@@ -9,4 +9,9 @@ author: Xiyun GAN
 key: page-about
 ---
 
-Be a good man
+Be a KITE person
+
++ Knowledgable
++ Introspective
++ Thoughtful
++ Effective
