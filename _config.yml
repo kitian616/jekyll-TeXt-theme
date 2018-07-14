@@ -21,7 +21,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : KITE
 description: > # this means to ignore newlines until "Language & timezone"
-  Be a good man
+  Be Knowledgable, Introspective, Thoughtful and Effective
 
 
 ## => Language and Timezone
