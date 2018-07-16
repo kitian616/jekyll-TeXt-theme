@@ -37,14 +37,33 @@ Oh, it says `the iowait is not reliable by reading from /proc/stat`. In which ca
 
 # Unreliable iowait in /proc/stat and top
 
-There are several articles describing unreliable iowait. For example, [this artice][io_wait_article_dd] gives an example
+There are several articles describing unreliable iowait. For example, [this artice][io_wait_article_dd] gives an example.
 
-Using the following command 
+Let's see the CPU utilization by `top` command. We can see `0.0 wa`.  
+
+{% highlight bash %}
+%Cpu(s): 12.3 us,  3.0 sy,  0.0 ni, 84.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+{% endhighlight %}
+
+Next, run the following command 
 
 {% highlight bash %}
 taskset 1 dd if=/dev/sda of=/dev/null bs=1MB
 {% endhighlight %}
 
+Now we can see `11.7 wa`.
+
+{% highlight bash %}
+%Cpu(s):  6.0 us,  3.0 sy,  0.0 ni, 79.2 id, 11.7 wa,  0.0 hi,  0.1 si,  0.0 st
+{% endhighlight %}
+
+{% highlight bash %}
+taskset 1 sh -c "while true; do true; done"
+{% endhighlight %}
+
+{% highlight bash %}
+%Cpu(s): 31.1 us,  4.3 sy,  0.0 ni, 64.5 id,  0.0 wa,  0.0 hi,  0.1 si,  0.0 st
+{% endhighlight %}
 
 
 ## iowait drops to 0.0% even if there is a I/O task
