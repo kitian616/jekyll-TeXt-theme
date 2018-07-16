@@ -23,3 +23,42 @@ public class Test {
 {% highlight BASH %}
 java -Xmn2M -Xmx20M -XX:+PrintGCDetails -XX:+PrintGCDateStamps Test
 {% endhighlight %}
+
+{% highlight %}
+1048576
+2018-07-11T10:37:07.079+0800: [GC (Allocation Failure) [PSYoungGen: 404K->320K(1536K)] 4500K->4424K(19968K), 0.0013917 secs] [Times: user=0.00 sys=0.00, real=0.00 secs]
+2018-07-11T10:37:07.080+0800: [GC (Allocation Failure) [PSYoungGen: 320K->320K(1536K)] 4424K->4424K(19968K), 0.0009494 secs] [Times: user=0.00 sys=0.00, real=0.00 secs]
+2018-07-11T10:37:07.081+0800: [Full GC (Allocation Failure) [PSYoungGen: 320K->0K(1536K)] [ParOldGen: 4104K->252K(6144K)] 4424K->252K(7680K), [Metaspace: 2404K->2404K(1056768K)], 0.0032559 secs] [Times: user=0.01 sys=0.00, real=0.00 secs]
+4194304
+Heap
+ PSYoungGen      total 1536K, used 51K [0x00000000ffe00000, 0x0000000100000000, 0x0000000100000000)
+  eden space 1024K, 5% used [0x00000000ffe00000,0x00000000ffe0cec0,0x00000000fff00000)
+  from space 512K, 0% used [0x00000000fff80000,0x00000000fff80000,0x0000000100000000)
+  to   space 512K, 0% used [0x00000000fff00000,0x00000000fff00000,0x00000000fff80000)
+ ParOldGen       total 18432K, used 16636K [0x00000000fec00000, 0x00000000ffe00000, 0x00000000ffe00000)
+  object space 18432K, 90% used [0x00000000fec00000,0x00000000ffc3f1f0,0x00000000ffe00000)
+ Metaspace       used 2413K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 260K, capacity 386K, committed 512K, reserved 1048576K
+{% endhighlight %}
+
+# 2 times of PSYoungGen?
+
+
+{% highlight BASH %}
+java -Xmn2M -Xmx20M -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:MaxMetaspaceSize=2M Test
+{% endhighlight %}
+
+{% highlight %}
+Error occurred during initialization of VM
+java.lang.OutOfMemoryError: Metaspace
+        <<no stack trace available>>
+{% endhighlight %}
+
+# Young GC, Minor GC, Full GC and Major GC
+
+# When Major GC happens
+
+# Metaspace size
+
+# How to limit size of `Xmx + Metaspace`?
+
