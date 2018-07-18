@@ -204,7 +204,7 @@ Gradient update:
 ### Perceptron Algorithm
 - **Online learning** - the learning mode where the model update is performed each time a single observation is received (**update everytime**)
 - **Batch learning** - the learning mode where the model update is performed after observing the entire training set (**compute average update then update**)
-## Improving the Perceptron
+### Improving the Perceptron
 For online training:
 - The perceptron produces many theta's during training
 - The algprithm simply uses the final one
@@ -217,7 +217,7 @@ For online training:
 - Since the probability should be between 0 and 1, we use the logistic/sigmoid function
 - h(x) estimated p(y=1|x,theta)
 - ![](https://i.ytimg.com/vi/ThmZU3dTIDo/maxresdefault.jpg)
-# Interpretation
+### Interpretation
 - log(p(y=1|**x**,**theta**)/p(y=0|**x**,**theta**))=**theta*****x**
 - Hence we can find which feature xi is more important
 **Note**: the odds in favor of an event is the quantity p/(1-p)
