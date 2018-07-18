@@ -20,6 +20,7 @@ Checking status of changes:
 ```sh
 $ git status
 ```
+<!--more-->
 Adding files to staging area:
 ```sh
 $ git add filename
