@@ -1,4 +1,8 @@
-# Machine Learning
+---
+layout: article
+title: Machine-Learning-Notes
+---
+
 - [Class 1: Forming of learning problem](#class-1-forming-of-learning-problem) 
 - [Class 2: Decision Trees](#class-2-decision-trees)
 - [Class 3: k-Nearest Neighbor & Instance-based Learning](#class-3-k-nearest-neighbor--instance-based-learning)
