@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Machine-Learning-Notes
+title: Machine Learning Notes
 key: CS-Notes
 ---
 
