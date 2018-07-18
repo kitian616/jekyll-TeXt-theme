@@ -4,14 +4,6 @@ title: Machine Learning Notes
 key: CS-Notes
 ---
 
-- [Class 1: Forming of learning problem](#class-1-forming-of-learning-problem) 
-- [Class 2: Decision Trees](#class-2-decision-trees)
-- [Class 3: k-Nearest Neighbor & Instance-based Learning](#class-3-k-nearest-neighbor--instance-based-learning)
-- [Class 4: Evaluation](#class-4-evaluation)
-- [Class 5: Linear Regression](#class-5-linear-regression)
-- [Class 6: Linear Classification: Perceptron](#class-6-linear-classification-perceptron)
-- [Class 7: Logistic Regression](#class-7-logistic-regression)
-<!--more-->
 ## Class 1: Forming of learning problem
 ### Train set & Test set
 - We generally assume that the training and test examples are independently drawn from the same overall distribution of data
@@ -23,6 +15,7 @@ key: CS-Notes
 1. **Representarepresentation**
 2. **Optimization**  
 3. **Evaluation**
+<!--more-->
 ### ML in practice
 - Understand domain, prior knowledge, and goals
 - Data integration, selection, cleaning, pre-processing, etc.
