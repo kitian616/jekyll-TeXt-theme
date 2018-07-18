@@ -2,6 +2,7 @@
 layout: article
 title: Git Command Guide
 key: Git-Notes
+tags: git, computer science
 ---
 
 # Lesson 1 
