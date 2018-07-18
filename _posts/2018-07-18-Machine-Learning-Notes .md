@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Machine-Learning-Notes
+key: CS-Notes
 ---
 
 - [Class 1: Forming of learning problem](#class-1-forming-of-learning-problem) 
