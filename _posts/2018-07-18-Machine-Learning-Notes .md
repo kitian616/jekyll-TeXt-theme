@@ -2,7 +2,7 @@
 layout: article
 title: Machine Learning Notes
 key: CS-Notes
-tags: "machine learning" "computer science"
+tags: machine_learning computer_science
 ---
 
 ## Class 1: Forming of learning problem
