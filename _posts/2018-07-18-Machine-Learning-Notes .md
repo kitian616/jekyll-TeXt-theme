@@ -11,6 +11,7 @@ key: CS-Notes
 - [Class 5: Linear Regression](#class-5-linear-regression)
 - [Class 6: Linear Classification: Perceptron](#class-6-linear-classification-perceptron)
 - [Class 7: Logistic Regression](#class-7-logistic-regression)
+<!--more-->
 ## Class 1: Forming of learning problem
 ### Train set & Test set
 - We generally assume that the training and test examples are independently drawn from the same overall distribution of data
