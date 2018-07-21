@@ -27,7 +27,7 @@ ul.toc {
     @include split-line(bottom);
     padding: .8rem 0 .3rem 0;
     margin-bottom: .6rem;
-    &, a {
+    a {
       @include link-colors($text-color-d);
     }
   }
@@ -47,7 +47,7 @@ ul.toc {
   }
   .toc-h5,
   .toc-h6 {
-    &, a {
+    a {
       @include link-colors($text-color-l);
     }
   }
