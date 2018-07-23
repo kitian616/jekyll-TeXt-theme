@@ -140,7 +140,7 @@
             & > pre {
               border-radius: 0;
               display: block;
-              overflow: visible;
+              @include overflow(auto);
               margin: 0;
               &.lineno {
                 color: $text-color-l;

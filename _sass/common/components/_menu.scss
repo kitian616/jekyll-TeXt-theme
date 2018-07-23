@@ -1,3 +1,14 @@
+@mixin menu-direction($direction: default) {
+  @if $direction == default {
+    $direction: 'horizontal';
+  }
+  @if $direction == 'vertical' {
+    @include flex-direction(column);
+  } @else {
+    @include flex-direction(row);
+  }
+}
+
 @mixin menu($horizontal-spacer: default, $horizontal-item-vertical-spacer: default, $wrap: default) {
   @if $horizontal-spacer == default {
     $horizontal-spacer: map-get($menu, horizontal-spacer);
@@ -10,7 +21,6 @@
   }
   @include flexbox();
   @include flex-wrap($wrap);
-  @include align-items(center);
   margin-top: 0;
   margin-bottom: 0;
   & > li {
@@ -28,6 +38,16 @@
 
 .menu {
   @include menu();
+  @include menu-direction();
+  @include align-items(center);
+}
+
+.menu--vertical {
+  @include menu-direction('vertical');
+  @include align-items(normal);
+  & > li {
+    margin-right: 0;
+  }
 }
 
 .menu--center {
