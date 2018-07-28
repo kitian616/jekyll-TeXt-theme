@@ -2,34 +2,33 @@
 <div class="footer js-page-footer">
   <div class="main">
 
-    {%- assign __author = site.author -%}
-    {%- if __author.type == 'organization' -%}
-      {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
+    {%- assign _site_author = site.author -%}
+    {%- if _site_author.type == 'organization' -%}
+      {%- assign _site_author_itemtype = 'http://schema.org/Organization' -%}
     {%- else -%}
-      {%- assign _author_itemtype = 'http://schema.org/Person' -%}
+      {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
     {%- endif -%}
 
-    <aside  itemscope itemtype="{{ _author_itemtype }}">
-      <meta itemprop="name" content="{{ __author.name }}">
-      {%- assign __path = __author.url | default: '/'-%}
-      {%- include snippets/get-nav-url.html -%}
-      {%- assign _author_url = __return -%}
-      <meta itemprop="url" content="{{ _author_url }}">
-      {%- if __author.bio -%}
-        <meta itemprop="description" content="{{ __author.bio }}">
+    <aside  itemscope itemtype="{{ _site_author_itemtype }}">
+      <meta itemprop="name" content="{{ _site_author.name }}">
+      {%- assign _site_author_url = _site_author.url | default: '/'-%}
+      {%- include snippets/get-nav-url.html path=_site_author_url -%}
+      {%- assign _site_author_url = __return -%}
+      <meta itemprop="url" content="{{ _site_author_url }}">
+      {%- if _site_author.bio -%}
+        <meta itemprop="description" content="{{ _site_author.bio }}">
       {%- endif -%}
-      {%- include follow-me.html -%}
+      {%- include author-links.html author=_site_author -%}
     </aside>
     <footer class="site-info">
-      {%- assign __path = site.paths.rss | default: site.data.variables.default.paths.rss -%}
-      {%- include snippets/get-nav-url.html -%}
-      {%- assign _href = __return -%}
-      {%- assign __locale = site.data.locale.NAV.RSS -%}
-      {%- include snippets/locale-to-string.html -%}
+      {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
+      {%- include snippets/get-nav-url.html path=_paths_rss -%}
+      {%- assign _paths_rss = __return -%}
+      {%- include snippets/locale-to-string.html locale=site.data.locale.NAV.RSS -%}
       {%- assign _locale_nav_rss = __return -%}
       <p class="menu menu--center">
         <span>© {{ site.title }} {{ site.data.locale.COPYRIGHT_DATES }}</span>
-        <a type="application/rss+xml" href="{{ _href }}">{{ _locale_nav_rss }}</a>
+        <a type="application/rss+xml" href="{{ _paths_rss }}">{{ _locale_nav_rss }}</a>
       </p>
       <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.

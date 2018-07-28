@@ -1,5 +1,4 @@
-{%- assign __locale = site.data.locale.ARTICLE_LIST_DATE_FORMAT -%}
-{%- include snippets/locale-to-string.html -%}
+{%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_LIST_DATE_FORMAT -%}
 {%- assign _format = __return -%}
 {%- assign _post_count = site.posts | size -%}
 {%- if _post_count < 1 -%}
@@ -18,8 +17,7 @@
     {%- for _tag in _post.tags -%}
       "{{ _tag | url_encode }}" {%- unless forloop.last -%},{%- endunless -%}
     {%- endfor -%}
-    {%- assign __path = _post.url -%}
-    {%- include snippets/prepend-baseurl.html -%}
+    {%- include snippets/prepend-baseurl.html path=_post.url -%}
     {%- assign _url = __return -%}
       ],"url":"{{ _url | url_encode }}","date":"{{ _post.date | date: _format }}"}
   {%- endfor -%}

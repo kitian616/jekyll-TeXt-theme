@@ -1,5 +1,9 @@
-{%- if __source == nil -%}
-  {%- assign __return = __target -%}
+{%- if include.source1 == nil -%}
+  {%- if include.source0 == nil -%}
+    {%- assign __return = include.target -%}
+  {%- else -%}
+    {%- assign __return = include.source0 -%}
+  {%- endif -%}
 {%- else -%}
-  {%- assign __return = __source -%}
+  {%- assign __return = include.source1 -%}
 {%- endif -%}

@@ -13,12 +13,10 @@ show_title: false
     {%- for post in paginator.posts -%}
       <article itemscope itemtype="http://schema.org/BlogPosting">
 
-        {%- assign __path = post.url -%}
-        {%- include snippets/prepend-baseurl.html -%}
+        {%- include snippets/prepend-baseurl.html path=post.url -%}
         {%- assign _href = __return -%}
 
-        {%- assign __locale = site.data.locale.READMORE -%}
-        {%- include snippets/locale-to-string.html -%}
+        {%- include snippets/locale-to-string.html locale=site.data.locale.READMORE -%}
         {%- assign _locale_readmore = __return -%}
 
         <header class="article__header"><h2 itemprop="headline"><a href="{{ _href }}">{{ post.title }}</a></h2></header>
@@ -41,8 +39,7 @@ show_title: false
   {%- if paginator.total_pages > 1 -%}
     <nav class="pagination">
 
-      {%- assign __locale = site.data.locale.STATISTICS -%}
-      {%- include snippets/locale-to-string.html -%}
+      {%- include snippets/locale-to-string.html locale=site.data.locale.STATISTICS -%}
       {%- assign _locale_statistics = __return -%}
 
       {%- assign _post_count = site.posts | size -%}
@@ -74,8 +71,7 @@ show_title: false
         {%- endif -%}
 
         {%- if paginator.previous_page -%}
-          {%- assign __path = paginator.previous_page_path -%}
-          {%- include snippets/prepend-baseurl.html -%}
+          {%- include snippets/prepend-baseurl.html path=paginator.previous_page_path -%}
           {%- assign _href = __return -%}
           <li><a class="button button--secondary button--circle" href="{{ _href }}">
             <i class="fas fa-angle-left"></i>
@@ -93,8 +89,8 @@ show_title: false
             </li>
 
           {%- elsif page == 1 -%}
-            {%- assign __path = site.paths.home | default: site.data.variables.default.paths.home -%}
-            {%- include snippets/prepend-baseurl.html -%}
+            {%- assign _home_path = site.paths.home | default: site.data.variables.default.paths.home -%}
+            {%- include snippets/prepend-baseurl.html path=_home_path -%}
             {%- assign _href = __return -%}
             <li>
               <a class="button button--secondary button--circle" href="{{ _href }}"><span>{{ page }}</span></a>
@@ -107,16 +103,14 @@ show_title: false
               {%- elsif page > _n1 and page < _length -%}
                 {%- if page == _length_mimus_one -%}<li><span class="omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
               {%- else -%}
-                {%- assign __path = site.paginate_path -%}
-                {%- include snippets/prepend-baseurl.html -%}
+                {%- include snippets/prepend-baseurl.html path=site.paginate_path -%}
                 {%- assign _href = __return -%}
                 <li>
                   <a class="button button--secondary button--circle" href="{{ _href | replace: ':num', page }}"><span>{{ page }}</span></a>
                 </li>
               {%- endif -%}
             {%- else -%}
-              {%- assign __path = site.paginate_path -%}
-              {%- include snippets/prepend-baseurl.html -%}
+              {%- include snippets/prepend-baseurl.html path=site.paginate_path -%}
               {%- assign _href = __return -%}
               <li>
                 <a class="button button--secondary button--circle" href="{{ _href | replace: ':num', page }}"><span>{{ page }}</span></a>
@@ -126,8 +120,7 @@ show_title: false
         {%- endfor -%}
 
         {%- if paginator.next_page -%}
-          {%- assign __path = paginator.next_page_path -%}
-          {%- include snippets/prepend-baseurl.html -%}
+          {%- include snippets/prepend-baseurl.html path=paginator.next_page_path -%}
           {%- assign _href = __return -%}
           <li><a class="button button--secondary button--circle" href="{{ _href }}">
             <i class="fas fa-angle-right"></i>

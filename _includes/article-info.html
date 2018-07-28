@@ -4,15 +4,10 @@
   {%- assign _cur_page = page -%}
 {%- endif -%}
 
-{%- assign __target = site.data.variables.default.pageview -%}
-{%- assign __source = page.pageview -%}
-{%- include snippets/assign.html -%}
+{%- include snippets/assign.html target=site.data.variables.default.pageview source0=page.pageview -%}
 {%- assign _pageview = __return -%}
 
-{%- assign __target = site.data.variables.default.paths.archive -%}
-{%- assign __source = site.paths.archive -%}
-{%- include snippets/assign.html -%}
-{%- assign _all_path = __return -%}
+{%- assign _paths_archive = site.paths.archive | default: site.data.variables.default.paths.archive -%}
 
 {%- if _cur_page.author -%}
   {%- assign _author = site.data.authors[_cur_page.author] -%}
@@ -38,8 +33,8 @@
         {%- else -%}
           {%- assign _keywords = _keywords | append: _tag | append: ',' -%}
         {%- endif -%}
-        {%- assign __path = _all_path | append: '?tag=' -%}
-        {%- include snippets/prepend-baseurl.html -%}
+        {%- assign _tag_path = _paths_archive | append: '?tag=' -%}
+        {%- include snippets/prepend-baseurl.html path=_tag_path -%}
         <li>
           <a class="button button--secondary button--pill button--sm"
             href="{{ __return | append: _tag_encode | replace: '//', '/' }}">{{ _tag }}</a>
@@ -58,8 +53,7 @@
 
       {%- if _cur_page.date -%}
         <li>
-          {%- assign __locale = site.data.locale.ARTICLE_DATE_FORMAT } -%}
-          {%- include snippets/locale-to-string.html -%}
+          {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_DATE_FORMAT -%}
           {%- if post -%}
             <i class="far fa-calendar-alt"></i> <span itemprop="datePublished">{{ _cur_page.date | date: __return }}</span>
           {%- elsif page -%}
@@ -73,8 +67,7 @@
       {%- if _pageview or post -%}
         {%- if site.pageview.provider -%}
 
-          {%- assign __locale = site.data.locale.VIEWS } -%}
-          {%- include snippets/locale-to-string.html -%}
+          {%- include snippets/locale-to-string.html locale=site.data.locale.VIEWS -%}
           {%- assign _locale_views = __return -%}
 
           <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">

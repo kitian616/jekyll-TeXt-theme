@@ -4,10 +4,8 @@
 {%- if _title -%}
   {%- assign __return = _title -%}
 {%- elsif _titles -%}
-  {%- assign __locale = _titles -%}
-  {%- include snippets/locale-to-string.html -%}
-  {%- assign __localeTitle = __return -%}
-  {%- assign __return = __localeTitle -%}
+  {%- include snippets/locale-to-string.html locale=_titles -%}
+  {%- assign __return = __return -%}
 {%- else -%}
   {%- assign __return = nil -%}
 {%- endif -%}

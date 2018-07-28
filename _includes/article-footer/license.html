@@ -1,5 +1,4 @@
-{%- assign __locale = site.data.locale.LICENSE_ANNOUNCE -%}
-{%- include snippets/locale-to-string.html -%}
+{%- include snippets/locale-to-string.html locale=site.data.locale.LICENSE_ANNOUNCE -%}
 {%- assign _license_announce = __return -%}
 
 {%- assign _data_license = site.data.licenses-%}

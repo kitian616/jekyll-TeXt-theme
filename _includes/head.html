@@ -8,45 +8,37 @@
 <meta name="description" content="{%- if page.excerpt -%}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{%- else -%}{{ site.description }}{%- endif -%}">
 <link rel="canonical" href="{%- include snippets/page-url.html -%}">
 
-{%- assign __path = site.paths.rss | default: site.data.variables.default.paths.rss -%}
-{%- include snippets/get-nav-url.html -%}
+{%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
+{%- include snippets/get-nav-url.html path=_paths_rss -%}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ __return }}">
 <!-- begin favicon -->
-{%- assign __path = '/assets/apple-touch-icon.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/apple-touch-icon.png' -%}
 <link rel="apple-touch-icon" sizes="180x180" href="{{ __return }}">
 
-{%- assign __path = '/assets/favicon-32x32.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/favicon-32x32.png' -%}
 <link rel="icon" type="image/png" sizes="32x32" href="{{ __return }}">
 
-{%- assign __path = '/assets/favicon-16x16.png' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/favicon-16x16.png' -%}
 <link rel="icon" type="image/png" sizes="16x16" href="{{ __return }}">
 
-{%- assign __path = '/assets/site.webmanifest' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/site.webmanifest' -%}
 <link rel="manifest" href="{{ __return }}">
 
-{%- assign __path = '/assets/safari-pinned-tab.svg' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/safari-pinned-tab.svg' -%}
 <link rel="mask-icon" href="{{ __return }}" color="#fc4d50">
 
-{%- assign __path = '/assets/favicon.ico' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/favicon.ico' -%}
 <link rel="shortcut icon" href="{{ __return }}">
 
 <meta name="msapplication-TileColor" content="#ffc40d">
 
-{%- assign __path = '/assets/browserconfig.xml' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/browserconfig.xml' -%}
 <meta name="msapplication-config" content="{{ __return }}">
 
 <meta name="theme-color" content="#ffffff">
 <!-- end favicon -->
 
-{%- assign __path = '/assets/css/main.css' -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
 <link rel="stylesheet" href="{{ __return }}">
 
 {%- include snippets/get-sources.html -%}

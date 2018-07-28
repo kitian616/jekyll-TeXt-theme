@@ -1,8 +1,4 @@
-{%- if __author -%}
-  {%- assign _author = __author -%}
-{%- else -%}
-  {%- assign _author = site.author -%}
-{%- endif -%}
+{%- assign _author = include.author -%}
 
 {%- if _author.type == 'organization' -%}
   {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
@@ -43,8 +39,7 @@
       <p itemprop="description">{{ _author.bio }}</p>
     {%- endif -%}
 
-    {%- assign __author = _author -%}
-    {%- include follow-me.html -%}
+    {%- include author-links.html author=_author -%}
 
   </div>
 </div>

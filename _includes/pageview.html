@@ -1,6 +1,4 @@
-{%- assign __source = page.pageview -%}
-{%- assign __target = site.data.variables.default.pageview -%}
-{%- include snippets/assign.html -%}
+{%- include snippets/assign.html target=site.data.variables.default.pageview source0=page.pageview -%}
 {%- assign _pageview = __return -%}
 
 

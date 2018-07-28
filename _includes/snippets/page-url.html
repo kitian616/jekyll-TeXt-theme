@@ -1,3 +1,2 @@
-{%- assign __path = page.url -%}
-{%- include snippets/prepend-baseurl.html -%}
+{%- include snippets/prepend-baseurl.html path=page.url -%}
 {{ __return | prepend: site.url }}

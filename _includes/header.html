@@ -2,8 +2,8 @@
   <div class="main clearfix">
     <div class="logo">
     {%- include svg/logo.svg -%}
-    {%- assign __path = site.paths.root | default: site.data.variables.default.paths.root  -%}
-    {%- include snippets/get-nav-url.html -%}
+    {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
+    {%- include snippets/get-nav-url.html path=_paths_root -%}
     {%- if site.title -%}
       <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
     {%- endif -%}
@@ -12,14 +12,11 @@
     <nav>
       <ul>
         {%- for _item in site.data.navigation.header -%}
-          {%- assign __path = _item.url -%}
-          {%- include snippets/get-nav-url.html -%}
+          {%- include snippets/get-nav-url.html path=_item.url -%}
           {%- assign _nav_url = __return -%}
-          {%- assign __path = page.url -%}
-          {%- include snippets/get-nav-url.html -%}
+          {%- include snippets/get-nav-url.html path=page.url -%}
           {%- assign _page_url = __return -%}
-          {%- assign __locale = _item.titles -%}
-          {%- include snippets/locale-to-string.html -%}
+          {%- include snippets/locale-to-string.html locale=_item.titles -%}
           {%- if _nav_url == _page_url -%}
             <li class="active"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
           {%- else -%}

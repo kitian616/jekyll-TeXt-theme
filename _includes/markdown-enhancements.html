@@ -1,32 +1,20 @@
-{%- assign __target = site.data.variables.default.chart -%}
-{%- assign __source = site.chart -%}
-{%- include snippets/assign.html -%}
+{%- include snippets/assign.html target = site.data.variables.default.chart source0=site.chart -%}
+{%- include snippets/assign.html target=__return source0=page.chart -%}
 
-{%- assign __target = __return -%}
-{%- assign __source = page.chart -%}
-{%- include snippets/assign.html -%}
 {%- if __return == true -%}
   {%- include markdown-enhancements/chart.html -%}
 {%- endif -%}
 
-{%- assign __target = site.data.variables.default.mathjax -%}
-{%- assign __source = site.mathjax -%}
-{%- include snippets/assign.html -%}
+{%- include snippets/assign.html target = site.data.variables.default.mathjax source0=site.mathjax -%}
+{%- include snippets/assign.html target=__return source0=page.mathjax -%}
 
-{%- assign __target = __return -%}
-{%- assign __source = page.mathjax -%}
-{%- include snippets/assign.html -%}
 {%- if __return == true -%}
   {%- include markdown-enhancements/mathjax.html -%}
 {%- endif -%}
 
-{%- assign __target = site.data.variables.default.mermaid -%}
-{%- assign __source = site.mermaid -%}
-{%- include snippets/assign.html -%}
+{%- include snippets/assign.html target = site.data.variables.default.mermaid source0=site.mermaid -%}
+{%- include snippets/assign.html target=__return source0=page.mermaid -%}
 
-{%- assign __target = __return -%}
-{%- assign __source = page.mermaid -%}
-{%- include snippets/assign.html -%}
 {%- if __return == true -%}
   {%- include markdown-enhancements/mermaid.html -%}
 {%- endif -%}

@@ -9,8 +9,7 @@ full_width: true
 {%- assign _title = __return -%}
 
 <div class="layout--landing">
-{%- assign __path = page.data.background_image.src -%}
-{%- include snippets/get-nav-url.html -%}
+{%- include snippets/get-nav-url.html path=page.data.background_image.src -%}
 {%- assign _url = __return -%}
 {%- if page.data.theme == 'light' -%}
   <section class="section section--light overlay" style="background-image: url({{ _url }});">
@@ -27,8 +26,7 @@ full_width: true
       {%- if page.data.actions -%}
       <ul class="menu menu--center">
       {%- for _action in page.data.actions -%}
-        {%- assign __path = _action.url -%}
-        {%- include snippets/get-nav-url.html -%}
+        {%- include snippets/get-nav-url.html path=_action.url -%}
         {%- assign _url = __return -%}
         {%- assign _type = _action.type | default: 'info' -%}
         <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
@@ -58,8 +56,7 @@ full_width: true
             {%- if _section.actions -%}
               <ul class="menu menu--center">
               {%- for _action in _section.actions -%}
-                {%- assign __path = _action.url -%}
-                {%- include snippets/get-nav-url.html -%}
+                {%- include snippets/get-nav-url.html path=_action.url -%}
                 {%- assign _url = __return -%}
                 {%- assign _type = _action.type | default: 'outline-info' -%}
                 <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
@@ -88,8 +85,7 @@ full_width: true
                     {%- if child.actions -%}
                       <ul class="menu menu--center">
                         {%- for _action in child.actions -%}
-                          {%- assign __path = _action.url -%}
-                          {%- include snippets/get-nav-url.html -%}
+                          {%- include snippets/get-nav-url.html path=_action.url -%}
                           {%- assign _url = __return -%}
                           {%- assign _type = _action.type | default: 'outline-info' -%}
                           <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
@@ -101,16 +97,14 @@ full_width: true
                   {%- if child.image -%}
 
                     {%- if child.image.url -%}
-                      {%- assign __path = child.image.url -%}
-                      {%- include snippets/get-nav-url.html -%}
+                      {%- include snippets/get-nav-url.html path=child.image.url -%}
                       {%- assign _item_image_url = __return -%}
                     {%- else -%}
                       {%- assign _item_image_url = nil -%}
                     {%- endif -%}
 
                     {%- if child.image.src -%}
-                      {%- assign __path = child.image.src -%}
-                      {%- include snippets/get-nav-url.html -%}
+                      {%- include snippets/get-nav-url.html path=child.image.src -%}
                       {%- assign _item_image_src = __return -%}
                     {%- else -%}
                       {%- assign _item_image_src = nil -%}

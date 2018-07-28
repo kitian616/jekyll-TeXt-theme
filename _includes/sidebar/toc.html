@@ -7,11 +7,9 @@
         <li class="toc-h1">{{ _item.title }}</li>
         {%- if _item.children -%}
           {%- for _child in _item.children -%}
-            {%- assign __path = _child.url -%}
-            {%- include snippets/get-nav-url.html -%}
+            {%- include snippets/get-nav-url.html path=_child.url -%}
             {%- assign _nav_url = __return -%}
-            {%- assign __path = page.url -%}
-            {%- include snippets/get-nav-url.html -%}
+            {%- include snippets/get-nav-url.html path=page.url -%}
             {%- assign _page_url = __return -%}
             {%- if _nav_url == _page_url -%}
               <li class="toc-h2 active"><a href="{{ _nav_url }}">{{ _child.title }}</a></li>
