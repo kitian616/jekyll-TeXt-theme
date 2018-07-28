@@ -25,7 +25,7 @@ Success!
 <div class="grid">
 <div class="row">
 <div class="col-2 col-md-4 col-sm-6">
-<div class="button button--primary button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
+<div class="button button--error button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
 </div>
 <div class="col-2 col-md-4 col-sm-6">
 <div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>

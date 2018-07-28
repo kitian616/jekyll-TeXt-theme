@@ -1,25 +1,25 @@
 .article__content {
   p.success {
     @include card(false);
-    background-color: mix($green, $background-color, 10%);
+    background-color: rgba($green, .1);
     border: 1px solid $green;
   }
 
   p.info {
     @include card(false);
-    background-color: mix($blue, $background-color, 10%);
+    background-color: rgba($blue, .1);
     border: 1px solid $blue;
   }
 
   p.warning {
     @include card(false);
-    background-color: mix($yellow, $background-color, 10%);
+    background-color: rgba($yellow, .1);
     border: 1px solid $yellow;
   }
 
   p.error {
     @include card(false);
-    background-color: mix($red, $background-color, 10%);
+    background-color: rgba($red, .1);
     border: 1px solid $red;
   }
 }

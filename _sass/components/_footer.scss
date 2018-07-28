@@ -5,23 +5,23 @@
 .footer {
   @include flexbox;
   @include align-items(center);
-  background-color: $main-color-3;
+  background: $footer-background;
   height: map-get($layout, footer-height);
   .author-links {
     padding-top: 1rem;
   }
   p {
-    color: $text-color-3;
+    color: $footer-text-color;
   }
   a {
-    @include link-colors ($text-color-3, $main-color-1);
+    @include link-colors ($footer-text-color, $main-color-1);
   }
   .site-info {
     .menu {
       line-height: map-get($base, line-height-xs);
       & > * {
         &:not(:last-child) {
-          @include split-line(right, default, $text-color-3);
+          @include split-line(right, default, $footer-text-color);
           padding-right: .3rem;
           margin-right: .3rem;
         }

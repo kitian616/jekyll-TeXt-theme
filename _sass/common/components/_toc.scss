@@ -6,8 +6,9 @@ ul.toc {
     margin: .2rem 0;
     &.active {
       a {
+        color: $text-color-3;
         background-color: $main-color-3;
-        @include link-colors($main-color-1);
+        box-shadow: 0 0 0 2px rgba($main-color-3, .4);
       }
     }
   }
@@ -17,10 +18,7 @@ ul.toc {
     padding: .2rem .8rem .2rem .8rem;
     border-radius: map-get($base, border-radius);
     text-decoration: none !important;
-    @include link-colors($text-color);
-    @include hover() {
-      background-color: $main-color-3;
-    }
+    @include clickable($text-color, null, $text-color-3, $main-color-3);
   }
 
   .toc-h1 {
@@ -89,6 +87,7 @@ ul.toc--navigator {
     &.active {
       a {
         background-color: transparent;
+        box-shadow: none;
         @include link-colors($main-color-1);
         @include split-line(left, 4px, $main-color-1);
         margin-left: -4px;

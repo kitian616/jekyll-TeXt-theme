@@ -5,17 +5,18 @@
 ///
 
 // main colors
-$main-color-1:     #c68a45;
-$text-color-1:     #fff;
+$main-color-1:     #563a20;
+$text-color-1:     rgba(#fff, .85);
 
-$main-color-2:     #6e3e85;
-$text-color-2:     #fff;
+$main-color-2:     #8a2827;
+$text-color-2:     rgba(#fff, .85);
 
-$main-color-3:     #7f5543;
-$text-color-3:     #fff;
+$main-color-3:     #b49b92;
+$text-color-3:     rgba(#fff, .85);
 
-// background colors
-$background-color: #efefef;
+// page background
+$background-color: #d2c2bc;
+
 // text colors
 $text-color-theme-light-d: rgba(#000, .95);
 $text-color-theme-light:   rgba(#000, .85);
@@ -31,19 +32,26 @@ $text-color-l:     $text-color-theme-light-l;
 
 $text-background-color: rgba(#000, .05);
 
+// header and footer colors
+$header-text-color: $text-color-3;
+$header-background: $main-color-3;
+
+$footer-text-color: $text-color-3;
+$footer-background: $main-color-3;
+
 // border and shadow colors
-$border-color:     mix(#000, $background-color, 20%);
+$border-color:     $main-color-3;
 $border-color-l:   mix(#000, $background-color, 10%);
 $decorate-color:   rgba(#000, .1);
 $mask-color:       rgba(#000, .8);
 $select-color:     rgba($main-color-3, .5);
 
 // function colors
-$green:           #52c41a;
-$blue:            #1890ff;
-$yellow:          #fa8c16;
-$red:             #f5222d;
-$text-color-function: #fff;
+$green:           #74a851;
+$blue:            #3b8e98;
+$yellow:          #d8a348;
+$red:             #d23442;
+$text-color-function: rgba(#fff, .85);
 
 // logo colors
 $mail-color:       #0072c5;
@@ -55,4 +63,5 @@ $douban-color:     #42bd56;
 $github-color:     #000;
 $linkedin-color:   #1074af;
 
-@import './highlight/tomorrow';
+// highlight colors
+@import './highlight/tomorrow-night-eighties';

@@ -41,8 +41,6 @@ body {
 body {
   height: 100%;
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
-  color: $text-color;
-  background-color: $background-color;
   ::-moz-selection {
     background: $select-color;
   }
@@ -52,10 +50,6 @@ body {
   ::selection {
     background: $select-color;
   }
-}
-
-.root {
-  height: 100%;
 }
 
 input, textarea, select, button {
@@ -151,13 +145,6 @@ figure > img {
 
 figcaption {
   font-size: map-get($base, font-size-sm);
-}
-
-.icon {
-  display: block;
-  >svg {
-    display: block;
-  }
 }
 
 button {

@@ -8,14 +8,15 @@
 $main-color-1:     #FF9500;
 $text-color-1:     rgba(#fff, .8);
 
-$main-color-2:     #FF3B30;
+$main-color-2:     #ff006a;
 $text-color-2:     rgba(#fff, .8);
 
 $main-color-3:     #202020;
 $text-color-3:     rgba(#fff, .8);
 
-// background colors
+// page background
 $background-color: #121212;
+
 // text colors
 $text-color-theme-light-d: #000;
 $text-color-theme-light:   #222;
@@ -31,6 +32,13 @@ $text-color-l:     $text-color-theme-dark-l;
 
 $text-background-color: rgba(#fff, .05);
 
+// header and footer colors
+$header-text-color: $text-color-3;
+$header-background: $main-color-3;
+
+$footer-text-color: $text-color-3;
+$footer-background: $main-color-3;
+
 // border and shadow colors
 $border-color:     mix(#fff, $background-color, 20%);
 $border-color-l:   mix(#fff, $background-color, 10%);
@@ -43,7 +51,7 @@ $green:           #74a851;
 $blue:            #3b8e98;
 $yellow:          #d8a348;
 $red:             #d23442;
-$text-color-function: rgba(#fff, .9);
+$text-color-function: rgba(#fff, .8);
 
 // logo colors
 $mail-color:       #0072c5;
@@ -55,4 +63,5 @@ $douban-color:     #42bd56;
 $github-color:     #000;
 $linkedin-color:   #1074af;
 
+// highlight colors
 @import './highlight/tomorrow-night';

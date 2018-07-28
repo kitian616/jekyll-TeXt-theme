@@ -15,6 +15,8 @@
     height: auto !important;
     height: 100%;
     min-height: 100%;
+    color: $text-color;
+    background-color: $background-color;
 
     .col-aside {
       display: none;
@@ -62,7 +64,6 @@
 
   .sidebar-button {
     @include clickable($text-color-d, rgba($main-color-3, .75));
-    border: 1px $border-color solid;
   }
 
   .page__sidebar {
