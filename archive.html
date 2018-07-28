@@ -272,7 +272,7 @@
   </div><div class="site-tags js-tags">
   <ul class="menu">
     <li>
-      <button type="button" class="button button--secondary button--pill tag-button js-article-tag " data-encode="">
+      <button type="button" class="button button--secondary button--pill tag-button js-article-tag js-tag-show-all" data-encode="">
         Show All<div class="tag-button__count">25</div>
       </button>
     </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%23%24%25%5E">
@@ -485,7 +485,7 @@
       }
       return _buttons;
     }
-    function buttonFoucs(target) {
+    function buttonFocus(target) {
       if (target) {
         addClass(target, 'focus');
         $lastFocusButton && !$lastFocusButton.is(target) && removeClass($lastFocusButton, 'focus');
@@ -513,7 +513,7 @@
     }
 
     function showAll() {
-      setNotSearch(); setIsEmpty(); buttonFoucs($tagShowAll); setUrlQuery();
+      setNotSearch(); setIsEmpty(); buttonFocus($tagShowAll); setUrlQuery();
       $result.html(render(data));
     }
     function tagSelect(tag/*decode tag*/, target) {
@@ -524,7 +524,7 @@
         $result.html(render(searchByTag(tag)));
       }
       if (target) {
-        buttonFoucs(target);
+        buttonFocus(target);
         _tag = target.attr('data-encode');
         if (_tag === '' || typeof _tag !== 'string') {
           setUrlQuery();
@@ -548,7 +548,7 @@
       if (_tag !== undefined) {
         query.tag === undefined || (_tag = query.tag);
         tagSelect(window.decodeUrl(_tag));
-        buttonFoucs(searchButtonsByTag(_tag));
+        buttonFocus(searchButtonsByTag(_tag));
       } else if (_q !== undefined) {
         _q = window.decodeUrl(_q);
         queryInput(_q); setSearchBoxVal(_q);
@@ -584,7 +584,7 @@
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
-"><div class="follow-me">
+"><div class="author-links">
   <ul class="menu menu--nowrap menu--center"><li title="Send me Email.">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:kitian616@outlook.com" target="_blank">
         <i class="fas fa-envelope"></i>
