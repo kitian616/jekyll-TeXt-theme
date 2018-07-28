@@ -10,9 +10,9 @@ tags: Test English
 
 <!--more-->
 
-## TeXt Theme - Details
+## TeXt Theme - Layouts
 
-![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
+![TeXt Theme Layouts](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png)
 
 ## Skin: Default
 
