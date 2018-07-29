@@ -65,16 +65,18 @@
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);
