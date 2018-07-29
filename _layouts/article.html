@@ -40,27 +40,7 @@ type: article
     {%- endif -%}
   </footer>
 
-  {%- if page.next or page.previous -%}
-    <div class="article__previous-next clearfix">
-      {%- if page.next -%}
-
-        {%- include snippets/prepend-baseurl.html path=page.next.url -%}
-        {%- assign _href = __return -%}
-
-        {%- include snippets/locale-to-string.html locale=site.data.locale.PREVIOUS -%}
-        {%- assign _locale_previous = __return -%}
-
-        <div class="previous"><span>{{ _locale_previous }}</span><a href="{{ _href }}">{{ page.next.title }}</a></div>
-      {%- endif -%}
-      {%- if page.previous -%}
-        {%- include snippets/prepend-baseurl.html path=page.previous.url -%}
-        {%- assign _href = __return -%}
-        {%- include snippets/locale-to-string.html locale=site.data.locale.NEXT -%}
-        {%- assign _locale_next = __return -%}
-        <div class="next"><span>{{ _locale_next }}</span><a href="{{ _href }}">{{ page.previous.title }}</a></div>
-      {%- endif -%}
-    </div>
-  {%- endif -%}
+  {%- include article-section-navigator.html -%}
 
 </div>
 
