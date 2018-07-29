@@ -16,15 +16,13 @@
 
     tocDisabled = disabled();
 
-    setTimeout(function() {
-      toc = $tocRoot.toc({
-        selectors: TOC_SELECTOR,
-        container: $articleContent,
-        scrollTarget: hasSidebar ? '.js-page-main' : null,
-        scroller: hasSidebar ? '.js-page-main' : null,
-        disabled: tocDisabled
-      });
-    }, 1000);
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
 
     $window.on('resize', window.throttle(function() {
       tocDisabled = disabled();
