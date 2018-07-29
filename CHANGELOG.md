@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.0.2 (2018-07-29)
+
+### Enhancements
+
+- Highlight theme
+- Articles whit `sidebar.toc` support section navigator (previous and next navigator)
+- Aside Toc show immediately after page get ready (no more delay)
+
+### Bug Fixes
+
+- Aside Toc may display error when scroll to bottom
+
 ## 2.0.1 (2018-07-07)
 
 > “All elements that respond to press should have a visual feedback when touched.”
@@ -8,15 +20,15 @@
 
 ### Enhancements
 
-- Some interaction details optimize: button and link add feedback when clicked, cancel button of input in archive layout, button focus style, etc.
+- Some interaction details optimize: button and link add feedback when clicked, cancel button of input in archive layout, button focus style, etc
 
 ### Bug Fixes
 
-- `mathjax` and `mermaid` config may not work.
+- `mathjax` and `mermaid` config may not work
 
 ## 2.0.0 (2018-07-01)
 
-Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-form-1-to-2) for details.
+Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-form-1-to-2) for details
 
 ### Enhancements
 
