@@ -298,13 +298,15 @@
 
 <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.1/dist/typeit.min.js"></script>
 <script>
-new TypeIt('.tips', {
-    strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
-    speed: 150,
-    breakLines: false,
-    autoStart: true,
-    loop: true
-});
+  setTimeout(function() {
+    new TypeIt('.tips', {
+        strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
+        speed: 150,
+        breakLines: false,
+        autoStart: true,
+        loop: true
+    });
+  }, 600);
 </script></div><section class="page__comments"></section></article>
           </div></div>
 
@@ -444,16 +446,18 @@ new TypeIt('.tips', {
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -547,16 +551,18 @@ new TypeIt('.tips', {
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

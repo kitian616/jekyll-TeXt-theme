@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-07-29T00:22:38+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for blog or site
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-07-29T14:25:22+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for blog or site
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;div class=&quot;grid&quot;&gt;
@@ -1171,7 +1171,19 @@ lang: zh-Hans
 ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;可以看到这个页面的导航和版权信息都变成了简体中文。&lt;/p&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="Simplified Chinese | 简" /><summary type="html">在 _config.yml 或者头信息里设置 lang: zh-Hans 或 lang: zh 后，主题文字变为简体中文。</summary></entry><entry xml:lang="zh-Hant"><title type="html">TeXt - Traditional Chinese | 繁體中文</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html" rel="alternate" type="text/html" title="TeXt - Traditional Chinese | 繁體中文" /><published>2017-04-12T00:00:00+08:00</published><updated>2017-04-12T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html">&lt;p&gt;在 &lt;em&gt;_config.yml&lt;/em&gt; 或者頭信息裏設置 &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: zh-Hant&lt;/code&gt; 後，主題文字變為繁體中文。&lt;/p&gt;
+&lt;p&gt;可以看到这个页面的导航和版权信息都变成了简体中文。&lt;/p&gt;
+
+&lt;div style=&quot;writing-mode: vertical-rl;&quot;&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;关关雎鸠，在河之洲。&lt;/p&gt;
+
+    &lt;p&gt;窈窕淑女，君子好逑。&lt;/p&gt;
+
+    &lt;p&gt;——《诗经·国风·周南·关雎》&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="Simplified Chinese | 简" /><summary type="html">在 _config.yml 或者头信息里设置 lang: zh-Hans 或 lang: zh 后，主题文字变为简体中文。</summary></entry><entry xml:lang="zh-Hant"><title type="html">TeXt - Traditional Chinese | 繁體中文</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html" rel="alternate" type="text/html" title="TeXt - Traditional Chinese | 繁體中文" /><published>2017-04-12T00:00:00+08:00</published><updated>2017-04-12T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html">&lt;p&gt;在 &lt;em&gt;_config.yml&lt;/em&gt; 或者頭信息裏設置 &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: zh-Hant&lt;/code&gt; 後，主題文字變為繁體中文。&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -1183,7 +1195,17 @@ lang: zh-Hant
 ---
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;可以看到這個頁面的導航和版權信息都變成了繁體中文。&lt;/p&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="Traditional Chinese | 繁" /><summary type="html">在 _config.yml 或者頭信息裏設置 lang: zh-Hant 後，主題文字變為繁體中文。</summary></entry><entry xml:lang="en"><title type="html">TeXt - English</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/03/english.html" rel="alternate" type="text/html" title="TeXt - English" /><published>2017-04-03T00:00:00+08:00</published><updated>2017-04-03T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/03/english</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/03/english.html">&lt;p&gt;English is the default language of TeXt, if you set &lt;code class=&quot;highlighter-rouge&quot;&gt;lang&lt;/code&gt; in &lt;em&gt;_config.yml&lt;/em&gt; to the other language but want make the page English, just set &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: en&lt;/code&gt; in the front matter.&lt;/p&gt;
+&lt;p&gt;可以看到這個頁面的導航和版權信息都變成了繁體中文。&lt;/p&gt;
+
+&lt;div style=&quot;writing-mode: vertical-rl;&quot;&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;關關雎鳩，在河之洲。&lt;/p&gt;
+
+    &lt;p&gt;窈窕淑女，君子好逑。&lt;/p&gt;
+
+    &lt;p&gt;——《詩經·國風·周南·關雎》&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="TeXt" /><category term="Traditional Chinese | 繁" /><summary type="html">在 _config.yml 或者頭信息裏設置 lang: zh-Hant 後，主題文字變為繁體中文。</summary></entry><entry xml:lang="en"><title type="html">TeXt - English</title><link href="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/03/english.html" rel="alternate" type="text/html" title="TeXt - English" /><published>2017-04-03T00:00:00+08:00</published><updated>2017-04-03T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/test/2017/04/03/english</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/test/2017/04/03/english.html">&lt;p&gt;English is the default language of TeXt, if you set &lt;code class=&quot;highlighter-rouge&quot;&gt;lang&lt;/code&gt; in &lt;em&gt;_config.yml&lt;/em&gt; to the other language but want make the page English, just set &lt;code class=&quot;highlighter-rouge&quot;&gt;lang: en&lt;/code&gt; in the front matter.&lt;/p&gt;
 
 &lt;!--more--&gt;
 

@@ -292,6 +292,18 @@ lang: zh-Hans
 </code></pre></div></div>
 
 <p>可以看到这个页面的导航和版权信息都变成了简体中文。</p>
+
+<div style="writing-mode: vertical-rl;">
+  <blockquote>
+    <p>关关雎鸠，在河之洲。</p>
+
+    <p>窈窕淑女，君子好逑。</p>
+
+    <p>——《诗经·国风·周南·关雎》</p>
+  </blockquote>
+  <div>
+</div>
+</div>
 </div>
 
   <footer class="article__footer"><meta itemprop="dateModified" content="2017-04-13T00:00:00+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
@@ -477,16 +489,18 @@ lang: zh-Hans
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -580,16 +594,18 @@ lang: zh-Hans
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

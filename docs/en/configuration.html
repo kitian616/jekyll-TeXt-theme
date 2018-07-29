@@ -465,7 +465,7 @@
 
 <p>In order for jekyll-github-metadata to know what metadata to fetch it must be able to determine the repository NWO to ask GitHub about.</p>
 
-<p>“NWO” stands for “name with owner.” It is GitHub lingo for the username of the owner of the repository plus a forward slash plus the name of the repository, e.g. ‘kitian616/jekyll-TeXt-theme’, where ‘kitian616’ is the owner and ‘jekyll-TeXt-theme’ is the repository name.</p>
+<p>“NWO” stands for “name with owner.” It is GitHub lingo for the username of the owner of the repository plus a forward slash plus the name of the repository, e.g. kitian616/jekyll-TeXt-theme, where “kitian616” is the owner and “jekyll-TeXt-theme” is the repository name.</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">repository</span><span class="pi">:</span> <span class="s">user_name/repo_name</span>
 </code></pre></div></div>
@@ -902,16 +902,18 @@
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -1005,16 +1007,18 @@
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

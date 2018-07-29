@@ -289,7 +289,7 @@
 
 [^1]: Here is the footnote.
 
-[^longnote]: Here's one with multiple blocks.
+[^longnote]: Here’s one with multiple blocks.
 
     Subsequent paragraphs are indented to show that they
 belong to the previous footnote.
@@ -492,16 +492,18 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -595,16 +597,18 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

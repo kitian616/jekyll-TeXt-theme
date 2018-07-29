@@ -371,7 +371,7 @@
 
 <h3 id="base-url">Base URL</h3>
 
-<p>网站的根路径，不包含域名，其默认值为“/“。如果你的网站是搭建在 Github Pages 上的，那么这个值会默认设置为网站对应的项目名<sup id="fnref:gitHub_metadata:1"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>。</p>
+<p>网站的根路径，不包含域名，其默认值为“/”。如果你的网站是搭建在 Github Pages 上的，那么这个值会默认设置为网站对应的项目名<sup id="fnref:gitHub_metadata:1"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>。</p>
 
 <h3 id="网站标题">网站标题</h3>
 
@@ -463,7 +463,7 @@
 
 <p><a href="https://github.com/jekyll/github-metadata">GitHub Metadata</a> 插件的设置, 你可以在<a href="https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration">这里</a>找到更多信息。</p>
 
-<p>这个设置告诉 jekyll-github-metadata 插件应该从哪个项目中获取元数据，其格式为 <code class="highlighter-rouge">项目所有者 ID / 项目名称</code>，例如：kitian616/jekyll-TeXt-theme。</p>
+<p>这个设置告诉 jekyll-github-metadata 插件应该从哪个项目中获取元数据，其格式为 <code class="highlighter-rouge">项目所有者 ID/项目名称</code>，例如：kitian616/jekyll-TeXt-theme。</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">repository</span><span class="pi">:</span> <span class="s">user_name/repo_name</span>
 </code></pre></div></div>
@@ -910,16 +910,18 @@
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -1013,16 +1015,18 @@
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

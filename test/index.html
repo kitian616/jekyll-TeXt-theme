@@ -297,7 +297,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/08/08/additional-styles.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
         </li><li>
@@ -317,7 +317,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/07/07/mathjax.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
         </li><li>
@@ -341,7 +341,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/06/06/mermaid.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/06/06/mermaid.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
         </li><li>
@@ -404,7 +404,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/05/05/chart.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/05/05/chart.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
         </li><li>
@@ -420,7 +420,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/04/19/modify-date.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/04/19/modify-date.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=Test">Test</a>
         </li><li>
@@ -436,7 +436,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/04/15/author.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="Tian Qi"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/04/15/author.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="Tian Qi"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=Test">Test</a>
         </li><li>
@@ -452,7 +452,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/04/13/simplified-chinese.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
         </li><li>
@@ -468,7 +468,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html">Click to read more ...</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
+        <p><a href="/jekyll-TeXt-theme/test/2017/04/12/traditional-chinese.html">Read More</a></p><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="left-col menu"><li>
           <a class="button button--secondary button--pill button--sm"
             href="/jekyll-TeXt-theme/archive.html?tag=TeXt">TeXt</a>
         </li><li>
@@ -639,16 +639,18 @@
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -742,16 +744,18 @@
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

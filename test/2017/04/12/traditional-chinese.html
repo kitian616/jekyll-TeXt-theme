@@ -292,6 +292,16 @@ lang: zh-Hant
 </code></pre></div></div>
 
 <p>可以看到這個頁面的導航和版權信息都變成了繁體中文。</p>
+
+<div style="writing-mode: vertical-rl;">
+  <blockquote>
+    <p>關關雎鳩，在河之洲。</p>
+
+    <p>窈窕淑女，君子好逑。</p>
+
+    <p>——《詩經·國風·周南·關雎》</p>
+  </blockquote>
+</div>
 </div>
 
   <footer class="article__footer"><meta itemprop="dateModified" content="2017-04-12T00:00:00+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
@@ -477,16 +487,18 @@ lang: zh-Hant
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -580,16 +592,18 @@ lang: zh-Hant
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

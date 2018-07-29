@@ -285,27 +285,27 @@
 
 <p><strong>markdown:</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Qi's Site](path-to-site)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Qi’s Site](path-to-site)
 </code></pre></div></div>
 
 <h2 id="with-title">With Title</h2>
 
-<p><a href="https://tianqi.name" title="Qi's Site">Qi’s Site</a></p>
+<p><a href="https://tianqi.name" title="Qi’s Site">Qi’s Site</a></p>
 
 <p><strong>markdown:</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Qi's Site](path-to-site "Qi's Site")
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Qi’s Site](path-to-site "Qi’s Site")
 </code></pre></div></div>
 
 <h2 id="reference-links">Reference Links</h2>
 
-<p>My Blog is called <a href="https://tianqi.name/blog" title="Qi's blog">Qi’s blog</a>.</p>
+<p>My Blog is called <a href="https://tianqi.name/blog" title="Qi’s blog">Qi’s blog</a>.</p>
 
 <p><strong>markdown:</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>My Blog is called [Qi's blog][BLOG].
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>My Blog is called [Qi’s blog][BLOG].
 
-[BLOG]: path-to-site "Qi's blog"
+[BLOG]: path-to-site "Qi’s blog"
 </code></pre></div></div>
 
 <h2 id="link-within-a-paragraph">Link Within A Paragraph</h2>
@@ -314,7 +314,7 @@
 
 <p><strong>markdown:</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TeXt is a succinct theme for blogging, It's simple but not easy. You can find more at [HERE](path-to-site).
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TeXt is a succinct theme for blogging, It’s simple but not easy. You can find more at [HERE](path-to-site).
 </code></pre></div></div>
 </div>
 
@@ -501,16 +501,18 @@
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -604,16 +606,18 @@
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);

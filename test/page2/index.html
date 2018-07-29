@@ -289,7 +289,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2017/04/03/english.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2017/04/03/english.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -317,7 +317,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -355,7 +355,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2016/09/19/headers.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2016/09/19/headers.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -389,7 +389,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2016/09/09/emphasis.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2016/09/09/emphasis.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -417,7 +417,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2016/09/01/links.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2016/09/01/links.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -447,7 +447,7 @@
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2016/07/07/images.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2016/07/07/images.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -481,7 +481,7 @@ in the output!).</p>
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2016/06/16/code-blocks.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2016/06/16/code-blocks.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -562,7 +562,7 @@ in the output!).</p>
 
 </div>
 
-        <p><a href="/jekyll-TeXt-theme/test/2016/06/10/tables.html">Click to read more ...</a></p>
+        <p><a href="/jekyll-TeXt-theme/test/2016/06/10/tables.html">Read More</a></p>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -771,16 +771,18 @@ in the output!).</p>
       if(!hasInit) {
         var interval, timeout;
         calc(true); setState();
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
@@ -874,16 +876,18 @@ in the output!).</p>
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 1.5 seconds
+        // run calc every 0.5 seconds
         interval = setInterval(function() {
           calc();
-        }, 1500);
+        }, 500);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 50000);
+        }, 60000);
         window.pageLoad.then(function() {
-          clearInterval(interval);
-          clearTimeout(timeout);
+          setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(timeout);
+          }, 1500);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState(null, scrolling);
