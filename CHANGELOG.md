@@ -2,7 +2,7 @@
 
 ## 2.0.1 (2018-07-07)
 
-> "All elements that respond to press should have a visual feedback when touched."
+> “All elements that respond to press should have a visual feedback when touched.”
 >
 > —TouchableWithoutFeedback in *React Native Docs*
 
@@ -86,7 +86,7 @@ Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jeky
 ### Enhancements
 
 - MathJax Support
-- Add "Read More" link at the end of article excerpt.
+- Add “Read More” link at the end of article excerpt.
 - 404 page
 
 ### Bug Fixes
@@ -115,7 +115,7 @@ Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jeky
 
 ### Bug Fixes
 
-- Fix article TOC 's display error at proper situation
+- Fix article TOC ’s display error at proper situation
 - Fix footer social buttons not in the center bug
 
 ## 1.1.0 (2017-10-19)

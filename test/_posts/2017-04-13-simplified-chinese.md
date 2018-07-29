@@ -19,3 +19,11 @@ lang: zh-Hans
     ---
 
 可以看到这个页面的导航和版权信息都变成了简体中文。
+
+<div style="writing-mode: vertical-rl;" markdown="1">
+> 关关雎鸠，在河之洲。
+>
+> 窈窕淑女，君子好逑。
+>
+> ——《诗经·国风·周南·关雎》
+<div>

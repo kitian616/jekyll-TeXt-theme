@@ -19,3 +19,11 @@ lang: zh-Hant
     ---
 
 可以看到這個頁面的導航和版權信息都變成了繁體中文。
+
+<div style="writing-mode: vertical-rl;" markdown="1">
+> 關關雎鳩，在河之洲。
+>
+> 窈窕淑女，君子好逑。
+>
+> ——《詩經·國風·周南·關雎》
+</div>

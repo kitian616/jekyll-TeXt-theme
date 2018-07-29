@@ -16,10 +16,10 @@ NAV:
     zh-Hant: "RSS"
 
 READMORE:
-  en:      "Click to read more ..."
-  zh:      "点我阅读更多..."
-  zh-Hans: "点我阅读更多..."
-  zh-Hant: "「點我閱讀更多」"
+  en:      "Read More"
+  zh:      "阅读更多"
+  zh-Hans: "阅读更多"
+  zh-Hant: "閱讀更多"
 
 VIEWS:
   en:      "views"

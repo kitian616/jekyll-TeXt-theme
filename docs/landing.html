@@ -75,11 +75,13 @@ data:
 
 <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.1/dist/typeit.min.js"></script>
 <script>
-new TypeIt('.tips', {
-    strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
-    speed: 150,
-    breakLines: false,
-    autoStart: true,
-    loop: true
-});
+  setTimeout(function() {
+    new TypeIt('.tips', {
+        strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
+        speed: 150,
+        breakLines: false,
+        autoStart: true,
+        loop: true
+    });
+  }, 600);
 </script>
