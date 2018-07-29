@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : TeXt Theme
 description: > # this means to ignore newlines until "Language & timezone"
-  TeXt Theme for Dev
+  TeXt Theme for development.
 
 
 ## => Language and Timezone
@@ -39,7 +39,7 @@ author:
   url       :
   avatar    : /assets/apple-touch-icon.png
   bio: >
-    for TeXt development.
+    TeXt Theme for development.
   email     :
   facebook  :
   twitter   :
