@@ -59,6 +59,9 @@
         max-height: 12rem;
       }
     }
+    .post-list__readmore {
+      font-size: map-get($base, font-size-sm);
+    }
   }
 
   .pagination {

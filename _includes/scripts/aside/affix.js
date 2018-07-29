@@ -7,15 +7,13 @@
     var tocDisabled = false;
     var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
 
-    setTimeout(function() {
-      affix = $pageAside.affix({
-        offsetBottom: $pageFooter.outerHeight(),
-        scrollTarget: hasSidebar ? '.js-page-main' : null,
-        scroller: hasSidebar ? '.js-page-main' : null,
-        scroll: hasSidebar ? $('.js-page-main').children() : null,
-        disabled: tocDisabled
-      });
-    }, 1000);
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
 
     $window.on('resize', window.throttle(function() {
       affix && affix.setOptions({

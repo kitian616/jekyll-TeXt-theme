@@ -29,16 +29,13 @@ show_title: false
           {%- endif -%}
         </div>
 
-        <p><a href="{{ _href }}">{{ _locale_readmore }}</a></p>
+        <p class="post-list__readmore"><a href="{{ _href }}">{{ _locale_readmore }}</a></p>
         {%- include article-info.html -%}
       </article>
     {%- endfor -%}
   </div>
 
-
-  {%- if paginator.total_pages > 1 -%}
-    {%- include paginator.html -%}
-  {%- endif -%}
+  {%- include paginator.html -%}
 </div>
 
 <script>

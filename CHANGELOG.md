@@ -86,7 +86,7 @@ Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jeky
 ### Enhancements
 
 - MathJax Support
-- Add “Read More” link at the end of article excerpt.
+- Add “Read more” link at the end of article excerpt.
 - 404 page
 
 ### Bug Fixes

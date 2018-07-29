@@ -65,10 +65,10 @@
       var interval, timeout;
       if(!hasInit) {
         render(); calc(); setState(null, scrolling);
-        // run calc every 0.5 seconds
+        // run calc every 100 millisecond
         interval = setInterval(function() {
           calc();
-        }, 500);
+        }, 100);
         timeout = setTimeout(function() {
           clearInterval(interval);
         }, 60000);
