@@ -16,7 +16,7 @@ full_width: true
 {%- elsif page.data.theme == 'dark' -%}
   <section class="section section--dark overlay" style="background-image: url({{ _url }});">
 {%- else -%}
-  <section class="section overlay" style="background-image: url({{ page.data.background_image.src }});">
+  <section class="section overlay" style="background-image: url({{ _url }});">
 {%- endif -%}
     <div class="section__content">
       <h1>{{ _title }}</h1>
@@ -37,12 +37,19 @@ full_width: true
   </section>
 
   {%- for _section in page.data.sections -%}
+    {%- include snippets/get-nav-url.html path=_section.background_image.src -%}
+    {%- assign _url = __return -%}
     {%- if _section.theme == 'light' -%}
-      <section class="section section--light feature" id="section-{{ forloop.index }}">
+      <section class="section section--light feature" id="section-{{ forloop.index }}"
     {%- elsif _section.theme == 'dark' -%}
-      <section class="section section--dark feature" id="section-{{ forloop.index }}">
+      <section class="section section--dark feature" id="section-{{ forloop.index }}"
     {%- else -%}
-      <section class="section feature" id="section-{{ forloop.index }}">
+      <section class="section feature" id="section-{{ forloop.index }}"
+    {%- endif -%}
+    {%- if _section.background_color -%}
+        style="background-image: url({{ _url }}); background-color: {{ _section.background_color }};">
+    {%- else -%}
+        style="background-image: url({{ _url }});">
     {%- endif -%}
 
         <div class="section__content">

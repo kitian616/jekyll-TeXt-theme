@@ -8,6 +8,7 @@
   .section {
     text-align: center;
     background-color: $text-background-color;
+    background-size: cover;
     @include flexbox();
     @include align-items(center);
     h1 {
@@ -68,8 +69,6 @@
   .overlay {
     min-height: 40rem;
     padding: map-get($spacers, 5) 0;
-    background-image: url(/docs/assets/images/cover1.jpeg);
-    background-size: cover;
     @include media-breakpoint-down(md) {
       min-height: 28rem;
     }

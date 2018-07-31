@@ -23,18 +23,22 @@ data:
         src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-responsive.png
     - title: Super Customizable
       description: Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.
+      theme: dark
       actions:
         - text: Learn More
           url: /docs/en/configuration
       image:
         src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-skins.png
+      background_color: '#515151'
     - title: Plenty Layouts
       description: With the help of layouts, you can easily make different type of pages.
+      theme: dark
       actions:
         - text: Learn More
           url: /docs/en/layouts
       image:
         src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png
+      background_color: '#515151'
     - title: Enhanced User Experience
       children:
         - title: Additional styles
@@ -48,10 +52,12 @@ data:
             - text: Learn More
               url: /docs/en/markdown-enhancements
     - title: 100% Free
+      theme: dark
       description: Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!
       actions:
         - text: '<i class="fab fa-github"></i> GitHub'
           url: https://github.com/kitian616/jekyll-TeXt-theme
+      background_color: '#515151'
     - title: Tip Me
       children:
         - title: 'WeChat <i class="fas fa-arrow-down"></i>'
@@ -75,15 +81,13 @@ data:
 
 <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.1/dist/typeit.min.js"></script>
 <script>
-  window.pageLoad.then(function() {
-    setTimeout(function() {
-      new TypeIt('.tips', {
-        strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
-        speed: 150,
-        breakLines: false,
-        autoStart: true,
-        loop: true
-      });
-    }, 300);
-  });
+  setTimeout(function() {
+    new TypeIt('.tips', {
+      strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
+      speed: 150,
+      breakLines: false,
+      autoStart: true,
+      loop: true
+    });
+  }, 600);
 </script>

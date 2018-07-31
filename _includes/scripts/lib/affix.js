@@ -77,12 +77,12 @@
         }, 100);
         timeout = setTimeout(function() {
           clearInterval(interval);
-        }, 60000);
+        }, 45000);
         window.pageLoad.then(function() {
           setTimeout(function() {
             clearInterval(interval);
             clearTimeout(timeout);
-          }, 1500);
+          }, 3000);
         });
         $scrollTarget.on('scroll', function() {
           disabled || setState();
