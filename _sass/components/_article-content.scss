@@ -177,6 +177,13 @@
       margin-left: 2rem;
     }
   }
+  ul.task-list {
+    list-style-type: none;
+    margin-left: 0;
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+  }
   table {
     display: block;
     width: 100%;
