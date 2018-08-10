@@ -15,14 +15,14 @@
       _options.disabled !== undefined && (disabled = _options.disabled);
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
-      isOverallScroller = window.isOverallScroller($scroller[0]);
+      isOverallScroller = window.isOverallScroller($scrollTarget[0]);
       $scroll = $(scroll);
       calc(true);
     }
     function initData() {
       top();
       rootHeight = $root.outerHeight();
-      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scroller.scrollTop());
+      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
       rootLeft = $root.offset().left;
     }
     function calc(needInitData) {

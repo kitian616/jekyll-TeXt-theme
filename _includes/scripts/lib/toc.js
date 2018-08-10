@@ -23,7 +23,7 @@
       });
     }
     function setState(element, disabled) {
-      var scrollTop = $scroller.scrollTop(), i;
+      var scrollTop = $scrollTarget.scrollTop(), i;
       if (disabled || !headingsPos || headingsPos.length < 1) { return; }
       if (element) {
         $activeCur = element;

@@ -16,7 +16,7 @@
   };
 
   window.isOverallScroller = function(node) {
-    return node === document.documentElement || node === document.body;
+    return node === document.documentElement || node === document.body || node === window;
   };
 
   window.pageLoad = (function () {
