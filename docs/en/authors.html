@@ -30,7 +30,7 @@
   };
 
   window.isOverallScroller = function(node) {
-    return node === document.documentElement || node === document.body;
+    return node === document.documentElement || node === document.body || node === window;
   };
 
   window.pageLoad = (function () {
@@ -433,14 +433,14 @@ author: Tian Qi
       _options.disabled !== undefined && (disabled = _options.disabled);
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
-      isOverallScroller = window.isOverallScroller($scroller[0]);
+      isOverallScroller = window.isOverallScroller($scrollTarget[0]);
       $scroll = $(scroll);
       calc(true);
     }
     function initData() {
       top();
       rootHeight = $root.outerHeight();
-      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scroller.scrollTop());
+      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
       rootLeft = $root.offset().left;
     }
     function calc(needInitData) {
@@ -552,7 +552,7 @@ author: Tian Qi
       });
     }
     function setState(element, disabled) {
-      var scrollTop = $scroller.scrollTop(), i;
+      var scrollTop = $scrollTarget.scrollTop(), i;
       if (disabled || !headingsPos || headingsPos.length < 1) { return; }
       if (element) {
         $activeCur = element;
