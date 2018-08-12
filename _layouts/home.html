@@ -8,36 +8,9 @@ titles:
 show_title: false
 ---
 <div class="layout--home">
-
-  <div class="post-list">
-    {%- for post in paginator.posts -%}
-      <article itemscope itemtype="http://schema.org/BlogPosting">
-
-        {%- include snippets/prepend-baseurl.html path=post.url -%}
-        {%- assign _href = __return -%}
-
-        {%- include snippets/locale-to-string.html locale=site.data.locale.READMORE -%}
-        {%- assign _locale_readmore = __return -%}
-
-        <header class="article__header"><h2 itemprop="headline"><a href="{{ _href }}">{{ post.title }}</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
-          {%- assign _excerpt_type = site.excerpt_type | default: site.data.variables.default.excerpt_type  -%}
-          {%- if _excerpt_type == 'html' -%}
-            {{ post.excerpt }}
-          {%- else -%}
-            {{ post.excerpt | strip_html | truncate: 350 }}
-          {%- endif -%}
-        </div>
-
-        <p class="post-list__readmore"><a href="{{ _href }}">{{ _locale_readmore }}</a></p>
-        {%- include article-info.html -%}
-      </article>
-    {%- endfor -%}
-  </div>
-
+  {%- include article-list.html articles=paginator.posts type='common' show_excerpt=true excerpt_type=site.excerpt_type -%}
   {%- include paginator.html -%}
 </div>
-
 <script>
   {%- include scripts/home.js -%}
 </script>

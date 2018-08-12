@@ -1,9 +1,10 @@
 @mixin button() {
-  font-weight: map-get($button, font-weight);
-  line-height: map-get($base, line-height);
-  outline: none;
   display: inline-block;
+  outline: none;
+  font-weight: map-get($button, font-weight);
+  line-height: 1 !important;
   cursor: pointer;
+
   text-decoration: none !important;
   @include user-select(none);
   @include transition(map-get($button, transition));
@@ -100,7 +101,7 @@
 }
 
 .button--circle {
-  @include flexbox();
+  @include inline-flex();
   @include justify-content(center);
   @include align-items(center);
   border-radius: 50%;
@@ -113,6 +114,15 @@
   &.button--circle {
     width: map-get($button, circle-diameter);
     height: map-get($button, circle-diameter);
+  }
+}
+
+.button--xs {
+  font-size: map-get($base, font-size-xs);
+  padding: map-get($button, padding-y-xs) map-get($button, padding-x-xs);
+  &.button--circle {
+    width: map-get($button, circle-diameter-xs);
+    height: map-get($button, circle-diameter-xs);
   }
 }
 

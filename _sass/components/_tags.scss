@@ -1,4 +1,5 @@
 .site-tags {
+  margin: map-get($base, vertical-space-lg) 0;
   .tag-button {
     @include clickable($text-color-3, $main-color-3, default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
     & > .tag-button__count {

@@ -3,8 +3,6 @@ header:
     url:        /test/
   - title:      Docs
     url:        /docs/en/quick-start
-  - title:      文档
-    url:        /docs/zh/quick-start
   - title:      Archive
     url:        /archive.html
   - title:      About
@@ -42,7 +40,11 @@ docs-en:
         url:    /docs/en/markdown-enhancements
       - title:  Additional styles
         url:    /docs/en/additional-styles
-  - title:      Dev
+  - title:      Languages
+    children:
+      - title:  中文
+        url:    /docs/zh/quick-start
+
 
 docs-zh:
   - title:      开始
@@ -71,4 +73,7 @@ docs-zh:
         url:    /docs/zh/markdown-enhancements
       - title:  附加样式
         url:    /docs/zh/additional-styles
-  - title:      开发
+  - title:      其他语言
+    children:
+      - title:  English
+        url:    /docs/en/quick-start

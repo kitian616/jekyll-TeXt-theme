@@ -4,46 +4,6 @@
     display: block;
   }
 
-  .search-box {
-    position: relative;
-    max-width: 22rem;
-    margin: map-get($base, vertical-space-lg) 0;
-    @include media-breakpoint-down(md) {
-      max-width: none;
-      width: 100%;
-    }
-    & > input {
-      -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
-      display: inline-block;
-      width: 100%;
-      padding: .2rem 1.8rem;
-      margin: 0;
-      border: 2px solid $border-color;
-      border-radius: map-get($button, pill-radius);
-      background-color: transparent;
-      @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
-      @include focus {
-        box-shadow: 0 0 0 2px rgba($border-color, .4);
-      }
-    }
-    & > .search-box__icon-search, & > .search-box__icon-clear {
-      position: absolute;
-      vertical-align: middle;
-      top: 50%;
-      @include transform(translateY(-50%));
-    }
-    &.not-empty > .search-box__icon-clear {
-      display: block;
-    }
-    & > .search-box__icon-clear {
-      display: none;
-      right: .35rem;
-    }
-    & > .search-box__icon-search {
-      left: .6rem;
-    }
-  }
-
   & > .layout--archive__result {
     margin: map-get($base, vertical-space-lg) 0;
     section {
@@ -70,19 +30,4 @@
       }
     }
   }
-  &.search {
-    & > .site-tags {
-      display: none;
-    }
-    & > .layout--archive__result {
-      section {
-        ul > li {
-          .date {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
 }

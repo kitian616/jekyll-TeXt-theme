@@ -39,7 +39,7 @@ layout: base
   <div class="page__mask js-sidebar-hide"></div>
 
 {%- else -%}
-<div class="layout--page clearfix">
+<div class="layout--page clearfix js-page-root">
 {%- endif -%}
 
   {%- if _full_width -%}
@@ -55,7 +55,6 @@ layout: base
     {%- if _show_header -%}
       <div class="page__header">{%- include header.html -%}</div>
     {%- endif -%}
-
       <div class="page__content">
       {%- if _full_width == false -%}
         <div class ="main">
@@ -99,7 +98,7 @@ layout: base
                 </div>
               {%- endif -%}
 
-              {%- include article-info.html -%}
+              {%- include article-info.html article=page -%}
 
               <div class="js-article-content">{{ content }}</div>
 
@@ -115,8 +114,10 @@ layout: base
       {%- endif -%}
       </div>
 
+      {%- if _show_header -%}
+        <div class="page__search-panel">{%- include search.html -%}</div>
+      {%- endif -%}
       <div class="page__footer">{%- include footer.html -%}</div>
-
     </div>
   </div>
 </div>

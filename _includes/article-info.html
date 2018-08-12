@@ -1,16 +1,10 @@
-{%- if post -%}
-  {%- assign _cur_page = post -%}
-{%- elsif page -%}
-  {%- assign _cur_page = page -%}
-{%- endif -%}
-
 {%- include snippets/assign.html target=site.data.variables.default.pageview source0=page.pageview -%}
 {%- assign _pageview = __return -%}
 
 {%- assign _paths_archive = site.paths.archive | default: site.data.variables.default.paths.archive -%}
 
-{%- if _cur_page.author -%}
-  {%- assign _author = site.data.authors[_cur_page.author] -%}
+{%- if include.article.author -%}
+  {%- assign _author = site.data.authors[include.article.author] -%}
 {%- else -%}
   {%- assign _author = site.author -%}
 {%- endif -%}
@@ -22,57 +16,47 @@
     <meta itemprop="author" content="{{ _author.name }}"/>
   {%- endif -%}
 
-  {%- if _cur_page.tags[0] -%}
+  {%- if include.article.tags[0] -%}
     <ul class="left-col menu">
 
-      {%- assign _keywords = '' -%}
-      {%- for _tag in _cur_page.tags -%}
+      {%- assign _tag_path = _paths_archive | append: '?tag=' -%}
+      {%- include snippets/prepend-baseurl.html path=_tag_path -%}
+
+      {%- for _tag in include.article.tags -%}
+        {%- assign _tag_path = __return -%}
         {%- assign _tag_encode = _tag | strip | url_encode } -%}
-        {%- if forloop.last -%}
-          {%- assign _keywords = _keywords | append: _tag -%}
-        {%- else -%}
-          {%- assign _keywords = _keywords | append: _tag | append: ',' -%}
-        {%- endif -%}
-        {%- assign _tag_path = _paths_archive | append: '?tag=' -%}
-        {%- include snippets/prepend-baseurl.html path=_tag_path -%}
         <li>
           <a class="button button--secondary button--pill button--sm"
-            href="{{ __return | append: _tag_encode | replace: '//', '/' }}">{{ _tag }}</a>
+            href="{{ _tag_path | append: _tag_encode | replace: '//', '/' }}">{{ _tag }}</a>
         </li>
       {%- endfor -%}
-      <meta itemprop="keywords" content="{{ _keywords }}">
+      {%- assign _keywords = include.article.tags | join: ',' %}
     </ul>
+    <meta itemprop="keywords" content="{{ _keywords }}">
   {%- endif -%}
 
 
-  {%- if (_pageview or post) or _cur_page.date -%}
+  {%- if include.article.author or include.article.date or _pageview or post -%}
     <ul class="right-col menu">
-      {%- if !_cur_page.author -%}
-        <li><i class="fas fa-user"></i>  <span>{{ _author.name }}</span></li>
+      {%- if include.article.author -%}
+        <li><i class="fas fa-user"></i> <span>{{ _author.name }}</span></li>
       {%- endif -%}
 
-      {%- if _cur_page.date -%}
+      {%- if include.article.date -%}
         <li>
           {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_DATE_FORMAT -%}
-          {%- if post -%}
-            <i class="far fa-calendar-alt"></i> <span itemprop="datePublished">{{ _cur_page.date | date: __return }}</span>
-          {%- elsif page -%}
-            <i class="far fa-calendar-alt"></i> <time datetime="{{ page.date | date_to_xmlschema }}"
-              itemprop="datePublished">{{ _cur_page.date | date: __return }}
-            </time>
-          {%- endif -%}
+          <i class="far fa-calendar-alt"></i> <span>{{ include.article.date | date: __return }}</span>
+          <meta itemprop="datePublished" content="{{ include.article.date | date_to_xmlschema }}">
         </li>
       {%- endif -%}
 
-      {%- if _pageview or post -%}
+      {%- if _pageview or include.show_pageview -%}
         {%- if site.pageview.provider -%}
-
           {%- include snippets/locale-to-string.html locale=site.data.locale.VIEWS -%}
           {%- assign _locale_views = __return -%}
-
           <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction"/>
-            <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="{{ _cur_page.key }}">0</span> {{ _locale_views }}
+            <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="{{ include.article.key }}">0</span> {{ _locale_views }}
           </li>
         {%- endif -%}
       {%- endif -%}

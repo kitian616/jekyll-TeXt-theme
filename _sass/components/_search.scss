@@ -1,0 +1,70 @@
+.search {
+  .search-bar {
+    @include flexbox();
+    margin: map-get($base, vertical-space-lg) 0;
+  }
+  .search-box {
+    position: relative;
+    width: 100%;
+    max-width: 22rem;
+    @include media-breakpoint-down(md) {
+      max-width: none;
+      width: 100%;
+    }
+    & > input {
+      -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
+      display: inline-block;
+      width: 100%;
+      height: $button-height;
+      padding: 0 1.8rem;
+      margin: 0;
+      border: 2px solid $border-color;
+      border-radius: map-get($button, pill-radius);
+      line-height: 1 !important;
+      background-color: transparent;
+      @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
+      @include focus {
+        box-shadow: 0 0 0 2px rgba($border-color, .4);
+      }
+    }
+    & > .search-box__icon-search {
+      color: $text-color-l;
+    }
+    & > .search-box__icon-clear {
+      & > a {
+        @include link-colors($text-color);
+        cursor: pointer;
+      }
+    }
+    & > .search-box__icon-search, & > .search-box__icon-clear {
+      position: absolute;
+      height: $button-height;
+      width: $button-height;
+      line-height: $button-height;
+      vertical-align: middle;
+      text-align: center;
+    }
+    &.not-empty > .search-box__icon-clear {
+      display: block;
+    }
+    & > .search-box__icon-clear {
+      display: none;
+      top: 0;
+      right: 0;
+    }
+    & > .search-box__icon-search {
+      top: 0;
+      left: 0;
+    }
+  }
+  .search__cancel {
+    margin-left: map-get($spacers, 2);
+    font-weight: map-get($base, font-weight-bold);
+    white-space:nowrap;
+    @include link-colors($text-color-d);
+  }
+  .search__result {
+    padding-left: map-get($spacers, 3);
+    margin: map-get($base, vertical-space-lg) 0;
+  }
+}

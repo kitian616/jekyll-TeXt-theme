@@ -1,6 +1,10 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 
+{%- assign _paths_search_json = site.paths.search_json | default: site.data.variables.default.paths.search_json -%}
+{%- include snippets/get-nav-url.html path=_paths_search_json -%}
+{%- assign _paths_search_json = __return -%}
+
 <script>
   (function() {
     var TEXT_VARIABLES = {
@@ -20,6 +24,9 @@
         toc: {
           selectors: '{{ site.toc.selectors | default: site.data.variables.default.toc.selectors }}'
         }
+      },
+      paths: {
+        search_json: '{{ _paths_search_json }}'
       }
     };
     window.TEXT_VARIABLES = TEXT_VARIABLES;

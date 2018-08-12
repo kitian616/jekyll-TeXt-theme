@@ -32,7 +32,7 @@
     }
   }
 
-  .page__content {
+  .page__content, .page__search-panel {
     margin: 0 auto;
     padding-bottom: map-get($layout, footer-height);
   }
@@ -149,6 +149,20 @@
       .page__mask {
         display: block;
       }
+    }
+  }
+  .page__content {
+    display: block;
+  }
+  .page__search-panel {
+    display: none;
+  }
+  &.show-search-panel {
+    .page__content {
+      display: none;
+    }
+    .page__search-panel {
+      display: block;
     }
   }
 }

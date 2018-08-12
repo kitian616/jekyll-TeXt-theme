@@ -23,8 +23,21 @@
             <li><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
           {%- endif -%}
         {%- endfor -%}
+        <li><button class="button button--secondary button--circle js-search-button"><i class="fas fa-search"></i></button></li>
       </ul>
     </nav>
     {%- endif -%}
   </div>
 </header>
+<script>
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $searchButton = $('.js-search-button');
+    $searchButton.on('click', function() {
+      $pageRoot.toggleClass('show-search-panel');
+    });
+  });
+})();
+</script>
