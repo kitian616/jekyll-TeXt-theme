@@ -1,15 +1,16 @@
 <header class="header">
   <div class="main clearfix">
-    <div class="logo">
-    {%- include svg/logo.svg -%}
-    {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
-    {%- include snippets/get-nav-url.html path=_paths_root -%}
-    {%- if site.title -%}
-      <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
-    {%- endif -%}
+    <div class="logo clearfix">
+      {%- include svg/logo.svg -%}
+      {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
+      {%- include snippets/get-nav-url.html path=_paths_root -%}
+      {%- if site.title -%}
+        <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
+      {%- endif -%}
+      <button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button>
     </div>
     {%- if site.data.navigation.header -%}
-    <nav>
+    <nav class="navigation">
       <ul>
         {%- for _item in site.data.navigation.header -%}
           {%- include snippets/get-nav-url.html path=_item.url -%}
@@ -23,7 +24,7 @@
             <li><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
           {%- endif -%}
         {%- endfor -%}
-        <li><button class="button button--secondary button--circle js-search-button"><i class="fas fa-search"></i></button></li>
+        <li><button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button></li>
       </ul>
     </nav>
     {%- endif -%}

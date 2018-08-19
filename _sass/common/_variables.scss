@@ -98,29 +98,21 @@ $link: (
 $button-height-lg:        2.3rem;
 $button-height:           1.9rem;
 $button-height-sm:        1.5rem;
-$button-height-xs:        1.1rem;
 
 $button: (
   padding-y-lg:           ($button-height-lg - map-get($base, font-size-lg)) / 2,
   padding-x-lg:           $button-height-lg / 3,
-
   padding-y:              ($button-height - map-get($base, font-size)) / 2,
   padding-x:              $button-height / 3,
-
   padding-y-sm:           ($button-height-sm - map-get($base, font-size-sm)) / 2,
   padding-x-sm:           $button-height-sm / 3,
-
-  padding-y-xs:           ($button-height-xs - map-get($base, font-size-xs)) / 2,
-  padding-x-xs:           $button-height-xs / 3,
-
-  font-weight:            map-get($base, font-weight-bold),
 
   pill-radius:            4rem,
 
   circle-diameter-lg:     $button-height-lg,
   circle-diameter:        $button-height,
   circle-diameter-sm:     $button-height-sm,
-  circle-diameter-xs:     $button-height-xs,
+  font-weight:            map-get($base, font-weight-bold),
 
   transition:             all .2s ease-in-out
 );

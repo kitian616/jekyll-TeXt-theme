@@ -11,9 +11,9 @@
 {%- endif -%}
 
 {%- if include.type == 'common' -%}
-<div class="article-list--common">
+<div class="items items--divided">
 {%- elsif include.type == 'brief' -%}
-<div class="article-list--brief">
+<div class="items items--brief">
 {%- endif -%}
 
   {%- for _article in _sorted_list -%}
@@ -25,20 +25,23 @@
     {%- assign _locale_readmore = __return -%}
 
     {%- if include.type == 'common' -%}
-
-      <article itemscope itemtype="http://schema.org/BlogPosting">
-        <header class="article__header"><h2 itemprop="headline"><a href="{{ _href }}">{{ _article.title }}</a></h2></header>
-        {%- if _article.excerpt and include.show_excerpt -%}
-          <div class="article__content" itemprop="description articleBody">
-            {%- if _excerpt_type == 'html' -%}
-              {{ _article.excerpt }}
-            {%- else -%}
-              {{ _article.excerpt | strip_html | truncate: _excerpt_truncate }}
+      <article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="{{ _href }}">{{ _article.title }}</a></h2></header>
+          <div class="item__description">
+            {%- if _article.excerpt and include.show_excerpt -%}
+              <div class="article__content" itemprop="description articleBody">
+                {%- if _excerpt_type == 'html' -%}
+                  {{ _article.excerpt }}
+                {%- else -%}
+                  {{ _article.excerpt | strip_html | truncate: _excerpt_truncate }}
+                {%- endif -%}
+              </div>
             {%- endif -%}
+            <p><a href="{{ _href }}">{{ _locale_readmore }}</a></p>
           </div>
-        {%- endif -%}
-        <p class="readmore"><a href="{{ _href }}">{{ _locale_readmore }}</a></p>
-        {%- include article-info.html article=_article show_pageview=true -%}
+          {%- include article-info.html article=_article show_pageview=true -%}
+        </div>
       </article>
 
 
@@ -52,19 +55,18 @@
           {%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
         {%- endif -%}
       {%- endfor -%}
-      {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_DATE_FORMAT -%}
       {%- if include.group_by == 'year' -%}
         {%- assign _currentdate = _article.date | date: '%Y' -%}
         {%- if _currentdate != _date -%}
-          {%- unless forloop.first -%}</section>{%- endunless -%}
-          <section><h2 class="group">{{ _currentdate }}</h2>
+          {%- unless forloop.first -%}</ul></section>{%- endunless -%}
+          <section><h2>{{ _currentdate }}</h2><ul>
           {%- assign _date = _currentdate -%}
         {%- endif -%}
       {%- endif -%}
-      <article itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-        <span class="date">{{ _article.date | date: __return }}</span><a itemprop="headline" class="title" href="{{ _href }}">{{ _article.title }}</a>
-        <meta itemprop="datePublished" content="{{ include.article.date | date_to_xmlschema }}">
-      </article>
+      {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_LIST_DATE_FORMAT -%}
+      <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
+        <div class="item__content"><span class="item__meta">{{ _article.date | date: __return }}</span><a itemprop="headline" class="item__header" href="{{ _href }}">{{ _article.title }}</a></div>
+      </li>
     {%- endif -%}
 
   {%- endfor -%}

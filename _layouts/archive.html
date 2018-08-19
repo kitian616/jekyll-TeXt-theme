@@ -5,12 +5,11 @@ titles:
   zh: 归档
   zh-Hans: 归档
   zh-Hant: 歸檔
-show_title: false
 ---
 
 <div class="layout--archive js-all">
   {%- include tags.html -%}
-  <div class="js-result layout--archive__result">
+  <div class="js-result layout--archive__result d-none">
     {%- include article-list.html articles=site.posts type='brief' group_by='year' -%}
   </div>
 </div>

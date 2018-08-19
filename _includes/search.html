@@ -11,101 +11,11 @@
           <a><i class="fas fa-times"></i></a>
         </div>
       </div>
-      <button class="button button--secondary button--pill search__cancel js-search-button">{{ _locale_cancel }}</button>
+      <button class="button button--secondary button--pill search__cancel js-search-button">
+        {{ _locale_cancel }}</button>
     </div>
-    <div class="search__result js-search-result"></div>
+    <div class="search-result js-search-result"></div>
   </div>
 </div>
 
-<script>
-var SOURCES = window.TEXT_VARIABLES.sources;
-window.Lazyload.js(SOURCES.jquery, function() {
-
-  var searchData;
-
-  function memorize(f) {
-    var cache = {};
-    return function () {
-      var key = Array.prototype.join.call(arguments, ',');
-      if (key in cache) return cache[key];
-      else return cache[key] = f.apply(this, arguments);
-    };
-  }
-
-  function initData(data) {
-    var _data = [], j, cur, _tags;
-    for (i = 0; i < data.length; i++) {
-      cur = data[i], _tags = cur.tags;
-      cur.title = window.decodeUrl(cur.title);
-      cur.url = window.decodeUrl(cur.url);
-      if (_tags && _tags.length > 0) {
-        for (j = 0; j < _tags.length; j++) {
-          _tags[j] = window.decodeUrl(_tags[j]);
-        }
-      }
-      _data.push(cur)
-    }
-    return _data;
-  }
-
-  $.get(window.TEXT_VARIABLES.paths.search_json, function(data,status) {
-    searchData = initData(data);
-  });
-
-  /// search
-  function searchByQuery(query) {
-    var i, cur, _title, _list = [];
-    for (i = 0; i < searchData.length; i++) {
-      cur = searchData[i], _title = cur.title;
-      if (_title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
-        _list.push(cur);
-      }
-    }
-    return _list;
-  };
-
-  var renderItem = memorize(function (key, title, url) {
-    return $('<li class="article-list__item"><a class="title" href="' + url + '">' + title + '</a></li>');
-  });
-
-  function render(list) {
-    if (!list || list.length < 1) {
-      return null;
-    }
-    var $root = $('<ul class="article-list--brief"></ul>'),  i, cur;
-    for (i = 0; i < list.length; i++) {
-      cur = list[i];
-      $root.append(renderItem(cur.key, cur.title, cur.url));
-    }
-    return $root;
-  }
-
-  // search box
-  var $searchBox = $('.js-search-box');
-  var $searchInput = $searchBox.children('input');
-  var $searchClear = $searchBox.children('.js-icon-clear');
-  var $result = $('.js-search-result');
-
-  function searchBoxEmpty() {
-    $searchBox.removeClass('not-empty'); $result.html(render(searchData));
-  }
-
-  $searchInput.on('input', window.throttle(function() {
-    var val = $(this).val();
-    if (val === '' || typeof val !== 'string') {
-      searchBoxEmpty();
-    } else {
-      $searchBox.addClass('not-empty'); $result.html(render(searchByQuery(val)));
-    }
-  }, 400));
-  $searchInput.on('focus', function() {
-    $(this).addClass('focus');
-  });
-  $searchInput.on('blur', function() {
-    $(this).removeClass('focus');
-  });
-  $searchClear.on('click', function() {
-    $searchInput.val(''); searchBoxEmpty();
-  });
-});
-</script>
+<script>{%- include scripts/search.js -%}</script>

@@ -1,33 +1,11 @@
 .layout--archive {
-  .site-tags {
-    margin-bottom: map-get($base, vertical-space-lg) * 2;
-    display: block;
-  }
-
   & > .layout--archive__result {
     margin: map-get($base, vertical-space-lg) 0;
-    section {
-      &:not(:last-child) {
-        padding: 0 0 .4rem 0;
-      }
-      .year {
-        font-size: 1.6rem;
-      }
-      ul > li {
-        list-style-type: none;
-        margin: .4rem 0;
-        .date {
-          font-family: map-get($base, font-family-code);
-          display: inline-block;
-          font-size: map-get($base, font-size-sm);
-          color: $text-color-l;
-          padding: 0 1rem 0 0;
-        }
-        .link {
-          font-size: 1rem;
-          @include link-colors($text-color-d, $main-color-1);
-        }
-      }
+    .item__meta {
+      padding: 0 1rem 0 0;
+      font-family: map-get($base, font-family-code);
+      font-size: map-get($base, font-size-sm);
+      white-space: nowrap;
     }
   }
 }

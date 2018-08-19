@@ -1,20 +1,17 @@
 ---
 layout: none
 ---
-{%- assign _post_count = site.posts | size -%}
-{%- if _post_count < 1 -%}
-[]
-{%- else -%}
-[
-  {%- for _post in site.posts -%}
+{
+  {%- for _collection in site.collections -%}
     {%- unless forloop.first -%},{%- endunless -%}
-    {"key":"{{ forloop.index }}","title":"{{ _post.title | url_encode }}","tags":[
-    {%- for _tag in _post.tags -%}
-      "{{ _tag | url_encode }}" {%- unless forloop.last -%},{%- endunless -%}
-    {%- endfor -%}
-    {%- include snippets/prepend-baseurl.html path=_post.url -%}
-    {%- assign _url = __return -%}
-      ],"url":"{{ _url | url_encode }}","date":"{{ _post.date | date_to_xmlschema }}"}
+    "{{ _collection.label }}": [
+      {%- for _article in _collection.docs -%}
+      {%- unless forloop.first -%},{%- endunless -%}
+      {"title":"{{ _article.title | url_encode }}",
+      {%- include snippets/prepend-baseurl.html path=_article.url -%}
+      {%- assign _url = __return -%}
+      "url":"{{ _url | url_encode }}"}
+      {%- endfor -%}
+    ]
   {%- endfor -%}
-]
-{%- endif -%}
+}

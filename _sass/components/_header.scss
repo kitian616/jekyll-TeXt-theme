@@ -5,59 +5,88 @@
     text-decoration: none !important;
     @include link-colors($header-text-color, $main-color-1);
   }
-  & > .main > .logo {
-    float: left;
-    @include menu(3, 0);
-    @include align-items(center);
-    height: map-get($layout, header-height);
-    & > svg {
-      margin-right: .8rem;
-      vertical-align: middle;
-      width: map-get($base, font-size-h4) * 1.6;
-      height: map-get($base, font-size-h4) * 1.6;
-      @include media-breakpoint-down(md) {
-        margin-right: .5rem;
-        width: map-get($base, font-size-h4) * 1.2;
-        height: map-get($base, font-size-h4) * 1.2;
-      }
-    }
-    & > a {
-      display: inline-block;
-      font-size: map-get($base, font-size-h4);
-      @include media-breakpoint-down(md) {
-        font-size: map-get($base, font-size-h4-small);
-      }
-    }
+  .main {
+    @include flexbox();
     @include media-breakpoint-down(md) {
-      float: none;
-      height: map-get($layout, header-height-sm);
+      @include flex-direction(column);
     }
   }
-  & > .main > nav {
-    display: block;
-    float: right;
-    white-space: nowrap;
-    @include overflow(auto);
-    ul {
-      margin: 0;
-      @include menu(3, 2, nowrap);
-      @include align-items(center);
-      height: map-get($layout, header-height);
-      @include media-breakpoint-down(md) {
-        height: auto;
-      }
-      & > li {
-        @include split-line(bottom, 4px, transparent);
-        &.active {
+}
+
+.logo {
+  @include menu(3, 0);
+  @include align-items(center);
+  @include flex-wrap(nowrap);
+  @include flex(1);
+  white-space: nowrap;
+  height: map-get($layout, header-height);
+  margin-right: map-get($spacers, 3);
+  @include media-breakpoint-down(md) {
+    height: map-get($layout, header-height-sm);
+    margin-right: 0
+  }
+  & > svg {
+    margin-right: .8rem;
+    vertical-align: middle;
+    width: map-get($base, font-size-h4) * 1.6;
+    height: map-get($base, font-size-h4) * 1.6;
+    @include media-breakpoint-down(md) {
+      width: map-get($base, font-size-h4) * 1.2;
+      height: map-get($base, font-size-h4) * 1.2;
+    }
+  }
+  & > a {
+    display: inline-block;
+    font-size: map-get($base, font-size-h4);
+    @include flex(1);
+    @include media-breakpoint-down(md) {
+      font-size: map-get($base, font-size-h4-small);
+    }
+  }
+  & > .search-button {
+    display: none;
+    margin-left: map-get($spacers, 2);
+    @include media-breakpoint-down(md) {
+      @include flexbox();
+    }
+  }
+}
+
+.navigation {
+  @include overflow(auto);
+  & > ul {
+    margin: 0;
+    padding-bottom: 0;
+    @include media-breakpoint-down(md) {
+      margin: -4px 0 0 0;
+      padding-bottom: 4px;
+    }
+    height: map-get($layout, header-height);
+    @include menu(3, 2, nowrap);
+    @include align-items(center);
+    @include media-breakpoint-down(md) {
+      height: auto;
+    }
+    & > li {
+      &.active {
+        a {
+          @include link-colors($main-color-1, $main-color-1);
+        }
+        &::after {
           @include split-line(bottom, 4px, $main-color-1);
-          a {
-            @include link-colors($main-color-1, $main-color-1);
-          }
         }
       }
+      &::after {
+        content: '';
+        display: block;
+        @include split-line(bottom, 4px, transparent);
+        margin-bottom: -4px;
+      }
     }
-    @include media-breakpoint-down(md) {
-      float: none;
+    .search-button {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 }
