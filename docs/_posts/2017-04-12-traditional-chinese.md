@@ -3,7 +3,7 @@ title: TeXt - Traditional Chinese | 繁體中文
 key: 20170412
 tags:
   - TeXt
-  - Traditional Chinese | 繁
+  - 繁体中文
 lang: zh-Hant
 ---
 

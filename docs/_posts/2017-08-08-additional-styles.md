@@ -5,6 +5,7 @@ tags:
   - TeXt
   - English
 toc: true
+category: post
 ---
 
 Success!

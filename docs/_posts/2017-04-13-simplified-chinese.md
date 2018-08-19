@@ -3,7 +3,7 @@ title: TeXt - Simplified Chinese | 简体中文
 key: 20170413
 tags:
   - TeXt
-  - Simplified Chinese | 简
+  - 简体中文
 lang: zh-Hans
 ---
 

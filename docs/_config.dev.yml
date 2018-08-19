@@ -173,8 +173,10 @@ exclude:
   - /_posts
   - /index.html
 
-collections_dir: test
+collections_dir: docs
 collections:
+  docs:
+    output: true
   projects:
     output: true
 
@@ -185,12 +187,13 @@ defaults:
     values:
       layout: article
       license: true
+      category: post
       aside:
         toc: true
       show_edit_on_github: true
       pageview: true
   - scope:
-      path: "docs/en"
+      path: "_docs/en"
     values:
       layout: article
       sidebar:
@@ -200,7 +203,7 @@ defaults:
         toc: true
       show_edit_on_github: true
   - scope:
-      path: "docs/zh"
+      path: "_docs/zh"
     values:
       layout: article
       sidebar:
