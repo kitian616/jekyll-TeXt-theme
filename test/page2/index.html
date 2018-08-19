@@ -237,6 +237,9 @@
         toc: {
           selectors: 'h1,h2,h3'
         }
+      },
+      paths: {
+        search_js: '/jekyll-TeXt-theme/assets/search.js'
       }
     };
     window.TEXT_VARIABLES = TEXT_VARIABLES;
@@ -244,14 +247,14 @@
 </script></head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page clearfix">
+      <div class="layout--page clearfix js-page-root">
 <div class="page__main js-page-main">
 <div class="page__main-inner">
     <div></div>
 <div class="page__header">
 <header class="header">
   <div class="main clearfix">
-    <div class="logo">
+    <div class="logo clearfix">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewbox="0 0 24 24">
 <style type="text/css">
 	.st0{fill:#515151;}
@@ -259,20 +262,32 @@
 <path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
 	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"></path>
 </svg><a title="A customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
-" href="/jekyll-TeXt-theme/">TeXt Theme</a>
-</div>
-<nav>
+" href="/jekyll-TeXt-theme/">TeXt Theme</a><button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button>
+    </div>
+<nav class="navigation">
       <ul>
 <li><a href="/jekyll-TeXt-theme/test/">Home</a></li>
 <li><a href="/jekyll-TeXt-theme/docs/en/quick-start">Docs</a></li>
-<li><a href="/jekyll-TeXt-theme/docs/zh/quick-start">文档</a></li>
 <li><a href="/jekyll-TeXt-theme/archive.html">Archive</a></li>
 <li><a href="/jekyll-TeXt-theme/about.html">About</a></li>
 <li><a href="https://github.com/kitian616/jekyll-TeXt-theme">GitHub</a></li>
-</ul>
+<li><button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button></li>
+      </ul>
     </nav>
 </div>
 </header>
+<script>
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $searchButton = $('.js-search-button');
+    $searchButton.on('click', function() {
+      $pageRoot.toggleClass('show-search-panel');
+    });
+  });
+})();
+</script>
 </div>
 <div class="page__content"><div class="main">
 <div class="col-aside js-col-aside"></div>
@@ -281,15 +296,17 @@
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display: none;"><h1 itemprop="headline">Blog</h1></header><div class="article__info clearfix"><meta itemprop="author" content="TeXt"></div>
 <div class="js-article-content">
 <div class="layout--home">
-
-  <div class="post-list">
-<article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2017/04/03/english.html">TeXt - English</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
+<div class="items items--divided">
+<article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2017/04/03/english.html">TeXt - English</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
 <p>English is the default language of TeXt, if you set <code class="highlighter-rouge">lang</code> in <em>_config.yml</em> to the other language but want make the page English, just set <code class="highlighter-rouge">lang: en</code> in the front matter.</p>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2017/04/03/english.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2017/04/03/english.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -299,25 +316,30 @@
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="TeXt,English">
     </ul>
+    <meta itemprop="keywords" content="TeXt,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Apr 03, 2017</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Apr 03, 2017</span>
+          <meta itemprop="datePublished" content="2017-04-03T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20170403">0</span> views
           </li>
 </ul>
 </div>
-</article><article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html">Jekyll - Paragraphs</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
+</div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html">Jekyll - Paragraphs</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
 <p>Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.</p>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2016/10/10/paragraphs.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -327,20 +349,25 @@
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="Jekyll,English">
     </ul>
+    <meta itemprop="keywords" content="Jekyll,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Oct 10, 2016</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Oct 10, 2016</span>
+          <meta itemprop="datePublished" content="2016-10-10T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20161010">0</span> views
           </li>
 </ul>
 </div>
-</article><article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2016/09/19/headers.html">Jekyll - Headers</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
+</div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2016/09/19/headers.html">Jekyll - Headers</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
 <h1 id="text-theme-heading">TeXt Theme Heading</h1>
 
 <h2 id="text-theme-heading-1">TeXt Theme Heading</h2>
@@ -354,8 +381,8 @@
 <h6 id="text-theme-heading-5">TeXt Theme Heading</h6>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2016/09/19/headers.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2016/09/19/headers.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -365,20 +392,25 @@
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="Jekyll,English">
     </ul>
+    <meta itemprop="keywords" content="Jekyll,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Sep 19, 2016</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Sep 19, 2016</span>
+          <meta itemprop="datePublished" content="2016-09-19T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20160919">0</span> views
           </li>
 </ul>
 </div>
-</article><article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2016/09/09/emphasis.html">Jekyll - Emphasis</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
+</div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2016/09/09/emphasis.html">Jekyll - Emphasis</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
 <p><em>Should Old Acquaintance be forgot</em></p>
 
 <p><em>Should Old Acquaintance be forgot</em></p>
@@ -388,8 +420,8 @@
 <p><strong>Should Old Acquaintance be forgot</strong></p>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2016/09/09/emphasis.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2016/09/09/emphasis.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -399,25 +431,30 @@
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="Jekyll,English">
     </ul>
+    <meta itemprop="keywords" content="Jekyll,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Sep 09, 2016</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Sep 09, 2016</span>
+          <meta itemprop="datePublished" content="2016-09-09T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20160909">0</span> views
           </li>
 </ul>
 </div>
-</article><article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2016/09/01/links.html">Jekyll - Links</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
+</div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2016/09/01/links.html">Jekyll - Links</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
 <p><a href="https://tianqi.name">Qi’s Site</a></p>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2016/09/01/links.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2016/09/01/links.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -427,27 +464,32 @@
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="Jekyll,English">
     </ul>
+    <meta itemprop="keywords" content="Jekyll,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Sep 01, 2016</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Sep 01, 2016</span>
+          <meta itemprop="datePublished" content="2016-09-01T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20160901">0</span> views
           </li>
 </ul>
 </div>
-</article><article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2016/07/07/images.html">Jekyll - Images</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
-<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/test/assets/images/lenna.jpg" alt=""></p>
+</div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2016/07/07/images.html">Jekyll - Images</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
+<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg" alt=""></p>
 
 <p>smile, smile, smile. <img class="emoji" title=":smile:" alt=":smile:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"></p>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2016/07/07/images.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2016/07/07/images.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -457,20 +499,25 @@
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="Jekyll,English">
     </ul>
+    <meta itemprop="keywords" content="Jekyll,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Jul 07, 2016</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Jul 07, 2016</span>
+          <meta itemprop="datePublished" content="2016-07-07T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20160707">0</span> views
           </li>
 </ul>
 </div>
-</article><article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2016/06/16/code-blocks.html">Jekyll - Code Blocks</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
+</div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2016/06/16/code-blocks.html">Jekyll - Code Blocks</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
 <h2 id="code-spans">Code Spans</h2>
 
 <p>Use <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> tags for this.</p>
@@ -480,8 +527,8 @@ And here is <code class="highlighter-rouge"> `some` </code> text (note the two s
 in the output!).</p>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2016/06/16/code-blocks.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2016/06/16/code-blocks.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -491,20 +538,25 @@ in the output!).</p>
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="Jekyll,English">
     </ul>
+    <meta itemprop="keywords" content="Jekyll,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Jun 16, 2016</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Jun 16, 2016</span>
+          <meta itemprop="datePublished" content="2016-06-16T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20160616">0</span> views
           </li>
 </ul>
 </div>
-</article><article itemscope itemtype="http://schema.org/BlogPosting"><header class="article__header"><h2 itemprop="headline"><a href="/jekyll-TeXt-theme/test/2016/06/10/tables.html">Jekyll - Tables</a></h2></header>
-        <div class="article__content" itemprop="description articleBody">
+</div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2016/06/10/tables.html">Jekyll - Tables</a></h2></header>
+          <div class="item__description">
+<div class="article__content" itemprop="description articleBody">
 <h2 id="align">Align</h2>
 
 <table>
@@ -561,8 +613,8 @@ in the output!).</p>
 </table>
 
 </div>
-
-        <p class="post-list__readmore"><a href="/jekyll-TeXt-theme/test/2016/06/10/tables.html">Read more</a></p>
+<p><a href="/jekyll-TeXt-theme/post/2016/06/10/tables.html">Read more</a></p>
+          </div>
 <div class="article__info clearfix">
 <meta itemprop="author" content="TeXt">
 <ul class="left-col menu">
@@ -572,19 +624,21 @@ in the output!).</p>
 <li>
           <a class="button button--secondary button--pill button--sm" href="/jekyll-TeXt-theme/archive.html?tag=English">English</a>
         </li>
-<meta itemprop="keywords" content="Jekyll,English">
     </ul>
+    <meta itemprop="keywords" content="Jekyll,English">
 <ul class="right-col menu">
 <li>
-<i class="far fa-calendar-alt"></i> <span itemprop="datePublished">Jun 10, 2016</span>
-</li>
+<i class="far fa-calendar-alt"></i> <span>Jun 10, 2016</span>
+          <meta itemprop="datePublished" content="2016-06-10T00:00:00+08:00">
+        </li>
 <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
             <link itemprop="interactionType" href="http://schema.org/WatchAction">
             <i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20160610">0</span> views
           </li>
 </ul>
 </div>
-</article>
+</div>
+      </article>
 </div>
 <nav class="pagination"><p>25 post articles, 4 pages.</p>
 
@@ -610,7 +664,6 @@ in the output!).</p>
 </ul>
   </nav>
 </div>
-
 <script>/*(function () {
 
 })();*/</script>
@@ -619,8 +672,128 @@ in the output!).</p>
 <section class="page__comments"></section></article>
           </div>
 </div></div>
+<div class="page__search-panel">
+<div class="search">
+  <div class="main">
+    <div class="search-bar">
+      <div class="search-box js-search-box">
+        <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
+        <input type="text" autofocus="autofocus">
+        <div class="search-box__icon-clear js-icon-clear">
+          <a><i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <button class="button button--secondary button--pill search__cancel js-search-button">
+        Cancle</button>
+    </div>
+    <div class="search-result js-search-result"></div>
+  </div>
+</div>
 
-      <div class="page__footer">
+<script>var SOURCES = window.TEXT_VARIABLES.sources;
+var PAHTS = window.TEXT_VARIABLES.paths;
+window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
+  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
+
+  function memorize(f) {
+    var cache = {};
+    return function () {
+      var key = Array.prototype.join.call(arguments, ',');
+      if (key in cache) return cache[key];
+      else return cache[key] = f.apply(this, arguments);
+    };
+  }
+
+  function initData(data) {
+    var _data = [], i, j, key, keys, cur;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i], _data[key] = [];
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        cur.title = window.decodeUrl(cur.title);
+        cur.url = window.decodeUrl(cur.url);
+        _data[key].push(cur);
+      }
+    }
+    return _data;
+  }
+
+  /// search
+  function searchByQuery(query) {
+    var i, j, key, keys, cur, _title, result = {};
+    keys = Object.keys(searchData);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      for (j = 0; j < searchData[key].length; j++) {
+        cur = searchData[key][j], _title = cur.title;
+        if ((result[key] === undefined || result[key] && result[key].length < 4 )
+          && _title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+          if (result[key] === undefined) {
+            result[key] = [];
+          }
+          result[key].push(cur);
+        }
+      }
+    }
+    return result;
+  }
+
+  var renderHeader = memorize(function(header) {
+    return $('<p class="search-result__header">' + header + '</p>');
+  });
+
+  var renderItem = memorize(function(key, title, url) {
+    return $('<li class="search-result__item"><a href="' + url + '">' + title + '</a></li>');
+  });
+
+  function render(data) {
+    if (!data) {
+      return null;
+    }
+    var $root = $('<ul></ul>'),  i, j, key, keys, cur;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      $root.append(renderHeader(key));
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        $root.append(renderItem(cur.key, cur.title, cur.url));
+      }
+    }
+    return $root;
+  }
+
+  // search box
+  var $searchBox = $('.js-search-box');
+  var $searchInput = $searchBox.children('input');
+  var $searchClear = $searchBox.children('.js-icon-clear');
+  var $result = $('.js-search-result');
+
+  function searchBoxEmpty() {
+    $searchBox.removeClass('not-empty'); $result.html(null);
+  }
+
+  $searchInput.on('input', window.throttle(function() {
+    var val = $(this).val();
+    if (val === '' || typeof val !== 'string') {
+      searchBoxEmpty();
+    } else {
+      $searchBox.addClass('not-empty'); $result.html(render(searchByQuery(val)));
+    }
+  }, 400));
+  $searchInput.on('focus', function() {
+    $(this).addClass('focus');
+  });
+  $searchInput.on('blur', function() {
+    $(this).removeClass('focus');
+  });
+  $searchClear.on('click', function() {
+    $searchInput.val(''); searchBoxEmpty();
+  });
+});</script>
+</div>
+<div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main">
 <aside itemscope itemtype="http://schema.org/Organization">
@@ -687,7 +860,6 @@ in the output!).</p>
   </div>
 </div>
 </div>
-
     </div>
   </div>
 </div>

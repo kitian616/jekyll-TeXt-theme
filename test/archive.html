@@ -237,6 +237,9 @@
         toc: {
           selectors: 'h1,h2,h3'
         }
+      },
+      paths: {
+        search_js: '/jekyll-TeXt-theme/assets/search.js'
       }
     };
     window.TEXT_VARIABLES = TEXT_VARIABLES;
@@ -244,10 +247,10 @@
 </script></head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page clearfix"><div class="page__main js-page-main"><div class="page__main-inner">
+      <div class="layout--page clearfix js-page-root"><div class="page__main js-page-main"><div class="page__main-inner">
     <div></div><div class="page__header"><header class="header">
   <div class="main clearfix">
-    <div class="logo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <div class="logo clearfix"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
 <style type="text/css">
 	.st0{fill:#515151;}
@@ -255,86 +258,143 @@
 <path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
 	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
 </svg><a title="A customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
-" href="/jekyll-TeXt-theme/">TeXt Theme</a></div><nav>
-      <ul><li><a href="/jekyll-TeXt-theme/test/">Home</a></li><li><a href="/jekyll-TeXt-theme/docs/en/quick-start">Docs</a></li><li><a href="/jekyll-TeXt-theme/docs/zh/quick-start">文档</a></li><li><a href="/jekyll-TeXt-theme/archive.html">Archive</a></li><li><a href="/jekyll-TeXt-theme/about.html">About</a></li><li><a href="https://github.com/kitian616/jekyll-TeXt-theme">GitHub</a></li></ul>
+" href="/jekyll-TeXt-theme/">TeXt Theme</a><button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button>
+    </div><nav class="navigation">
+      <ul><li><a href="/jekyll-TeXt-theme/test/">Home</a></li><li><a href="/jekyll-TeXt-theme/docs/en/quick-start">Docs</a></li><li><a href="/jekyll-TeXt-theme/archive.html">Archive</a></li><li><a href="/jekyll-TeXt-theme/about.html">About</a></li><li><a href="https://github.com/kitian616/jekyll-TeXt-theme">GitHub</a></li><li><button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button></li>
+      </ul>
     </nav></div>
 </header>
+<script>
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $searchButton = $('.js-search-button');
+    $searchButton.on('click', function() {
+      $pageRoot.toggleClass('show-search-panel');
+    });
+  });
+})();
+</script>
 </div><div class="page__content"><div class ="main"><div class="col-aside js-col-aside"></div>
 
           <div class="col-main"><article itemscope itemtype="http://schema.org/WebPage"><header style="display: none;"><h1 itemprop="headline">All Posts</h1></header><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/></div>
-<div class="js-article-content"><div class="layout--archive js-all">
-  <div class="search-box js-search-box">
-    <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
-    <input type="text" />
-    <div class="search-box__icon-clear js-icon-clear">
-      <div class="button button--secondary button--circle button--sm"><i class="fas fa-times"></i></div>
-    </div>
-  </div><div class="site-tags js-tags">
+<div class="js-article-content"><div class="layout--archive js-all"><div class="site-tags js-tags">
   <ul class="menu">
     <li>
-      <button type="button" class="button button--secondary button--pill tag-button js-article-tag js-tag-show-all" data-encode="">
+      <button type="button" class="button button--secondary button--pill tag-button tag-button--all" data-encode="">
         Show All<div class="tag-button__count">25</div>
       </button>
-    </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%23%24%25%5E">
+    </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%23%24%25%5E">
           <span>#$%^</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%26%2A%28%29">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%26%2A%28%29">
           <span>&*()</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%2C.%3C%3E">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%2C.%3C%3E">
           <span>,.<></span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="-%3D_%2B">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="-%3D_%2B">
           <span>-=_+</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%3F%2F%27%22">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%3F%2F%27%22">
           <span>?/'"</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-4 js-article-tag" data-encode="English">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-4" data-encode="English">
           <span>English</span><div class="tag-button__count">23</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-3 js-article-tag" data-encode="Jekyll">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-3" data-encode="Jekyll">
           <span>Jekyll</span><div class="tag-button__count">12</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="S+P+A+C+E">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="S+P+A+C+E">
           <span>S P A C E</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="Simplified+Chinese+%7C+%E7%AE%80">
-          <span>Simplified Chinese | 简</span><div class="tag-button__count">1</div>
+      </li><li><button type="button" class="button button--pill tag-button tag-button-2" data-encode="TeXt">
+          <span>TeXt</span><div class="tag-button__count">9</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-2 js-article-tag" data-encode="TeXt">
-          <span>TeXt</span><div class="tag-button__count">7</div>
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="Test">
+          <span>Test</span><div class="tag-button__count">4</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-2 js-article-tag" data-encode="Test">
-          <span>Test</span><div class="tag-button__count">6</div>
-        </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="Traditional+Chinese+%7C+%E7%B9%81">
-          <span>Traditional Chinese | 繁</span><div class="tag-button__count">1</div>
-        </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%5B%5D%7B%7D">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%5B%5D%7B%7D">
           <span>[]{}</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%5C%7C%3B%3A">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%5C%7C%3B%3A">
           <span>\|;:</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%7E%60%21%40">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%7E%60%21%40">
           <span>~`!@</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E">
           <span>®☃︎⌘✉︎</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86">
           <span>ÁÀÂÄÃĄÆ</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%CE%B1%CE%B2%CE%B3%CE%B4">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%CE%B1%CE%B2%CE%B3%CE%B4">
           <span>αβγδ</span><div class="tag-button__count">1</div>
         </button>
-      </li><li><button type="button" class="button button--pill tag-button tag-button-1 js-article-tag" data-encode="%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD">
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87">
+          <span>简体中文</span><div class="tag-button__count">1</div>
+        </button>
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%E7%B9%81%E4%BD%93%E4%B8%AD%E6%96%87">
+          <span>繁体中文</span><div class="tag-button__count">1</div>
+        </button>
+      </li><li><button type="button" class="button button--pill tag-button tag-button-1" data-encode="%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD">
           <span>😂🤣👻👽</span><div class="tag-button__count">1</div>
         </button>
       </li></ul>
 </div>
-<div class="js-result layout--archive__result"></div>
+<div class="js-result layout--archive__result d-none"><div class="items items--brief"><section><h2>2015</h2><ul><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Test,English">
+        <div class="item__content"><span class="item__meta">Jan 01</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2015/01/01/article-with-long-toc.html">Test - Article with Long TOC</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Test,English">
+        <div class="item__content"><span class="item__meta">Jan 03</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2015/01/03/article-with-lots-images.html">Test - Article with Lots of Images</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Test,English,S+P+A+C+E,%7E%60%21%40,%23%24%25%5E,%26%2A%28%29,-%3D_%2B,%5B%5D%7B%7D,%5C%7C%3B%3A,%2C.%3C%3E,%3F%2F%27%22,%CE%B1%CE%B2%CE%B3%CE%B4,%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86,%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E,%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD">
+        <div class="item__content"><span class="item__meta">Jan 06</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2015/01/06/punctuation-characters'.html">Test - ~`!@ #$%^ &*() -=_+ []{} \|;: ,.<> ?/'" αβγδ ÁÀÂÄÃĄÆ ®☃︎⌘✉︎ 😂🤣👻👽</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Test,English">
+        <div class="item__content"><span class="item__meta">Feb 02</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2015/02/02/very-long-title.html">Test - Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title</a></div>
+      </li></ul></section><section><h2>2016</h2><ul><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">May 02</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/05/02/horizontal-rules.html">Jekyll - Horizontal Rules</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">May 04</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/05/04/footnote.html">Jekyll - Footnote</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">May 05</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/05/05/definition.html">Jekyll - Definition</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">May 08</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Jun 06</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/06/06/lists.html">Jekyll - Lists</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Jun 10</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/06/10/tables.html">Jekyll - Tables</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Jun 16</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/06/16/code-blocks.html">Jekyll - Code Blocks</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Jul 07</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/07/07/images.html">Jekyll - Images</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Sep 01</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/09/01/links.html">Jekyll - Links</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Sep 09</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/09/09/emphasis.html">Jekyll - Emphasis</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Sep 19</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/09/19/headers.html">Jekyll - Headers</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll,English">
+        <div class="item__content"><span class="item__meta">Oct 10</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html">Jekyll - Paragraphs</a></div>
+      </li></ul></section><section><h2>2017</h2><ul><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,English">
+        <div class="item__content"><span class="item__meta">Apr 03</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/04/03/english.html">TeXt - English</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,%E7%B9%81%E4%BD%93%E4%B8%AD%E6%96%87">
+        <div class="item__content"><span class="item__meta">Apr 12</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/04/12/traditional-chinese.html">TeXt - Traditional Chinese | 繁體中文</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87">
+        <div class="item__content"><span class="item__meta">Apr 13</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/04/13/simplified-chinese.html">TeXt - Simplified Chinese | 简体中文</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,English">
+        <div class="item__content"><span class="item__meta">Apr 15</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/04/15/author.html">TeXt - Author</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,English">
+        <div class="item__content"><span class="item__meta">Apr 19</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/04/19/modify-date.html">TeXt - Modify Date</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,English">
+        <div class="item__content"><span class="item__meta">May 05</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/05/05/chart.html">TeXt - Chart</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,English">
+        <div class="item__content"><span class="item__meta">Jun 06</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/06/06/mermaid.html">TeXt - Mermaid</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,English">
+        <div class="item__content"><span class="item__meta">Jul 07</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">TeXt - MathJax</a></div>
+      </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt,English">
+        <div class="item__content"><span class="item__meta">Aug 08</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">TeXt - Additional Styles</a></div>
+      </li></div></div>
 </div>
 
 <script>(function() {
@@ -361,32 +421,6 @@
     return queryObj;
   }
 
-  function memorize(f) {
-    var cache = {};
-    return function () {
-      var key = Array.prototype.join.call(arguments, ',');
-      if (key in cache) return cache[key];
-      else return cache[key] = f.apply(this, arguments);
-    };
-  }
-
-  function initData(json) {
-    var _data = JSON.parse(json), i, j, cur, _tags;
-    Object.keys(_data).forEach(function(year) {
-      for (i = 0; i < _data[year].length; i++) {
-        cur = _data[year][i], _tags = cur.tags;
-        cur.title = window.decodeUrl(cur.title);
-        cur.url = window.decodeUrl(cur.url);
-        if (_tags && _tags.length > 0) {
-          for (j = 0; j < _tags.length; j++) {
-            _tags[j] = window.decodeUrl(_tags[j]);
-          }
-        }
-      }
-    });
-    return _data;
-  }
-
   var setUrlQuery = (function() {
     var baseUrl =  window.location.href.split('?')[0];
     return function(query) {
@@ -398,81 +432,28 @@
     };
   })();
 
-  var data = initData('{"2017":[{"key":"1","title":"TeXt+-+Additional+Styles","tags":["TeXt","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F08%2F08%2Fadditional-styles.html","date":"Aug 08"},{"key":"2","title":"TeXt+-+MathJax","tags":["TeXt","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F07%2F07%2Fmathjax.html","date":"Jul 07"},{"key":"3","title":"TeXt+-+Mermaid","tags":["TeXt","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F06%2F06%2Fmermaid.html","date":"Jun 06"},{"key":"4","title":"TeXt+-+Chart","tags":["TeXt","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F05%2F05%2Fchart.html","date":"May 05"},{"key":"5","title":"TeXt+-+Modify+Date","tags":["Test","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F04%2F19%2Fmodify-date.html","date":"Apr 19"},{"key":"6","title":"TeXt+-+Author","tags":["Test","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F04%2F15%2Fauthor.html","date":"Apr 15"},{"key":"7","title":"TeXt+-+Simplified+Chinese+%7C+%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87","tags":["TeXt","Simplified+Chinese+%7C+%E7%AE%80"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F04%2F13%2Fsimplified-chinese.html","date":"Apr 13"},{"key":"8","title":"TeXt+-+Traditional+Chinese+%7C+%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87","tags":["TeXt","Traditional+Chinese+%7C+%E7%B9%81"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F04%2F12%2Ftraditional-chinese.html","date":"Apr 12"},{"key":"9","title":"TeXt+-+English","tags":["TeXt","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2017%2F04%2F03%2Fenglish.html","date":"Apr 03"}],"2016":[{"key":"10","title":"Jekyll+-+Paragraphs","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F10%2F10%2Fparagraphs.html","date":"Oct 10"},{"key":"11","title":"Jekyll+-+Headers","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F09%2F19%2Fheaders.html","date":"Sep 19"},{"key":"12","title":"Jekyll+-+Emphasis","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F09%2F09%2Femphasis.html","date":"Sep 09"},{"key":"13","title":"Jekyll+-+Links","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F09%2F01%2Flinks.html","date":"Sep 01"},{"key":"14","title":"Jekyll+-+Images","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F07%2F07%2Fimages.html","date":"Jul 07"},{"key":"15","title":"Jekyll+-+Code+Blocks","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F06%2F16%2Fcode-blocks.html","date":"Jun 16"},{"key":"16","title":"Jekyll+-+Tables","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F06%2F10%2Ftables.html","date":"Jun 10"},{"key":"17","title":"Jekyll+-+Lists","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F06%2F06%2Flists.html","date":"Jun 06"},{"key":"18","title":"Jekyll+-+Blockquotes","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F05%2F08%2Fblockquotes.html","date":"May 08"},{"key":"19","title":"Jekyll+-+Definition","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F05%2F05%2Fdefinition.html","date":"May 05"},{"key":"20","title":"Jekyll+-+Footnote","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F05%2F04%2Ffootnote.html","date":"May 04"},{"key":"21","title":"Jekyll+-+Horizontal+Rules","tags":["Jekyll","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2016%2F05%2F02%2Fhorizontal-rules.html","date":"May 02"}],"2015":[{"key":"22","title":"Test+-+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Very+Extremely+Completely+Extraordinary+Long+Long+Long+Long+Title","tags":["Test","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2015%2F02%2F02%2Fvery-long-title.html","date":"Feb 02"},{"key":"23","title":"Test+-+%7E%60%21%40+%23%24%25%5E+%26%2A%28%29+-%3D_%2B+%5B%5D%7B%7D+%5C%7C%3B%3A+%2C.%3C%3E+%3F%2F%27%22+%CE%B1%CE%B2%CE%B3%CE%B4+%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86+%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E+%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD","tags":["Test","English","S+P+A+C+E","%7E%60%21%40","%23%24%25%5E","%26%2A%28%29","-%3D_%2B","%5B%5D%7B%7D","%5C%7C%3B%3A","%2C.%3C%3E","%3F%2F%27%22","%CE%B1%CE%B2%CE%B3%CE%B4","%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86","%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E","%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2015%2F01%2F06%2Fpunctuation-characters%27.html","date":"Jan 06"},{"key":"24","title":"Test+-+Article+with+Lots+of+Images","tags":["Test","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2015%2F01%2F03%2Farticle-with-lots-images.html","date":"Jan 03"},{"key":"25","title":"Test+-+Article+with+Long+TOC","tags":["Test","English"],"url":"%2Fjekyll-TeXt-theme%2Ftest%2F2015%2F01%2F01%2Farticle-with-long-toc.html","date":"Jan 01"}]}');
-
-  var searchByTag = memorize(function(tag) {
-    var i, j, cur, _tags, _tag, _data = {};
-    Object.keys(data).forEach(function(year) {
-      for (i = 0; i < data[year].length; i++) {
-        cur = data[year][i], _tags = cur.tags;
-        if (_tags && _tags.length > 0) {
-          for (j = 0; j < _tags.length; j++) {
-            _tag = _tags[j];
-            if (_tag === tag) {
-              if (!_data[year]) {
-                _data[year] = [];
-              }
-              _data[year].push(cur);
-              break;
-            }
-          }
-        }
-      }
-    });
-    return _data;
-  });
-
-  var searchByQuery = function(query) {
-    var i, cur, _title, _data = { _: [] };
-    Object.keys(data).forEach(function(year) {
-      for (i = 0; i < data[year].length; i++) {
-        cur = data[year][i], _title = cur.title;
-        if (_title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
-          _data._.push(cur);
-        }
-      }
-    });
-    return _data;
-  };
-
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $root = $('.js-all');
-    var $searchBox = $('.js-search-box');
-    var $searchInput = $searchBox.children('input');
-    var $searchClear = $searchBox.children('.js-icon-clear');
     var $tags = $('.js-tags');
-    var $articleTags = $('.js-article-tag');
-    var $tagShowAll = $('.js-tag-show-all');
+    var $articleTags = $tags.find('button');
+    var $tagShowAll = $tags.find('.tag-button--all');
     var $result = $('.js-result');
+    var $sections = $result.find('section');
+    var sectionArticles = [];
     var $lastFocusButton = null;
+    var sectionTopArticleIndex = [];
+    var hasInit = false;
 
-    function addClass(dom, className) {
-      dom.hasClass(className) || dom.addClass(className);
-    }
-    function removeClass(dom, className) {
-      dom.hasClass(className) && dom.removeClass(className);
-    }
+    $sections.each(function() {
+      sectionArticles.push($(this).find('.item'));
+    });
 
-    var renderHeading = memorize(function (year) {
-      return $('<h2 class="year">' + year + '</h2>');
-    });
-    var renderItem = memorize(function (key, title, date, url) {
-      return $('<li><span class="date">' + date + '</span><a class="link" href="' + url + '">' + title + '</a></li>');
-    });
-    function render(data) {
-      var $dom = $('<div></div>'), $section, $ul, i, cur;
-      Object.keys(data).sort(function(a, b) {
-        return b.localeCompare(a);
-      }).forEach(function(year) {
-        $section = $('<section></section>'), $ul = $('<ul></ul>');
-        (year === '_') || $section.append(renderHeading(year));
-        for (i = 0; i < data[year].length; i++) {
-          cur = data[year][i];
-          $ul.append(renderItem(cur.key, cur.title, cur.date, cur.url, cur.tags));
-        }
-        $dom.append($section.append($ul));
-      });
-      return $dom;
+    function init() {
+      var i, index = 0;
+      for (i = 0; i < $sections.length; i++) {
+        sectionTopArticleIndex.push(index);
+        index += $sections.eq(i).find('.item').length;
+      }
+      sectionTopArticleIndex.push(index);
     }
 
     function searchButtonsByTag(_tag/*raw tag*/) {
@@ -487,42 +468,49 @@
     }
     function buttonFocus(target) {
       if (target) {
-        addClass(target, 'focus');
-        $lastFocusButton && !$lastFocusButton.is(target) && removeClass($lastFocusButton, 'focus');
+        target.addClass('focus');
+        $lastFocusButton && !$lastFocusButton.is(target) && $lastFocusButton.removeClass('focus');
         $lastFocusButton = target;
       }
     }
 
-    function setIsSearch() {
-      addClass($root, 'search');
-    }
-    function setNotSearch() {
-      removeClass($root, 'search');
-    }
-    function setIsEmpty() {
-      removeClass($searchBox, 'not-empty');
-    }
-    function setNotEmpty() {
-      addClass($searchBox, 'not-empty');
-    }
-    function setSearchBoxVal(val) {
-      ($searchInput.val() === val) || $searchInput.val(val);
-    }
-    function clearSearchBox() {
-      setSearchBoxVal(''); queryInput('');
-    }
+    function tagSelect (tag/*raw tag*/, target) {
+      var result = {}, $articles;
+      var i, j, k, _tag;
 
-    function showAll() {
-      setNotSearch(); setIsEmpty(); buttonFocus($tagShowAll); setUrlQuery();
-      $result.html(render(data));
-    }
-    function tagSelect(tag/*decode tag*/, target) {
-      var _tag;
-      if (tag === '' || tag === undefined) {
-        showAll();
-      } else {
-        $result.html(render(searchByTag(tag)));
+      for (i = 0; i < sectionArticles.length; i++) {
+        $articles = sectionArticles[i];
+        for (j = 0; j < $articles.length; j++) {
+          if (tag === '' || tag === undefined) {
+            result[i] || (result[i] = {});
+            result[i][j] = true;
+          } else {
+            var tags = $articles.eq(j).data('tags').split(',');
+            for (k = 0; k < tags.length; k++) {
+              if (tags[k] === tag) {
+                result[i] || (result[i] = {});
+                result[i][j] = true; break;
+              }
+            }
+          }
+        }
       }
+
+      for (i = 0; i < sectionArticles.length; i++) {
+        result[i] && $sections.eq(i).removeClass('d-none');
+        result[i] || $sections.eq(i).addClass('d-none');
+        for (j = 0; j < sectionArticles[i].length; j++) {
+          if (result[i] && result[i][j]) {
+            sectionArticles[i].eq(j).removeClass('d-none');
+          } else {
+            sectionArticles[i].eq(j).addClass('d-none');
+          }
+        }
+      }
+
+      hasInit || ($result.removeClass('d-none'), hasInit = true);
+
+
       if (target) {
         buttonFocus(target);
         _tag = target.attr('data-encode');
@@ -531,56 +519,141 @@
         } else {
           setUrlQuery('?tag=' + _tag);
         }
-      }
-    }
-    function queryInput(query) {
-      if (query === '' || typeof query !== 'string') {
-        showAll();
       } else {
-        $result.html(render(searchByQuery(query))); setIsSearch(); setNotEmpty(); setUrlQuery('?q=' + query);
-
+        buttonFocus(searchButtonsByTag(tag));
       }
     }
 
-    (function() {
-      $articleTags.removeClass('inactive');
-      var query = queryString(), _tag = query.tag, _q = query.q;
-      if (_tag !== undefined) {
-        query.tag === undefined || (_tag = query.tag);
-        tagSelect(window.decodeUrl(_tag));
-        buttonFocus(searchButtonsByTag(_tag));
-      } else if (_q !== undefined) {
-        _q = window.decodeUrl(_q);
-        queryInput(_q); setSearchBoxVal(_q);
-      } else {
-        showAll();
-      }
-    })();
-
+    var query = queryString(), _tag = query.tag;
+    init(); tagSelect(_tag);
     $tags.on('click', 'button', function() {
-      tagSelect($(this).children('span').text(), $(this));
+      tagSelect($(this).data('encode'), $(this));
     });
 
-    $searchInput.on('input', window.throttle(function() {
-      queryInput($(this).val());
-    }, 400));
-    $searchInput.on('focus', function() {
-      addClass($(this), 'focus');
-    });
-    $searchInput.on('blur', function() {
-      removeClass($(this), 'focus');
-    });
-    $searchClear.on('click', function() {
-      clearSearchBox();
-    });
   });
 })();
 </script>
 
 </div><section class="page__comments"></section></article>
-          </div></div></div>
+          </div></div></div><div class="page__search-panel"><div class="search">
+  <div class="main">
+    <div class="search-bar">
+      <div class="search-box js-search-box">
+        <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
+        <input type="text" autofocus="autofocus"/>
+        <div class="search-box__icon-clear js-icon-clear">
+          <a><i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <button class="button button--secondary button--pill search__cancel js-search-button">
+        Cancle</button>
+    </div>
+    <div class="search-result js-search-result"></div>
+  </div>
+</div>
 
-      <div class="page__footer">
+<script>var SOURCES = window.TEXT_VARIABLES.sources;
+var PAHTS = window.TEXT_VARIABLES.paths;
+window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
+  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
+
+  function memorize(f) {
+    var cache = {};
+    return function () {
+      var key = Array.prototype.join.call(arguments, ',');
+      if (key in cache) return cache[key];
+      else return cache[key] = f.apply(this, arguments);
+    };
+  }
+
+  function initData(data) {
+    var _data = [], i, j, key, keys, cur;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i], _data[key] = [];
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        cur.title = window.decodeUrl(cur.title);
+        cur.url = window.decodeUrl(cur.url);
+        _data[key].push(cur);
+      }
+    }
+    return _data;
+  }
+
+  /// search
+  function searchByQuery(query) {
+    var i, j, key, keys, cur, _title, result = {};
+    keys = Object.keys(searchData);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      for (j = 0; j < searchData[key].length; j++) {
+        cur = searchData[key][j], _title = cur.title;
+        if ((result[key] === undefined || result[key] && result[key].length < 4 )
+          && _title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+          if (result[key] === undefined) {
+            result[key] = [];
+          }
+          result[key].push(cur);
+        }
+      }
+    }
+    return result;
+  }
+
+  var renderHeader = memorize(function(header) {
+    return $('<p class="search-result__header">' + header + '</p>');
+  });
+
+  var renderItem = memorize(function(key, title, url) {
+    return $('<li class="search-result__item"><a href="' + url + '">' + title + '</a></li>');
+  });
+
+  function render(data) {
+    if (!data) {
+      return null;
+    }
+    var $root = $('<ul></ul>'),  i, j, key, keys, cur;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      $root.append(renderHeader(key));
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        $root.append(renderItem(cur.key, cur.title, cur.url));
+      }
+    }
+    return $root;
+  }
+
+  // search box
+  var $searchBox = $('.js-search-box');
+  var $searchInput = $searchBox.children('input');
+  var $searchClear = $searchBox.children('.js-icon-clear');
+  var $result = $('.js-search-result');
+
+  function searchBoxEmpty() {
+    $searchBox.removeClass('not-empty'); $result.html(null);
+  }
+
+  $searchInput.on('input', window.throttle(function() {
+    var val = $(this).val();
+    if (val === '' || typeof val !== 'string') {
+      searchBoxEmpty();
+    } else {
+      $searchBox.addClass('not-empty'); $result.html(render(searchByQuery(val)));
+    }
+  }, 400));
+  $searchInput.on('focus', function() {
+    $(this).addClass('focus');
+  });
+  $searchInput.on('blur', function() {
+    $(this).removeClass('focus');
+  });
+  $searchClear.on('click', function() {
+    $searchInput.val(''); searchBoxEmpty();
+  });
+});</script></div><div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
@@ -632,7 +705,6 @@
     </footer>
   </div>
 </div></div>
-
     </div>
   </div>
 </div>
