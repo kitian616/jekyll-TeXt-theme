@@ -75,7 +75,7 @@
     $focus-bg-clr: $hover-bg-clr;
   }
 
-  @include plain {
+  @include plain() {
     color: $clr;
     @if $bg-clr {
       background-color: $bg-clr;
@@ -84,7 +84,7 @@
       fill: $clr;
     }
   }
-  @include hover {
+  @include hover() {
     color: $hover-clr;
     @if $hover-bg-clr {
       background-color: $hover-bg-clr;
@@ -93,7 +93,7 @@
       fill: $hover-clr;
     }
   }
-  @include active {
+  @include active() {
     color: $active-clr;
     @if $active-bg-clr {
       background-color: $active-bg-clr;
@@ -102,7 +102,7 @@
       fill: $active-clr;
     }
   }
-  @include focus {
+  @include focus() {
     color: $focus-clr;
     @if $focus-bg-clr{
       background-color: $focus-bg-clr;

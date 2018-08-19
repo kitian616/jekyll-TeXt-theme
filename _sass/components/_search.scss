@@ -70,6 +70,7 @@
   }
   .search-result__header {
     margin: map-get($base, vertical-space) * 2 0 map-get($base, vertical-space) 0;
+    color: $text-color-l;
     font-size: map-get($base, font-size-lg);
     font-weight: map-get($base, font-weight-bold);
     text-transform: uppercase;

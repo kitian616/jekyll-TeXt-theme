@@ -62,7 +62,6 @@ paths:
   home    : # home layout url, "/" (default)
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
-  search_json: # "/search.json" (default)
 
 
 ## => Post

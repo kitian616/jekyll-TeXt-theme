@@ -84,6 +84,11 @@ ul.toc {
 
 ul.toc--navigator {
   & > li {
+    @include active() {
+      a {
+        background-color: transparent;
+      }
+    }
     &.active {
       a {
         background-color: transparent;

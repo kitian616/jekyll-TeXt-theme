@@ -1,9 +1,8 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 
-{%- assign _paths_search_json = site.paths.search_json | default: site.data.variables.default.paths.search_json -%}
-{%- include snippets/get-nav-url.html path=_paths_search_json -%}
-{%- assign _paths_search_json = __return -%}
+{%- include snippets/get-nav-url.html path="/assets/search.js" -%}
+{%- assign _paths_search_js = __return -%}
 
 <script>
   (function() {
@@ -26,7 +25,7 @@
         }
       },
       paths: {
-        search_json: '{{ _paths_search_json }}'
+        search_js: '{{ _paths_search_js }}'
       }
     };
     window.TEXT_VARIABLES = TEXT_VARIABLES;

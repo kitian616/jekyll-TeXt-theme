@@ -1,6 +1,7 @@
 var SOURCES = window.TEXT_VARIABLES.sources;
-window.Lazyload.js(SOURCES.jquery, function() {
-  var searchData;
+var PAHTS = window.TEXT_VARIABLES.paths;
+window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
+  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
 
   function memorize(f) {
     var cache = {};
@@ -25,10 +26,6 @@ window.Lazyload.js(SOURCES.jquery, function() {
     }
     return _data;
   }
-
-  $.get(window.TEXT_VARIABLES.paths.search_json, function(data, status) {
-    searchData = initData(data);
-  });
 
   /// search
   function searchByQuery(query) {

@@ -63,7 +63,6 @@ paths:
   home    : /test/ # home layout url, "/" (default)
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
-  search_json: # "/search.json" (default)
 
 
 ## => Post
@@ -120,7 +119,7 @@ comments:
     clientSecret: # GitHub Application Client Secret
     repository  : # GitHub repo
     owner       : # GitHub repo owner
-    admin       : # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
 
