@@ -11,7 +11,7 @@ key: page-about
 
 Be a KITE person
 
-+ Knowledgable
++ Knowledgeable
 + Introspective
 + Thoughtful
 + Effective
