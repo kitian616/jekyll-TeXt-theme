@@ -13,10 +13,10 @@ Weekly report is usually used for task/project in an organization, the objective
     + Gain more organizational support for the task/project
 + For the reporter
     + To make sure daily/weekly work is aligned with the objectives of the project or helpful to accomplish the given task. 
-    + Demostrate individual achievement to the supervisor, which might be one factor in performance evaluation. Especially for junior members, it's a quick way to show his/her potential in the project.
-    + To ask for help if there are obstacles in acheiving the objectives.
+    + Demonstrate individual achievement to the supervisor, which might be one factor in performance evaluation. Especially for junior members, it's a quick way to show his/her potential in the project.
+    + To ask for help if there are obstacles in achieving the objectives.
 
-Daily report is similar to weekly report. In software development, [Stand-up meeting] is a well-known way although it doesn't require a written report.
+Daily report is similar to weekly report. In software development, Daily [Stand-up meeting] is a well-known way although it doesn't require a written report.
 
 
 # What Should Be Included in Weekly Report?
@@ -38,7 +38,7 @@ Describe objectives for the next reporting period.
 Tasks which can’t be finished as planned, or unexpected issues which block other tasks to achieve objectives. Please state the impact of the problems.
 
 
-Other sections can be added, like `Reminder` to someone or the milestone review. Remebmer to keep consistent accross the team/organization. 
+Other sections can be added, like `Reminder` to someone or the milestone review. Remember to keep consistent across the team/organization. 
 
 # Tips
 
@@ -83,7 +83,7 @@ The work in progress is `NOT recommended` to be included in weekly report.
 
 > Progress. Employee's `accomplishments`, `finished` items and `closed` tasks for the period ending.
 
-## Decomposite the Work
+## Decompose the Work
 
 Sometimes we may feel it's 'difficult' to write the progress/plan, for example, the progress and plan are very similar
 > 
@@ -93,7 +93,7 @@ Sometimes we may feel it's 'difficult' to write the progress/plan, for example, 
 
 A task which takes several weeks usually means the decomposition of task is not enough. [Work breakdown structure] can help organize the work into manageable sections. 
 
-In Agile, iteration with short period may drive us to decomposite our work more.
+In Agile, iteration with short period may drive us to decompose our work more.
 
 ## State the Impact of the Problems
 Tens of or hundreds of problems occur every week, depends on the size of the project/organization. A problem without stating its impact on the objectives might be regarded as low priority or even be ignored. 
