@@ -77,7 +77,7 @@ Or
 
 > [WIP] Write user manual
 
-The work in progress is `NOT recommended` to be included in weekly report.
+The work in progress is `NOT` recommended to be included in weekly report.
 
 [Progress,Plan,Problems] status reporting states that 
 
@@ -111,7 +111,7 @@ Notice: Weekly report is not intended for solving urgent cases. For above case, 
 
 ## Keep Concise
 
-Don't make the report too long. If we want to share findings/concrete results, we'd better book another meeting or attach in another document.
+Don't make the report too long. If we want to share findings/results, book another meeting or attach them in another document.
 
 ## Supervisor/Peers Need to Give Feedback
 
