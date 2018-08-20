@@ -96,10 +96,11 @@ layout: base
                       {%- else -%}
                         {%- assign _page_path = page.path -%}
                       {%- endif -%}
+                      {%- assign _github_path = site.repository | append: '/tree/' | append: site.repository_tree | append: '/' | append: _page_path | replace:'//','/' -%}
                       <span class="split-space">&nbsp;</span>
                       <a class="edit-on-github"
                         title="{{ _locale_post_on_github }}"
-                        href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ _page_path }}">
+                        href="https://github.com/{{ _github_path }}">
                         <i class="far fa-edit"></i></a>
                     {%- endif -%}
                   {%- endif -%}
