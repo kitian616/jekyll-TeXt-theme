@@ -13,7 +13,7 @@
 {%- if include.type == 'common' -%}
 <div class="items items--divided">
 {%- elsif include.type == 'brief' -%}
-<div class="items items--brief">
+<div class="items">
 {%- endif -%}
 
   {%- for _article in _sorted_list -%}
@@ -59,7 +59,7 @@
         {%- assign _currentdate = _article.date | date: '%Y' -%}
         {%- if _currentdate != _date -%}
           {%- unless forloop.first -%}</ul></section>{%- endunless -%}
-          <section><h2>{{ _currentdate }}</h2><ul>
+          <section><h2 class="article-list__group-header">{{ _currentdate }}</h2><ul>
           {%- assign _date = _currentdate -%}
         {%- endif -%}
       {%- endif -%}
