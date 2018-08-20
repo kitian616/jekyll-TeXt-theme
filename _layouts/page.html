@@ -86,11 +86,20 @@ layout: base
                   {%- endif-%}
                   {%- if _show_edit_on_github -%}
                     {%- if site.repository and site.repository_tree -%}
+                      {%- include snippets/is_collection.html page=page -%}
+                      {%- assign _is_page_collection = __return -%}
                       {%- include snippets/locale-to-string.html locale=site.data.locale.POST_ON_GITHUB -%}
+                      {%- assign _locale_post_on_github = __return -%}
+                      {%- if _is_page_collection -%}
+                        {%- include snippets/prepend-path.html path=page.path prepend_path=site.collections_dir -%}
+                        {%- assign _page_path = __return -%}
+                      {%- else -%}
+                        {%- assign _page_path = page.path -%}
+                      {%- endif -%}
                       <span class="split-space">&nbsp;</span>
                       <a class="edit-on-github"
-                        title="{{ __return }}"
-                        href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ page.path }}">
+                        title="{{ _locale_post_on_github }}"
+                        href="https://github.com/{{ site.repository }}/tree/{{ site.repository_tree }}/{{ _page_path }}">
                         <i class="far fa-edit"></i></a>
                     {%- endif -%}
                   {%- endif -%}
