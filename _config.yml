@@ -177,8 +177,9 @@ defaults:
       license: true
       aside:
         toc: true
-      show_edit_on_github: true
+      show_edit_on_github: false
       pageview: true
+      comment: true
 
 
 ## => Plugins
