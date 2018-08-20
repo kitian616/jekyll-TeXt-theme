@@ -3,11 +3,10 @@
  */
 
 .footer {
-  @include flexbox;
-  @include align-items(center);
   background: $footer-background;
   height: map-get($layout, footer-height);
   .author-links {
+    @include overflow(auto);
     padding-top: 1rem;
   }
   p {
