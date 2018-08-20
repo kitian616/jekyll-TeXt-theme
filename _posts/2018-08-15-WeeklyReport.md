@@ -1,6 +1,6 @@
 ---
 title: "Weekly Report"
-date: 2018-08-16 16:18:32 +0800
+date: 2018-08-15 16:18:32 +0800
 tags: Report Progress Objective
 ---
 
