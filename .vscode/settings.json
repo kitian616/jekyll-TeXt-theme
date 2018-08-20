@@ -5,6 +5,12 @@
   },
   "files.associations": {
     "*.html": "jekyll"
-  }
+  },
+  "spellright.language": "en",
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
 }
 
