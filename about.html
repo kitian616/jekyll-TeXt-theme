@@ -541,11 +541,11 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   $(document).keyup(function(e){
     // 83 'S', 191 '/'
     if (e.which === 83 || e.which === 191) {
-      openSearchPanel();
+      showSearch = true; openSearchPanel();
     }
     // 27 ESC
     if (e.which ===  27) {
-      closeSearchPanel();
+      showSearch = false; closeSearchPanel();
     }
   });
 
