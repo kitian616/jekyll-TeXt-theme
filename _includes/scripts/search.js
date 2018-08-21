@@ -99,4 +99,37 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   $searchClear.on('click', function() {
     $searchInput.val(''); searchBoxEmpty();
   });
+
+  // search panel
+  var $pageRoot = $('.js-page-root');
+  var $searchToggle = $('.js-search-toggle');
+  var showSearch = false;
+
+  function closeSearchPanel() {
+    $pageRoot.removeClass('show-search-panel');
+    $searchInput[0].blur();
+    setTimeout(function() {
+      $searchInput.val(''); searchBoxEmpty();
+    }, 400);
+  }
+  function openSearchPanel() {
+    $pageRoot.addClass('show-search-panel');
+    $searchInput[0].focus();
+  }
+
+  $(document).keyup(function(e){
+    // 83 'S', 191 '/'
+    if (e.which === 83 || e.which === 191) {
+      showSearch = true; openSearchPanel();
+    }
+    // 27 ESC
+    if (e.which ===  27) {
+      showSearch = false; closeSearchPanel();
+    }
+  });
+
+  $searchToggle.on('click', function() {
+    showSearch = !showSearch;
+    showSearch ? openSearchPanel() : closeSearchPanel();
+  });
 });

@@ -1,13 +1,15 @@
 <header class="header">
-  <div class="main clearfix">
-    <div class="logo clearfix">
-      {%- include svg/logo.svg -%}
-      {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
-      {%- include snippets/get-nav-url.html path=_paths_root -%}
-      {%- if site.title -%}
-        <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
-      {%- endif -%}
-      <button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button>
+  <div class="main">
+    <div class="header__main">
+      <div class="logo">
+        {%- include svg/logo.svg -%}
+        {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
+        {%- include snippets/get-nav-url.html path=_paths_root -%}
+        {%- if site.title -%}
+          <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
+        {%- endif -%}
+      </div>
+      <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
     </div>
     {%- if site.data.navigation.header -%}
     <nav class="navigation">
@@ -24,21 +26,9 @@
             <li><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
           {%- endif -%}
         {%- endfor -%}
-        <li><button class="button button--secondary button--circle search-button js-search-button"><i class="fas fa-search"></i></button></li>
+        <li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>
       </ul>
     </nav>
     {%- endif -%}
   </div>
 </header>
-<script>
-(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $pageRoot = $('.js-page-root');
-    var $searchButton = $('.js-search-button');
-    $searchButton.on('click', function() {
-      $pageRoot.toggleClass('show-search-panel');
-    });
-  });
-})();
-</script>

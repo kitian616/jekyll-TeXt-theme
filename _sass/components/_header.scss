@@ -13,7 +13,7 @@
   }
 }
 
-.logo {
+.header__main {
   @include menu(3, 0);
   @include align-items(center);
   @include flex-wrap(nowrap);
@@ -25,6 +25,19 @@
     height: map-get($layout, header-height-sm);
     margin-right: 0
   }
+  & > .logo {
+    @include flex(1);
+  }
+  & > .search-button {
+    display: none;
+    margin-left: map-get($spacers, 2);
+    @include media-breakpoint-down(md) {
+      @include flexbox();
+    }
+  }
+}
+
+.logo {
   & > svg {
     margin-right: .8rem;
     vertical-align: middle;
@@ -38,16 +51,8 @@
   & > a {
     display: inline-block;
     font-size: map-get($base, font-size-h4);
-    @include flex(1);
     @include media-breakpoint-down(md) {
       font-size: map-get($base, font-size-h4-small);
-    }
-  }
-  & > .search-button {
-    display: none;
-    margin-left: map-get($spacers, 2);
-    @include media-breakpoint-down(md) {
-      @include flexbox();
     }
   }
 }
