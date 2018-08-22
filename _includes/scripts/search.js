@@ -110,6 +110,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     $searchInput[0].blur();
     setTimeout(function() {
       $searchInput.val(''); searchBoxEmpty();
+      window.pageAsideAffix && window.pageAsideAffix.refresh();
     }, 400);
   }
   function openSearchPanel() {
@@ -117,14 +118,21 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     $searchInput[0].focus();
   }
 
-  $(document).keyup(function(e){
-    // 83 'S', 191 '/'
-    if (e.which === 83 || e.which === 191) {
-      showSearch = true; openSearchPanel();
-    }
-    // 27 ESC
-    if (e.which ===  27) {
-      showSearch = false; closeSearchPanel();
+  function filter(event) {
+    var tagName = event.target.tagName || event.srcElement.tagName;
+    return !(tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA');
+  }
+
+  $(document).on('keyup', function(e) {
+    if (filter(e)) {
+      // 83 'S', 191 '/'
+      if (e.which === 83 || e.which === 191) {
+        showSearch = true; openSearchPanel();
+      }
+      // 27 ESC
+      if (e.which ===  27) {
+        showSearch = false; closeSearchPanel();
+      }
     }
   });
 
