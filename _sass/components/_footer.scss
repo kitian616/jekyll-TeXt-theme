@@ -3,11 +3,20 @@
  */
 
 .footer {
+  @include flexbox();
+  @include align-items(center);
   background: $footer-background;
   height: map-get($layout, footer-height);
+  & > .main {
+    max-width: 100%;
+  }
   .author-links {
     @include overflow(auto);
     padding-top: 1rem;
+    text-align: center;
+    & > .menu {
+      @include inline-flex();
+    }
   }
   p {
     color: $footer-text-color;
@@ -16,6 +25,9 @@
     @include link-colors ($footer-text-color, $main-color-1);
   }
   .site-info {
+    text-align: center;
+    font-size: map-get($base, font-size-xs);
+    margin: 1rem auto 0 auto;
     .menu {
       line-height: map-get($base, line-height-xs);
       & > * {
@@ -26,8 +38,5 @@
         }
       }
     }
-    text-align: center;
-    font-size: map-get($base, font-size-xs);
-    margin: 1rem auto 0 auto;
   }
 }

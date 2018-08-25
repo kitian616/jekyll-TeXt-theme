@@ -50,6 +50,10 @@
   }
 }
 
+.menu--inline {
+  @include inline-flex();
+}
+
 .menu--center {
   @include justify-content(center);
 }
