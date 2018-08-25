@@ -10,7 +10,7 @@ titles:
 <div class="layout--archive js-all">
   {%- include tags.html -%}
   <div class="js-result layout--archive__result d-none">
-    {%- include article-list.html articles=site.posts type='brief' group_by='year' -%}
+    {%- include article-list.html articles=site.posts type='brief' reverse=true group_by='year' -%}
   </div>
 </div>
 

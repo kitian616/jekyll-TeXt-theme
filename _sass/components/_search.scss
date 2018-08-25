@@ -70,9 +70,14 @@
 }
 .search-result__item {
   list-style-type: none;
-  margin: map-get($base, vertical-space) 0 0 map-get($spacers, 3);
   a {
-    @include link-colors($text-color);
+    padding: .4rem 1rem;
+    @include clickable($text-color, transparent, $text-color-3, $main-color-3);
+  }
+  &.active {
+    a {
+      background-color: $main-color-3;
+    }
   }
 }
 .search__header {
