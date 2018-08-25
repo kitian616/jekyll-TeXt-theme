@@ -311,7 +311,9 @@
     });
   }, 600);
 </script></div><section class="page__comments"></section></article>
-          </div></div><div class="page__footer">
+          </div></div>
+
+      <div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
@@ -364,8 +366,7 @@
   </div>
 </div></div>
     </div>
-  </div>
-</div>
+  </div></div>
 
 
 <script>(function() {
@@ -399,7 +400,6 @@
       $scroller = $(scroller);
       isOverallScroller = window.isOverallScroller($scrollTarget[0]);
       $scroll = $(scroll);
-      calc(true);
     }
     function initData() {
       top();
@@ -486,7 +486,10 @@
         init();
       }, 200));
       return {
-        setOptions: setOptions
+        setOptions: setOptions,
+        refresh: function() {
+          calc(true); setState();
+        }
       };
     }
     $.fn.affix = affix;
@@ -507,7 +510,6 @@
       $headings = $(container).find(selectors);
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
-      calc();
     }
     function calc() {
       headingsPos = [];
@@ -595,7 +597,6 @@
         setOptions: setOptions
       };
     }
-    toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
 })();/*(function () {
