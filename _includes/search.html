@@ -1,9 +1,11 @@
 {%- include snippets/locale-to-string.html locale=site.data.locale.CANCEL -%}
 {%- assign _locale_cancel = __return -%}
+{%- include snippets/locale-to-string.html locale=site.data.locale.SEARCH -%}
+{%- assign _locale_search = __return -%}
 
 <div class="search">
   <div class="main">
-    <div class="search__header">Search</div>
+    <div class="search__header">{{ _locale_search }}</div>
     <div class="search-bar">
       <div class="search-box js-search-box">
         <div class="search-box__icon-search"><i class="fas fa-search"></i></div>

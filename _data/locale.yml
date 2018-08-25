@@ -21,6 +21,12 @@ READMORE:
   zh-Hans: "阅读更多"
   zh-Hant: "閱讀更多"
 
+SEARCH:
+  en:      "Search"
+  zh:      "搜索"
+  zh-Hans: "搜索"
+  zh-Hant: "搜索"
+
 CANCEL:
   en:      "Cancel"
   zh:      "取消"
