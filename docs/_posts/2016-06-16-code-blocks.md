@@ -14,6 +14,10 @@ Here is a literal `` ` `` backtick.
 And here is ``  `some`  `` text (note the two spaces so that one is left
 in the output!).
 
+```javascript
+(() => console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();
+```
+
 <!--more-->
 
 **markdown:**
