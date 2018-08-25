@@ -32,7 +32,7 @@
     }
   }
 
-  .page__content, .page__search-panel {
+  .page__content {
     margin: 0 auto;
     padding-bottom: map-get($layout, footer-height);
   }
@@ -59,7 +59,7 @@
     left: 1rem;
     bottom: 1rem;
     display: none;
-    z-index: 996;
+    z-index: map-get($z-index, actions);
   }
 
   .sidebar-button {
@@ -73,7 +73,7 @@
     float: left;
     height: 100%;
     background-color: $background-color;
-    z-index: 998;
+    z-index: map-get($z-index, sidebar);
     @include split-line(right);
     @include transition(transform .4s);
     @include overflow(auto);
@@ -89,7 +89,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 997;
+    z-index: map-get($z-index, mask);
     display: none;
     cursor: pointer;
   }
@@ -118,10 +118,9 @@
         width: map-get($layout, aside-width);
         position: relative;
         display: block;
-        &>aside {
+        & > aside {
           &.fixed {
             position: fixed;
-            z-index: 2;
             -webkit-font-smoothing: subpixel-antialiased;
           }
         }
@@ -156,10 +155,18 @@
   }
   .page__search-panel {
     display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: map-get($z-index, search);
+    background-color: $background-color;
+    @include overflow(auto);
   }
   &.show-search-panel {
-    .page__content {
-      display: none;
+    .page__main {
+      @include overflow(hidden);
     }
     .page__search-panel {
       display: block;

@@ -124,12 +124,12 @@ layout: base
       {%- endif -%}
       </div>
 
-      {%- if _show_header -%}
-        <div class="page__search-panel">{%- include search.html -%}</div>
-      {%- endif -%}
       <div class="page__footer">{%- include footer.html -%}</div>
     </div>
   </div>
+  {%- if _show_header -%}
+    <div class="page__search-panel">{%- include search.html -%}</div>
+  {%- endif -%}
 </div>
 
 

@@ -20,5 +20,7 @@
         disabled: tocDisabled
       });
     }, 100));
+
+    window.pageAsideAffix = affix;
   });
 })();

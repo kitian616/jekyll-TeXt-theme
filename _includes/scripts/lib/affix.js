@@ -17,7 +17,6 @@
       $scroller = $(scroller);
       isOverallScroller = window.isOverallScroller($scrollTarget[0]);
       $scroll = $(scroll);
-      calc(true);
     }
     function initData() {
       top();
@@ -104,7 +103,10 @@
         init();
       }, 200));
       return {
-        setOptions: setOptions
+        setOptions: setOptions,
+        refresh: function() {
+          calc(true); setState();
+        }
       };
     }
     $.fn.affix = affix;

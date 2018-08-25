@@ -14,7 +14,6 @@
       $headings = $(container).find(selectors);
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
-      calc();
     }
     function calc() {
       headingsPos = [];
@@ -102,7 +101,6 @@
         setOptions: setOptions
       };
     }
-    toc.setOptions = setOptions;
     $.fn.toc = toc;
   });
 })();

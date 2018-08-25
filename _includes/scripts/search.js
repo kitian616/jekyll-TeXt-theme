@@ -118,18 +118,20 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     $searchInput[0].focus();
   }
 
+  // Char Code
+  // 27  ESC
+  // 83  'S'
+  // 191 '/'
   function filter(event) {
     var tagName = event.target.tagName || event.srcElement.tagName;
     return !(tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA');
   }
 
   $(document).on('keyup', function(e) {
-    if (filter(e)) {
-      // 83 'S', 191 '/'
+    if (filter(e) || e.which === 27) {
       if (e.which === 83 || e.which === 191) {
         showSearch = true; openSearchPanel();
       }
-      // 27 ESC
       if (e.which ===  27) {
         showSearch = false; closeSearchPanel();
       }
