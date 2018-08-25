@@ -278,8 +278,8 @@
                       <a class="edit-on-github"
                         title="Edit on Github"
                         href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/2.2-navigation.md">
-                        <i class="far fa-edit"></i></a></div><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Aug 25, 2018</span>
-          <meta itemprop="datePublished" content="2018-08-25T22:55:08+08:00">
+                        <i class="far fa-edit"></i></a></div><div class="article__info clearfix"><meta itemprop="author" content="TeXt"/><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Aug 26, 2018</span>
+          <meta itemprop="datePublished" content="2018-08-26T01:37:57+08:00">
         </li></ul></div>
 <div class="js-article-content"><div class="layout--article">
 
@@ -342,7 +342,7 @@
 </code></pre></div></div>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-08-25T22:55:08+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-08-26T01:37:57+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -513,22 +513,22 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     return $('<p class="search-result__header">' + header + '</p>');
   });
 
-  var renderItem = memorize(function(key, title, url) {
-    return $('<li class="search-result__item"><a href="' + url + '">' + title + '</a></li>');
-  });
+  var renderItem = function(index, title, url) {
+    return $('<li class="search-result__item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
+  };
 
   function render(data) {
     if (!data) {
       return null;
     }
-    var $root = $('<ul></ul>'),  i, j, key, keys, cur;
+    var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
     keys = Object.keys(data);
     for (i = 0; i < keys.length; i++) {
       key = keys[i];
       $root.append(renderHeader(key));
       for (j = 0; j < data[key].length; j++) {
         cur = data[key][j];
-        $root.append(renderItem(cur.key, cur.title, cur.url));
+        $root.append(renderItem(itemIndex++, cur.title, cur.url));
       }
     }
     return $root;
@@ -538,10 +538,12 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   var $searchBox = $('.js-search-box');
   var $searchInput = $searchBox.children('input');
   var $searchClear = $searchBox.children('.js-icon-clear');
-  var $result = $('.js-search-result');
+  var $result = $('.js-search-result'), $resultItems;
+  var lastActiveIndex, activeIndex;
 
   function searchBoxEmpty() {
     $searchBox.removeClass('not-empty'); $result.html(null);
+    $resultItems = $('.search-result__item'); activeIndex = 0;
   }
 
   $searchInput.on('input', window.throttle(function() {
@@ -550,6 +552,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       searchBoxEmpty();
     } else {
       $searchBox.addClass('not-empty'); $result.html(render(searchByQuery(val)));
+      $resultItems = $('.search-result__item'); activeIndex = 0;
+      $resultItems.eq(0).addClass('active');
     }
   }, 400));
   $searchInput.on('focus', function() {
@@ -580,24 +584,52 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     $searchInput[0].focus();
   }
 
-  // Char Code
-  // 27  ESC
-  // 83  'S'
-  // 191 '/'
-  function filter(event) {
-    var tagName = event.target.tagName || event.srcElement.tagName;
-    return !(tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA');
+  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
+  function isFormElement(e) {
+    var tagName = e.target.tagName || e.srcElement.tagName;
+    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
+  }
+  function charCodeFilter(e) {
+    return e.target === $searchInput[0] && (e.which === 13 || e.which === 27 || e.which === 38 || e.which === 40);
+  }
+
+  function updateResultItems() {
+    lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
+    activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
+  }
+
+  function moveActiveIndex(direction) {
+    var itemsCount = $resultItems ? $resultItems.length : 0;
+    if (itemsCount > 1) {
+      lastActiveIndex = activeIndex;
+      if (direction === 'up') {
+        activeIndex = (activeIndex - 1 + itemsCount) % itemsCount;
+      } else if (direction === 'down') {
+        activeIndex = (activeIndex + 1 + itemsCount) % itemsCount;
+      }
+      updateResultItems();
+    }
   }
 
   $(document).on('keyup', function(e) {
-    if (filter(e) || e.which === 27) {
+    if (!isFormElement(e) || charCodeFilter(e)) {
       if (e.which === 83 || e.which === 191) {
-        showSearch = true; openSearchPanel();
-      }
-      if (e.which ===  27) {
-        showSearch = false; closeSearchPanel();
+        showSearch || (showSearch = true, openSearchPanel());
+      } else if (e.which ===  27) {
+        showSearch && (showSearch = false, closeSearchPanel());
+      } else if (e.which === 38) {
+        showSearch && moveActiveIndex('up');
+      } else if (e.which === 40) {
+        showSearch && moveActiveIndex('down');
+      } else if (e.which === 13) {
+        showSearch && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
       }
     }
+  });
+
+  $result.on('mouseover', '.search-result__item > a', function() {
+    var itemIndex = $(this).parent().data('index');
+    itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
   });
 
   $searchToggle.on('click', function() {
