@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.1.0 (2018-08-26)
+
+### Enhancements
+
+- Search panel (Click search icon in the header or press `s` or `/` key to search)
+- Npm social icon (@WangQiru)
+
+### Bug Fixes
+
+- Google analytics may not work, use gtag.js.
+
 ## 2.0.2 (2018-07-29)
 
 ### Enhancements
