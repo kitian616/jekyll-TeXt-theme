@@ -14,9 +14,9 @@
     }
   }
   .article__section-navigator {
-    word-wrap: break-word;
-    margin: map-get($spacers, 4) 0 map-get($spacers, 3) 0;
     padding-top: map-get($base, vertical-space-lg) / 2;
+    margin: map-get($spacers, 4) 0 map-get($spacers, 3) 0;
+    word-wrap: break-word;
     @include split-line(top, 4px);
     & > .previous, & > .next {
       width: 50%;

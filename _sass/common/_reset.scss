@@ -29,13 +29,13 @@ html {
 }
 
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 @include block-elements() {
-  margin: map-get($base, vertical-space) 0;
   padding: 0;
+  margin: map-get($base, vertical-space) 0;
 }
 
 body {
@@ -148,13 +148,13 @@ figcaption {
 }
 
 button {
-  font-size: 1rem;
-  cursor: pointer;
-  outline: none;
-  background-color: transparent;
   padding: 0;
   margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
   border-width: 0;
+  outline: none;
 }
 
 input {

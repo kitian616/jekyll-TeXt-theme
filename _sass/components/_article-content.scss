@@ -1,6 +1,6 @@
 .article__content {
-  word-wrap: break-word;
   line-height: map-get($base, line-height-lg);
+  word-wrap: break-word;
   @include block-elements() {
     margin: map-get($base, vertical-space-lg) 0;
   }
@@ -10,8 +10,8 @@
     & > .anchor {
       @include link-colors($border-color, $main-color-1);
       margin-left: .2rem;
-      visibility: hidden;
       text-decoration: none;
+      visibility: hidden;
       opacity: 0;
       & > i {
         font-size: map-get($base, font-size-sm);
@@ -19,9 +19,9 @@
     }
     @include hover() {
       & > .anchor {
+        cursor: pointer;
         visibility: visible;
         opacity: 1;
-        cursor: pointer;
       }
     }
   }
@@ -35,9 +35,9 @@
   }
   blockquote {
     padding-left: 1rem;
-    @include split-line(left, 4px, $border-color);
     font-size: map-get($base, font-size-sm);
     color: $text-color-l;
+    @include split-line(left, 4px, $border-color);
     p {
       margin: map-get($base, vertical-space) 0;
     }
@@ -51,18 +51,18 @@
   }
   .emoji {
     display: inline-block;
-    vertical-align: text-bottom;
     width: map-get($base, line-height-lg) * .7rem;
     height: map-get($base, line-height-lg) * .7rem;
+    vertical-align: text-bottom;
   }
   .footnotes {
     @include split-line();
     margin-top: map-get($base, vertical-space-lg) * 2;
   }
   code {
-    border-radius: map-get($base, border-radius);
     padding: .2rem .5rem;
     background-color: $text-background-color;
+    border-radius: map-get($base, border-radius);
     span {
       padding: 0;
       margin: 0;
@@ -72,8 +72,8 @@
     @include overflow(auto);
     & > code {
       padding: 0;
-      background-color: transparent;
       word-wrap: normal;
+      background-color: transparent;
       &.language-mermaid, &.language-chart {
         svg {
           width: 100%;
@@ -87,27 +87,27 @@
   }
   .highlighter-rouge > .highlight, figure.highlight {
     & > pre {
-      border-radius: map-get($base, border-radius);
       padding: 1rem 0 1rem 1rem;
       margin: 0;
       background-color: $text-background-color;
+      border-radius: map-get($base, border-radius);
       & > code {
         display: block;
       }
     }
   }
   figure.highlight {
-    &:before {
-      content: attr(data-lang);
+    &::before {
       display: block;
-      border-top-left-radius: map-get($base, border-radius);
-      border-top-right-radius: map-get($base, border-radius);
       padding: .5rem 1rem .5rem 0;
-      color: $decorate-color;
-      background-color: $text-background-color;
       font-weight: map-get($base, font-weight-bold);
+      color: $decorate-color;
       text-align: right;
       text-transform: uppercase;
+      content: attr(data-lang);
+      background-color: $text-background-color;
+      border-top-left-radius: map-get($base, border-radius);
+      border-top-right-radius: map-get($base, border-radius);
     }
     & > pre {
       padding-top: 0;
@@ -118,9 +118,9 @@
           width: auto;
           margin: 0 0 -1rem -1rem;
           tbody, tr, td {
-            border: none;
             padding-top: 0;
             padding-bottom: 0;
+            border: none;
           }
           & > tbody {
             @include flexbox;
@@ -138,10 +138,10 @@
               padding-left: 1rem;
             }
             & > pre {
-              border-radius: 0;
               display: block;
-              @include overflow(auto);
               margin: 0;
+              border-radius: 0;
+              @include overflow(auto);
               &.lineno {
                 color: $text-color-l;
                 @include user-select(none);
@@ -178,8 +178,8 @@
     }
   }
   ul.task-list {
-    list-style-type: none;
     margin-left: 0;
+    list-style-type: none;
     ul, ol {
       margin-left: 1.5rem;
     }
@@ -193,8 +193,8 @@
       background-color: $text-background-color;
     }
     th, td {
-      border: 1px solid $border-color-l;
       padding: .5rem;
+      border: 1px solid $border-color-l;
     }
     th {
       font-weight: map-get($base, font-weight-bold);

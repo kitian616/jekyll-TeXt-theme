@@ -1,9 +1,9 @@
 @mixin card($has-shadow: default) {
   @if $has-shadow == default {
-    $has-shadow: true
+    $has-shadow: true;
   }
-  border-radius: map-get($base, border-radius);
   padding: .5rem 1rem;
+  border-radius: map-get($base, border-radius);
   @if $has-shadow {
     @include box-shadow();
   }

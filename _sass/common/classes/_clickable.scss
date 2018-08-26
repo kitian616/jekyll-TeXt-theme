@@ -19,22 +19,22 @@
   // hover
   @if $hover-clr == default {
     @if $hover-bg-clr == null {
-      @if $theme == 'light' {
+      @if $theme == "light" {
         $hover-clr: darken($clr, 14%);
       }
-      @if $theme == 'dark' {
+      @if $theme == "dark" {
         $hover-clr: lighten($clr, 18%);
       }
     } @else if $hover-bg-clr == default {
-      $hover-clr: $clr
+      $hover-clr: $clr;
     }
   }
 
   @if $hover-bg-clr == default {
-    @if $theme == 'light' {
+    @if $theme == "light" {
       $hover-bg-clr: darken($bg-clr, 14%);
     }
-    @if $theme == 'dark' {
+    @if $theme == "dark" {
       $hover-bg-clr: lighten($bg-clr, 18%);
     }
   }
@@ -42,10 +42,10 @@
   // active
   @if $active-clr == default {
     @if $active-bg-clr == null {
-      @if $theme == 'light' {
+      @if $theme == "light" {
         $active-clr: darken($hover-clr, 15%);
       }
-      @if $theme == 'dark' {
+      @if $theme == "dark" {
         $active-clr: lighten($hover-clr, 16%);
       }
     } @else if $active-bg-clr == default {
@@ -54,10 +54,10 @@
   }
 
   @if $active-bg-clr == default {
-    @if $theme == 'light' {
+    @if $theme == "light" {
       $active-bg-clr: darken($hover-bg-clr, 15%);
     }
-    @if $theme == 'dark' {
+    @if $theme == "dark" {
       $active-bg-clr: lighten($hover-bg-clr, 16%);
     }
   }

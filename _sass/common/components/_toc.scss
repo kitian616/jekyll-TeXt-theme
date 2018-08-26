@@ -16,8 +16,8 @@ ul.toc {
   a {
     display: inline-block;
     padding: .2rem .8rem .2rem .8rem;
-    border-radius: map-get($base, border-radius);
     text-decoration: none !important;
+    border-radius: map-get($base, border-radius);
     @include clickable($text-color, null, $text-color-3, $main-color-3);
   }
 
@@ -91,11 +91,11 @@ ul.toc--navigator {
     }
     &.active {
       a {
+        margin-left: -4px;
         background-color: transparent;
         box-shadow: none;
         @include link-colors($main-color-1);
         @include split-line(left, 4px, $main-color-1);
-        margin-left: -4px;
       }
     }
   }

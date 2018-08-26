@@ -3,8 +3,8 @@ $grid-columns: 12;
 @mixin make-col($columns) {
   .col-#{$columns} {
     display: inline-block;
-    letter-spacing: normal;
     width: percentage($columns / $grid-columns);
+    letter-spacing: normal;
   }
 }
 
@@ -12,8 +12,8 @@ $grid-columns: 12;
   @include media-breakpoint-down(lg) {
     .col-md-#{$columns} {
       display: inline-block;
-      letter-spacing: normal;
       width: percentage($columns / $grid-columns);
+      letter-spacing: normal;
     }
   }
 }
@@ -22,8 +22,8 @@ $grid-columns: 12;
   @include media-breakpoint-down(md) {
     .col-sm-#{$columns} {
       display: inline-block;
-      letter-spacing: normal;
       width: percentage($columns / $grid-columns);
+      letter-spacing: normal;
     }
   }
 }

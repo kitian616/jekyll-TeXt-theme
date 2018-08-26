@@ -1,6 +1,6 @@
 @mixin animation($value) {
   -webkit-animation: $value;
-          animation: $value;
+  animation: $value;
 }
 
 @mixin keyframes($name) {

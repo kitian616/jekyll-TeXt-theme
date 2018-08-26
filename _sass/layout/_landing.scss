@@ -75,8 +75,8 @@
     .section__content {
       min-width: 400px;
       @include media-breakpoint-down(md) {
-        min-width: auto;
         width: 100%;
+        min-width: auto;
         padding: 0 map-get($spacers, 3);
       }
     }
@@ -86,18 +86,18 @@
   }
 
   .feature {
-    margin: map-get($spacers, 5);
     padding: map-get($spacers, 5);
     padding-bottom: 0;
+    margin: map-get($spacers, 5);
     @include media-breakpoint-down(lg) {
-      margin: map-get($spacers, 3);
       padding: map-get($spacers, 5) map-get($spacers, 3);
       padding-bottom: 0;
+      margin: map-get($spacers, 3);
     }
     @include media-breakpoint-down(md) {
-      margin: map-get($spacers, 2) 0;
       padding: map-get($spacers, 4) map-get($spacers, 3);
       padding-bottom: 0;
+      margin: map-get($spacers, 2) 0;
     }
   }
 }

@@ -7,20 +7,20 @@
   width: 100%;
   max-width: 22rem;
   @include media-breakpoint-down(md) {
-    max-width: none;
     width: 100%;
+    max-width: none;
   }
   & > input {
-    -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
     display: inline-block;
     width: 100%;
     height: $button-height-lg;
     padding: 0 1.8rem;
     margin: 0;
-    border: 2px solid $border-color;
-    border-radius: map-get($button, pill-radius);
     line-height: 1 !important;
     background-color: transparent;
+    border: 2px solid $border-color;
+    border-radius: map-get($button, pill-radius);
+    -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
     @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
     @include focus {
       box-shadow: 0 0 0 2px rgba($border-color, .4);
@@ -37,19 +37,19 @@
   }
   & > .search-box__icon-search, & > .search-box__icon-clear {
     position: absolute;
-    height: $button-height-lg;
     width: $button-height-lg;
+    height: $button-height-lg;
     line-height: $button-height-lg;
-    vertical-align: middle;
     text-align: center;
+    vertical-align: middle;
   }
   &.not-empty > .search-box__icon-clear {
     display: block;
   }
   & > .search-box__icon-clear {
-    display: none;
     top: 0;
     right: 0;
+    display: none;
   }
   & > .search-box__icon-search {
     top: 0;
@@ -58,14 +58,14 @@
 }
 .search-result {
   margin: map-get($base, vertical-space-lg) 0;
-  line-height: map-get($base, line-height-sm);
   font-size: map-get($base, font-size-sm);
+  line-height: map-get($base, line-height-sm);
 }
 .search-result__header {
   margin: map-get($base, vertical-space) * 2 0 map-get($base, vertical-space) 0;
-  color: $text-color-l;
   font-size: map-get($base, font-size-lg);
   font-weight: map-get($base, font-weight-bold);
+  color: $text-color-l;
   text-transform: uppercase;
 }
 .search-result__item {
@@ -83,9 +83,9 @@
 }
 .search__header {
   margin-top: 1.5rem;
-  color: $text-color-d;
   font-size: map-get($base, font-size-h1);
   font-weight: map-get($base, font-weight-bold);
+  color: $text-color-d;
   @include media-breakpoint-down(md) {
     display: none;
   }
@@ -93,5 +93,5 @@
 .search__cancel {
   margin-left: map-get($spacers, 2);
   font-weight: map-get($base, font-weight-bold);
-  white-space:nowrap;
+  white-space: nowrap;
 }

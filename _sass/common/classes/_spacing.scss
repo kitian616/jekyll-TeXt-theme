@@ -3,43 +3,43 @@
   $_type: null;
   $_dirs: null;
 
-  @if ($type == 'm') {
-    $_type: 'margin';
-  } @else if ($type == 'p') {
-    $_type: 'padding';
+  @if ($type == "m") {
+    $_type: "margin";
+  } @else if ($type == "p") {
+    $_type: "padding";
   }
 
-  @if ($direction == 't') {
-    $_dirs: ('top');
+  @if ($direction == "t") {
+    $_dirs: ("top");
   }
-  @else if ($direction == 'b') {
-    $_dirs: ('bottom');
+  @else if ($direction == "b") {
+    $_dirs: ("bottom");
   }
-  @else if ($direction == 'l') {
-    $_dirs: ('left');
+  @else if ($direction == "l") {
+    $_dirs: ("left");
   }
-  @else if ($direction == 'r') {
-    $_dirs: ('right');
+  @else if ($direction == "r") {
+    $_dirs: ("right");
   }
-  @else if ($direction == 'x') {
-    $_dirs: ('left', 'right');
+  @else if ($direction == "x") {
+    $_dirs: ("left", "right");
   }
-  @else if ($direction == 'y') {
-    $_dirs: ('top', 'bottom');
+  @else if ($direction == "y") {
+    $_dirs: ("top", "bottom");
   }
-  @else if ($direction == '') {
-    $_dirs: ('');
+  @else if ($direction == "") {
+    $_dirs: ("");
   }
 
   @each $dir in $_dirs {
-    @if ($spacer == 'auto') {
-      @if ($dir == '') {
+    @if ($spacer == "auto") {
+      @if ($dir == "") {
         #{$_type}: auto;
       } @else {
         #{$_type}-#{$dir}: auto;
       }
     } @else {
-      @if ($dir == '') {
+      @if ($dir == "") {
         #{$_type}: map-get($spacers, $spacer);
       } @else {
         #{$_type}-#{$dir}: map-get($spacers, $spacer);
@@ -49,8 +49,8 @@
 }
 
 
-$_types: ('m', 'p');
-$_directions: ('t', 'b', 'l', 'r', 'x', 'y', '');
+$_types: ("m", "p");
+$_directions: ("t", "b", "l", "r", "x", "y", "");
 $_spacers: (0, 1, 2, 3, 4, 5);
 
 @each $i in $_types {
@@ -65,6 +65,6 @@ $_spacers: (0, 1, 2, 3, 4, 5);
 
 @each $j in $_directions {
   .m#{$j}-auto {
-    @include make-spacing('m', $j, 'auto');
+    @include make-spacing("m", $j, "auto");
   }
 }

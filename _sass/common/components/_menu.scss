@@ -1,8 +1,8 @@
 @mixin menu-direction($direction: default) {
   @if $direction == default {
-    $direction: 'horizontal';
+    $direction: "horizontal";
   }
-  @if $direction == 'vertical' {
+  @if $direction == "vertical" {
     @include flex-direction(column);
   } @else {
     @include flex-direction(row);
@@ -28,8 +28,8 @@
       margin-top: map-get($spacers, $horizontal-item-vertical-spacer);
       margin-bottom: map-get($spacers, $horizontal-item-vertical-spacer);
     }
-    list-style-type: none;
     margin-right: map-get($spacers, $horizontal-spacer);
+    list-style-type: none;
     &:last-child {
       margin-right: 0;
     }
@@ -43,7 +43,7 @@
 }
 
 .menu--vertical {
-  @include menu-direction('vertical');
+  @include menu-direction("vertical");
   @include align-items(normal);
   & > li {
     margin-right: 0;

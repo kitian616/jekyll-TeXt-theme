@@ -1,11 +1,11 @@
 @mixin button() {
   display: inline-block;
-  outline: none;
   font-weight: map-get($button, font-weight);
   line-height: 1 !important;
-  cursor: pointer;
 
   text-decoration: none !important;
+  cursor: pointer;
+  outline: none;
   @include user-select(none);
   @include transition(map-get($button, transition));
   svg {
@@ -17,8 +17,8 @@
   }
   &.disabled,
   &:disabled {
-    cursor: not-allowed;
     color: rgba($text-color-3, .2) !important;
+    cursor: not-allowed;
     background-color: $main-color-3 !important;
     svg path {
       fill: rgba($text-color-3, .2) !important;
@@ -109,8 +109,8 @@
 }
 
 .button--md {
-  font-size: map-get($base, font-size);
   padding: map-get($button, padding-y) map-get($button, padding-x);
+  font-size: map-get($base, font-size);
   &.button--circle {
     width: map-get($button, circle-diameter);
     height: map-get($button, circle-diameter);
@@ -118,8 +118,8 @@
 }
 
 .button--xs {
-  font-size: map-get($base, font-size-xs);
   padding: map-get($button, padding-y-xs) map-get($button, padding-x-xs);
+  font-size: map-get($base, font-size-xs);
   &.button--circle {
     width: map-get($button, circle-diameter-xs);
     height: map-get($button, circle-diameter-xs);
@@ -127,8 +127,8 @@
 }
 
 .button--sm {
-  font-size: map-get($base, font-size-sm);
   padding: map-get($button, padding-y-sm) map-get($button, padding-x-sm);
+  font-size: map-get($base, font-size-sm);
   &.button--circle {
     width: map-get($button, circle-diameter-sm);
     height: map-get($button, circle-diameter-sm);
@@ -136,8 +136,8 @@
 }
 
 .button--lg {
-  font-size: map-get($base, font-size-lg);
   padding: map-get($button, padding-y-lg) map-get($button, padding-x-lg);
+  font-size: map-get($base, font-size-lg);
   &.button--circle {
     width: map-get($button, circle-diameter-lg);
     height: map-get($button, circle-diameter-lg);

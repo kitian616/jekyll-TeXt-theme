@@ -1,11 +1,11 @@
 @mixin horizontal-rules() {
   &::before {
-    content: '...';
+    display: block;
     font-size: map-get($base, font-size-h2);
     color: $text-color-l;
-    display: block;
-    letter-spacing: map-get($spacers, 4);
     text-align: center;
+    letter-spacing: map-get($spacers, 4);
+    content: "...";
   }
 }
 

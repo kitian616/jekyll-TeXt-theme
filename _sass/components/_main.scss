@@ -1,7 +1,7 @@
 .main {
-  margin: 0 auto;
-  padding: 0 2rem;
   max-width: map-get($layout, content-max-width);
+  padding: 0 2rem;
+  margin: 0 auto;
   @include media-breakpoint-down(lg) {
     padding: 0 1rem;
   }
@@ -19,7 +19,7 @@
 
 .full-width {
   .main {
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
   }
 }

@@ -3,10 +3,10 @@
   .tag-button {
     @include clickable($text-color-3, $main-color-3, default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
     & > .tag-button__count {
-      font-size: map-get($base, font-size-xs);
       display: inline-block;
-      line-height: 1;
       margin-left: .2rem;
+      font-size: map-get($base, font-size-xs);
+      line-height: 1;
       vertical-align: top;
     }
   }

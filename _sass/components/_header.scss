@@ -18,12 +18,12 @@
   @include align-items(center);
   @include flex-wrap(nowrap);
   @include flex(1);
-  white-space: nowrap;
   height: map-get($layout, header-height);
   margin-right: map-get($spacers, 3);
+  white-space: nowrap;
   @include media-breakpoint-down(md) {
     height: map-get($layout, header-height-sm);
-    margin-right: 0
+    margin-right: 0;
   }
   & > .logo {
     @include flex(1);
@@ -39,10 +39,10 @@
 
 .logo {
   & > svg {
-    margin-right: .8rem;
-    vertical-align: middle;
     width: map-get($base, font-size-h4) * 1.6;
     height: map-get($base, font-size-h4) * 1.6;
+    margin-right: .8rem;
+    vertical-align: middle;
     @include media-breakpoint-down(md) {
       width: map-get($base, font-size-h4) * 1.2;
       height: map-get($base, font-size-h4) * 1.2;
@@ -60,13 +60,13 @@
 .navigation {
   @include overflow(auto);
   & > ul {
-    margin: 0;
-    padding-bottom: 0;
-    @include media-breakpoint-down(md) {
-      margin: -4px 0 0 0;
-      padding-bottom: 4px;
-    }
     height: map-get($layout, header-height);
+    padding-bottom: 0;
+    margin: 0;
+    @include media-breakpoint-down(md) {
+      padding-bottom: 4px;
+      margin: -4px 0 0 0;
+    }
     @include menu(3, 2, nowrap);
     @include align-items(center);
     @include media-breakpoint-down(md) {
@@ -82,10 +82,10 @@
         }
       }
       &::after {
-        content: '';
         display: block;
-        @include split-line(bottom, 4px, transparent);
         margin-bottom: -4px;
+        content: "";
+        @include split-line(bottom, 4px, transparent);
       }
     }
     .search-button {
