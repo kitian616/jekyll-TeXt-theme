@@ -161,6 +161,7 @@
     bottom: 0;
     left: 0;
     z-index: map-get($z-index, search);
+    color: $text-color;
     background-color: $background-color;
     @include overflow(auto);
   }

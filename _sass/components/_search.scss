@@ -76,12 +76,14 @@
   }
   &.active {
     a {
+      color: $text-color-3;
       background-color: $main-color-3;
     }
   }
 }
 .search__header {
   margin-top: 1.5rem;
+  color: $text-color-d;
   font-size: map-get($base, font-size-h1);
   font-weight: map-get($base, font-weight-bold);
   @include media-breakpoint-down(md) {
@@ -92,5 +94,4 @@
   margin-left: map-get($spacers, 2);
   font-weight: map-get($base, font-weight-bold);
   white-space:nowrap;
-  @include link-colors($text-color-d);
 }
