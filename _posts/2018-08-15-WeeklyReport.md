@@ -121,6 +121,13 @@ Questions, suggestion, and echoes are welcomed. Junior members can gain experien
 # Summary
 Weekly Report is beneficial for both organizations and individuals. It's important to describe the work tightly related with objectives in the report, and make the report concise. 
 
+# References
+
+1. [Stand-up meeting]
+2. [Progress,Plan,Problems]
+3. [Work breakdown structure]
+
+
 [Stand-up meeting]:https://en.wikipedia.org/wiki/Stand-up_meeting
 
 [Progress,Plan,Problems]:https://en.wikipedia.org/wiki/Progress,_plans,_problems
