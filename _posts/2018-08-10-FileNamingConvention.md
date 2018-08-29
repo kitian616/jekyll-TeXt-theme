@@ -101,7 +101,7 @@ A number of characters are reserved in some operating file systems. Following ch
 + ? (question mark)
 + \* (asterisk)
 
-It's better to define `whitelist` instead `blacklist`.
+It's better to define `whitelist` instead of `blacklist`.
 
 ### Hyphen (Dash) and Underscore
 
