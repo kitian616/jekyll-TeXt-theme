@@ -123,9 +123,11 @@ Weekly Report is beneficial for both organizations and individuals. It's importa
 
 # References
 
-1. [Stand-up meeting]
-2. [Progress,Plan,Problems]
-3. [Work breakdown structure]
+\[1\] [Stand-up meeting]
+
+\[2\] [Progress,Plan,Problems]
+
+\[3\] [Work breakdown structure]
 
 
 [Stand-up meeting]:https://en.wikipedia.org/wiki/Stand-up_meeting
