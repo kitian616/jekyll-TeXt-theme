@@ -97,7 +97,7 @@ A number of characters are reserved in some operating file systems. Following ch
 + " (double quote)
 + / (forward slash)
 + \ (backslash)
-+ | (vertical bar or pipe)
++ \| (vertical bar or pipe)
 + ? (question mark)
 + \* (asterisk)
 
