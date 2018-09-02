@@ -288,7 +288,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.3-layouts.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="布局"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-02T23:26:50+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="布局"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-02T23:53:19+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><pre><code class="language-mermaid">graph TB;
     NONE[none]
@@ -327,23 +327,28 @@
   <tbody>
     <tr>
       <td><strong>mode</strong></td>
-      <td>normal (default), immersive</td>
+      <td>“normal” (default), “immersive”</td>
       <td>该页的模式</td>
     </tr>
     <tr>
       <td><strong>type</strong></td>
-      <td>webpage (default), article</td>
+      <td>“webpage” (default), “article”</td>
       <td>该页的类型, 作为 <a href="https://schema.org/">schema.org</a> 的语义化标记使用</td>
     </tr>
     <tr>
       <td><strong>key</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!str</code></td>
       <td>页面的唯一标识符，供评论系统和点击量统计使用。必须以字母（<code class="highlighter-rouge">[A-Za-z]</code>）开头，其后可以接若干字母、数字（<code class="highlighter-rouge">[0-9]</code>）、连字符（<code class="highlighter-rouge">-</code>）、下划线（<code class="highlighter-rouge">_</code>）、冒号（<code class="highlighter-rouge">:</code>）和小数点（<code class="highlighter-rouge">.</code>）</td>
     </tr>
     <tr>
       <td><strong>lang</strong></td>
-      <td>en</td>
+      <td>“en” (default), “zh”, “zh-Hans”, “zh-Hant”</td>
       <td>该页的语言</td>
+    </tr>
+    <tr>
+      <td><strong>author</strong></td>
+      <td><code class="highlighter-rouge">!!map</code></td>
+      <td>将在 <em>authors.yml</em> 中定义的作者作为某篇文章或页面的作者, 详情请看<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/authors">作者</a></td>
     </tr>
     <tr>
       <td><strong>show_title</strong></td>
@@ -371,48 +376,53 @@
       <td>该页内容是否占据全部宽度，设置为 <code class="highlighter-rouge">true</code> 开启</td>
     </tr>
     <tr>
+      <td><strong>pageview</strong></td>
+      <td>true, false (default)</td>
+      <td>是否开启阅读量统计，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+    </tr>
+    <tr>
       <td><strong>comment</strong></td>
       <td>true (default), false</td>
       <td>是否开启评论支持，默认开启，设置为 <code class="highlighter-rouge">false</code> 关闭</td>
     </tr>
     <tr>
       <td><strong>mathjax</strong></td>
-      <td>true, false (default)</td>
-      <td>是否开启 Mathjax 公式支持，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+      <td>true, false</td>
+      <td>是否开启 Mathjax 公式支持，设置为 <code class="highlighter-rouge">true</code> 开启</td>
     </tr>
     <tr>
       <td><strong>mathjax_autoNumber</strong></td>
-      <td>true, false (default)</td>
-      <td>该页的 Mathjax 公式是否自动编号，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+      <td>true, false</td>
+      <td>该页的 Mathjax 公式是否自动编号，设置为 <code class="highlighter-rouge">true</code> 开启</td>
     </tr>
     <tr>
       <td><strong>mermaid</strong></td>
-      <td>true, false (default)</td>
-      <td>是否开启 Mermaid 流程图支持，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+      <td>true, false</td>
+      <td>是否开启 Mermaid 流程图支持，设置为 <code class="highlighter-rouge">true</code> 开启</td>
     </tr>
     <tr>
       <td><strong>chart</strong></td>
-      <td>true, false (default)</td>
-      <td>是否开启 Chart 图表支持，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启</td>
+      <td>true, false</td>
+      <td>是否开启 Chart 图表支持，设置为 <code class="highlighter-rouge">true</code> 开启</td>
     </tr>
     <tr>
       <td><strong>header</strong></td>
-      <td>-</td>
-      <td> </td>
+      <td>false, <code class="highlighter-rouge">!!map</code></td>
+      <td>设置为 <code class="highlighter-rouge">false</code> 隐藏标题栏</td>
     </tr>
     <tr>
       <td><strong>article_header</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!map</code></td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>aside</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!map</code></td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>sidebar</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!map</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -431,13 +441,13 @@
   <tbody>
     <tr>
       <td><strong>type</strong></td>
-      <td>normal (default), translucent</td>
+      <td>“normal” (default), “translucent”</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>theme</strong></td>
-      <td>light (default), dark</td>
-      <td> </td>
+      <td>“light” (default), “dark”</td>
+      <td>当 type 为 “translucent” 时有效</td>
     </tr>
   </tbody>
 </table>
@@ -455,28 +465,38 @@
   <tbody>
     <tr>
       <td><strong>type</strong></td>
-      <td>overlay, cover</td>
+      <td>“overlay”, “cover”</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>align</strong></td>
+      <td>“left” (default), “center”</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>theme</strong></td>
-      <td>light (default), dark</td>
+      <td>“light” (default), “dark”</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>background_color</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!str</code></td>
       <td>当 type 为 “overlay” 时有效</td>
     </tr>
     <tr>
       <td><strong>background_image</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!str</code></td>
       <td>当 type 为 “overlay” 时有效</td>
     </tr>
     <tr>
       <td><strong>image</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!str</code></td>
       <td>当 type 为 “cover” 时有效</td>
+    </tr>
+    <tr>
+      <td><strong>actions</strong></td>
+      <td><code class="highlighter-rouge">!!seq</code></td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -513,7 +533,7 @@
   <tbody>
     <tr>
       <td><strong>nav</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!str</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -532,13 +552,8 @@
     </tr>
     <tr>
       <td><strong>modify_date</strong></td>
-      <td>-</td>
+      <td><code class="highlighter-rouge">!!str</code></td>
       <td>该文章的最后修改时间, 其格式为 <code class="highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code> 和 <code class="highlighter-rouge">date</code> 的格式相同</td>
-    </tr>
-    <tr>
-      <td><strong>author</strong></td>
-      <td>-</td>
-      <td>将在 <em>authors.yml</em> 中定义的作者作为某篇文章或页面的作者, 详情请看<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/authors">作者</a></td>
     </tr>
     <tr>
       <td><strong>show_author_profile</strong></td>
@@ -547,7 +562,7 @@
     </tr>
     <tr>
       <td><strong>license</strong></td>
-      <td>true, false, “CC-BY-4.0”, “CC-BY-SA-4.0”, “CC-BY-NC-4.0”, “CC-BY-ND-4.0”</td>
+      <td>true, false (default), “CC-BY-4.0”, “CC-BY-SA-4.0”, “CC-BY-NC-4.0”, “CC-BY-ND-4.0”</td>
       <td>该文章的许可协议。设置为 <code class="highlighter-rouge">true</code> 使用在 <em>_config.yml</em> 中设置的 <code class="highlighter-rouge">license</code> 值，设置为 <code class="highlighter-rouge">false</code> 不使用许可协议</td>
     </tr>
   </tbody>
@@ -565,12 +580,29 @@
 
 <p>继承于 Page 布局。</p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Option Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>data</strong></td>
+      <td><code class="highlighter-rouge">!!map</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="404-布局">404 布局</h2>
 
 <p>继承于 Page 布局。</p>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-02T23:26:50+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-02T23:53:19+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> 许可协议。
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
