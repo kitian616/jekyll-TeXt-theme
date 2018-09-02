@@ -167,7 +167,7 @@ exclude:
   - package.json
   # - /docs
   - /node_modules
-  - /screenshots
+  # - /screenshots
   # - /test
   - /vendor
   - /_posts
@@ -177,7 +177,7 @@ collections_dir: docs
 collections:
   docs:
     output: true
-  projects:
+  layouts:
     output: true
 
 defaults:
@@ -202,6 +202,7 @@ defaults:
       aside:
         toc: true
       show_edit_on_github: true
+      show_date: false
   - scope:
       path: "_docs/zh"
     values:
@@ -213,6 +214,7 @@ defaults:
         toc: true
       lang: zh
       show_edit_on_github: true
+      show_date: false
 
 
 ## => Plugins
