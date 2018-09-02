@@ -86,9 +86,9 @@
         $scrollTarget.on('scroll', function() {
           disabled || setState();
         });
-        $window.on('resize', window.throttle(function() {
+        $window.on('resize', function() {
           disabled || (calc(true), setState());
-        }, 100));
+        });
         hasInit = true;
       }
     }
