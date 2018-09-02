@@ -1,5 +1,6 @@
 .article__info {
   font-size: map-get($base, font-size-sm);
+  color: $text-color-l;
   .left-col {
     float: left;
     @include media-breakpoint-down(md) {
@@ -9,7 +10,6 @@
   .right-col {
     float: right;
     margin-left: map-get($button, padding-x-sm);
-    color: $text-color-l;
     @include media-breakpoint-down(md) {
       float: none;
     }

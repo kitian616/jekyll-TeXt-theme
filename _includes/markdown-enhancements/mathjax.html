@@ -1,8 +1,8 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 
-{%- include snippets/assign.html target=site.data.variables.default.mathjax_autoNumber source0=site.mathjax_autoNumber -%}
-{%- include snippets/assign.html target=__return source0=page.mathjax_autoNumber -%}
+{%- include snippets/assign.html target=site.data.variables.default.mathjax_autoNumber
+  source0=site.mathjax_autoNumber source1=page.mathjax_autoNumber -%}
 {%- assign _mathjax_autoNumber = __return -%}
 
 <script type="text/x-mathjax-config">

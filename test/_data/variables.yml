@@ -17,12 +17,22 @@ default:
   excerpt_type: text
 
   page:
+    mode: normal
     type: webpage
-    show_header: true
+    header:
+      type: normal
+      theme: light
+    article_header:
+      align: left
+      theme: light
     show_title: true
     show_edit_on_github: false
+    show_date: true
+    show_tags: true
     show_author_profile: false
     full_width: false
+    comment: true
+    license: false
     pageview: false
 
 sources:

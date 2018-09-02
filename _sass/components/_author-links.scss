@@ -25,7 +25,7 @@
       }
       .douban-button {
         @include clickable($text-color-1, $douban-color);
-      }      
+      }
       .npm-button {
         @include clickable($text-color-1, $npm-color);
       }

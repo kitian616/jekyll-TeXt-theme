@@ -256,7 +256,7 @@
     "rule-empty-line-before": null,
     "scss/dollar-variable-default": [true, { "ignore": "local" }],
     "selector-attribute-quotes": "always",
-    "selector-list-comma-newline-after": "always",
+    "selector-list-comma-newline-after": "always-multi-line",
     "selector-list-comma-newline-before": "never-multi-line",
     "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never-single-line",

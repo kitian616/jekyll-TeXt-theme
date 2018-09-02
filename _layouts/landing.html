@@ -1,50 +1,23 @@
 ---
 layout: page
-title: TeXt
-show_title: false
-show_header: false
+header: false
 full_width: true
+article_header:
+  type: overlay
+  align: center
+  height: 80vh
 ---
-{%- include snippets/page-title.html -%}
-{%- assign _title = __return -%}
-
 <div class="layout--landing">
-{%- include snippets/get-nav-url.html path=page.data.background_image.src -%}
-{%- assign _url = __return -%}
-{%- if page.data.theme == 'light' -%}
-  <section class="section section--light overlay" style="background-image: url({{ _url }});">
-{%- elsif page.data.theme == 'dark' -%}
-  <section class="section section--dark overlay" style="background-image: url({{ _url }});">
-{%- else -%}
-  <section class="section overlay" style="background-image: url({{ _url }});">
-{%- endif -%}
-    <div class="section__content">
-      <h1>{{ _title }}</h1>
-      {%- if page.data.sub_title -%}
-      <h2 itemprop="alternativeHeadline">{{ page.data.sub_title }}</h2>
-      {%- endif -%}
-      {%- if page.data.actions -%}
-      <ul class="menu menu--center">
-      {%- for _action in page.data.actions -%}
-        {%- include snippets/get-nav-url.html path=_action.url -%}
-        {%- assign _url = __return -%}
-        {%- assign _type = _action.type | default: 'info' -%}
-        <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
-      {%- endfor -%}
-      </ul>
-      {%- endif -%}
-    </div>
-  </section>
-
+  <div class="heros">
   {%- for _section in page.data.sections -%}
     {%- include snippets/get-nav-url.html path=_section.background_image.src -%}
     {%- assign _url = __return -%}
     {%- if _section.theme == 'light' -%}
-      <section class="section section--light feature" id="section-{{ forloop.index }}"
+      <section class="hero hero--center hero--light" id="hero-{{ forloop.index }}"
     {%- elsif _section.theme == 'dark' -%}
-      <section class="section section--dark feature" id="section-{{ forloop.index }}"
+      <section class="hero hero--center hero--dark" id="hero-{{ forloop.index }}"
     {%- else -%}
-      <section class="section feature" id="section-{{ forloop.index }}"
+      <section class="hero hero--center" id="hero-{{ forloop.index }}"
     {%- endif -%}
     {%- if _section.background_color -%}
         style="background-image: url({{ _url }}); background-color: {{ _section.background_color }};">
@@ -52,16 +25,16 @@ full_width: true
         style="background-image: url({{ _url }});">
     {%- endif -%}
 
-        <div class="section__content">
-          <div class="content__row">
+        <div class="hero__content">
+          <div class="mb-5">
 
             <h3>{{ _section.title }}</h3>
-              {%- if _section.description-%}
-            <p>{{ _section.description }}</p>
+              {%- if _section.excerpt-%}
+            <p>{{ _section.excerpt }}</p>
             {%- endif -%}
 
             {%- if _section.actions -%}
-              <ul class="menu menu--center">
+              <ul class="menu">
               {%- for _action in _section.actions -%}
                 {%- include snippets/get-nav-url.html path=_action.url -%}
                 {%- assign _url = __return -%}
@@ -80,17 +53,17 @@ full_width: true
 
 
               {%- for child in _section.children -%}
-                <div class="content__col col-{{ 12 | divided_by: _size }} col-sm-12">
+                <div class="col col-{{ 12 | divided_by: _size }} col-sm-12 px-1">
 
-                  <div class="content__row">
+                  <div class="mb-5">
                     <h4>{{ child.title }}</h4>
 
-                    {%- if child.description-%}
-                      <p>{{ child.description }}</p>
+                    {%- if child.excerpt-%}
+                      <p>{{ child.excerpt }}</p>
                     {%- endif -%}
 
                     {%- if child.actions -%}
-                      <ul class="menu menu--center">
+                      <ul class="menu">
                         {%- for _action in child.actions -%}
                           {%- include snippets/get-nav-url.html path=_action.url -%}
                           {%- assign _url = __return -%}
@@ -116,15 +89,14 @@ full_width: true
                     {%- else -%}
                       {%- assign _item_image_src = nil -%}
                     {%- endif -%}
-
                     {%- if child.image.is_row -%}
-                      <div class="content__row">
+                      <div class="mb-5">
                     {%- endif -%}
                     {%- if _item_image_url -%}
                         <a href="{{ _item_image_url }}">
                     {%- endif -%}
                     {%- if _item_image_src -%}
-                          <img class="content__cover" src="{{ _item_image_src }}" style="{{ child.image.style }}"></img>
+                          <img src="{{ _item_image_src }}" style="{{ child.image.style }}" />
                     {%- endif -%}
                     {%- if _item_image_url -%}
                         </a>
@@ -143,12 +115,14 @@ full_width: true
 
           {%- if _section.image -%}
             {%- if _section.image.is_row -%}
-              <div class="content__row">
+              <div class="mb-5">
             {%- endif -%}
               {%- if child.image.url -%}
                 <a href="{{ child.image.url }}">
               {%- endif -%}
-                  <img class="content__cover" src="{{ _section.image.src }}" style="{{ _section.image.style }}"></img>
+                  {%- include snippets/get-nav-url.html path=_section.image.src -%}
+                  {%- assign _url = __return -%}
+                  <img class="hero__cover" src="{{ _url }}" style="{{ _section.image.style }}" />
               {%- if child.image.url -%}
                 </a>
               {%- endif -%}
@@ -160,6 +134,7 @@ full_width: true
         </div>
       </section>
   {%- endfor -%}
+  </div>
 </div>
 
 {{ content }}

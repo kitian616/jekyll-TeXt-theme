@@ -3,9 +3,13 @@ layout: page
 type: article
 ---
 
-{%- include snippets/assign.html target=site.data.variables.default.page.show_author_profile source0=layout.show_author_profile -%}
-{%- include snippets/assign.html target=__return source0=page.show_author_profile -%}
+{%- include snippets/assign.html target=site.data.variables.default.page.show_author_profile
+  source0=layout.show_author_profile source1=page.show_author_profile -%}
 {%- assign _show_author_profile = __return -%}
+
+{%- include snippets/assign.html target=site.data.variables.default.page.license
+  source0=layout.license source1=page.license -%}
+{%- assign _license = __return -%}
 
 <div class="layout--article">
 
@@ -35,8 +39,17 @@ type: article
       {%- include article-footer/author-profile.html author=_author -%}
     {%- endif -%}
 
-    {%- if page.license -%}
-      <div class="article__license">{%- include article-footer/license.html -%}</div>
+    {%- if _license != false -%}
+      {%- assign _data_license = site.data.licenses-%}
+      {%- if site.license -%}
+        {%- assign _license_data = _data_license[site.license] -%}
+      {%- endif -%}
+      {%- if _license != true -%}
+        {%- assign _license_data = _data_license[_license] -%}
+      {%- endif -%}
+      <div class="article__license">
+        {%- include article-footer/license.html license=_license_data -%}
+      </div>
     {%- endif -%}
   </footer>
 

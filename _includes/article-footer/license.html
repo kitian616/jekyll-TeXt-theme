@@ -1,22 +1,13 @@
 {%- include snippets/locale-to-string.html locale=site.data.locale.LICENSE_ANNOUNCE -%}
 {%- assign _license_announce = __return -%}
 
-{%- assign _data_license = site.data.licenses-%}
-{%- if site.license -%}
-  {%- assign _license = _data_license[site.license] -%}
-{%- endif -%}
-{%- if page.license != true -%}
-  {%- assign _license = _data_license[page.license] -%}
-{%- endif -%}
+{%- if include.license -%}
 
-
-{%- if _license -%}
-
-  {%-assign _license_name = '<a itemprop="license" rel="license" href="[URL]">[NAME]</a>' | replace: "[URL]", _license.url | replace: "[NAME]", _license.name -%}
+  {%-assign _license_name = '<a itemprop="license" rel="license" href="[URL]">[NAME]</a>' | replace: "[URL]", include.license.url | replace: "[NAME]", include.license.name -%}
   <div class="license">
     <p>{{ _license_announce | replace: "[LICENSE]", _license_name }}
-      <a rel="license" href="{{ _license.url }}">
-        <img alt="{{ _license.name }}" src="{{ _license.image }}" />
+      <a rel="license" href="{{ include.license.url }}">
+        <img alt="{{ include.license.name }}" src="{{ include.license.image }}" />
       </a>
     </p>
   </div>

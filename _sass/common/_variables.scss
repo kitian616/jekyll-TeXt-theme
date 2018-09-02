@@ -4,11 +4,18 @@ $base: (
 
   font-size-root:         16px,
 
-  font-size-xl:           1.6rem,
+  font-size-xl:           1.5rem,
   font-size-lg:           1.25rem,
   font-size:              1rem,
   font-size-sm:           .875rem,
   font-size-xs:           .75rem,
+
+  font-size-h1-xl:        3.5rem,
+  font-size-h2-xl:        2.5rem,
+  font-size-h3-xl:        2rem,
+  font-size-h4-xl:        1.75rem,
+  font-size-h5-xl:        1.5rem,
+  font-size-h6-xl:        1.5rem,
 
   font-size-h1-lg:        3rem,
   font-size-h2-lg:        2rem,
@@ -102,11 +109,14 @@ $link: (
   transition:             all .2s ease-in-out
 );
 
+$button-height-xl:        2.8rem;
 $button-height-lg:        2.3rem;
 $button-height:           1.9rem;
 $button-height-sm:        1.5rem;
 
 $button: (
+  padding-y-xl:           ($button-height-xl - map-get($base, font-size-xl)) / 2,
+  padding-x-xl:           $button-height-xl / 3,
   padding-y-lg:           ($button-height-lg - map-get($base, font-size-lg)) / 2,
   padding-x-lg:           $button-height-lg / 3,
   padding-y:              ($button-height - map-get($base, font-size)) / 2,
@@ -114,8 +124,9 @@ $button: (
   padding-y-sm:           ($button-height-sm - map-get($base, font-size-sm)) / 2,
   padding-x-sm:           $button-height-sm / 3,
 
-  pill-radius:            4rem,
+  pill-radius:            6rem,
 
+  circle-diameter-xl:     $button-height-xl,
   circle-diameter-lg:     $button-height-lg,
   circle-diameter:        $button-height,
   circle-diameter-sm:     $button-height-sm,

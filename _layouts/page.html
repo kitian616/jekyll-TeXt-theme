@@ -1,15 +1,14 @@
 ---
 layout: base
 ---
+{%- assign _page_mode = page.mode | default: layout.mode | default: site.data.variables.default.page.mode -%}
 {%- assign _page_type = page.type | default: layout.type | default: site.data.variables.default.page.type -%}
-
-{%- include snippets/page-title.html -%}
-{%- assign _page_title = __return -%}
+{%- assign _header_type = page.header.type | default: layout.header.type | default: site.data.variables.default.page.header.type -%}
+{%- assign _article_header_type = page.article_header.type | default: layout.article_header.type -%}
 
 {%- include snippets/assign.html
-  target=site.data.variables.default.page.show_header
-  source0=layout.show_header source1=page.show_header -%}
-{%- assign _show_header = __return -%}
+  target=layout.header source0=page.header -%}
+{%- assign _header = __return -%}
 
 {%- include snippets/assign.html
   target = site.data.variables.default.page.full_width
@@ -17,14 +16,12 @@ layout: base
 {%- assign _full_width = __return -%}
 
 {%- include snippets/assign.html
-  target=site.data.variables.default.page.show_title
-  source0=layout.show_title source1=page.show_title -%}
-{%- assign _show_title = __return -%}
+  target = site.data.variables.default.page.comment
+  source0=layout.comment source1=page.comment -%}
+{%- assign _comment = __return -%}
 
-{%- include snippets/assign.html
-  target=site.data.variables.default.page.show_edit_on_github
-  source0=layout.show_edit_on_github source1=page.show_edit_on_github -%}
-{%- assign _show_edit_on_github = __return -%}
+
+{%- assign _article_header_excerpt_truncate = include.excerpt_truncate | default: 200 -%}
 
 {%- if page.sidebar -%}
 <div class="layout--page layout--page--sidebar clearfix js-page-root">
@@ -42,20 +39,123 @@ layout: base
 <div class="layout--page clearfix js-page-root">
 {%- endif -%}
 
-  {%- if _full_width -%}
-  <div class="page__main js-page-main full-width">
-  {%- elsif page.aside -%}
-  <div class="page__main js-page-main has-aside">
-  {%- else -%}
-  <div class="page__main js-page-main">
+  {%- assign _page_main_class = 'page__main js-page-main' -%}
+  {%- if _page_mode == 'immersive' -%}
+    {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
   {%- endif -%}
+  {%- if page.aside -%}
+    {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
+  {%- elsif _full_width -%}
+    {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
+  {%- endif -%}
+  <div class="{{ _page_main_class }}">
 
     <div class="page__main-inner">
-    <div></div>
-    {%- if _show_header -%}
-      <div class="page__header">{%- include header.html -%}</div>
+      <div></div>
+    {%- if _header != false -%}
+      <div class="page__header">
+      {%- if _header_type == 'normal' -%}
+        {%- include header.html -%}
+      {%- elsif _header_type == 'translucent' -%}
+        {%- assign _header_theme = page.header.theme | default: layout.header.theme | default: site.data.variables.default.page.header.theme -%}
+        {%- if _header_theme == 'dark'-%}
+          {%- include header.html theme='dark'-%}
+        {%- else -%}
+          {%- include header.html theme='light'-%}
+        {%- endif -%}
+      {%- endif -%}
+      </div>
     {%- endif -%}
+
+
       <div class="page__content">
+      {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' -%}
+
+        {%- if _article_header_type == 'overlay' -%}
+
+          {%- assign _article_header_height = page.article_header.height | default: layout.article_header.height -%}
+          {%- assign _article_header_align = page.article_header.align | default: layout.article_header.align | default: site.data.variables.default.page.article_header.align -%}
+          {%- assign _article_header_theme = page.article_header.theme | default: layout.article_header.theme | default: site.data.variables.default.page.article_header.theme -%}
+
+          {%- if page.article_header.background_image.gradient -%}
+            {%- assign _header_background_image = page.article_header.background_image.gradient -%}
+            {%- if page.article_header.background_image.src -%}
+              {%- assign _header_background_image = _header_background_image | append: ',' -%}
+            {%- endif -%}
+          {%- endif -%}
+          {%- if page.article_header.background_image.src -%}
+            {%- include snippets/get-nav-url.html path=page.article_header.background_image.src -%}
+            {%- assign _header_background_image_src = __return -%}
+            {%- assign _header_background_image = _header_background_image
+              | append: 'url(' | append: _header_background_image_src  | append: ')'-%}
+          {%- endif -%}
+          {%- assign _header_style = 'background-image:' | append: _header_background_image | append: ';' -%}
+
+          {%- if page.article_header.background_color -%}
+            {%- assign _header_style = _header_style | append: 'background-color:' | append: page.article_header.background_color | append: ';' -%}
+          {%- endif -%}
+
+          {%- if _article_header_height -%}
+            {%- assign _header_style = _header_style | append: 'min-height:' | append: _article_header_height | append: ';' -%}
+          {%- endif -%}
+
+          <div class="article__header--overlay">
+
+          {%- if _article_header_theme == 'light' -%}
+            {%- if _article_header_align == 'center' -%}
+              <div class="hero hero--center hero--light overlay" style="{{ _header_style }}">
+            {%- else -%}
+              <div class="hero hero--light overlay" style="{{ _header_style }}">
+            {%- endif -%}
+          {%- elsif _article_header_theme == 'dark' -%}
+            {%- if _article_header_align == 'center' -%}
+              <div class="hero hero--center hero--dark overlay" style="{{ _header_style }}">
+            {%- else -%}
+              <div class="hero hero--dark overlay" style="{{ _header_style }}">
+            {%- endif -%}
+          {%- else -%}
+            {%- if _article_header_align == 'center' -%}
+              <div class="hero hero--center overlay" style="{{ _header_style }}">
+            {%- else -%}
+              <div class="hero overlay" style="{{ _header_style }}">
+            {%- endif -%}
+          {%- endif -%}
+                <div class="hero__content">
+                  {%- if _full_width == false -%}
+                    <div class ="main">
+                  {%- endif -%}
+                    {%- include article-info.html article=page semantic=false -%}
+                    {%- include article-header.html article=page semantic=false -%}
+                    {%- if page.excerpt -%}
+                      <p class="overlay__excerpt">{{ page.excerpt | strip_html | truncate: _article_header_excerpt_truncate }}</p>
+                    {%- endif -%}
+                    {%- if page.article_header.actions -%}
+                      <ul class="menu">
+                        {%- for _action in page.article_header.actions -%}
+                          {%- include snippets/get-nav-url.html path=_action.url -%}
+                          {%- assign _url = __return -%}
+                          {%- assign _type = _action.type | default: 'info' -%}
+                          <li><a class="button button--{{ _type }} button--rounded button--xl" href="{{ _url }}">{{ _action.text }}</a></li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  {%- if _full_width == false -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+          </div>
+        {%- elsif _article_header_type == 'cover' -%}
+          {%- if page.article_header.image.src -%}
+            {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
+            {%- assign _header_image_src = __return -%}
+            <img class="article__header--cover" src="{{ _header_image_src }}"></img>
+          {%- endif -%}
+        {%- endif -%}
+
+      {%- endif -%}
+
+
       {%- if _full_width == false -%}
         <div class ="main">
       {%- endif -%}
@@ -76,46 +176,19 @@ layout: base
             {%- else -%}
               <article>
             {%- endif -%}
-              {%- if _show_title or _show_edit_on_github -%}
-                <div class="article__header">
-              {%- endif -%}
-                  {%- if _show_title -%}
-                    <header><h1 itemprop="headline">{{ _page_title }}</h1></header>
-                  {%- else -%}
-                    <header style="display: none;"><h1 itemprop="headline">{{ _page_title }}</h1></header>
-                  {%- endif-%}
-                  {%- if _show_edit_on_github -%}
-                    {%- if site.repository and site.repository_tree -%}
-                      {%- include snippets/is_collection.html page=page -%}
-                      {%- assign _is_page_collection = __return -%}
-                      {%- include snippets/locale-to-string.html locale=site.data.locale.POST_ON_GITHUB -%}
-                      {%- assign _locale_post_on_github = __return -%}
-                      {%- if _is_page_collection -%}
-                        {%- include snippets/prepend-path.html path=page.path prepend_path=site.collections_dir -%}
-                        {%- assign _page_path = __return -%}
-                      {%- else -%}
-                        {%- assign _page_path = page.path -%}
-                      {%- endif -%}
-                      {%- assign _github_path = site.repository | append: '/tree/' | append: site.repository_tree | append: '/' | append: _page_path | replace:'//','/' -%}
-                      <span class="split-space">&nbsp;</span>
-                      <a class="edit-on-github"
-                        title="{{ _locale_post_on_github }}"
-                        href="https://github.com/{{ _github_path }}">
-                        <i class="far fa-edit"></i></a>
-                    {%- endif -%}
-                  {%- endif -%}
-              {%- if _show_title or _show_edit_on_github -%}
-                </div>
-              {%- endif -%}
 
+            {%- if _article_header_type == 'overlay' or page.article_header == false -%}
+              {%- include article-header.html article=page html=false -%}
+              {%- include article-info.html article=page html=false -%}
+            {%- else -%}
+              {%- include article-header.html article=page -%}
               {%- include article-info.html article=page -%}
+            {%- endif -%}
 
-              <div class="js-article-content">{{ content }}</div>
-
-              {%- if jekyll.environment != "development" and page.comment != false -%}
-                <section class="page__comments">{%- include comments.html -%}</section>
-              {%- endif -%}
-
+                <div class="js-article-content">{{ content }}</div>
+                {%- if jekyll.environment != "development" and _comment != false -%}
+                  <section class="page__comments">{%- include comments.html -%}</section>
+                {%- endif -%}
             </article>
           </div>
 
@@ -127,7 +200,7 @@ layout: base
       <div class="page__footer">{%- include footer.html -%}</div>
     </div>
   </div>
-  {%- if _show_header -%}
+  {%- if _header != false -%}
     <div class="page__search-panel">{%- include search.html -%}</div>
   {%- endif -%}
 </div>

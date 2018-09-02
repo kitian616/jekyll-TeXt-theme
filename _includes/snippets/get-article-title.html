@@ -1,5 +1,5 @@
-{%- assign _title = page.title | default: layout.title -%}
-{%- assign _titles = page.titles | default: layout.titles -%}
+{%- assign _title = include.article.title | default: layout.title -%}
+{%- assign _titles = include.article.titles | default: layout.titles -%}
 
 {%- if _title -%}
   {%- assign __return = _title -%}

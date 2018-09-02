@@ -12,7 +12,9 @@
     {%- if _author.url -%}
     <a href="{{ _author.url }}">
     {%- endif -%}
-      <img itemprop="image" class="left-col" src="{{ _author.avatar }}"></img>
+      {%- include snippets/get-nav-url.html path=_author.avatar -%}
+      {%- assign _author_avatar = __return -%}
+      <img itemprop="image" class="left-col" src="{{ _author_avatar }}"></img>
     {%- if _author.url -%}
     </a>
     {%- endif -%}

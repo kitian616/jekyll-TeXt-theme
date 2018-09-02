@@ -1,12 +1,11 @@
 ---
 layout: landing
+title: TeXt Theme
+excerpt: >
+  A Jekyll Theme for Personal Site, Team Site, Blog, Project, Documentation, etc
 permalink: /index.html
-data:
-  sub_title: >
-    A Jekyll Theme for
-    <span style="display: none;">Personal Site, Team Site, Blog, Project, Documentation, etc</span>
-    <span class="tips" style="display: inline-block; text-align: left; width: 8.5em;"></span>
-  theme: light
+
+article_header:
   actions:
     - text: Getting Started
       type: error
@@ -14,46 +13,50 @@ data:
     - text: Demo
       type: outline-info
       url: /test/
+  background_color: '#e6e5e2'
   background_image:
-    src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/cover1.jpeg
+    src: /docs/assets/images/cover1.jpg
+data:
   sections:
     - title: Fully Responsive
-      description: This theme will look great on any device, no matter the size!
+      excerpt: This theme will look great on any device, no matter the size!
+      theme: dark
       image:
-        src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-responsive.png
+        src: /screenshots/TeXt-responsive.png
+      background_color: '#515151'
     - title: Super Customizable
-      description: Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.
+      excerpt: Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.
       theme: dark
       actions:
         - text: Learn More
           url: /docs/en/configuration
       image:
-        src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-skins.png
+        src: /screenshots/TeXt-skins.png
       background_color: '#515151'
     - title: Plenty Layouts
-      description: With the help of layouts, you can easily make different type of pages.
+      excerpt: With the help of layouts, you can easily make different type of pages.
       theme: dark
       actions:
         - text: Learn More
-          url: /docs/en/layouts
+          url: /samples.html#layouts
       image:
-        src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png
+        src: /screenshots/TeXt-layouts.png
       background_color: '#515151'
     - title: Enhanced User Experience
       children:
         - title: Additional styles
-          description: TeXt offer some CSS classes that you can use in the post, including alert, photo frame, button and grid.
+          excerpt: TeXt offer some CSS classes that you can use in the post, including alert, photo frame, button and grid.
           actions:
             - text: Learn More
               url: /docs/en/additional-styles
         - title: Markdown Enhancements
-          description: You can easily add Mathjax, Mermaid and Charts in TeXt.
+          excerpt: You can easily add Mathjax, Mermaid and Charts in TeXt.
           actions:
             - text: Learn More
               url: /docs/en/markdown-enhancements
     - title: 100% Free
       theme: dark
-      description: Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!
+      excerpt: Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!
       actions:
         - text: '<i class="fab fa-github"></i> GitHub'
           url: https://github.com/kitian616/jekyll-TeXt-theme
@@ -62,32 +65,18 @@ data:
       children:
         - title: 'WeChat <i class="fas fa-arrow-down"></i>'
           image:
-            src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg
+            src: /docs/assets/images/tip_wechat.jpg
             style: 'max-width: 200px; max-height: 200px'
             is_row: true
         - title: 'Alipay <i class="fas fa-arrow-down"></i>'
           image:
-            src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg
+            src: /docs/assets/images/tip_alipay.jpg
             style: 'max-width: 200px; max-height: 200px'
             is_row: true
         - title: 'PayPal <i class="fas fa-arrow-down"></i>'
           image:
-            src: https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_paypal.png
+            src: /docs/assets/images/tip_paypal.png
             url: https://www.paypal.me/kitian616
             style: 'max-width: 200px; max-height: 200px'
             is_row: true
-
 ---
-
-<script src="https://cdn.jsdelivr.net/npm/typeit@5.10.1/dist/typeit.min.js"></script>
-<script>
-  setTimeout(function() {
-    new TypeIt('.tips', {
-      strings: ['Personal Site.', 'Team Site.', 'Blog.', 'Project.', 'Documentation.'],
-      speed: 150,
-      breakLines: false,
-      autoStart: true,
-      loop: true
-    });
-  }, 600);
-</script>
