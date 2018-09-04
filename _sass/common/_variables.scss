@@ -135,6 +135,14 @@ $button: (
   transition:             all .2s ease-in-out
 );
 
+$image: (
+  width-xl:  20em,
+  width-lg:  16rem,
+  width:     12rem,
+  width-sm:  8rem,
+  width-xs:  4rem
+);
+
 $menu: (
   horizontal-spacer:      1,
   horizontal-item-vertical-spacer: 1

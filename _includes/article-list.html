@@ -19,15 +19,32 @@
   {%- for _article in _sorted_list -%}
 
     {%- include snippets/prepend-baseurl.html path=_article.url -%}
-    {%- assign _href = __return -%}
+    {%- assign _article_url = __return -%}
 
     {%- include snippets/locale-to-string.html locale=site.data.locale.READMORE -%}
     {%- assign _locale_readmore = __return -%}
 
     {%- if include.type == 'common' -%}
-      <article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+      {%- if include.article_type == 'BlogPosting' -%}
+        <article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+      {%- else -%}
+        <article class="item">
+      {%- endif -%}
+        {%- if _article.cover and include.show_cover-%}
+          {%- include snippets/get-nav-url.html path=_article.cover -%}
+          {%- assign _article_cover = __return -%}
+          <div class="item__image">
+          {%- if include.cover_size == 'lg' -%}
+            <img class="image image--lg" src="{{ _article_cover }}" />
+          {%- elsif include.cover_size == 'sm' -%}
+            <img class="image image--sm" src="{{ _article_cover }}" />
+          {%- else -%}
+            <img class="image" src="{{ _article_cover }}" />
+          {%- endif -%}
+          </div>
+        {%- endif -%}
         <div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="{{ _href }}">{{ _article.title }}</a></h2></header>
+          <header><h2 itemprop="headline" class="item__header"><a href="{{ _article_url }}">{{ _article.title }}</a></h2></header>
           <div class="item__description">
             {%- if _article.excerpt and include.show_excerpt -%}
               <div class="article__content" itemprop="description articleBody">
@@ -38,9 +55,13 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
-            <p><a href="{{ _href }}">{{ _locale_readmore }}</a></p>
+            {%- if include.show_readmore -%}
+              <p><a href="{{ _article_url }}">{{ _locale_readmore }}</a></p>
+            {%- endif -%}
           </div>
-          {%- include article-info.html article=_article show_pageview=true -%}
+          {%- if include.show_info -%}
+            {%- include article-info.html article=_article show_pageview=true -%}
+          {%- endif -%}
         </div>
       </article>
 
@@ -65,7 +86,7 @@
       {%- endif -%}
       {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_LIST_DATE_FORMAT -%}
       <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-        <div class="item__content"><span class="item__meta">{{ _article.date | date: __return }}</span><a itemprop="headline" class="item__header" href="{{ _href }}">{{ _article.title }}</a></div>
+        <div class="item__content"><span class="item__meta">{{ _article.date | date: __return }}</span><a itemprop="headline" class="item__header" href="{{ _article_url }}">{{ _article.title }}</a></div>
       </li>
     {%- endif -%}
 

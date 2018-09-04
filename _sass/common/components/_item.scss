@@ -1,7 +1,7 @@
 .item {
   @include flexbox();
   @include media-breakpoint-down(md) {
-    @include flex-direction(row);
+    @include flex-direction(column);
   }
   &:not(:last-child) {
     margin-bottom: map-get($base, vertical-space);
@@ -18,7 +18,7 @@
 
 .item__content {
   @include flex(1);
-  max-width: 100%;
+  min-width: 0;
 }
 
 .item__header {
