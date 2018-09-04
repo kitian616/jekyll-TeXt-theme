@@ -278,40 +278,34 @@
   </header>
 </div><div class="page__content"><div class ="main"><div class="col-aside js-col-aside"></div>
 
-          <div class="col-main"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Samples</h1></header></div><meta itemprop="headline" content="Samples"><meta itemprop="author" content="TeXt"/><div class="js-article-content"><div class="layout--article">
-
-  <div class="article__content" itemprop="articleBody"><h2 id="layouts">Layouts</h2>
-
-<ul><li><a href="/jekyll-TeXt-theme/layouts/single.html">Single</a></li><li><a href="/jekyll-TeXt-theme/layouts/aside.html">Aside</a></li><li><a href="/jekyll-TeXt-theme/layouts/sidebar.html">Sidebar</a></li><li><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-fill.html">Article Header Overlay Background Fill</a></li><li><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-image.html">Article Header Overlay Background Image</a></li><li><a href="/jekyll-TeXt-theme/layouts/article-header-cover-image.html">Article Header Image</a></li><li><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-fill-immersive-translucent-header.html">Article Header Overlay Background Fill (Immersive + Translucent Header)</a></li><li><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-image-immersive-translucent-header.html">Article Header Overlay Background Image (Immersive + Translucent Header)</a></li><li><a href="/jekyll-TeXt-theme/layouts/article-header-cover-image-immersive-translucent-header.html">Article Header Image (Immersive + Translucent Header)</a></li>
-</ul>
-</div>
-
-  <footer class="article__footer"><!-- this will show at every article content's bottom --></footer></div>
-
-<script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    $(function() {
-      var $this ,$scroll;
-      var $articleContent = $('.js-article-content');
-      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
-      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
-      $scroll = $(scroll);
-
-      $articleContent.find('.highlight').each(function() {
-        $this = $(this);
-        $this.attr('data-lang', $this.find('code').attr('data-lang'));
-      });
-      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
-        $this = $(this);
-        $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
-      });
-      $articleContent.on('click', '.anchor', function() {
-        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
-      });
-    });
-  });
-})();</script></div><section class="page__comments"></section></article>
+          <div class="col-main"><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Samples</h1></header></div><meta itemprop="headline" content="Samples"><meta itemprop="author" content="TeXt"/><div class="js-article-content"><div class="mb-4"><div class="items items--divided"><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-single.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/single.html">Layout - Single</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-aside.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/aside.html">Layout - Aside</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-sidebar.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/sidebar.html">Layout - Sidebar</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-fill.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-fill.html">Layout - Article Header Overlay Background Fill</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-image.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-image.html">Layout - Article Header Overlay Background Image</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-cover-image.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-cover-image.html">Layout - Article Header Image</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-fill-immersive-translucent-header.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-fill-immersive-translucent-header.html">Layout - Article Header Overlay Background Fill (Immersive + Translucent Header)</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-image-immersive-translucent-header.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-image-immersive-translucent-header.html">Layout - Article Header Overlay Background Image (Immersive + Translucent Header)</a></h2></header>
+          <div class="item__description"></div></div>
+      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-cover-image-immersive-translucent-header.png" /></div><div class="item__content">
+          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-cover-image-immersive-translucent-header.html">Layout - Article Header Image (Immersive + Translucent Header)</a></h2></header>
+          <div class="item__description"></div></div>
+      </article></div></div></div><section class="page__comments"></section></article>
           </div></div></div>
 
       <div class="page__footer">
