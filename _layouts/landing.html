@@ -48,66 +48,67 @@ article_header:
 
           {%- if _section.children -%}
             {%- assign _size = _section.children | size  -%}
-            <div class="grid">
-              <div class="row">
+            <div class="grid--container">
+              <div class="grid grid--p-3">
 
+                {%- for child in _section.children -%}
+                  <div class="cell cell--{{ 12 | divided_by: _size }} cell--sm-12">
 
-              {%- for child in _section.children -%}
-                <div class="col col-{{ 12 | divided_by: _size }} col-sm-12 px-1">
+                    <div class="mb-5">
+                      <h4>{{ child.title }}</h4>
 
-                  <div class="mb-5">
-                    <h4>{{ child.title }}</h4>
+                      {%- if child.excerpt-%}
+                        <p>{{ child.excerpt }}</p>
+                      {%- endif -%}
 
-                    {%- if child.excerpt-%}
-                      <p>{{ child.excerpt }}</p>
+                      {%- if child.actions -%}
+                        <ul class="menu">
+                          {%- for _action in child.actions -%}
+                            {%- include snippets/get-nav-url.html path=_action.url -%}
+                            {%- assign _url = __return -%}
+                            {%- assign _type = _action.type | default: 'outline-info' -%}
+                            <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </div>
+
+                    {%- if child.image -%}
+
+                      {%- if child.image.url -%}
+                        {%- include snippets/get-nav-url.html path=child.image.url -%}
+                        {%- assign _item_image_url = __return -%}
+                      {%- else -%}
+                        {%- assign _item_image_url = nil -%}
+                      {%- endif -%}
+
+                      {%- if child.image.src -%}
+                        {%- include snippets/get-nav-url.html path=child.image.src -%}
+                        {%- assign _item_image_src = __return -%}
+                      {%- else -%}
+                        {%- assign _item_image_src = nil -%}
+                      {%- endif -%}
+                      {%- if child.image.is_row -%}
+                        <div class="mb-5">
+                      {%- endif -%}
+                          <div class="mx-auto" style="{{ child.image.style }}">
+                      {%- if _item_image_url -%}
+                            <a href="{{ _item_image_url }}">
+                      {%- endif -%}
+                      {%- if _item_image_src -%}
+                              <img src="{{ _item_image_src }}"/>
+                      {%- endif -%}
+                      {%- if _item_image_url -%}
+                            </a>
+                      {%- endif -%}
+                          </div>
+                      {%- if child.image.is_row -%}
+                        </div>
+                      {%- endif -%}
                     {%- endif -%}
 
-                    {%- if child.actions -%}
-                      <ul class="menu">
-                        {%- for _action in child.actions -%}
-                          {%- include snippets/get-nav-url.html path=_action.url -%}
-                          {%- assign _url = __return -%}
-                          {%- assign _type = _action.type | default: 'outline-info' -%}
-                          <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
-                        {%- endfor -%}
-                      </ul>
-                    {%- endif -%}
                   </div>
-
-                  {%- if child.image -%}
-
-                    {%- if child.image.url -%}
-                      {%- include snippets/get-nav-url.html path=child.image.url -%}
-                      {%- assign _item_image_url = __return -%}
-                    {%- else -%}
-                      {%- assign _item_image_url = nil -%}
-                    {%- endif -%}
-
-                    {%- if child.image.src -%}
-                      {%- include snippets/get-nav-url.html path=child.image.src -%}
-                      {%- assign _item_image_src = __return -%}
-                    {%- else -%}
-                      {%- assign _item_image_src = nil -%}
-                    {%- endif -%}
-                    {%- if child.image.is_row -%}
-                      <div class="mb-5">
-                    {%- endif -%}
-                    {%- if _item_image_url -%}
-                        <a href="{{ _item_image_url }}">
-                    {%- endif -%}
-                    {%- if _item_image_src -%}
-                          <img src="{{ _item_image_src }}" style="{{ child.image.style }}" />
-                    {%- endif -%}
-                    {%- if _item_image_url -%}
-                        </a>
-                    {%- endif -%}
-                    {%- if child.image.is_row -%}
-                      </div>
-                    {%- endif -%}
-                  {%- endif -%}
-
-                </div>
-              {%- endfor-%}
+                {%- endfor-%}
 
               </div>
             </div>

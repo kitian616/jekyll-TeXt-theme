@@ -1,70 +1,81 @@
-@mixin make-spacing($type, $direction, $spacer) {
+@mixin make-spacing($type, $direction, $spacer, $negative: false) {
 
-  $_type: null;
-  $_dirs: null;
+  $css_type: null;
+  $css_directions: null;
 
   @if ($type == "m") {
-    $_type: "margin";
+    $css_type: "margin";
   } @else if ($type == "p") {
-    $_type: "padding";
+    $css_type: "padding";
   }
 
   @if ($direction == "t") {
-    $_dirs: ("top");
+    $css_directions: ("top");
   }
   @else if ($direction == "b") {
-    $_dirs: ("bottom");
+    $css_directions: ("bottom");
   }
   @else if ($direction == "l") {
-    $_dirs: ("left");
+    $css_directions: ("left");
   }
   @else if ($direction == "r") {
-    $_dirs: ("right");
+    $css_directions: ("right");
   }
   @else if ($direction == "x") {
-    $_dirs: ("left", "right");
+    $css_directions: ("left", "right");
   }
   @else if ($direction == "y") {
-    $_dirs: ("top", "bottom");
+    $css_directions: ("top", "bottom");
   }
   @else if ($direction == "") {
-    $_dirs: ("");
+    $css_directions: ("");
   }
 
-  @each $dir in $_dirs {
+  @each $direction in $css_directions {
     @if ($spacer == "auto") {
-      @if ($dir == "") {
-        #{$_type}: auto;
+      @if ($direction == "") {
+        #{$css_type}: auto;
       } @else {
-        #{$_type}-#{$dir}: auto;
+        #{$css_type}-#{$direction}: auto;
       }
     } @else {
-      @if ($dir == "") {
-        #{$_type}: map-get($spacers, $spacer);
+      @if ($direction == "") {
+        @if ($negative == true) {
+          #{$css_type}: - map-get($spacers, $spacer);
+        } @else {
+          #{$css_type}: map-get($spacers, $spacer);
+        }
       } @else {
-        #{$_type}-#{$dir}: map-get($spacers, $spacer);
+        @if ($negative == true) {
+          #{$css_type}-#{$direction}: - map-get($spacers, $spacer);
+        } @else {
+          #{$css_type}-#{$direction}: map-get($spacers, $spacer);
+        }
       }
     }
   }
 }
 
+@mixin make-spacings() {
+  $types: ("m", "p");
+  $directions: ("t", "b", "l", "r", "x", "y", "");
+  $spacers: (0, 1, 2, 3, 4, 5);
 
-$_types: ("m", "p");
-$_directions: ("t", "b", "l", "r", "x", "y", "");
-$_spacers: (0, 1, 2, 3, 4, 5);
-
-@each $i in $_types {
-  @each $j in $_directions {
-    @each $k in $_spacers {
-      .#{$i}#{$j}-#{$k} {
-        @include make-spacing($i, $j, $k);
+  @each $type in $types {
+    @each $direction in $directions {
+      @each $spacer in $spacers {
+        .#{$type}#{$direction}-#{$spacer} {
+          @include make-spacing($type, $direction, $spacer);
+        }
       }
+    }
+  }
+
+  @each $direction in $directions {
+    .m#{$direction}-auto {
+      @include make-spacing("m", $direction, "auto");
     }
   }
 }
 
-@each $j in $_directions {
-  .m#{$j}-auto {
-    @include make-spacing("m", $j, "auto");
-  }
-}
+@include make-spacings();

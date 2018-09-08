@@ -1,48 +1,131 @@
 $grid-columns: 12;
 
-@mixin make-col($columns) {
-  .col-#{$columns} {
-    display: inline-block;
-    width: percentage($columns / $grid-columns);
-    letter-spacing: normal;
-  }
+.grid-container {
+  @include overflow(hidden);
 }
 
-@mixin make-md-col($columns) {
-  @include media-breakpoint-down(lg) {
-    .col-md-#{$columns} {
-      display: inline-block;
+@mixin make-cell($columns) {
+  .cell--#{$columns} {
+    @if $columns == "auto" {
+      @include flex(1 1 0);
+      width: auto;
+      min-width: 0;
+    } @else if $columns == "shrink" {
+      @include flex(0 0 auto);
+      width: auto;
+      min-width: 0;
+    } @else if $columns == "stretch" {
+      @include flex(1);
+    } @else {
+      @include flex(none);
       width: percentage($columns / $grid-columns);
-      letter-spacing: normal;
+      min-width: 0;
     }
   }
 }
 
-@mixin make-sm-col($columns) {
+@mixin make-md-cell($columns) {
+  @include media-breakpoint-down(lg) {
+    .cell--md-#{$columns} {
+      @if $columns == "auto" {
+        @include flex(1 1 0);
+        width: auto;
+        min-width: 0;
+      } @else if $columns == "shrink" {
+        @include flex(0 0 auto);
+        width: auto;
+        min-width: 0;
+      } @else if $columns == "stretch" {
+        @include flex(1);
+      } @else {
+        @include flex(none);
+        width: percentage($columns / $grid-columns);
+        min-width: 0;
+      }
+    }
+  }
+}
+
+@mixin make-sm-cell($columns) {
   @include media-breakpoint-down(md) {
-    .col-sm-#{$columns} {
-      display: inline-block;
-      width: percentage($columns / $grid-columns);
-      letter-spacing: normal;
+    .cell--sm-#{$columns} {
+      @if $columns == "auto" {
+        @include flex(1 1 0);
+        width: auto;
+        min-width: 0;
+      } @else if $columns == "shrink" {
+        @include flex(0 0 auto);
+        width: auto;
+        min-width: 0;
+      } @else if $columns == "stretch" {
+        @include flex(1);
+      } @else {
+        @include flex(none);
+        width: percentage($columns / $grid-columns);
+        min-width: 0;
+      }
     }
   }
 }
 
 .grid {
-  & > .row {
-    @include flexbox();
-    @include flex-wrap(wrap);
-    letter-spacing: -.31em;
-    & > {
-      @for $i from 1 through $grid-columns {
-        @include make-col($i);
-      }
-      @for $i from 1 through $grid-columns {
-        @include make-md-col($i);
-      }
-      @for $i from 1 through $grid-columns {
-        @include make-sm-col($i);
+  @include flexbox();
+  @include flex-wrap(wrap);
+  & > {
+    @for $i from 1 through $grid-columns {
+      @include make-cell($i);
+    }
+    @include make-cell("auto");
+    @include make-cell("shrink");
+    @include make-cell("stretch");
+
+    @for $i from 1 through $grid-columns {
+      @include make-md-cell($i);
+    }
+    @include make-md-cell("auto");
+    @include make-md-cell("shrink");
+    @include make-md-cell("stretch");
+
+    @for $i from 1 through $grid-columns {
+      @include make-sm-cell($i);
+    }
+
+    @include make-sm-cell("auto");
+    @include make-sm-cell("shrink");
+    @include make-sm-cell("stretch");
+  }
+}
+
+.grid--reverse {
+  flex-direction: row-reverse;
+}
+
+@mixin make-grid() {
+  $types: ("p");
+  $directions: ("x", "y", "");
+  $spacers: (0, 1, 2, 3, 4, 5);
+
+  @each $type in $types {
+    @each $direction in $directions {
+      @each $spacer in $spacers {
+        @if $direction == "" {
+          .grid--#{$type}-#{$spacer} {
+            @include make-spacing("m", "", $spacer, true);
+            .cell {
+              @include make-spacing($type, "", $spacer);
+            }
+          }
+        } @else {
+          .grid--#{$type}#{$direction}-#{$spacer} {
+            @include make-spacing("m", $direction, $spacer, true);
+            .cell {
+              @include make-spacing($type, $direction, $spacer);
+            }
+          }
+        }
       }
     }
   }
 }
+
+@include make-grid();

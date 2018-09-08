@@ -20,14 +20,10 @@
 
     .col-aside {
       display: none;
-      float: right;
       & > aside {
         position: absolute;
         width: map-get($layout, aside-width);
         overflow: hidden;
-      }
-      @include media-breakpoint-down(lg) {
-        float: none;
       }
     }
   }
@@ -83,7 +79,7 @@
 
   .page__aside {
     .toc-aside {
-      padding: 1rem 0 1rem 3rem;
+      padding: 2.5rem 0 1rem 3rem;
     }
   }
 
@@ -95,12 +91,6 @@
 
   .has-aside {
     .page__main-inner{
-      .col-main {
-        margin-right: map-get($layout, aside-width);
-        @include media-breakpoint-down(lg) {
-          margin-right: 0;
-        }
-      }
       .col-aside {
         position: relative;
         display: block;
