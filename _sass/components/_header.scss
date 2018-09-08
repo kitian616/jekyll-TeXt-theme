@@ -29,7 +29,7 @@
   background: rgba(#fff, .15);
 }
 
-.header__main {
+.header__title {
   @include menu(3, 0);
   @include align-items(center);
   @include flex-wrap(nowrap);
@@ -41,7 +41,7 @@
     height: map-get($layout, header-height-sm);
     margin-right: 0;
   }
-  & > .logo {
+  & > .header__brand {
     @include flex(1);
   }
   & > .search-button {
@@ -53,7 +53,7 @@
   }
 }
 
-.logo {
+.header__brand {
   & > svg {
     width: map-get($base, font-size-h4) * 1.6;
     height: map-get($base, font-size-h4) * 1.6;
@@ -88,26 +88,27 @@
     @include media-breakpoint-down(md) {
       height: auto;
     }
-    & > li {
-      &.active {
-        a {
-          @include link-colors($main-color-1, $main-color-1);
-        }
-        &::after {
-          @include split-line(bottom, 4px, $main-color-1);
-        }
-      }
-      &::after {
-        display: block;
-        margin-bottom: -4px;
-        content: "";
-        @include split-line(bottom, 4px, transparent);
-      }
-    }
     .search-button {
       @include media-breakpoint-down(md) {
         display: none;
       }
     }
+  }
+}
+
+.navigation__link {
+  &::after {
+    display: block;
+    margin-bottom: -4px;
+    content: "";
+    @include split-line(bottom, 4px, transparent);
+  }
+}
+.navigation__link--active {
+  a {
+    @include link-colors($main-color-1, $main-color-1);
+  }
+  &::after {
+    @include split-line(bottom, 4px, $main-color-1);
   }
 }

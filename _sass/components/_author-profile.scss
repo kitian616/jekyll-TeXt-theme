@@ -11,32 +11,14 @@
     margin-top: map-get($base, vertical-space);
     border-radius: 50%;
   }
-  .author-profile__name {
-    font-size: map-get($base, font-size-lg);
-    font-weight: map-get($base, font-weight-bold);
-    a {
-      @include link-colors($text-color, $main-color-1);
-    }
+}
+.author-profile__name {
+  font-size: map-get($base, font-size-lg);
+  font-weight: map-get($base, font-weight-bold);
+  a {
+    @include link-colors($text-color, $main-color-1);
   }
-  .left-col {
-    float: left;
-    @include media-breakpoint-down(md) {
-      float: none;
-    }
-  }
-  .right-col {
-    padding-left: map-get($spacers, 4);
-    margin-left: 5rem;
-    @include media-breakpoint-down(md) {
-      float: none;
-      padding-left: 0;
-      margin-left: 0;
-    }
-    .author-links {
-      float: left;
-      @include media-breakpoint-down(md) {
-        float: none;
-      }
-    }
-  }
+}
+.author-profile__links {
+  @include overflow(auto);
 }

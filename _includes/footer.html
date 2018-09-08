@@ -18,7 +18,9 @@
       {%- if _site_author.bio -%}
         <meta itemprop="description" content="{{ _site_author.bio }}">
       {%- endif -%}
-      {%- include author-links.html author=_site_author -%}
+      <div class="footer__author-links">
+        {%- include author-links.html author=_site_author -%}
+      </div>
     </aside>
     <footer class="site-info">
       {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}

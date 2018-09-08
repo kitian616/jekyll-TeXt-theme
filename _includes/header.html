@@ -6,8 +6,8 @@
   <header class="header">
 {%- endif -%}
     <div class="main">
-      <div class="header__main">
-        <div class="logo">
+      <div class="header__title">
+        <div class="header__brand">
           {%- include svg/logo.svg -%}
           {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
           {%- include snippets/get-nav-url.html path=_paths_root -%}
@@ -27,9 +27,9 @@
             {%- assign _page_url = __return -%}
             {%- include snippets/locale-to-string.html locale=_item.titles -%}
             {%- if _nav_url == _page_url -%}
-              <li class="active"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
+              <li class="navigation__link navigation__link--active"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
             {%- else -%}
-              <li><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
+              <li class="navigation__link"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
             {%- endif -%}
           {%- endfor -%}
           <li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>

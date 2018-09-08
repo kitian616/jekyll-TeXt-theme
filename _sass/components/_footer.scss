@@ -7,17 +7,6 @@
   @include align-items(center);
   height: map-get($layout, footer-height);
   background: $footer-background;
-  & > .main {
-    max-width: 100%;
-  }
-  .author-links {
-    @include overflow(auto);
-    padding-top: 1rem;
-    text-align: center;
-    & > .menu {
-      @include inline-flex();
-    }
-  }
   p {
     color: $footer-text-color;
   }
@@ -38,5 +27,12 @@
         }
       }
     }
+  }
+}
+.footer__author-links {
+  @include overflow(auto);
+  .author-links {
+    padding-top: 1rem;
+    text-align: center;
   }
 }
