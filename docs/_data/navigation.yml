@@ -40,8 +40,16 @@ docs-en:
         url:    /docs/en/writing-posts
       - title:  Markdown Enhancements
         url:    /docs/en/markdown-enhancements
-      - title:  Additional styles
+      - title:  Additional Styles
         url:    /docs/en/additional-styles
+  - title:      Extra
+    children:
+      - title:  Grid
+        url:    /docs/en/grid
+      - title:  Icons
+        url:    /docs/en/icons
+      - title:  Button
+        url:    /docs/en/button
   - title:      Languages
     children:
       - title:  中文
