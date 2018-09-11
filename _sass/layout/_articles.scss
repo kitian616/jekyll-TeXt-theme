@@ -1,0 +1,13 @@
+.layout--articles {
+  margin: map-get($base, vertical-space-lg) 0;
+  .card__header {
+    font-size: map-get($base, font-size);
+  }
+  .card__image {
+    & > .overlay {
+      &, .card__header {
+        font-size: map-get($base, font-size-sm);
+      }
+    }
+  }
+}

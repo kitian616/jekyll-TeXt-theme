@@ -179,8 +179,15 @@ collections:
     output: true
   layouts:
     output: true
+  articles:
+    output: true
 
 defaults:
+  - scope:
+      path: "test"
+    values:
+      articles:
+        excerpt_type: html
   - scope:
       path: ""
       type: posts

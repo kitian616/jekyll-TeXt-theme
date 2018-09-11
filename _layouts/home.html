@@ -1,15 +1,20 @@
 ---
-layout: page
+layout: articles
 titles:
   en: Home
   zh: 主页
   zh-Hans: 主頁
   zh-Hant: 主頁
 show_title: false
+articles:
+  data_source: paginator.posts
+  article_type: BlogPosting
+  show_cover: false
+  show_excerpt: true
+  show_readmore: true
+  show_info: true
 ---
 <div class="layout--home">
-  {%- include article-list.html articles=paginator.posts type='common' article_type='BlogPosting'
-    show_excerpt=true excerpt_type=site.excerpt_type show_readmore=true show_info=true -%}
   {%- include paginator.html -%}
 </div>
 <script>

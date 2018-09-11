@@ -14,18 +14,12 @@
 }
 
 .header--dark {
-  a {
-    @include link-colors($text-color-theme-dark, $main-color-1);
-  }
-  color: $text-color-theme-dark;
+  @extend .text--dark;
   background: rgba(#000, .15);
 }
 
 .header--light {
-  a {
-    @include link-colors($text-color-theme-light, $main-color-1);
-  }
-  color: $text-color-theme-light;
+  @extend .text--light;
   background: rgba(#fff, .15);
 }
 

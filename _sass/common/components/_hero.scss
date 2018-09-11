@@ -1,14 +1,11 @@
 .hero {
   padding: map-get($spacers, 5);
-  padding-bottom: 0;
   background-position: 50% 50%;
   @include media-breakpoint-down(lg) {
     padding: map-get($spacers, 5) map-get($spacers, 3);
-    padding-bottom: 0;
   }
   @include media-breakpoint-down(md) {
     padding: map-get($spacers, 4) map-get($spacers, 3);
-    padding-bottom: 0;
   }
   @include flexbox();
   @include align-items(center);
@@ -55,29 +52,11 @@
 }
 
 .hero--light {
-  color: $text-color-theme-light;
-  h1, h2, h3 {
-    color: $text-color-theme-light-d;
-  }
-  h4, h5 {
-    color: $text-color-theme-light;
-  }
-  h6 {
-    color: $text-color-theme-light-l;
-  }
+  @extend .text--light;
 }
 
 .hero--dark {
-  color: $text-color-theme-dark;
-  h1, h2, h3 {
-    color: $text-color-theme-dark-d;
-  }
-  h4, h5 {
-    color: $text-color-theme-dark;
-  }
-  h6 {
-    color: $text-color-theme-dark-l;
-  }
+  @extend .text--dark;
 }
 
 .hero__content {

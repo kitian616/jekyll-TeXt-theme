@@ -1,3 +1,11 @@
+.article-list {
+  .item__meta {
+    padding: 0 1rem 0 0;
+    font-family: map-get($base, font-family-code);
+    font-size: map-get($base, font-size-sm);
+    white-space: nowrap;
+  }
+}
 .article-list__group-header {
   margin-top: map-get($base, vertical-space) * 2;
 }

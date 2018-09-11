@@ -39,8 +39,8 @@
 
   .page__actions {
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: map-get($spacers, 3);
+    left: map-get($spacers, 3);
     z-index: map-get($z-index, actions);
     display: none;
   }
@@ -61,7 +61,7 @@
     @include transition(transform .4s);
     @include overflow(auto);
     .sidebar-toc {
-      padding: 1rem 1rem 2rem 2rem;
+      padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
     }
   }
 
@@ -79,7 +79,7 @@
 
   .page__aside {
     .toc-aside {
-      padding: 2.5rem 0 1rem 3rem;
+      padding: map-get($spacers, 5) 0 map-get($spacers, 3) map-get($spacers, 5);
     }
   }
 

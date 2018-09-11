@@ -14,6 +14,16 @@
   @include media-breakpoint-down(md) {
     margin-right: 0;
   }
+  @include media-breakpoint-up(md) {
+    & + .item__content {
+      & > :first-child {
+        margin-top: 0;
+        & > :first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
 
 .item__content {
@@ -21,13 +31,7 @@
   min-width: 0;
 }
 
-.item__header {
-  margin: 0 0 map-get($base, vertical-space) * 1.6 0;
-  & > a {
-    @include link-colors($text-color-d, $main-color-1);
-  }
-}
-a.item__header {
+a.item__header, .item__header > a {
   @include link-colors($text-color-d, $main-color-1);
 }
 

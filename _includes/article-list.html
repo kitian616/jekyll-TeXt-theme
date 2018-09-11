@@ -1,6 +1,9 @@
 {%- assign _excerpt_truncate = include.excerpt_truncate | default: 350 -%}
 
-{%- assign _excerpt_type = include.excerpt_type | default: site.data.variables.default.excerpt_type  -%}
+{%- assign _excerpt_type = include.excerpt_type -%}
+
+{%- include snippets/locale-to-string.html locale=site.data.locale.READMORE -%}
+{%- assign _locale_readmore = __return -%}
 
 {%- assign _sorted_list = include.articles -%}
 {%- if include.group_by == 'year' -%}
@@ -11,9 +14,11 @@
 {%- endif -%}
 
 {%- if include.type == 'common' -%}
-<div class="items items--divided">
+<div class="article-list items items--divided">
 {%- elsif include.type == 'brief' -%}
-<div class="items">
+<div class="article-list items">
+{%- elsif include.type == 'grid' -%}
+<div class="article-list grid grid--p-3">
 {%- endif -%}
 
   {%- for _article in _sorted_list -%}
@@ -21,8 +26,10 @@
     {%- include snippets/prepend-baseurl.html path=_article.url -%}
     {%- assign _article_url = __return -%}
 
-    {%- include snippets/locale-to-string.html locale=site.data.locale.READMORE -%}
-    {%- assign _locale_readmore = __return -%}
+    {%- if _article.cover -%}
+      {%- include snippets/get-nav-url.html path=_article.cover -%}
+      {%- assign _article_cover = __return -%}
+    {%- endif -%}
 
     {%- if include.type == 'common' -%}
       {%- if include.article_type == 'BlogPosting' -%}
@@ -86,9 +93,45 @@
       {%- endif -%}
       {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_LIST_DATE_FORMAT -%}
       <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-        <div class="item__content"><span class="item__meta">{{ _article.date | date: __return }}</span><a itemprop="headline" class="item__header" href="{{ _article_url }}">{{ _article.title }}</a></div>
+        <div class="item__content">
+          {%- if include.show_info -%}
+            <span class="item__meta">{{ _article.date | date: __return }}</span>
+          {%- endif -%}
+          <a itemprop="headline" class="item__header" href="{{ _article_url }}">{{ _article.title }}</a></div>
       </li>
-    {%- endif -%}
 
+    {%- elsif include.type == 'grid' -%}
+      {%- if include.size == 'sm' -%}
+        <div class="cell cell--3 cell--md-4 cell--sm-12">
+          <div class="new-card">
+            {%- if _article_cover -%}
+              <div class="card__image">
+                <img class="image" src="{{ _article_cover }}" />
+                <div class="overlay overlay--bottom">
+                  <header>
+                    <a class="card__header" href="{{ _article_url }}">{{ _article.title }}</a>
+                  </header>
+                </div>
+              </div>
+            {%- endif -%}
+            </div>
+        </div>
+      {%- else -%}
+
+        <div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="new-card card--flat">
+            {%- if _article_cover -%}
+              <div class="card__image"><img src="{{ _article_cover }}" /></div>
+            {%- endif -%}
+              <div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="{{ _article_url }}">{{ _article.title }}</a></h2>
+                </header>
+              </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
   {%- endfor -%}
+
 </div>

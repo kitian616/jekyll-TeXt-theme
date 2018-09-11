@@ -1,55 +1,55 @@
-@mixin make-spacing($type, $direction, $spacer, $negative: false) {
+@mixin make-spacing($property, $side, $spacer, $negative: false) {
 
-  $css_type: null;
-  $css_directions: null;
+  $css_property: null;
+  $css_sides: null;
 
-  @if ($type == "m") {
-    $css_type: "margin";
-  } @else if ($type == "p") {
-    $css_type: "padding";
-  }
-
-  @if ($direction == "t") {
-    $css_directions: ("top");
-  }
-  @else if ($direction == "b") {
-    $css_directions: ("bottom");
-  }
-  @else if ($direction == "l") {
-    $css_directions: ("left");
-  }
-  @else if ($direction == "r") {
-    $css_directions: ("right");
-  }
-  @else if ($direction == "x") {
-    $css_directions: ("left", "right");
-  }
-  @else if ($direction == "y") {
-    $css_directions: ("top", "bottom");
-  }
-  @else if ($direction == "") {
-    $css_directions: ("");
+  @if ($property == "m") {
+    $css_property: "margin";
+  } @else if ($property == "p") {
+    $css_property: "padding";
   }
 
-  @each $direction in $css_directions {
+  @if ($side == "t") {
+    $css_sides: ("top");
+  }
+  @else if ($side == "b") {
+    $css_sides: ("bottom");
+  }
+  @else if ($side == "l") {
+    $css_sides: ("left");
+  }
+  @else if ($side == "r") {
+    $css_sides: ("right");
+  }
+  @else if ($side == "x") {
+    $css_sides: ("left", "right");
+  }
+  @else if ($side == "y") {
+    $css_sides: ("top", "bottom");
+  }
+  @else if ($side == "") {
+    $css_sides: ("");
+  }
+
+  @each $side in $css_sides {
     @if ($spacer == "auto") {
-      @if ($direction == "") {
-        #{$css_type}: auto;
+      @if ($side == "") {
+        #{$css_property}: auto;
       } @else {
-        #{$css_type}-#{$direction}: auto;
+        #{$css_property}-#{$side}: auto;
       }
     } @else {
-      @if ($direction == "") {
+      @if ($side == "") {
         @if ($negative == true) {
-          #{$css_type}: - map-get($spacers, $spacer);
+          #{$css_property}: - map-get($spacers, $spacer);
         } @else {
-          #{$css_type}: map-get($spacers, $spacer);
+          #{$css_property}: map-get($spacers, $spacer);
         }
       } @else {
         @if ($negative == true) {
-          #{$css_type}-#{$direction}: - map-get($spacers, $spacer);
+          #{$css_property}-#{$side}: - map-get($spacers, $spacer);
         } @else {
-          #{$css_type}-#{$direction}: map-get($spacers, $spacer);
+          #{$css_property}-#{$side}: map-get($spacers, $spacer);
         }
       }
     }
@@ -57,23 +57,23 @@
 }
 
 @mixin make-spacings() {
-  $types: ("m", "p");
-  $directions: ("t", "b", "l", "r", "x", "y", "");
+  $propertys: ("m", "p");
+  $sides: ("t", "b", "l", "r", "x", "y", "");
   $spacers: (0, 1, 2, 3, 4, 5);
 
-  @each $type in $types {
-    @each $direction in $directions {
+  @each $property in $propertys {
+    @each $side in $sides {
       @each $spacer in $spacers {
-        .#{$type}#{$direction}-#{$spacer} {
-          @include make-spacing($type, $direction, $spacer);
+        .#{$property}#{$side}-#{$spacer} {
+          @include make-spacing($property, $side, $spacer);
         }
       }
     }
   }
 
-  @each $direction in $directions {
-    .m#{$direction}-auto {
-      @include make-spacing("m", $direction, "auto");
+  @each $side in $sides {
+    .m#{$side}-auto {
+      @include make-spacing("m", $side, "auto");
     }
   }
 }

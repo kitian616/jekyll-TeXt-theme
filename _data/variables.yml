@@ -14,7 +14,6 @@ default:
   toc:
     selectors: 'h1,h2,h3'
   sources: bootcdn
-  excerpt_type: text
 
   page:
     mode: normal
@@ -25,6 +24,11 @@ default:
     article_header:
       align: left
       theme: light
+    articles:
+      show_cover: true
+      show_excerpt: false
+      show_readmore: false
+      show_info: false
     show_title: true
     show_edit_on_github: false
     show_date: true
