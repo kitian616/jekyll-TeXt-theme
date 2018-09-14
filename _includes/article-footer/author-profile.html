@@ -6,8 +6,7 @@
   {%- assign _author_itemtype = 'http://schema.org/Person' -%}
 {%- endif -%}
 
-<div itemscope itemtype="{{ _author_itemtype }}" class="author-profile card card--no-shadow item">
-
+<div itemscope itemtype="{{ _author_itemtype }}" class="author-profile card card--flat item">
   {%- if _author.avatar -%}
     {%- if _author.url -%}
     <a href="{{ _author.url }}" class="item__image">

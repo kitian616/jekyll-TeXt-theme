@@ -1,20 +1,5 @@
-@mixin card($has-shadow: default) {
-  @if $has-shadow == default {
-    $has-shadow: true;
-  }
-  padding: .5rem 1rem;
-  border-radius: map-get($base, border-radius);
-  @if $has-shadow {
-    @include box-shadow();
-  }
-}
 
 .card {
-  @include card();
-}
-
-
-.new-card {
   max-width: 18rem;
   border-radius: map-get($base, border-radius);
   @include box-shadow();
@@ -30,7 +15,7 @@
 }
 
 .cell {
-  & > .new-card {
+  & > .card {
     max-width: unset;
   }
 }

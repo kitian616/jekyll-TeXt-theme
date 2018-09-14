@@ -44,12 +44,22 @@ docs-en:
         url:    /docs/en/additional-styles
   - title:      Extra
     children:
+      - title:  Spacing
+        url:    /docs/en/spacing
       - title:  Grid
         url:    /docs/en/grid
       - title:  Icons
         url:    /docs/en/icons
+      - title:  Image
+        url:    /docs/en/image
       - title:  Button
         url:    /docs/en/button
+      - title:  Item
+        url:    /docs/en/item
+      - title:  Card
+        url:    /docs/en/card
+      - title:  Hero
+        url:    /docs/en/hero
   - title:      Languages
     children:
       - title:  中文

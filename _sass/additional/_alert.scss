@@ -1,25 +1,29 @@
 .article__content {
   p.success {
-    @include card(false);
+    padding: .5rem 1rem;
     background-color: rgba($green, .1);
     border: 1px solid $green;
+    border-radius: map-get($base, border-radius);
   }
 
   p.info {
-    @include card(false);
+    padding: .5rem 1rem;
     background-color: rgba($blue, .1);
     border: 1px solid $blue;
+    border-radius: map-get($base, border-radius);
   }
 
   p.warning {
-    @include card(false);
+    padding: .5rem 1rem;
     background-color: rgba($yellow, .1);
     border: 1px solid $yellow;
+    border-radius: map-get($base, border-radius);
   }
 
   p.error {
-    @include card(false);
+    padding: .5rem 1rem;
     background-color: rgba($red, .1);
     border: 1px solid $red;
+    border-radius: map-get($base, border-radius);
   }
 }

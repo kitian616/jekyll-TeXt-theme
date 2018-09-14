@@ -13,7 +13,7 @@
   {%- assign _sorted_list = _sorted_list | reverse -%}
 {%- endif -%}
 
-{%- if include.type == 'common' -%}
+{%- if include.type == 'item' -%}
 <div class="article-list items items--divided">
 {%- elsif include.type == 'brief' -%}
 <div class="article-list items">
@@ -31,7 +31,7 @@
       {%- assign _article_cover = __return -%}
     {%- endif -%}
 
-    {%- if include.type == 'common' -%}
+    {%- if include.type == 'item' -%}
       {%- if include.article_type == 'BlogPosting' -%}
         <article class="item" itemscope itemtype="http://schema.org/BlogPosting">
       {%- else -%}
@@ -103,7 +103,7 @@
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
         <div class="cell cell--3 cell--md-4 cell--sm-12">
-          <div class="new-card">
+          <div class="card">
             {%- if _article_cover -%}
               <div class="card__image">
                 <img class="image" src="{{ _article_cover }}" />
@@ -119,7 +119,7 @@
       {%- else -%}
 
         <div class="cell cell--4 cell--md-6 cell--sm-12">
-          <div class="new-card card--flat">
+          <div class="card card--flat">
             {%- if _article_cover -%}
               <div class="card__image"><img src="{{ _article_cover }}" /></div>
             {%- endif -%}

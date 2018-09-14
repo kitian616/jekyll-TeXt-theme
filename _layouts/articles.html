@@ -20,6 +20,9 @@ layout: page
         {%- assign _articles = layout -%}
       {%- when 'paginator' -%}
         {%- assign _articles = paginator -%}
+      {%- else -%}
+        {%- assign _articles = site[_key] -%}
+      {%- else -%}
     {%- endcase -%}
   {%- else -%}
     {%- assign _articles = _articles[_key] -%}
@@ -72,7 +75,7 @@ layout: page
       {%- assign _cover_size = page.articles.cover_size | default: layout.articles.cover_size -%}
       {%- assign _excerpt_type = page.articles.excerpt_type | default: layout.articles.excerpt_type -%}
 
-      {%- include article-list.html articles=_articles type='common'
+      {%- include article-list.html articles=_articles type='item'
         article_type=_article_type
         show_cover=_show_cover cover_size=_cover_size
         show_excerpt=_show_excerpt excerpt_type=_excerpt_type
