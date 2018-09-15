@@ -10,10 +10,10 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Layout - Article Header Overlay Background Image (Immersive + Translucent Header) - TeXt Theme</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Item - TeXt Theme</title>
 
-<meta name="description" content="A post has an article header overlay with a image in immersive mode with a translucent header.">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/layouts/article-header-overlay-background-image-immersive-translucent-header.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
+<meta name="description" content="Content            Lenna                      Lenna or Lena is the name given to a standard test image widely used in the field of image processing since 197...">
+<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/en/item"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
@@ -233,13 +233,13 @@
         font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
-        chart: 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
         gitalk: {
           js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
           css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
         },
-        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
-        mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
       },
       site: {
         toc: {
@@ -255,10 +255,18 @@
 </script></head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main page__main--immersive">
+      <div class="layout--page layout--page--sidebar clearfix js-page-root">
+  <div class="page__actions">
+    <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
+      <i class="fas fa-bars icon--show"></i>
+    </div>
+  </div>
+  <div class="page__mask js-sidebar-hide"></div>
+
+  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/structure">Structure</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/update-form-1-to-2">Update form 1.x to 2.x</a></li><li class="toc-h1">Customization</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/navigation">Navigation</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/layouts">Layouts</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/logo-and-favicon">Logo and Favicon</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/authors">Authors</a></li><li class="toc-h1">Content</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/markdown-enhancements">Markdown Enhancements</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/additional-styles">Additional Styles</a></li><li class="toc-h1">Extra</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/spacing">Spacing</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/grid">Grid</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/icons">Icons</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/image">Image</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/button">Button</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/item">Item</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/card">Card</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/hero">Hero</a></li><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">中文</a></li></ul></div></div><div class="page__main js-page-main has-aside">
 
     <div class="page__main-inner">
-      <div></div><div class="page__header"><header class="header header--dark"><div class="main">
+      <div></div><div class="page__header"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -275,48 +283,194 @@
         </ul>
       </nav></div>
   </header>
-</div><div class="page__content"><div class="article__header--overlay"><div class="hero hero--dark overlay" style="background-image:linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4)),url(/jekyll-TeXt-theme/docs/assets/images/cover3.jpg);background-color:#203028;"><div class="hero__content"><div class ="main"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Sep 08, 2018</span>
-            </li></ul></div><div class="article__header"><header><h1>Layout - Article Header Overlay Background Image (Immersive + Translucent Header)</h1></header></div><p class="overlay__excerpt">A post has an article header overlay with a image in immersive mode with a translucent header.
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-</p></div></div>
-              </div>
-          </div><div class ="main"><div class="grid grid--reverse">
+             <div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-             <div class="col-aside js-col-aside"></div>
+            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Item</h1></header><span class="split-space">&nbsp;</span>
+          <a class="edit-on-github"
+            title="Edit on Github"
+            href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/4.6-item.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Item"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-15T22:27:06+08:00"><div class="js-article-content"><div class="layout--article">
 
-            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Layout - Article Header Overlay Background Image (Immersive + Translucent Header)"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-08T21:14:53+08:00"><div class="js-article-content"><div class="layout--article">
+  <div class="article__content" itemprop="articleBody"><h2 id="content">Content</h2>
 
-  <div class="article__content" itemprop="articleBody"><p>A post has an article header overlay with a image in immersive mode with a translucent header.</p>
+<div class="item">
+  <div class="item__content">
+    <div class="item__header">
+      <h4>Lenna</h4>
+    </div>
+    <div class="item__description">
+      <p>
+        Lenna or Lena is the name given to a standard test image widely used in the field of image processing since 1973.
+      </p>
+    </div>
+  </div>
+</div>
 
-<!--more-->
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Lenna<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__description"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
 
-<style>
-  .page__header .logo path {
-    fill: rgba(255, 255, 255, .95);
-  }
-</style>
+<h2 id="image-and-content">Image and Content</h2>
 
-<p><strong>front matter:</strong></p>
+<div class="item">
+  <div class="item__image">
+    <img class="image" src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg" />
+  </div>
+  <div class="item__content">
+    <div class="item__header">
+      <h4>Lenna</h4>
+    </div>
+  </div>
+</div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: article
-title: Layout - Article Header Overlay Background Image (Immersive + Translucent Header)
-mode: immersive
-header:
-  type: translucent
-  theme: dark
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#203028'
-  background_image:
-    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
-    src: /docs/assets/images/cover3.jpg
----
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Lenna<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="item">
+  <div class="item__image">
+    <img class="image" src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg" />
+  </div>
+  <div class="item__content">
+    <div class="item__header">
+      <h4>Lenna</h4>
+    </div>
+    <div class="item__description">
+      <p>
+        Lenna or Lena is the name given to a standard test image widely used in the field of image processing since 1973.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Lenna<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__description"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="image-size">Image Size</h2>
+
+<div class="item">
+  <div class="item__image">
+    <img class="image image--xs" src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg" />
+  </div>
+  <div class="item__content">
+    <div class="item__header">
+      <h4>Lenna</h4>
+    </div>
+  </div>
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image image--xs"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Lenna<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="item">
+  <div class="item__image">
+    <img class="image image--sm" src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg" />
+  </div>
+  <div class="item__content">
+    <div class="item__header">
+      <h4>Lenna</h4>
+    </div>
+    <div class="item__description">
+      <p>
+        Lenna or Lena is the name given to a standard test image widely used in the field of image processing since 1973.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image image--sm"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Lenna<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__description"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="item">
+  <div class="item__image">
+    <img class="image image--lg" src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg" />
+  </div>
+  <div class="item__content">
+    <div class="item__header">
+      <h4>Lenna</h4>
+    </div>
+    <div class="item__description">
+      <p>
+        Lenna or Lena is the name given to a standard test image widely used in the field of image processing since 1973.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image image--lg"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Lenna<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item__description"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-08T21:14:53+08:00"><!-- this will show at every article content's bottom --></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-fill-immersive-translucent-header.html">Layout - Article Header Overlay Background Fill (Immersive + Translucent Header)</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/layouts/article-header-cover-image-immersive-translucent-header.html">Layout - Article Header Image (Immersive + Translucent Header)</a></div></div></div>
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-15T22:27:06+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+    <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+        <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/docs/en/button">Button</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/docs/en/card">Card</a></div></div></div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -332,7 +486,7 @@ article_header:
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
@@ -350,7 +504,7 @@ article_header:
 				repo: 'gitalk-demo',
 				owner: 'kitian616',
 				admin: ['kitian616'],
-				id: 'layout-article-header-overlay-background-image-ITH'
+				id: 'docs-item'
 			});
 			gitalk.render('js-gitalk-container');
 		});
@@ -747,7 +901,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       _options.scrollTarget && (scrollTarget = _options.scrollTarget);
       _options.scroller && (scroller = _options.scroller);
       _options.disabled !== undefined && (disabled = _options.disabled);
-      $headings = $(container).find(selectors);
+      $headings = $(container).find(selectors).filter('[id]');
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
     }
@@ -841,8 +995,81 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   });
 })();/*(function () {
 
-})();*/</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
+})();*/</script><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageRoot = $('.js-page-root');
+    var $sidebarShow = $('.js-sidebar-show');
+    var $sidebarHide = $('.js-sidebar-hide');
+    $sidebarShow.on('click', function() {
+      $pageRoot.addClass('show-sidebar');
+    });
+    $sidebarHide.on('click', function() {
+      $pageRoot.removeClass('show-sidebar');
+    });
+  });
+})();</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();</script><script>
+  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
       $this = $(this);
@@ -858,8 +1085,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 		inlineMath: [['$','$'], ['\\(','\\)']]
 	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
 </script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
+  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
     mermaid.initialize({
       startOnLoad: true
     });

@@ -234,13 +234,13 @@
         font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
-        chart: 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
         gitalk: {
           js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
           css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
         },
-        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
-        mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
       },
       site: {
         toc: {
@@ -280,34 +280,139 @@
 
              <div class="col-aside js-col-aside"></div>
 
-            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Samples</h1></header></div><meta itemprop="headline" content="Samples"><meta itemprop="author" content="TeXt"/><div class="js-article-content"><div class="mb-4"><div class="items items--divided"><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-single.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/single.html">Layout - Single</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-aside.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/aside.html">Layout - Aside</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-sidebar.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/sidebar.html">Layout - Sidebar</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-fill.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-fill.html">Layout - Article Header Overlay Background Fill</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-image.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-image.html">Layout - Article Header Overlay Background Image</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-cover-image.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-cover-image.html">Layout - Article Header Image</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-fill-immersive-translucent-header.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-fill-immersive-translucent-header.html">Layout - Article Header Overlay Background Fill (Immersive + Translucent Header)</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-overlay-background-image-immersive-translucent-header.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-overlay-background-image-immersive-translucent-header.html">Layout - Article Header Overlay Background Image (Immersive + Translucent Header)</a></h2></header>
-          <div class="item__description"></div></div>
-      </article><article class="item"><div class="item__image"><img class="image image--sm" src="/jekyll-TeXt-theme/docs/assets/images/axure/layout-article-header-cover-image-immersive-translucent-header.png" /></div><div class="item__content">
-          <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/layouts/article-header-cover-image-immersive-translucent-header.html">Layout - Article Header Image (Immersive + Translucent Header)</a></h2></header>
-          <div class="item__description"></div></div>
-      </article></div></div></div><section class="page__comments"></section></article>
+            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Samples</h1></header></div><meta itemprop="headline" content="Samples"><meta itemprop="author" content="TeXt"/><div class="js-article-content"><div class="layout--articles">
+  <div class="my-5">
+    <h2 id="page-layout">Page Layout</h2><div class="article-list grid grid--p-3"><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-single.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/single.html">Page - Single</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-aside.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/aside.html">Page - Aside</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-sidebar.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/sidebar.html">Page - Sidebar</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-article-header-overlay-background-fill.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-fill.html">Page - Article Header Overlay Background Fill</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-article-header-overlay-background-image.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-image.html">Page - Article Header Overlay Background Image</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-article-header-cover-image.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/article-header-cover-image.html">Page - Article Header Image</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-article-header-overlay-background-fill-immersive-translucent-header.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-fill-immersive-translucent-header.html">Page - Article Header Overlay Background Fill (Immersive + Translucent Header)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-article-header-overlay-background-image-immersive-translucent-header.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-image-immersive-translucent-header.html">Page - Article Header Overlay Background Image (Immersive + Translucent Header)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-article-header-cover-image-immersive-translucent-header.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/page/article-header-cover-image-immersive-translucent-header.html">Page - Article Header Image (Immersive + Translucent Header)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div></div></div>
+
+  <div class="my-5">
+    <h2 id="articles-layout">Articles Layout</h2><div class="article-list grid grid--p-3"><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-brief.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/brief.html">Articles - Brief</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-brief-info.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/brief-info.html">Articles - Brief (Info)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-item-excerpt-readmore-info.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/item-excerpt-readmore-info.html">Articles - Item (Excerpt + Read More + Info)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-item-cover.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/item-cover.html">Articles - Item (Cover)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-item-cover-excerpt.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/item-cover-excerpt.html">Articles - Item (Cover + Excerpt)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-item-cover-excerpt-readmore.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/item-cover-excerpt-readmore.html">Articles - Item (Cover + Excerpt + Read More)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-item-cover-excerpt-readmore-info.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/item-cover-excerpt-readmore-info.html">Articles - Item (Cover + Excerpt + Read More + Info)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-grid.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/grid.html">Articles - Grid</a></h2>
+                </header>
+              </div>
+          </div>
+        </div><div class="cell cell--4 cell--md-6 cell--sm-12">
+          <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/articles-grid-small.png" /></div><div class="card__content">
+                <header>
+                  <h2 class="card__header"><a href="/jekyll-TeXt-theme/articles/grid-small.html">Articles - Grid (Small Size)</a></h2>
+                </header>
+              </div>
+          </div>
+        </div></div></div>
+</div></div><section class="page__comments"></section></article>
             </div>
           </div></div></div>
 
@@ -700,7 +805,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       _options.scrollTarget && (scrollTarget = _options.scrollTarget);
       _options.scroller && (scroller = _options.scroller);
       _options.disabled !== undefined && (disabled = _options.disabled);
-      $headings = $(container).find(selectors);
+      $headings = $(container).find(selectors).filter('[id]');
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
     }
@@ -795,7 +900,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 })();/*(function () {
 
 })();*/</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
+  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
       $this = $(this);
@@ -811,8 +916,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 		inlineMath: [['$','$'], ['\\(','\\)']]
 	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
 </script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
+  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
     mermaid.initialize({
       startOnLoad: true
     });

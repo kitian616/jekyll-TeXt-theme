@@ -233,13 +233,13 @@
         font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
-        chart: 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
         gitalk: {
           js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
           css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
         },
-        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
-        mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
       },
       site: {
         toc: {
@@ -352,7 +352,7 @@ This **does __not__ work either**.
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
@@ -767,7 +767,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       _options.scrollTarget && (scrollTarget = _options.scrollTarget);
       _options.scroller && (scroller = _options.scroller);
       _options.disabled !== undefined && (disabled = _options.disabled);
-      $headings = $(container).find(selectors);
+      $headings = $(container).find(selectors).filter('[id]');
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
     }
@@ -922,7 +922,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     window.pageAsideAffix = affix;
   });
 })();</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
+  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
       $this = $(this);
@@ -938,8 +938,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 		inlineMath: [['$','$'], ['\\(','\\)']]
 	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
 </script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
+  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
     mermaid.initialize({
       startOnLoad: true
     });

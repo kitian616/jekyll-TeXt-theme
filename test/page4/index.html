@@ -10,7 +10,7 @@
 		
 	</script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Blog - TeXt Theme</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Home - TeXt Theme</title>
 
 <meta name="description" content="A customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 ">
@@ -234,13 +234,13 @@
         font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
-        chart: 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
         gitalk: {
           js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
           css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
         },
-        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
-        mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
       },
       site: {
         toc: {
@@ -280,7 +280,7 @@
 
              <div class="col-aside js-col-aside"></div>
 
-            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header style="display:none;"><h1>Blog</h1></header></div><meta itemprop="headline" content="Blog"><meta itemprop="author" content="TeXt"/><div class="js-article-content"><div class="layout--home"><div class="items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header style="display:none;"><h1>Home</h1></header></div><meta itemprop="headline" content="Home"><meta itemprop="author" content="TeXt"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><h2 itemprop="headline" class="item__header"><a href="/jekyll-TeXt-theme/post/2015/01/01/article-with-long-toc.html">Test - Article with Long TOC</a></h2></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody"><p>Article with long TOC.</p>
 
@@ -293,7 +293,7 @@
             </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 01, 2015</span>
             </li><li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20150101">0</span> views</li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2015-01-01T00:00:00+08:00">
     <meta itemprop="keywords" content="Test,English"></div>
-      </article></div><div class="pagination"><p>25 post articles, 4 pages.</p>
+      </article></div></div><div class="layout--home"><div class="pagination"><p>25 post articles, 4 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/jekyll-TeXt-theme/test/page3">
             <i class="fas fa-angle-left"></i>
@@ -707,7 +707,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       _options.scrollTarget && (scrollTarget = _options.scrollTarget);
       _options.scroller && (scroller = _options.scroller);
       _options.disabled !== undefined && (disabled = _options.disabled);
-      $headings = $(container).find(selectors);
+      $headings = $(container).find(selectors).filter('[id]');
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
     }
@@ -802,7 +802,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 })();/*(function () {
 
 })();*/</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
+  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
       $this = $(this);
@@ -818,8 +818,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 		inlineMath: [['$','$'], ['\\(','\\)']]
 	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
 </script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
+  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
     mermaid.initialize({
       startOnLoad: true
     });

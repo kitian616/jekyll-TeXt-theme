@@ -12,7 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>TeXt - Additional Styles - TeXt Theme</title>
 
-<meta name="description" content="Success!                     CLICK ME CLICK ME CLICK ME CLICK ME">
+<meta name="description" content="Success!success info warning error                     CLICK ME CLICK ME CLICK ME CLICK ME">
 <link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
@@ -233,13 +233,13 @@
         font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
-        chart: 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js',
+        chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
         gitalk: {
           js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
           css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
         },
-        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML',
-        mermaid: 'https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js'
+        mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+        mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
       },
       site: {
         toc: {
@@ -295,6 +295,8 @@
 
   <div class="article__content" itemprop="articleBody"><p class="success">Success!</p>
 
+<p><code class="success highlighter-rouge">success</code> <code class="info highlighter-rouge">info</code> <code class="warning highlighter-rouge">warning</code> <code class="error highlighter-rouge">error</code></p>
+
 <div class="grid-container">
 <div class="grid grid--p-3">
 <div class="cell cell--4 cell--md-5 cell--sm-12">
@@ -335,20 +337,15 @@
 
 <p class="error">Error Text.</p>
 
-<p><strong>markdown:</strong></p>
+<h2 id="tag">Tag</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Success Text.
-{:.success}
-</code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Info Text.
-{:.info}
-</code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Warning Text.
-{:.warning}
-</code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error Text.
-{:.error}
-</code></pre></div></div>
+<p><code class="success highlighter-rouge">success</code></p>
+
+<p><code class="info highlighter-rouge">info</code></p>
+
+<p><code class="warning highlighter-rouge">warning</code></p>
+
+<p><code class="error highlighter-rouge">error</code></p>
 
 <h2 id="photo-frame">Photo Frame</h2>
 
@@ -425,16 +422,36 @@
   </thead>
   <tbody>
     <tr>
-      <td>Icons</td>
-      <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/grid">Doc</a></td>
+      <td>Spacing</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/spacing">Doc</a></td>
     </tr>
     <tr>
       <td>Grid</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/grid">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Icons</td>
       <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/icons">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/image">Doc</a></td>
     </tr>
     <tr>
       <td>Button</td>
       <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/button">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Item</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/item">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Card</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/card">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Hero</td>
+      <td><a href="https://tianqi.name/jekyll-TeXt-theme/docs/en/hero">Doc</a></td>
     </tr>
   </tbody>
 </table>
@@ -462,7 +479,7 @@
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
@@ -877,7 +894,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       _options.scrollTarget && (scrollTarget = _options.scrollTarget);
       _options.scroller && (scroller = _options.scroller);
       _options.disabled !== undefined && (disabled = _options.disabled);
-      $headings = $(container).find(selectors);
+      $headings = $(container).find(selectors).filter('[id]');
       $scrollTarget = $(scrollTarget);
       $scroller = $(scroller);
     }
@@ -1032,7 +1049,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     window.pageAsideAffix = affix;
   });
 })();</script><script>
-  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.1/Chart.bundle.min.js'], function() {
+  window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
       $this = $(this);
@@ -1048,8 +1065,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 		inlineMath: [['$','$'], ['\\(','\\)']]
 	}};_config.TeX = { equationNumbers: { autoNumber: "all" } };MathJax.Hub.Config(_config);
 </script>
-<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
-  window.Lazyload.js('https://cdn.bootcss.com/mermaid/7.1.2/mermaid.min.js', function() {
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script>
+  window.Lazyload.js('https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js', function() {
     mermaid.initialize({
       startOnLoad: true
     });
