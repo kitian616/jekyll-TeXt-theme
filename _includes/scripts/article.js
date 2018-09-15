@@ -12,7 +12,7 @@
         $this = $(this);
         $this.attr('data-lang', $this.find('code').attr('data-lang'));
       });
-      $articleContent.find('h1, h2, h3, h4, h5, h6').each(function() {
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
         $this = $(this);
         $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
