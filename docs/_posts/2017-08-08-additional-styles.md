@@ -28,16 +28,16 @@ Success!
 <div class="grid-container">
 <div class="grid grid--p-1">
 <div class="cell cell--2 cell--md-4 cell--sm-6">
-<div class="button button--error button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
+<div class="button button--success button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
 </div>
 <div class="cell cell--2 cell--md-4 cell--sm-6">
 <div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
 </div>
 <div class="cell cell--2 cell--md-4 cell--sm-6">
-<div class="button button--success button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
+<div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
 <div class="cell cell--2 cell--md-4 cell--sm-6">
-<div class="button button--outline-warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
+<div class="button button--outline-error button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
 </div>
 </div>
@@ -68,7 +68,7 @@ Error Text.
 
 `error`{:.error}
 
-## Photo Frame
+## Image
 
 | `Border` | `Shadow` |
 | ---- | ---- |
