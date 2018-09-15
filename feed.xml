@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-09-15T22:27:06+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-09-15T23:00:08+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;success highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;info highlighter-rouge&quot;&gt;info&lt;/code&gt; &lt;code class=&quot;warning highlighter-rouge&quot;&gt;warning&lt;/code&gt; &lt;code class=&quot;error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
@@ -17,16 +17,16 @@
 &lt;div class=&quot;grid-container&quot;&gt;
 &lt;div class=&quot;grid grid--p-1&quot;&gt;
 &lt;div class=&quot;cell cell--2 cell--md-4 cell--sm-6&quot;&gt;
-&lt;div class=&quot;button button--error button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
+&lt;div class=&quot;button button--success button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;cell cell--2 cell--md-4 cell--sm-6&quot;&gt;
 &lt;div class=&quot;button button--outline-info button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;cell cell--2 cell--md-4 cell--sm-6&quot;&gt;
-&lt;div class=&quot;button button--success button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
+&lt;div class=&quot;button button--warning button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;cell cell--2 cell--md-4 cell--sm-6&quot;&gt;
-&lt;div class=&quot;button button--outline-warning button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
+&lt;div class=&quot;button button--outline-error button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
