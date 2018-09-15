@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-09-16T00:51:33+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-09-16T00:59:47+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;success highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;info highlighter-rouge&quot;&gt;info&lt;/code&gt; &lt;code class=&quot;warning highlighter-rouge&quot;&gt;warning&lt;/code&gt; &lt;code class=&quot;error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
@@ -6,10 +6,10 @@
 &lt;div class=&quot;grid-container&quot;&gt;
 &lt;div class=&quot;grid grid--p-3&quot;&gt;
 &lt;div class=&quot;cell cell--4 cell--md-5 cell--sm-12&quot;&gt;
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class=&quot;cell cell--4 cell--md-5 cell--sm-12&quot;&gt;
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -64,8 +64,8 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_border&quot; class=&quot;border&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_shadow&quot; class=&quot;shadow&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_border&quot; class=&quot;border&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_shadow&quot; class=&quot;shadow&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -79,8 +79,8 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_circle&quot; class=&quot;circle&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_circle&quot; class=&quot;circle&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -96,8 +96,8 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_border+rounded&quot; class=&quot;border rounded&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_border+rounded&quot; class=&quot;border rounded&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -111,8 +111,8 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_rounded+shadow&quot; class=&quot;circle rounded shadow&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/peppers.png&quot; alt=&quot;Peppers&quot; title=&quot;Peppers_circle+border+shadow&quot; class=&quot;circle border shadow&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_rounded+shadow&quot; class=&quot;circle rounded shadow&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png&quot; alt=&quot;Lake&quot; title=&quot;Lake_circle+border+shadow&quot; class=&quot;circle border shadow&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
