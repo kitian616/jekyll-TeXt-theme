@@ -100,7 +100,7 @@ paginate_path: /test/page:num # don't change this unless for special need
 
 ## => Sources
 ##############################
-sources: # bootcdn (default), unpkg
+sources: unpkg # bootcdn (default), unpkg
 
 
 ## => Comments
@@ -176,7 +176,7 @@ collections_dir: docs
 collections:
   docs:
     output: true
-  layouts:
+  page:
     output: true
   articles:
     output: true

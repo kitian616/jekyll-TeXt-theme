@@ -11,6 +11,8 @@ category: post
 Success!
 {:.success}
 
+`success`{:.success} `info`{:.info} `warning`{:.warning} `error`{:.error}
+
 
 <div class="grid-container">
 <div class="grid grid--p-3">
@@ -56,19 +58,15 @@ Warning Text.
 Error Text.
 {:.error}
 
-**markdown:**
+## Tag
 
-    Success Text.
-    {:.success}
-^
-    Info Text.
-    {:.info}
-^
-    Warning Text.
-    {:.warning}
-^
-    Error Text.
-    {:.error}
+`success`{:.success}
+
+`info`{:.info}
+
+`warning`{:.warning}
+
+`error`{:.error}
 
 ## Photo Frame
 
@@ -95,6 +93,11 @@ Error Text.
 
 | Name | Description |
 | ---- | ---- |
-| Icons | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/grid) |
-| Grid | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/icons) |
+| Spacing | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/spacing) |
+| Grid | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/grid) |
+| Icons | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/icons) |
+| Image | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/image) |
 | Button | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/button) |
+| Item | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/item) |
+| Card | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/card) |
+| Hero | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/hero) |

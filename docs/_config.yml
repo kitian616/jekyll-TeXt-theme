@@ -177,7 +177,7 @@ collections_dir: docs
 collections:
   docs:
     output: true
-  layouts:
+  page:
     output: true
   articles:
     output: true

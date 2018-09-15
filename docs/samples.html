@@ -3,6 +3,14 @@ layout: page
 title: Samples
 permalink: /samples.html
 ---
-<div class="mb-4">
-  {%- include article-list.html articles=site.layouts type='common' show_cover=true cover_size='sm' -%}
+<div class="layout--articles">
+  <div class="my-5">
+    <h2 id="page-layout">Page Layout</h2>
+    {%- include article-list.html articles=site.page type='grid' -%}
+  </div>
+
+  <div class="my-5">
+    <h2 id="articles-layout">Articles Layout</h2>
+    {%- include article-list.html articles=site.articles type='grid' -%}
+  </div>
 </div>
