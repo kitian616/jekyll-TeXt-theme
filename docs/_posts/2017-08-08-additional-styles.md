@@ -17,10 +17,10 @@ Success!
 <div class="grid-container">
 <div class="grid grid--p-3">
 <div class="cell cell--4 cell--md-5 cell--sm-12" markdown="1">
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_rounded"){:.rounded}
+![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_rounded"){:.rounded}
 </div>
 <div class="cell cell--4 cell--md-5 cell--sm-12" markdown="1">
-![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_circle+shadow"){:.circle.shadow}
+![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_circle+shadow"){:.circle.shadow}
 </div>
 </div>
 </div>
@@ -72,22 +72,22 @@ Error Text.
 
 | `Border` | `Shadow` |
 | ---- | ---- |
-| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_border"){:.border} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_shadow"){:.shadow} |
+| ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_border"){:.border} | ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_shadow"){:.shadow} |
 
 
 | `Rounded` | `Circle` |
 | ---- | ---- |
-| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_rounded"){:.rounded} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_circle"){:.circle} |
+| ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_rounded"){:.rounded} | ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_circle"){:.circle} |
 
 ### Mixture
 
 | `Border+Rounded` | `Circle+Shadow` |
 | ---- | ---- |
-| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_border+rounded"){:.border.rounded} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_circle+shadow"){:.circle.shadow} |
+| ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_border+rounded"){:.border.rounded} | ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_circle+shadow"){:.circle.shadow} |
 
 | `Rounded+Shadow` | `Circle+Border+Shadow` |
 | ---- | ---- |
-| ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_rounded+shadow"){:.circle.rounded.shadow} | ![Lenna](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lenna.jpg "Lenna_circle+border+shadow"){:.circle.border.shadow}
+| ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_rounded+shadow"){:.circle.rounded.shadow} | ![Lake](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/lake.png "Lake_circle+border+shadow"){:.circle.border.shadow}
 
 ## Extra
 
