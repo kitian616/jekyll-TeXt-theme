@@ -78,18 +78,26 @@ layout: base
           {%- assign _article_header_align = page.article_header.align | default: layout.article_header.align | default: site.data.variables.default.page.article_header.align -%}
           {%- assign _article_header_theme = page.article_header.theme | default: layout.article_header.theme | default: site.data.variables.default.page.article_header.theme -%}
 
+          {%- if page.article_header.background_image.src -%}
+            {%- assign _header_background_image_src = page.article_header.background_image.src -%}
+          {%- elsif page.article_header.background_image != false and page.cover -%}
+            {%- assign _header_background_image_src = page.cover -%}
+          {%- endif -%}
+
           {%- if page.article_header.background_image.gradient -%}
             {%- assign _header_background_image = page.article_header.background_image.gradient -%}
-            {%- if page.article_header.background_image.src -%}
+            {%- if _header_background_image_src -%}
               {%- assign _header_background_image = _header_background_image | append: ',' -%}
             {%- endif -%}
           {%- endif -%}
-          {%- if page.article_header.background_image.src -%}
-            {%- include snippets/get-nav-url.html path=page.article_header.background_image.src -%}
+
+          {%- if _header_background_image_src -%}
+            {%- include snippets/get-nav-url.html path=_header_background_image_src -%}
             {%- assign _header_background_image_src = __return -%}
             {%- assign _header_background_image = _header_background_image
               | append: 'url(' | append: _header_background_image_src  | append: ')'-%}
           {%- endif -%}
+
           {%- assign _header_style = 'background-image:' | append: _header_background_image | append: ';' -%}
 
           {%- if page.article_header.background_color -%}
