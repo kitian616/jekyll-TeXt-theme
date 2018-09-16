@@ -229,6 +229,7 @@
 })();</script><script>
   (function() {
     var TEXT_VARIABLES = {
+      version: '2.2.0',
       sources: {
         font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
@@ -291,7 +292,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.3-layouts.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="布局"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-16T18:12:14+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="布局"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-16T22:08:02+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><pre><code class="language-mermaid">graph TB;
     NONE[none]
@@ -491,21 +492,64 @@
     <tr>
       <td><strong>background_color</strong></td>
       <td><code class="highlighter-rouge">!!str</code></td>
-      <td>当 type 为 <code class="highlighter-rouge">overlay</code> 时有效。</td>
+      <td>当 type 为 <code class="highlighter-rouge">overlay</code> 时有效。当设置的背景色较深时，你需要设置 <code class="highlighter-rouge">theme</code> 为 dark。</td>
     </tr>
     <tr>
       <td><strong>background_image</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
-      <td>当 type 为 <code class="highlighter-rouge">overlay</code> 时有效。</td>
+      <td><code class="highlighter-rouge">!!map</code></td>
+      <td>当 type 为 <code class="highlighter-rouge">overlay</code> 时有效，设置为 <code class="highlighter-rouge">false</code> 可覆盖 <code class="highlighter-rouge">cover</code> 禁止背景图片。</td>
     </tr>
     <tr>
       <td><strong>image</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
+      <td><code class="highlighter-rouge">!!map</code></td>
       <td>当 type 为 <code class="highlighter-rouge">cover</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>actions</strong></td>
       <td><code class="highlighter-rouge">!!seq</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="article_headerbackground_image">article_header.background_image</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Option Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>gradient</strong></td>
+      <td><code class="highlighter-rouge">!!str</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>src</strong></td>
+      <td><code class="highlighter-rouge">!!str</code></td>
+      <td>默认为 <code class="highlighter-rouge">cover</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="article_headerimage">article_header.image</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Option Values</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>src</strong></td>
+      <td><code class="highlighter-rouge">!!str</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -665,7 +709,7 @@
   </tbody>
 </table>
 
-<h4 id="excerpt_type">excerpt_type</h4>
+<h3 id="articlesexcerpt_type">articles.excerpt_type</h3>
 
 <p>文章列表中文章项的摘要有两种模式——TEXT 模式和 HTML 模式。</p>
 
@@ -729,7 +773,7 @@
 <p>继承于 Page 布局。</p>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-16T18:12:14+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-16T22:08:02+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> 许可协议。
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
