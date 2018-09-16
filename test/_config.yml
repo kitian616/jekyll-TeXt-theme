@@ -153,7 +153,7 @@ permalink   : date
 
 exclude:
   - CHANGELOG.md
-  - CHECKLIST.md
+  - HOW_TO_RELEASE.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
