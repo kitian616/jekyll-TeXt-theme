@@ -1,5 +1,20 @@
 # Change Log
 
+## 2.2.0 (2018-09-16)
+
+### Enhancements
+
+- `article_header` config for Page Layout
+- Articles Layout
+- New grid system
+- Image, card, item and hero components
+- Tag additional style
+- chart.js update to 2.7.2, mathjax update to 2.7.4 mermaid update to 8.0.0-rc.8
+
+### Bug Fixes
+
+- replace Lenna example image
+
 ## 2.1.0 (2018-08-26)
 
 ### Enhancements
@@ -9,7 +24,7 @@
 
 ### Bug Fixes
 
-- Google analytics may not work, use gtag.js.
+- Google analytics may not work, use gtag.js
 
 ## 2.0.2 (2018-07-29)
 
@@ -109,7 +124,7 @@ Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jeky
 ### Enhancements
 
 - MathJax Support
-- Add “Read more” link at the end of article excerpt.
+- Add “Read more” link at the end of article excerpt
 - 404 page
 
 ### Bug Fixes

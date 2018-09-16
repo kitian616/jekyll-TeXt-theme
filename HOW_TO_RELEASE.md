@@ -18,9 +18,9 @@
 
 - run `npm run gem-push` to publish gem to rubygems.org
 
-- run `git commit -m  "release: vx.x.x"` to make a release commit
+- run `git add . && git commit -m  "release: vx.x.x"` to make a release commit
 
-- run `git tag xxx` to add a tag
+- run `git tag vx.x.x` to add a tag
 
 - run `git push && git push --tags` to push
 
