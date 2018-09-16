@@ -33,7 +33,7 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 
 ## 皮肤
 
-TeXt 内置以下 6 套皮肤：
+TeXt 内置有 6 套皮肤，你也可以定制自己的皮肤。
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
@@ -80,8 +80,9 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 
 | Name | Description |
 | --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | 文章列表页 |
-| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | 过滤标签和查询 |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | 列表页 |
+| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | 归档页 |
+| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | 各种布局示例 |
 
 ## 协议
 

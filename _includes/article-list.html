@@ -58,7 +58,7 @@
                 {%- if _excerpt_type == 'html' -%}
                   {{ _article.excerpt }}
                 {%- else -%}
-                  {{ _article.excerpt | strip_html | truncate: _excerpt_truncate }}
+                  {{ _article.excerpt | strip_html | strip | truncate: _excerpt_truncate }}
                 {%- endif -%}
               </div>
             {%- endif -%}
@@ -67,7 +67,10 @@
             {%- endif -%}
           </div>
           {%- if include.show_info -%}
-            {%- include article-info.html article=_article show_pageview=true -%}
+            {%- include snippets/assign.html target=site.data.variables.default.page.pageview
+              source0=_article.pageview -%}
+            {%- assign _show_pageview = __return -%}
+            {%- include article-info.html article=_article show_pageview=_show_pageview -%}
           {%- endif -%}
         </div>
       </article>

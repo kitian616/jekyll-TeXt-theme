@@ -2,7 +2,7 @@
 layout: landing
 title: TeXt Theme
 excerpt: >
-  A Jekyll Theme for Personal Site, Team Site, Blog, Project, Documentation, etc.
+  A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 permalink: /index.html
 
 article_header:
@@ -13,9 +13,12 @@ article_header:
     - text: Demo
       type: outline-info
       url: /test/
-  background_color: '#e6e5e2'
+  height: 100vh
+  theme: dark
+  background_color: '#111'
   background_image:
-    src: /docs/assets/images/cover1.jpg
+    gradient: 'linear-gradient(rgba(240, 0, 150, .4), rgba(104, 0, 208 , .4))'
+    src: /docs/assets/images/cover2.jpg
 data:
   sections:
     - title: Fully Responsive
@@ -26,23 +29,21 @@ data:
       background_color: '#515151'
     - title: Super Customizable
       excerpt: Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.
-      theme: dark
       actions:
         - text: Learn More
           url: /docs/en/configuration
-      image:
-        src: /screenshots/TeXt-skins.png
-      background_color: '#515151'
-    - title: Plenty Layouts
-      excerpt: With the help of layouts, you can easily make different type of pages.
-      theme: dark
-      actions:
-        - text: Learn More
-          url: /samples.html#layouts
+      background_color: transparent
       image:
         src: /screenshots/TeXt-layouts.png
-      background_color: '#515151'
+        is_row: true
+    - title: Skins
+      excerpt: TeXt has 6 built-in skins, You can also set up your own skin.
+      background_color: transparent
+      image:
+        src: /screenshots/TeXt-skins.png
+        is_row: true
     - title: Enhanced User Experience
+      background_color: transparent
       children:
         - title: Additional styles
           excerpt: TeXt offer some CSS classes that you can use in the post, including alert, photo frame, button and grid.
@@ -62,6 +63,7 @@ data:
           url: https://github.com/kitian616/jekyll-TeXt-theme
       background_color: '#515151'
     - title: Tip Me
+      background_color: transparent
       children:
         - title: 'WeChat <i class="fas fa-arrow-down"></i>'
           image:

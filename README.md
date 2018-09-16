@@ -8,7 +8,7 @@
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png)
 
-TeXt is a customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
 [Change Log](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/CHANGELOG.md) | [中文文档](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)
 
@@ -33,7 +33,7 @@ TeXt is a customizable Jekyll theme for personal site, team site, blog, project,
 
 ## Skins
 
-You can choose these 6 built-in skins below:
+TeXt has 6 built-in skins, You can also  your own skin.
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
@@ -76,8 +76,9 @@ TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highl
 
 | Name | Description |
 | --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page with posts list |
-| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | You can filter tags and search here |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page |
+| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | Archive page |
+| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | Examples for different layouts |
 
 ## License
 

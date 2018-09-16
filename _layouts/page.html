@@ -128,7 +128,7 @@ layout: base
                     {%- include article-info.html article=page semantic=false -%}
                     {%- include article-header.html article=page semantic=false -%}
                     {%- if page.excerpt -%}
-                      <p class="overlay__excerpt">{{ page.excerpt | strip_html | truncate: _article_header_excerpt_truncate }}</p>
+                      <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
                     {%- endif -%}
                     {%- if page.article_header.actions -%}
                       <ul class="menu">
