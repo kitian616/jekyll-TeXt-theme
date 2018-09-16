@@ -102,18 +102,18 @@ layouts:
   - title: Layouts
     children:
       - title:  Single
-        url:    /layouts/single.html
+        url:    /page/single.html
       - title:  Aside
-        url:    /layouts/aside.html
+        url:    /page/aside.html
       - title:  Sidebar
-        url:    /layouts/sidebar.html
+        url:    /page/sidebar.html
       - title:  Article Header Overlay Background Fill
-        url:    /layouts/article-header-overlay-background-fill.html
+        url:    /page/article-header-overlay-background-fill.html
       - title:  Article Header Overlay Background Image
-        url:    /layouts/article-header-overlay-background-image.html
+        url:    /page/article-header-overlay-background-image.html
       - title:  Article Header Overlay Background Fill (Immersive + Translucent Header)
-        url:    /layouts/article-header-overlay-background-fill-immersive-translucent-header.html
+        url:    /page/article-header-overlay-background-fill-immersive-translucent-header.html
       - title:  Article Header Overlay Background Image (Immersive + Translucent Header)
-        url:    /layouts/article-header-overlay-background-image-immersive-translucent-header.html
+        url:    /page/article-header-overlay-background-image-immersive-translucent-header.html
       - title:  Article Header Image (Immersive + Translucent Header)
-        url:    /layouts/article-header-cover-image-immersive-translucent-header.html
+        url:    /page/article-header-cover-image-immersive-translucent-header.html

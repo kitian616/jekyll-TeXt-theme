@@ -37,7 +37,7 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 
 ## Skins
 
-TeXt has 6 built-in skins, You can also set up your own skin.
+TeXt has 6 built-in skins, you can also set up your own skin.
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
