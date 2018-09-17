@@ -9,7 +9,7 @@
 - New grid system
 - Image, card, item and hero components
 - Tag additional style
-- chart.js update to 2.7.2, mathjax update to 2.7.4 mermaid update to 8.0.0-rc.8
+- chart.js update to 2.7.2, mathjax update to 2.7.4 and mermaid update to 8.0.0-rc.8
 
 ### Bug Fixes
 
