@@ -73,7 +73,7 @@ article_header:
                       {%- endif -%}
                     </div>
 
-                    {%- if child.image -%}
+                    {%- if child.image and child.image.src -%}
 
                       {%- if child.image.url -%}
                         {%- include snippets/get-nav-url.html path=child.image.url -%}
@@ -82,12 +82,9 @@ article_header:
                         {%- assign _item_image_url = nil -%}
                       {%- endif -%}
 
-                      {%- if child.image.src -%}
-                        {%- include snippets/get-nav-url.html path=child.image.src -%}
-                        {%- assign _item_image_src = __return -%}
-                      {%- else -%}
-                        {%- assign _item_image_src = nil -%}
-                      {%- endif -%}
+                      {%- include snippets/get-nav-url.html path=child.image.src -%}
+                      {%- assign _item_image_src = __return -%}
+
                       {%- if child.image.is_row -%}
                         <div class="mb-5">
                       {%- endif -%}
@@ -95,9 +92,7 @@ article_header:
                       {%- if _item_image_url -%}
                             <a href="{{ _item_image_url }}">
                       {%- endif -%}
-                      {%- if _item_image_src -%}
                               <img src="{{ _item_image_src }}"/>
-                      {%- endif -%}
                       {%- if _item_image_url -%}
                             </a>
                       {%- endif -%}
@@ -114,25 +109,46 @@ article_header:
             </div>
           {%- endif -%}
 
-          {%- if _section.image -%}
+      {%- if _section.image.full_width == true -%}
+        </div> {% comment %} end hero__content {% endcomment %}
+      {%- endif -%}
+
+          {%- if _section.image and _section.image.src -%}
+
+            {%- if _section.image.url -%}
+              {%- include snippets/get-nav-url.html path=_section.image.url -%}
+              {%- assign _section_image_url = __return -%}
+            {%- else -%}
+              {%- assign _section_image_url = nil -%}
+            {%- endif -%}
+
+            {%- include snippets/get-nav-url.html path=_section.image.src -%}
+            {%- assign _section_image_src = __return -%}
+
             {%- if _section.image.is_row -%}
               <div class="mb-5">
             {%- endif -%}
-              {%- if child.image.url -%}
-                <a href="{{ child.image.url }}">
-              {%- endif -%}
-                  {%- include snippets/get-nav-url.html path=_section.image.src -%}
-                  {%- assign _url = __return -%}
-                  <img class="hero__cover" src="{{ _url }}" style="{{ _section.image.style }}" />
-              {%- if child.image.url -%}
-                </a>
-              {%- endif -%}
+                <div class="mx-auto" style="{{ _section.image.style }}">
+            {%- if _section_image_url -%}
+                  <a href="{{ _section_image_url }}">
+            {%- endif -%}
+                    {%- if _section.image.full_width == true -%}
+                      <img class="hero__cover hero__cover--full-width" src="{{ _section_image_src }}"/>
+                    {%- else -%}
+                      <img class="hero__cover" src="{{ _section_image_src }}"/>
+                    {%- endif -%}
+            {%- if _section_image_url -%}
+                  </a>
+            {%- endif -%}
+                </div>
             {%- if _section.image.is_row -%}
               </div>
             {%- endif -%}
           {%- endif -%}
 
-        </div>
+      {%- if _section.image.full_width != true -%}
+        </div> {% comment %} end hero__content {% endcomment %}
+      {%- endif -%}
       </section>
   {%- endfor -%}
   </div>
