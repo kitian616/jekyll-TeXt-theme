@@ -13,11 +13,10 @@
     source0=layout.show_edit_on_github source1=include.article.show_edit_on_github -%}
   {%- assign _show_edit_on_github = __return -%}
 
+  {%- if _show_title or _show_edit_on_github -%}
     <div class="article__header">
       {%- if _show_title -%}
         <header><h1>{{ _article_title }}</h1></header>
-      {%- else -%}
-        <header style="display:none;"><h1>{{ _article_title }}</h1></header>
       {%- endif -%}
       {%- if _show_edit_on_github -%}
         {%- if site.repository and site.repository_tree -%}
@@ -40,6 +39,9 @@
         {%- endif -%}
       {%- endif -%}
     </div>
+  {%- else -%}
+    <header style="display:none;"><h1>{{ _article_title }}</h1></header>
+  {%- endif -%}
 {%- endif -%}
 
 {%- if include.semantic != false -%}

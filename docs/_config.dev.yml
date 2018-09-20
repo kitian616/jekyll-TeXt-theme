@@ -199,6 +199,11 @@ defaults:
       show_edit_on_github: true
       pageview: true
   - scope:
+      path: ""
+      type: articles
+    values:
+      show_date: false
+  - scope:
       path: "_docs/en"
     values:
       layout: article
