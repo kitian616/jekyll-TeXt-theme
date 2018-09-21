@@ -39,7 +39,7 @@
     <div class="article__info clearfix">
       {%- if _show_tags -%}
 
-        <ul class="left-col menu">
+		<ul class={%- if site.dir == 'rtl' -%}"right-col menu"{%- else -%}"left-col menu"{%- endif -%}>
           {%- assign _tag_path = _paths_archive | append: '?tag=' -%}
           {%- include snippets/prepend-baseurl.html path=_tag_path -%}
 
@@ -55,7 +55,7 @@
       {%- endif -%}
 
       {%- if _show_author or _show_date or _pageview -%}
-        <ul class="right-col menu">
+        <ul class={%- if site.dir == 'rtl' -%}"left-col menu"{%- else -%}"right-col menu"{%- endif -%}>
           {%- if _show_author  -%}
             <li><i class="fas fa-user"></i> <span>{{ _author.name }}</span></li>
           {%- endif -%}
