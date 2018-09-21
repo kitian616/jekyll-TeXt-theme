@@ -29,6 +29,9 @@
       .npm-button {
         @include clickable($text-color-1, $npm-color);
       }
+      .telegram-button {
+        @include clickable($text-color-1, $telegram-color);
+      }
     }
   }
 }
