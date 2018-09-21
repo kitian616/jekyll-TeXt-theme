@@ -4,99 +4,115 @@ NAV:
     zh:      "主页"
     zh-Hans: "主页"
     zh-Hant: "主頁"
+    fa:      "خانه"
   ALL:
     en:      "Archive"
     zh:      "归档"
     zh-Hans: "归档"
     zh-Hant: "歸檔"
+    fa:      "آرشیو"
   RSS:
     en:      "RSS"
     zh:      "RSS"
     zh-Hans: "RSS"
     zh-Hant: "RSS"
-
+    fa:      "RSS"
+    
 READMORE:
   en:      "Read more"
   zh:      "阅读更多"
   zh-Hans: "阅读更多"
   zh-Hant: "閱讀更多"
+  fa:      "...ادامه"
 
 SEARCH:
   en:      "Search"
   zh:      "搜索"
   zh-Hans: "搜索"
   zh-Hant: "搜索"
+  fa:      "جستجو"
 
 CANCEL:
   en:      "Cancel"
   zh:      "取消"
   zh-Hans: "取消"
   zh-Hant: "取消"
+  fa:      "لغو"
 
 VIEWS:
   en:      "views"
   zh:      "阅读"
   zh-Hans: "阅读"
   zh-Hant: "閱讀"
+  fa:      "نمایش"
 
 LAST_UPDATED:
   en:      "Last updated"
   zh:      "更新于"
   zh-Hans: "更新于"
   zh-Hant: "更新於"
+  fa:      "آخرین به روزرسانی"
 
 PREVIOUS:
   en:      "PREVIOUS"
   zh:      "上篇"
   zh-Hans: "上篇"
   zh-Hant: "上篇"
+  fa:      "قبلی"
 
 NEXT:
   en:      "NEXT"
   zh:      "下篇"
   zh-Hans: "下篇"
   zh-Hant: "下篇"
+  fa:      "بعدی"
 
 ARTICLE_DATE_FORMAT:
   en:      "%b %d, %Y"
   zh:      "%Y年 %m月%d日"
   zh-Hans: "%Y年 %m月%d日"
   zh-Hant: "%Y年 %m月%d日"
-
+  fa:      "%Y/%m/%d"
 ARTICLE_LIST_DATE_FORMAT:
   en:      "%b %d"
   zh:      "%m月%d日"
   zh-Hans: "%m月%d日"
   zh-Hant: "%m月%d日"
-
+  fa:      "%m %d"
+  
 STATISTICS:
   en:      "[POST_COUNT] post articles, [PAGE_COUNT] pages."
   zh:      "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
   zh-Hans: "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
   zh-Hant: "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
-
+  fa:      "[POST_COUNT] پست و [PAGE_COUNT] صفحه"
+  
 LICENSE_ANNOUNCE:
   en:      "This work is licensed under a [LICENSE] license."
   zh:      "本文遵守 [LICENSE] 许可协议。"
   zh-Hans: "本文遵守 [LICENSE] 许可协议。"
   zh-Hant: "本文遵守 [LICENSE] 許可協議。"
+  fa:      "این کار تحت مجوز [LICENSE] منتشر شده است."
 
 POST_ON_GITHUB:
   en:      "Edit on Github"
   zh:      "在 Github 上修改"
   zh-Hans: "在 Github 上修改"
   zh-Hant: "在 Github 上修改"
+  fa:      "ویرایش شده در Github"
 
 FOLLOW_ME:
   en:      "Follow me on [NAME]."
   zh:      "在 [NAME] 上关注我。"
   zh-Hans: "在 [NAME] 上关注我。"
   zh-Hant: "在 [NAME] 上關注我。"
+  fa:      "مرا در [NAME] دنبال کن."
 
 EMAIL_ME:
   en:      "Send me Email."
   zh:      "给我发邮件。"
   zh-Hans: "给我发邮件。"
   zh-Hant: "給我發郵件。"
+  fa:      "ارسال ایمیل"
 
 COPYRIGHT_DATES: "2018"
