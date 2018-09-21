@@ -19,7 +19,9 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Highlight Theme
 - Table of contents
 - Authors
-- Multi-language support(English, Simplified Chinese, Traditional Chinese)
+- RTL (Right To Left) support for Persian, Arbic, Hebrew and ... languages
+- Multi-language support(English, Simplified Chinese, Traditional Chinese, Persian(Farsi))
+- Jalali calender for persian language
 - Search
 - Semantic HTML
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))

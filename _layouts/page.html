@@ -39,7 +39,6 @@ layout: base
 {%- else -%}
 <div class="layout--page js-page-root">
 {%- endif -%}
-
   {%- assign _page_main_class = 'page__main js-page-main' -%}
   {%- if _page_mode == 'immersive' -%}
     {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
@@ -170,7 +169,7 @@ layout: base
       {%- endif -%}
           <div class="grid grid--reverse">
 
-             <div class="col-aside js-col-aside">
+             <div class="col-aside js-col-aside" {%- if site.dir == 'rtl' -%}style="margin-right: 30px"{%- endif -%}>
               {%- if page.aside -%}
                 <aside class="page__aside js-page-aside">
                   {%- include aside/toc.html -%}

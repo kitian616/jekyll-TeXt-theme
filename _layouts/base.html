@@ -3,7 +3,7 @@ layout: none
 ---
 <!DOCTYPE html>
 {%- include snippets/get-lang.html -%}
-<html lang="{{ __return }}">
+<html lang="{{ __return }}" dir="{{site.dir}}">
   <head>
     {%- include analytics.html -%}
     {%- include head.html -%}
@@ -11,6 +11,8 @@ layout: none
       {%- include scripts/utils.js -%}
       {%- include scripts/lib/throttle.js -%}
       {%- include scripts/lib/lazyload.js -%}
+	  {%- include scripts/persiandate/moment.js -%}
+	  {%- include scripts/persiandate/moment-jalaali.js -%}
     </script>
     {%- include scripts/variables.html -%}
   </head>
