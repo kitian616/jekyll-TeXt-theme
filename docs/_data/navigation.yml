@@ -107,10 +107,21 @@ layouts:
         url:    /page/aside.html
       - title:  Sidebar
         url:    /page/sidebar.html
+
+      - title:  Sidebar (Aside)
+        url:    /page/sidebar-aside.html
       - title:  Article Header Overlay Background Fill
         url:    /page/article-header-overlay-background-fill.html
       - title:  Article Header Overlay Background Image
         url:    /page/article-header-overlay-background-image.html
+
+      - title:  Article Header Image
+        url:    /page/article-header-cover-image.html
+      - title:  Article Header Overlay Background Image (Customized Header Background)
+        url:    /page/article-header-overlay-background-image-header-background.html
+      - title:  Article Header Image (Customized Header Background)
+        url:    /page/article-header-cover-image-header-background.html
+
       - title:  Article Header Overlay Background Fill (Immersive + Translucent Header)
         url:    /page/article-header-overlay-background-fill-immersive-translucent-header.html
       - title:  Article Header Overlay Background Image (Immersive + Translucent Header)

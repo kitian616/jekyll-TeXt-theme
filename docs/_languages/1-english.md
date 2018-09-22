@@ -1,9 +1,8 @@
 ---
-title: TeXt - English
-key: 20170403
-tags:
-  - TeXt
-  - English
+title: English
+key: lang-en
+permalink: /languages/english.html
+cover: /docs/assets/images/languages/lang-en.jpg
 lang: en
 ---
 

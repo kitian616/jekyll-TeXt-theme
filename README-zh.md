@@ -19,7 +19,7 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 - 代码高亮主题
 - 目录
 - 多作者
-- 多语言支持（English, 简体中文, 繁體中文）
+- 多语言支持
 - 搜索
 - Web 语意化
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）

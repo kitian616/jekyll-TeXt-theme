@@ -181,6 +181,8 @@ collections:
     output: true
   articles:
     output: true
+  languages:
+    output: true
 
 defaults:
   - scope:
@@ -204,6 +206,11 @@ defaults:
       type: articles
     values:
       show_date: false
+  - scope:
+      path: ""
+      type: languages
+    values:
+      layout: article
   - scope:
       path: "_docs/en"
     values:
