@@ -12,7 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Spacing - TeXt Theme</title>
 
-<meta name="description" content="Spacing classes are named using the format {property}{side}-{spacer}.Where property is one of:      m - for classes that set margin        p - for classes th...">
+<meta name="description" content="Spacing classes are named using the format {property}{side}-{spacer}.Where property is one of:  m - for classes that set margin  p - for classes that set pad...">
 <link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/en/spacing"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
@@ -292,42 +292,26 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/4.1-spacing.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Spacing"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-21T00:03:35+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Spacing"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-22T23:34:44+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>Spacing classes are named using the format <code class="highlighter-rouge">{property}{side}-{spacer}</code>.</p>
 
 <p>Where <em>property</em> is one of:</p>
 
 <ul>
-  <li>
-    <p><code class="highlighter-rouge">m</code> - for classes that set <code class="highlighter-rouge">margin</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">p</code> - for classes that set <code class="highlighter-rouge">padding</code></p>
-  </li>
+  <li><code class="highlighter-rouge">m</code> - for classes that set <code class="highlighter-rouge">margin</code></li>
+  <li><code class="highlighter-rouge">p</code> - for classes that set <code class="highlighter-rouge">padding</code></li>
 </ul>
 
 <p>Where <em>side</em> is one of:</p>
 
 <ul>
-  <li>
-    <p><code class="highlighter-rouge">t</code> - for classes that set <code class="highlighter-rouge">margin-top</code> or <code class="highlighter-rouge">padding-top</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">b</code> - for classes that set <code class="highlighter-rouge">margin-bottom</code> or <code class="highlighter-rouge">padding-bottom</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">l</code> - for classes that set <code class="highlighter-rouge">margin-left</code> or <code class="highlighter-rouge">padding-left</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">r</code> - for classes that set <code class="highlighter-rouge">margin-right</code> or <code class="highlighter-rouge">padding-right</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">x</code> - for classes that set both <code class="highlighter-rouge">*-left</code> and <code class="highlighter-rouge">*-right</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">y</code> - for classes that set both <code class="highlighter-rouge">*-top</code> and <code class="highlighter-rouge">*-bottom</code></p>
-  </li>
+  <li><code class="highlighter-rouge">t</code> - for classes that set <code class="highlighter-rouge">margin-top</code> or <code class="highlighter-rouge">padding-top</code></li>
+  <li><code class="highlighter-rouge">b</code> - for classes that set <code class="highlighter-rouge">margin-bottom</code> or <code class="highlighter-rouge">padding-bottom</code></li>
+  <li><code class="highlighter-rouge">l</code> - for classes that set <code class="highlighter-rouge">margin-left</code> or <code class="highlighter-rouge">padding-left</code></li>
+  <li><code class="highlighter-rouge">r</code> - for classes that set <code class="highlighter-rouge">margin-right</code> or <code class="highlighter-rouge">padding-right</code></li>
+  <li><code class="highlighter-rouge">x</code> - for classes that set both <code class="highlighter-rouge">*-left</code> and <code class="highlighter-rouge">*-right</code></li>
+  <li><code class="highlighter-rouge">y</code> - for classes that set both <code class="highlighter-rouge">*-top</code> and <code class="highlighter-rouge">*-bottom</code></li>
 </ul>
 
 <p>blank - for classes that set a <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> on all 4 sides of the element</p>
@@ -335,27 +319,13 @@
 <p>Where <em>spacer</em> is one of:</p>
 
 <ul>
-  <li>
-    <p>0 - for classes that eliminate the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> by setting it to <code class="highlighter-rouge">0</code></p>
-  </li>
-  <li>
-    <p>1 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * .25</code></p>
-  </li>
-  <li>
-    <p>2 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * .5</code></p>
-  </li>
-  <li>
-    <p>3 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer</code></p>
-  </li>
-  <li>
-    <p>4 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * 1.5</code></p>
-  </li>
-  <li>
-    <p>5 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * 3</code></p>
-  </li>
-  <li>
-    <p>auto - for classes that set the <code class="highlighter-rouge">margin</code> to <code class="highlighter-rouge">auto</code></p>
-  </li>
+  <li>0 - for classes that eliminate the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> by setting it to <code class="highlighter-rouge">0</code></li>
+  <li>1 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * .25</code></li>
+  <li>2 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * .5</code></li>
+  <li>3 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer</code></li>
+  <li>4 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * 1.5</code></li>
+  <li>5 - for classes that set the <code class="highlighter-rouge">margin</code> or <code class="highlighter-rouge">padding</code> to <code class="highlighter-rouge">$spacer * 3</code></li>
+  <li>auto - for classes that set the <code class="highlighter-rouge">margin</code> to <code class="highlighter-rouge">auto</code></li>
 </ul>
 
 <p><code class="highlighter-rouge">$spacer</code> is default to <code class="highlighter-rouge">1rem</code>, you can change or add new entries to the <code class="highlighter-rouge">$spacers</code> Sass map variable.</p>
@@ -375,7 +345,7 @@
 </code></pre></div></div>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-21T00:03:35+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-22T23:34:44+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
