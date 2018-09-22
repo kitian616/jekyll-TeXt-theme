@@ -1,9 +1,7 @@
 ---
 title: TeXt - Additional Styles
 key: 20170808
-tags:
-  - TeXt
-  - English
+tags: TeXt
 toc: true
 category: post
 ---

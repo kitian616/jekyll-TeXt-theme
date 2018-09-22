@@ -1,9 +1,7 @@
 ---
 title: Jekyll - Code Blocks
 key: 20160616
-tags:
-  - Jekyll
-  - English
+tags: Jekyll
 ---
 
 ## Code Spans

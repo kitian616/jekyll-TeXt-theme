@@ -1,7 +1,7 @@
 ---
 title: Test - Article with Lots of Images
 key: 20150103
-tags: Test English
+tags: Test
 ---
 
 ## TeXt Theme - Cover

@@ -1,7 +1,7 @@
 ---
 title: TeXt - Modify Date
 key: 20170419
-tags: TeXt English
+tags: TeXt
 modify_date: 2017-09-09
 ---
 
