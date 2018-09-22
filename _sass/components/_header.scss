@@ -87,22 +87,21 @@
         display: none;
       }
     }
-  }
-}
-
-.navigation__link {
-  &::after {
-    display: block;
-    margin-bottom: -4px;
-    content: "";
-    @include split-line(bottom, 4px, transparent);
-  }
-}
-.navigation__link--active {
-  a {
-    @include link-colors($main-color-1, $main-color-1);
-  }
-  &::after {
-    @include split-line(bottom, 4px, $main-color-1);
+    .navigation__link {
+      &::after {
+        display: block;
+        margin-bottom: -4px;
+        content: "";
+        @include split-line(bottom, 4px, transparent);
+      }
+    }
+    .navigation__link--active {
+      a {
+        @include link-colors($main-color-1, $main-color-1);
+      }
+      &::after {
+        @include split-line(bottom, 4px, $main-color-1);
+      }
+    }
   }
 }

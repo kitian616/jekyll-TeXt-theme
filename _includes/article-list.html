@@ -107,7 +107,7 @@
       {%- if include.size == 'sm' -%}
         <div class="cell cell--3 cell--md-4 cell--sm-12">
           <div class="card">
-            {%- if _article_cover -%}
+            {%- if _article.cover -%}
               <div class="card__image">
                 <img class="image" src="{{ _article_cover }}" />
                 <div class="overlay overlay--bottom">
@@ -123,7 +123,7 @@
 
         <div class="cell cell--4 cell--md-6 cell--sm-12">
           <div class="card card--flat">
-            {%- if _article_cover -%}
+            {%- if _article.cover -%}
               <div class="card__image"><img src="{{ _article_cover }}" /></div>
             {%- endif -%}
               <div class="card__content">

@@ -3,7 +3,6 @@ layout: base
 ---
 {%- assign _page_mode = page.mode | default: layout.mode | default: site.data.variables.default.page.mode -%}
 {%- assign _page_type = page.type | default: layout.type | default: site.data.variables.default.page.type -%}
-{%- assign _header_type = page.header.type | default: layout.header.type | default: site.data.variables.default.page.header.type -%}
 {%- assign _article_header_type = page.article_header.type | default: layout.article_header.type -%}
 
 {%- include snippets/assign.html
@@ -55,15 +54,13 @@ layout: base
       <div></div>
     {%- if _header != false -%}
       <div class="page__header">
-      {%- if _header_type == 'normal' -%}
+      {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
+      {%- if _header_theme == 'dark'-%}
+        {%- include header.html theme='dark' background=page.header.background -%}
+      {%- elsif _header_theme == 'light' -%}
+        {%- include header.html theme='light' background=page.header.background -%}
+      {%- else -%}
         {%- include header.html -%}
-      {%- elsif _header_type == 'translucent' -%}
-        {%- assign _header_theme = page.header.theme | default: layout.header.theme | default: site.data.variables.default.page.header.theme -%}
-        {%- if _header_theme == 'dark'-%}
-          {%- include header.html theme='dark'-%}
-        {%- else -%}
-          {%- include header.html theme='light'-%}
-        {%- endif -%}
       {%- endif -%}
       </div>
     {%- endif -%}
