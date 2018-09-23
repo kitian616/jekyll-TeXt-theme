@@ -28,10 +28,20 @@
       {%- assign _paths_rss = __return -%}
       {%- include snippets/locale-to-string.html locale=site.data.locale.NAV.RSS -%}
       {%- assign _locale_nav_rss = __return -%}
-      <p class="menu menu--center">
+      <!-- <p class="menu menu--center">
         <span>© {{ site.title }} {{ site.data.locale.COPYRIGHT_DATES }}</span>
         <a type="application/rss+xml" href="{{ _paths_rss }}">{{ _locale_nav_rss }}</a>
-      </p>
+      </p> -->
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+      </a>
+      &nbsp;&nbsp;
+      <a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">
+          <img alt="GNU General Public License version 3" src="https://www.gnu.org/graphics/gplv3-127x51.png" height="31px" />
+      </a>
+      <br />
+      The content of this page is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+      and code snippets are licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License version 3</a>.
       <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </p>
