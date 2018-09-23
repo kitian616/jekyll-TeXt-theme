@@ -72,16 +72,8 @@ sources: # bootcdn (default), unpkg
 
 # Comments
 comments:
-  provider: "gitalk"
-
-  ## Gitalk
-  # please refer to https://github.com/gitalk/gitalk for more info.
-  gitalk:
-    clientID    : a3321f27c84cbec745ef
-    clientSecret: d519391f4bd16a208f4dd1f3667d7d3a04adea86
-    repository  : https://github.com/duongludien/duongludien.github.io
-    owner       : duongludien
-    admin       : duongludien
+  provider: disqus
+  shortname: blog.duongludien.com
 
 
 ## => Pageview
