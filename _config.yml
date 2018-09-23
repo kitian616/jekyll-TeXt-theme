@@ -73,7 +73,7 @@ sources: # bootcdn (default), unpkg
 # Comments
 comments:
   provider: disqus
-  shortname: blog-duongludien-com
+  shortname: blog-duongludien-com.
 
 
 ## => Pageview
