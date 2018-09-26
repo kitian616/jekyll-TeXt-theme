@@ -23,7 +23,7 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Highlight Theme
 - Table of contents
 - Authors
-- Multi-language support(English, Simplified Chinese, Traditional Chinese)
+- Multi-language support
 - Search
 - Semantic HTML
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))

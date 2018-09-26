@@ -4,10 +4,9 @@ rvm:
 branches:
   only:
   - master
+before_script: cp docs/_layouts/*.html _layouts/
 script: JEKYLL_ENV=production bundle exec jekyll build --config ./docs/_config.yml
 deploy:
-  edge:
-    branch: v1.8.47
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
