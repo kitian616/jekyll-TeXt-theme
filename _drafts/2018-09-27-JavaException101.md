@@ -14,6 +14,12 @@ Exception is fundamental knowledge in Java, but someone analyzed half a million 
 
 It's worthy to emphasize the usage of Exceptions.
 
+# Kinds of Exception
+
+[Exceptions in Java Language Specification] describes kinds of Exceptions. 
+
+![Exceptions in JLS](/assets/Exception_in_JLS.png)
+
 # DON'T Swallow Exception
 
 `DON'T Swallow Exception!`
@@ -24,39 +30,21 @@ It's worthy to emphasize the usage of Exceptions.
 
 If you are not sure how to handle the exception, re-throw it. 
 
-# Checked Exception and Runtime Exception
-## Runnable interface
-
-# Interrupted Exception
-
-# Should Exception be serialized?
-Throwable implements Serializable.
-
-RMI
-RPC
-
 # Exception message
 ## Exception code
+
+# NullPointerException (null)
 
 # try with resources
 https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
 
-Suppressed Exception
-
-# special exception
-## OOM and stackoverflow
-EXITONOOM
-
-# NullPointerException (null)
-
-# Swallowed Exception
-#Exception in Spring
-  Checked Exception
-  Exception handler
 
 
-  \[1\] [Swallowed Exceptions: The Silent Killer of Java Applications] 
-  
-  [Swallowed Exceptions: The Silent Killer of Java Applications]:https://blog.takipi.com/swallowed-exceptions-the-silent-killer-of-java-applications/
+
+\[1\] [Swallowed Exceptions: The Silent Killer of Java Applications] 
+\[2\] [Exceptions in Java Language Specification]
+[Swallowed Exceptions: The Silent Killer of Java Applications]:https://blog.takipi.com/swallowed-exceptions-the-silent-killer-of-java-applications/
+
+[Exceptions in Java Language Specification]:https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html
 
   https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
