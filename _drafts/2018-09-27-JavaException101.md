@@ -30,6 +30,10 @@ If you are not sure how to handle the exception, re-throw it.
 # Interrupted Exception
 
 # Should Exception be serialized?
+Throwable implements Serializable.
+
+RMI
+RPC
 
 # Exception message
 ## Exception code
