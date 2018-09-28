@@ -8,7 +8,7 @@ key: 2018-09-27-JavaException101
 # Overview
 The most fantastic usage of Exception in Java I saw around 3 years ago is, a guy throws Exception in a inner loop in order to exit the outer loop.
 
-Exception is fundamental knowledge in Java, but someone analyzed half a million Java projects in Github, the result is not so good.\[[1][Swallowed Exceptions: The Silent Killer of Java Applications]\]
+Exception is fundamental knowledge in Java, but someone analyzed half a million Java projects in GitHub, the result is not so good.\[[1][Swallowed Exceptions: The Silent Killer of Java Applications]\]
 
 ![What do developers do in exception catch blocks?](https://384uqqh5pka2ma24ild282mv-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/instances.png)
 
@@ -20,31 +20,155 @@ It's worthy to emphasize the usage of Exceptions.
 
 ![Exceptions in JLS](/assets/Exception_in_JLS.png)
 
-# DON'T Swallow Exception
+1. `Exception` is the superclass of all the exceptions from which ordinary programs may `wish to recover`.
+2. `Error` is the superclass of all the exceptions from which ordinary programs are `not ordinarily expected to recover`.
+3. `Checked Exception` must be handled, while `Unchecked Exception` is not.
+
+For example, when we invoke a method which may throw `Checked Exception`, we must surround with `try/catch` or add throw declaration. 
+
+``` Java
+try {
+  // some routines which may throw CheckedException
+} catch (CheckedException ex) {
+  // must do something here
+}
+```
+
+``` Java
+public void invoker() throws CheckedException {
+  // some routines which may throw CheckedException
+}
+```
+
+# Exception 101
+## DON'T Swallow Exception
 
 `DON'T Swallow Exception!`
 
 `DON'T Swallow Exception!`
 
 `DON'T Swallow Exception!`
+
+This is `extremely important`. When the system goes online, finding swallowed exception is harder than looking for a needle in the haystack. 
 
 If you are not sure how to handle the exception, re-throw it. 
 
-# Exception message
-## Exception code
+## Write Informative and Insensitive Exception Message, and Keep the Cause
 
-# NullPointerException (null)
+``` Java
+// Bad Case
+try {
+  // some routines which may throw IOException
+} catch (IOException ex) {
+  throw new MyException("Unknown issue.");
+}
+```
 
-# try with resources
-https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
+``` Java
+// Bad Case, user object might include sensitive information.
+try {
+  // some routines which may throw UserNotFoundException
+} catch (UserNotFoundException ex) {
+  throw new MyException("Can not find the user: " + user.toString(), ex);
+}
+```
 
+``` Java
+// Good Case
+try {
+  // some routines which may throw IOException
+} catch (IOException ex) {
+  throw new MyException("Informative message here.", ex);
+}
+```
+
+## Throw/Catch Specific Exception Instead of Its Superclass
+
+```Java
+// Bad Case
+public void useSpecificException() throws Exception {
+  // some routines which may throw IOException and TimeoutException ;
+}
+```
+
+```Java
+// Good Case
+public void useSpecificException() throws IOException, TimeoutException { 
+  // some routines which may throw IOException and TimeoutException ;
+}
+```
+
+```Java
+// Bad Case
+public void useSpecificTryCatch() { 
+  try {
+    // some routines which may throw IOException and TimeoutException ;
+  } catch (Exception ex) {
+    // Do something here for Exception;
+  } 
+}
+```
+
+```Java
+// Good Case. This might be controversial. In real cases, developers just
+// log each exception.
+public void useSpecificTryCatch() { 
+  try {
+    // some routines which may throw IOException and TimeoutException ;
+  } catch (IOException ex) {
+    // Do something here for IOException;
+  } catch (TimeoutException ex) {
+    // Do something else here for TimeoutException;
+  }
+}
+```
+
+## Log Only When Exception is Handled
+``` Java
+// Bad Case, because same exception might be logged many times (log here and the outer invokers), which messes up the log and monitoring tool.
+try {
+  // some routines which may throw CheckedException
+} catch (CheckedException ex) {
+  LOGGER.error("Informative message in log", ex);
+  throw ex;
+}
+```
+
+``` Java
+// Good Case
+try {
+  // some routines which may throw CheckedException
+} catch (CheckedException ex) {
+  LOGGER.error("Informative message in log", ex);
+  // Do something to recover if needed. 
+}
+```
+
+## Release Resources Finally
+
+After Java 7, we can use `try-with-resources`, before 
+``` Java
+// Bad Case
+try {
+  // some routines which may throw Exception
+} catch (CheckedException ex) {
+  LOGGER.error("Informative message in log", ex);
+  // Do something to recover if needed. 
+}
+```
+
+``` Java
+try (InputStream is = new FileInputStream("file")) {
+  is.read();
+}
+```
 
 
 
 \[1\] [Swallowed Exceptions: The Silent Killer of Java Applications] 
+
 \[2\] [Exceptions in Java Language Specification]
+
 [Swallowed Exceptions: The Silent Killer of Java Applications]:https://blog.takipi.com/swallowed-exceptions-the-silent-killer-of-java-applications/
 
 [Exceptions in Java Language Specification]:https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html
-
-  https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
