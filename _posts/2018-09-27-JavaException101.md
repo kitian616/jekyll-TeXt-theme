@@ -6,17 +6,17 @@ key: 2018-09-27-JavaException101
 ---
 
 # Overview
-The most fantastic usage of Exception in Java I saw around 3 years ago is, a guy throws Exception in a inner loop in order to exit the outer loop.
+The most fantastic usage of exception in Java I saw around 3 years ago is, a guy throws Exception in a inner loop in order to exit the outer loop.
 
-Exception is fundamental knowledge in Java, but someone analyzed half a million Java projects in GitHub, the result is not so good.\[[1][Swallowed Exceptions: The Silent Killer of Java Applications]\]
+Exception is fundamental knowledge in Java. However, someone analyzed half a million Java projects in GitHub, the result shows the usage is not good.\[[1][Swallowed Exceptions: The Silent Killer of Java Applications]\]
 
 ![What do developers do in exception catch blocks?](https://384uqqh5pka2ma24ild282mv-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/instances.png)
 
-It's worthy to emphasize the usage of Exceptions.
+It's worthy to emphasize the usage of exceptions.
 
 # Kinds of Exception
 
-[Exceptions in Java Language Specification] describes kinds of Exceptions. 
+[Exceptions in Java Language Specification] describes kinds of exceptions. We can see the figure to see the kinds of Exception. 
 
 ![Exceptions in JLS](/assets/Exception_in_JLS.png)
 
@@ -84,6 +84,8 @@ try {
 
 ## Throw/Catch Specific Exception Instead of Its Superclass
 
+**Don't Throw/Catch `Exception` and `Throwable`.**
+
 ```Java
 // Bad Case
 public void useSpecificException() throws Exception {
@@ -99,7 +101,7 @@ public void useSpecificException() throws IOException, TimeoutException {
 ```
 
 ```Java
-// Bad Case
+// Bad Case, as the Exception might be RuntimeException, which should have other ways to handle.
 public void useSpecificTryCatch() { 
   try {
     // some routines which may throw IOException and TimeoutException ;
@@ -110,8 +112,9 @@ public void useSpecificTryCatch() {
 ```
 
 ```Java
-// Good Case. This might be controversial. In real cases, developers just
-// log each exception.
+// Good Case. This might be controversial. In real cases, developers just log each exception, therefore 
+//     `try {} catch (IOException | TimeoutException ex) {}`
+// might be used.
 public void useSpecificTryCatch() { 
   try {
     // some routines which may throw IOException and TimeoutException ;
@@ -146,29 +149,48 @@ try {
 
 ## Release Resources Finally
 
-After Java 7, we can use `try-with-resources`, before 
-``` Java
-// Bad Case
-try {
-  // some routines which may throw Exception
-} catch (CheckedException ex) {
-  LOGGER.error("Informative message in log", ex);
-  // Do something to recover if needed. 
-}
-```
-
+From Java 7, we should use `try-with-resources` for `InputStream` etc. 
 ``` Java
 try (InputStream is = new FileInputStream("file")) {
   is.read();
 }
 ```
 
+Prior to Java 7, or for those resources which do not implement `java.lang.AutoCloseable`, remember to release resources in `finally` block. [IOUtils.closeQuietly in Apache IOUtils] is used by many developers prior to Java 7, but it swallows `IOException` which might be harmful in many cases especially closing a writer. It's also discussed in `Google guava`, [95% of all usage of Closeable.closeQuietly is broken].
 
+``` Java
+InputStream is = null;
+try {
+  is = new FileInputStream("file");
+  is.read();
+} finally {
+  if (is != null) {
+    is.close();
+  }
+}
+```
+
+# Next
+Some notorious exceptions (NullPointerException, OutOfMemoryError etc.) and corresponding mitigation will be described.
+
+## Reference
 
 \[1\] [Swallowed Exceptions: The Silent Killer of Java Applications] 
 
 \[2\] [Exceptions in Java Language Specification]
 
+\[3\] [The try-with-resources Statement]
+
+\[4\] [IOUtils.closeQuietly in Apache IOUtils]
+
+\[5\] [95% of all usage of Closeable.closeQuietly is broken]
+
 [Swallowed Exceptions: The Silent Killer of Java Applications]:https://blog.takipi.com/swallowed-exceptions-the-silent-killer-of-java-applications/
 
 [Exceptions in Java Language Specification]:https://docs.oracle.com/javase/specs/jls/se7/html/jls-11.html
+
+[The try-with-resources Statement]:https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
+
+[IOUtils.closeQuietly in Apache IOUtils]:https://github.com/apache/commons-io/blob/58b0f795b31482daa6bb5473a8b2c398e029f5fb/src/main/java/org/apache/commons/io/IOUtils.java#L359
+
+[95% of all usage of Closeable.closeQuietly is broken]:https://github.com/google/guava/issues/1118
