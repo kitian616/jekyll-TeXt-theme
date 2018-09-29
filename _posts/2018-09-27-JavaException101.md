@@ -26,13 +26,13 @@ It's worthy to emphasize the usage of exceptions.
 
 For example, when we invoke a method which may throw `Checked Exception`, we must surround with `try/catch` or add throw declaration. 
 
-``` Java
+{% highlight JAVA %}
 try {
   // some routines which may throw CheckedException
 } catch (CheckedException ex) {
   // must do something here
 }
-```
+{% endhighlight %}
 
 ``` Java
 public void invoker() throws CheckedException {
