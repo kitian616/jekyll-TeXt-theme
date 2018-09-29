@@ -7,30 +7,23 @@ key: 2018-09-28-JavaException201
 
 # Overview
 
-# Runnable interface (Exception in Java Concurrency)
+# Suppressed Exception
 
-# Interrupted Exception
+# Exception in Runnable
 
-# Should Exception be serialized?
+# InterruptedException
+
+# OutOfMemoryError
+EXITONOOM
+
+# StackOverflowError
+
+# Swallowed Exception
+
+# Exception in Spring
+
+# Why Exception is Serializable?
 Throwable implements Serializable.
 
 RMI
 RPC
-
-# Suppressed Exception
-
-# special exception
-## OOM and stackoverflow
-EXITONOOM
-
-# Swallowed Exception
-#Exception in Spring
-  Checked Exception
-  Exception handler
-
-
-  \[1\] [Swallowed Exceptions: The Silent Killer of Java Applications] 
-  
-  [Swallowed Exceptions: The Silent Killer of Java Applications]:https://blog.takipi.com/swallowed-exceptions-the-silent-killer-of-java-applications/
-
-  https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
