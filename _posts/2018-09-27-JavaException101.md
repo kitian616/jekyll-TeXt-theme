@@ -6,7 +6,7 @@ key: 2018-09-27-JavaException101
 ---
 
 # Overview
-The most fantastic usage of exception in Java I saw around 3 years ago is, a guy throws Exception in a inner loop in order to exit the outer loop.
+The most fantastic usage of exception in Java I saw around 3 years ago is, a guy throws Exception in an inner loop in order to exit the outer loop.
 
 Exception is fundamental knowledge in Java. However, someone analyzed half a million Java projects in GitHub, the result shows the usage is not good.\[[1][Swallowed Exceptions: The Silent Killer of Java Applications]\]
 
@@ -128,7 +128,8 @@ public void useSpecificTryCatch() {
 
 ## Log Only When Exception is Handled
 {% highlight JAVA %}
-// Bad Case, because same exception might be logged many times (log here and the outer invokers), which messes up the log and monitoring tool.
+// Bad Case, because same exception might be logged many times (log here and the outer invokers),
+// which messes up the log and monitoring tool.
 try {
   // some routines which may throw CheckedException
 } catch (CheckedException ex) {
