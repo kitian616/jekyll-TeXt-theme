@@ -34,11 +34,11 @@ try {
 }
 {% endhighlight %}
 
-``` Java
+{% highlight JAVA %}
 public void invoker() throws CheckedException {
   // some routines which may throw CheckedException
 }
-```
+{% endhighlight %}
 
 # Exception 101
 ## DON'T Swallow Exception
@@ -55,52 +55,52 @@ If you are not sure how to handle the exception, re-throw it.
 
 ## Write Informative and Insensitive Exception Message, and Keep the Cause
 
-``` Java
+{% highlight JAVA %}
 // Bad Case
 try {
   // some routines which may throw IOException
 } catch (IOException ex) {
   throw new MyException("Unknown issue.");
 }
-```
+{% endhighlight %}
 
-``` Java
+{% highlight JAVA %}
 // Bad Case, user object might include sensitive information.
 try {
   // some routines which may throw UserNotFoundException
 } catch (UserNotFoundException ex) {
   throw new MyException("Can not find the user: " + user.toString(), ex);
 }
-```
+{% endhighlight %}
 
-``` Java
+{% highlight JAVA %}
 // Good Case
 try {
   // some routines which may throw IOException
 } catch (IOException ex) {
   throw new MyException("Informative message here.", ex);
 }
-```
+{% endhighlight %}
 
 ## Throw/Catch Specific Exception Instead of Its Superclass
 
 **Don't Throw/Catch `Exception` and `Throwable`.**
 
-```Java
+ {% highlight JAVA %}
 // Bad Case
 public void useSpecificException() throws Exception {
   // some routines which may throw IOException and TimeoutException ;
 }
-```
+{% endhighlight %}
 
-```Java
+ {% highlight JAVA %}
 // Good Case
 public void useSpecificException() throws IOException, TimeoutException { 
   // some routines which may throw IOException and TimeoutException ;
 }
-```
+{% endhighlight %}
 
-```Java
+ {% highlight JAVA %}
 // Bad Case, as the Exception might be RuntimeException, which should have other ways to handle.
 public void useSpecificTryCatch() { 
   try {
@@ -109,9 +109,9 @@ public void useSpecificTryCatch() {
     // Do something here for Exception;
   } 
 }
-```
+{% endhighlight %}
 
-```Java
+ {% highlight JAVA %}
 // Good Case. This might be controversial. In real cases, developers just log each exception, therefore 
 //     `try {} catch (IOException | TimeoutException ex) {}`
 // might be used.
@@ -124,10 +124,10 @@ public void useSpecificTryCatch() {
     // Do something else here for TimeoutException;
   }
 }
-```
+{% endhighlight %}
 
 ## Log Only When Exception is Handled
-``` Java
+{% highlight JAVA %}
 // Bad Case, because same exception might be logged many times (log here and the outer invokers), which messes up the log and monitoring tool.
 try {
   // some routines which may throw CheckedException
@@ -135,9 +135,9 @@ try {
   LOGGER.error("Informative message in log", ex);
   throw ex;
 }
-```
+{% endhighlight %}
 
-``` Java
+{% highlight JAVA %}
 // Good Case
 try {
   // some routines which may throw CheckedException
@@ -145,20 +145,20 @@ try {
   LOGGER.error("Informative message in log", ex);
   // Do something to recover if needed. 
 }
-```
+{% endhighlight %}
 
 ## Release Resources Finally
 
 From Java 7, we should use `try-with-resources` for `InputStream` etc. 
-``` Java
+{% highlight JAVA %}
 try (InputStream is = new FileInputStream("file")) {
   is.read();
 }
-```
+{% endhighlight %}
 
 Prior to Java 7, or for those resources which do not implement `java.lang.AutoCloseable`, remember to release resources in `finally` block. [IOUtils.closeQuietly in Apache IOUtils] is used by many developers prior to Java 7, but it swallows `IOException` which might be harmful in many cases especially closing a writer. It's also discussed in `Google guava`, [95% of all usage of Closeable.closeQuietly is broken].
 
-``` Java
+{% highlight JAVA %}
 InputStream is = null;
 try {
   is = new FileInputStream("file");
@@ -168,7 +168,7 @@ try {
     is.close();
   }
 }
-```
+{% endhighlight %}
 
 # Next
 Some notorious exceptions (NullPointerException, OutOfMemoryError etc.) and corresponding mitigation will be described.
