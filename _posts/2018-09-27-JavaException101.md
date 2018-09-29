@@ -174,7 +174,7 @@ try {
 # Next
 Some notorious exceptions (NullPointerException, OutOfMemoryError etc.) and corresponding mitigation will be described.
 
-## Reference
+# Reference
 
 \[1\] [Swallowed Exceptions: The Silent Killer of Java Applications] 
 
