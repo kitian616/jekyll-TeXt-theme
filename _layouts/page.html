@@ -29,103 +29,105 @@ layout: base
       <i class="fas fa-bars icon--show"></i>
     </div>
   </div>
-  <div class="page__mask js-sidebar-hide"></div>
+  <div class="page__mask js-page-mask js-sidebar-hide"></div>
 
-  <div class="page__sidebar">
-    {%- include sidebar/toc.html -%}
-  </div>
+  <div class="grid page__gird">
+
+    <div class="page__sidebar">
+      {%- include sidebar/toc.html -%}
+    </div>
 
 {%- else -%}
 <div class="layout--page js-page-root">
 {%- endif -%}
 
-  {%- assign _page_main_class = 'page__main js-page-main' -%}
-  {%- if _page_mode == 'immersive' -%}
-    {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
-  {%- endif -%}
-  {%- if page.aside -%}
-    {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
-  {%- elsif _full_width -%}
-    {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
-  {%- endif -%}
-  <div class="{{ _page_main_class }}">
-
-    <div class="page__main-inner">
-      <div></div>
-    {%- if _header != false -%}
-      <div class="page__header">
-      {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
-      {%- if _header_theme == 'dark'-%}
-        {%- include header.html theme='dark' background=page.header.background -%}
-      {%- elsif _header_theme == 'light' -%}
-        {%- include header.html theme='light' background=page.header.background -%}
-      {%- else -%}
-        {%- include header.html -%}
-      {%- endif -%}
-      </div>
+    {%- assign _page_main_class = 'page__main js-page-main' -%}
+    {%- if _page_mode == 'immersive' -%}
+      {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
     {%- endif -%}
+    {%- if page.aside -%}
+      {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
+    {%- elsif _full_width -%}
+      {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
+    {%- endif -%}
+    <div class="{{ _page_main_class }} cell cell--auto">
+
+      <div class="page__main-inner">
+        <div></div>
+      {%- if _header != false -%}
+        <div class="page__header">
+        {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
+        {%- if _header_theme == 'dark'-%}
+          {%- include header.html theme='dark' background=page.header.background -%}
+        {%- elsif _header_theme == 'light' -%}
+          {%- include header.html theme='light' background=page.header.background -%}
+        {%- else -%}
+          {%- include header.html -%}
+        {%- endif -%}
+        </div>
+      {%- endif -%}
 
 
-      <div class="page__content">
-      {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' -%}
+        <div class="page__content">
+        {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' -%}
 
-        {%- if _article_header_type == 'overlay' -%}
+          {%- if _article_header_type == 'overlay' -%}
 
-          {%- assign _article_header_height = page.article_header.height | default: layout.article_header.height -%}
-          {%- assign _article_header_align = page.article_header.align | default: layout.article_header.align | default: site.data.variables.default.page.article_header.align -%}
-          {%- assign _article_header_theme = page.article_header.theme | default: layout.article_header.theme | default: site.data.variables.default.page.article_header.theme -%}
+            {%- assign _article_header_height = page.article_header.height | default: layout.article_header.height -%}
+            {%- assign _article_header_align = page.article_header.align | default: layout.article_header.align | default: site.data.variables.default.page.article_header.align -%}
+            {%- assign _article_header_theme = page.article_header.theme | default: layout.article_header.theme | default: site.data.variables.default.page.article_header.theme -%}
 
-          {%- if page.article_header.background_image.src -%}
-            {%- assign _header_background_image_src = page.article_header.background_image.src -%}
-          {%- elsif page.article_header.background_image != false and page.cover -%}
-            {%- assign _header_background_image_src = page.cover -%}
-          {%- endif -%}
+            {%- if page.article_header.background_image.src -%}
+              {%- assign _header_background_image_src = page.article_header.background_image.src -%}
+            {%- elsif page.article_header.background_image != false and page.cover -%}
+              {%- assign _header_background_image_src = page.cover -%}
+            {%- endif -%}
 
-          {%- if page.article_header.background_image.gradient -%}
-            {%- assign _header_background_image = page.article_header.background_image.gradient -%}
+            {%- if page.article_header.background_image.gradient -%}
+              {%- assign _header_background_image = page.article_header.background_image.gradient -%}
+              {%- if _header_background_image_src -%}
+                {%- assign _header_background_image = _header_background_image | append: ',' -%}
+              {%- endif -%}
+            {%- endif -%}
+
             {%- if _header_background_image_src -%}
-              {%- assign _header_background_image = _header_background_image | append: ',' -%}
+              {%- include snippets/get-nav-url.html path=_header_background_image_src -%}
+              {%- assign _header_background_image_src = __return -%}
+              {%- assign _header_background_image = _header_background_image
+                | append: 'url(' | append: _header_background_image_src  | append: ')'-%}
             {%- endif -%}
-          {%- endif -%}
 
-          {%- if _header_background_image_src -%}
-            {%- include snippets/get-nav-url.html path=_header_background_image_src -%}
-            {%- assign _header_background_image_src = __return -%}
-            {%- assign _header_background_image = _header_background_image
-              | append: 'url(' | append: _header_background_image_src  | append: ')'-%}
-          {%- endif -%}
+            {%- assign _header_style = 'background-image:' | append: _header_background_image | append: ';' -%}
 
-          {%- assign _header_style = 'background-image:' | append: _header_background_image | append: ';' -%}
+            {%- if page.article_header.background_color -%}
+              {%- assign _header_style = _header_style | append: 'background-color:' | append: page.article_header.background_color | append: ';' -%}
+            {%- endif -%}
 
-          {%- if page.article_header.background_color -%}
-            {%- assign _header_style = _header_style | append: 'background-color:' | append: page.article_header.background_color | append: ';' -%}
-          {%- endif -%}
+            {%- if _article_header_height -%}
+              {%- assign _header_style = _header_style | append: 'min-height:' | append: _article_header_height | append: ';' -%}
+            {%- endif -%}
 
-          {%- if _article_header_height -%}
-            {%- assign _header_style = _header_style | append: 'min-height:' | append: _article_header_height | append: ';' -%}
-          {%- endif -%}
+            <div class="article__header--overlay">
 
-          <div class="article__header--overlay">
-
-          {%- if _article_header_theme == 'light' -%}
-            {%- if _article_header_align == 'center' -%}
-              <div class="hero hero--center hero--light overlay" style="{{ _header_style }}">
+            {%- if _article_header_theme == 'light' -%}
+              {%- if _article_header_align == 'center' -%}
+                <div class="hero hero--center hero--light overlay" style="{{ _header_style }}">
+              {%- else -%}
+                <div class="hero hero--light overlay" style="{{ _header_style }}">
+              {%- endif -%}
+            {%- elsif _article_header_theme == 'dark' -%}
+              {%- if _article_header_align == 'center' -%}
+                <div class="hero hero--center hero--dark overlay" style="{{ _header_style }}">
+              {%- else -%}
+                <div class="hero hero--dark overlay" style="{{ _header_style }}">
+              {%- endif -%}
             {%- else -%}
-              <div class="hero hero--light overlay" style="{{ _header_style }}">
+              {%- if _article_header_align == 'center' -%}
+                <div class="hero hero--center overlay" style="{{ _header_style }}">
+              {%- else -%}
+                <div class="hero overlay" style="{{ _header_style }}">
+              {%- endif -%}
             {%- endif -%}
-          {%- elsif _article_header_theme == 'dark' -%}
-            {%- if _article_header_align == 'center' -%}
-              <div class="hero hero--center hero--dark overlay" style="{{ _header_style }}">
-            {%- else -%}
-              <div class="hero hero--dark overlay" style="{{ _header_style }}">
-            {%- endif -%}
-          {%- else -%}
-            {%- if _article_header_align == 'center' -%}
-              <div class="hero hero--center overlay" style="{{ _header_style }}">
-            {%- else -%}
-              <div class="hero overlay" style="{{ _header_style }}">
-            {%- endif -%}
-          {%- endif -%}
                 <div class="hero__content">
                   {%- if _full_width == false -%}
                     <div class ="main">
@@ -150,67 +152,70 @@ layout: base
                   {%- endif -%}
                 </div>
               </div>
-          </div>
-        {%- elsif _article_header_type == 'cover' -%}
-          {%- if page.article_header.image.src -%}
-            {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
-            {%- assign _header_image_src = __return -%}
-            <img class="article__header--cover" src="{{ _header_image_src }}"></img>
+            </div>
+          {%- elsif _article_header_type == 'cover' -%}
+            {%- if page.article_header.image.src -%}
+              {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
+              {%- assign _header_image_src = __return -%}
+              <img class="article__header--cover" src="{{ _header_image_src }}"></img>
+            {%- endif -%}
           {%- endif -%}
+
         {%- endif -%}
 
-      {%- endif -%}
 
+        {%- if _full_width == false -%}
+          <div class ="main">
+        {%- endif -%}
+            <div class="grid grid--reverse">
 
-      {%- if _full_width == false -%}
-        <div class ="main">
-      {%- endif -%}
-          <div class="grid grid--reverse">
+              <div class="col-aside js-col-aside">
+                {%- if page.aside -%}
+                  <aside class="page__aside js-page-aside">
+                    {%- include aside/toc.html -%}
+                  </aside>
+                {%- endif -%}
+              </div>
 
-             <div class="col-aside js-col-aside">
-              {%- if page.aside -%}
-                <aside class="page__aside js-page-aside">
-                  {%- include aside/toc.html -%}
-                </aside>
-              {%- endif -%}
+              <div class="col-main cell--auto">
+                {%- if _page_type == 'article' -%}
+                  <article itemscope itemtype="http://schema.org/Article">
+                {%- elsif _page_type == 'webpage' -%}
+                  <article itemscope itemtype="http://schema.org/WebPage">
+                {%- else -%}
+                  <article>
+                {%- endif -%}
+
+                {%- if _article_header_type == 'overlay' or page.article_header == false -%}
+                  {%- include article-header.html article=page html=false -%}
+                  {%- include article-info.html article=page html=false -%}
+                {%- else -%}
+                  {%- include article-header.html article=page -%}
+                  {%- include article-info.html article=page -%}
+                {%- endif -%}
+
+                    <div class="js-article-content">{{ content }}</div>
+                    {%- if jekyll.environment != "development" and _comment != false -%}
+                      <section class="page__comments">{%- include comments.html -%}</section>
+                    {%- endif -%}
+                </article>
+              </div>
             </div>
 
-            <div class="col-main cell--auto">
-              {%- if _page_type == 'article' -%}
-                <article itemscope itemtype="http://schema.org/Article">
-              {%- elsif _page_type == 'webpage' -%}
-                <article itemscope itemtype="http://schema.org/WebPage">
-              {%- else -%}
-                <article>
-              {%- endif -%}
-
-              {%- if _article_header_type == 'overlay' or page.article_header == false -%}
-                {%- include article-header.html article=page html=false -%}
-                {%- include article-info.html article=page html=false -%}
-              {%- else -%}
-                {%- include article-header.html article=page -%}
-                {%- include article-info.html article=page -%}
-              {%- endif -%}
-
-                  <div class="js-article-content">{{ content }}</div>
-                  {%- if jekyll.environment != "development" and _comment != false -%}
-                    <section class="page__comments">{%- include comments.html -%}</section>
-                  {%- endif -%}
-              </article>
-            </div>
+        {%- if _full_width == false -%}
           </div>
-
-      {%- if _full_width == false -%}
+        {%- endif -%}
         </div>
-      {%- endif -%}
-      </div>
 
-      <div class="page__footer">{%- include footer.html -%}</div>
-    </div>
-  </div>
-  {%- if _header != false -%}
-    <div class="page__search-panel">{%- include search.html -%}</div>
-  {%- endif -%}
+        <div class="page__footer">{%- include footer.html -%}</div>
+      </div>
+    </div> {%- comment -%} end page__main {%- endcomment -%}
+{%- if page.sidebar -%}
+  </div> {%- comment -%} end grid {%- endcomment -%}
+{%- endif -%}
+{%- if _header != false -%}
+  <div class="page__search-panel">{%- include search.html -%}</div>
+{%- endif -%}
 </div>
 
 
