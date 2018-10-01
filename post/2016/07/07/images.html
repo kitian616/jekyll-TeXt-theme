@@ -264,10 +264,10 @@
   <body>
     <div class="root" data-is-touch="false">
       <div class="layout--page js-page-root">
-<div class="page__main js-page-main has-aside">
+<div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
-    <div class="page__main-inner">
-      <div></div>
+      <div class="page__main-inner">
+        <div></div>
 <div class="page__header">
 <header class="header"><div class="main">
       <div class="header__title">
@@ -299,9 +299,9 @@
 </div>
 <div class="page__content"><div class="main"><div class="grid grid--reverse">
 
-             <div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
+              <div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-            <div class="col-main cell--auto">
+              <div class="col-main cell--auto">
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header">
 <header><h1>Jekyll - Images</h1></header><span class="split-space"> </span>
           <a class="edit-on-github" title="Edit on Github" href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_posts/2016-07-07-images.md">
@@ -432,10 +432,10 @@
 			gitalk.render('js-gitalk-container');
 		});
 	</script></section></article>
-            </div>
-          </div></div></div>
+              </div>
+            </div></div></div>
 
-      <div class="page__footer">
+        <div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main">
 <aside itemscope itemtype="http://schema.org/Organization">
@@ -504,10 +504,10 @@
   </div>
 </div>
 </div>
+      </div>
     </div>
-  </div>
 <div class="page__search-panel">
-<div class="search">
+<div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -633,20 +633,26 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
   // search panel
   var $pageRoot = $('.js-page-root');
+  var $pageMain = $('.js-page-main');
   var $searchToggle = $('.js-search-toggle');
   var showSearch = false;
+  var scrollTop;
+
+  function openSearchPanel() {
+    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+    $pageRoot.addClass('show-search-panel');
+    $pageMain.scrollTop(scrollTop);
+    $searchInput[0].focus();
+  }
 
   function closeSearchPanel() {
     $pageRoot.removeClass('show-search-panel');
+    $(window).scrollTop(scrollTop);
     $searchInput[0].blur();
     setTimeout(function() {
       $searchInput.val(''); searchBoxEmpty();
       window.pageAsideAffix && window.pageAsideAffix.refresh();
     }, 400);
-  }
-  function openSearchPanel() {
-    $pageRoot.addClass('show-search-panel');
-    $searchInput[0].focus();
   }
 
   // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /

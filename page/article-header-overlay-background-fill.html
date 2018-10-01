@@ -263,10 +263,10 @@
   </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root"><div class="page__main js-page-main">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
 
-    <div class="page__main-inner">
-      <div></div><div class="page__header"><header class="header"><div class="main">
+      <div class="page__main-inner">
+        <div></div><div class="page__header"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -283,14 +283,14 @@
         </ul>
       </nav></div>
   </header>
-</div><div class="page__content"><div class="article__header--overlay"><div class="hero hero--dark overlay" style="background-image:;background-color:#123;"><div class="hero__content"><div class ="main"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Sep 26, 2018</span>
+</div><div class="page__content"><div class="article__header--overlay"><div class="hero hero--dark overlay" style="background-image:;background-color:#123;"><div class="hero__content"><div class ="main"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Oct 02, 2018</span>
             </li></ul></div><div class="article__header"><header><h1>Page - Article Header Overlay Background Fill</h1></header></div><p class="overlay__excerpt">A post has an article header overlay with a solid background color (#123).</p></div></div>
               </div>
-          </div><div class ="main"><div class="grid grid--reverse">
+            </div><div class ="main"><div class="grid grid--reverse">
 
-             <div class="col-aside js-col-aside"></div>
+              <div class="col-aside js-col-aside"></div>
 
-            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Page - Article Header Overlay Background Fill"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-26T23:48:34+08:00"><div class="js-article-content"><div class="layout--article">
+              <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Page - Article Header Overlay Background Fill"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-10-02T01:45:46+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>A post has an article header overlay with a solid background color (#123).</p>
 
@@ -310,7 +310,7 @@ article_header:
 </code></pre></div></div>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-26T23:48:34+08:00"><!-- this will show at every article content's bottom --></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/page/sidebar-aside.html">Page - Sidebar (Aside)</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-image.html">Page - Article Header Overlay Background Image</a></div></div></div>
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-10-02T01:45:46+08:00"><!-- this will show at every article content's bottom --></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/page/sidebar-aside.html">Page - Sidebar (Aside)</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-image.html">Page - Article Header Overlay Background Image</a></div></div></div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -349,10 +349,10 @@ article_header:
 			gitalk.render('js-gitalk-container');
 		});
 	</script></section></article>
-            </div>
-          </div></div></div>
+              </div>
+            </div></div></div>
 
-      <div class="page__footer">
+        <div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
@@ -405,8 +405,8 @@ article_header:
     </footer>
   </div>
 </div></div>
-    </div>
-  </div><div class="page__search-panel"><div class="search">
+      </div>
+    </div><div class="page__search-panel"><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -532,20 +532,26 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
   // search panel
   var $pageRoot = $('.js-page-root');
+  var $pageMain = $('.js-page-main');
   var $searchToggle = $('.js-search-toggle');
   var showSearch = false;
+  var scrollTop;
+
+  function openSearchPanel() {
+    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+    $pageRoot.addClass('show-search-panel');
+    $pageMain.scrollTop(scrollTop);
+    $searchInput[0].focus();
+  }
 
   function closeSearchPanel() {
     $pageRoot.removeClass('show-search-panel');
+    $(window).scrollTop(scrollTop);
     $searchInput[0].blur();
     setTimeout(function() {
       $searchInput.val(''); searchBoxEmpty();
       window.pageAsideAffix && window.pageAsideAffix.refresh();
     }, 400);
-  }
-  function openSearchPanel() {
-    $pageRoot.addClass('show-search-panel');
-    $searchInput[0].focus();
   }
 
   // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /

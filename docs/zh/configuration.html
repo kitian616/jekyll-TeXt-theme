@@ -269,12 +269,14 @@
       <i class="fas fa-bars icon--show"></i>
     </div>
   </div>
-  <div class="page__mask js-sidebar-hide"></div>
+  <div class="page__mask js-page-mask js-sidebar-hide"></div>
 
-  <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">开始</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">快速开始</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/update-form-1-to-2">从 1.x 升级到 2.x</a></li><li class="toc-h1">定制</li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/zh/configuration">配置</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/navigation">导航栏</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/layouts">布局</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/logo-and-favicon">Logo 和 Favicon</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/authors">作者</a></li><li class="toc-h1">内容</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/writing-posts">撰写博客</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/markdown-enhancements">Markdown 增强</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/additional-styles">附加样式</a></li><li class="toc-h1">其他语言</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">English</a></li></ul></div></div><div class="page__main js-page-main has-aside">
+  <div class="grid page__grid page__viewport">
 
-    <div class="page__main-inner">
-      <div></div><div class="page__header"><header class="header"><div class="main">
+    <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">开始</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">快速开始</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/update-form-1-to-2">从 1.x 升级到 2.x</a></li><li class="toc-h1">定制</li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/zh/configuration">配置</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/navigation">导航栏</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/layouts">布局</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/logo-and-favicon">Logo 和 Favicon</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/authors">作者</a></li><li class="toc-h1">内容</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/writing-posts">撰写博客</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/markdown-enhancements">Markdown 增强</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/additional-styles">附加样式</a></li><li class="toc-h1">其他语言</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">English</a></li></ul></div></div><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
+
+      <div class="page__main-inner">
+        <div></div><div class="page__header"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -293,13 +295,13 @@
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-             <div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
+              <div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-            <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>配置</h1></header><span class="split-space">&nbsp;</span>
+              <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>配置</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.1-configuration.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-09-26T23:48:34+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-10-02T01:45:46+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>Jekyll 允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的  <em>_config.yml</em> 文件，也可以作为命令行的标记来配置。</p>
 
@@ -523,8 +525,7 @@
 <span class="na">excerpt_type</span><span class="pi">:</span> <span class="s">text</span> <span class="c1"># text (default), html</span>
 </code></pre></div></div>
 
-<p class="error">This setting has been <strong>MOVED</strong> to the YAML Front Matter of Articles and Home Layout <strong>Since Version 2.2.0</strong>, You can find more information [HERE]
-该设置在 2.2.0 版中移到了 Articles 和 Home 布局的头信息中，你可以在<a href="https://tianqi.name/jekyll-TeXt-theme/docs/cn/layouts#articles-layout">这里</a>找到更多信息.</p>
+<p class="error">该设置在 2.2.0 版中移到了 Articles 和 Home 布局的头信息中，你可以在<a href="https://tianqi.name/jekyll-TeXt-theme/docs/cn/layouts#articles-layout">这里</a>找到更多信息.</p>
 
 <h3 id="许可协议">许可协议</h3>
 
@@ -756,7 +757,7 @@
 </div>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-09-26T23:48:34+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-10-02T01:45:46+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> 许可协议。
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -801,10 +802,10 @@
 			gitalk.render('js-gitalk-container');
 		});
 	</script></section></article>
-            </div>
-          </div></div></div>
+              </div>
+            </div></div></div>
 
-      <div class="page__footer">
+        <div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
@@ -857,8 +858,8 @@
     </footer>
   </div>
 </div></div>
-    </div>
-  </div><div class="page__search-panel"><div class="search">
+      </div>
+    </div></div><div class="page__search-panel"><div class="search search--dark">
   <div class="main">
     <div class="search__header">搜索</div>
     <div class="search-bar">
@@ -984,20 +985,26 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
   // search panel
   var $pageRoot = $('.js-page-root');
+  var $pageMain = $('.js-page-main');
   var $searchToggle = $('.js-search-toggle');
   var showSearch = false;
+  var scrollTop;
+
+  function openSearchPanel() {
+    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+    $pageRoot.addClass('show-search-panel');
+    $pageMain.scrollTop(scrollTop);
+    $searchInput[0].focus();
+  }
 
   function closeSearchPanel() {
     $pageRoot.removeClass('show-search-panel');
+    $(window).scrollTop(scrollTop);
     $searchInput[0].blur();
     setTimeout(function() {
       $searchInput.val(''); searchBoxEmpty();
       window.pageAsideAffix && window.pageAsideAffix.refresh();
     }, 400);
-  }
-  function openSearchPanel() {
-    $pageRoot.addClass('show-search-panel');
-    $searchInput[0].focus();
   }
 
   // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
@@ -1289,15 +1296,35 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
 })();*/</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
+
   window.Lazyload.js(SOURCES.jquery, function() {
+    var $pageMask = $('.js-page-mask');
     var $pageRoot = $('.js-page-root');
+    var $pageMain = $('.js-page-main');
     var $sidebarShow = $('.js-sidebar-show');
     var $sidebarHide = $('.js-sidebar-hide');
+
+    var scrollTop;
+
+    function freeze(e) {
+      if (e.target === $pageMask[0]) {
+        e.preventDefault();
+      }
+    }
+    function stopBodyScrolling(bool) {
+      if (bool === true) {
+        window.addEventListener('touchmove', freeze, { passive: false });
+      } else {
+        window.removeEventListener('touchmove', freeze, { passive: false });
+      }
+    }
+
     $sidebarShow.on('click', function() {
-      $pageRoot.addClass('show-sidebar');
+      scrollTop = $(window).scrollTop();
+      stopBodyScrolling(true); $pageRoot.addClass('show-sidebar'); $pageMain.scrollTop(scrollTop);
     });
     $sidebarHide.on('click', function() {
-      $pageRoot.removeClass('show-sidebar');
+      stopBodyScrolling(false); $pageRoot.removeClass('show-sidebar'); $(window).scrollTop(scrollTop);
     });
   });
 })();</script><script>

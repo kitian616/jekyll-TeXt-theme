@@ -265,10 +265,10 @@
   <body>
     <div class="root" data-is-touch="false">
       <div class="layout--page js-page-root">
-<div class="page__main js-page-main">
+<div class="page__main js-page-main page__viewport cell cell--auto">
 
-    <div class="page__main-inner">
-      <div></div>
+      <div class="page__main-inner">
+        <div></div>
 <div class="page__header">
 <header class="header"><div class="main">
       <div class="header__title">
@@ -300,9 +300,9 @@
 </div>
 <div class="page__content"><div class="main"><div class="grid grid--reverse">
 
-             <div class="col-aside js-col-aside"></div>
+              <div class="col-aside js-col-aside"></div>
 
-            <div class="col-main cell--auto">
+              <div class="col-main cell--auto">
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>About</h1></header></div>
 <meta itemprop="headline" content="About">
 <meta itemprop="author" content="TeXt">
@@ -359,10 +359,10 @@
 			gitalk.render('js-gitalk-container');
 		});
 	</script></section></article>
-            </div>
-          </div></div></div>
+              </div>
+            </div></div></div>
 
-      <div class="page__footer">
+        <div class="page__footer">
 <div class="footer js-page-footer">
   <div class="main">
 <aside itemscope itemtype="http://schema.org/Organization">
@@ -431,10 +431,10 @@
   </div>
 </div>
 </div>
+      </div>
     </div>
-  </div>
 <div class="page__search-panel">
-<div class="search">
+<div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -560,20 +560,26 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
   // search panel
   var $pageRoot = $('.js-page-root');
+  var $pageMain = $('.js-page-main');
   var $searchToggle = $('.js-search-toggle');
   var showSearch = false;
+  var scrollTop;
+
+  function openSearchPanel() {
+    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+    $pageRoot.addClass('show-search-panel');
+    $pageMain.scrollTop(scrollTop);
+    $searchInput[0].focus();
+  }
 
   function closeSearchPanel() {
     $pageRoot.removeClass('show-search-panel');
+    $(window).scrollTop(scrollTop);
     $searchInput[0].blur();
     setTimeout(function() {
       $searchInput.val(''); searchBoxEmpty();
       window.pageAsideAffix && window.pageAsideAffix.refresh();
     }, 400);
-  }
-  function openSearchPanel() {
-    $pageRoot.addClass('show-search-panel');
-    $searchInput[0].focus();
   }
 
   // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
