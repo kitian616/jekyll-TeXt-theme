@@ -17,9 +17,9 @@
     }
     function stopBodyScrolling(bool) {
       if (bool === true) {
-        document.addEventListener('touchmove', freeze, { passive: false });
+        window.addEventListener('touchmove', freeze, { passive: false });
       } else {
-        document.removeEventListener('touchmove', freeze, { passive: false });
+        window.removeEventListener('touchmove', freeze, { passive: false });
       }
     }
 

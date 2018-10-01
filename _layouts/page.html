@@ -31,7 +31,7 @@ layout: base
   </div>
   <div class="page__mask js-page-mask js-sidebar-hide"></div>
 
-  <div class="grid page__gird">
+  <div class="grid page__grid page__screen">
 
     <div class="page__sidebar">
       {%- include sidebar/toc.html -%}
@@ -44,6 +44,9 @@ layout: base
     {%- assign _page_main_class = 'page__main js-page-main' -%}
     {%- if _page_mode == 'immersive' -%}
       {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
+    {%- endif -%}
+    {%- if page.sidebar != true -%}
+      {%- assign _page_main_class = _page_main_class | append: ' page__screen' -%}
     {%- endif -%}
     {%- if page.aside -%}
       {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}

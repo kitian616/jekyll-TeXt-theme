@@ -106,20 +106,26 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
   // search panel
   var $pageRoot = $('.js-page-root');
+  var $pageMain = $('.js-page-main');
   var $searchToggle = $('.js-search-toggle');
   var showSearch = false;
+  var scrollTop;
+
+  function openSearchPanel() {
+    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+    $pageRoot.addClass('show-search-panel');
+    $pageMain.scrollTop(scrollTop);
+    $searchInput[0].focus();
+  }
 
   function closeSearchPanel() {
     $pageRoot.removeClass('show-search-panel');
+    $(window).scrollTop(scrollTop);
     $searchInput[0].blur();
     setTimeout(function() {
       $searchInput.val(''); searchBoxEmpty();
       window.pageAsideAffix && window.pageAsideAffix.refresh();
     }, 400);
-  }
-  function openSearchPanel() {
-    $pageRoot.addClass('show-search-panel');
-    $searchInput[0].focus();
   }
 
   // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
