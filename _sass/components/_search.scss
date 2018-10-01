@@ -17,10 +17,17 @@
     padding: 0 1.8rem;
     margin: 0;
     line-height: 1 !important;
+    color: $text-color;
     background-color: transparent;
     border: 2px solid $border-color;
     border-radius: map-get($button, pill-radius);
     -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
+    .search--light & {
+      color: $text-color-theme-light;
+    }
+    .search--dark & {
+      color: $text-color-theme-dark;
+    }
     @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
     @include focus {
       box-shadow: 0 0 0 2px rgba($border-color, .4);
@@ -28,10 +35,22 @@
   }
   & > .search-box__icon-search {
     color: $text-color-l;
+    .search--light & {
+      color: $text-color-theme-light-l;
+    }
+    .search--dark & {
+      color: $text-color-theme-dark-l;
+    }
   }
   & > .search-box__icon-clear {
     & > a {
       @include link-colors($text-color);
+      .search--light & {
+        @include link-colors($text-color-theme-light);
+      }
+      .search--dark & {
+        @include link-colors($text-color-theme-dark);
+      }
       cursor: pointer;
     }
   }
@@ -67,17 +86,29 @@
   font-weight: map-get($base, font-weight-bold);
   color: $text-color-l;
   text-transform: uppercase;
+  .search--light & {
+    color: $text-color-theme-light-l;
+  }
+  .search--dark & {
+    color: $text-color-theme-dark-l;
+  }
 }
 .search-result__item {
   list-style-type: none;
   a {
     padding: .4rem 1rem;
     @include clickable($text-color, transparent, $text-color-3, $main-color-3);
+    .search--light & {
+      @include clickable($text-color-theme-light, transparent, $text-color-3, $main-color-3);
+    }
+    .search--dark & {
+      @include clickable($text-color-theme-dark, transparent, $text-color-3, $main-color-3);
+    }
   }
   &.active {
     a {
-      color: $text-color-3;
-      background-color: $main-color-3;
+      color: $text-color-3 !important;
+      background-color: $main-color-3 !important;
     }
   }
 }
@@ -86,6 +117,12 @@
   font-size: map-get($base, font-size-h1);
   font-weight: map-get($base, font-weight-bold);
   color: $text-color-d;
+  .search--light & {
+    color: $text-color-theme-light-d;
+  }
+  .search--dark & {
+    color: $text-color-theme-dark-d;
+  }
   @include media-breakpoint-down(md) {
     display: none;
   }

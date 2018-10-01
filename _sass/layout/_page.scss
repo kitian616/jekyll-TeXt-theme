@@ -150,11 +150,14 @@
     left: 0;
     z-index: map-get($z-index, search);
     display: none;
-    color: $text-color;
-    background-color: $background-color;
+    color: $text-color-theme-dark;
+    background-color: $mask-color;
     @include overflow(auto);
   }
   &.show-search-panel {
+    .page__viewport {
+      filter: blur(28px);
+    }
     .page__main {
       @include overflow(hidden);
     }
