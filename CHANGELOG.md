@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.2.1 (2018-10-02)
+
+### Enhancements
+
+- Update screenshots
+- landing Layout `data.sections` item's `image` add `full_width` setting
+- Remove `header.type` and add `header.background` setting
+- page Layout width sidebar use document scroll when viewport width < 1024px, this enhance the user experience on a phone or a pad
+- Telegram social icon (@WangQiru)
+- Search panel use dark background
+
 ## 2.2.0 (2018-09-16)
 
 ### Enhancements
