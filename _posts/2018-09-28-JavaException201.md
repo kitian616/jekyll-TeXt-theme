@@ -53,7 +53,7 @@ If we can reduce the code to have potential `null` access in complication phase,
 But the standard is not decided yet, we can see `NonNull` or `NotNull` in different IDEs or checkers. Take Eclipse as an example. By using proper annotation, Eclipse will show errors when it detects potential mismatch. 
 
 
-![Nullable annotation in Eclipse](/assets/JavaException201_NullPointerException_nullable_annotation_Eclipse_sample_code.png)
+![Nullable annotation in Eclipse](/assets/NPE_nullable_annotation_Eclipse_sample_code.png)
 
 By default, this is not enabled in Eclipse. See [Enable annotation-based null analysis in Eclipse](/assets/JavaException201_NullPointerException_nullable_annotation_Eclipse_enable_setting.png)
 
