@@ -12,7 +12,7 @@ The history of `null` dates back to 1965, Tony Hoare (known for `Quicksort`) int
 
 > At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to `innumerable errors, vulnerabilities, and system crashes`, which have probably caused a billion dollars of pain and damage in the last forty years.
 
-Removing `null` is not easy, we need some mitigations. Check whether object is `null` before each invocation? That's not good, as it makes code longer and harder to read.
+Removing `null` is not possible, instead we need some mitigations. Check whether object is `null` before each invocation? That's not good, as it makes code longer and harder to read.
 
 **Notice following ways are not mutually exclusive.**
 
@@ -86,7 +86,7 @@ String version = computer.map(Computer::getSoundcard)
 ### ~~Null Object Pattern~~
 [Null object pattern] was introduced in book series. The idea behind is intuitive, use an 'empty' object which does nothing instead of `null` to avoid `NullPointerException`. 
 
-`NullPointerException` is caused by coding bugs. By creating an object which does not exist in the real world doesn't help solving the problem. Instead, it delays the exposure of coding bugs.
+`NullPointerException` is caused by coding bugs. By creating an object which does not exist in the real world doesn't help solving the problem. Instead, it delays the exposure of coding bugs. Therefore, `Null object pattern` should not be `encouraged`.
 
 {% highlight JAVA %}
 // Not recommended
@@ -104,7 +104,25 @@ class DummyAnimal implements Animal {
 {% endhighlight %}
 
 ### ~~Return `empty` Collection Instead of `null`~~
+Starting from a real example in a web project. In a normal version up, there are 2 issues among hundreds of issues.
 
+1. A method named `getList` in data access layer returns `null`, and some invokers do not check carefully so `NullPointerException` occurred. Developer fixed it by return `empty` Collection.
+2. There are more than 1 version of data structure in the system, one on-fly migration script checks whether the return of `getList` is `null` or not to decide a routine in the migration. However, after the above fixing, `getList` never returns `null`.
+
+Incident finally happened that end user can not open some pages. 
+
+`null` and `empty` Collection represent different things logically. `null` means `unknown`/`unset`/`unconfigured`. 
+
+For example, to answer multi-choice questions in a survey system, `empty` Collection means user's answer is empty, while `null` means the user hasn't answered the question yet. 
+
+Another example, in a user management system which records the marital status, some users do not specify, therefore when the system reads marital status from database, it might be `null` instead of either `true` or `false`. 
+
+You can also find `null` in JSON and MySQL.
+
+Do not mix the logic of `null` or `empty` just for avoiding `NullPointerException`.
+
+# Conclusion
+`null` is not avoidable as it represents something logically. In Java, `Optional` and `NonNull`/`Nullable` etc. are relatively good ways to mitigate the `NullPointerException`.
 
 # Reference
 \[1\] [Null References: The Billion Dollar Mistake]
