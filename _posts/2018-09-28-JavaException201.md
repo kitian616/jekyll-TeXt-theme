@@ -1,5 +1,5 @@
 ---
-title: "Java Exception 201: NullPointerException and Mitigations"
+title: "Java Exception 201: NullPointerException and Its Mitigations"
 date: 2018-09-28 16:18:32 +0800
 tags: Java Exception NullPointerException
 key: 2018-09-28-JavaException201
@@ -55,7 +55,7 @@ But the standard is not decided yet, we can see `NonNull` or `NotNull` in differ
 
 ![Nullable annotation in Eclipse](/assets/NPE_nullable_annotation_Eclipse_sample_code.png)
 
-By default, this is not enabled in Eclipse. See [Enable annotation-based null analysis in Eclipse](/assets/JavaException201_NullPointerException_nullable_annotation_Eclipse_enable_setting.png)
+By default, this is not enabled in Eclipse. See [Enable annotation-based null analysis in Eclipse](/assets/NPE_nullable_annotation_Eclipse_enable_setting.png)
 
 ## Optional
 Java 8 introduces a new class called `java.util.Optional` that can alleviate some of `NullPointerException` problems. Following is a very good example from [Tired of Null Pointer Exceptions? Consider Using Java SE 8's Optional!]
