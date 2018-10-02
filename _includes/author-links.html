@@ -80,5 +80,13 @@
         </a>
       </li>
     {%- endif -%}
+
+    {%- if _author.telegram -%}
+      <li title="{{ __return | replace: '[NAME]', 'telegram' }}">
+        <a class="button button--circle telegram-button" itemprop="sameAs" href="https://t.me/{{ _author.telegram }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/telegram.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
   </ul>
 </div>

@@ -48,7 +48,7 @@ author:
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name/
   github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
-
+  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
