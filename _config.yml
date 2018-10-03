@@ -37,7 +37,7 @@ author:
   name      : ganxiyun
   url       :
   avatar    : # path or url of avatar image
-  bio       : Be a good man
+  bio       : Be a KITE man
   email     :
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
@@ -136,11 +136,11 @@ pageview:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: google # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : UA-46660486-4 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
