@@ -19,6 +19,7 @@ Weekly report is usually used for task/project in an organization, the objective
 
 Daily report is similar to weekly report. In software development, Daily [Stand-up meeting] is a well-known way although it doesn't require a written report.
 
+<!--more-->
 
 # What Should Be Included in Weekly Report?
 

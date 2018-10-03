@@ -14,6 +14,8 @@ Exception is fundamental knowledge in Java. However, someone analyzed half a mil
 
 It's worthy to emphasize the usage of exceptions.
 
+<!--more-->
+
 # Kinds of Exception
 
 [Exceptions in Java Language Specification] describes kinds of exceptions. We can see the figure to see the kinds of Exception. 

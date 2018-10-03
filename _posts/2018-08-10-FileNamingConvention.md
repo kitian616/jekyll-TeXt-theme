@@ -18,6 +18,8 @@ Even if we can remember the content of the files temporarily, we will forget soo
 
 A good file naming convention is good for organizing and retrieving our documents efficiently. 
 
+<!--more-->
+
 # How To Name Files?
 
 The most important things to remember about file naming are to be `consistent` and `descriptive` in naming and organizing your files so that it’s obvious where to find a file and what it contains. \(From [File naming convention in Purdue Libraries]\)
