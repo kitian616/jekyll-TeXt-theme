@@ -11,6 +11,8 @@ key: 2018-09-28-JavaException201
 
 The history of `null` dates back to 1965, Tony Hoare (known for `Quicksort`) introduced `null` references in an object oriented language. In 2009 at a conference, he apologized for inventing the `null` reference, which he called "my billion-dollar mistake". \[[1][Null References: The Billion Dollar Mistake]\]
 
+<!--more-->
+
 > At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to `innumerable errors, vulnerabilities, and system crashes`, which have probably caused a billion dollars of pain and damage in the last forty years.
 
 
