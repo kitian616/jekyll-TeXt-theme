@@ -9,6 +9,7 @@
 
 - 각 변수는 하나의 value를 나타낸다
 - type()을 통해 변수의 타입을 알 수 있다
+
 ~~~Python
 height = 168
 type(height)
