@@ -90,7 +90,7 @@ String version = computer.map(Computer::getSoundcard)
 {% endhighlight %}
 
 ## Avoid Returning `null`
-### ~~Null Object Pattern~~
+### ~~Null Object Pattern~~ (Not recommended)
 [Null object pattern] was introduced in book series. The idea behind is intuitive, use an 'empty' object which does nothing instead of `null` to avoid `NullPointerException`. 
 
 
@@ -111,7 +111,7 @@ class DummyAnimal implements Animal {
 }
 {% endhighlight %}
 
-### ~~Return `empty` Collection Instead of `null`~~
+### ~~Return `empty` Collection Instead of `null`~~ (Not recommended)
 Starting from a real example in a web project. In a normal version up, there are 2 issues among hundreds of issues.
 
 1. A method named `getList` in data access layer returns `null`, and some invokers do not check carefully so `NullPointerException` occurred. Developer fixed it by return `empty` Collection.
