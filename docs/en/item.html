@@ -264,16 +264,17 @@
   <body>
     <div class="root" data-is-touch="false">
       <div class="layout--page layout--page--sidebar clearfix js-page-root">
-  <div class="page__actions">
-    <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
-      <i class="fas fa-bars icon--show"></i>
-    </div>
-  </div>
   <div class="page__mask js-page-mask js-sidebar-hide"></div>
+  <div class="page__viewport">
+    <div class="page__actions">
+      <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
+        <i class="fas fa-bars icon--show"></i>
+      </div>
+    </div>
 
-  <div class="grid page__grid page__viewport">
+    <div class="grid page__grid">
 
-    <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/structure">Structure</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/update-form-1-to-2">Update form 1.x to 2.x</a></li><li class="toc-h1">Customization</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/navigation">Navigation</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/layouts">Layouts</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/logo-and-favicon">Logo and Favicon</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/authors">Authors</a></li><li class="toc-h1">Content</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/markdown-enhancements">Markdown Enhancements</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/additional-styles">Additional Styles</a></li><li class="toc-h1">Extra</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/spacing">Spacing</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/grid">Grid</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/icons">Icons</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/image">Image</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/button">Button</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/item">Item</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/card">Card</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/hero">Hero</a></li><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">中文</a></li></ul></div></div><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
+      <div class="page__sidebar"><div class="sidebar-toc"><ul class="toc toc--navigator"><li class="toc-h1">Start</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/quick-start">Quick Start</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/structure">Structure</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/update-form-1-to-2">Update form 1.x to 2.x</a></li><li class="toc-h1">Customization</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/configuration">Configuration</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/navigation">Navigation</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/layouts">Layouts</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/logo-and-favicon">Logo and Favicon</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/authors">Authors</a></li><li class="toc-h1">Content</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/writing-posts">Writing Posts</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/markdown-enhancements">Markdown Enhancements</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/additional-styles">Additional Styles</a></li><li class="toc-h1">Extra</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/spacing">Spacing</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/grid">Grid</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/icons">Icons</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/image">Image</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/button">Button</a></li><li class="toc-h2 active"><a href="/jekyll-TeXt-theme/docs/en/item">Item</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/card">Card</a></li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/en/hero">Hero</a></li><li class="toc-h1">Languages</li><li class="toc-h2"><a href="/jekyll-TeXt-theme/docs/zh/quick-start">中文</a></li></ul></div></div><div class="page__main js-page-main has-aside cell cell--auto">
 
       <div class="page__main-inner">
         <div></div><div class="page__header"><header class="header"><div class="main">
@@ -301,7 +302,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/4.6-item.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Item"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-10-02T15:26:26+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Item"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-10-12T23:32:15+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><h2 id="content">Content</h2>
 
@@ -474,7 +475,7 @@
 </code></pre></div></div>
 </div>
 
-  <footer class="article__footer"><meta itemprop="dateModified" content="2018-10-02T15:26:26+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+  <footer class="article__footer"><meta itemprop="dateModified" content="2018-10-12T23:32:15+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -576,7 +577,7 @@
   </div>
 </div></div>
       </div>
-    </div></div><div class="page__search-panel"><div class="search search--dark">
+    </div></div></div><div class="page__search-panel"><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
