@@ -1,6 +1,10 @@
 .layout--page {
   height: 100%;
 
+  .page__viewport {
+    height: 100%;
+  }
+
   .page__grid {
     height: 100%;
   }

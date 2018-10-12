@@ -107,8 +107,10 @@
   }
   &.active {
     a {
-      color: $text-color-3 !important;
-      background-color: $main-color-3 !important;
+      @include plain() {
+        color: $text-color-3;
+        background-color: $main-color-3;
+      }
     }
   }
 }

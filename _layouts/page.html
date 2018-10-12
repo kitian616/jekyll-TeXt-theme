@@ -24,18 +24,19 @@ layout: base
 
 {%- if page.sidebar -%}
 <div class="layout--page layout--page--sidebar clearfix js-page-root">
-  <div class="page__actions">
-    <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
-      <i class="fas fa-bars icon--show"></i>
-    </div>
-  </div>
   <div class="page__mask js-page-mask js-sidebar-hide"></div>
-
-  <div class="grid page__grid page__viewport">
-
-    <div class="page__sidebar">
-      {%- include sidebar/toc.html -%}
+  <div class="page__viewport">
+    <div class="page__actions">
+      <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
+        <i class="fas fa-bars icon--show"></i>
+      </div>
     </div>
+
+    <div class="grid page__grid">
+
+      <div class="page__sidebar">
+        {%- include sidebar/toc.html -%}
+      </div>
 
 {%- else -%}
 <div class="layout--page js-page-root">
@@ -45,9 +46,9 @@ layout: base
     {%- if _page_mode == 'immersive' -%}
       {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
     {%- endif -%}
-    {%- if page.sidebar != true -%}
+    {%- unless page.sidebar -%}
       {%- assign _page_main_class = _page_main_class | append: ' page__viewport' -%}
-    {%- endif -%}
+    {%- endunless -%}
     {%- if page.aside -%}
       {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
     {%- elsif _full_width -%}
@@ -214,7 +215,8 @@ layout: base
       </div>
     </div> {%- comment -%} end page__main {%- endcomment -%}
 {%- if page.sidebar -%}
-  </div> {%- comment -%} end grid {%- endcomment -%}
+    </div> {%- comment -%} end grid {%- endcomment -%}
+  </div> {%- comment -%} end page__viewport {%- endcomment -%}
 {%- endif -%}
 {%- if _header != false -%}
   <div class="page__search-panel">{%- include search.html -%}</div>
