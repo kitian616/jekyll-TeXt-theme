@@ -2,11 +2,10 @@
   margin: map-get($base, vertical-space-lg) 0;
 }
 
-.plugin--video {
+.plugin--video, .plugin--slide {
   position: relative;
   width: 100%;
   padding: 0;
-  padding-top: 56.25%;
   & > iframe {
     position: absolute;
     top: 0;
@@ -14,6 +13,14 @@
     width: 100%;
     height: 100%;
   }
+}
+
+.plugin--video {
+  padding-top: percentage(315 / 560);
+}
+
+.plugin--slide {
+  padding-top: percentage(487 / 599);
 }
 
 .plugin--audio {
