@@ -301,7 +301,8 @@
   <div class="article__content" itemprop="articleBody"><p>With the help of plugins for media, you can easily add <strong>audio</strong> and <strong>video</strong> in your posts.</p>
 
 <div><div class="plugin plugin--video">
-<iframe class="plugin-iframe plugin-iframe--video" src="https://www.youtube.com/embed/wbY97-hdD5c?showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+  <iframe src="https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy" frameborder="0" scrolling="no" allowfullscreen="">
+  </iframe>
 </div></div>
 
 <!--more-->
@@ -326,7 +327,7 @@
 <h3 id="youtube">YouTube</h3>
 
 <div><div class="plugin plugin--video">
-<iframe class="plugin-iframe plugin-iframe--video" src="https://www.youtube.com/embed/wbY97-hdD5c?showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+<iframe class="plugin-iframe plugin-iframe--video" src="https://www.youtube.com/embed/wbY97-hdD5c?showinfo=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
 </div></div>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{%- include plugins/youtube.html id='wbY97-hdD5c' -%}
@@ -335,10 +336,23 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;{%- include plugins/youtube.html id='wbY97-hdD5c' -%}&lt;/div&gt;
 </code></pre></div></div>
 
-<h3 id="bilibili-哔哩哔哩">Bilibili (哔哩哔哩)</h3>
+<h3 id="ted">TED</h3>
 
 <div><div class="plugin plugin--video">
-  <iframe src="//player.bilibili.com/player.html?aid=6890938&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+  <iframe src="https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy" frameborder="0" scrolling="no" allowfullscreen="">
+  </iframe>
+</div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{%- include plugins/ted.html id='emily_esfahani_smith_there_s_more_to_life_than_being_happy' -%}
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;{%- include plugins/ted.html id='emily_esfahani_smith_there_s_more_to_life_than_being_happy' -%}&lt;/div&gt;
+</code></pre></div></div>
+
+<h3 id="bilibili-哔哩哔哩">bilibili (哔哩哔哩)</h3>
+
+<div><div class="plugin plugin--video">
+  <iframe src="//player.bilibili.com/player.html?aid=6890938&amp;page=1" frameborder="no" scrolling="no" allowfullscreen="true">
   </iframe>
 </div></div>
 
@@ -347,6 +361,22 @@
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;{%- include plugins/bilibili.html id='6890938' -%}&lt;/div&gt;
 </code></pre></div></div>
+
+<h2 id="slide">Slide</h2>
+
+<h3 id="slideshare">SlideShare</h3>
+
+<div><div class="plugin plugin--slide">
+  <iframe src="//www.slideshare.net/slideshow/embed_code/key/u9L9zDsqEWNKE1" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="">
+  </iframe>
+</div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{%- include plugins/slideshare.html id='u9L9zDsqEWNKE1' -%}
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;{%- include plugins/slideshare.html id='u9L9zDsqEWNKE1' -%}&lt;/div&gt;
+</code></pre></div></div>
+
 </div>
 
   <footer class="article__footer"><meta itemprop="dateModified" content="2017-08-01T00:00:00+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
