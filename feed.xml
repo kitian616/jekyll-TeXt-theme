@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-10-13T19:20:22+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-10-14T00:40:58+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;success highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;info highlighter-rouge&quot;&gt;info&lt;/code&gt; &lt;code class=&quot;warning highlighter-rouge&quot;&gt;warning&lt;/code&gt; &lt;code class=&quot;error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
@@ -160,7 +160,7 @@
       &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/hero&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">Success! success info warning error CLICK ME CLICK ME CLICK ME CLICK ME</summary></entry><entry><title type="html">TeXt - Media</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media.html" rel="alternate" type="text/html" title="TeXt - Media" /><published>2017-08-01T00:00:00+08:00</published><updated>2017-08-01T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media.html">&lt;p&gt;With the help of plugins for media, you can easily add &lt;strong&gt;audio&lt;/strong&gt; and &lt;strong&gt;video&lt;/strong&gt; in your posts.&lt;/p&gt;
+&lt;/table&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">Success! success info warning error CLICK ME CLICK ME CLICK ME CLICK ME</summary></entry><entry><title type="html">TeXt - Media</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media.html" rel="alternate" type="text/html" title="TeXt - Media" /><published>2017-08-01T00:00:00+08:00</published><updated>2017-08-01T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media.html">&lt;p&gt;With the help of plugins for media, you can easily add &lt;strong&gt;audio&lt;/strong&gt;, &lt;strong&gt;video&lt;/strong&gt; and &lt;strong&gt;slides&lt;/strong&gt; in your posts.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;plugin plugin--video&quot;&gt;
   &lt;iframe src=&quot;https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;
@@ -170,6 +170,17 @@
 &lt;!--more--&gt;
 
 &lt;h2 id=&quot;audio&quot;&gt;Audio&lt;/h2&gt;
+
+&lt;h3 id=&quot;soundcloud&quot;&gt;SoundCloud&lt;/h3&gt;
+
+&lt;div&gt;&lt;iframe class=&quot;plugin--audio&quot; width=&quot;100%&quot; height=&quot;166&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/313627932&amp;amp;color=%23ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;show_teaser=true&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allow=&quot;autoplay&quot;&gt;
+&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{%- include plugins/soundcloud.html id='313627932' -%}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div&amp;gt;{%- include plugins/soundcloud.html id='313627932' -%}&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;netease-cloud-music-网易云音乐&quot;&gt;Netease Cloud Music (网易云音乐)&lt;/h3&gt;
 
@@ -214,14 +225,14 @@
 &lt;h3 id=&quot;bilibili-哔哩哔哩&quot;&gt;bilibili (哔哩哔哩)&lt;/h3&gt;
 
 &lt;div&gt;&lt;div class=&quot;plugin plugin--video&quot;&gt;
-  &lt;iframe src=&quot;//player.bilibili.com/player.html?aid=6890938&amp;amp;page=1&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
+  &lt;iframe src=&quot;//player.bilibili.com/player.html?aid=11091080&amp;amp;page=1&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
   &lt;/iframe&gt;
 &lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{%- include plugins/bilibili.html id='6890938' -%}
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{%- include plugins/bilibili.html id='11091080' -%}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div&amp;gt;{%- include plugins/bilibili.html id='6890938' -%}&amp;lt;/div&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div&amp;gt;{%- include plugins/bilibili.html id='11091080' -%}&amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;slide&quot;&gt;Slide&lt;/h2&gt;
@@ -237,7 +248,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div&amp;gt;{%- include plugins/slideshare.html id='u9L9zDsqEWNKE1' -%}&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">With the help of plugins for media, you can easily add audio and video in your posts.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">With the help of plugins for media, you can easily add audio, video and slides in your posts.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;x_1 = {-b + \sqrt{b^2-4ac} \over 2a}&lt;/script&gt;
 
