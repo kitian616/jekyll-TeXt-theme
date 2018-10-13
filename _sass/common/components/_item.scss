@@ -76,7 +76,10 @@ a.item__header, .item__header > a {
       font-size: map-get($base, font-size-h6-xs);
     }
     img {
-      max-height: 35rem;
+      max-height: 32rem;
+      @include media-breakpoint-down(md) {
+        max-height: 14rem;
+      }
     }
   }
 }
