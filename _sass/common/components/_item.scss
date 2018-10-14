@@ -11,18 +11,16 @@
 
 .item__image {
   margin-right: map-get($spacers, 3);
-  @include media-breakpoint-down(md) {
-    margin-right: 0;
-  }
-  @include media-breakpoint-up(md) {
-    & + .item__content {
+  & + .item__content {
+    & > :first-child {
+      margin-top: 0;
       & > :first-child {
         margin-top: 0;
-        & > :first-child {
-          margin-top: 0;
-        }
       }
     }
+  }
+  @include media-breakpoint-down(md) {
+    margin-right: 0;
   }
 }
 

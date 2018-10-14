@@ -3,7 +3,6 @@ title: TeXt - Additional Styles
 key: 20170808
 tags: TeXt
 toc: true
-category: post
 ---
 
 Success!

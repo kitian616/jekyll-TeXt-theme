@@ -50,7 +50,7 @@
 .hero__content {
   margin: map-get($spacers, 5);
   @include media-breakpoint-down(lg) {
-    margin: map-get($spacers, 5) map-get($spacers, 3);
+    margin: map-get($spacers, 5) map-get($spacers, 4);
   }
   @include media-breakpoint-down(md) {
     margin: map-get($spacers, 4) map-get($spacers, 3);
