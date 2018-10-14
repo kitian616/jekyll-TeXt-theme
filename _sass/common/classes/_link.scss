@@ -1,3 +1,3 @@
-@mixin link-colors($clr, $hover-clr: default, $active-clr: default, $focus-clr: null, $theme: default) {
-  @include clickable($clr, null, $hover-clr, null, $active-clr, null, $focus-clr, null, $theme: default);
+@mixin link-colors($clr, $hover-clr: default, $active-clr: default, $focus-clr: null, $theme: default, $ignore-path: false) {
+  @include clickable($clr, null, $hover-clr, null, $active-clr, null, $focus-clr, null, $theme, $ignore-path);
 }

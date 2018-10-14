@@ -1,5 +1,7 @@
 .layout--article {
-
+  .article__sharing {
+    margin: map-get($base, vertical-space-lg) 0;
+  }
   .article__footer {
     margin: map-get($base, vertical-space-lg) 0;
     font-size: map-get($base, font-size-sm);

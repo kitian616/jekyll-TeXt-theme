@@ -103,6 +103,12 @@ paginate_path: /page:num # don't change this unless for special need
 sources: # bootcdn (default), unpkg
 
 
+## => Sharing
+##############################
+sharing:
+  provider: false # false (default), "addtoany"
+
+
 ## => Comments
 ##############################
 comments:
@@ -176,6 +182,7 @@ defaults:
       type: posts
     values:
       layout: article
+      sharing: true
       license: true
       aside:
         toc: true

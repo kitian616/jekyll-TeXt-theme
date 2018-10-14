@@ -199,7 +199,7 @@ layout: base
                 {%- endif -%}
 
                     <div class="js-article-content">{{ content }}</div>
-                    {%- if jekyll.environment != "development" and _comment != false -%}
+                    {%- if _comment != false -%}
                       <section class="page__comments">{%- include comments.html -%}</section>
                     {%- endif -%}
                 </article>

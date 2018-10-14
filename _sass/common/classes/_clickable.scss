@@ -1,4 +1,4 @@
-@mixin clickable($clr, $bg-clr, $hover-clr: default, $hover-bg-clr: default, $active-clr: default, $active-bg-clr: default, $focus-clr: default, $focus-bg-clr: default, $theme: default) {
+@mixin clickable($clr, $bg-clr, $hover-clr: default, $hover-bg-clr: default, $active-clr: default, $active-bg-clr: default, $focus-clr: default, $focus-bg-clr: default, $theme: default, $ignore-path: default) {
 
   @if $theme == default {
     @if $bg-clr == null and $hover-bg-clr == null {
@@ -14,6 +14,12 @@
         $theme: get-color-theme($hover-bg-clr);
       }
     }
+  }
+
+  @if $ignore-path == default {
+    $ignore-path: false;
+  } @else {
+    $ignore-path: true;
   }
 
   // hover
@@ -80,8 +86,10 @@
     @if $bg-clr {
       background-color: $bg-clr;
     }
-    svg path {
-      fill: $clr;
+    @if $ignore-path == false {
+      svg path {
+        fill: $clr;
+      }
     }
   }
   @include hover() {
@@ -89,8 +97,10 @@
     @if $hover-bg-clr {
       background-color: $hover-bg-clr;
     }
-    svg path {
-      fill: $hover-clr;
+    @if $ignore-path == false {
+      svg path {
+        fill: $hover-clr;
+      }
     }
   }
   @include active() {
@@ -98,8 +108,10 @@
     @if $active-bg-clr {
       background-color: $active-bg-clr;
     }
-    svg path {
-      fill: $active-clr;
+    @if $ignore-path == false {
+      svg path {
+        fill: $active-clr;
+      }
     }
   }
   @include focus() {
@@ -108,8 +120,10 @@
       background-color: $focus-bg-clr;
       box-shadow: 0 0 0 2px rgba($focus-bg-clr, .4);
     }
-    svg path {
-      fill: $focus-clr;
+    @if $ignore-path == false {
+      svg path {
+        fill: $focus-clr;
+      }
     }
   }
 }

@@ -3,17 +3,29 @@ layout: page
 type: article
 ---
 
-{%- include snippets/assign.html target=site.data.variables.default.page.show_author_profile
+{%- include snippets/assign.html
+  target = site.data.variables.default.page.sharing
+  source0=layout.sharing source1=page.sharing -%}
+{%- assign _sharing = __return -%}
+
+
+{%- include snippets/assign.html
+  target=site.data.variables.default.page.show_author_profile
   source0=layout.show_author_profile source1=page.show_author_profile -%}
 {%- assign _show_author_profile = __return -%}
 
-{%- include snippets/assign.html target=site.data.variables.default.page.license
+{%- include snippets/assign.html
+  target=site.data.variables.default.page.license
   source0=layout.license source1=page.license -%}
 {%- assign _license = __return -%}
 
 <div class="layout--article">
 
   <div class="article__content" itemprop="articleBody">{{ content }}</div>
+
+  {%- if _sharing != false -%}
+    <section class="article__sharing">{%- include sharing.html -%}</section>
+  {%- endif -%}
 
   <footer class="article__footer">
     {%- if page.modify_date -%}
