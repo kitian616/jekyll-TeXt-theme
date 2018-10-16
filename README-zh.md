@@ -28,6 +28,7 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 - 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
 - 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
 - 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
+- 分享（[AddToAny](https://www.addtoany.com/)）
 - 评论（[Disqus](https://disqus.com/), [gitalk](https://gitalk.github.io/)）
 - Google Analytics
 

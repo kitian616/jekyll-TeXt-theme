@@ -97,6 +97,7 @@
   list-style-type: none;
   a {
     padding: .4rem 1rem;
+    @include transition(none);
     @include clickable($text-color, transparent, $text-color-3, $main-color-3);
     .search--light & {
       @include clickable($text-color-theme-light, transparent, $text-color-3, $main-color-3);
@@ -110,6 +111,9 @@
       @include plain() {
         color: $text-color-3;
         background-color: $main-color-3;
+      }
+      @include active() {
+        @include transition(map-get($link, transition));
       }
     }
   }

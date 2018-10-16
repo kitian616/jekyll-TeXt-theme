@@ -29,7 +29,7 @@
     height: 100%;
     background-color: $background-color;
     @include split-line(right);
-    @include transition(transform .4s);
+    @include transition(transform map-get($animation, duration));
     @include overflow(auto);
     .sidebar-toc {
       padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);

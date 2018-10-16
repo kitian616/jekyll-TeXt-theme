@@ -1,7 +1,14 @@
 .layout--404 {
-  @include flexbox;
-  @include align-items(center);
-  & > .main > h1 {
-    font-size: 7rem;
+  .sign {
+    display: table;
+    margin: map-get($base, vertical-space-lg) auto;
+    margin-top: map-get($base, vertical-space-lg) * 2;
+    h1 {
+      font-size: map-get($base, font-size-xl) * 4;
+      line-height: 1;
+    }
+    p {
+      font-size: map-get($base, font-size-xl) * 1.2;
+    }
   }
 }

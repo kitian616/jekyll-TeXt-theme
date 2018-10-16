@@ -28,6 +28,7 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))
 - Line Chart, Bar Chart, Radar Chart, Pie Chart ([chartjs](http://www.chartjs.org/))
 - Page views ([LeanCloud](https://leancloud.cn/))
+- Share ([AddToAny](https://www.addtoany.com/))
 - Comments ([Disqus](https://disqus.com/))
 - Google Analytics
 
