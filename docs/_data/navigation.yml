@@ -38,12 +38,12 @@ docs-en:
     children:
       - title:  Writing Posts
         url:    /docs/en/writing-posts
-      - title:  Markdown Enhancements
-        url:    /docs/en/markdown-enhancements
       - title:  Additional Styles
         url:    /docs/en/additional-styles
       - title:  Plugins
         url:    /docs/en/plugins
+      - title:  Markdown Enhancements
+        url:    /docs/en/markdown-enhancements
   - title:      Extra
     children:
       - title:  Spacing
@@ -91,12 +91,12 @@ docs-zh:
     children:
       - title:  撰写博客
         url:    /docs/zh/writing-posts
-      - title:  Markdown 增强
-        url:    /docs/zh/markdown-enhancements
       - title:  附加样式
         url:    /docs/zh/additional-styles
       - title:  插件
         url:    /docs/zh/plugins
+      - title:  Markdown 增强
+        url:    /docs/zh/markdown-enhancements
   - title:      其他语言
     children:
       - title:  English

@@ -2,14 +2,12 @@
 title: TeXt - Additional Styles
 key: 20170808
 tags: TeXt
-toc: true
 ---
 
 Success!
 {:.success}
 
 `success`{:.success} `info`{:.info} `warning`{:.warning} `error`{:.error}
-
 
 <div class="grid-container">
 <div class="grid grid--p-3">
@@ -40,6 +38,8 @@ Success!
 </div>
 
 <!--more-->
+
+[Documentation](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
 
 ## Alert
 
