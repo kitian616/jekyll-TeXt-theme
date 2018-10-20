@@ -42,6 +42,8 @@ docs-en:
         url:    /docs/en/markdown-enhancements
       - title:  Additional Styles
         url:    /docs/en/additional-styles
+      - title:  Plugins
+        url:    /docs/en/plugins
   - title:      Extra
     children:
       - title:  Spacing
@@ -93,6 +95,8 @@ docs-zh:
         url:    /docs/zh/markdown-enhancements
       - title:  附加样式
         url:    /docs/zh/additional-styles
+      - title:  插件
+        url:    /docs/zh/plugins
   - title:      其他语言
     children:
       - title:  English
