@@ -1,8 +1,8 @@
-.plugin {
+.extensions {
   margin: map-get($base, vertical-space-lg) 0;
 }
 
-.plugin--video, .plugin--slide {
+.extensions--video, .extensions--slide {
   position: relative;
   width: 100%;
   padding: 0;
@@ -15,15 +15,15 @@
   }
 }
 
-.plugin--video {
+.extensions--video {
   padding-top: percentage(315 / 560);
 }
 
-.plugin--slide {
+.extensions--slide {
   padding-top: percentage(487 / 599);
 }
 
-.plugin--audio {
+.extensions--audio {
   display: block;
   max-width: 100% !important;
 }

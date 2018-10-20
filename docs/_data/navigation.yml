@@ -40,8 +40,8 @@ docs-en:
         url:    /docs/en/writing-posts
       - title:  Additional Styles
         url:    /docs/en/additional-styles
-      - title:  Plugins
-        url:    /docs/en/plugins
+      - title:  Extensions
+        url:    /docs/en/extensions
       - title:  Markdown Enhancements
         url:    /docs/en/markdown-enhancements
   - title:      Extra
@@ -93,8 +93,8 @@ docs-zh:
         url:    /docs/zh/writing-posts
       - title:  附加样式
         url:    /docs/zh/additional-styles
-      - title:  插件
-        url:    /docs/zh/plugins
+      - title:  扩展
+        url:    /docs/zh/extensions
       - title:  Markdown 增强
         url:    /docs/zh/markdown-enhancements
   - title:      其他语言

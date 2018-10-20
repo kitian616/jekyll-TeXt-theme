@@ -70,8 +70,9 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 ### 内容
 
 - [撰写博客](https://tianqi.name/jekyll-TeXt-theme/docs/zh/writing-posts)
-- [Markdown 增强](https://tianqi.name/jekyll-TeXt-theme/docs/zh/markdown-enhancements)
 - [附加样式](https://tianqi.name/jekyll-TeXt-theme/docs/zh/additional-styles)
+- [扩展](https://tianqi.name/jekyll-TeXt-theme/docs/zh/extensions)
+- [Markdown 增强](https://tianqi.name/jekyll-TeXt-theme/docs/zh/markdown-enhancements)
 
 ## 其他资源
 

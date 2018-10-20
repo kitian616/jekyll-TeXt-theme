@@ -70,8 +70,9 @@ TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highl
 ### Content
 
 - [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
-- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
 - [Additional styles](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
+- [Extensions](https://tianqi.name/jekyll-TeXt-theme/docs/en/extensions)
+- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
 
 ## Demo Pages
 
