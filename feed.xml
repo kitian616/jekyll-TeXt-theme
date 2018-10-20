@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-10-20T23:28:09+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-10-20T23:45:12+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;success highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;info highlighter-rouge&quot;&gt;info&lt;/code&gt; &lt;code class=&quot;warning highlighter-rouge&quot;&gt;warning&lt;/code&gt; &lt;code class=&quot;error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
@@ -32,6 +32,8 @@
 &lt;/div&gt;
 
 &lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;alert&quot;&gt;Alert&lt;/h2&gt;
 
@@ -160,7 +162,7 @@
       &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/hero&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">Success! success info warning error CLICK ME CLICK ME CLICK ME CLICK ME</summary></entry><entry><title type="html">TeXt - Media</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media.html" rel="alternate" type="text/html" title="TeXt - Media" /><published>2017-08-01T00:00:00+08:00</published><updated>2017-08-01T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/01/media.html">&lt;p&gt;With the help of plugins for media, you can easily add &lt;strong&gt;audio&lt;/strong&gt;, &lt;strong&gt;video&lt;/strong&gt; and &lt;strong&gt;slides&lt;/strong&gt; in your posts.&lt;/p&gt;
+&lt;/table&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">Success! success info warning error CLICK ME CLICK ME CLICK ME CLICK ME</summary></entry><entry><title type="html">TeXt - Plugins</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/02/plugins.html" rel="alternate" type="text/html" title="TeXt - Plugins" /><published>2017-08-02T00:00:00+08:00</published><updated>2017-08-02T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/02/plugins</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/02/plugins.html">&lt;p&gt;With the help of plugins, you can easily add &lt;strong&gt;audio&lt;/strong&gt;, &lt;strong&gt;video&lt;/strong&gt; and &lt;strong&gt;slides&lt;/strong&gt; in your posts.&lt;/p&gt;
 
 &lt;div&gt;&lt;div class=&quot;plugin plugin--video&quot;&gt;
   &lt;iframe src=&quot;https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;
@@ -168,6 +170,8 @@
 &lt;/div&gt;&lt;/div&gt;
 
 &lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/plugins&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;audio&quot;&gt;Audio&lt;/h2&gt;
 
@@ -212,7 +216,7 @@
 &lt;div&gt;&lt;div class=&quot;plugin plugin--slide&quot;&gt;
   &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/u9L9zDsqEWNKE1&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">With the help of plugins for media, you can easily add audio, video and slides in your posts.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">With the help of plugins, you can easily add audio, video and slides in your posts.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;x_1 = {-b + \sqrt{b^2-4ac} \over 2a}&lt;/script&gt;
 
@@ -223,6 +227,8 @@
 &lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;highlighter-rouge&quot;&gt;mathjax: true&lt;/code&gt; in the &lt;em&gt;_config.yml&lt;/em&gt; or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
 
 &lt;p class=&quot;info&quot;&gt;&lt;strong&gt;After MathJax enabled&lt;/strong&gt;, you can set &lt;code class=&quot;highlighter-rouge&quot;&gt;mathjax_autoNumber: true&lt;/code&gt; to have equations be numbered automatically, You can use &lt;code class=&quot;highlighter-rouge&quot;&gt;\notag&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;\nonumber&lt;/code&gt; to prevent individual equations from being numbered.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements#mathjax&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
@@ -251,6 +257,8 @@ mathjax_autoNumber: true
 &lt;!--more--&gt;
 
 &lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;highlighter-rouge&quot;&gt;mermaid: true&lt;/code&gt; in the &lt;em&gt;_config.yml&lt;/em&gt; or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements#mermaid&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Generation of diagrams and flowcharts from text in a similar manner as markdown.&lt;/p&gt;
 
@@ -400,6 +408,8 @@ gantt
 &lt;!--more--&gt;
 
 &lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;highlighter-rouge&quot;&gt;chart: true&lt;/code&gt; in the &lt;em&gt;_config.yml&lt;/em&gt; or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements#chart&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;line-chart&quot;&gt;Line Chart&lt;/h2&gt;
 
