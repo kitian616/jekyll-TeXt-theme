@@ -4,7 +4,7 @@ key: 20170802
 tags: TeXt
 ---
 
-With the help of extensions, you can easily add **audio**, **video** and **slides** in your posts.
+With the help of extensions, you can easily add **audios**, **videos** and **slides** in your posts.
 
 <div>{%- include extensions/ted.html id='emily_esfahani_smith_there_s_more_to_life_than_being_happy' -%}</div>
 

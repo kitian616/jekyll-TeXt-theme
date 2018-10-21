@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.2.2 (2018-11-21)
+
+### Enhancements
+
+- Add extensions for audios (SoundCloud, Netease Cloud Music), videos (YouTube, TED, bilibili) and slide(SlideShare)
+- Add sharing (AddToAny)
+
 ## 2.2.1 (2018-10-02)
 
 ### Enhancements
@@ -7,7 +14,7 @@
 - Update screenshots
 - landing Layout `data.sections` item's `image` add `full_width` setting
 - Remove `header.type` and add `header.background` setting
-- page Layout width sidebar use document scroll when viewport width < 1024px, this enhance the user experience on a phone or a pad
+- page layout sidebar use document scroll when viewport width < 1024px, this enhance the user experience on a phone or a pad
 - Telegram social icon (@WangQiru)
 - Search panel use dark background
 
