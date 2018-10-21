@@ -15,22 +15,21 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 ## Features
 
 - Responsive
+- Semantic HTML
 - Skins
 - Highlight Theme
-- Table of contents
-- Authors
 - Multi-language support
 - Search
-- Semantic HTML
-- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
-- Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
-- Mathematical formula ([MathJax](https://www.mathjax.org/))
-- Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))
-- Line Chart, Bar Chart, Radar Chart, Pie Chart ([chartjs](http://www.chartjs.org/))
-- Page views ([LeanCloud](https://leancloud.cn/))
-- Share ([AddToAny](https://www.addtoany.com/))
+- Table of contents
+- Authors (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
+- Additional styles (alert, tag, image, icon, button, grid, etc)
+- Extensions (audios, videos, slides)
+- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
+- Sharing ([AddToAny](https://www.addtoany.com/))
 - Comments ([Disqus](https://disqus.com/))
-- Google Analytics
+- Pageview ([LeanCloud](https://leancloud.cn/))
+- Analytics (Google Analytics)
+- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
 
 ## Skins
 

@@ -15,22 +15,21 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 ## Features
 
 - 响应式
+- HTML 语意化
 - 皮肤
 - 代码高亮主题
-- 目录
-- 多作者
 - 多语言支持
 - 搜索
-- Web 语意化
-- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
-- 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
-- 数学公式（[MathJax](https://www.mathjax.org/)）
-- 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
-- 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
-- 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
+- 目录
+- 作者（电子邮件，Facebook，Twitter，领英，微博，知乎等。支持多作者配置）
+- 附加样式（提示，标签，图片，图标，按钮，栅格等）
+- 扩展（音频，视频，幻灯片）
+- Markdown 增强（[MathJax](https://www.mathjax.org/)，[mermaid](https://mermaidjs.github.io/)，[chartjs](http://www.chartjs.org/)）
 - 分享（[AddToAny](https://www.addtoany.com/)）
 - 评论（[Disqus](https://disqus.com/), [gitalk](https://gitalk.github.io/)）
-- Google Analytics
+- 阅读量统计（[LeanCloud](https://leancloud.cn/)）
+- 站点统计（Google Analytics）
+- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
 
 ## 皮肤
 
