@@ -12,7 +12,7 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 
 [English Documentation](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README.md)
 
-## Features
+## 特性
 
 - 响应式
 - HTML 语意化
