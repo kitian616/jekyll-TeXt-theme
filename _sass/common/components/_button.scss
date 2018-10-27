@@ -15,14 +15,8 @@
       @include transition(map-get($button, transition));
     }
   }
-  &.disabled,
-  &:disabled {
-    color: rgba($text-color-3, .2) !important;
+  @include disabled() {
     cursor: not-allowed;
-    background-color: $main-color-3 !important;
-    svg path {
-      fill: rgba($text-color-3, .2) !important;
-    }
   }
 }
 

@@ -1,7 +1,7 @@
 @mixin plain() {
   &,
   &:link,
-  &:visited{
+  &:visited {
     @content;
   }
 }
@@ -21,6 +21,13 @@
 
 @mixin focus() {
   .root[data-is-touch] &.focus {
+    @content;
+  }
+}
+
+@mixin disabled() {
+  &.disabled,
+  &:disabled {
     @content;
   }
 }

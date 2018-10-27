@@ -3,10 +3,6 @@
   @include media-breakpoint-down(md) {
     @include flex-direction(column);
   }
-  &:not(:last-child) {
-    margin-bottom: map-get($base, vertical-space);
-  }
-  list-style-type: none;
 }
 
 .item__image {
@@ -82,8 +78,16 @@ a.item__header, .item__header > a {
   }
 }
 
+.items {
+  & > .item {
+    &:not(:last-child) {
+      margin-bottom: map-get($base, vertical-space);
+    }
+  }
+}
+
 .items--divided {
-  .item {
+  & > .item {
     &:not(:first-child) {
       padding-top: map-get($spacers, 4);
     }
@@ -91,5 +95,6 @@ a.item__header, .item__header > a {
       padding-bottom: map-get($spacers, 4);
       @include split-line(bottom);
     }
+    list-style-type: none;
   }
 }

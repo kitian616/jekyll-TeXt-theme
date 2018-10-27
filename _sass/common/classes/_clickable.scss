@@ -126,4 +126,25 @@
       }
     }
   }
+  @include disabled() {
+    @if $theme == "light" {
+      color: rgba($clr, .2) !important;
+    }
+    @if $theme == "dark" {
+      color: rgba($clr, .4) !important;
+    }
+    @if $bg-clr {
+      background-color: $bg-clr !important;
+    }
+    @if $ignore-path == false {
+      svg path {
+        @if $theme == "light" {
+          fill: rgba($clr, .2) !important;
+        }
+        @if $theme == "dark" {
+          fill: rgba($clr, .4) !important;
+        }
+      }
+    }
+  }
 }

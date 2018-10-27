@@ -58,7 +58,7 @@
 }
 
 .heros {
-  .hero {
+  & > .hero {
     margin: map-get($spacers, 5);
     @include media-breakpoint-down(lg) {
       margin: map-get($spacers, 3);
