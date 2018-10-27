@@ -344,7 +344,7 @@
         </button>
       </li></ul>
 </div>
-<div class="js-result layout--archive__result d-none"><div class="article-list items"><section><h2 class="article-list__group-header">2017</h2><ul><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt">
+<div class="js-result layout--archive__result d-none"><div class="article-list items"><section><h2 class="article-list__group-header">2017</h2><ul class="items"><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt">
         <div class="item__content"><span class="item__meta">Aug 08</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">TeXt - Additional Styles</a></div>
       </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt">
         <div class="item__content"><span class="item__meta">Aug 02</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/08/02/extensions.html">TeXt - Extensions</a></div>
@@ -358,7 +358,7 @@
         <div class="item__content"><span class="item__meta">Apr 19</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/04/19/modify-date.html">TeXt - Modify Date</a></div>
       </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="TeXt">
         <div class="item__content"><span class="item__meta">Apr 15</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2017/04/15/author.html">TeXt - Author</a></div>
-      </li></ul></section><section><h2 class="article-list__group-header">2016</h2><ul><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll">
+      </li></ul></section><section><h2 class="article-list__group-header">2016</h2><ul class="items"><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll">
         <div class="item__content"><span class="item__meta">Oct 10</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html">Jekyll - Paragraphs</a></div>
       </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll">
         <div class="item__content"><span class="item__meta">Sep 19</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/09/19/headers.html">Jekyll - Headers</a></div>
@@ -382,7 +382,7 @@
         <div class="item__content"><span class="item__meta">May 04</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/05/04/footnote.html">Jekyll - Footnote</a></div>
       </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Jekyll">
         <div class="item__content"><span class="item__meta">May 02</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2016/05/02/horizontal-rules.html">Jekyll - Horizontal Rules</a></div>
-      </li></ul></section><section><h2 class="article-list__group-header">2015</h2><ul><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Test">
+      </li></ul></section><section><h2 class="article-list__group-header">2015</h2><ul class="items"><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Test">
         <div class="item__content"><span class="item__meta">Feb 02</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2015/02/02/very-long-title.html">Test - Very Very Very Very Very Very Very Very Very Very Very Very Very Extremely Completely Extraordinary Long Long Long Long Title</a></div>
       </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="Test,S+P+A+C+E,%7E%60%21%40,%23%24%25%5E,%26%2A%28%29,-%3D_%2B,%5B%5D%7B%7D,%5C%7C%3B%3A,%2C.%3C%3E,%3F%2F%27%22,%CE%B1%CE%B2%CE%B3%CE%B4,%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86,%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E,%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD">
         <div class="item__content"><span class="item__meta">Jan 06</span><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/post/2015/01/06/punctuation-characters'.html">Test - ~`!@ #$%^ &*() -=_+ []{} \|;: ,.<> ?/'" αβγδ ÁÀÂÄÃĄÆ ®☃︎⌘✉︎ 😂🤣👻👽</a></div>
@@ -807,100 +807,97 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 })();(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $root, $scrollTarget, $scroller, $scroll;
-    var rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop;
-    var offsetBottom = 0, disabled = false, scrollTarget = window, scroller = 'html, body', scroll = window.document;
-    var hasInit = false, isOverallScroller = true, curState;
-
-    function setOptions(options) {
-      var _options = options || {};
-      _options.offsetBottom && (offsetBottom = _options.offsetBottom);
-      _options.scrollTarget && (scrollTarget = _options.scrollTarget);
-      _options.scroller && (scroller = _options.scroller);
-      _options.scroll && (scroll = _options.scroll);
-      _options.disabled !== undefined && (disabled = _options.disabled);
-      $scrollTarget = $(scrollTarget);
-      $scroller = $(scroller);
-      isOverallScroller = window.isOverallScroller($scrollTarget[0]);
-      $scroll = $(scroll);
-    }
-    function initData() {
-      top();
-      rootHeight = $root.outerHeight();
-      rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
-      rootLeft = $root.offset().left;
-    }
-    function calc(needInitData) {
-      needInitData && initData();
-      scrollBottom = $scroll.outerHeight() - offsetBottom - rootHeight;
-      rootBottomTop = scrollBottom - rootTop;
-    }
-    function top() {
-      if (curState !== 'top') {
-        $root.removeClass('fixed').css({
-          left: 0,
-          top: 0
-        });
-        curState = 'top';
-      }
-    }
-    function fixed() {
-      if (curState !== 'fixed') {
-        $root.addClass('fixed').css({
-          left: rootLeft + 'px',
-          top: 0
-        });
-        curState = 'fixed';
-      }
-    }
-    function bottom() {
-      if (curState !== 'bottom') {
-        $root.removeClass('fixed').css({
-          left: 0,
-          top: rootBottomTop + 'px'
-        });
-        curState = 'bottom';
-      }
-    }
-    function setState() {
-      var scrollTop = $scrollTarget.scrollTop();
-      if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
-        fixed();
-      } else if (scrollTop < rootTop) {
-        top();
-      } else {
-        bottom();
-      }
-    }
-    function init() {
-      if(!hasInit) {
-        var interval, timeout;
-        calc(true); setState();
-        // run calc every 100 millisecond
-        interval = setInterval(function() {
-          calc();
-        }, 100);
-        timeout = setTimeout(function() {
-          clearInterval(interval);
-        }, 45000);
-        window.pageLoad.then(function() {
-          setTimeout(function() {
-            clearInterval(interval);
-            clearTimeout(timeout);
-          }, 3000);
-        });
-        $scrollTarget.on('scroll', function() {
-          disabled || setState();
-        });
-        $window.on('resize', function() {
-          disabled || (calc(true), setState());
-        });
-        hasInit = true;
-      }
-    }
-
     function affix(options) {
-      $root = this;
+      var $root = this, $window = $(window), $scrollTarget, $scroll,
+        offsetBottom = 0, scrollTarget = window, scroll = window.document, disabled = false, isOverallScroller = true,
+        rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop,
+        hasInit = false, curState;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.offsetBottom && (offsetBottom = _options.offsetBottom);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroll && (scroll = _options.scroll);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $scrollTarget = $(scrollTarget);
+        isOverallScroller = window.isOverallScroller($scrollTarget[0]);
+        $scroll = $(scroll);
+      }
+      function preCalc() {
+        top();
+        rootHeight = $root.outerHeight();
+        rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
+        rootLeft = $root.offset().left;
+      }
+      function calc(needPreCalc) {
+        needPreCalc && preCalc();
+        scrollBottom = $scroll.outerHeight() - offsetBottom - rootHeight;
+        rootBottomTop = scrollBottom - rootTop;
+      }
+      function top() {
+        if (curState !== 'top') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: 0
+          });
+          curState = 'top';
+        }
+      }
+      function fixed() {
+        if (curState !== 'fixed') {
+          $root.addClass('fixed').css({
+            left: rootLeft + 'px',
+            top: 0
+          });
+          curState = 'fixed';
+        }
+      }
+      function bottom() {
+        if (curState !== 'bottom') {
+          $root.removeClass('fixed').css({
+            left: 0,
+            top: rootBottomTop + 'px'
+          });
+          curState = 'bottom';
+        }
+      }
+      function setState() {
+        var scrollTop = $scrollTarget.scrollTop();
+        if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
+          fixed();
+        } else if (scrollTop < rootTop) {
+          top();
+        } else {
+          bottom();
+        }
+      }
+      function init() {
+        if(!hasInit) {
+          var interval, timeout;
+          calc(true); setState();
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
+            clearInterval(interval);
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState();
+          });
+          $window.on('resize', function() {
+            disabled || (calc(true), setState());
+          });
+          hasInit = true;
+        }
+      }
+
       setOptions(options);
       if (!disabled) {
         init();
@@ -920,95 +917,96 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 })();(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $window = $(window), $root, $scrollTarget, $scroller, $tocUl = $('<ul class="toc"></ul>'), $tocLi, $headings, $activeLast, $activeCur;
-    var selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false;
-    var headingsPos, scrolling = false, rendered = false, hasInit = false;
-    function setOptions(options) {
-      var _options = options || {};
-      _options.selectors && (selectors = _options.selectors);
-      _options.container && (container = _options.container);
-      _options.scrollTarget && (scrollTarget = _options.scrollTarget);
-      _options.scroller && (scroller = _options.scroller);
-      _options.disabled !== undefined && (disabled = _options.disabled);
-      $headings = $(container).find(selectors).filter('[id]');
-      $scrollTarget = $(scrollTarget);
-      $scroller = $(scroller);
-    }
-    function calc() {
-      headingsPos = [];
-      $headings.each(function() {
-        headingsPos.push(Math.floor($(this).position().top));
-      });
-    }
-    function setState(element, disabled) {
-      var scrollTop = $scrollTarget.scrollTop(), i;
-      if (disabled || !headingsPos || headingsPos.length < 1) { return; }
-      if (element) {
-        $activeCur = element;
-      } else {
-        for (i = 0; i < headingsPos.length; i++) {
-          if (scrollTop >= headingsPos[i]) {
-            $activeCur = $tocLi.eq(i);
-          } else {
-            $activeCur || ($activeCur = $tocLi.eq(i));
-            break;
+    function toc(options) {
+      var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="toc"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
+        selectors = 'h1,h2,h3', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
+        headingsPos, scrolling = false, hasRendered = false, hasInit = false;
+
+      function setOptions(options) {
+        var _options = options || {};
+        _options.selectors && (selectors = _options.selectors);
+        _options.container && (container = _options.container);
+        _options.scrollTarget && (scrollTarget = _options.scrollTarget);
+        _options.scroller && (scroller = _options.scroller);
+        _options.disabled !== undefined && (disabled = _options.disabled);
+        $headings = $(container).find(selectors).filter('[id]');
+        $scrollTarget = $(scrollTarget);
+        $scroller = $(scroller);
+      }
+      function calc() {
+        headingsPos = [];
+        $headings.each(function() {
+          headingsPos.push(Math.floor($(this).position().top));
+        });
+      }
+      function setState(element, disabled) {
+        var scrollTop = $scrollTarget.scrollTop(), i;
+        if (disabled || !headingsPos || headingsPos.length < 1) { return; }
+        if (element) {
+          $activeCur = element;
+        } else {
+          for (i = 0; i < headingsPos.length; i++) {
+            if (scrollTop >= headingsPos[i]) {
+              $activeCur = $tocLi.eq(i);
+            } else {
+              $activeCur || ($activeCur = $tocLi.eq(i));
+              break;
+            }
           }
         }
+        $activeLast && $activeLast.removeClass('active');
+        ($activeLast = $activeCur).addClass('active');
       }
-      $activeLast && $activeLast.removeClass('active');
-      ($activeLast = $activeCur).addClass('active');
-    }
-    function render() {
-      if(!rendered) {
-        $root.append($tocUl);
-        $headings.each(function() {
-          var $this = $(this);
-          $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
-            .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
-        });
-        $tocLi = $tocUl.children('li');
-        $tocUl.on('click', 'a', function(e) {
-          e.preventDefault();
-          var $this = $(this);
-          scrolling = true;
-          setState($this.parent());
-          $scroller.scrollToAnchor($this.attr('href'), 400, function() {
-            scrolling = false;
+      function render() {
+        if(!hasRendered) {
+          $root.append($tocUl);
+          $headings.each(function() {
+            var $this = $(this);
+            $tocUl.append($('<li></li>').addClass('toc-' + $this.prop('tagName').toLowerCase())
+              .append($('<a></a>').text($this.text()).attr('href', '#' + $this.prop('id'))));
           });
-        });
+          $tocLi = $tocUl.children('li');
+          $tocUl.on('click', 'a', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            scrolling = true;
+            setState($this.parent());
+            $scroller.scrollToAnchor($this.attr('href'), 400, function() {
+              scrolling = false;
+            });
+          });
+        }
+        hasRendered = true;
       }
-      rendered = true;
-    }
-    function init() {
-      var interval, timeout;
-      if(!hasInit) {
-        render(); calc(); setState(null, scrolling);
-        // run calc every 100 millisecond
-        interval = setInterval(function() {
-          calc();
-        }, 100);
-        timeout = setTimeout(function() {
-          clearInterval(interval);
-        }, 45000);
-        window.pageLoad.then(function() {
-          setTimeout(function() {
+      function init() {
+        var interval, timeout;
+        if(!hasInit) {
+          render(); calc(); setState(null, scrolling);
+          // run calc every 100 millisecond
+          interval = setInterval(function() {
+            calc();
+          }, 100);
+          timeout = setTimeout(function() {
             clearInterval(interval);
-            clearTimeout(timeout);
-          }, 3000);
-        });
-        $scrollTarget.on('scroll', function() {
-          disabled || setState(null, scrolling);
-        });
-        $window.on('resize', window.throttle(function() {
-          if (!disabled) {
-            render(); calc(); setState(null, scrolling);
-          }
-        }, 100));
+          }, 45000);
+          window.pageLoad.then(function() {
+            setTimeout(function() {
+              clearInterval(interval);
+              clearTimeout(timeout);
+            }, 3000);
+          });
+          $scrollTarget.on('scroll', function() {
+            disabled || setState(null, scrolling);
+          });
+          $window.on('resize', window.throttle(function() {
+            if (!disabled) {
+              render(); calc(); setState(null, scrolling);
+            }
+          }, 100));
+        }
+        hasInit = true;
       }
-      hasInit = true;
-    }
-    function toc(options) {
-      $root = this;
+
       setOptions(options);
       if (!disabled) {
         init();
