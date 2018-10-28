@@ -4,7 +4,7 @@
     function swiper(options) {
       var $window = $(window), $root = this, $swiperWrapper, $swiperButtonPrev, $swiperButtonNext,
         initialSlide, width, height, animation,
-        rootWidth, rootHeight, count, curIndex;
+        rootWidth, rootHeight, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 4;
 
       function setOptions(options) {
         var _options = options || {};
@@ -25,6 +25,7 @@
         $swiperButtonNext = $root.find('.swiper__button--next');
         count = $swiperWrapper.children('.swiper__slide').length;
         curIndex = initialSlide || 0;
+        translateX = getTranslateXFromCurIndex();
         var _cssObj = {};
         width === undefined || (_cssObj.width = width);
         height === undefined || (_cssObj.height = height);
@@ -35,18 +36,18 @@
       function preCalc() {
         rootWidth = $root.width();
         rootHeight = $root.height();
+        translateX = getTranslateXFromCurIndex();
       }
 
       var calc = (function() {
-        var lastResizing;
+        var preAnimation;
         return function (needPreCalc, params) {
           needPreCalc && preCalc();
-          var resizing = params && params.resizing || false;
-          if (animation && (lastResizing === undefined || lastResizing !== resizing)) {
-            lastResizing = resizing ? $swiperWrapper.removeClass('swiper__wrapper--animation') :
-              $swiperWrapper.addClass('swiper__wrapper--animation');
+          var _animation = (params && params.animation !== undefined) ? params.animation : animation;
+          if (preAnimation === undefined || preAnimation !== _animation) {
+            preAnimation = _animation ? $swiperWrapper.addClass('swiper__wrapper--animation') :
+              $swiperWrapper.removeClass('swiper__wrapper--animation');
           }
-          var translateX = curIndex <= 0 ? 0 : - rootWidth * curIndex;
           $swiperWrapper.css('transform', 'translate(' + translateX + 'px, 0)');
           if (curIndex <= 0) {
             $swiperButtonPrev.addClass('disabled');
@@ -59,19 +60,36 @@
         };
       })();
 
+      function getTranslateXFromCurIndex() {
+        return curIndex <= 0 ? 0 : - rootWidth * curIndex;
+      }
+
+      function moveToIndex(index ,params) {
+        curIndex = index;
+        translateX = getTranslateXFromCurIndex();
+        calc(false, params);
+      }
+
       function move(type) {
-        var nextIndex = curIndex;
+        var nextIndex = curIndex, unstableTranslateX;
         if (type === 'prev') {
           nextIndex > 0 && nextIndex--;
         } else if (type === 'next') {
           nextIndex < count - 1 && nextIndex++;
         }
-        if (nextIndex !== curIndex) {
-          curIndex = nextIndex; calc();
+        if (type === 'cur') {
+          moveToIndex(curIndex, { animation: true });
+          return;
+        }
+        unstableTranslateX = translateX % rootWidth !== 0;
+        if (nextIndex !== curIndex || unstableTranslateX) {
+          unstableTranslateX ? moveToIndex(nextIndex, { animation: true }) : moveToIndex(nextIndex);
         }
       }
 
       setOptions(options);
+      calc(true);
+
       $swiperButtonPrev.on('click', function() {
         move('prev');
       });
@@ -79,9 +97,50 @@
         move('next');
       });
       $window.on('resize', function() {
-        calc(true, { resizing: true });
+        translateX = getTranslateXFromCurIndex();
+        calc(true, { animation: false });
       });
-      calc(true);
+
+      (function() {
+        var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
+        $swiperWrapper.on('touchstart', function(e) {
+          var point = e.touches ? e.touches[0] : e;
+          pageX = point.pageX;
+          pageY = point.pageY;
+          velocityX = 0;
+          preTranslateX = translateX;
+        });
+        $swiperWrapper.on('touchmove', function(e) {
+          var point = e.touches ? e.touches[0] : e;
+          var deltaX = point.pageX - pageX;
+          var deltaY = point.pageY - pageY;
+          velocityX = deltaX / (e.timeStamp - timeStamp);
+          timeStamp = e.timeStamp;
+          if (e.cancelable && Math.abs(Math.atan(deltaY / deltaX)) < CRITICAL_ANGLE) {
+            touching = true;
+            translateX += deltaX;
+            calc(false, { animation: false });
+          }
+          pageX = point.pageX;
+          pageY = point.pageY;
+        });
+        $swiperWrapper.on('touchend', function() {
+          touching = false;
+          var deltaX = translateX - preTranslateX;
+          var distance = deltaX + velocityX * rootWidth;
+          if (Math.abs(distance) > rootWidth / 2) {
+            distance > 0 ? move('prev') : move('next');
+          } else {
+            move('cur');
+          }
+        });
+        $root.on('touchmove', function(e) {
+          if (e.cancelable & touching) {
+            e.preventDefault();
+          }
+        });
+      })();
+
       return {
         setOptions: setOptions
       };

@@ -98,3 +98,4 @@ Error Text.
 | Item | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/item) |
 | Card | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/card) |
 | Hero | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/hero) |
+| Swiper | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/swiper) |
