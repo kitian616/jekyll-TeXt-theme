@@ -12,7 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Swiper - TeXt Theme</title>
 
-<meta name="description" content="AlphaNormal      1    2    3    4    5    6    7          Light Theme      1    2    3    4    5    6    7          Dark Theme      1    2    3    4    5    ...">
+<meta name="description" content="AlphaYou can slide the swiper on a touch device.Normal      1    2    3    4    5    6    7          .swiper-demo {  height: 220px;}.swiper-demo .swiper__sli...">
 <link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/en/swiper"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
@@ -302,9 +302,12 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/4.9-swiper.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Swiper"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-10-28T02:26:48+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Swiper"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-10-28T20:55:52+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><style>
+  .swiper-demo {
+    height: 220px;
+  }
   .swiper-demo .swiper__slide {
     display: flex;
     align-items: center;
@@ -324,9 +327,14 @@
   .swiper-demo--dark .swiper__slide:nth-child(odd) {
     background-color: #123;
   }
+  .swiper-demo--image .swiper__slide:nth-child(n) {
+    background-color: #000;
+  }
 </style>
 
 <p><code class="warning highlighter-rouge">Alpha</code></p>
+
+<p>You can slide the swiper on a touch device.</p>
 
 <h2 id="normal">Normal</h2>
 
@@ -346,6 +354,40 @@
   <!-- <div class="swiper-scrollbar"></div> -->
 </div>
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.swiper-demo</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">220px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.swiper-demo</span> <span class="nc">.swiper__slide</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">3rem</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper my-3 swiper-demo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__slide"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__slide"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__slide"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__slide"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__slide"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__slide"</span><span class="nt">&gt;</span>6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__slide"</span><span class="nt">&gt;</span>7<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__button swiper__button--prev fas fa-chevron-left"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper__button swiper__button--next fas fa-chevron-right"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="o">%-</span> <span class="nx">include</span> <span class="nx">scripts</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">swiper</span><span class="p">.</span><span class="nx">js</span> <span class="o">-%</span><span class="p">}</span>
+<span class="kd">var</span> <span class="nx">SOURCES</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">TEXT_VARIABLES</span><span class="p">.</span><span class="nx">sources</span><span class="p">;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">Lazyload</span><span class="p">.</span><span class="nx">js</span><span class="p">(</span><span class="nx">SOURCES</span><span class="p">.</span><span class="nx">jquery</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.swiper-demo'</span><span class="p">).</span><span class="nx">swiper</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
 <h2 id="light-theme">Light Theme</h2>
 
 <div class="swiper swiper--light my-3 swiper-demo swiper-demo--1">
@@ -358,10 +400,8 @@
     <div class="swiper__slide">6</div>
     <div class="swiper__slide">7</div>
   </div>
-  <!-- <div class="swiper__pagination"></div> -->
   <div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>
   <div class="swiper__button swiper__button--next fas fa-chevron-right"></div>
-  <!-- <div class="swiper-scrollbar"></div> -->
 </div>
 
 <h2 id="dark-theme">Dark Theme</h2>
@@ -376,15 +416,29 @@
     <div class="swiper__slide">6</div>
     <div class="swiper__slide">7</div>
   </div>
-  <!-- <div class="swiper__pagination"></div> -->
   <div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>
   <div class="swiper__button swiper__button--next fas fa-chevron-right"></div>
-  <!-- <div class="swiper-scrollbar"></div> -->
+</div>
+
+<h2 id="images">Images</h2>
+
+<div class="swiper my-3 swiper-demo swiper-demo--image swiper-demo--3">
+  <div class="swiper__wrapper">
+    <div class="swiper__slide"><img src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg" /></div>
+    <div class="swiper__slide"><img src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg" /></div>
+    <div class="swiper__slide"><img src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg" /></div>
+    <div class="swiper__slide"><img src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg" /></div>
+    <div class="swiper__slide"><img src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg" /></div>
+    <div class="swiper__slide"><img src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover2.jpg" /></div>
+    <div class="swiper__slide"><img src="https://tianqi.name/jekyll-TeXt-theme/docs/assets/images/cover3.jpg" /></div>
+  </div>
+  <div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>
+  <div class="swiper__button swiper__button--next fas fa-chevron-right"></div>
 </div>
 
 <h2 id="without-animation">Without Animation</h2>
 
-<div class="swiper swiper--dark my-3 swiper-demo swiper-demo--dark swiper-demo--3">
+<div class="swiper my-3 swiper-demo swiper-demo--4">
   <div class="swiper__wrapper">
     <div class="swiper__slide">1</div>
     <div class="swiper__slide">2</div>
@@ -394,10 +448,8 @@
     <div class="swiper__slide">6</div>
     <div class="swiper__slide">7</div>
   </div>
-  <!-- <div class="swiper__pagination"></div> -->
   <div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>
   <div class="swiper__button swiper__button--next fas fa-chevron-right"></div>
-  <!-- <div class="swiper-scrollbar"></div> -->
 </div>
 
 <script>(function() {
@@ -406,7 +458,7 @@
     function swiper(options) {
       var $window = $(window), $root = this, $swiperWrapper, $swiperButtonPrev, $swiperButtonNext,
         initialSlide, width, height, animation,
-        rootWidth, rootHeight, count, curIndex;
+        rootWidth, rootHeight, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 4;
 
       function setOptions(options) {
         var _options = options || {};
@@ -427,6 +479,7 @@
         $swiperButtonNext = $root.find('.swiper__button--next');
         count = $swiperWrapper.children('.swiper__slide').length;
         curIndex = initialSlide || 0;
+        translateX = getTranslateXFromCurIndex();
         var _cssObj = {};
         width === undefined || (_cssObj.width = width);
         height === undefined || (_cssObj.height = height);
@@ -437,18 +490,18 @@
       function preCalc() {
         rootWidth = $root.width();
         rootHeight = $root.height();
+        translateX = getTranslateXFromCurIndex();
       }
 
       var calc = (function() {
-        var lastResizing;
+        var preAnimation;
         return function (needPreCalc, params) {
           needPreCalc && preCalc();
-          var resizing = params && params.resizing || false;
-          if (animation && (lastResizing === undefined || lastResizing !== resizing)) {
-            lastResizing = resizing ? $swiperWrapper.removeClass('swiper__wrapper--animation') :
-              $swiperWrapper.addClass('swiper__wrapper--animation');
+          var _animation = (params && params.animation !== undefined) ? params.animation : animation;
+          if (preAnimation === undefined || preAnimation !== _animation) {
+            preAnimation = _animation ? $swiperWrapper.addClass('swiper__wrapper--animation') :
+              $swiperWrapper.removeClass('swiper__wrapper--animation');
           }
-          var translateX = curIndex <= 0 ? 0 : - rootWidth * curIndex;
           $swiperWrapper.css('transform', 'translate(' + translateX + 'px, 0)');
           if (curIndex <= 0) {
             $swiperButtonPrev.addClass('disabled');
@@ -461,19 +514,36 @@
         };
       })();
 
+      function getTranslateXFromCurIndex() {
+        return curIndex <= 0 ? 0 : - rootWidth * curIndex;
+      }
+
+      function moveToIndex(index ,params) {
+        curIndex = index;
+        translateX = getTranslateXFromCurIndex();
+        calc(false, params);
+      }
+
       function move(type) {
-        var nextIndex = curIndex;
+        var nextIndex = curIndex, unstableTranslateX;
         if (type === 'prev') {
           nextIndex > 0 && nextIndex--;
         } else if (type === 'next') {
           nextIndex < count - 1 && nextIndex++;
         }
-        if (nextIndex !== curIndex) {
-          curIndex = nextIndex; calc();
+        if (type === 'cur') {
+          moveToIndex(curIndex, { animation: true });
+          return;
+        }
+        unstableTranslateX = translateX % rootWidth !== 0;
+        if (nextIndex !== curIndex || unstableTranslateX) {
+          unstableTranslateX ? moveToIndex(nextIndex, { animation: true }) : moveToIndex(nextIndex);
         }
       }
 
       setOptions(options);
+      calc(true);
+
       $swiperButtonPrev.on('click', function() {
         move('prev');
       });
@@ -481,9 +551,50 @@
         move('next');
       });
       $window.on('resize', function() {
-        calc(true, { resizing: true });
+        translateX = getTranslateXFromCurIndex();
+        calc(true, { animation: false });
       });
-      calc(true);
+
+      (function() {
+        var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
+        $swiperWrapper.on('touchstart', function(e) {
+          var point = e.touches ? e.touches[0] : e;
+          pageX = point.pageX;
+          pageY = point.pageY;
+          velocityX = 0;
+          preTranslateX = translateX;
+        });
+        $swiperWrapper.on('touchmove', function(e) {
+          var point = e.touches ? e.touches[0] : e;
+          var deltaX = point.pageX - pageX;
+          var deltaY = point.pageY - pageY;
+          velocityX = deltaX / (e.timeStamp - timeStamp);
+          timeStamp = e.timeStamp;
+          if (e.cancelable && Math.abs(Math.atan(deltaY / deltaX)) < CRITICAL_ANGLE) {
+            touching = true;
+            translateX += deltaX;
+            calc(false, { animation: false });
+          }
+          pageX = point.pageX;
+          pageY = point.pageY;
+        });
+        $swiperWrapper.on('touchend', function() {
+          touching = false;
+          var deltaX = translateX - preTranslateX;
+          var distance = deltaX + velocityX * rootWidth;
+          if (Math.abs(distance) > rootWidth / 2) {
+            distance > 0 ? move('prev') : move('next');
+          } else {
+            move('cur');
+          }
+        });
+        $root.on('touchmove', function(e) {
+          if (e.cancelable & touching) {
+            e.preventDefault();
+          }
+        });
+      })();
+
       return {
         setOptions: setOptions
       };
@@ -492,14 +603,15 @@
   });
 })();var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    $('.swiper-demo--0').swiper({ height: 400 });
-    $('.swiper-demo--1').swiper({ height: 400 });
-    $('.swiper-demo--2').swiper({ height: 400 });
-    $('.swiper-demo--3').swiper({ height: 400, animation: false });
+    $('.swiper-demo--0').swiper();
+    $('.swiper-demo--1').swiper();
+    $('.swiper-demo--2').swiper();
+    $('.swiper-demo--3').swiper();
+    $('.swiper-demo--4').swiper({ animation: false });
   });
 </script>
 
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-10-28T02:26:48+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-10-28T20:55:52+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
