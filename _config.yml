@@ -24,7 +24,7 @@ url     : https://poioi.github.io
 baseurl : /
 title   : p_oioi Blog
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  p_oioi Blog
 
 
 ## => Language and Timezone
@@ -35,7 +35,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 
 ## => Author and Social
 ##############################
-author: poioi
+author:
   type      : # "person" (default), "organization"
   name      : Jeon Jeongwoo
   url       :
