@@ -11,7 +11,9 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-
+#disque comments
+disqus: True
+disqus_id: poioi
 
 
 ## => Site Settings
@@ -33,9 +35,9 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 
 ## => Author and Social
 ##############################
-author:
+author: poioi
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : Jeon Jeongwoo
   url       :
   avatar    : # path or url of avatar image
   bio       : I am an amazing person.
