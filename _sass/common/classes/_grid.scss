@@ -3,67 +3,29 @@ $grid-columns: 12;
 .grid-container {
   @include overflow(hidden);
 }
+.cell {
+  min-width: 0;
+}
 
 @mixin make-cell($columns) {
-  .cell--#{$columns} {
-    @if $columns == "auto" {
-      @include flex(1 1 0);
-      width: auto;
-      min-width: 0;
-    } @else if $columns == "shrink" {
-      @include flex(0 0 auto);
-      width: auto;
-      min-width: 0;
-    } @else if $columns == "stretch" {
-      @include flex(1);
-    } @else {
-      @include flex(none);
-      width: percentage($columns / $grid-columns);
-      min-width: 0;
-    }
+  @if $columns == "auto" {
+    @include flex(1 1 0);
+    width: auto;
+  } @else if $columns == "shrink" {
+    @include flex(0 0 auto);
+    width: auto;
+  } @else if $columns == "stretch" {
+    @include flex(1);
+  } @else {
+    @include flex(none);
+    width: percentage($columns / $grid-columns);
   }
 }
 
-@mixin make-md-cell($columns) {
-  @include media-breakpoint-down(lg) {
-    .cell--md-#{$columns} {
-      @if $columns == "auto" {
-        @include flex(1 1 0);
-        width: auto;
-        min-width: 0;
-      } @else if $columns == "shrink" {
-        @include flex(0 0 auto);
-        width: auto;
-        min-width: 0;
-      } @else if $columns == "stretch" {
-        @include flex(1);
-      } @else {
-        @include flex(none);
-        width: percentage($columns / $grid-columns);
-        min-width: 0;
-      }
-    }
-  }
-}
-
-@mixin make-sm-cell($columns) {
-  @include media-breakpoint-down(md) {
-    .cell--sm-#{$columns} {
-      @if $columns == "auto" {
-        @include flex(1 1 0);
-        width: auto;
-        min-width: 0;
-      } @else if $columns == "shrink" {
-        @include flex(0 0 auto);
-        width: auto;
-        min-width: 0;
-      } @else if $columns == "stretch" {
-        @include flex(1);
-      } @else {
-        @include flex(none);
-        width: percentage($columns / $grid-columns);
-        min-width: 0;
-      }
+@mixin make-grid-cell($columns, $breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    .cell--#{breakpoint-infix($breakpoint)}#{$columns} {
+      @include make-cell($columns);
     }
   }
 }
@@ -72,27 +34,14 @@ $grid-columns: 12;
   @include flexbox();
   @include flex-wrap(wrap);
   & > {
-    @for $i from 1 through $grid-columns {
-      @include make-cell($i);
+    @each $breakpoint in map-keys($responsive) {
+      @for $i from 1 through $grid-columns {
+        @include make-grid-cell($i, $breakpoint);
+      }
+      @include make-grid-cell("auto", $breakpoint);
+      @include make-grid-cell("shrink", $breakpoint);
+      @include make-grid-cell("stretch", $breakpoint);
     }
-    @include make-cell("auto");
-    @include make-cell("shrink");
-    @include make-cell("stretch");
-
-    @for $i from 1 through $grid-columns {
-      @include make-md-cell($i);
-    }
-    @include make-md-cell("auto");
-    @include make-md-cell("shrink");
-    @include make-md-cell("stretch");
-
-    @for $i from 1 through $grid-columns {
-      @include make-sm-cell($i);
-    }
-
-    @include make-sm-cell("auto");
-    @include make-sm-cell("shrink");
-    @include make-sm-cell("stretch");
   }
 }
 

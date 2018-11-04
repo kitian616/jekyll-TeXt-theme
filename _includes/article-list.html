@@ -105,7 +105,7 @@
 
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
-        <div class="cell cell--3 cell--md-4 cell--sm-12">
+        <div class="cell cell--12 cell--md-4 cell--lg-3">
           <div class="card">
             {%- if _article.cover -%}
               <div class="card__image">
@@ -121,7 +121,7 @@
         </div>
       {%- else -%}
 
-        <div class="cell cell--4 cell--md-6 cell--sm-12">
+        <div class="cell cell--12 cell--md-6 cell--lg-4">
           <div class="card card--flat">
             {%- if _article.cover -%}
               <div class="card__image"><img src="{{ _article_cover }}" /></div>

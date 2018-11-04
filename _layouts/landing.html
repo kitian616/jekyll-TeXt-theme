@@ -52,7 +52,7 @@ article_header:
               <div class="grid grid--p-3">
 
                 {%- for child in _section.children -%}
-                  <div class="cell cell--{{ 12 | divided_by: _size }} cell--sm-12">
+                  <div class="cell cell--12 cell--md-{{ 12 | divided_by: _size }} ">
 
                     <div class="mb-5">
                       <h4>{{ child.title }}</h4>
