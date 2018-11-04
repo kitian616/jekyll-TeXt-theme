@@ -26,6 +26,9 @@ html {
   height: 100%;
   font-size: map-get($base, font-size-root);
   -webkit-text-size-adjust: 100%; /* 1 */
+  @media print {
+    font-size: map-get($base, font-size-root-sm);
+  }
 }
 
 body {

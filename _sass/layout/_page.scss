@@ -90,6 +90,9 @@
   .page__content {
     padding-bottom: map-get($layout, footer-height);
     margin: 0 auto;
+    @media print {
+      padding-bottom: 0;
+    }
   }
 
   .page__comments {

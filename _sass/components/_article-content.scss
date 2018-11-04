@@ -1,12 +1,21 @@
 .article__content {
   line-height: map-get($base, line-height-lg);
   word-wrap: break-word;
+  @media print {
+    line-height: map-get($base, line-height);
+  }
   @include block-elements() {
     margin: map-get($base, vertical-space-lg) 0;
+    @media print {
+      margin: map-get($base, vertical-space) 0;
+    }
   }
   @include heading-elements() {
     position: relative;
     margin-top: map-get($base, vertical-space-lg) * 1.5;
+    @media print {
+      margin-top: map-get($base, vertical-space-sm) * 2.2;
+    }
     & > .anchor {
       @include link-colors($border-color, $main-color-1);
       margin-left: .2rem;
@@ -58,6 +67,9 @@
   .footnotes {
     @include split-line();
     margin-top: map-get($base, vertical-space-lg) * 2;
+    @media print {
+      margin-top: map-get($base, vertical-space) * 2;
+    }
   }
   code {
     padding: .2rem .5rem;
@@ -161,6 +173,9 @@
     li {
       p {
         margin: map-get($base, vertical-space);
+        @media print {
+          margin: map-get($base, vertical-space-sm);
+        }
       }
     }
   }
@@ -168,6 +183,9 @@
     dt, dd {
       p {
         margin: map-get($base, vertical-space);
+        @media print {
+          margin: map-get($base, vertical-space-sm);
+        }
       }
     }
     dt {

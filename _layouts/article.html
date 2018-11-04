@@ -24,7 +24,7 @@ type: article
   <div class="article__content" itemprop="articleBody">{{ content }}</div>
 
   {%- if _sharing != false -%}
-    <section class="article__sharing">{%- include sharing.html -%}</section>
+    <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
   {%- endif -%}
 
   <footer class="article__footer">
@@ -65,7 +65,9 @@ type: article
     {%- endif -%}
   </footer>
 
+  <div class="d-print-none">
   {%- include article-section-navigator.html -%}
+  </div>
 
 </div>
 

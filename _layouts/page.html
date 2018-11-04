@@ -24,9 +24,9 @@ layout: base
 
 {%- if page.sidebar -%}
 <div class="layout--page layout--page--sidebar clearfix js-page-root">
-  <div class="page__mask js-page-mask js-sidebar-hide"></div>
+  <div class="page__mask d-print-none js-page-mask js-sidebar-hide"></div>
   <div class="page__viewport">
-    <div class="page__actions">
+    <div class="page__actions d-print-none">
       <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
         <i class="fas fa-bars icon--show"></i>
       </div>
@@ -34,7 +34,7 @@ layout: base
 
     <div class="grid page__grid">
 
-      <div class="page__sidebar">
+      <div class="page__sidebar d-print-none">
         {%- include sidebar/toc.html -%}
       </div>
 
@@ -59,7 +59,7 @@ layout: base
       <div class="page__main-inner">
         <div></div>
       {%- if _header != false -%}
-        <div class="page__header">
+        <div class="page__header d-print-none">
         {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
         {%- if _header_theme == 'dark'-%}
           {%- include header.html theme='dark' background=page.header.background -%}
@@ -173,7 +173,7 @@ layout: base
         {%- endif -%}
             <div class="grid grid--reverse">
 
-              <div class="col-aside js-col-aside">
+              <div class="col-aside d-print-none js-col-aside">
                 {%- if page.aside -%}
                   <aside class="page__aside js-page-aside">
                     {%- include aside/toc.html -%}
@@ -211,7 +211,7 @@ layout: base
         {%- endif -%}
         </div>
 
-        <div class="page__footer">{%- include footer.html -%}</div>
+        <div class="page__footer d-print-none">{%- include footer.html -%}</div>
       </div>
     </div> {%- comment -%} end page__main {%- endcomment -%}
 {%- if page.sidebar -%}
@@ -219,7 +219,7 @@ layout: base
   </div> {%- comment -%} end page__viewport {%- endcomment -%}
 {%- endif -%}
 {%- if _header != false -%}
-  <div class="page__search-panel">{%- include search.html -%}</div>
+  <div class="page__search-panel d-print-none"">{%- include search.html -%}</div>
 {%- endif -%}
 </div>
 

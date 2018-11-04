@@ -1,5 +1,6 @@
 .extensions {
   margin: map-get($base, vertical-space-lg) 0;
+  @extend .d-print-none;
 }
 
 .extensions--video, .extensions--slide {
