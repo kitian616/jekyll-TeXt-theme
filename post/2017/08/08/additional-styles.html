@@ -266,7 +266,7 @@
       <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
       <div class="page__main-inner">
-        <div></div><div class="page__header"><header class="header"><div class="main">
+        <div></div><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -285,9 +285,9 @@
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-              <div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-              <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>TeXt - Additional Styles</h1></header><span class="split-space">&nbsp;</span>
+              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>TeXt - Additional Styles</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_posts/2017-08-08-additional-styles.md">
@@ -304,10 +304,10 @@
 
 <div class="grid-container">
 <div class="grid grid--p-3">
-<div class="cell cell--4 cell--md-5 cell--sm-12">
+<div class="cell cell--12 cell--md-5 cell--lg-4">
       <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_rounded" class="rounded" /></p>
     </div>
-<div class="cell cell--4 cell--md-5 cell--sm-12">
+<div class="cell cell--12 cell--md-5 cell--lg-4">
       <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_circle+shadow" class="circle shadow" /></p>
     </div>
 </div>
@@ -315,16 +315,16 @@
 
 <div class="grid-container">
 <div class="grid grid--p-1">
-<div class="cell cell--2 cell--md-4 cell--sm-6">
+<div class="cell cell--6 cell--md-4 cell--lg-2">
 <div class="button button--success button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
 </div>
-<div class="cell cell--2 cell--md-4 cell--sm-6">
+<div class="cell cell--6 cell--md-4 cell--lg-2">
 <div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
 </div>
-<div class="cell cell--2 cell--md-4 cell--sm-6">
+<div class="cell cell--6 cell--md-4 cell--lg-2">
 <div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
-<div class="cell cell--2 cell--md-4 cell--sm-6">
+<div class="cell cell--6 cell--md-4 cell--lg-2">
 <div class="button button--outline-error button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
 </div>
 </div>
@@ -466,7 +466,7 @@
     </tr>
   </tbody>
 </table>
-</div><section class="article__sharing"><!-- AddToAny BEGIN -->
+</div><section class="article__sharing d-print-none"><!-- AddToAny BEGIN -->
 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
 <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
 <a class="a2a_button_facebook"></a>
@@ -481,7 +481,11 @@
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
       </a>
     </p>
-  </div></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/post/2017/08/02/extensions.html">TeXt - Extensions</a></div></div></div>
+  </div></div></footer>
+
+  <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/post/2017/08/02/extensions.html">TeXt - Extensions</a></div></div></div>
+
+</div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -499,7 +503,7 @@
       });
       $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
         $this = $(this);
-        $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
       $articleContent.on('click', '.anchor', function() {
         $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
@@ -523,7 +527,7 @@
               </div>
             </div></div></div>
 
-        <div class="page__footer">
+        <div class="page__footer d-print-none">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
@@ -577,7 +581,7 @@
   </div>
 </div></div>
       </div>
-    </div><div class="page__search-panel"><div class="search search--dark">
+    </div><div class="page__search-panel d-print-none""><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">

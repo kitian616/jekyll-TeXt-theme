@@ -269,7 +269,7 @@
 
       <div class="page__main-inner">
         <div></div>
-<div class="page__header">
+<div class="page__header d-print-none">
 <header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand">
@@ -300,9 +300,9 @@
 </div>
 <div class="page__content"><div class="main"><div class="grid grid--reverse">
 
-              <div class="col-aside js-col-aside"></div>
+              <div class="col-aside d-print-none js-col-aside"></div>
 
-              <div class="col-main cell--auto">
+              <div class="col-main cell cell--auto">
 <article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>About</h1></header></div>
 <meta itemprop="headline" content="About">
 <meta itemprop="author" content="TeXt">
@@ -316,6 +316,9 @@
 
 </div>
 <footer class="article__footer"><!-- this will show at every article content's bottom --></footer>
+
+  <div class="d-print-none"></div>
+
 </div>
 
 <script>(function() {
@@ -334,7 +337,7 @@
       });
       $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
         $this = $(this);
-        $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
       $articleContent.on('click', '.anchor', function() {
         $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
@@ -361,7 +364,7 @@
               </div>
             </div></div></div>
 
-        <div class="page__footer">
+        <div class="page__footer d-print-none">
 <div class="footer js-page-footer">
   <div class="main">
 <aside itemscope itemtype="http://schema.org/Organization">
@@ -432,7 +435,7 @@
 </div>
       </div>
     </div>
-<div class="page__search-panel">
+<div class="page__search-panel d-print-none">
 <div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>

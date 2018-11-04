@@ -266,7 +266,7 @@
       <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
       <div class="page__main-inner">
-        <div></div><div class="page__header"><header class="header"><div class="main">
+        <div></div><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -285,9 +285,9 @@
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-              <div class="col-aside js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-              <div class="col-main cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Jekyll - Definition</h1></header><span class="split-space">&nbsp;</span>
+              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Jekyll - Definition</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_posts/2016-05-05-definition.md">
@@ -315,7 +315,7 @@
 Maruku
 :     Another Markdown-superset converter
 </code></pre></div></div>
-</div><section class="article__sharing"><!-- AddToAny BEGIN -->
+</div><section class="article__sharing d-print-none"><!-- AddToAny BEGIN -->
 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
 <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
 <a class="a2a_button_facebook"></a>
@@ -330,7 +330,11 @@ Maruku
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
       </a>
     </p>
-  </div></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/post/2016/05/04/footnote.html">Jekyll - Footnote</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/post/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div></div></div>
+  </div></div></footer>
+
+  <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/post/2016/05/04/footnote.html">Jekyll - Footnote</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/post/2016/05/08/blockquotes.html">Jekyll - Blockquotes</a></div></div></div>
+
+</div>
 
 <script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
@@ -348,7 +352,7 @@ Maruku
       });
       $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
         $this = $(this);
-        $this.append($('<a class="anchor" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
       });
       $articleContent.on('click', '.anchor', function() {
         $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
@@ -372,7 +376,7 @@ Maruku
               </div>
             </div></div></div>
 
-        <div class="page__footer">
+        <div class="page__footer d-print-none">
 <div class="footer js-page-footer">
   <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
@@ -426,7 +430,7 @@ Maruku
   </div>
 </div></div>
       </div>
-    </div><div class="page__search-panel"><div class="search search--dark">
+    </div><div class="page__search-panel d-print-none""><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
