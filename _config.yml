@@ -17,7 +17,7 @@ text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://poioi.github.io
 baseurl : /
-title   : p_oioi Blog
+title   : p_oioi's Blog
 description: > # this means to ignore newlines until "Language & timezone"
   p_oioi Blog, WEBHacking, Android, Hooking, Study, Memo
 
