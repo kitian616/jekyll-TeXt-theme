@@ -1,3 +1,10 @@
+---
+title: Welcome
+key: 20180701
+tags: Kali_Linux
+---
+
+
 ## 1. Repository 추가
 ```
 gedit /etc/apt/source.list
