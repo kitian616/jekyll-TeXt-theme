@@ -1,5 +1,5 @@
 ---
-title: [Kali_Linux] Kali Linux 초기 설정 (repository & 한글 설치 & Virtualbox guest 확장 설치)
+title: Kali_Linux
 key: 20171211
 tags: Kali_Linux
 ---
