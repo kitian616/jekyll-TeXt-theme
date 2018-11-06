@@ -35,5 +35,11 @@ ppppppppp
                                                                                             
 ```
 
-## Features
+## Subject
 - WebHacking
+- Python
+- Android
+- Hooking
+- iOS
+- Crawling
+- wargame
