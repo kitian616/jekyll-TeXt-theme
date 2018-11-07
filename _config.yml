@@ -33,7 +33,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : # "person" (default), "organization"
   name      : Jeon Jeongwoo
-  url       :
+  url       : https://poioi.github.io
   avatar    : # path or url of avatar image
   bio       : I am an amazing person.
   email     : p_oioi@naver.com
