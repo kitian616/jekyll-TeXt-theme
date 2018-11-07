@@ -4,6 +4,8 @@ key: 20180315
 tags: "WebHacking XSS"
 ---
 
+# Browser XSS Filter 해제하기
+
 XSS(Cross Site Script) 공격을 차단하기 위해 Internet Explorer, Chrome 등 브라우저 자체적으로 XSS를 방어하는 보안기능을 제공하고 있습니다.
 
 브라우저 XSS 필터 기능은 Stored XSS 공격은 차단할 수 없지만 파라미터에 악의적인 스크립트를 삽입하고 전달하는 Reflected XSS 방식은 잘(?) 방어해주는 편입니다.
