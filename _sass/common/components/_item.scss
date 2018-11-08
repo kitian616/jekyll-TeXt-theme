@@ -38,11 +38,11 @@ a.item__header, .item__header > a {
     font-size: map-get($base, font-size-sm);
     line-height: map-get($base, line-height);
     @include block-elements() {
-      margin-top: map-get($base, vertical-space);
-      margin-bottom: map-get($base, vertical-space);
+      margin-top: map-get($spacers, 2);
+      margin-bottom: map-get($spacers, 2);
     }
     @include heading-elements() {
-      margin-top: map-get($base, vertical-space) * 1.5;
+      margin-top: map-get($spacers, 3);
     }
     h1, h2, h3 {
       color: $text-color;
@@ -52,22 +52,22 @@ a.item__header, .item__header > a {
       border: none;
     }
     h1 {
-      font-size: map-get($base, font-size-h1-xs);
+      font-size: map-get($base, font-size-h1-sm);
     }
     h2 {
-      font-size: map-get($base, font-size-h2-xs);
+      font-size: map-get($base, font-size-h2-sm);
     }
     h3 {
-      font-size: map-get($base, font-size-h3-xs);
+      font-size: map-get($base, font-size-h3-sm);
     }
     h4 {
-      font-size: map-get($base, font-size-h4-xs);
+      font-size: map-get($base, font-size-h4-sm);
     }
     h5 {
-      font-size: map-get($base, font-size-h5-xs);
+      font-size: map-get($base, font-size-h5-sm);
     }
     h6 {
-      font-size: map-get($base, font-size-h6-xs);
+      font-size: map-get($base, font-size-h6-sm);
     }
     img {
       max-height: 32rem;
@@ -81,7 +81,7 @@ a.item__header, .item__header > a {
 .items {
   & > .item {
     &:not(:last-child) {
-      margin-bottom: map-get($base, vertical-space);
+      margin-bottom: map-get($spacers, 2);
     }
   }
 }

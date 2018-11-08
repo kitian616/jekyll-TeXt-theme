@@ -13,7 +13,7 @@
     {%- endif -%}
       {%- include snippets/get-nav-url.html path=_author.avatar -%}
       {%- assign _author_avatar = __return -%}
-      <img itemprop="image" src="{{ _author_avatar }}" />
+      <img class="author-profile__avatar" itemprop="image" src="{{ _author_avatar }}" />
     {%- if _author.url -%}
     </a>
     {%- endif -%}

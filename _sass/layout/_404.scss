@@ -1,8 +1,8 @@
 .layout--404 {
   .sign {
     display: table;
-    margin: map-get($base, vertical-space-lg) auto;
-    margin-top: map-get($base, vertical-space-lg) * 2;
+    margin: map-get($spacers, 4) auto;
+    margin-top: map-get($spacers, 5);
     h1 {
       font-size: map-get($base, font-size-xl) * 4;
       line-height: 1;

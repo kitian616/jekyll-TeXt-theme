@@ -1,9 +1,9 @@
 .layout--article {
   .article__sharing {
-    margin: map-get($base, vertical-space-lg) 0;
+    margin: map-get($spacers, 4) 0;
   }
   .article__footer {
-    margin: map-get($base, vertical-space-lg) 0;
+    margin: map-get($spacers, 4) 0;
     font-size: map-get($base, font-size-sm);
     color: $text-color-l;
     .article__license {
@@ -16,7 +16,7 @@
     }
   }
   .article__section-navigator {
-    padding-top: map-get($base, vertical-space-lg) / 2;
+    padding-top: map-get($spacers, 3);
     margin: map-get($spacers, 4) 0 map-get($spacers, 3) 0;
     word-wrap: break-word;
     @include split-line(top, 4px);

@@ -96,7 +96,7 @@
   }
 
   .page__comments {
-    padding-bottom: map-get($base, vertical-space-lg);
+    margin: map-get($spacers, 4) 0;
   }
 
   .page__aside {

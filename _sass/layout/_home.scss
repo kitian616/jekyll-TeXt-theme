@@ -1,6 +1,6 @@
 .layout--home {
   .pagination {
-    margin: map-get($base, vertical-space-lg) 0;
+    margin: map-get($spacers, 4) 0;
   }
   .pagination__menu {
     max-width: 100%;

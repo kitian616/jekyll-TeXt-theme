@@ -1,6 +1,6 @@
 .article__header {
   margin-top: map-get($spacers, 5);
-  margin-bottom: map-get($base, vertical-space-lg);
+  margin-bottom: map-get($spacers, 4);
   @include media-breakpoint-down(md) {
     margin-top: map-get($spacers, 4);
   }

@@ -38,7 +38,7 @@ body {
 
 @include block-elements() {
   padding: 0;
-  margin: map-get($base, vertical-space) 0;
+  margin: map-get($spacers, 2) 0;
 }
 
 body {

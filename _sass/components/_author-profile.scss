@@ -1,17 +1,17 @@
 .author-profile {
   max-width: 25rem;
   padding: .5rem 1rem;
-  margin: map-get($base, vertical-space-lg) 0;
+  margin: map-get($spacers, 4) 0;
   font-size: map-get($base, font-size-sm);
   background-color: $text-background-color;
   @include media-breakpoint-down(md) {
     text-align: center;
   }
-  img {
-    width: 5rem;
-    margin-top: map-get($base, vertical-space);
-    border-radius: 50%;
-  }
+}
+.author-profile__avatar {
+  width: 5rem;
+  margin-top: map-get($spacers, 2);
+  border-radius: 50%;
 }
 .author-profile__name {
   font-size: map-get($base, font-size-lg);

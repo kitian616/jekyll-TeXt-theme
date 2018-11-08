@@ -1,7 +1,6 @@
 .layout--articles {
-  margin: map-get($base, vertical-space-lg) 0;
+  margin: map-get($spacers, 4) 0;
   margin-top: map-get($spacers, 5);
-  margin-bottom: map-get($base, vertical-space-lg);
   @include media-breakpoint-down(md) {
     margin-top: map-get($spacers, 4);
   }
