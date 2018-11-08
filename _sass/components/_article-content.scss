@@ -18,7 +18,7 @@
     }
     & > .anchor {
       @include link-colors($border-color, $main-color-1);
-      margin-left: .2rem;
+      margin-left: map-get($spacers, 1);
       text-decoration: none;
       visibility: hidden;
       opacity: 0;
@@ -43,7 +43,7 @@
     @include horizontal-rules();
   }
   blockquote {
-    padding-left: 1rem;
+    padding-left: map-get($spacers, 3);
     font-size: map-get($base, font-size-sm);
     color: $text-color-l;
     @include split-line(left, 4px, $border-color);
@@ -72,7 +72,7 @@
     }
   }
   code {
-    padding: .2rem .5rem;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
     background-color: $text-background-color;
     border-radius: map-get($base, border-radius);
     span {
@@ -99,7 +99,7 @@
   }
   .highlighter-rouge > .highlight, figure.highlight {
     & > pre {
-      padding: 1rem 0 1rem 1rem;
+      padding: map-get($spacers, 3) 0 map-get($spacers, 3) map-get($spacers, 3);
       margin: 0;
       background-color: $text-background-color;
       border-radius: map-get($base, border-radius);
@@ -111,7 +111,7 @@
   figure.highlight {
     &::before {
       display: block;
-      padding: .5rem 1rem .5rem 0;
+      padding: map-get($spacers, 2) map-get($spacers, 3) map-get($spacers, 2) 0;
       font-weight: map-get($base, font-weight-bold);
       color: $decorate-color;
       text-align: right;
@@ -128,7 +128,7 @@
       & > code {
         & > .rouge-table {
           width: auto;
-          margin: 0 0 -1rem -1rem;
+          margin: 0 0 - map-get($spacers, 3) - map-get($spacers, 3);
           tbody, tr, td {
             padding-top: 0;
             padding-bottom: 0;
@@ -140,14 +140,14 @@
               width: 100%;
               @include flexbox;
               & > .code {
-                padding: 0 0 1rem .5rem;
+                padding: 0 0 map-get($spacers, 3) map-get($spacers, 2);
                 @include overflow(auto);
               }
             }
           }
           tbody td {
             &.gl {
-              padding-left: 1rem;
+              padding-left: map-get($spacers, 3);
             }
             & > pre {
               display: block;
@@ -165,7 +165,7 @@
     }
   }
   ul, ol {
-    margin-left: 1.5rem;
+    margin-left: map-get($spacers, 4);
     ul, ol {
       margin-top: 0;
       margin-bottom: 0;
@@ -199,7 +199,7 @@
     margin-left: 0;
     list-style-type: none;
     ul, ol {
-      margin-left: 1.5rem;
+      margin-left: map-get($spacers, 4);
     }
   }
   table {
@@ -211,7 +211,7 @@
       background-color: $text-background-color;
     }
     th, td {
-      padding: .5rem;
+      padding: map-get($spacers, 2);
       border: 1px solid $border-color-l;
     }
     th {

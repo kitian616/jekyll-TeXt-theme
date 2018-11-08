@@ -14,7 +14,7 @@
     display: inline-block;
     width: 100%;
     height: $button-height-lg;
-    padding: 0 1.8rem;
+    padding: 0 2rem;
     margin: 0;
     line-height: 1 !important;
     color: $text-color;
@@ -119,7 +119,7 @@
   }
 }
 .search__header {
-  margin-top: 1.5rem;
+  margin-top: map-get($spacers, 4);
   font-size: map-get($base, font-size-h1);
   font-weight: map-get($base, font-weight-bold);
   color: $text-color-d;

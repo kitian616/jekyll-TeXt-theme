@@ -54,6 +54,9 @@
   &.layout--page--sidebar {
     .page__main {
       @include overflow(auto);
+      @media print {
+        @include overflow(unset);
+      }
     }
   }
   @include media-breakpoint-down(lg) {

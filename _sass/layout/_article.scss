@@ -33,11 +33,11 @@
     }
     & > .previous {
       float: left;
-      padding-right: .5rem;
+      padding-right: map-get($spacers, 2);
     }
     & > .next {
       float: right;
-      padding-left: .5rem;
+      padding-left: map-get($spacers, 2);
       text-align: right;
     }
   }

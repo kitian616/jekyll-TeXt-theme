@@ -3,7 +3,7 @@ ul.toc {
   margin: 0;
   list-style-type: none;
   & > li {
-    margin: .2rem 0;
+    margin: map-get($spacers, 1) 0;
     &.active {
       a {
         color: $text-color-3;
@@ -15,7 +15,7 @@ ul.toc {
 
   a {
     display: inline-block;
-    padding: .2rem .8rem .2rem .8rem;
+    padding: map-get($spacers, 1) map-get($spacers, 2) map-get($spacers, 1) map-get($spacers, 2);
     text-decoration: none !important;
     border-radius: map-get($base, border-radius);
     @include clickable($text-color, null, $text-color-3, $main-color-3);
@@ -23,8 +23,8 @@ ul.toc {
 
   .toc-h1 {
     @include split-line(bottom);
-    padding: .8rem 0 .3rem 0;
-    margin-bottom: .6rem;
+    padding: map-get($spacers, 2) 0 map-get($spacers, 1) 0;
+    margin-bottom: map-get($spacers, 2);
     a {
       @include link-colors($text-color-d);
     }
@@ -50,13 +50,13 @@ ul.toc {
     }
   }
   .toc-h3 {
-    margin-left: 1rem;
+    margin-left: map-get($spacers, 3);
   }
   .toc-h4 {
-    margin-left: 2rem;
+    margin-left: map-get($spacers, 3) * 2;
   }
   .toc-h5, .toc-h6 {
-    margin-left: 3rem;
+    margin-left: map-get($spacers, 3) * 3;
   }
 
   .toc-h1 {
@@ -109,8 +109,8 @@ ul.toc--navigator {
   }
 
   a {
-    padding: 0 0 0 .5rem;
-    margin: .2rem 0;
+    padding: 0 0 0 map-get($spacers, 2);
+    margin: map-get($spacers, 1) 0;
     border-radius: 0;
     @include hover() {
       background-color: transparent;

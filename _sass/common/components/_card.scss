@@ -21,7 +21,7 @@
 }
 
 .card__content {
-  padding: .5rem 1rem;
+  padding: map-get($spacers, 2) map-get($spacers, 3);
 }
 
 a.card__header, .card__header > a {
@@ -41,7 +41,7 @@ a.card__header, .card__header > a {
     position: absolute;
     width: 100%;
     max-height: 100%;
-    padding: .5rem;
+    padding: map-get($spacers, 2);
     a {
       text-decoration: none !important;
     }
