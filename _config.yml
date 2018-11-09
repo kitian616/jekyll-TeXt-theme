@@ -13,7 +13,7 @@
 
 ## => Site Settings
 ##############################
-text_skin: orange # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://poioi.github.io
 baseurl : /
