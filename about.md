@@ -29,10 +29,10 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Additional styles (alert, tag, image, icon, button, grid, etc)
 - Extensions (audios, videos, slides)
 - Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/))
-- Comments ([Disqus](https://disqus.com/))
+- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
+- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/))
 - Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics (Google Analytics)
+- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
 - RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
 
 ## Skins
