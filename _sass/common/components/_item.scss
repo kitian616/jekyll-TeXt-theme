@@ -35,7 +35,7 @@ a.item__header, .item__header > a {
 
 .item__description {
   &, .article__content {
-    font-size: map-get($base, font-size-sm);
+    font-size: map-get($base, font-size-xs);
     line-height: map-get($base, line-height);
     @include block-elements() {
       margin-top: map-get($spacers, 2);
@@ -52,22 +52,22 @@ a.item__header, .item__header > a {
       border: none;
     }
     h1 {
-      font-size: map-get($base, font-size-h1-sm);
+      font-size: map-get($base, font-size-h1-xs);
     }
     h2 {
-      font-size: map-get($base, font-size-h2-sm);
+      font-size: map-get($base, font-size-h2-xs);
     }
     h3 {
-      font-size: map-get($base, font-size-h3-sm);
+      font-size: map-get($base, font-size-h3-xs);
     }
     h4 {
-      font-size: map-get($base, font-size-h4-sm);
+      font-size: map-get($base, font-size-h4-xs);
     }
     h5 {
-      font-size: map-get($base, font-size-h5-sm);
+      font-size: map-get($base, font-size-h5-xs);
     }
     h6 {
-      font-size: map-get($base, font-size-h6-sm);
+      font-size: map-get($base, font-size-h6-xs);
     }
     img {
       max-height: 32rem;
