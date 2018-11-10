@@ -110,7 +110,7 @@ sharing:
 
   ## AddThis
   addthis:
-    id: # addthis pubid, e.g. ra-5xxxxxxxxxxx
+    id: # AddThis pubid, e.g. ra-5xxxxxxxxxxx
 
 
 ## => Comments

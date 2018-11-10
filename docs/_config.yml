@@ -112,7 +112,7 @@ sharing:
 
   ## AddThis
   addthis:
-    id: ra-5be59ee2486770cb # addthis pubid, e.g. ra-5xxxxxxxxxxx
+    id: ra-5be59ee2486770cb # AddThis pubid, e.g. ra-5xxxxxxxxxxx
 
 
 ## => Comments
