@@ -302,7 +302,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.1-configuration.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-09T23:35:22+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-10T15:51:19+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>Jekyll 允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的  <em>_config.yml</em> 文件，也可以作为命令行的标记来配置。</p>
 
@@ -629,6 +629,10 @@
       <td><strong>addtoany</strong></td>
       <td><a href="https://www.addtoany.com/">AddToAny</a></td>
     </tr>
+    <tr>
+      <td><strong>addthis</strong></td>
+      <td><a href="https://www.addthis.com/">AddThis</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -636,6 +640,14 @@
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">comments</span><span class="pi">:</span>
   <span class="na">provider</span><span class="pi">:</span> <span class="s">addtoany</span>
+</code></pre></div></div>
+
+<h3 id="addthis">AddThis</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">comments</span><span class="pi">:</span>
+  <span class="na">provider</span><span class="pi">:</span> <span class="s">addthis</span>
+  <span class="na">addthis</span><span class="pi">:</span>
+    <span class="na">id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-addthis-pubid"</span>
 </code></pre></div></div>
 
 <p class="warning">你需要在页面的头信息里设置 <code class="highlighter-rouge">sharing</code> 属性为 <code class="highlighter-rouge">true</code> 来开启该页的评论，详情请戳<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#article-%E5%B8%83%E5%B1%80">这里</a>。</p>
@@ -783,7 +795,7 @@
     </li>
   </ol>
 </div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-09T23:35:22+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-10T15:51:19+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> 许可协议。
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
