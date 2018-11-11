@@ -3,7 +3,7 @@
   @extend .d-print-none;
 }
 
-.extensions--video, .extensions--slide {
+.extensions--video, .extensions--slide, .extensions--demo {
   position: relative;
   width: 100%;
   padding: 0;
@@ -22,6 +22,11 @@
 
 .extensions--slide {
   padding-top: percentage(487 / 599);
+}
+
+.extensions--demo {
+  min-height: 340px;
+  padding-top: percentage(315 / 560);
 }
 
 .extensions--audio {

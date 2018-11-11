@@ -23,7 +23,7 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 - 目录
 - 作者（电子邮件，Facebook，Twitter，领英，微博，知乎等。支持多作者配置）
 - 附加样式（提示，标签，图片，图标，按钮，栅格等）
-- 扩展（音频，视频，幻灯片）
+- 扩展（音频，视频，幻灯片，在线示例）
 - Markdown 增强（[MathJax](https://www.mathjax.org/)，[mermaid](https://mermaidjs.github.io/)，[chartjs](http://www.chartjs.org/)）
 - 分享（[AddToAny](https://www.addtoany.com/)，[AddThis](https://www.addthis.com/)）
 - 评论（[Disqus](https://disqus.com/)，[Gitalk](https://gitalk.github.io/)）
