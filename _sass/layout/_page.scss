@@ -97,6 +97,11 @@
       padding-bottom: 0;
     }
   }
+  .hide-footer {
+    .page__content {
+      padding-bottom: 0;
+    }
+  }
 
   .page__comments {
     margin: map-get($spacers, 4) 0;

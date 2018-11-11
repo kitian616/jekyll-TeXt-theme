@@ -10,6 +10,10 @@ layout: base
 {%- assign _header = __return -%}
 
 {%- include snippets/assign.html
+  target=layout.footer source0=page.footer -%}
+{%- assign _footer = __return -%}
+
+{%- include snippets/assign.html
   target = site.data.variables.default.page.full_width
   source0=layout.full_width source1=page.full_width -%}
 {%- assign _full_width = __return -%}
@@ -49,6 +53,9 @@ layout: base
     {%- unless page.sidebar -%}
       {%- assign _page_main_class = _page_main_class | append: ' page__viewport' -%}
     {%- endunless -%}
+    {%- if _footer == false -%}
+      {%- assign _page_main_class = _page_main_class | append: ' hide-footer' -%}
+    {%- endif -%}
     {%- if page.aside -%}
       {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
     {%- elsif _full_width -%}
@@ -211,7 +218,9 @@ layout: base
         {%- endif -%}
         </div>
 
-        <div class="page__footer d-print-none">{%- include footer.html -%}</div>
+        {%- if _footer != false -%}
+          <div class="page__footer d-print-none">{%- include footer.html -%}</div>
+        {%- endif -%}
       </div>
     </div> {%- comment -%} end page__main {%- endcomment -%}
 {%- if page.sidebar -%}
