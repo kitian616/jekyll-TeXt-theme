@@ -1,6 +1,15 @@
 # Change Log
 
-## 2.2.2 (2018-11-21)
+## 2.2.3 (2018-11-11)
+
+### Enhancements
+
+- Add Swiper component
+- Special stylesheets for print
+- Add AddThis sharing service (@liao961120)
+- Add extensions for demos (CodePen)
+
+## 2.2.2 (2018-10-21)
 
 ### Enhancements
 
