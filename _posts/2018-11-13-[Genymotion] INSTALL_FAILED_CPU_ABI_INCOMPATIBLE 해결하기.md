@@ -17,9 +17,7 @@ Genymotion으로 APK 설치시 "Failure [INSTALL_FAILED_CPU_ABI_INCOMPATIBLE]" �
 
 [Uploading Genymotion-ARM-Translation_v1.1.zip]()
 
-download url:
-
-https://forum.xda-developers.com/attachment.php?s=9f1870536cb530a1346794b6ef629e90&attachmentid=2680937&d=1397258016
+download url: https://forum.xda-developers.com/attachment.php?s=9f1870536cb530a1346794b6ef629e90&attachmentid=2680937&d=1397258016
 
 
 ## 2. 다운 받은 Genymotion-ARM-Translation_v1.1.zip 파일을 드래그하여 설치
