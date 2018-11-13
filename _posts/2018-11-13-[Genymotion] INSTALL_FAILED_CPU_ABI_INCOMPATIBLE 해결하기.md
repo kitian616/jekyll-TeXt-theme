@@ -5,7 +5,7 @@ tags: "Genymotion"
 ---
 
 
-# [Genymotion] INSTALL_FAILED_CPU_ABI_INCOMPATIBLE 해결하기
+# INSTALL_FAILED_CPU_ABI_INCOMPATIBLE 해결하기
 
 Genymotion으로 APK 설치시 "Failure [INSTALL_FAILED_CPU_ABI_INCOMPATIBLE]" 라는 메시지로 설치가 실패하는 경우가 있습니다.
 
@@ -26,6 +26,7 @@ download url: https://forum.xda-developers.com/attachment.php?s=9f1870536cb530a1
 
 ## 3. Genymotion 디바이스 재시작
 디바이스 재시작 후 APK 설치시 정상적으로 설치되는것을 확인할 수 있습니다.
-![success](https://user-images.githubusercontent.com/38030807/48398122-36aebd00-e763-11e8-9aa3-edec628b62a2.PNG)
+![success](https://user-images.githubusercontent.com/38030807/48398297-ba68a980-e763-11e8-9dbe-d9a73b3e59df.PNG)
+
 
 끝
