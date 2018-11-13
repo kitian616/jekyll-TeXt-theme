@@ -4,6 +4,7 @@ key: 20171211
 tags: "Kali Linux"
 ---
 
+# Kali Linux 초기 설정 하기
 
 ## 1. Repository 추가
 ```
