@@ -21,10 +21,7 @@
     "declaration-empty-line-before": null,
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
-    "font-weight-notation": [
-      "numeric", {
-        "ignore": ["relative"]
-    }],
+    "font-weight-notation": null,
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "length-zero-no-unit": true,
@@ -269,7 +266,7 @@
     "selector-max-specificity": null,
     "selector-max-type": 2,
     "selector-max-universal": 1,
-    "selector-no-qualifying-type": true,
+    "selector-no-qualifying-type": null,
     "selector-no-vendor-prefix": true,
     "string-quotes": "double",
     "value-keyword-case": "lower",
