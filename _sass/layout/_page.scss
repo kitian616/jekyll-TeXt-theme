@@ -157,16 +157,10 @@
       }
     }
   }
-  .page__search-panel {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  .page__search-modal {
     z-index: map-get($z-index, search);
     display: none;
     color: $text-color-theme-dark;
-    background-color: $mask-color;
     @include overflow(auto);
   }
   &.show-search-panel {
@@ -176,7 +170,7 @@
     .page__main {
       @include overflow(hidden);
     }
-    .page__search-panel {
+    .page__search-modal {
       display: block;
     }
   }
