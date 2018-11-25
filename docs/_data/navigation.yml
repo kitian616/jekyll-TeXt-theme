@@ -20,7 +20,7 @@ docs-en:
         url:    /docs/en/quick-start
       - title:  Structure
         url:    /docs/en/structure
-      - title:  Update form 1.x to 2.x
+      - title:  Update from 1.x to 2.x
         url:    /docs/en/update-form-1-to-2
   - title:      Customization
     children:
