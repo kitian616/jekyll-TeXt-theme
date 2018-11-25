@@ -4,22 +4,26 @@
     var $body = $('body'), $window = $(window);
     var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
     var activeCount = 0;
-    function modal(isShow) {
-      var $root = this, _isShow = isShow === undefined ? false : show;
+    function modal(options) {
+      var $root = this, visible, onChange;
       var scrollTop;
+      function setOptions(options) {
+        var _options = options || {};
+        visible = _options.initialVisible === undefined ? false : show;
+        onChange = _options.onChange;
+      }
       function init() {
-        setState(_isShow);
+        setState(visible);
       }
       function windowScroll() {
         setState(false);
       }
       function setState(isShow) {
-        if (isShow === _isShow) {
+        if (isShow === visible) {
           return;
         }
-        _isShow = isShow;
-        if (_isShow) {
-
+        visible = isShow;
+        if (visible) {
           activeCount ++;
           scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
           $root.addClass('modal--show');
@@ -33,25 +37,19 @@
           activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
           $window.off('scroll', windowScroll);
         }
+        onChange && onChange(visible);
       }
-      function show(callback) {
+      function show() {
         setState(true);
-        callback && callback();
       }
-      function hide(callback) {
+      function hide() {
         setState(false);
-        callback && callback();
       }
-      function toggle(callback) {
-        setState(!_isShow);
-        callback && callback();
-      }
+      setOptions(options);
       init();
       return {
         show: show,
-        hide: hide,
-        toggle: toggle
-
+        hide: hide
       };
     }
     $.fn.modal = modal;
