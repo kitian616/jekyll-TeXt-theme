@@ -86,6 +86,7 @@ a.card__header, .card__header > a {
       }
     }
   }
+  @include transition(map-get($link, transition));
 }
 
 .card--flat {

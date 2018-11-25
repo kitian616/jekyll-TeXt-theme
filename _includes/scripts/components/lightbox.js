@@ -21,23 +21,18 @@
         gallery.init();
         for (i = 0; i < items.length; i++) {
           item = items[i];
-          item.$el && item.$el.on('click', (function() {
+          item.$el && (item.$el.addClass('popup-image'), item.$el.on('click', (function() {
             var index = i;
             return function() {
               pageGalleryModal.show();
               gallery.setOptions({ initialSlide: index });
               gallery.refresh(true, { animation: false });
             };
-          })());
+          })()));
         }
       }
       $pageGalleryModal.on('click', function() {
         pageGalleryModal.hide();
-      });
-      $pageGalleryModal.on('touchmove', function(e) {
-        if (e.cancelable) {
-          e.preventDefault();
-        }
       });
     });
   });

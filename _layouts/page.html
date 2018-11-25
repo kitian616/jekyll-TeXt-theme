@@ -14,6 +14,10 @@ layout: base
 {%- assign _footer = __return -%}
 
 {%- include snippets/assign.html
+  target=layout.lightbox source0=page.lightbox -%}
+{%- assign _lightbox = __return -%}
+
+{%- include snippets/assign.html
   target = site.data.variables.default.page.full_width
   source0=layout.full_width source1=page.full_width -%}
 {%- assign _full_width = __return -%}
@@ -227,7 +231,10 @@ layout: base
     </div> {%- comment -%} end grid {%- endcomment -%}
   </div> {%- comment -%} end page__viewport {%- endcomment -%}
 {%- endif -%}
-<div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
+
+{%- if _lightbox == true -%}
+  <div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
+{%- endif -%}
 {%- if _header != false -%}
   <div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
 {%- endif -%}
@@ -239,9 +246,11 @@ layout: base
   {%- include scripts/lib/affix.js -%}
   {%- include scripts/lib/toc.js -%}
   {%- include scripts/lib/modal.js -%}
-  {%- include scripts/lib/gallery.js -%}
+  {%- if _lightbox == true -%}
+    {%- include scripts/lib/gallery.js -%}
+    {%- include scripts/components/lightbox.js -%}
+  {%- endif -%}
   {%- include scripts/page.js -%}
-  {%- include scripts/components/gallery.js -%}
 </script>
 
 {%- if page.sidebar -%}

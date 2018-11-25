@@ -139,20 +139,15 @@
     }
 
     &.show-sidebar {
+      .page__actions {
+        visibility: hidden;
+      }
       .page__sidebar {
         @include transform(translate(0));
       }
       .page__mask {
         display: block;
       }
-    }
-  }
-  &.show-modal {
-    .page__main {
-      @include overflow(hidden);
-    }
-    .page__viewport {
-      filter: blur(28px);
     }
   }
 
