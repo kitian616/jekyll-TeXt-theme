@@ -102,7 +102,7 @@
       return {
         setOptions: setOptions,
         refresh: function() {
-          calc(true); setState();
+          calc(true, { animation: false }); setState();
         }
       };
     }

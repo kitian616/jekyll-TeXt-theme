@@ -82,7 +82,7 @@ ul.toc {
 
 ul.toc--ellipsis {
   & > li {
-    overflow: hidden;
+    @include overflow(hidden);
     text-overflow: ellipsis;
     white-space: nowrap;
   }

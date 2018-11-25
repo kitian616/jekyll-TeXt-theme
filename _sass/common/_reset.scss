@@ -23,7 +23,6 @@
  **/
 
 html {
-  height: 100%;
   font-size: map-get($base, font-size-root);
   -webkit-text-size-adjust: 100%; /* 1 */
   @media print {
@@ -34,15 +33,6 @@ html {
 body {
   padding: 0;
   margin: 0;
-}
-
-@include block-elements() {
-  padding: 0;
-  margin: map-get($spacers, 2) 0;
-}
-
-body {
-  height: 100%;
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
   ::-moz-selection {
     background: $select-color;
@@ -53,6 +43,11 @@ body {
   ::selection {
     background: $select-color;
   }
+}
+
+@include block-elements() {
+  padding: 0;
+  margin: map-get($spacers, 2) 0;
 }
 
 input, textarea, select, button {

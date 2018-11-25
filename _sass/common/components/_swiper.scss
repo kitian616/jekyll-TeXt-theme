@@ -1,6 +1,6 @@
 .swiper {
   position: relative;
-  overflow: hidden;
+  @include overflow(hidden);
 }
 
 .swiper__wrapper, .swiper__slide {
@@ -18,6 +18,9 @@
 
 .swiper__slide {
   @include flex-shrink(0);
+  & > img {
+    max-width: 100%;
+  }
 }
 
 .swiper__button {

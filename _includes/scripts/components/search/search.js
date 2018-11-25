@@ -105,22 +105,19 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   });
 
   // search panel
-  var $pageRoot = $('.js-page-root');
-  var $pageMain = $('.js-page-main');
+  var $searchModal = $('.js-page-search-modal');
   var $searchToggle = $('.js-search-toggle');
   var showSearch = false;
-  var scrollTop;
+
+  var searchModal = $searchModal.modal();
 
   function openSearchPanel() {
-    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
-    $pageRoot.addClass('show-search-panel');
-    $pageMain.scrollTop(scrollTop);
+    searchModal.show();
     $searchInput[0].focus();
   }
 
   function closeSearchPanel() {
-    $pageRoot.removeClass('show-search-panel');
-    $(window).scrollTop(scrollTop);
+    searchModal.hide();
     $searchInput[0].blur();
     setTimeout(function() {
       $searchInput.val(''); searchBoxEmpty();

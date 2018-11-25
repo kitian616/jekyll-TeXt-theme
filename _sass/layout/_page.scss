@@ -1,17 +1,18 @@
-.layout--page {
-  height: 100%;
-
-  .page__viewport {
-    height: 100%;
-  }
-
+@include media-breakpoint-up(lg) {
+  body,
+  html,
+  .root,
+  .layout--page,
+  .page__viewport,
   .page__grid {
     height: 100%;
   }
+}
 
+.layout--page {
   .page__actions {
     position: fixed;
-    bottom: map-get($spacers, 3);
+    bottom: map-get($spacers, 5);
     left: map-get($spacers, 3);
     z-index: map-get($z-index, actions);
     display: none;
@@ -47,10 +48,6 @@
     cursor: pointer;
     background-color: $mask-color;
   }
-
-  .page__main {
-    height: 100%;
-  }
   &.layout--page--sidebar {
     .page__main {
       @include overflow(auto);
@@ -65,17 +62,10 @@
         @include overflow(unset);
       }
     }
-    &.layout--page--sidebar.show-sidebar {
-      .page__main {
-        @include overflow(auto);
-      }
-    }
   }
 
   .page__main-inner {
     position: relative;
-    height: auto !important;
-    height: 100%;
     min-height: 100%;
     color: $text-color;
     background-color: $background-color;
@@ -85,7 +75,7 @@
       & > aside {
         position: absolute;
         width: map-get($layout, aside-width);
-        overflow: hidden;
+        @include overflow(hidden);
       }
     }
   }
@@ -157,21 +147,12 @@
       }
     }
   }
-  .page__search-modal {
-    z-index: map-get($z-index, search);
-    display: none;
-    color: $text-color-theme-dark;
-    @include overflow(auto);
-  }
-  &.show-search-panel {
-    .page__viewport {
-      filter: blur(28px);
-    }
+  &.show-modal {
     .page__main {
       @include overflow(hidden);
     }
-    .page__search-modal {
-      display: block;
+    .page__viewport {
+      filter: blur(28px);
     }
   }
 

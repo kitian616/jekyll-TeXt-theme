@@ -227,8 +227,9 @@ layout: base
     </div> {%- comment -%} end grid {%- endcomment -%}
   </div> {%- comment -%} end page__viewport {%- endcomment -%}
 {%- endif -%}
+<div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
 {%- if _header != false -%}
-  <div class="modal page__search-modal d-print-none"">{%- include search.html -%}</div>
+  <div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
 {%- endif -%}
 </div>
 
@@ -237,23 +238,26 @@ layout: base
   {%- include scripts/lib/scroll-to.js -%}
   {%- include scripts/lib/affix.js -%}
   {%- include scripts/lib/toc.js -%}
+  {%- include scripts/lib/modal.js -%}
+  {%- include scripts/lib/gallery.js -%}
   {%- include scripts/page.js -%}
+  {%- include scripts/components/gallery.js -%}
 </script>
 
 {%- if page.sidebar -%}
-<script>
-  {%- include scripts/components/sidebar.js -%}
-</script>
+<script>{%- include scripts/components/sidebar.js -%}</script>
 {%- endif -%}
 
 {%- if page.aside -%}
 <script>
   /* toc must before affix, since affix need to konw toc' height. */
-  {%- if page.aside.toc -%}
-    {%- include scripts/aside/toc.js -%}
-  {%- endif -%}
+  {%- if page.aside.toc -%}{%- include scripts/aside/toc.js -%}{%- endif -%}
   {%- include scripts/aside/affix.js -%}
 </script>
+{%- endif -%}
+
+{%- if _header != false -%}
+<script>{%- include scripts/components/search/search.js -%}</script>
 {%- endif -%}
 
 

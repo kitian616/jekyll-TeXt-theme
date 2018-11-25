@@ -68,7 +68,7 @@
 }
 
 .navigation {
-  @include overflow(auto);
+  @include overflow(auto, "x");
   & > ul {
     height: map-get($layout, header-height);
     padding-bottom: 0;

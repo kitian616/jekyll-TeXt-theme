@@ -3,19 +3,13 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     function swiper(options) {
       var $window = $(window), $root = this, $swiperWrapper, $swiperButtonPrev, $swiperButtonNext,
-        initialSlide, width, height, animation,
-        rootWidth, rootHeight, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 4;
+        initialSlide, animation,
+        rootWidth, rootHeight, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
 
       function setOptions(options) {
         var _options = options || {};
         initialSlide = _options.initialSlide || 0;
         animation = _options.animation === undefined && true;
-        width = _options.width === undefined ||
-          typeof _options.width === 'string' ? _options.width :
-          typeof _options.width === 'number' ? _options.width + 'px' : undefined;
-        height = _options.height  === undefined ||
-          typeof _options.height === 'string' ? _options.height :
-          typeof _options.height === 'number' ? _options.height + 'px' : undefined;
         init();
       }
 
@@ -23,19 +17,19 @@
         $swiperWrapper = $root.find('.swiper__wrapper');
         $swiperButtonPrev = $root.find('.swiper__button--prev');
         $swiperButtonNext = $root.find('.swiper__button--next');
-        count = $swiperWrapper.children('.swiper__slide').length;
         curIndex = initialSlide || 0;
         translateX = getTranslateXFromCurIndex();
-        var _cssObj = {};
-        width === undefined || (_cssObj.width = width);
-        height === undefined || (_cssObj.height = height);
-        $root.css(_cssObj);
         animation && $swiperWrapper.addClass('swiper__wrapper--animation');
       }
 
       function preCalc() {
         rootWidth = $root.width();
         rootHeight = $root.height();
+        count = $swiperWrapper.children('.swiper__slide').length;
+        if (count < 2) {
+          $swiperButtonPrev.addClass('d-none');
+          $swiperButtonNext.addClass('d-none');
+        }
         translateX = getTranslateXFromCurIndex();
       }
 
@@ -49,13 +43,17 @@
               $swiperWrapper.removeClass('swiper__wrapper--animation');
           }
           $swiperWrapper.css('transform', 'translate(' + translateX + 'px, 0)');
-          if (curIndex <= 0) {
-            $swiperButtonPrev.addClass('disabled');
-          } else if (curIndex < count - 1) {
-            $swiperButtonPrev.removeClass('disabled');
-            $swiperButtonNext.removeClass('disabled');
-          } else {
-            $swiperButtonNext.addClass('disabled');
+          if (count > 1) {
+            if (curIndex <= 0) {
+              $swiperButtonPrev.addClass('disabled');
+            } else {
+              $swiperButtonPrev.removeClass('disabled');
+            }
+            if (curIndex >= count - 1) {
+              $swiperButtonNext.addClass('disabled');
+            } else {
+              $swiperButtonNext.removeClass('disabled');
+            }
           }
         };
       })();
@@ -90,10 +88,12 @@
       setOptions(options);
       calc(true);
 
-      $swiperButtonPrev.on('click', function() {
+      $swiperButtonPrev.on('click', function(e) {
+        e.stopPropagation();
         move('prev');
       });
-      $swiperButtonNext.on('click', function() {
+      $swiperButtonNext.on('click', function(e) {
+        e.stopPropagation();
         move('next');
       });
       $window.on('resize', function() {
@@ -142,7 +142,11 @@
       })();
 
       return {
-        setOptions: setOptions
+        setOptions: setOptions,
+        moveToIndex: moveToIndex,
+        refresh: function() {
+          calc(true, { animation: false });
+        }
       };
     }
     $.fn.swiper = swiper;
