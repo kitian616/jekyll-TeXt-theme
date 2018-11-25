@@ -298,8 +298,8 @@
 
               <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div></aside></div>
 
-              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Page - Sidebar (Aside)</h1></header></div><meta itemprop="headline" content="Page - Sidebar (Aside)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Nov 17, 2018</span>
-            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-17T01:18:08+08:00"><div class="js-article-content"><div class="layout--article">
+              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Page - Sidebar (Aside)</h1></header></div><meta itemprop="headline" content="Page - Sidebar (Aside)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Nov 25, 2018</span>
+            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-25T21:46:09+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>A post with a left sidebar.</p>
 
@@ -328,7 +328,7 @@ sidebar:
 <h3 id="header-21">Header 2.1</h3>
 
 <h2 id="header-3">Header 3</h2>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-17T01:18:08+08:00"><!-- this will show at every article content's bottom --></footer>
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-25T21:46:09+08:00"><!-- this will show at every article content's bottom --></footer>
 
   <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/page/sidebar.html">Sidebar</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-fill.html">Article Header Overlay Background Fill</a></div></div></div>
 
@@ -425,7 +425,7 @@ sidebar:
     </footer>
   </div>
 </div></div></div>
-    </div></div></div><div class="page__search-panel d-print-none""><div class="search search--dark">
+    </div></div></div><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -441,191 +441,7 @@ sidebar:
     </div>
     <div class="search-result js-search-result"></div>
   </div>
-</div>
-
-<script>var SOURCES = window.TEXT_VARIABLES.sources;
-var PAHTS = window.TEXT_VARIABLES.paths;
-window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
-  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
-
-  function memorize(f) {
-    var cache = {};
-    return function () {
-      var key = Array.prototype.join.call(arguments, ',');
-      if (key in cache) return cache[key];
-      else return cache[key] = f.apply(this, arguments);
-    };
-  }
-
-  function initData(data) {
-    var _data = [], i, j, key, keys, cur;
-    keys = Object.keys(data);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i], _data[key] = [];
-      for (j = 0; j < data[key].length; j++) {
-        cur = data[key][j];
-        cur.title = window.decodeUrl(cur.title);
-        cur.url = window.decodeUrl(cur.url);
-        _data[key].push(cur);
-      }
-    }
-    return _data;
-  }
-
-  /// search
-  function searchByQuery(query) {
-    var i, j, key, keys, cur, _title, result = {};
-    keys = Object.keys(searchData);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i];
-      for (j = 0; j < searchData[key].length; j++) {
-        cur = searchData[key][j], _title = cur.title;
-        if ((result[key] === undefined || result[key] && result[key].length < 4 )
-          && _title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
-          if (result[key] === undefined) {
-            result[key] = [];
-          }
-          result[key].push(cur);
-        }
-      }
-    }
-    return result;
-  }
-
-  var renderHeader = memorize(function(header) {
-    return $('<p class="search-result__header">' + header + '</p>');
-  });
-
-  var renderItem = function(index, title, url) {
-    return $('<li class="search-result__item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
-  };
-
-  function render(data) {
-    if (!data) {
-      return null;
-    }
-    var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
-    keys = Object.keys(data);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i];
-      $root.append(renderHeader(key));
-      for (j = 0; j < data[key].length; j++) {
-        cur = data[key][j];
-        $root.append(renderItem(itemIndex++, cur.title, cur.url));
-      }
-    }
-    return $root;
-  }
-
-  // search box
-  var $searchBox = $('.js-search-box');
-  var $searchInput = $searchBox.children('input');
-  var $searchClear = $searchBox.children('.js-icon-clear');
-  var $result = $('.js-search-result'), $resultItems;
-  var lastActiveIndex, activeIndex;
-
-  function searchBoxEmpty() {
-    $searchBox.removeClass('not-empty'); $result.html(null);
-    $resultItems = $('.search-result__item'); activeIndex = 0;
-  }
-
-  $searchInput.on('input', window.throttle(function() {
-    var val = $(this).val();
-    if (val === '' || typeof val !== 'string') {
-      searchBoxEmpty();
-    } else {
-      $searchBox.addClass('not-empty'); $result.html(render(searchByQuery(val)));
-      $resultItems = $('.search-result__item'); activeIndex = 0;
-      $resultItems.eq(0).addClass('active');
-    }
-  }, 400));
-  $searchInput.on('focus', function() {
-    $(this).addClass('focus');
-  });
-  $searchInput.on('blur', function() {
-    $(this).removeClass('focus');
-  });
-  $searchClear.on('click', function() {
-    $searchInput.val(''); searchBoxEmpty();
-  });
-
-  // search panel
-  var $pageRoot = $('.js-page-root');
-  var $pageMain = $('.js-page-main');
-  var $searchToggle = $('.js-search-toggle');
-  var showSearch = false;
-  var scrollTop;
-
-  function openSearchPanel() {
-    scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
-    $pageRoot.addClass('show-search-panel');
-    $pageMain.scrollTop(scrollTop);
-    $searchInput[0].focus();
-  }
-
-  function closeSearchPanel() {
-    $pageRoot.removeClass('show-search-panel');
-    $(window).scrollTop(scrollTop);
-    $searchInput[0].blur();
-    setTimeout(function() {
-      $searchInput.val(''); searchBoxEmpty();
-      window.pageAsideAffix && window.pageAsideAffix.refresh();
-    }, 400);
-  }
-
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  function isFormElement(e) {
-    var tagName = e.target.tagName || e.srcElement.tagName;
-    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
-  }
-  function charCodeFilter(e) {
-    return e.target === $searchInput[0] && (e.which === 13 || e.which === 27 || e.which === 38 || e.which === 40);
-  }
-
-  function updateResultItems() {
-    lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
-    activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
-  }
-
-  function moveActiveIndex(direction) {
-    var itemsCount = $resultItems ? $resultItems.length : 0;
-    if (itemsCount > 1) {
-      lastActiveIndex = activeIndex;
-      if (direction === 'up') {
-        activeIndex = (activeIndex - 1 + itemsCount) % itemsCount;
-      } else if (direction === 'down') {
-        activeIndex = (activeIndex + 1 + itemsCount) % itemsCount;
-      }
-      updateResultItems();
-    }
-  }
-
-  $(document).on('keyup', function(e) {
-    if (!isFormElement(e) || charCodeFilter(e)) {
-      if (e.which === 83 || e.which === 191) {
-        showSearch || (showSearch = true, openSearchPanel());
-      } else if (e.which ===  27) {
-        showSearch && (showSearch = false, closeSearchPanel());
-      } else if (e.which === 38) {
-        showSearch && moveActiveIndex('up');
-      } else if (e.which === 40) {
-        showSearch && moveActiveIndex('down');
-      } else if (e.which === 13) {
-        showSearch && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
-      }
-    }
-  });
-
-  $result.on('mouseover', '.search-result__item > a', function() {
-    var itemIndex = $(this).parent().data('index');
-    itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
-  });
-
-  $searchToggle.on('click', function() {
-    showSearch = !showSearch;
-    showSearch ? openSearchPanel() : closeSearchPanel();
-  });
-});</script></div></div>
+</div></div></div>
 
 
 <script>(function() {
@@ -744,7 +560,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       return {
         setOptions: setOptions,
         refresh: function() {
-          calc(true); setState();
+          calc(true, { animation: false }); setState();
         }
       };
     }
@@ -856,6 +672,64 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.toc = toc;
   });
+})();(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $body = $('body'), $window = $(window);
+    var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
+    var activeCount = 0;
+    function modal(isShow) {
+      var $root = this, _isShow = isShow === undefined ? false : show;
+      var scrollTop;
+      function init() {
+        setState(_isShow);
+      }
+      function windowScroll() {
+        setState(false);
+      }
+      function setState(isShow) {
+        if (isShow === _isShow) {
+          return;
+        }
+        _isShow = isShow;
+        if (_isShow) {
+
+          activeCount ++;
+          scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+          $root.addClass('modal--show');
+          $pageMain.scrollTop(scrollTop);
+          activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
+          $window.on('scroll', windowScroll);
+        } else {
+          activeCount > 0 && activeCount --;
+          $root.removeClass('modal--show');
+          $window.scrollTop(scrollTop);
+          activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
+          $window.off('scroll', windowScroll);
+        }
+      }
+      function show(callback) {
+        setState(true);
+        callback && callback();
+      }
+      function hide(callback) {
+        setState(false);
+        callback && callback();
+      }
+      function toggle(callback) {
+        setState(!_isShow);
+        callback && callback();
+      }
+      init();
+      return {
+        show: show,
+        hide: hide,
+        toggle: toggle
+
+      };
+    }
+    $.fn.modal = modal;
+  });
 })();/*(function () {
 
 })();*/</script><script>(function() {
@@ -867,8 +741,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     var $pageMain = $('.js-page-main');
     var $sidebarShow = $('.js-sidebar-show');
     var $sidebarHide = $('.js-sidebar-hide');
-
-    var scrollTop;
 
     function freeze(e) {
       if (e.target === $pageMask[0]) {
@@ -884,11 +756,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
 
     $sidebarShow.on('click', function() {
-      scrollTop = $(window).scrollTop();
-      stopBodyScrolling(true); $pageRoot.addClass('show-sidebar'); $pageMain.scrollTop(scrollTop);
+      stopBodyScrolling(true); $pageRoot.addClass('show-sidebar');
     });
     $sidebarHide.on('click', function() {
-      stopBodyScrolling(false); $pageRoot.removeClass('show-sidebar'); $(window).scrollTop(scrollTop);
+      stopBodyScrolling(false); $pageRoot.removeClass('show-sidebar');
     });
   });
 })();</script><script>
@@ -951,7 +822,186 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
     window.pageAsideAffix = affix;
   });
-})();</script><script>
+})();</script><script>var SOURCES = window.TEXT_VARIABLES.sources;
+var PAHTS = window.TEXT_VARIABLES.paths;
+window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
+  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
+
+  function memorize(f) {
+    var cache = {};
+    return function () {
+      var key = Array.prototype.join.call(arguments, ',');
+      if (key in cache) return cache[key];
+      else return cache[key] = f.apply(this, arguments);
+    };
+  }
+
+  function initData(data) {
+    var _data = [], i, j, key, keys, cur;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i], _data[key] = [];
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        cur.title = window.decodeUrl(cur.title);
+        cur.url = window.decodeUrl(cur.url);
+        _data[key].push(cur);
+      }
+    }
+    return _data;
+  }
+
+  /// search
+  function searchByQuery(query) {
+    var i, j, key, keys, cur, _title, result = {};
+    keys = Object.keys(searchData);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      for (j = 0; j < searchData[key].length; j++) {
+        cur = searchData[key][j], _title = cur.title;
+        if ((result[key] === undefined || result[key] && result[key].length < 4 )
+          && _title.toLowerCase().indexOf(query.toLowerCase()) >= 0) {
+          if (result[key] === undefined) {
+            result[key] = [];
+          }
+          result[key].push(cur);
+        }
+      }
+    }
+    return result;
+  }
+
+  var renderHeader = memorize(function(header) {
+    return $('<p class="search-result__header">' + header + '</p>');
+  });
+
+  var renderItem = function(index, title, url) {
+    return $('<li class="search-result__item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
+  };
+
+  function render(data) {
+    if (!data) {
+      return null;
+    }
+    var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
+    keys = Object.keys(data);
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+      $root.append(renderHeader(key));
+      for (j = 0; j < data[key].length; j++) {
+        cur = data[key][j];
+        $root.append(renderItem(itemIndex++, cur.title, cur.url));
+      }
+    }
+    return $root;
+  }
+
+  // search box
+  var $searchBox = $('.js-search-box');
+  var $searchInput = $searchBox.children('input');
+  var $searchClear = $searchBox.children('.js-icon-clear');
+  var $result = $('.js-search-result'), $resultItems;
+  var lastActiveIndex, activeIndex;
+
+  function searchBoxEmpty() {
+    $searchBox.removeClass('not-empty'); $result.html(null);
+    $resultItems = $('.search-result__item'); activeIndex = 0;
+  }
+
+  $searchInput.on('input', window.throttle(function() {
+    var val = $(this).val();
+    if (val === '' || typeof val !== 'string') {
+      searchBoxEmpty();
+    } else {
+      $searchBox.addClass('not-empty'); $result.html(render(searchByQuery(val)));
+      $resultItems = $('.search-result__item'); activeIndex = 0;
+      $resultItems.eq(0).addClass('active');
+    }
+  }, 400));
+  $searchInput.on('focus', function() {
+    $(this).addClass('focus');
+  });
+  $searchInput.on('blur', function() {
+    $(this).removeClass('focus');
+  });
+  $searchClear.on('click', function() {
+    $searchInput.val(''); searchBoxEmpty();
+  });
+
+  // search panel
+  var $searchModal = $('.js-page-search-modal');
+  var $searchToggle = $('.js-search-toggle');
+  var showSearch = false;
+
+  var searchModal = $searchModal.modal();
+
+  function openSearchPanel() {
+    searchModal.show();
+    $searchInput[0].focus();
+  }
+
+  function closeSearchPanel() {
+    searchModal.hide();
+    $searchInput[0].blur();
+    setTimeout(function() {
+      $searchInput.val(''); searchBoxEmpty();
+      window.pageAsideAffix && window.pageAsideAffix.refresh();
+    }, 400);
+  }
+
+  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
+  function isFormElement(e) {
+    var tagName = e.target.tagName || e.srcElement.tagName;
+    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
+  }
+  function charCodeFilter(e) {
+    return e.target === $searchInput[0] && (e.which === 13 || e.which === 27 || e.which === 38 || e.which === 40);
+  }
+
+  function updateResultItems() {
+    lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
+    activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
+  }
+
+  function moveActiveIndex(direction) {
+    var itemsCount = $resultItems ? $resultItems.length : 0;
+    if (itemsCount > 1) {
+      lastActiveIndex = activeIndex;
+      if (direction === 'up') {
+        activeIndex = (activeIndex - 1 + itemsCount) % itemsCount;
+      } else if (direction === 'down') {
+        activeIndex = (activeIndex + 1 + itemsCount) % itemsCount;
+      }
+      updateResultItems();
+    }
+  }
+
+  $(document).on('keyup', function(e) {
+    if (!isFormElement(e) || charCodeFilter(e)) {
+      if (e.which === 83 || e.which === 191) {
+        showSearch || (showSearch = true, openSearchPanel());
+      } else if (e.which ===  27) {
+        showSearch && (showSearch = false, closeSearchPanel());
+      } else if (e.which === 38) {
+        showSearch && moveActiveIndex('up');
+      } else if (e.which === 40) {
+        showSearch && moveActiveIndex('down');
+      } else if (e.which === 13) {
+        showSearch && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+      }
+    }
+  });
+
+  $result.on('mouseover', '.search-result__item > a', function() {
+    var itemIndex = $(this).parent().data('index');
+    itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
+  });
+
+  $searchToggle.on('click', function() {
+    showSearch = !showSearch;
+    showSearch ? openSearchPanel() : closeSearchPanel();
+  });
+});</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
