@@ -302,7 +302,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/3.2-markdown-enhancements.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Markdown Enhancements"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-25T21:46:09+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Markdown Enhancements"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-25T22:44:34+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>You need set the variable true in the <em>_config.yml</em> or in the YAML Front Matter to enable markdown enhancement.</p>
 
@@ -504,7 +504,7 @@ graph TB;
     <p><a href="http://www.chartjs.org/docs/latest/charts/bubble.html">Bubble Chart</a></p>
   </li>
 </ul>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-25T21:46:09+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-25T22:44:34+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -860,22 +860,26 @@ graph TB;
     var $body = $('body'), $window = $(window);
     var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
     var activeCount = 0;
-    function modal(isShow) {
-      var $root = this, _isShow = isShow === undefined ? false : show;
+    function modal(options) {
+      var $root = this, visible, onChange;
       var scrollTop;
+      function setOptions(options) {
+        var _options = options || {};
+        visible = _options.initialVisible === undefined ? false : show;
+        onChange = _options.onChange;
+      }
       function init() {
-        setState(_isShow);
+        setState(visible);
       }
       function windowScroll() {
         setState(false);
       }
       function setState(isShow) {
-        if (isShow === _isShow) {
+        if (isShow === visible) {
           return;
         }
-        _isShow = isShow;
-        if (_isShow) {
-
+        visible = isShow;
+        if (visible) {
           activeCount ++;
           scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
           $root.addClass('modal--show');
@@ -889,25 +893,19 @@ graph TB;
           activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
           $window.off('scroll', windowScroll);
         }
+        onChange && onChange(visible);
       }
-      function show(callback) {
+      function show() {
         setState(true);
-        callback && callback();
       }
-      function hide(callback) {
+      function hide() {
         setState(false);
-        callback && callback();
       }
-      function toggle(callback) {
-        setState(!_isShow);
-        callback && callback();
-      }
+      setOptions(options);
       init();
       return {
         show: show,
-        hide: hide,
-        toggle: toggle
-
+        hide: hide
       };
     }
     $.fn.modal = modal;
@@ -1346,23 +1344,26 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   // search panel
   var $searchModal = $('.js-page-search-modal');
   var $searchToggle = $('.js-search-toggle');
-  var showSearch = false;
+  var modalVisible = false;
 
-  var searchModal = $searchModal.modal();
+  var searchModal = $searchModal.modal({ onChange: handleModalChange });
 
-  function openSearchPanel() {
-    searchModal.show();
-    $searchInput[0].focus();
+  function handleModalChange(visible) {
+    modalVisible = visible;
+    if (visible) {
+      $searchInput[0].focus();
+    } else {
+      $searchInput[0].blur();
+      setTimeout(function() {
+        $searchInput.val(''); searchBoxEmpty();
+        window.pageAsideAffix && window.pageAsideAffix.refresh();
+      }, 400);
+    }
   }
 
-  function closeSearchPanel() {
-    searchModal.hide();
-    $searchInput[0].blur();
-    setTimeout(function() {
-      $searchInput.val(''); searchBoxEmpty();
-      window.pageAsideAffix && window.pageAsideAffix.refresh();
-    }, 400);
-  }
+  $searchToggle.on('click', function() {
+    modalVisible ? searchModal.hide() : searchModal.show();
+  });
 
   // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
   function isFormElement(e) {
@@ -1394,15 +1395,15 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   $(document).on('keyup', function(e) {
     if (!isFormElement(e) || charCodeFilter(e)) {
       if (e.which === 83 || e.which === 191) {
-        showSearch || (showSearch = true, openSearchPanel());
+        modalVisible || searchModal.show();
       } else if (e.which ===  27) {
-        showSearch && (showSearch = false, closeSearchPanel());
+        modalVisible && searchModal.hide();
       } else if (e.which === 38) {
-        showSearch && moveActiveIndex('up');
+        modalVisible && moveActiveIndex('up');
       } else if (e.which === 40) {
-        showSearch && moveActiveIndex('down');
+        modalVisible && moveActiveIndex('down');
       } else if (e.which === 13) {
-        showSearch && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+        modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
       }
     }
   });
@@ -1410,11 +1411,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   $result.on('mouseover', '.search-result__item > a', function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
-  });
-
-  $searchToggle.on('click', function() {
-    showSearch = !showSearch;
-    showSearch ? openSearchPanel() : closeSearchPanel();
   });
 });</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {

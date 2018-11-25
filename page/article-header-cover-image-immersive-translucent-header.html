@@ -288,7 +288,7 @@
               <div class="col-aside d-print-none js-col-aside"></div>
 
               <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Page - Article Header Image (Immersive + Translucent Header)</h1></header></div><meta itemprop="headline" content="Page - Article Header Image (Immersive + Translucent Header)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Nov 25, 2018</span>
-            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-25T21:46:09+08:00"><div class="js-article-content"><div class="layout--article">
+            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-11-25T22:44:34+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>A post has an image article header in immersive mode with a translucent header.</p>
 
@@ -314,7 +314,7 @@ article_header:
     src: /docs/assets/images/cover2.jpg
 ---
 </code></pre></div></div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-25T21:46:09+08:00"><!-- this will show at every article content's bottom --></footer>
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-11-25T22:44:34+08:00"><!-- this will show at every article content's bottom --></footer>
 
   <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-image-immersive-translucent-header.html">Page - Article Header Overlay Background Image (Immersive + Translucent Header)</a></div></div></div>
 
@@ -664,22 +664,26 @@ article_header:
     var $body = $('body'), $window = $(window);
     var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
     var activeCount = 0;
-    function modal(isShow) {
-      var $root = this, _isShow = isShow === undefined ? false : show;
+    function modal(options) {
+      var $root = this, visible, onChange;
       var scrollTop;
+      function setOptions(options) {
+        var _options = options || {};
+        visible = _options.initialVisible === undefined ? false : show;
+        onChange = _options.onChange;
+      }
       function init() {
-        setState(_isShow);
+        setState(visible);
       }
       function windowScroll() {
         setState(false);
       }
       function setState(isShow) {
-        if (isShow === _isShow) {
+        if (isShow === visible) {
           return;
         }
-        _isShow = isShow;
-        if (_isShow) {
-
+        visible = isShow;
+        if (visible) {
           activeCount ++;
           scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
           $root.addClass('modal--show');
@@ -693,25 +697,19 @@ article_header:
           activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
           $window.off('scroll', windowScroll);
         }
+        onChange && onChange(visible);
       }
-      function show(callback) {
+      function show() {
         setState(true);
-        callback && callback();
       }
-      function hide(callback) {
+      function hide() {
         setState(false);
-        callback && callback();
       }
-      function toggle(callback) {
-        setState(!_isShow);
-        callback && callback();
-      }
+      setOptions(options);
       init();
       return {
         show: show,
-        hide: hide,
-        toggle: toggle
-
+        hide: hide
       };
     }
     $.fn.modal = modal;
@@ -827,23 +825,26 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   // search panel
   var $searchModal = $('.js-page-search-modal');
   var $searchToggle = $('.js-search-toggle');
-  var showSearch = false;
+  var modalVisible = false;
 
-  var searchModal = $searchModal.modal();
+  var searchModal = $searchModal.modal({ onChange: handleModalChange });
 
-  function openSearchPanel() {
-    searchModal.show();
-    $searchInput[0].focus();
+  function handleModalChange(visible) {
+    modalVisible = visible;
+    if (visible) {
+      $searchInput[0].focus();
+    } else {
+      $searchInput[0].blur();
+      setTimeout(function() {
+        $searchInput.val(''); searchBoxEmpty();
+        window.pageAsideAffix && window.pageAsideAffix.refresh();
+      }, 400);
+    }
   }
 
-  function closeSearchPanel() {
-    searchModal.hide();
-    $searchInput[0].blur();
-    setTimeout(function() {
-      $searchInput.val(''); searchBoxEmpty();
-      window.pageAsideAffix && window.pageAsideAffix.refresh();
-    }, 400);
-  }
+  $searchToggle.on('click', function() {
+    modalVisible ? searchModal.hide() : searchModal.show();
+  });
 
   // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
   function isFormElement(e) {
@@ -875,15 +876,15 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   $(document).on('keyup', function(e) {
     if (!isFormElement(e) || charCodeFilter(e)) {
       if (e.which === 83 || e.which === 191) {
-        showSearch || (showSearch = true, openSearchPanel());
+        modalVisible || searchModal.show();
       } else if (e.which ===  27) {
-        showSearch && (showSearch = false, closeSearchPanel());
+        modalVisible && searchModal.hide();
       } else if (e.which === 38) {
-        showSearch && moveActiveIndex('up');
+        modalVisible && moveActiveIndex('up');
       } else if (e.which === 40) {
-        showSearch && moveActiveIndex('down');
+        modalVisible && moveActiveIndex('down');
       } else if (e.which === 13) {
-        showSearch && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+        modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
       }
     }
   });
@@ -891,11 +892,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   $result.on('mouseover', '.search-result__item > a', function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
-  });
-
-  $searchToggle.on('click', function() {
-    showSearch = !showSearch;
-    showSearch ? openSearchPanel() : closeSearchPanel();
   });
 });</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
