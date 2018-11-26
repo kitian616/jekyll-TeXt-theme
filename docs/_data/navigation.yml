@@ -21,7 +21,7 @@ docs-en:
       - title:  Structure
         url:    /docs/en/structure
       - title:  Update from 1.x to 2.x
-        url:    /docs/en/update-form-1-to-2
+        url:    /docs/en/update-from-1-to-2
   - title:      Customization
     children:
       - title:  Configuration
@@ -76,7 +76,7 @@ docs-zh:
       - title:  快速开始
         url:    /docs/zh/quick-start
       - title:  从 1.x 升级到 2.x
-        url:    /docs/zh/update-form-1-to-2
+        url:    /docs/zh/update-from-1-to-2
   - title:      定制
     children:
       - title:  配置

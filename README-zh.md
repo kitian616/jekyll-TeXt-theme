@@ -56,7 +56,7 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 ### 开始
 
 - [快速开始](https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start)
-- [从 1.x 升级到 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/zh/update-form-1-to-2)
+- [从 1.x 升级到 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/zh/update-from-1-to-2)
 
 ### 定制
 
