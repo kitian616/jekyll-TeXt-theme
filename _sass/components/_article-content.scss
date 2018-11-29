@@ -128,7 +128,7 @@
       & > code {
         & > .rouge-table {
           width: auto;
-          margin: 0 0 - map-get($spacers, 3) - map-get($spacers, 3);
+          margin: 0 0 #{- map-get($spacers, 3)} #{- map-get($spacers, 3)};
           tbody, tr, td {
             padding-top: 0;
             padding-bottom: 0;
