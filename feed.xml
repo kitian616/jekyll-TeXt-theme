@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-11-26T23:04:41+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-11-29T23:56:31+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;success highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;info highlighter-rouge&quot;&gt;info&lt;/code&gt; &lt;code class=&quot;warning highlighter-rouge&quot;&gt;warning&lt;/code&gt; &lt;code class=&quot;error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
@@ -1050,42 +1050,42 @@ show_author_profile: true
 
 &lt;blockquote&gt;
   &lt;p&gt;From Wikipedia, the free encyclopedia&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.</summary></entry><entry><title type="html">Jekyll - Headers</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers.html" rel="alternate" type="text/html" title="Jekyll - Headers" /><published>2016-09-19T00:00:00+08:00</published><updated>2016-09-19T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers.html">&lt;h1 id=&quot;text-theme-heading&quot;&gt;TeXt Theme Heading&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.</summary></entry><entry><title type="html">Jekyll - Headers</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers.html" rel="alternate" type="text/html" title="Jekyll - Headers" /><published>2016-09-19T00:00:00+08:00</published><updated>2016-09-19T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers.html">&lt;h1 id=&quot;h1-text-heading&quot;&gt;H1. TeXt Heading&lt;/h1&gt;
 
-&lt;h2 id=&quot;text-theme-heading-1&quot;&gt;TeXt Theme Heading&lt;/h2&gt;
+&lt;h2 id=&quot;h2-text-heading&quot;&gt;H2. TeXt Heading&lt;/h2&gt;
 
-&lt;h3 id=&quot;text-theme-heading-2&quot;&gt;TeXt Theme Heading&lt;/h3&gt;
+&lt;h3 id=&quot;h3-text-heading&quot;&gt;H3. TeXt Heading&lt;/h3&gt;
 
-&lt;h4 id=&quot;text-theme-heading-3&quot;&gt;TeXt Theme Heading&lt;/h4&gt;
+&lt;h4 id=&quot;h4-text-heading&quot;&gt;H4. TeXt Heading&lt;/h4&gt;
 
-&lt;h5 id=&quot;text-theme-heading-4&quot;&gt;TeXt Theme Heading&lt;/h5&gt;
+&lt;h5 id=&quot;h5-text-heading&quot;&gt;H5. TeXt Heading&lt;/h5&gt;
 
-&lt;h6 id=&quot;text-theme-heading-5&quot;&gt;TeXt Theme Heading&lt;/h6&gt;
+&lt;h6 id=&quot;h6-text-heading&quot;&gt;H6. TeXt Heading&lt;/h6&gt;
 
 &lt;!--more--&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# TeXt Theme Heading
-## TeXt Theme Heading
-### TeXt Theme Heading
-#### TeXt Theme Heading
-##### TeXt Theme Heading
-###### TeXt Theme Heading
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# H1. TeXt Heading
+## H2. TeXt Heading
+### H3. TeXt Heading
+#### H4. TeXt Heading
+##### H5. TeXt Heading
+###### H6. TeXt Heading
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;first-level-header&quot;&gt;First level header&lt;/h1&gt;
+&lt;h1 id=&quot;h1-text-heading-1&quot;&gt;H1. TeXt Heading&lt;/h1&gt;
 
-&lt;h2 id=&quot;second-level-header&quot;&gt;Second level header&lt;/h2&gt;
+&lt;h2 id=&quot;h2-text-heading-1&quot;&gt;H2. TeXt Heading&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;First level header
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;H1. TeXt Heading
 ==================
 
-Second level header
+H2. TeXt Heading
 ------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading TeXt Theme Heading</summary></entry><entry><title type="html">Jekyll - Emphasis</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis.html" rel="alternate" type="text/html" title="Jekyll - Emphasis" /><published>2016-09-09T00:00:00+08:00</published><updated>2016-09-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis.html">&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">H1. TeXt Heading H2. TeXt Heading H3. TeXt Heading H4. TeXt Heading H5. TeXt Heading H6. TeXt Heading</summary></entry><entry><title type="html">Jekyll - Emphasis</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis.html" rel="alternate" type="text/html" title="Jekyll - Emphasis" /><published>2016-09-09T00:00:00+08:00</published><updated>2016-09-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis.html">&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
 
