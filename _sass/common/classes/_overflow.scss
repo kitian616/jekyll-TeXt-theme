@@ -2,8 +2,14 @@
   @if $direction == default {
     overflow: $overflow;
   } @else if $direction == "x" {
+    @if $overflow == auto {
+      overflow: hidden;
+    }
     overflow-x: $overflow;
   } @else if $direction == "y" {
+    @if $overflow == auto {
+      overflow: hidden;
+    }
     overflow-y: $overflow;
   }
   @if $overflow == auto {
