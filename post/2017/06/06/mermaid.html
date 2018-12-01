@@ -44,10 +44,11 @@
   window.pageLoad = (function () {
     var loaded = false, cbs = [];
     window.addEventListener('load', function () {
-      var i, cb; loaded = true;
+      var i;
+      loaded = true;
       if (cbs.length > 0) {
         for (i = 0; i < cbs.length; i++) {
-          cb = cbs[i]; cb();
+          cbs[i]();
         }
       }
     });
@@ -826,32 +827,30 @@ gantt
     function swiper(options) {
       var $window = $(window), $root = this, $swiperWrapper, $swiperButtonPrev, $swiperButtonNext,
         initialSlide, animation,
-        rootWidth, rootHeight, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
+        rootWidth, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
 
       function setOptions(options) {
         var _options = options || {};
         initialSlide = _options.initialSlide || 0;
         animation = _options.animation === undefined && true;
-        init();
       }
 
       function init() {
         $swiperWrapper = $root.find('.swiper__wrapper');
         $swiperButtonPrev = $root.find('.swiper__button--prev');
         $swiperButtonNext = $root.find('.swiper__button--next');
-        curIndex = initialSlide || 0;
-        translateX = getTranslateXFromCurIndex();
         animation && $swiperWrapper.addClass('swiper__wrapper--animation');
+        calc(true);
       }
 
       function preCalc() {
         rootWidth = $root.width();
-        rootHeight = $root.height();
         count = $swiperWrapper.children('.swiper__slide').length;
         if (count < 2) {
           $swiperButtonPrev.addClass('d-none');
           $swiperButtonNext.addClass('d-none');
         }
+        curIndex = initialSlide || 0;
         translateX = getTranslateXFromCurIndex();
       }
 
@@ -908,7 +907,7 @@ gantt
       }
 
       setOptions(options);
-      calc(true);
+      init();
 
       $swiperButtonPrev.on('click', function(e) {
         e.stopPropagation();
@@ -975,42 +974,77 @@ gantt
   });
 })();var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    var MUSTACHE_ITEMS = '{items}';
     var template =
       '<div class="swiper gallery__swiper">' +
         '<div class="swiper__wrapper">' +
-          MUSTACHE_ITEMS +
         '</div>' +
         '<div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>' +
         '<div class="swiper__button swiper__button--next fas fa-chevron-right"></div>' +
       '</div>';
     function Gallery(root, items, options) {
       this.$root = $(root);
-      this.items = items;
       this.$swiper = null;
+      this.$itemWrapper = null;
       this.swiper = null;
+      this.$items = [];
+      this.items = items;
+      this.disabled = false;
+      this.contentWidth = 0;
+      this.contentHeight = 0;
     }
     Gallery.prototype.init = function() {
-      var i, item, items = this.items, itemsSnippet = '';
+      var i, item, items = this.items, itemsSnippet = '', size, self = this;
+      this.$root.append(template);
+      this.$swiper = this.$root.find('.gallery__swiper');
+      this.$itemWrapper = this.$root.find('.swiper__wrapper');
+      this.contentWidth = this.$itemWrapper && this.$itemWrapper.width();
+      this.contentHeight = this.$itemWrapper && this.$itemWrapper.height();
       for (i = 0; i < items.length; i++) {
         item = items[i];
-        itemsSnippet = itemsSnippet +
+        size = this.calculateImageSize(item.w, item.h);
+        this.$items.push($(
           '<div class="swiper__slide">' +
             '<div class="gallery-item">' +
               '<div class="gallery-item__content">' +
-                '<img src="' + item.src + '"/>' +
+                '<img src="' + item.src + '" style="width:' + size.w + 'px;height:' + size.h +  'px"/>' +
               '</div>' +
             '</div>' +
-          '</div>';
+          '</div>'
+        ));
       }
-      this.$root.append(template.replace(MUSTACHE_ITEMS, itemsSnippet));
-      this.$swiper = this.$root.find('.gallery__swiper');
+      this.$itemWrapper && this.$itemWrapper.append(this.$items);
       this.swiper = this.$swiper && this.$swiper.swiper();
+      $(window).on('resize', function() {
+        if (self.disabled) { return; }
+        self.resizeImageSize();
+      });
     };
+    Gallery.prototype.calculateImageSize = function(w, h) {
+      var scale = 1;
+      if (this.contentWidth > 0 && this.contentHeight > 0 && w > 0 && h > 0) {
+        scale = Math.min(
+          Math.min(w, this.contentWidth) / w,
+          Math.min(h, this.contentHeight) / h);
+      }
+      return { w: Math.floor(w * scale), h: Math.floor(h * scale) };
+    };
+    Gallery.prototype.resizeImageSize = function() {
+      var i, $item, $items = this.$items, item, size;
+      this.contentWidth = this.$itemWrapper && this.$itemWrapper.width();
+      this.contentHeight = this.$itemWrapper && this.$itemWrapper.height();
+      if ($items.length < 1) { return; }
+      for (i = 0; i < $items.length; i++) {
+        item = this.items[i], $item = $items[i];
+        size = this.calculateImageSize(item.w, item.h);
+        $item && $item.find('img').css({ width: size.w, height: size.h });
+      }
+    }
     Gallery.prototype.refresh = function() {
       this.swiper && this.swiper.refresh();
+      this.resizeImageSize();
     };
     Gallery.prototype.setOptions = function(options) {
+      this.disabled = options.disabled;
       this.swiper && this.swiper.setOptions(options);
     };
     window.Gallery = Gallery;
@@ -1018,23 +1052,26 @@ gantt
 })();(function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    window.pageLoad.then(function() {
+    window.imagesLoad.then(function() {
       /* global Gallery */
       var $pageGalleryModal = $('.js-page-gallery-modal');
-      var pageGalleryModal = $pageGalleryModal.modal();
+      var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });
+      var gallery = null;
       var $images = $('.page__content').find('img');
+      var modalVisible = false;
       var i, items = [], image, item;
       if($images && $images.length > 0) {
         for (i = 0; i < $images.length; i++) {
           image = $images.eq(i);
           if (image.get(0).naturalWidth > 800) {
-            items.push({ src: image.attr('src'), $el: image});
+            items.push({ src: image.attr('src'), w: image.get(0).naturalWidth, h: image.get(0).naturalHeight, $el: image});
           }
         }
       }
 
       if(items.length > 0) {
-        var gallery = new Gallery('.gallery', items);
+        gallery = new Gallery('.gallery', items);
+        gallery.setOptions({ disabled: !modalVisible });
         gallery.init();
         for (i = 0; i < items.length; i++) {
           item = items[i];
@@ -1048,6 +1085,12 @@ gantt
           })()));
         }
       }
+
+      function handleModalChange(visible) {
+        modalVisible = visible;
+        gallery && gallery.setOptions({ disabled: !modalVisible });
+      }
+
       $pageGalleryModal.on('click', function() {
         pageGalleryModal.hide();
       });
@@ -1173,9 +1216,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   };
 
   function render(data) {
-    if (!data) {
-      return null;
-    }
+    if (!data) { return null; }
     var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
     keys = Object.keys(data);
     for (i = 0; i < keys.length; i++) {
@@ -1402,7 +1443,32 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     });
   </script>
     </div>
-    <script>(function () {
+    <script>(function() {
+  var images = document.getElementsByTagName('img'), image;
+  var imagesCount = images.length, loadedCount = 0;
+  var i, j, loaded = false, cbs = [];
+  imagesCount < 1 && (loaded = true);
+  for (i = 0; i < imagesCount; i++) {
+    image = images[i];
+    image.complete ? handleImageLoad() : image.addEventListener('load', handleImageLoad);
+  }
+  function handleImageLoad() {
+    loadedCount++;
+    if (loadedCount === imagesCount) {
+      loaded = true;
+      if (cbs.length > 0) {
+        for (j = 0; j < cbs.length; j++) {
+          cbs[j]();
+        }
+      }
+    }
+  }
+  window.imagesLoad = {
+    then: function(cb) {
+      cb && (loaded ? cb() : (cbs.push(cb)));
+    }
+  };
+})();(function () {
   var $root = document.getElementsByClassName('root')[0];
   if (window.hasEvent('touchstart')) {
     $root.dataset.isTouch = true;
