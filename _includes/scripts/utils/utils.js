@@ -22,10 +22,11 @@
   window.pageLoad = (function () {
     var loaded = false, cbs = [];
     window.addEventListener('load', function () {
-      var i, cb; loaded = true;
+      var i;
+      loaded = true;
       if (cbs.length > 0) {
         for (i = 0; i < cbs.length; i++) {
-          cb = cbs[i]; cb();
+          cbs[i]();
         }
       }
     });

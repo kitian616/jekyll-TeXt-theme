@@ -8,7 +8,7 @@ layout: none
     {%- include analytics.html -%}
     {%- include head.html -%}
     <script>
-      {%- include scripts/utils.js -%}
+      {%- include scripts/utils/utils.js -%}
       {%- include scripts/lib/throttle.js -%}
       {%- include scripts/lib/lazyload.js -%}
     </script>
@@ -18,6 +18,9 @@ layout: none
     <div class="root" data-is-touch="false">
       {{ content }}
     </div>
-    <script>{%- include scripts/common.js -%}</script>
+    <script>
+      {%- include scripts/utils/imagesLoad.js -%}
+      {%- include scripts/common.js -%}
+    </script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 (function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    window.pageLoad.then(function() {
+    window.imagesLoad.then(function() {
       /* global Gallery */
       var $pageGalleryModal = $('.js-page-gallery-modal');
       var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });
