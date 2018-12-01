@@ -4,32 +4,30 @@
     function swiper(options) {
       var $window = $(window), $root = this, $swiperWrapper, $swiperButtonPrev, $swiperButtonNext,
         initialSlide, animation,
-        rootWidth, rootHeight, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
+        rootWidth, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
 
       function setOptions(options) {
         var _options = options || {};
         initialSlide = _options.initialSlide || 0;
         animation = _options.animation === undefined && true;
-        init();
       }
 
       function init() {
         $swiperWrapper = $root.find('.swiper__wrapper');
         $swiperButtonPrev = $root.find('.swiper__button--prev');
         $swiperButtonNext = $root.find('.swiper__button--next');
-        curIndex = initialSlide || 0;
-        translateX = getTranslateXFromCurIndex();
         animation && $swiperWrapper.addClass('swiper__wrapper--animation');
+        calc(true);
       }
 
       function preCalc() {
         rootWidth = $root.width();
-        rootHeight = $root.height();
         count = $swiperWrapper.children('.swiper__slide').length;
         if (count < 2) {
           $swiperButtonPrev.addClass('d-none');
           $swiperButtonNext.addClass('d-none');
         }
+        curIndex = initialSlide || 0;
         translateX = getTranslateXFromCurIndex();
       }
 
@@ -86,7 +84,7 @@
       }
 
       setOptions(options);
-      calc(true);
+      init();
 
       $swiperButtonPrev.on('click', function(e) {
         e.stopPropagation();

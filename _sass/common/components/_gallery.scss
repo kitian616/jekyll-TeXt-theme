@@ -6,9 +6,6 @@
 
 .gallery__swiper {
   @include flex(1);
-  .swiper__slide {
-    @include overflow(auto);
-  }
 }
 
 .gallery-item{
@@ -21,7 +18,4 @@
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  & > img {
-    max-width: 100%;
-  }
 }

@@ -4,20 +4,23 @@
     window.pageLoad.then(function() {
       /* global Gallery */
       var $pageGalleryModal = $('.js-page-gallery-modal');
-      var pageGalleryModal = $pageGalleryModal.modal();
+      var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });
+      var gallery = null;
       var $images = $('.page__content').find('img');
+      var modalVisible = false;
       var i, items = [], image, item;
       if($images && $images.length > 0) {
         for (i = 0; i < $images.length; i++) {
           image = $images.eq(i);
           if (image.get(0).naturalWidth > 800) {
-            items.push({ src: image.attr('src'), $el: image});
+            items.push({ src: image.attr('src'), w: image.get(0).naturalWidth, h: image.get(0).naturalHeight, $el: image});
           }
         }
       }
 
       if(items.length > 0) {
-        var gallery = new Gallery('.gallery', items);
+        gallery = new Gallery('.gallery', items);
+        gallery.setOptions({ disabled: !modalVisible });
         gallery.init();
         for (i = 0; i < items.length; i++) {
           item = items[i];
@@ -31,6 +34,12 @@
           })()));
         }
       }
+
+      function handleModalChange(visible) {
+        modalVisible = visible;
+        gallery && gallery.setOptions({ disabled: !modalVisible });
+      }
+
       $pageGalleryModal.on('click', function() {
         pageGalleryModal.hide();
       });

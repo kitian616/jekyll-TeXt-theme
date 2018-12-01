@@ -56,9 +56,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   };
 
   function render(data) {
-    if (!data) {
-      return null;
-    }
+    if (!data) { return null; }
     var $root = $('<ul></ul>'), i, j, key, keys, cur, itemIndex = 0;
     keys = Object.keys(data);
     for (i = 0; i < keys.length; i++) {
