@@ -295,7 +295,7 @@
 
               <div class="col-aside d-print-none js-col-aside"></div>
 
-              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Page - Article Header Overlay Background Image (Immersive + Translucent Header)"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T20:49:57+08:00"><div class="js-article-content"><div class="layout--article">
+              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Page - Article Header Overlay Background Image (Immersive + Translucent Header)"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T22:10:13+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>A post has an article header overlay with a background image in immersive mode with a translucent header.</p>
 
@@ -324,7 +324,7 @@ article_header:
     src: /docs/assets/images/cover3.jpg
 ---
 </code></pre></div></div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T20:49:57+08:00"><!-- this will show at every article content's bottom --></footer>
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T22:10:13+08:00"><!-- this will show at every article content's bottom --></footer>
 
   <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-fill-immersive-translucent-header.html">Page - Article Header Overlay Background Fill (Immersive + Translucent Header)</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/page/article-header-cover-image-immersive-translucent-header.html">Page - Article Header Image (Immersive + Translucent Header)</a></div></div></div>
 
@@ -924,32 +924,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   });
 </script>
     </div>
-    <script>(function() {
-  var images = document.getElementsByTagName('img'), image;
-  var imagesCount = images.length, loadedCount = 0;
-  var i, j, loaded = false, cbs = [];
-  imagesCount < 1 && (loaded = true);
-  for (i = 0; i < imagesCount; i++) {
-    image = images[i];
-    image.complete ? handleImageLoad() : image.addEventListener('load', handleImageLoad);
-  }
-  function handleImageLoad() {
-    loadedCount++;
-    if (loadedCount === imagesCount) {
-      loaded = true;
-      if (cbs.length > 0) {
-        for (j = 0; j < cbs.length; j++) {
-          cbs[j]();
-        }
-      }
-    }
-  }
-  window.imagesLoad = {
-    then: function(cb) {
-      cb && (loaded ? cb() : (cbs.push(cb)));
-    }
-  };
-})();(function () {
+    <script>(function () {
   var $root = document.getElementsByClassName('root')[0];
   if (window.hasEvent('touchstart')) {
     $root.dataset.isTouch = true;

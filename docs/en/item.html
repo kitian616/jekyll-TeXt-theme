@@ -307,7 +307,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/4.6-item.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Item"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T20:49:57+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Item"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T22:10:13+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><h2 id="content">Content</h2>
 
@@ -478,7 +478,7 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div></div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T20:49:57+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T22:10:13+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -1155,15 +1155,42 @@
     };
     window.Gallery = Gallery;
   });
+})();(function() {
+  window.imagesLoad = function(images) {
+    images = images || document.getElementsByTagName('img');
+    var imagesCount = images.length, loadedCount = 0, image;
+    var i, j, loaded = false, cbs = [];
+    imagesCount < 1 && (loaded = true);
+    for (i = 0; i < imagesCount; i++) {
+      image = images[i];
+      image.complete ? handleImageLoad() : image.addEventListener('load', handleImageLoad);
+    }
+    function handleImageLoad() {
+      loadedCount++;
+      if (loadedCount === imagesCount) {
+        loaded = true;
+        if (cbs.length > 0) {
+          for (j = 0; j < cbs.length; j++) {
+            cbs[j]();
+          }
+        }
+      }
+    }
+    return {
+      then: function(cb) {
+        cb && (loaded ? cb() : (cbs.push(cb)));
+      }
+    };
+  };
 })();(function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    window.imagesLoad.then(function() {
+    var $pageGalleryModal = $('.js-page-gallery-modal');
+    var $images = $('.page__content').find('img');
+    window.imagesLoad($images).then(function() {
       /* global Gallery */
-      var $pageGalleryModal = $('.js-page-gallery-modal');
       var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });
       var gallery = null;
-      var $images = $('.page__content').find('img');
       var modalVisible = false;
       var i, items = [], image, item;
       if($images && $images.length > 0) {
@@ -1487,32 +1514,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   });
 </script>
     </div>
-    <script>(function() {
-  var images = document.getElementsByTagName('img'), image;
-  var imagesCount = images.length, loadedCount = 0;
-  var i, j, loaded = false, cbs = [];
-  imagesCount < 1 && (loaded = true);
-  for (i = 0; i < imagesCount; i++) {
-    image = images[i];
-    image.complete ? handleImageLoad() : image.addEventListener('load', handleImageLoad);
-  }
-  function handleImageLoad() {
-    loadedCount++;
-    if (loadedCount === imagesCount) {
-      loaded = true;
-      if (cbs.length > 0) {
-        for (j = 0; j < cbs.length; j++) {
-          cbs[j]();
-        }
-      }
-    }
-  }
-  window.imagesLoad = {
-    then: function(cb) {
-      cb && (loaded ? cb() : (cbs.push(cb)));
-    }
-  };
-})();(function () {
+    <script>(function () {
   var $root = document.getElementsByClassName('root')[0];
   if (window.hasEvent('touchstart')) {
     $root.dataset.isTouch = true;
