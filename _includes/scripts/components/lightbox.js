@@ -1,12 +1,13 @@
+{%- include scripts/utils/imagesLoad.js -%}
 (function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
-    window.imagesLoad.then(function() {
+    var $pageGalleryModal = $('.js-page-gallery-modal');
+    var $images = $('.page__content').find('img');
+    window.imagesLoad($images).then(function() {
       /* global Gallery */
-      var $pageGalleryModal = $('.js-page-gallery-modal');
       var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });
       var gallery = null;
-      var $images = $('.page__content').find('img');
       var modalVisible = false;
       var i, items = [], image, item;
       if($images && $images.length > 0) {
