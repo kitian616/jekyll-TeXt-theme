@@ -47,7 +47,7 @@
         self.resizeImageSize();
       });
       // Char Code: 37  ⬅, 39  ➡
-      $(document).on('keyup', function(e) {
+      $(window).on('keyup', function(e) {
         if (window.isFormElement(e.target || e.srcElement) || self.disabled) { return; }
         if (e.which === 37) {
           self.swiper && self.swiper.previous();

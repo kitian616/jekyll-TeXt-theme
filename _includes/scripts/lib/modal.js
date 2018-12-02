@@ -15,9 +15,6 @@
       function init() {
         setState(visible);
       }
-      function windowScroll() {
-        setState(false);
-      }
       function setState(isShow) {
         if (isShow === visible) {
           return;
@@ -29,13 +26,15 @@
           $root.addClass('modal--show');
           $pageMain.scrollTop(scrollTop);
           activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
-          $window.on('scroll', windowScroll);
+          $window.on('scroll', hide);
+          $window.on('keyup', handleKeyup);
         } else {
           activeCount > 0 && activeCount --;
           $root.removeClass('modal--show');
           $window.scrollTop(scrollTop);
           activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
-          $window.off('scroll', windowScroll);
+          $window.off('scroll', hide);
+          $window.off('keyup', handleKeyup);
         }
         onChange && onChange(visible);
       }
@@ -44,6 +43,12 @@
       }
       function hide() {
         setState(false);
+      }
+      function handleKeyup(e) {
+        // Char Code: 27  ESC
+        if (e.which ===  27) {
+          hide();
+        }
       }
       setOptions(options);
       init();

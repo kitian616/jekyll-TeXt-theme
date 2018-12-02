@@ -144,12 +144,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  $(document).on('keyup', function(e) {
+  // Char Code: 13  Enter, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
+  $(window).on('keyup', function(e) {
     if (modalVisible) {
-      if (e.which ===  27) {
-        modalVisible && searchModal.hide();
-      } else if (e.which === 38) {
+      if (e.which === 38) {
         modalVisible && moveActiveIndex('up');
       } else if (e.which === 40) {
         modalVisible && moveActiveIndex('down');
