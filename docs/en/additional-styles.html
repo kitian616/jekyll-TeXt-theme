@@ -32,13 +32,17 @@
     return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
   };
 
-
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
   };
 
   window.isOverallScroller = function(node) {
     return node === document.documentElement || node === document.body || node === window;
+  };
+
+  window.isFormElement = function(node) {
+    var tagName = node.tagName;
+    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
   };
 
   window.pageLoad = (function () {
@@ -303,7 +307,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/3.3-additional-styles.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Additional styles"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T16:23:54+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Additional styles"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T17:03:41+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>Jekyll use kramdown as the default markdown processor. kramdown can adding attributes to block and span-level elements thgird-containre ALDs<sup id="fnref:ALDs"><a href="#fn:ALDs" class="footnote">1</a></sup> feature. with the help of ALDs, we can defined class names to an element by <code class="highlighter-rouge">{:.class-name1.class-name-2}</code>.</p>
 
@@ -523,7 +527,7 @@
     </li>
   </ol>
 </div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T16:23:54+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T17:03:41+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -1096,7 +1100,12 @@
 
       return {
         setOptions: setOptions,
-        moveToIndex: moveToIndex,
+        previous: function(){
+          move('prev');
+        },
+        next: function(){
+          move('next');
+        },
         refresh: function() {
           calc(true, { animation: false });
         }
@@ -1149,6 +1158,15 @@
       $(window).on('resize', function() {
         if (self.disabled) { return; }
         self.resizeImageSize();
+      });
+      // Char Code: 37  ⬅, 39  ➡
+      $(document).on('keyup', function(e) {
+        if (window.isFormElement(e.target || e.srcElement) || self.disabled) { return; }
+        if (e.which === 37) {
+          self.swiper && self.swiper.previous();
+        } else if (e.which === 39) {
+          self.swiper && self.swiper.next();
+        }
       });
     };
     Gallery.prototype.calculateImageSize = function(w, h) {
@@ -1448,15 +1466,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     modalVisible ? searchModal.hide() : searchModal.show();
   });
 
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  function isFormElement(e) {
-    var tagName = e.target.tagName || e.srcElement.tagName;
-    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
-  }
-  function charCodeFilter(e) {
-    return e.target === $searchInput[0] && (e.which === 13 || e.which === 27 || e.which === 38 || e.which === 40);
-  }
-
   function updateResultItems() {
     lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
     activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
@@ -1475,11 +1484,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
+  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
   $(document).on('keyup', function(e) {
-    if (!isFormElement(e) || charCodeFilter(e)) {
-      if (e.which === 83 || e.which === 191) {
-        modalVisible || searchModal.show();
-      } else if (e.which ===  27) {
+    if (modalVisible) {
+      if (e.which ===  27) {
         modalVisible && searchModal.hide();
       } else if (e.which === 38) {
         modalVisible && moveActiveIndex('up');
@@ -1487,6 +1495,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
         modalVisible && moveActiveIndex('down');
       } else if (e.which === 13) {
         modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+      }
+    } else {
+      if (!window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
+        modalVisible || searchModal.show();
       }
     }
   });

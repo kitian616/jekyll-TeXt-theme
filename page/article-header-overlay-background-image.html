@@ -32,13 +32,17 @@
     return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
   };
 
-
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
   };
 
   window.isOverallScroller = function(node) {
     return node === document.documentElement || node === document.body || node === window;
+  };
+
+  window.isFormElement = function(node) {
+    var tagName = node.tagName;
+    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
   };
 
   window.pageLoad = (function () {
@@ -291,7 +295,7 @@
 
               <div class="col-aside d-print-none js-col-aside"></div>
 
-              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Page - Article Header Overlay Background Image"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T16:23:54+08:00"><div class="js-article-content"><div class="layout--article">
+              <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><meta itemprop="headline" content="Page - Article Header Overlay Background Image"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T17:03:41+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>A post has an article header overlay with a background image.</p>
 
@@ -311,7 +315,7 @@ article_header:
     src: /docs/assets/images/cover3.jpg
 ---
 </code></pre></div></div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T16:23:54+08:00"><!-- this will show at every article content's bottom --></footer>
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T17:03:41+08:00"><!-- this will show at every article content's bottom --></footer>
 
   <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-fill.html">Page - Article Header Overlay Background Fill</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/page/article-header-cover-image.html">Page - Article Header Image</a></div></div></div>
 
@@ -841,15 +845,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     modalVisible ? searchModal.hide() : searchModal.show();
   });
 
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  function isFormElement(e) {
-    var tagName = e.target.tagName || e.srcElement.tagName;
-    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
-  }
-  function charCodeFilter(e) {
-    return e.target === $searchInput[0] && (e.which === 13 || e.which === 27 || e.which === 38 || e.which === 40);
-  }
-
   function updateResultItems() {
     lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
     activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
@@ -868,11 +863,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
+  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
   $(document).on('keyup', function(e) {
-    if (!isFormElement(e) || charCodeFilter(e)) {
-      if (e.which === 83 || e.which === 191) {
-        modalVisible || searchModal.show();
-      } else if (e.which ===  27) {
+    if (modalVisible) {
+      if (e.which ===  27) {
         modalVisible && searchModal.hide();
       } else if (e.which === 38) {
         modalVisible && moveActiveIndex('up');
@@ -880,6 +874,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
         modalVisible && moveActiveIndex('down');
       } else if (e.which === 13) {
         modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+      }
+    } else {
+      if (!window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
+        modalVisible || searchModal.show();
       }
     }
   });
