@@ -126,15 +126,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     modalVisible ? searchModal.hide() : searchModal.show();
   });
 
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  function isFormElement(e) {
-    var tagName = e.target.tagName || e.srcElement.tagName;
-    return tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA';
-  }
-  function charCodeFilter(e) {
-    return e.target === $searchInput[0] && (e.which === 13 || e.which === 27 || e.which === 38 || e.which === 40);
-  }
-
   function updateResultItems() {
     lastActiveIndex >= 0 && $resultItems.eq(lastActiveIndex).removeClass('active');
     activeIndex >= 0 && $resultItems.eq(activeIndex).addClass('active');
@@ -153,11 +144,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
+  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
   $(document).on('keyup', function(e) {
-    if (!isFormElement(e) || charCodeFilter(e)) {
-      if (e.which === 83 || e.which === 191) {
-        modalVisible || searchModal.show();
-      } else if (e.which ===  27) {
+    if (modalVisible) {
+      if (e.which ===  27) {
         modalVisible && searchModal.hide();
       } else if (e.which === 38) {
         modalVisible && moveActiveIndex('up');
@@ -165,6 +155,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
         modalVisible && moveActiveIndex('down');
       } else if (e.which === 13) {
         modalVisible && $resultItems && activeIndex >= 0 && $resultItems.eq(activeIndex).children('a')[0].click();
+      }
+    } else {
+      if (!window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
+        modalVisible || searchModal.show();
       }
     }
   });

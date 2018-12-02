@@ -46,6 +46,15 @@
         if (self.disabled) { return; }
         self.resizeImageSize();
       });
+      // Char Code: 37  ⬅, 39  ➡
+      $(document).on('keyup', function(e) {
+        if (window.isFormElement(e.target || e.srcElement) || self.disabled) { return; }
+        if (e.which === 37) {
+          self.swiper && self.swiper.previous();
+        } else if (e.which === 39) {
+          self.swiper && self.swiper.next();
+        }
+      });
     };
     Gallery.prototype.calculateImageSize = function(w, h) {
       var scale = 1;

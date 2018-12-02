@@ -165,7 +165,12 @@
 
       return {
         setOptions: setOptions,
-        moveToIndex: moveToIndex,
+        previous: function(){
+          move('prev');
+        },
+        next: function(){
+          move('next');
+        },
         refresh: function() {
           calc(true, { animation: false });
         }
