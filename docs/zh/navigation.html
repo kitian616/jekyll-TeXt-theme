@@ -303,7 +303,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.2-navigation.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="导航栏"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-01T23:46:11+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="导航栏"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T16:23:54+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>在 TeXt 中有两种导航栏：<strong>头部导航栏</strong>（Header Navigation）和<strong>侧边栏导航栏</strong>（Sidebar Navigation），它们均在 <em>data/navigation.yml</em> 中配置。</p>
 
@@ -362,7 +362,7 @@
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sidebar</span><span class="pi">:</span>
   <span class="na">nav</span><span class="pi">:</span> <span class="s">docs-en</span>
 </code></pre></div></div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-01T23:46:11+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T16:23:54+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> 许可协议。
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -871,14 +871,14 @@
 
       (function() {
         var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
-        $swiperWrapper.on('touchstart', function(e) {
+        function handleTouchstart(e) {
           var point = e.touches ? e.touches[0] : e;
           pageX = point.pageX;
           pageY = point.pageY;
           velocityX = 0;
           preTranslateX = translateX;
-        });
-        $swiperWrapper.on('touchmove', function(e) {
+        }
+        function handleTouchmove(e) {
           var point = e.touches ? e.touches[0] : e;
           var deltaX = point.pageX - pageX;
           var deltaY = point.pageY - pageY;
@@ -891,8 +891,8 @@
           }
           pageX = point.pageX;
           pageY = point.pageY;
-        });
-        $swiperWrapper.on('touchend', function() {
+        }
+        function handleTouchend() {
           touching = false;
           var deltaX = translateX - preTranslateX;
           var distance = deltaX + velocityX * rootWidth;
@@ -901,7 +901,31 @@
           } else {
             move('cur');
           }
-        });
+        }
+        $swiperWrapper.on('touchstart', handleTouchstart);
+        $swiperWrapper.on('touchmove', handleTouchmove);
+        $swiperWrapper.on('touchend', handleTouchend);
+        $swiperWrapper.on('touchcancel', handleTouchend);
+
+        (function() {
+          var pressing = false, moved = false;
+          $swiperWrapper.on('mousedown', function(e) {
+            pressing = true; handleTouchstart(e);
+          });
+          $swiperWrapper.on('mousemove', function(e) {
+            pressing && (e.preventDefault(), moved = true, handleTouchmove(e));
+          });
+          $swiperWrapper.on('mouseup', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('mouseleave', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('click', function(e) {
+            moved && (e.stopPropagation(), moved = false);
+          });
+        })();
+
         $root.on('touchmove', function(e) {
           if (e.cancelable & touching) {
             e.preventDefault();

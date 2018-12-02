@@ -12,7 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Swiper - TeXt Theme</title>
 
-<meta name="description" content="AlphaYou can slide the swiper on a touch device.Normal      1    2    3    4    5    6    7          .swiper-demo {  height: 220px;}&lt;div class="swiper swi...">
+<meta name="description" content="AlphaNormal      1    2    3    4    5    6    7          .swiper-demo {  height: 220px;}&lt;div class="swiper swiper-demo"&gt;  &lt;div class="swiper__wrapp...">
 <link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/en/swiper"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
 <!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
@@ -303,7 +303,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/4.9-swiper.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Swiper"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-01T23:46:11+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Swiper"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T16:23:54+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><style>
   .swiper-demo {
@@ -334,8 +334,6 @@
 </style>
 
 <p><code class="warning highlighter-rouge">Alpha</code></p>
-
-<p>You can slide the swiper on a touch device.</p>
 
 <h2 id="normal">Normal</h2>
 
@@ -549,14 +547,14 @@
 
       (function() {
         var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
-        $swiperWrapper.on('touchstart', function(e) {
+        function handleTouchstart(e) {
           var point = e.touches ? e.touches[0] : e;
           pageX = point.pageX;
           pageY = point.pageY;
           velocityX = 0;
           preTranslateX = translateX;
-        });
-        $swiperWrapper.on('touchmove', function(e) {
+        }
+        function handleTouchmove(e) {
           var point = e.touches ? e.touches[0] : e;
           var deltaX = point.pageX - pageX;
           var deltaY = point.pageY - pageY;
@@ -569,8 +567,8 @@
           }
           pageX = point.pageX;
           pageY = point.pageY;
-        });
-        $swiperWrapper.on('touchend', function() {
+        }
+        function handleTouchend() {
           touching = false;
           var deltaX = translateX - preTranslateX;
           var distance = deltaX + velocityX * rootWidth;
@@ -579,7 +577,31 @@
           } else {
             move('cur');
           }
-        });
+        }
+        $swiperWrapper.on('touchstart', handleTouchstart);
+        $swiperWrapper.on('touchmove', handleTouchmove);
+        $swiperWrapper.on('touchend', handleTouchend);
+        $swiperWrapper.on('touchcancel', handleTouchend);
+
+        (function() {
+          var pressing = false, moved = false;
+          $swiperWrapper.on('mousedown', function(e) {
+            pressing = true; handleTouchstart(e);
+          });
+          $swiperWrapper.on('mousemove', function(e) {
+            pressing && (e.preventDefault(), moved = true, handleTouchmove(e));
+          });
+          $swiperWrapper.on('mouseup', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('mouseleave', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('click', function(e) {
+            moved && (e.stopPropagation(), moved = false);
+          });
+        })();
+
         $root.on('touchmove', function(e) {
           if (e.cancelable & touching) {
             e.preventDefault();
@@ -607,7 +629,7 @@
   });
 </script>
 
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-01T23:46:11+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T16:23:54+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -1116,14 +1138,14 @@
 
       (function() {
         var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
-        $swiperWrapper.on('touchstart', function(e) {
+        function handleTouchstart(e) {
           var point = e.touches ? e.touches[0] : e;
           pageX = point.pageX;
           pageY = point.pageY;
           velocityX = 0;
           preTranslateX = translateX;
-        });
-        $swiperWrapper.on('touchmove', function(e) {
+        }
+        function handleTouchmove(e) {
           var point = e.touches ? e.touches[0] : e;
           var deltaX = point.pageX - pageX;
           var deltaY = point.pageY - pageY;
@@ -1136,8 +1158,8 @@
           }
           pageX = point.pageX;
           pageY = point.pageY;
-        });
-        $swiperWrapper.on('touchend', function() {
+        }
+        function handleTouchend() {
           touching = false;
           var deltaX = translateX - preTranslateX;
           var distance = deltaX + velocityX * rootWidth;
@@ -1146,7 +1168,31 @@
           } else {
             move('cur');
           }
-        });
+        }
+        $swiperWrapper.on('touchstart', handleTouchstart);
+        $swiperWrapper.on('touchmove', handleTouchmove);
+        $swiperWrapper.on('touchend', handleTouchend);
+        $swiperWrapper.on('touchcancel', handleTouchend);
+
+        (function() {
+          var pressing = false, moved = false;
+          $swiperWrapper.on('mousedown', function(e) {
+            pressing = true; handleTouchstart(e);
+          });
+          $swiperWrapper.on('mousemove', function(e) {
+            pressing && (e.preventDefault(), moved = true, handleTouchmove(e));
+          });
+          $swiperWrapper.on('mouseup', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('mouseleave', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('click', function(e) {
+            moved && (e.stopPropagation(), moved = false);
+          });
+        })();
+
         $root.on('touchmove', function(e) {
           if (e.cancelable & touching) {
             e.preventDefault();
