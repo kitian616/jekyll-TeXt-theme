@@ -307,7 +307,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/1.7-update-from-1-to-2.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Update from 1.x to 2.x"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T22:10:13+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Update from 1.x to 2.x"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T23:35:04+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-version-2.jpg" alt="TeXt 2" /></p>
 
@@ -498,7 +498,7 @@
       <span class="na">zh-Hant</span><span class="pi">:</span>  <span class="s">關於</span>
     <span class="na">url</span><span class="pi">:</span>        <span class="s">/blog/about.html</span>
 </code></pre></div></div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T22:10:13+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T23:35:04+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
@@ -1206,7 +1206,7 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageGalleryModal = $('.js-page-gallery-modal');
-    var $images = $('.page__content').find('img');
+    var $images = $('.page__content').find('img:not(.lightbox-ignore)');
     window.imagesLoad($images).then(function() {
       /* global Gallery */
       var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });
