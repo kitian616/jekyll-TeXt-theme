@@ -293,7 +293,7 @@
               <div class="col-aside d-print-none js-col-aside"></div>
 
               <div class="col-main cell cell--auto"><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>繁體中文 (Traditional Chinese)</h1></header></div><meta itemprop="headline" content="繁體中文 (Traditional Chinese)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>2018年 12月02日</span>
-            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T17:03:41+08:00"><div class="js-article-content"><div class="layout--article">
+            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-02T20:25:07+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>在 <em>_config.yml</em> 或者頭信息裏設置 <code class="highlighter-rouge">lang: zh-Hant</code> 後，主題文字變為繁體中文。</p>
 
@@ -322,7 +322,7 @@ lang: zh-Hant
     <p>——《詩經·國風·周南·關雎》</p>
   </blockquote>
 </div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T17:03:41+08:00"><!-- this will show at every article content's bottom --></footer>
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-02T20:25:07+08:00"><!-- this will show at every article content's bottom --></footer>
 
   <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>上篇</span><a href="/jekyll-TeXt-theme/languages/chinese-simplified.html">简体中文 (Simplified Chinese)</a></div></div></div>
 
@@ -683,9 +683,6 @@ lang: zh-Hant
       function init() {
         setState(visible);
       }
-      function windowScroll() {
-        setState(false);
-      }
       function setState(isShow) {
         if (isShow === visible) {
           return;
@@ -697,13 +694,15 @@ lang: zh-Hant
           $root.addClass('modal--show');
           $pageMain.scrollTop(scrollTop);
           activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
-          $window.on('scroll', windowScroll);
+          $window.on('scroll', hide);
+          $window.on('keyup', handleKeyup);
         } else {
           activeCount > 0 && activeCount --;
           $root.removeClass('modal--show');
           $window.scrollTop(scrollTop);
           activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
-          $window.off('scroll', windowScroll);
+          $window.off('scroll', hide);
+          $window.off('keyup', handleKeyup);
         }
         onChange && onChange(visible);
       }
@@ -712,6 +711,12 @@ lang: zh-Hant
       }
       function hide() {
         setState(false);
+      }
+      function handleKeyup(e) {
+        // Char Code: 27  ESC
+        if (e.which ===  27) {
+          hide();
+        }
       }
       setOptions(options);
       init();
@@ -870,12 +875,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  $(document).on('keyup', function(e) {
+  // Char Code: 13  Enter, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
+  $(window).on('keyup', function(e) {
     if (modalVisible) {
-      if (e.which ===  27) {
-        modalVisible && searchModal.hide();
-      } else if (e.which === 38) {
+      if (e.which === 38) {
         modalVisible && moveActiveIndex('up');
       } else if (e.which === 40) {
         modalVisible && moveActiveIndex('down');

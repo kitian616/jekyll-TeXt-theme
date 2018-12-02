@@ -686,9 +686,6 @@ modify_date: 2017-09-09
       function init() {
         setState(visible);
       }
-      function windowScroll() {
-        setState(false);
-      }
       function setState(isShow) {
         if (isShow === visible) {
           return;
@@ -700,13 +697,15 @@ modify_date: 2017-09-09
           $root.addClass('modal--show');
           $pageMain.scrollTop(scrollTop);
           activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
-          $window.on('scroll', windowScroll);
+          $window.on('scroll', hide);
+          $window.on('keyup', handleKeyup);
         } else {
           activeCount > 0 && activeCount --;
           $root.removeClass('modal--show');
           $window.scrollTop(scrollTop);
           activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
-          $window.off('scroll', windowScroll);
+          $window.off('scroll', hide);
+          $window.off('keyup', handleKeyup);
         }
         onChange && onChange(visible);
       }
@@ -715,6 +714,12 @@ modify_date: 2017-09-09
       }
       function hide() {
         setState(false);
+      }
+      function handleKeyup(e) {
+        // Char Code: 27  ESC
+        if (e.which ===  27) {
+          hide();
+        }
       }
       setOptions(options);
       init();
@@ -952,7 +957,7 @@ modify_date: 2017-09-09
         self.resizeImageSize();
       });
       // Char Code: 37  ⬅, 39  ➡
-      $(document).on('keyup', function(e) {
+      $(window).on('keyup', function(e) {
         if (window.isFormElement(e.target || e.srcElement) || self.disabled) { return; }
         if (e.which === 37) {
           self.swiper && self.swiper.previous();
@@ -1246,12 +1251,10 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
-  // Char Code: 13  Enter, 27  ESC, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
-  $(document).on('keyup', function(e) {
+  // Char Code: 13  Enter, 37  ⬅, 38  ⬆, 39  ➡, 40  ⬇, 83  S, 191 /
+  $(window).on('keyup', function(e) {
     if (modalVisible) {
-      if (e.which ===  27) {
-        modalVisible && searchModal.hide();
-      } else if (e.which === 38) {
+      if (e.which === 38) {
         modalVisible && moveActiveIndex('up');
       } else if (e.which === 40) {
         modalVisible && moveActiveIndex('down');
