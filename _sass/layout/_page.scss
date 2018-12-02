@@ -14,7 +14,7 @@
     position: fixed;
     bottom: map-get($spacers, 5);
     left: map-get($spacers, 3);
-    z-index: map-get($z-index, actions);
+    z-index: map-get($z-indexes, actions);
     display: none;
   }
 
@@ -23,7 +23,7 @@
   }
 
   .page__sidebar {
-    z-index: map-get($z-index, sidebar);
+    z-index: map-get($z-indexes, sidebar);
     display: block;
     width: 80%;
     max-width: map-get($layout, sidebar-width);
@@ -38,15 +38,8 @@
   }
 
   .page__mask {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: map-get($z-index, mask);
-    display: none;
+    @include modal(map-get($z-indexes, mask));
     cursor: pointer;
-    background-color: $mask-color;
   }
   &.layout--page--sidebar {
     .page__main {
@@ -146,7 +139,7 @@
         @include transform(translate(0));
       }
       .page__mask {
-        display: block;
+        @include modal--show();
       }
     }
   }
