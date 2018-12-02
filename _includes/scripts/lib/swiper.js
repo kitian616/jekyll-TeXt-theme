@@ -101,14 +101,14 @@
 
       (function() {
         var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
-        $swiperWrapper.on('touchstart', function(e) {
+        function handleTouchstart(e) {
           var point = e.touches ? e.touches[0] : e;
           pageX = point.pageX;
           pageY = point.pageY;
           velocityX = 0;
           preTranslateX = translateX;
-        });
-        $swiperWrapper.on('touchmove', function(e) {
+        }
+        function handleTouchmove(e) {
           var point = e.touches ? e.touches[0] : e;
           var deltaX = point.pageX - pageX;
           var deltaY = point.pageY - pageY;
@@ -121,8 +121,8 @@
           }
           pageX = point.pageX;
           pageY = point.pageY;
-        });
-        $swiperWrapper.on('touchend', function() {
+        }
+        function handleTouchend() {
           touching = false;
           var deltaX = translateX - preTranslateX;
           var distance = deltaX + velocityX * rootWidth;
@@ -131,7 +131,31 @@
           } else {
             move('cur');
           }
-        });
+        }
+        $swiperWrapper.on('touchstart', handleTouchstart);
+        $swiperWrapper.on('touchmove', handleTouchmove);
+        $swiperWrapper.on('touchend', handleTouchend);
+        $swiperWrapper.on('touchcancel', handleTouchend);
+
+        (function() {
+          var pressing = false, moved = false;
+          $swiperWrapper.on('mousedown', function(e) {
+            pressing = true; handleTouchstart(e);
+          });
+          $swiperWrapper.on('mousemove', function(e) {
+            pressing && (e.preventDefault(), moved = true, handleTouchmove(e));
+          });
+          $swiperWrapper.on('mouseup', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('mouseleave', function(e) {
+            pressing && (pressing = false, handleTouchend(e));
+          });
+          $swiperWrapper.on('click', function(e) {
+            moved && (e.stopPropagation(), moved = false);
+          });
+        })();
+
         $root.on('touchmove', function(e) {
           if (e.cancelable & touching) {
             e.preventDefault();
