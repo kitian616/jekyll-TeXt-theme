@@ -1,7 +1,28 @@
+.search {
+  @include overflow(auto);
+}
+
+.search__header {
+  margin-top: map-get($spacers, 4);
+  font-size: map-get($base, font-size-h1);
+  font-weight: map-get($base, font-weight-bold);
+  color: $text-color-d;
+  .search--light & {
+    color: $text-color-theme-light-d;
+  }
+  .search--dark & {
+    color: $text-color-theme-dark-d;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
 .search-bar {
   @include flexbox();
   margin: map-get($spacers, 3) 0 map-get($spacers, 4) 0;
 }
+
 .search-box {
   position: relative;
   width: 100%;
@@ -83,11 +104,19 @@
     left: 0;
   }
 }
+
+.search__cancel {
+  margin-left: map-get($spacers, 2);
+  font-weight: map-get($base, font-weight-bold);
+  white-space: nowrap;
+}
+
 .search-result {
   margin: map-get($spacers, 4) 0;
   font-size: map-get($base, font-size-sm);
   line-height: map-get($base, line-height-sm);
 }
+
 .search-result__header {
   margin: map-get($spacers, 3) 0 map-get($spacers, 2) 0;
   font-size: map-get($base, font-size-lg);
@@ -101,6 +130,7 @@
     color: $text-color-theme-dark-l;
   }
 }
+
 .search-result__item {
   list-style-type: none;
   a {
@@ -133,24 +163,4 @@
       }
     }
   }
-}
-.search__header {
-  margin-top: map-get($spacers, 4);
-  font-size: map-get($base, font-size-h1);
-  font-weight: map-get($base, font-weight-bold);
-  color: $text-color-d;
-  .search--light & {
-    color: $text-color-theme-light-d;
-  }
-  .search--dark & {
-    color: $text-color-theme-dark-d;
-  }
-  @include media-breakpoint-down(md) {
-    display: none;
-  }
-}
-.search__cancel {
-  margin-left: map-get($spacers, 2);
-  font-weight: map-get($base, font-weight-bold);
-  white-space: nowrap;
 }
