@@ -5,17 +5,20 @@
 ///
 
 // main colors
-$main-color-1:     #125c9f;
+$main-color-1:     #0366d6;
 $text-color-1:     #fff;
 
 $main-color-2:     #a5917f;
 $text-color-2:     #fff;
 
-$main-color-3:     #e1f5ff;
-$text-color-3:     #00537f;
+$main-color-3:     #f1f8ff;
+$text-color-3:     #0366d6;
+
+$main-color-theme-light: rgba(#000, .9);
+$main-color-theme-dark:  rgba(#fff, .9);
 
 // page background
-$background-color: #f5fcff;
+$background-color: #fff;
 
 // text colors
 $text-color-theme-light-d: rgba(#000, .95);
@@ -40,7 +43,7 @@ $footer-text-color: $text-color-3;
 $footer-background: $main-color-3;
 
 // border and shadow colors
-$border-color:     #125c9f;
+$border-color:     mix(#000, $background-color, 20%);
 $border-color-l:   mix(#000, $background-color, 10%);
 $decorate-color:   rgba(#000, .1);
 $mask-color:       rgba(#000, .9);

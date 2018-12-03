@@ -2,7 +2,6 @@
   display: inline-block;
   font-weight: map-get($button, font-weight);
   line-height: 1 !important;
-
   text-decoration: none !important;
   cursor: pointer;
   outline: none;
@@ -48,6 +47,14 @@
   @include clickable($text-color-function, $red);
 }
 
+.button--theme-light {
+  @include clickable($text-color-theme-dark, $main-color-theme-light);
+}
+
+.button--theme-dark {
+  @include clickable($text-color-theme-light, $main-color-theme-dark);
+}
+
 .button--outline-primary {
   color: $main-color-1;
   border: 1px solid $main-color-1;
@@ -82,6 +89,18 @@
   color: $red;
   border: 1px solid $red;
   @include clickable($red, transparent, $text-color-function, $red);
+}
+
+.button--outline-theme-light {
+  color: $main-color-theme-light;
+  border: 1px solid $main-color-theme-light;
+  @include clickable($text-color-theme-dark, $main-color-theme-light);
+}
+
+.button--outline-theme-dark {
+  color: $main-color-theme-dark;
+  border: 1px solid $main-color-theme-dark;
+  @include clickable($text-color-theme-light, $main-color-theme-dark);
 }
 
 .button--pill {
