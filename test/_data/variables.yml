@@ -46,6 +46,7 @@ sources:
     gitalk:
       js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js'
       css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
+    valine: 'https://unpkg.com/valine/dist/Valine.min.js' # bootcdn not available
     mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'
     mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
   unpkg:
@@ -56,5 +57,6 @@ sources:
     gitalk:
       js: 'https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js'
       css: 'https://unpkg.com/gitalk@1.2.2/dist/gitalk.css'
+    valine: 'https//unpkg.com/valine/dist/Valine.min.js'
     mathjax: 'https://unpkg.com/mathjax@2.7.4/unpacked/MathJax.js?config=TeX-MML-AM_CHTML'
     mermaid: 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js'

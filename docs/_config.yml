@@ -118,7 +118,8 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  # provider: valine
 
   ## Disqus
   disqus:
@@ -133,6 +134,13 @@ comments:
     owner       : kitian616
     admin:
       - kitian616
+
+  ## Valine
+  # please refer to https://valine.js.org/en/index.html for more info.
+  valine:
+    app_id      : uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
+    app_key     : Mzf5m9skSwYVWVXhGiYMNyXs
+    placeholder : # Prompt information
 
 
 ## => Pageview

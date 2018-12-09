@@ -116,7 +116,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "custom"
+  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -134,10 +134,11 @@ comments:
 
   ## Valine
   # please refer to https://valine.js.org/en/index.html for more info.
-  custom:
-    API_ID     : # LeanCloud App id
-    API_Key    : # LeanCloud App key
-    placeholder: Just Go Go. # Prompt information
+  valine:
+    app_id      : # LeanCloud App id
+    app_key     : # LeanCloud App key
+    placeholder : # Prompt information
+
 
 ## => Pageview
 ##############################
