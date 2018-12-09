@@ -132,6 +132,12 @@ comments:
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
+  ## Valine
+  # please refer to https://valine.js.org/en/index.html for more info.
+  custom:
+    API_ID     : # LeanCloud App id
+    API_Key    : # LeanCloud App key
+    placeholder: Just Go Go. # Prompt information
 
 ## => Pageview
 ##############################
