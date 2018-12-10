@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.2.4 (2018-12-10)
+
+### Enhancements
+
+- Swiper component Enhancement: support mouse move
+- Add lightbox (modal image gallery)
+- Add Valine comment system (@Lloyar)
+
+### Bug Fixes
+
+- Fix some spelling errors in documents (@Krinkle)
+
 ## 2.2.3 (2018-11-11)
 
 ### Enhancements
