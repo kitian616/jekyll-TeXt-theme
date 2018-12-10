@@ -308,7 +308,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.1-configuration.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-09T18:10:00+08:00"><div class="js-article-content"><div class="layout--article">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-10T23:35:40+08:00"><div class="js-article-content"><div class="layout--article">
 
   <div class="article__content" itemprop="articleBody"><p>Jekyll 允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的  <em>_config.yml</em> 文件，也可以作为命令行的标记来配置。</p>
 
@@ -676,12 +676,16 @@
       <td><strong>gitalk</strong></td>
       <td><a href="https://github.com/gitalk/gitalk/">Gitalk</a></td>
     </tr>
+    <tr>
+      <td><strong>valine</strong></td>
+      <td><a href="https://valine.js.org/en/">Valine</a></td>
+    </tr>
   </tbody>
 </table>
 
 <h3 id="disqus">Disqus</h3>
 
-<p>要想启用 disqus 作为评论系统，你需要注册一个 Disqus 账号然后申请一个针对该网站的 <a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-">shortname</a>，完成后将 shortname 填入到 <em>_config.yml</em> 中：</p>
+<p>要想启用 Disqus 作为评论系统，你需要注册一个 Disqus 账号然后申请一个针对该网站的 <a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-">shortname</a>，完成后将 shortname 填入到 <em>_config.yml</em> 中：</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">comments</span><span class="pi">:</span>
   <span class="na">provider</span><span class="pi">:</span> <span class="s">disqus</span>
@@ -691,7 +695,7 @@
 
 <h3 id="gitalk">Gitalk</h3>
 
-<p>要想启用 gitalk 作为评论系统，首先你需要一个 GitHub Application，如果没有<a href="https://github.com/settings/applications/new">点击这里</a>申请。然后将相应的参数添加到 <em>_config.yml</em> 配置中：</p>
+<p>要想启用 Gitalk 作为评论系统，首先你需要一个 GitHub Application，如果没有<a href="https://github.com/settings/applications/new">点击这里</a>申请。然后将相应的参数添加到 <em>_config.yml</em> 配置中：</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">comments</span><span class="pi">:</span>
   <span class="na">provider</span><span class="pi">:</span> <span class="s">gitalk</span>
@@ -703,6 +707,19 @@
     <span class="na">admin</span><span class="pi">:</span> <span class="c1"># Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.</span>
       <span class="pi">-</span> <span class="s2">"</span><span class="s">your-github-id"</span>
       <span class="pi">-</span> <span class="s2">"</span><span class="s">the-other-admin-github-id"</span>
+</code></pre></div></div>
+
+<h3 id="valine">Valine</h3>
+
+<p>要想启用 Valine 作为评论系统，你需要注册一个 LeanCloud 账号然后建立一个 LeanCloud 应用，详情见 <a href="#leancloud">LeanCloud</a>。因为 Valine 会自动在应用中建立一个 Class，因此并不需要像文章点击量那样手动建立 Class。</p>
+
+<p>可以和<a href="#文章点击量">文章点击量</a>公用一个 LeanCloud 应用。</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">comments</span><span class="pi">:</span>
+  <span class="na">provider</span><span class="pi">:</span> <span class="s">valine</span>
+  <span class="na">valine</span><span class="pi">:</span>
+    <span class="na">app_id  </span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-id"</span>
+    <span class="na">app_key </span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-key"</span>
 </code></pre></div></div>
 
 <p class="warning">对于上面所有的评论系统, 你都需要在页面的头信息里设置 <code class="highlighter-rouge">key</code> 属性来开启该页的评论，详情请戳<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
@@ -726,7 +743,7 @@
 
 <h3 id="leancloud">LeanCloud</h3>
 
-<p>TeXt 使用 LeanCloud 作为点击量功能的后台服务。你需要建立一个应用，然后在应用中建立一个 Class，之后将必要的信息填写到 <em>_config.yml</em> 文件中。下面详细介绍其操作步骤。</p>
+<p>TeXt 使用 LeanCloud 作为点击量功能的后台服务。你需要建立一个 LeanCloud 应用，然后在应用中建立一个 Class，之后将必要的信息填写到 <em>_config.yml</em> 文件中。下面详细介绍其操作步骤。</p>
 
 <p>在进入<a href="https://leancloud.cn/">主页</a>后点击页面右上角的“访问控制台”，然后注册账号并登录。</p>
 
@@ -801,7 +818,7 @@
     </li>
   </ol>
 </div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-09T18:10:00+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
+</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-10T23:35:40+08:00"><!-- this will show at every article content's bottom --><div class="article__license"><div class="license">
     <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> 许可协议。
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
