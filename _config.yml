@@ -133,7 +133,7 @@ comments:
       # - your GitHub Id
 
   ## Valine
-  # please refer to https://valine.js.org/en/index.html for more info.
+  # please refer to https://valine.js.org/en/ for more info.
   valine:
     app_id      : # LeanCloud App id
     app_key     : # LeanCloud App key

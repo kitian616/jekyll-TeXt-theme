@@ -136,7 +136,7 @@ comments:
       - kitian616
 
   ## Valine
-  # please refer to https://valine.js.org/en/index.html for more info.
+  # please refer to https://valine.js.org/en/ for more info.
   valine:
     app_id      : uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
     app_key     : Mzf5m9skSwYVWVXhGiYMNyXs

@@ -26,7 +26,7 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 - 扩展（音频，视频，幻灯片，在线示例）
 - Markdown 增强（[MathJax](https://www.mathjax.org/)，[mermaid](https://mermaidjs.github.io/)，[chartjs](http://www.chartjs.org/)）
 - 分享（[AddToAny](https://www.addtoany.com/)，[AddThis](https://www.addthis.com/)）
-- 评论（[Disqus](https://disqus.com/)，[Gitalk](https://gitalk.github.io/)）
+- 评论（[Disqus](https://disqus.com/)，[Gitalk](https://gitalk.github.io/)，[Valine](https://valine.js.org/en/)）
 - 阅读量统计（[LeanCloud](https://leancloud.cn/)）
 - 站点统计（[Google Analytics](https://analytics.google.com/analytics/web/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）

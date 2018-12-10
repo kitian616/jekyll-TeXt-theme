@@ -26,7 +26,7 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Extensions (audios, videos, slides, demos)
 - Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
 - Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/))
+- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
 - Pageview ([LeanCloud](https://leancloud.cn/))
 - Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
 - RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
