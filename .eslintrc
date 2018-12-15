@@ -13,7 +13,7 @@
         "default-case": "error",
         "no-extra-bind": "error",
         "camelcase": "error",
-
+        "indent": ["error", 2, { "SwitchCase": 1 }]
     },
     "extends": ["eslint:recommended"]
 }
