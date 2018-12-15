@@ -107,7 +107,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   var $searchToggle = $('.js-search-toggle');
   var modalVisible = false;
 
-  var searchModal = $searchModal.modal({ onChange: handleModalChange });
+  var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
 
   function handleModalChange(visible) {
     modalVisible = visible;

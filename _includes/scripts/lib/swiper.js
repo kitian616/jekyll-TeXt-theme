@@ -2,18 +2,21 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     function swiper(options) {
-      var $window = $(window), $root = this, $swiperWrapper, $swiperButtonPrev, $swiperButtonNext,
-        initialSlide, animation,
-        rootWidth, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
+      var $window = $(window), $root = this, $swiperWrapper, $swiperSlides, $swiperButtonPrev, $swiperButtonNext,
+        initialSlide, animation, onChange, onChangeEnd,
+        rootWidth, count, preIndex, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
 
       function setOptions(options) {
         var _options = options || {};
         initialSlide = _options.initialSlide || 0;
         animation = _options.animation === undefined && true;
+        onChange = onChange || _options.onChange;
+        onChangeEnd = onChangeEnd || _options.onChangeEnd;
       }
 
       function init() {
         $swiperWrapper = $root.find('.swiper__wrapper');
+        $swiperSlides = $root.find('.swiper__slide');
         $swiperButtonPrev = $root.find('.swiper__button--prev');
         $swiperButtonNext = $root.find('.swiper__button--next');
         animation && $swiperWrapper.addClass('swiper__wrapper--animation');
@@ -32,13 +35,28 @@
       }
 
       var calc = (function() {
-        var preAnimation;
+        var preAnimation, $swiperSlide, $preSwiperSlide;
         return function (needPreCalc, params) {
           needPreCalc && preCalc();
           var _animation = (params && params.animation !== undefined) ? params.animation : animation;
           if (preAnimation === undefined || preAnimation !== _animation) {
             preAnimation = _animation ? $swiperWrapper.addClass('swiper__wrapper--animation') :
               $swiperWrapper.removeClass('swiper__wrapper--animation');
+          }
+          if (preIndex !== curIndex) {
+            ($preSwiperSlide = $swiperSlides.eq(preIndex)).removeClass('active');
+            ($swiperSlide = $swiperSlides.eq(curIndex)).addClass('active');
+            onChange && onChange(curIndex, $swiperSlides.eq(curIndex), $swiperSlide, $preSwiperSlide);
+            if (onChangeEnd) {
+              if (_animation) {
+                setTimeout(function() {
+                  onChangeEnd(curIndex, $swiperSlides.eq(curIndex), $swiperSlide, $preSwiperSlide);
+                }, 400);
+              } else {
+                onChangeEnd(curIndex, $swiperSlides.eq(curIndex), $swiperSlide, $preSwiperSlide);
+              }
+            }
+            preIndex = curIndex;
           }
           $swiperWrapper.css('transform', 'translate(' + translateX + 'px, 0)');
           if (count > 1) {
@@ -61,6 +79,7 @@
       }
 
       function moveToIndex(index ,params) {
+        preIndex = curIndex;
         curIndex = index;
         translateX = getTranslateXFromCurIndex();
         calc(false, params);
@@ -85,6 +104,7 @@
 
       setOptions(options);
       init();
+      preIndex = curIndex;
 
       $swiperButtonPrev.on('click', function(e) {
         e.stopPropagation();
@@ -95,7 +115,6 @@
         move('next');
       });
       $window.on('resize', function() {
-        translateX = getTranslateXFromCurIndex();
         calc(true, { animation: false });
       });
 
@@ -109,6 +128,9 @@
           preTranslateX = translateX;
         }
         function handleTouchmove(e) {
+          if (e.touches && e.touches.length > 1) {
+            return;
+          }
           var point = e.touches ? e.touches[0] : e;
           var deltaX = point.pageX - pageX;
           var deltaY = point.pageY - pageY;

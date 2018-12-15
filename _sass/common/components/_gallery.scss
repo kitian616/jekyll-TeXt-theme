@@ -9,13 +9,9 @@
 }
 
 .gallery-item{
-  display: table;
-  width: 100%;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
   height: 100%;
-}
-
-.gallery-item__content {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+  overflow: hidden;
 }
