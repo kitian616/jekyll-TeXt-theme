@@ -43,6 +43,7 @@
   }
   &.layout--page--sidebar {
     .page__main {
+      height: 100%;
       @include overflow(auto);
       @media print {
         @include overflow(unset);
