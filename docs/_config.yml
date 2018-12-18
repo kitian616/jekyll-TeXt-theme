@@ -221,7 +221,7 @@ defaults:
         toc: true
       show_edit_on_github: true
       pageview: true
-      lightbox: true
+      # lightbox: true
   - scope:
       path: ""
       type: articles
@@ -243,7 +243,7 @@ defaults:
         toc: true
       show_edit_on_github: true
       show_date: false
-      lightbox: true
+      # lightbox: true
   - scope:
       path: "_docs/zh"
     values:
@@ -256,7 +256,7 @@ defaults:
       lang: zh
       show_edit_on_github: true
       show_date: false
-      lightbox: true
+      # lightbox: true
 
 
 ## => Plugins
