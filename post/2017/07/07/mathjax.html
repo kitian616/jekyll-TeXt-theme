@@ -13,14 +13,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>TeXt - MathJax - TeXt Theme</title>
 
 <meta name="description" content="When , there are two solutions to  and they are">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml">
-<!-- begin favicon --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
+<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
 
-<meta name="theme-color" content="#ffffff">
-<!-- end favicon --><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
-<script>(function() {
+<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><script>(function() {
   window.isArray = function(val) {
     return Object.prototype.toString.call(val) === '[object Array]';
   };
@@ -387,8 +384,8 @@ mathjax_autoNumber: true
 	</script></section></article>
               </div>
             </div></div></div><div class="page__footer d-print-none">
-<div class="footer js-page-footer">
-  <div class="main"><aside  itemscope itemtype="http://schema.org/Organization">
+<footer class="footer js-page-footer">
+  <div class="main"><div  itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 "><div class="footer__author-links"><div class="author-links">
   <ul class="menu menu--nowrap menu--inline"><li title="Send me Email.">
@@ -428,18 +425,18 @@ mathjax_autoNumber: true
       </li></ul>
 </div>
 </div>
-    </aside>
-    <footer class="site-info"><p class="menu menu--center">
+    </div>
+    <div class="site-info"><p class="menu menu--center">
         <span>© TeXt Theme 2018</span>
         <a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
       </p>
       <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </p>
-    </footer>
+    </div>
   </div>
-</div></div></div>
-    </div><div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><div class="search search--dark">
+</footer></div></div>
+    </div><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -693,12 +690,13 @@ mathjax_autoNumber: true
     var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
     var activeCount = 0;
     function modal(options) {
-      var $root = this, visible, onChange;
+      var $root = this, visible, onChange, hideWhenWindowScroll = false;
       var scrollTop;
       function setOptions(options) {
         var _options = options || {};
         visible = _options.initialVisible === undefined ? false : show;
         onChange = _options.onChange;
+        hideWhenWindowScroll = _options.hideWhenWindowScroll;
       }
       function init() {
         setState(visible);
@@ -709,19 +707,19 @@ mathjax_autoNumber: true
         }
         visible = isShow;
         if (visible) {
-          activeCount ++;
+          activeCount++;
           scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
           $root.addClass('modal--show');
           $pageMain.scrollTop(scrollTop);
           activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
-          $window.on('scroll', hide);
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.on('scroll', hide);
           $window.on('keyup', handleKeyup);
         } else {
-          activeCount > 0 && activeCount --;
+          activeCount > 0 && activeCount--;
           $root.removeClass('modal--show');
           $window.scrollTop(scrollTop);
           activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
-          $window.off('scroll', hide);
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.off('scroll', hide);
           $window.off('keyup', handleKeyup);
         }
         onChange && onChange(visible);
@@ -746,346 +744,6 @@ mathjax_autoNumber: true
       };
     }
     $.fn.modal = modal;
-  });
-})();(function() {(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    function swiper(options) {
-      var $window = $(window), $root = this, $swiperWrapper, $swiperButtonPrev, $swiperButtonNext,
-        initialSlide, animation,
-        rootWidth, count, curIndex, translateX, CRITICAL_ANGLE = Math.PI / 3;
-
-      function setOptions(options) {
-        var _options = options || {};
-        initialSlide = _options.initialSlide || 0;
-        animation = _options.animation === undefined && true;
-      }
-
-      function init() {
-        $swiperWrapper = $root.find('.swiper__wrapper');
-        $swiperButtonPrev = $root.find('.swiper__button--prev');
-        $swiperButtonNext = $root.find('.swiper__button--next');
-        animation && $swiperWrapper.addClass('swiper__wrapper--animation');
-        calc(true);
-      }
-
-      function preCalc() {
-        rootWidth = $root.width();
-        count = $swiperWrapper.children('.swiper__slide').length;
-        if (count < 2) {
-          $swiperButtonPrev.addClass('d-none');
-          $swiperButtonNext.addClass('d-none');
-        }
-        curIndex = initialSlide || 0;
-        translateX = getTranslateXFromCurIndex();
-      }
-
-      var calc = (function() {
-        var preAnimation;
-        return function (needPreCalc, params) {
-          needPreCalc && preCalc();
-          var _animation = (params && params.animation !== undefined) ? params.animation : animation;
-          if (preAnimation === undefined || preAnimation !== _animation) {
-            preAnimation = _animation ? $swiperWrapper.addClass('swiper__wrapper--animation') :
-              $swiperWrapper.removeClass('swiper__wrapper--animation');
-          }
-          $swiperWrapper.css('transform', 'translate(' + translateX + 'px, 0)');
-          if (count > 1) {
-            if (curIndex <= 0) {
-              $swiperButtonPrev.addClass('disabled');
-            } else {
-              $swiperButtonPrev.removeClass('disabled');
-            }
-            if (curIndex >= count - 1) {
-              $swiperButtonNext.addClass('disabled');
-            } else {
-              $swiperButtonNext.removeClass('disabled');
-            }
-          }
-        };
-      })();
-
-      function getTranslateXFromCurIndex() {
-        return curIndex <= 0 ? 0 : - rootWidth * curIndex;
-      }
-
-      function moveToIndex(index ,params) {
-        curIndex = index;
-        translateX = getTranslateXFromCurIndex();
-        calc(false, params);
-      }
-
-      function move(type) {
-        var nextIndex = curIndex, unstableTranslateX;
-        if (type === 'prev') {
-          nextIndex > 0 && nextIndex--;
-        } else if (type === 'next') {
-          nextIndex < count - 1 && nextIndex++;
-        }
-        if (type === 'cur') {
-          moveToIndex(curIndex, { animation: true });
-          return;
-        }
-        unstableTranslateX = translateX % rootWidth !== 0;
-        if (nextIndex !== curIndex || unstableTranslateX) {
-          unstableTranslateX ? moveToIndex(nextIndex, { animation: true }) : moveToIndex(nextIndex);
-        }
-      }
-
-      setOptions(options);
-      init();
-
-      $swiperButtonPrev.on('click', function(e) {
-        e.stopPropagation();
-        move('prev');
-      });
-      $swiperButtonNext.on('click', function(e) {
-        e.stopPropagation();
-        move('next');
-      });
-      $window.on('resize', function() {
-        translateX = getTranslateXFromCurIndex();
-        calc(true, { animation: false });
-      });
-
-      (function() {
-        var pageX, pageY, velocityX, preTranslateX = translateX, timeStamp, touching;
-        function handleTouchstart(e) {
-          var point = e.touches ? e.touches[0] : e;
-          pageX = point.pageX;
-          pageY = point.pageY;
-          velocityX = 0;
-          preTranslateX = translateX;
-        }
-        function handleTouchmove(e) {
-          var point = e.touches ? e.touches[0] : e;
-          var deltaX = point.pageX - pageX;
-          var deltaY = point.pageY - pageY;
-          velocityX = deltaX / (e.timeStamp - timeStamp);
-          timeStamp = e.timeStamp;
-          if (e.cancelable && Math.abs(Math.atan(deltaY / deltaX)) < CRITICAL_ANGLE) {
-            touching = true;
-            translateX += deltaX;
-            calc(false, { animation: false });
-          }
-          pageX = point.pageX;
-          pageY = point.pageY;
-        }
-        function handleTouchend() {
-          touching = false;
-          var deltaX = translateX - preTranslateX;
-          var distance = deltaX + velocityX * rootWidth;
-          if (Math.abs(distance) > rootWidth / 2) {
-            distance > 0 ? move('prev') : move('next');
-          } else {
-            move('cur');
-          }
-        }
-        $swiperWrapper.on('touchstart', handleTouchstart);
-        $swiperWrapper.on('touchmove', handleTouchmove);
-        $swiperWrapper.on('touchend', handleTouchend);
-        $swiperWrapper.on('touchcancel', handleTouchend);
-
-        (function() {
-          var pressing = false, moved = false;
-          $swiperWrapper.on('mousedown', function(e) {
-            pressing = true; handleTouchstart(e);
-          });
-          $swiperWrapper.on('mousemove', function(e) {
-            pressing && (e.preventDefault(), moved = true, handleTouchmove(e));
-          });
-          $swiperWrapper.on('mouseup', function(e) {
-            pressing && (pressing = false, handleTouchend(e));
-          });
-          $swiperWrapper.on('mouseleave', function(e) {
-            pressing && (pressing = false, handleTouchend(e));
-          });
-          $swiperWrapper.on('click', function(e) {
-            moved && (e.stopPropagation(), moved = false);
-          });
-        })();
-
-        $root.on('touchmove', function(e) {
-          if (e.cancelable & touching) {
-            e.preventDefault();
-          }
-        });
-      })();
-
-      return {
-        setOptions: setOptions,
-        previous: function(){
-          move('prev');
-        },
-        next: function(){
-          move('next');
-        },
-        refresh: function() {
-          calc(true, { animation: false });
-        }
-      };
-    }
-    $.fn.swiper = swiper;
-  });
-})();var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var template =
-      '<div class="swiper gallery__swiper">' +
-        '<div class="swiper__wrapper">' +
-        '</div>' +
-        '<div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>' +
-        '<div class="swiper__button swiper__button--next fas fa-chevron-right"></div>' +
-      '</div>';
-    function Gallery(root, items, options) {
-      this.$root = $(root);
-      this.$swiper = null;
-      this.$itemWrapper = null;
-      this.swiper = null;
-      this.$items = [];
-      this.items = items;
-      this.disabled = false;
-      this.contentWidth = 0;
-      this.contentHeight = 0;
-    }
-    Gallery.prototype.init = function() {
-      var i, item, items = this.items, itemsSnippet = '', size, self = this;
-      this.$root.append(template);
-      this.$swiper = this.$root.find('.gallery__swiper');
-      this.$itemWrapper = this.$root.find('.swiper__wrapper');
-      this.contentWidth = this.$itemWrapper && this.$itemWrapper.width();
-      this.contentHeight = this.$itemWrapper && this.$itemWrapper.height();
-      for (i = 0; i < items.length; i++) {
-        item = items[i];
-        size = this.calculateImageSize(item.w, item.h);
-        this.$items.push($(
-          '<div class="swiper__slide">' +
-            '<div class="gallery-item">' +
-              '<div class="gallery-item__content">' +
-                '<img src="' + item.src + '" style="width:' + size.w + 'px;height:' + size.h +  'px"/>' +
-              '</div>' +
-            '</div>' +
-          '</div>'
-        ));
-      }
-      this.$itemWrapper && this.$itemWrapper.append(this.$items);
-      this.swiper = this.$swiper && this.$swiper.swiper();
-      $(window).on('resize', function() {
-        if (self.disabled) { return; }
-        self.resizeImageSize();
-      });
-      // Char Code: 37  ⬅, 39  ➡
-      $(window).on('keyup', function(e) {
-        if (window.isFormElement(e.target || e.srcElement) || self.disabled) { return; }
-        if (e.which === 37) {
-          self.swiper && self.swiper.previous();
-        } else if (e.which === 39) {
-          self.swiper && self.swiper.next();
-        }
-      });
-    };
-    Gallery.prototype.calculateImageSize = function(w, h) {
-      var scale = 1;
-      if (this.contentWidth > 0 && this.contentHeight > 0 && w > 0 && h > 0) {
-        scale = Math.min(
-          Math.min(w, this.contentWidth) / w,
-          Math.min(h, this.contentHeight) / h);
-      }
-      return { w: Math.floor(w * scale), h: Math.floor(h * scale) };
-    };
-    Gallery.prototype.resizeImageSize = function() {
-      var i, $item, $items = this.$items, item, size;
-      this.contentWidth = this.$itemWrapper && this.$itemWrapper.width();
-      this.contentHeight = this.$itemWrapper && this.$itemWrapper.height();
-      if ($items.length < 1) { return; }
-      for (i = 0; i < $items.length; i++) {
-        item = this.items[i], $item = $items[i];
-        size = this.calculateImageSize(item.w, item.h);
-        $item && $item.find('img').css({ width: size.w, height: size.h });
-      }
-    }
-    Gallery.prototype.refresh = function() {
-      this.swiper && this.swiper.refresh();
-      this.resizeImageSize();
-    };
-    Gallery.prototype.setOptions = function(options) {
-      this.disabled = options.disabled;
-      this.swiper && this.swiper.setOptions(options);
-    };
-    window.Gallery = Gallery;
-  });
-})();(function() {
-  window.imagesLoad = function(images) {
-    images = images || document.getElementsByTagName('img');
-    var imagesCount = images.length, loadedCount = 0, image;
-    var i, j, loaded = false, cbs = [];
-    imagesCount < 1 && (loaded = true);
-    for (i = 0; i < imagesCount; i++) {
-      image = images[i];
-      image.complete ? handleImageLoad() : image.addEventListener('load', handleImageLoad);
-    }
-    function handleImageLoad() {
-      loadedCount++;
-      if (loadedCount === imagesCount) {
-        loaded = true;
-        if (cbs.length > 0) {
-          for (j = 0; j < cbs.length; j++) {
-            cbs[j]();
-          }
-        }
-      }
-    }
-    return {
-      then: function(cb) {
-        cb && (loaded ? cb() : (cbs.push(cb)));
-      }
-    };
-  };
-})();(function () {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $pageGalleryModal = $('.js-page-gallery-modal');
-    var $images = $('.page__content').find('img:not(.lightbox-ignore)');
-    window.imagesLoad($images).then(function() {
-      /* global Gallery */
-      var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });
-      var gallery = null;
-      var modalVisible = false;
-      var i, items = [], image, item;
-      if($images && $images.length > 0) {
-        for (i = 0; i < $images.length; i++) {
-          image = $images.eq(i);
-          if (image.get(0).naturalWidth > 800) {
-            items.push({ src: image.attr('src'), w: image.get(0).naturalWidth, h: image.get(0).naturalHeight, $el: image});
-          }
-        }
-      }
-
-      if(items.length > 0) {
-        gallery = new Gallery('.gallery', items);
-        gallery.setOptions({ disabled: !modalVisible });
-        gallery.init();
-        for (i = 0; i < items.length; i++) {
-          item = items[i];
-          item.$el && (item.$el.addClass('popup-image'), item.$el.on('click', (function() {
-            var index = i;
-            return function() {
-              pageGalleryModal.show();
-              gallery.setOptions({ initialSlide: index });
-              gallery.refresh(true, { animation: false });
-            };
-          })()));
-        }
-      }
-
-      function handleModalChange(visible) {
-        modalVisible = visible;
-        gallery && gallery.setOptions({ disabled: !modalVisible });
-      }
-
-      $pageGalleryModal.on('click', function() {
-        pageGalleryModal.hide();
-      });
-    });
   });
 })();/*(function () {
 
@@ -1258,7 +916,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   var $searchToggle = $('.js-search-toggle');
   var modalVisible = false;
 
-  var searchModal = $searchModal.modal({ onChange: handleModalChange });
+  var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
 
   function handleModalChange(visible) {
     modalVisible = visible;
