@@ -1,5 +1,5 @@
 
-<div class="footer js-page-footer">
+<footer class="footer js-page-footer">
   <div class="main">
 
     {%- assign _site_author = site.author -%}
@@ -9,7 +9,7 @@
       {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
     {%- endif -%}
 
-    <aside  itemscope itemtype="{{ _site_author_itemtype }}">
+    <div  itemscope itemtype="{{ _site_author_itemtype }}">
       <meta itemprop="name" content="{{ _site_author.name }}">
       {%- assign _site_author_url = _site_author.url | default: '/'-%}
       {%- include snippets/get-nav-url.html path=_site_author_url -%}
@@ -21,8 +21,8 @@
       <div class="footer__author-links">
         {%- include author-links.html author=_site_author -%}
       </div>
-    </aside>
-    <footer class="site-info">
+    </div>
+    <div class="site-info">
       {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
       {%- include snippets/get-nav-url.html path=_paths_rss -%}
       {%- assign _paths_rss = __return -%}
@@ -35,6 +35,6 @@
       <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </p>
-    </footer>
+    </div>
   </div>
-</div>
+</footer>
