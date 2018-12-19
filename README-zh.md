@@ -94,9 +94,10 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 - 赞同[这个知乎回答](https://www.zhihu.com/question/20223939/answer/122596506)
 - 关注我的 Github
 - 打赏
-  | 微信支付 | 支付宝 |
-  | --- | --- |
-  | ![微信支付](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg) | ![支付宝](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg) |
+
+| 微信支付 | 支付宝 |
+| --- | --- |
+| ![微信支付](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg) | ![支付宝](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg) |
 
 ## 协议
 
