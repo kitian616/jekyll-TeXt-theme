@@ -11,7 +11,7 @@
 
 TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度可定制的 Jekyll 主题。它参考了 iOS 11 的风格，有大而突出的标题和圆润的按钮及卡片。
 
-[English](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README.md)
+**[English](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README.md)**
 
 ## 特性
 
@@ -93,7 +93,7 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 
 | 微信支付 | 支付宝 |
 | --- | --- |
-| ![微信支付](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg) | ![支付宝](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg) |
+| ![微信支付二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg) | ![支付宝二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg) |
 
 ## 其他资源
 
