@@ -193,6 +193,7 @@ layout: base
               </div>
 
               <div class="col-main cell cell--auto">
+                {%- include main/top/custom.html -%}
                 {%- if _page_type == 'article' -%}
                   <article itemscope itemtype="http://schema.org/Article">
                 {%- elsif _page_type == 'webpage' -%}
@@ -214,7 +215,7 @@ layout: base
                       <section class="page__comments d-print-none">{%- include comments.html -%}</section>
                     {%- endif -%}
                 </article>
-                {%- include main-bottom/custom.html -%}
+                {%- include main/bottom/custom.html -%}
               </div>
             </div>
 
