@@ -102,6 +102,10 @@ article_header:
                       {%- endif -%}
                     {%- endif -%}
 
+                    {%- if child.content-%}
+                      <p>{{ child.content }}</p>
+                    {%- endif -%}
+
                   </div>
                 {%- endfor-%}
 
@@ -148,6 +152,10 @@ article_header:
 
       {%- if _section.image.full_width != true -%}
         </div> {% comment %} end hero__content {% endcomment %}
+      {%- endif -%}
+
+      {%- if _section.content-%}
+        <p>{{ _section.content }}</p>
       {%- endif -%}
       </section>
   {%- endfor -%}
