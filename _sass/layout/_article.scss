@@ -5,8 +5,8 @@
   .article__footer {
     margin: map-get($spacers, 4) 0;
     font-size: map-get($base, font-size-sm);
-    color: $text-color-l;
     .article__license {
+      color: $text-color-l;
       img {
         height: map-get($base, font-size) * 1.6;
       }

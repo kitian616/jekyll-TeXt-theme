@@ -87,7 +87,7 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 
 你的支持是我的动力。你可以通过以下方式支持我：
 
-- 给这个主题点赞 🌟
+- 给该项目点赞 🌟
 - 赞同[这个知乎回答](https://www.zhihu.com/question/20223939/answer/122596506)
 - 关注我的 Github
 - 打赏
