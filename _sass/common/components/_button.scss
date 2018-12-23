@@ -3,16 +3,13 @@
   font-weight: map-get($button, font-weight);
   line-height: 1 !important;
   text-decoration: none !important;
+  white-space: nowrap;
   cursor: pointer;
   outline: none;
   @include user-select(none);
-  @include transition(map-get($button, transition));
   svg {
     width: 1rem;
     height: 1rem;
-    path {
-      @include transition(map-get($button, transition));
-    }
   }
   @include disabled() {
     cursor: not-allowed;

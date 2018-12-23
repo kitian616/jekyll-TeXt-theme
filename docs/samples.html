@@ -4,18 +4,18 @@ title: Samples
 permalink: /samples.html
 ---
 <div class="layout--articles">
-  <div class="my-5">
-    <h2 id="page-layout">Page Layout</h2>
+  <section class="my-5">
+    <header><h2 id="page-layout">Page Layout</h2></header>
     {%- include article-list.html articles=site.page type='grid' -%}
-  </div>
+  </section>
 
-  <div class="my-5">
-    <h2 id="articles-layout">Articles(Home) Layout</h2>
+  <section class="my-5">
+    <header><h2 id="articles-layout">Articles(Home) Layout</h2></header>
     {%- include article-list.html articles=site.articles type='grid' -%}
-  </div>
+  </section>
 
-    <div class="my-5">
-    <h2 id="languages">Languages</h2>
+  <section class="my-5">
+    <header><h2 id="languages">Languages</h2></header>
     {%- include article-list.html articles=site.languages type='grid' -%}
-  </div>
+  </section>
 </div>

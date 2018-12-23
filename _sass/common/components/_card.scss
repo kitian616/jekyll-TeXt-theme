@@ -24,7 +24,7 @@
   padding: map-get($spacers, 2) map-get($spacers, 3);
 }
 
-a.card__header, .card__header > a {
+.card__header, .card__header > a {
   @include link-colors($text-color-d, $main-color-1);
 }
 
@@ -86,7 +86,7 @@ a.card__header, .card__header > a {
       }
     }
   }
-  @include transition(map-get($link, transition));
+  @include transition(map-get($clickable, transition));
 }
 
 .card--flat {

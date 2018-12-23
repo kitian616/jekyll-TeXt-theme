@@ -8,10 +8,14 @@
   @include flex(1);
 }
 
-.gallery-item{
+.gallery-item {
   @include flexbox();
   @include align-items(center);
   @include justify-content(center);
   height: 100%;
   overflow: hidden;
+}
+
+.gallery-item__main {
+  display: block;
 }

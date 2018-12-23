@@ -159,7 +159,7 @@
         }
       }
       @include active() {
-        @include transition(map-get($link, transition));
+        @include transition(map-get($clickable, transition));
       }
     }
   }
