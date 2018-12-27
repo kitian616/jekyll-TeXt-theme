@@ -267,7 +267,6 @@
 <div class="page__main js-page-main page__viewport cell cell--auto">
 
       <div class="page__main-inner">
-        <div></div>
 <div class="page__header d-print-none">
 <header class="header"><div class="main">
       <div class="header__title">
@@ -317,11 +316,9 @@
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'hello, world!'</span><span class="p">))();</span></code></pre></figure>
 
 </div>
-<footer class="article__footer"><!-- start custom article footer snippet -->
+<div class="d-print-none"><footer class="article__footer"><!-- start custom article footer snippet -->
 
-<!-- end custom article footer snippet --></footer>
-
-  <div class="d-print-none"></div>
+<!-- end custom article footer snippet --></footer></div>
 
 </div>
 
@@ -377,7 +374,7 @@
 </div>
             </div></div></div>
 <div class="page__footer d-print-none">
-<footer class="footer js-page-footer">
+<footer class="footer py-4 js-page-footer">
   <div class="main">
 <div itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt">
@@ -435,13 +432,11 @@
 </div>
 </div>
     </div>
-    <div class="site-info">
-<p class="menu menu--center">
-        <span>© TeXt Theme 2018</span>
-        <a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
-      </p>
-      <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
-      </p>
+    <div class="site-info mt-2">
+      <div>
+        © TeXt Theme 2018,
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
     </div>
   </div>
 </footer>
@@ -473,6 +468,7 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     function scrollToAnchor(anchor, duration, callback) {
       var $root = this;
+      console.log($(anchor).position().top);
       $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
         window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
         callback && callback();

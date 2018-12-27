@@ -264,8 +264,7 @@
     <div class="root" data-is-touch="false">
       <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
-      <div class="page__main-inner">
-        <div></div><div class="page__header d-print-none"><header class="header"><div class="main">
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -330,17 +329,15 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
 </div><section class="article__sharing d-print-none"><!-- Addthis BEGIN --><script type="text/javascript"
     src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5be59ee2486770cb"></script>
   <div class="addthis_inline_share_toolbox addthis_default_style"></div><!-- Addthis END -->
-</section><footer class="article__footer"><meta itemprop="dateModified" content="2016-05-04T00:00:00+08:00"><!-- start custom article footer snippet -->
+</section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2016-05-04T00:00:00+08:00"><!-- start custom article footer snippet -->
 
-<!-- end custom article footer snippet --><div class="article__license"><div class="license">
+<!-- end custom article footer snippet --><div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">Subscribe</a></div></div><div class="article__license"><div class="license">
     <p>This work is licensed under a <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by/4.0/">Attribution 4.0 International</a> license.
       <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
         <img alt="Attribution 4.0 International" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
       </a>
     </p>
-  </div></div></footer>
-
-  <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/post/2016/05/02/horizontal-rules.html">Jekyll - Horizontal Rules</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/post/2016/05/05/definition.html">Jekyll - Definition</a></div></div></div>
+  </div></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/post/2016/05/02/horizontal-rules.html">Jekyll - Horizontal Rules</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/post/2016/05/05/definition.html">Jekyll - Definition</a></div></div></div>
 
 </div>
 
@@ -396,8 +393,8 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
 </div>
 <!-- end custom main bottom snippet --></div>
             </div></div></div><div class="page__footer d-print-none">
-<footer class="footer js-page-footer">
-  <div class="main"><div  itemscope itemtype="http://schema.org/Organization">
+<footer class="footer py-4 js-page-footer">
+  <div class="main"><div itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 "><div class="footer__author-links"><div class="author-links">
   <ul class="menu menu--nowrap menu--inline"><li title="Send me Email.">
@@ -438,13 +435,12 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
 </div>
 </div>
     </div>
-    <div class="site-info"><p class="menu menu--center">
-        <span>© TeXt Theme 2018</span>
-        <a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
-      </p>
-      <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
-      </p>
+    <div class="site-info mt-2">
+      <div>
+        © TeXt Theme 2018,
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
     </div>
   </div>
 </footer></div></div>
@@ -472,6 +468,7 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
   window.Lazyload.js(SOURCES.jquery, function() {
     function scrollToAnchor(anchor, duration, callback) {
       var $root = this;
+      console.log($(anchor).position().top);
       $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
         window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
         callback && callback();

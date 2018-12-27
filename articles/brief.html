@@ -264,8 +264,7 @@
     <div class="root" data-is-touch="false">
       <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
 
-      <div class="page__main-inner">
-        <div></div><div class="page__header d-print-none"><header class="header"><div class="main">
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -288,7 +287,7 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Brief</h1></header></div><meta itemprop="headline" content="Articles - Brief"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-22T19:44:49+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list items"><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="">
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Brief</h1></header></div><meta itemprop="headline" content="Articles - Brief"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-27T22:44:46+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list items"><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="">
         <div class="item__content"><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/page/single.html">Page - Single</a></div>
       </li><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="">
         <div class="item__content"><a itemprop="headline" class="item__header" href="/jekyll-TeXt-theme/page/aside.html">Page - Aside</a></div>
@@ -362,8 +361,8 @@ articles:
 </div>
 <!-- end custom main bottom snippet --></div>
             </div></div></div><div class="page__footer d-print-none">
-<footer class="footer js-page-footer">
-  <div class="main"><div  itemscope itemtype="http://schema.org/Organization">
+<footer class="footer py-4 js-page-footer">
+  <div class="main"><div itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 "><div class="footer__author-links"><div class="author-links">
   <ul class="menu menu--nowrap menu--inline"><li title="Send me Email.">
@@ -404,13 +403,12 @@ articles:
 </div>
 </div>
     </div>
-    <div class="site-info"><p class="menu menu--center">
-        <span>© TeXt Theme 2018</span>
-        <a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
-      </p>
-      <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
-      </p>
+    <div class="site-info mt-2">
+      <div>
+        © TeXt Theme 2018,
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
     </div>
   </div>
 </footer></div></div>
@@ -438,6 +436,7 @@ articles:
   window.Lazyload.js(SOURCES.jquery, function() {
     function scrollToAnchor(anchor, duration, callback) {
       var $root = this;
+      console.log($(anchor).position().top);
       $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
         window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
         callback && callback();

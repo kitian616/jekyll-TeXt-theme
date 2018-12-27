@@ -264,8 +264,7 @@
     <div class="root" data-is-touch="false">
       <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport cell cell--auto">
 
-      <div class="page__main-inner">
-        <div></div><div class="page__header d-print-none"><header class="header header--dark"style="background: #41555d;"><div class="main">
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header header--dark"style="background: #41555d;"><div class="main">
       <div class="header__title">
         <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24">
@@ -288,8 +287,8 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>繁體中文 (Traditional Chinese)</h1></header></div><meta itemprop="headline" content="繁體中文 (Traditional Chinese)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>2018年 12月22日</span>
-            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-22T19:44:49+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>繁體中文 (Traditional Chinese)</h1></header></div><meta itemprop="headline" content="繁體中文 (Traditional Chinese)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>2018年 12月27日</span>
+            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2018-12-27T22:44:46+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p>在 <em>_config.yml</em> 或者頭信息裏設置 <code class="highlighter-rouge">lang: zh-Hant</code> 後，主題文字變為繁體中文。</p>
 
@@ -318,11 +317,9 @@ lang: zh-Hant
     <p>——《詩經·國風·周南·關雎》</p>
   </blockquote>
 </div>
-</div><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-22T19:44:49+08:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2018-12-27T22:44:46+08:00"><!-- start custom article footer snippet -->
 
-<!-- end custom article footer snippet --></footer>
-
-  <div class="d-print-none"><div class="article__section-navigator clearfix"><div class="previous"><span>上篇</span><a href="/jekyll-TeXt-theme/languages/chinese-simplified.html">简体中文 (Simplified Chinese)</a></div></div></div>
+<!-- end custom article footer snippet --></footer><div class="article__section-navigator clearfix"><div class="previous"><span>上篇</span><a href="/jekyll-TeXt-theme/languages/chinese-simplified.html">简体中文 (Simplified Chinese)</a></div></div></div>
 
 </div>
 
@@ -378,8 +375,8 @@ lang: zh-Hant
 </div>
 <!-- end custom main bottom snippet --></div>
             </div></div></div><div class="page__footer d-print-none">
-<footer class="footer js-page-footer">
-  <div class="main"><div  itemscope itemtype="http://schema.org/Organization">
+<footer class="footer py-4 js-page-footer">
+  <div class="main"><div itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="TeXt"><meta itemprop="url" content="/jekyll-TeXt-theme/"><meta itemprop="description" content="TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 "><div class="footer__author-links"><div class="author-links">
   <ul class="menu menu--nowrap menu--inline"><li title="給我發郵件。">
@@ -420,13 +417,12 @@ lang: zh-Hant
 </div>
 </div>
     </div>
-    <div class="site-info"><p class="menu menu--center">
-        <span>© TeXt Theme 2018</span>
-        <a type="application/rss+xml" href="/jekyll-TeXt-theme/feed.xml">RSS</a>
-      </p>
-      <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
-      </p>
+    <div class="site-info mt-2">
+      <div>
+        © TeXt Theme 2018,
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
     </div>
   </div>
 </footer></div></div>
@@ -454,6 +450,7 @@ lang: zh-Hant
   window.Lazyload.js(SOURCES.jquery, function() {
     function scrollToAnchor(anchor, duration, callback) {
       var $root = this;
+      console.log($(anchor).position().top);
       $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
         window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
         callback && callback();
