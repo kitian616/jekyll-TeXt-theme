@@ -218,6 +218,7 @@ defaults:
       aside:
         toc: true
       show_edit_on_github: true
+      show_subscribe: true
       pageview: true
       lightbox: true
   - scope:

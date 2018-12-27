@@ -1,5 +1,5 @@
 
-<footer class="footer js-page-footer">
+<footer class="footer py-4 js-page-footer">
   <div class="main">
 
     {%- assign _site_author = site.author -%}
@@ -9,7 +9,7 @@
       {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
     {%- endif -%}
 
-    <div  itemscope itemtype="{{ _site_author_itemtype }}">
+    <div itemscope itemtype="{{ _site_author_itemtype }}">
       <meta itemprop="name" content="{{ _site_author.name }}">
       {%- assign _site_author_url = _site_author.url | default: '/'-%}
       {%- include snippets/get-nav-url.html path=_site_author_url -%}
@@ -22,19 +22,12 @@
         {%- include author-links.html author=_site_author -%}
       </div>
     </div>
-    <div class="site-info">
-      {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
-      {%- include snippets/get-nav-url.html path=_paths_rss -%}
-      {%- assign _paths_rss = __return -%}
-      {%- include snippets/locale-to-string.html locale=site.data.locale.NAV.RSS -%}
-      {%- assign _locale_nav_rss = __return -%}
-      <p class="menu menu--center">
-        <span>© {{ site.title }} {{ site.data.locale.COPYRIGHT_DATES }}</span>
-        <a type="application/rss+xml" href="{{ _paths_rss }}">{{ _locale_nav_rss }}</a>
-      </p>
-      <p>Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
-        title="TeXt is a succinct theme for blogging." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
-      </p>
+    <div class="site-info mt-2">
+      <div>
+        © {{ site.title }} {{ site.data.locale.COPYRIGHT_DATES }},
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
     </div>
   </div>
 </footer>

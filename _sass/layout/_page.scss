@@ -1,159 +1,157 @@
-@include media-breakpoint-up(lg) {
-  body,
-  html,
-  .root,
-  .layout--page,
-  .page__viewport,
-  .page__grid {
-    height: 100%;
-  }
+body,
+html,
+.root,
+.layout--page {
+  height: 100%;
 }
 
 .layout--page {
-  .page__actions {
-    position: fixed;
-    bottom: map-get($spacers, 5);
-    left: map-get($spacers, 3);
-    z-index: map-get($z-indexes, actions);
-    display: none;
-  }
-
-  .sidebar-button {
-    @include clickable($text-color-d, rgba($main-color-3, .75));
-  }
-
-  .page__sidebar {
-    z-index: map-get($z-indexes, sidebar);
-    display: block;
-    width: 80%;
-    max-width: map-get($layout, sidebar-width);
-    height: 100%;
-    background-color: $background-color;
-    @include split-line(right);
-    @include transition(transform map-get($animation, duration));
-    @include overflow(auto);
-    .sidebar-toc {
-      padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
-    }
-  }
-
-  .page__mask {
-    @include modal(map-get($z-indexes, mask));
-    cursor: pointer;
-  }
   &.layout--page--sidebar {
-    .page__main {
+    .page__viewport,
+    .page__grid {
       height: 100%;
-      @include overflow(auto);
-      @media print {
-        @include overflow(unset);
-      }
     }
-  }
-  @include media-breakpoint-down(lg) {
-    &.layout--page--sidebar {
+    @include media-breakpoint-down(lg) {
       .page__main {
         @include overflow(unset);
       }
     }
   }
+}
 
-  .page__main-inner {
-    position: relative;
-    min-height: 100%;
-    color: $text-color;
-    background-color: $background-color;
+.page__main {
+  height: 100%;
+  color: $text-color;
+  background-color: $background-color;
 
-    .col-aside {
-      display: none;
-      & > aside {
-        position: absolute;
-        width: map-get($layout, aside-width);
-        @include overflow(hidden);
-      }
+  .col-aside {
+    display: none;
+    & > aside {
+      position: absolute;
+      width: map-get($layout, aside-width);
+      @include overflow(hidden);
     }
   }
+}
 
+.page__main-inner {
+  position: relative;
+  @include flexbox();
+  @include flex-direction(column);
+  min-height: 100%;
+}
+
+.page__content {
+  @include flex(1);
+  width: 100%;
+  margin: 0 auto;
+  @media print {
+    padding-bottom: 0;
+  }
+}
+.hide-footer {
   .page__content {
-    padding-bottom: map-get($layout, footer-height);
-    margin: 0 auto;
+    padding-bottom: 0;
+  }
+}
+
+.page__comments {
+  margin: map-get($spacers, 4) 0;
+}
+
+.page__aside {
+  .toc-aside {
+    padding: map-get($spacers, 5) 0 map-get($spacers, 3) map-get($spacers, 5);
+  }
+}
+
+.page__actions {
+  position: fixed;
+  bottom: map-get($spacers, 5);
+  left: map-get($spacers, 3);
+  z-index: map-get($z-indexes, actions);
+  display: none;
+}
+
+.page__sidebar {
+  z-index: map-get($z-indexes, sidebar);
+  display: block;
+  width: 80%;
+  max-width: map-get($layout, sidebar-width);
+  height: 100%;
+  background-color: $background-color;
+  @include split-line(right);
+  @include transition(transform map-get($animation, duration));
+  @include overflow(auto);
+  .sidebar-toc {
+    padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
+  }
+}
+.sidebar-button {
+  @include clickable($text-color-d, rgba($main-color-3, .75));
+}
+
+.page__mask {
+  @include modal(map-get($z-indexes, mask));
+  cursor: pointer;
+}
+.layout--page--sidebar {
+  .page__main {
+    @include overflow(auto);
     @media print {
-      padding-bottom: 0;
+      @include overflow(unset);
     }
   }
-  .hide-footer {
-    .page__content {
-      padding-bottom: 0;
-    }
-  }
+}
 
-  .page__comments {
-    margin: map-get($spacers, 4) 0;
-  }
-
-  .page__aside {
-    .toc-aside {
-      padding: map-get($spacers, 5) 0 map-get($spacers, 3) map-get($spacers, 5);
-    }
-  }
-
-  .page__footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .has-aside {
-    .page__main-inner{
-      .col-aside {
-        position: relative;
-        display: block;
-        width: map-get($layout, aside-width);
-        & > aside {
-          &.fixed {
-            position: fixed;
-            -webkit-font-smoothing: subpixel-antialiased;
-          }
-        }
-        @include media-breakpoint-down(lg) {
-          display: none;
-        }
+.has-aside {
+  .col-aside {
+    position: relative;
+    display: block;
+    width: map-get($layout, aside-width);
+    & > aside {
+      &.fixed {
+        position: fixed;
+        -webkit-font-smoothing: subpixel-antialiased;
       }
     }
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .page__sidebar {
+    position: fixed;
+    @include transform(translate(- map-get($layout, sidebar-width), 0));
   }
 
-  @include media-breakpoint-down(lg) {
-    .page__sidebar {
-      position: fixed;
-      @include transform(translate(- map-get($layout, sidebar-width), 0));
-    }
+  .page__actions {
+    display: block;
+  }
 
+  .show-sidebar {
     .page__actions {
-      display: block;
+      visibility: hidden;
     }
-
-    &.show-sidebar {
-      .page__actions {
-        visibility: hidden;
-      }
-      .page__sidebar {
-        @include transform(translate(0));
-      }
-      .page__mask {
-        @include modal--show();
-      }
+    .page__sidebar {
+      @include transform(translate(0));
+    }
+    .page__mask {
+      @include modal--show();
     }
   }
+}
 
-  .hero--light {
-    .article__info {
-      color: $text-color-theme-light;
-    }
+.hero--light {
+  .article__info {
+    color: $text-color-theme-light;
   }
-  .hero--dark {
-    .article__info {
-      color: $text-color-theme-dark;
-    }
+}
+.hero--dark {
+  .article__info {
+    color: $text-color-theme-dark;
   }
 }
 
