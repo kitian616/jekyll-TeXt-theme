@@ -287,7 +287,7 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Item (Cover + Excerpt + Read More)</h1></header></div><meta itemprop="headline" content="Articles - Item (Cover + Excerpt + Read More)"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-01T13:53:47+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item"><div class="item__image"><img class="image" src="/jekyll-TeXt-theme/docs/assets/images/axure/page-single.jpg" /></div><div class="item__content">
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Item (Cover + Excerpt + Read More)</h1></header></div><meta itemprop="headline" content="Articles - Item (Cover + Excerpt + Read More)"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-01T13:55:56+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item"><div class="item__image"><img class="image" src="/jekyll-TeXt-theme/docs/assets/images/axure/page-single.jpg" /></div><div class="item__content">
           <header><a href="/jekyll-TeXt-theme/page/single.html"><h2 itemprop="headline" class="item__header">Page - Single</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">A post with a single column.</div><p><a href="/jekyll-TeXt-theme/page/single.html">Read more</a></p></div></div>
       </article><article class="item"><div class="item__image"><img class="image" src="/jekyll-TeXt-theme/docs/assets/images/axure/page-aside.jpg" /></div><div class="item__content">
@@ -449,7 +449,6 @@ articles:
   window.Lazyload.js(SOURCES.jquery, function() {
     function scrollToAnchor(anchor, duration, callback) {
       var $root = this;
-      console.log($(anchor).position().top);
       $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
         window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
         callback && callback();
