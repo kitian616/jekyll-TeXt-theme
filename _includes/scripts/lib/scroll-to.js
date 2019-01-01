@@ -3,7 +3,6 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     function scrollToAnchor(anchor, duration, callback) {
       var $root = this;
-      console.log($(anchor).position().top);
       $root.animate({ scrollTop: $(anchor).position().top }, duration, function() {
         window.history.replaceState(null, '', window.location.href.split('#')[0] + anchor);
         callback && callback();

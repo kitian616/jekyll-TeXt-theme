@@ -3,7 +3,6 @@
   font-weight: map-get($button, font-weight);
   line-height: 1 !important;
   text-decoration: none !important;
-  white-space: nowrap;
   cursor: pointer;
   outline: none;
   @include user-select(none);
