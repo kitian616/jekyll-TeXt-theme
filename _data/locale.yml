@@ -3,89 +3,104 @@ SUBSCRIBE:
   zh:      "订阅"
   zh-Hans: "订阅"
   zh-Hant: "訂閱"
+  ko:      "등록"
 
 READMORE:
   en:      "Read more"
   zh:      "阅读更多"
   zh-Hans: "阅读更多"
   zh-Hant: "閱讀更多"
+  ko:      "더보기"
 
 SEARCH:
   en:      "Search"
   zh:      "搜索"
   zh-Hans: "搜索"
   zh-Hant: "搜索"
+  ko:      "검색"
 
 CANCEL:
   en:      "Cancel"
   zh:      "取消"
   zh-Hans: "取消"
   zh-Hant: "取消"
+  ko:      "취소"
 
 VIEWS:
   en:      "views"
   zh:      "阅读"
   zh-Hans: "阅读"
   zh-Hant: "閱讀"
+  ko:      "조회"
 
 LAST_UPDATED:
   en:      "Last updated"
   zh:      "更新于"
   zh-Hans: "更新于"
   zh-Hant: "更新於"
+  ko:      "마지막 수정"
 
 PREVIOUS:
   en:      "PREVIOUS"
   zh:      "上篇"
   zh-Hans: "上篇"
   zh-Hant: "上篇"
+  ko:      "이전"
 
 NEXT:
   en:      "NEXT"
   zh:      "下篇"
   zh-Hans: "下篇"
   zh-Hant: "下篇"
+  ko:      "다음"
 
 ARTICLE_DATE_FORMAT:
   en:      "%b %d, %Y"
   zh:      "%Y年 %m月%d日"
   zh-Hans: "%Y年 %m月%d日"
   zh-Hant: "%Y年 %m月%d日"
+  ko:      "%Y년 %m월 %d일"
 
 ARTICLE_LIST_DATE_FORMAT:
   en:      "%b %d"
   zh:      "%m月%d日"
   zh-Hans: "%m月%d日"
   zh-Hant: "%m月%d日"
+  ko:      "%m월 %d일"
 
 STATISTICS:
   en:      "[POST_COUNT] post articles, [PAGE_COUNT] pages."
   zh:      "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
   zh-Hans: "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
   zh-Hant: "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
+  ko:      "전체 글 [POST_COUNT]개, [PAGE_COUNT] 페이지"
 
 LICENSE_ANNOUNCE:
   en:      "This work is licensed under a [LICENSE] license."
   zh:      "本文遵守 [LICENSE] 许可协议。"
   zh-Hans: "本文遵守 [LICENSE] 许可协议。"
   zh-Hant: "本文遵守 [LICENSE] 許可協議。"
+  ko:      "이 글의 저작권은 [LICENSE] 라이센스를 따릅니다."
 
 POST_ON_GITHUB:
   en:      "Edit on Github"
   zh:      "在 Github 上修改"
   zh-Hans: "在 Github 上修改"
   zh-Hant: "在 Github 上修改"
+  ko:      "Github에서 확인하기"
 
 FOLLOW_ME:
   en:      "Follow me on [NAME]."
   zh:      "在 [NAME] 上关注我。"
   zh-Hans: "在 [NAME] 上关注我。"
   zh-Hant: "在 [NAME] 上關注我。"
+  ko:      "[NAME]에서 팔로우하기"
 
 EMAIL_ME:
   en:      "Send me Email."
   zh:      "给我发邮件。"
   zh-Hans: "给我发邮件。"
   zh-Hant: "給我發郵件。"
+  ko:      "이메일 보내기"
 
 COPYRIGHT_DATES: "2019"
