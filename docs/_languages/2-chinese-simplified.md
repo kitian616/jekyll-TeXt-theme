@@ -13,7 +13,7 @@ article_header:
     src: /docs/assets/images/languages/lang-image-zh-hans.jpg
 ---
 
-在 *_config.yml* 或者头信息里设置 `lang: zh-Hans` 或 `lang: zh` 后，主题文字变为简体中文。
+简体中文。
 
 <!--more-->
 
@@ -23,16 +23,13 @@ article_header:
   }
 </style>
 
-**front matter:**
+*_config.yml*:
 
     ---
-    ...
     lang: zh-Hans
-    ---
-^
-    ---
-    ...
     lang: zh
+    lang: zh-CN
+    lang: zh-SG
     ---
 
 <div style="writing-mode: vertical-rl;" markdown="1">

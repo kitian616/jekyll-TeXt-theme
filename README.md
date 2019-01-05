@@ -20,7 +20,7 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Semantic HTML
 - Skins
 - Highlight Theme
-- Multi-language support
+- Internationalization
 - Search
 - Table of contents
 - Authors (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)

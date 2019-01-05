@@ -27,7 +27,7 @@ description: >
 
 ## => Language and Timezone
 ##############################
-lang: en # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
+lang: en # the language of your site, default as "en"
 timezone: Asia/Shanghai
 
 

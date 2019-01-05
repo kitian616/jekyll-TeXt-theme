@@ -13,7 +13,7 @@ article_header:
     src: /docs/assets/images/languages/lang-image-zh-hant.jpg
 ---
 
-在 *_config.yml* 或者頭信息裏設置 `lang: zh-Hant` 後，主題文字變為繁體中文。
+繁體中文。
 
 <!--more-->
 
@@ -23,11 +23,12 @@ article_header:
   }
 </style>
 
-**front matter:**
+*_config.yml*:
 
     ---
-    ...
     lang: zh-Hant
+    lang: zh-TW
+    lang: zh-HK
     ---
 
 <div style="writing-mode: vertical-rl;" markdown="1">

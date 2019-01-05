@@ -6,13 +6,16 @@ cover: /docs/assets/images/languages/lang-en.jpg
 lang: en
 ---
 
-English is the default language of TeXt, if you set `lang` in *_config.yml* to the other language but want make the page English, just set `lang: en` in the front matter.
+English.
 
 <!--more-->
 
-**front matter:**
+*_config.yml*:
 
     ---
-    ...
     lang: en
+    lang: en-US
+    lang: en-CA
+    lang: en-GB
+    lang: en-AU
     ---

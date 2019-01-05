@@ -1,91 +1,103 @@
-SUBSCRIBE:
-  en:      "Subscribe"
-  zh:      "订阅"
-  zh-Hans: "订阅"
-  zh-Hant: "訂閱"
+## => Engish
+########################
+en: &EN
+  SUBSCRIBE               : "Subscribe"
+  READMORE                : "Read more"
+  SEARCH                  : "Search"
+  CANCEL                  : "Cancel"
+  VIEWS                   : "views"
+  LAST_UPDATED            : "Last updated"
+  PREVIOUS                : "PREVIOUS"
+  NEXT                    : "NEXT"
+  ARTICLE_DATE_FORMAT     : "%b %d, %Y"
+  ARTICLE_LIST_DATE_FORMAT: "%b %d"
+  STATISTICS              : "[POST_COUNT] post articles, [PAGE_COUNT] pages."
+  LICENSE_ANNOUNCE        : "This work is licensed under a [LICENSE] license."
+  POST_ON_GITHUB          : "Edit on Github"
+  FOLLOW_ME               : "Follow me on [NAME]."
+  EMAIL_ME                : "Send me Email."
+  COPYRIGHT_DATES         : "2019"
 
-READMORE:
-  en:      "Read more"
-  zh:      "阅读更多"
-  zh-Hans: "阅读更多"
-  zh-Hant: "閱讀更多"
+en-US:
+  <<: *EN
+en-CA:
+  <<: *EN
+en-GB:
+  <<: *EN
+en-AU:
+  <<: *EN
 
-SEARCH:
-  en:      "Search"
-  zh:      "搜索"
-  zh-Hans: "搜索"
-  zh-Hant: "搜索"
+## => Simplified Chinese
+########################
+zh-Hans: &ZH_HANS
+  SUBSCRIBE               : "订阅"
+  READMORE                : "阅读更多"
+  SEARCH                  : "搜索"
+  CANCEL                  : "取消"
+  VIEWS                   : "阅读"
+  LAST_UPDATED            : "更新于"
+  PREVIOUS                : "上篇"
+  NEXT                    : "下篇"
+  ARTICLE_DATE_FORMAT     : "%Y年 %m月%d日"
+  ARTICLE_LIST_DATE_FORMAT: "%m月%d日"
+  STATISTICS              : "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
+  LICENSE_ANNOUNCE        : "本文遵守 [LICENSE] 许可协议。"
+  POST_ON_GITHUB          : "在 Github 上修改"
+  FOLLOW_ME               : "在 [NAME] 上关注我。"
+  EMAIL_ME                : "给我发邮件。"
+  COPYRIGHT_DATES         : "2019"
 
-CANCEL:
-  en:      "Cancel"
-  zh:      "取消"
-  zh-Hans: "取消"
-  zh-Hant: "取消"
+zh:
+  <<: *ZH_HANS
+zh-CN:
+  <<: *ZH_HANS
+zh-SG:
+  <<: *ZH_HANS
 
-VIEWS:
-  en:      "views"
-  zh:      "阅读"
-  zh-Hans: "阅读"
-  zh-Hant: "閱讀"
+## => Traditional Chinese
+########################
+zh-Hant: &ZH_HANT
+  SUBSCRIBE               : "訂閱"
+  READMORE                : "閱讀更多"
+  SEARCH                  : "搜索"
+  CANCEL                  : "取消"
+  VIEWS                   : "閱讀"
+  LAST_UPDATED            : "更新於"
+  PREVIOUS                : "上篇"
+  NEXT                    : "下篇"
+  ARTICLE_DATE_FORMAT     : "%Y年 %m月%d日"
+  ARTICLE_LIST_DATE_FORMAT: "%m月%d日"
+  STATISTICS              : "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
+  LICENSE_ANNOUNCE        : "本文遵守 [LICENSE] 許可協議。"
+  POST_ON_GITHUB          : "在 Github 上修改"
+  FOLLOW_ME               : "在 [NAME] 上關注我。"
+  EMAIL_ME                : "給我發郵件。"
+  COPYRIGHT_DATES         : "2019"
 
-LAST_UPDATED:
-  en:      "Last updated"
-  zh:      "更新于"
-  zh-Hans: "更新于"
-  zh-Hant: "更新於"
+zh-TW:
+  <<: *ZH_HANT
+zh-HK:
+  <<: *ZH_HANT
 
-PREVIOUS:
-  en:      "PREVIOUS"
-  zh:      "上篇"
-  zh-Hans: "上篇"
-  zh-Hant: "上篇"
+## => Korean
+########################
+ko: &KO
+  SUBSCRIBE               : "등록"
+  READMORE                : "더보기"
+  SEARCH                  : "검색"
+  CANCEL                  : "취소"
+  VIEWS                   : "조회"
+  LAST_UPDATED            : "마지막 수정"
+  PREVIOUS                : "이전"
+  NEXT                    : "다음"
+  ARTICLE_DATE_FORMAT     : "%Y년 %m월 %d일"
+  ARTICLE_LIST_DATE_FORMAT: "%m월 %d일"
+  STATISTICS              : "전체 글 [POST_COUNT]개, [PAGE_COUNT] 페이지"
+  LICENSE_ANNOUNCE        : "이 글의 저작권은 [LICENSE] 라이센스를 따릅니다."
+  POST_ON_GITHUB          : "Github에서 확인하기"
+  FOLLOW_ME               : "[NAME]에서 팔로우하기"
+  EMAIL_ME                : "이메일 보내기"
+  COPYRIGHT_DATES         : "2019"
 
-NEXT:
-  en:      "NEXT"
-  zh:      "下篇"
-  zh-Hans: "下篇"
-  zh-Hant: "下篇"
-
-ARTICLE_DATE_FORMAT:
-  en:      "%b %d, %Y"
-  zh:      "%Y年 %m月%d日"
-  zh-Hans: "%Y年 %m月%d日"
-  zh-Hant: "%Y年 %m月%d日"
-
-ARTICLE_LIST_DATE_FORMAT:
-  en:      "%b %d"
-  zh:      "%m月%d日"
-  zh-Hans: "%m月%d日"
-  zh-Hant: "%m月%d日"
-
-STATISTICS:
-  en:      "[POST_COUNT] post articles, [PAGE_COUNT] pages."
-  zh:      "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
-  zh-Hans: "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
-  zh-Hant: "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
-
-LICENSE_ANNOUNCE:
-  en:      "This work is licensed under a [LICENSE] license."
-  zh:      "本文遵守 [LICENSE] 许可协议。"
-  zh-Hans: "本文遵守 [LICENSE] 许可协议。"
-  zh-Hant: "本文遵守 [LICENSE] 許可協議。"
-
-POST_ON_GITHUB:
-  en:      "Edit on Github"
-  zh:      "在 Github 上修改"
-  zh-Hans: "在 Github 上修改"
-  zh-Hant: "在 Github 上修改"
-
-FOLLOW_ME:
-  en:      "Follow me on [NAME]."
-  zh:      "在 [NAME] 上关注我。"
-  zh-Hans: "在 [NAME] 上关注我。"
-  zh-Hant: "在 [NAME] 上關注我。"
-
-EMAIL_ME:
-  en:      "Send me Email."
-  zh:      "给我发邮件。"
-  zh-Hans: "给我发邮件。"
-  zh-Hant: "給我發郵件。"
-
-COPYRIGHT_DATES: "2019"
+ko-KR:
+  <<: *KO
