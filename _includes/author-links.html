@@ -7,7 +7,7 @@
       <link itemprop="url" href="{{ _author.url }}">
     {%- endif -%}
 
-    {%- include snippets/locale-to-string.html locale=site.data.locale.EMAIL_ME -%}
+    {%- include snippets/get-locale-string.html key='EMAIL_ME' -%}
     {%- if _author.email -%}
       <li title="{{ __return }}">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:{{ _author.email }}" target="_blank">
@@ -15,7 +15,7 @@
       </a>
     {%- endif -%}
 
-    {%- include snippets/locale-to-string.html locale=site.data.locale.FOLLOW_ME -%}
+    {%- include snippets/get-locale-string.html key='FOLLOW_ME' -%}
 
     {%- if _author.weibo -%}
       <li title="{{ __return | replace: '[NAME]', 'Weibo' }}">

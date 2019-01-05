@@ -2,7 +2,7 @@
 
 {%- assign _excerpt_type = include.excerpt_type -%}
 
-{%- include snippets/locale-to-string.html locale=site.data.locale.READMORE -%}
+{%- include snippets/get-locale-string.html key='READMORE' -%}
 {%- assign _locale_readmore = __return -%}
 
 {%- assign _sorted_list = include.articles -%}
@@ -98,7 +98,7 @@
           {%- assign _date = _currentdate -%}
         {%- endif -%}
       {%- endif -%}
-      {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_LIST_DATE_FORMAT -%}
+      {%- include snippets/get-locale-string.html key='ARTICLE_LIST_DATE_FORMAT' -%}
       <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
         <div class="item__content">
           {%- if include.show_info -%}

@@ -22,7 +22,7 @@
         {%- if site.repository and site.repository_tree -%}
           {%- include snippets/is_collection.html page=include.article -%}
           {%- assign _is_article_collection = __return -%}
-          {%- include snippets/locale-to-string.html locale=site.data.locale.POST_ON_GITHUB -%}
+          {%- include snippets/get-locale-string.html key='POST_ON_GITHUB' -%}
           {%- assign _locale_post_on_github = __return -%}
           {%- if _is_article_collection -%}
             {%- include snippets/prepend-path.html path=include.article.path prepend_path=site.collections_dir -%}

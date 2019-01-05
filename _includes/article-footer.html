@@ -15,10 +15,10 @@
 
 <footer class="article__footer">
   {%- if page.modify_date -%}
-    {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_DATE_FORMAT -%}
+    {%- include snippets/get-locale-string.html key='ARTICLE_DATE_FORMAT' -%}
     {%- assign _locale_date_format = __return -%}
 
-    {%- include snippets/locale-to-string.html locale=site.data.locale.LAST_UPDATED -%}
+    {%- include snippets/get-locale-string.html key='LAST_UPDATED' -%}
     {%- assign _locale_last_update = __return -%}
     <span>{{ _locale_last_update }}
       <time itemprop="dateModified" datetime="{{ page.modify_date | date_to_xmlschema }}">{{ page.modify_date | date: _locale_date_format }}</time>

@@ -1,6 +1,6 @@
-{%- include snippets/locale-to-string.html locale=site.data.locale.CANCEL -%}
+{%- include snippets/get-locale-string.html key='CANCEL' -%}
 {%- assign _locale_cancel = __return -%}
-{%- include snippets/locale-to-string.html locale=site.data.locale.SEARCH -%}
+{%- include snippets/get-locale-string.html key='SEARCH' -%}
 {%- assign _locale_search = __return -%}
 
 <div class="search search--dark">

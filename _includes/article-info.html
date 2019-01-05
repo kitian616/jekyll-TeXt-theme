@@ -62,14 +62,14 @@
 
           {%- if _show_date -%}
             <li>
-              {%- include snippets/locale-to-string.html locale=site.data.locale.ARTICLE_DATE_FORMAT -%}
+              {%- include snippets/get-locale-string.html key='ARTICLE_DATE_FORMAT' -%}
               <i class="far fa-calendar-alt"></i> <span>{{ include.article.date | date: __return }}</span>
             </li>
           {%- endif -%}
 
           {%- if _pageview -%}
             {%- if site.pageview.provider -%}
-              {%- include snippets/locale-to-string.html locale=site.data.locale.VIEWS -%}
+              {%- include snippets/get-locale-string.html key='VIEWS' -%}
               {%- assign _locale_views = __return -%}
               <li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="{{ include.article.key }}">0</span> {{ _locale_views }}</li>
             {%- endif -%}

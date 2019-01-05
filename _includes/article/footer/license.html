@@ -1,4 +1,4 @@
-{%- include snippets/locale-to-string.html locale=site.data.locale.LICENSE_ANNOUNCE -%}
+{%- include snippets/get-locale-string.html key='LICENSE_ANNOUNCE' -%}
 {%- assign _license_announce = __return -%}
 
 {%- if include.license -%}

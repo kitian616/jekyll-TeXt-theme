@@ -1,7 +1,7 @@
 {%- if paginator.total_pages > 1 -%}
   <div class="pagination">
 
-    {%- include snippets/locale-to-string.html locale=site.data.locale.STATISTICS -%}
+    {%- include snippets/get-locale-string.html key='STATISTICS' -%}
     {%- assign _locale_statistics = __return -%}
 
     {%- assign _post_count = site.posts | size -%}
