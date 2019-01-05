@@ -82,7 +82,7 @@ zh-HK:
 ## => Korean
 ########################
 ko: &KO
-  SUBSCRIBE               : "등록"
+  SUBSCRIBE               : "구독하기"
   READMORE                : "더보기"
   SEARCH                  : "검색"
   CANCEL                  : "취소"
