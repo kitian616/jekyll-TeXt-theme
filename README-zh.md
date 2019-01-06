@@ -67,6 +67,7 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 - [布局](https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts)
 - [Logo 和 Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/zh/logo-and-favicon)
 - [作者](https://tianqi.name/jekyll-TeXt-theme/docs/zh/authors)
+- [国际化](https://tianqi.name/jekyll-TeXt-theme/docs/zh/i18n)
 
 ### 内容
 

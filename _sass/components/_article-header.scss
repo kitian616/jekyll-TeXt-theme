@@ -7,6 +7,9 @@
   header, h1 {
     display: inline;
   }
+  h1 {
+    word-wrap: break-word;
+  }
   .split-space {
     @include user-select(none);
   }

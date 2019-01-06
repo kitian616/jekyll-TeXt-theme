@@ -23,13 +23,13 @@ article_header:
   }
 </style>
 
-*_config.yml*:
+*_config.yml* or front matter:
 
-    ---
-    lang: zh-Hant
-    lang: zh-TW
-    lang: zh-HK
-    ---
+```yml
+lang: zh-Hant
+lang: zh-TW
+lang: zh-HK
+```
 
 <div style="writing-mode: vertical-rl;" markdown="1">
 > 關關雎鳩，在河之洲。

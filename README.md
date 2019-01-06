@@ -67,6 +67,7 @@ TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highl
 - [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
 - [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
 - [Authors](https://tianqi.name/jekyll-TeXt-theme/docs/en/authors)
+- [Internationalization](https://tianqi.name/jekyll-TeXt-theme/docs/en/i18n)
 
 ### Content
 

@@ -10,12 +10,12 @@ English.
 
 <!--more-->
 
-*_config.yml*:
+*_config.yml* or front matter:
 
-    ---
-    lang: en
-    lang: en-US
-    lang: en-CA
-    lang: en-GB
-    lang: en-AU
-    ---
+```yml
+lang: en
+lang: en-US
+lang: en-CA
+lang: en-GB
+lang: en-AU
+```

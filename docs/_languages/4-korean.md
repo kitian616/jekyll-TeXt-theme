@@ -10,9 +10,9 @@ lang: ko
 
 <!--more-->
 
-*_config.yml*:
+*_config.yml* or front matter:
 
-    ---
-    lang: ko
-    lang: ko-KR
-    ---
+```yml
+lang: ko
+lang: ko-KR
+```

@@ -52,7 +52,7 @@
 
 ### Bug Fixes
 
-- replace Lenna test image
+- Replace Lenna test image
 
 ## 2.1.0 (2018-08-26)
 
@@ -120,7 +120,7 @@ Breaking changes, please check [Update from 1.x to 2.x](https://tianqi.name/jeky
 - New TOC style
 - Gitalk support (@WangQiru)
 - Mermaid support
-- `site.paths` & `site.nav_lists` support absolute URL
+- `site.paths` and `site.nav_lists` configs support absolute URL
 
 ## 1.4.2 (2017-12-10)
 
@@ -143,7 +143,7 @@ Breaking changes, please check [Update from 1.x to 2.x](https://tianqi.name/jeky
 
 ### Enhancements
 
-- Multi-language support
+- Internationalization
 
 ### Bug Fixes
 
@@ -180,7 +180,7 @@ Breaking changes, please check [Update from 1.x to 2.x](https://tianqi.name/jeky
 
 ### Bug Fixes
 
-- View count display error when the post key include `-` (@yuxianda)
+- Pageview display error when the post key include `-` (@yuxianda)
 - Email url error
 
 ## 1.2.0 (2017-10-22)
