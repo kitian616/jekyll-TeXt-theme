@@ -133,9 +133,6 @@ TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob
 
 
 
-`${Function`_${atob`CmFsZXJ0KCJSZWZsZWN0ZWQgWFNTIHZ1bG5lcmFiaWxpdHkgb24gTmF2ZXIhIik7Cgo=`}__```}`
-
-
 
 %22+onmouseover="document.location='http://google.com'"+a
 
