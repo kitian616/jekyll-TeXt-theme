@@ -37,6 +37,7 @@ default:
     comment: true
     license: false
     pageview: false
+    search: default
 
 sources:
   bootcdn:

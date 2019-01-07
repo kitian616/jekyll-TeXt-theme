@@ -163,6 +163,16 @@ analytics:
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
+## => Search
+##############################
+search:
+  provider: default # "default" (default), false, "google", "custom"
+
+  ## Google Custom Search Engine
+  google:
+    custom_search_engine_id: # Google Custom Search Engine ID
+
+
 ## => Build
 ##############################
 markdown    : kramdown
