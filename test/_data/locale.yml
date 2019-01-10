@@ -18,11 +18,11 @@ en: &EN
   EMAIL_ME                : "Send me Email."
   COPYRIGHT_DATES         : "2019"
 
+en-GB:
+  <<: *EN
 en-US:
   <<: *EN
 en-CA:
-  <<: *EN
-en-GB:
   <<: *EN
 en-AU:
   <<: *EN

@@ -14,8 +14,8 @@ English.
 
 ```yml
 lang: en
+lang: en-GB
 lang: en-US
 lang: en-CA
-lang: en-GB
 lang: en-AU
 ```

@@ -2,9 +2,9 @@
 layout: article
 titles:
   en      : &EN       About
+  en-GB   : *EN
   en-US   : *EN
   en-CA   : *EN
-  en-GB   : *EN
   en-AU   : *EN
   zh-Hans : &ZH_HANS  关于
   zh      : *ZH_HANS
