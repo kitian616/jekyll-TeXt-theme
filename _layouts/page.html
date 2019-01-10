@@ -233,6 +233,7 @@ layout: base
   </div> {%- comment -%} end page__viewport {%- endcomment -%}
 {%- endif -%}
 
+<script>{%- include scripts/lib/modal.js -%}</script>
 {%- if _lightbox == true -%}
   <div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
 {%- endif -%}
@@ -246,7 +247,6 @@ layout: base
   {%- include scripts/lib/scroll-to.js -%}
   {%- include scripts/lib/affix.js -%}
   {%- include scripts/lib/toc.js -%}
-  {%- include scripts/lib/modal.js -%}
   {%- if _lightbox == true -%}
     {%- include scripts/lib/gallery.js -%}
     {%- include scripts/components/lightbox.js -%}
@@ -265,11 +265,6 @@ layout: base
   {%- include scripts/aside/affix.js -%}
 </script>
 {%- endif -%}
-
-{%- if _header != false -%}
-<script>{%- include scripts/components/search.js -%}</script>
-{%- endif -%}
-
 
 {%- include markdown-enhancements.html -%}
 {%- include pageview.html -%}

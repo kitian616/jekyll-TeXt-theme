@@ -160,7 +160,7 @@ search:
 
   ## Google Custom Search Engine
   google:
-    custom_search_engine_id: # Google Custom Search Engine ID
+    # custom_search_engine_id: 017643444788069204610 # Google Custom Search Engine ID
 
 
 ## => Analytics

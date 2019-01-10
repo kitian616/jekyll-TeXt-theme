@@ -1,7 +1,6 @@
 var SOURCES = window.TEXT_VARIABLES.sources;
 window.Lazyload.js(SOURCES.jquery, function() {
   /* global google */
-  window.useDefaultSearchBox = false;
   var search = (window.search || (window.search = {}));
   var searchBox, searchInput, clearIcon, searchModal;
 
@@ -22,7 +21,7 @@ window.Lazyload.js(SOURCES.jquery, function() {
       clearIcon = document.getElementById('gs_cb50');
       searchModal = search.searchModal;
       searchModal && searchModal.$el && searchModal.$el.on('click', function(e) {
-        (e.target === this || e.target === clearIcon) && searchModal.hide();
+        (e.target === this || e.target === clearIcon || e.target.className === 'gs-title') && searchModal.hide();
       });
     }
   };
