@@ -299,7 +299,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/4.4-image.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Image"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-08T01:22:16+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Image"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-11T00:05:34+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><table>
   <thead>
@@ -356,7 +356,7 @@
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image image--xl"</span> <span class="na">src=</span><span class="s">""</span><span class="nt">/&gt;</span>
 </code></pre></div></div>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2019-01-08T01:22:16+08:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2019-01-11T00:05:34+08:00"><!-- start custom article footer snippet -->
 
 <div class="my-3">
       <div class="my-2"><a href="https://www.paypal.me/kitian616">
@@ -478,7 +478,155 @@
     </div>
   </div>
 </footer></div></div>
-    </div></div></div><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><div class="search search--dark">
+    </div></div></div><script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $body = $('body'), $window = $(window);
+    var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
+    var activeCount = 0;
+    function modal(options) {
+      var $root = this, visible, onChange, hideWhenWindowScroll = false;
+      var scrollTop;
+      function setOptions(options) {
+        var _options = options || {};
+        visible = _options.initialVisible === undefined ? false : show;
+        onChange = _options.onChange;
+        hideWhenWindowScroll = _options.hideWhenWindowScroll;
+      }
+      function init() {
+        setState(visible);
+      }
+      function setState(isShow) {
+        if (isShow === visible) {
+          return;
+        }
+        visible = isShow;
+        if (visible) {
+          activeCount++;
+          scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
+          $root.addClass('modal--show');
+          $pageMain.scrollTop(scrollTop);
+          activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.on('scroll', hide);
+          $window.on('keyup', handleKeyup);
+        } else {
+          activeCount > 0 && activeCount--;
+          $root.removeClass('modal--show');
+          $window.scrollTop(scrollTop);
+          activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
+          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.off('scroll', hide);
+          $window.off('keyup', handleKeyup);
+        }
+        onChange && onChange(visible);
+      }
+      function show() {
+        setState(true);
+      }
+      function hide() {
+        setState(false);
+      }
+      function handleKeyup(e) {
+        // Char Code: 27  ESC
+        if (e.which ===  27) {
+          hide();
+        }
+      }
+      setOptions(options);
+      init();
+      return {
+        show: show,
+        hide: hide,
+        $el: $root
+      };
+    }
+    $.fn.modal = modal;
+  });
+})();</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
+(function () {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    // search panel
+    var search = (window.search || (window.search = {}));
+    var useDefaultSearchBox = window.useDefaultSearchBox === undefined ?
+      true : window.useDefaultSearchBox ;
+
+    var $searchModal = $('.js-page-search-modal');
+    var $searchToggle = $('.js-search-toggle');
+    var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
+    var modalVisible = false;
+    search.searchModal = searchModal;
+
+    var $searchBox = null;
+    var $searchInput = null;
+    var $searchClear = null;
+
+    function getModalVisible() {
+      return modalVisible;
+    }
+    search.getModalVisible = getModalVisible;
+
+    function handleModalChange(visible) {
+      modalVisible = visible;
+      if (visible) {
+        search.onShow && search.onShow();
+        useDefaultSearchBox && $searchInput[0].focus();
+      } else {
+        search.onShow && search.onHide();
+        useDefaultSearchBox && $searchInput[0].blur();
+        setTimeout(function() {
+          useDefaultSearchBox && ($searchInput.val(''), $searchBox.removeClass('not-empty'));
+          search.clear && search.clear();
+          window.pageAsideAffix && window.pageAsideAffix.refresh();
+        }, 400);
+      }
+    }
+
+    $searchToggle.on('click', function() {
+      modalVisible ? searchModal.hide() : searchModal.show();
+    });
+    // Char Code: 83  S, 191 /
+    $(window).on('keyup', function(e) {
+      if (!modalVisible && !window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
+        modalVisible || searchModal.show();
+      }
+    });
+
+    if (useDefaultSearchBox) {
+      $searchBox = $('.js-search-box');
+      $searchInput = $searchBox.children('input');
+      $searchClear = $searchBox.children('.js-icon-clear');
+      search.getSearchInput = function() {
+        return $searchInput.get(0);
+      };
+      search.getVal = function() {
+        return $searchInput.val();
+      };
+      search.setVal = function(val) {
+        $searchInput.val(val);
+      };
+
+      $searchInput.on('focus', function() {
+        $(this).addClass('focus');
+      });
+      $searchInput.on('blur', function() {
+        $(this).removeClass('focus');
+      });
+      $searchInput.on('input', window.throttle(function() {
+        var val = $(this).val();
+        if (val === '' || typeof val !== 'string') {
+          search.clear && search.clear();
+        } else {
+          $searchBox.addClass('not-empty');
+          search.onInputNotEmpty && search.onInputNotEmpty(val);
+        }
+      }, 400));
+      $searchClear.on('click', function() {
+        $searchInput.val(''); $searchBox.removeClass('not-empty');
+        search.clear && search.clear();
+      });
+    }
+  });
+})();</script><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -852,69 +1000,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.toc = toc;
   });
-})();(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    var $body = $('body'), $window = $(window);
-    var $pageRoot = $('.js-page-root'), $pageMain = $('.js-page-main');
-    var activeCount = 0;
-    function modal(options) {
-      var $root = this, visible, onChange, hideWhenWindowScroll = false;
-      var scrollTop;
-      function setOptions(options) {
-        var _options = options || {};
-        visible = _options.initialVisible === undefined ? false : show;
-        onChange = _options.onChange;
-        hideWhenWindowScroll = _options.hideWhenWindowScroll;
-      }
-      function init() {
-        setState(visible);
-      }
-      function setState(isShow) {
-        if (isShow === visible) {
-          return;
-        }
-        visible = isShow;
-        if (visible) {
-          activeCount++;
-          scrollTop = $(window).scrollTop() || $pageMain.scrollTop();
-          $root.addClass('modal--show');
-          $pageMain.scrollTop(scrollTop);
-          activeCount === 1 && ($pageRoot.addClass('show-modal'), $body.addClass('of-hidden'));
-          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.on('scroll', hide);
-          $window.on('keyup', handleKeyup);
-        } else {
-          activeCount > 0 && activeCount--;
-          $root.removeClass('modal--show');
-          $window.scrollTop(scrollTop);
-          activeCount === 0 && ($pageRoot.removeClass('show-modal'), $body.removeClass('of-hidden'));
-          hideWhenWindowScroll && window.hasEvent('touchstart') && $window.off('scroll', hide);
-          $window.off('keyup', handleKeyup);
-        }
-        onChange && onChange(visible);
-      }
-      function show() {
-        setState(true);
-      }
-      function hide() {
-        setState(false);
-      }
-      function handleKeyup(e) {
-        // Char Code: 27  ESC
-        if (e.which ===  27) {
-          hide();
-        }
-      }
-      setOptions(options);
-      init();
-      return {
-        show: show,
-        hide: hide,
-        $el: $root
-      };
-    }
-    $.fn.modal = modal;
-  });
 })();/*(function () {
 
 })();*/</script><script>(function() {
@@ -1006,91 +1091,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }, 100));
 
     window.pageAsideAffix = affix;
-  });
-})();</script><script>
-(function () {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    // search panel
-    var search = (window.search || (window.search = {}));
-    var useDefaultSearchBox = window.useDefaultSearchBox === undefined ?
-      true : window.useDefaultSearchBox ;
-
-    var $searchModal = $('.js-page-search-modal');
-    var $searchToggle = $('.js-search-toggle');
-    var searchModal = $searchModal.modal({ onChange: handleModalChange, hideWhenWindowScroll: true });
-    var modalVisible = false;
-    search.searchModal = searchModal;
-
-    var $searchBox = null;
-    var $searchInput = null;
-    var $searchClear = null;
-
-    function getModalVisible() {
-      return modalVisible;
-    }
-    search.getModalVisible = getModalVisible;
-
-    function handleModalChange(visible) {
-      modalVisible = visible;
-      if (visible) {
-        search.onShow && search.onShow();
-        useDefaultSearchBox && $searchInput[0].focus();
-      } else {
-        search.onShow && search.onHide();
-        useDefaultSearchBox && $searchInput[0].blur();
-        setTimeout(function() {
-          useDefaultSearchBox && ($searchInput.val(''), $searchBox.removeClass('not-empty'));
-          search.clear && search.clear();
-          window.pageAsideAffix && window.pageAsideAffix.refresh();
-        }, 400);
-      }
-    }
-
-    $searchToggle.on('click', function() {
-      modalVisible ? searchModal.hide() : searchModal.show();
-    });
-    // Char Code: 83  S, 191 /
-    $(window).on('keyup', function(e) {
-      if (!modalVisible && !window.isFormElement(e.target || e.srcElement) && (e.which === 83 || e.which === 191)) {
-        modalVisible || searchModal.show();
-      }
-    });
-
-    if (useDefaultSearchBox) {
-      $searchBox = $('.js-search-box');
-      $searchInput = $searchBox.children('input');
-      $searchClear = $searchBox.children('.js-icon-clear');
-      search.getSearchInput = function() {
-        return $searchInput.get(0);
-      };
-      search.getVal = function() {
-        return $searchInput.val();
-      };
-      search.setVal = function(val) {
-        $searchInput.val(val);
-      };
-
-      $searchInput.on('focus', function() {
-        $(this).addClass('focus');
-      });
-      $searchInput.on('blur', function() {
-        $(this).removeClass('focus');
-      });
-      $searchInput.on('input', window.throttle(function() {
-        var val = $(this).val();
-        if (val === '' || typeof val !== 'string') {
-          search.clear && search.clear();
-        } else {
-          $searchBox.addClass('not-empty');
-          search.onInputNotEmpty && search.onInputNotEmpty(val);
-        }
-      }, 400));
-      $searchClear.on('click', function() {
-        $searchInput.val(''); $searchBox.removeClass('not-empty');
-        search.clear && search.clear();
-      });
-    }
   });
 })();</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
