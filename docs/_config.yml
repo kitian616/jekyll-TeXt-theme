@@ -206,19 +206,21 @@ collections_dir: docs
 collections:
   docs:
     output: true
-  page:
+  sample_page:
     output: true
-  articles:
+  sample_articles:
     output: true
-  languages:
+  sample_languages:
     output: true
 
 defaults:
+  ## home
   - scope:
       path: "test"
     values:
       articles:
         excerpt_type: html
+  ## posts
   - scope:
       path: ""
       type: posts
@@ -233,20 +235,31 @@ defaults:
       show_subscribe: true
       pageview: true
       # lightbox: true
+  ## samples
   - scope:
       path: ""
-      type: articles
+      type: sample_page
     values:
+      nav_key: samples
+  - scope:
+      path: ""
+      type: sample_articles
+    values:
+      nav_key: samples
       show_date: false
   - scope:
       path: ""
-      type: languages
+      type: sample_languages
     values:
       layout: article
+      nav_key: samples
+      show_date: false
+  ## docs
   - scope:
       path: "_docs/en"
     values:
       layout: article
+      nav_key: docs
       sidebar:
         nav: docs-en
       license: true
@@ -259,6 +272,7 @@ defaults:
       path: "_docs/zh"
     values:
       layout: article
+      nav_key: docs
       sidebar:
         nav: docs-zh
       license: true

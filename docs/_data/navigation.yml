@@ -3,8 +3,10 @@ header:
     url:        /test/
   - title:      Docs
     url:        /docs/en/quick-start
+    key:        docs
   - title:      Samples
     url:        /samples.html
+    key:        samples
   - title:      Archive
     url:        /archive.html
   - title:      About

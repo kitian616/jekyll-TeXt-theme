@@ -16,11 +16,21 @@
 .header--dark {
   @extend .text--dark;
   background: rgba(#000, .15);
+  .navigation__item--active {
+    &::after {
+      @include split-line(bottom, 4px, $text-color-theme-dark);
+    }
+  }
 }
 
 .header--light {
   @extend .text--light;
   background: rgba(#fff, .15);
+  .navigation__item--active {
+    &::after {
+      @include split-line(bottom, 4px, $text-color-theme-light);
+    }
+  }
 }
 
 .header__title {
@@ -89,21 +99,22 @@
         display: none;
       }
     }
-    .navigation__link {
-      &::after {
-        display: block;
-        margin-bottom: -4px;
-        content: "";
-        @include split-line(bottom, 4px, transparent);
-      }
-    }
-    .navigation__link--active {
-      a {
-        @include link-colors($main-color-1, $main-color-1);
-      }
-      &::after {
-        @include split-line(bottom, 4px, $main-color-1);
-      }
-    }
+  }
+}
+
+.navigation__item {
+  &::after {
+    display: block;
+    margin-bottom: -4px;
+    content: "";
+    @include split-line(bottom, 4px, transparent);
+  }
+}
+.navigation__item--active {
+  a {
+    @include link-colors($main-color-1, $main-color-1);
+  }
+  &::after {
+    @include split-line(bottom, 4px, $main-color-1);
   }
 }
