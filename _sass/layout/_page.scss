@@ -22,8 +22,6 @@ html,
 .page__main {
   height: 100%;
   color: $text-color;
-  background-color: $background-color;
-
   .col-aside {
     display: none;
     & > aside {
@@ -39,6 +37,7 @@ html,
   @include flexbox();
   @include flex-direction(column);
   min-height: 100%;
+  background-color: $background-color;
 }
 
 .page__content {
