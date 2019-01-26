@@ -5,32 +5,35 @@
       .mail-button {
         @include clickable($text-color-1, $mail-color);
       }
-      .weibo-button {
-        @include clickable($text-color-1, $weibo-color);
-      }
       .facebook-button {
         @include clickable($text-color-1, $facebook-color);
       }
       .twitter-button {
         @include clickable($text-color-1, $twitter-color);
       }
+      .weibo-button {
+        @include clickable($text-color-1, $weibo-color);
+      }
       .googlepluse-button {
         @include clickable($text-color-1, $google-plus-color);
       }
-      .github-button {
-        @include clickable($text-color-1, $github-color);
+      .telegram-button {
+        @include clickable($text-color-1, $telegram-color);
       }
-      .linkedin-button {
-        @include clickable($text-color-1, $linkedin-color);
+      .medium-button {
+        @include clickable($text-color-1, $medium-color);
       }
       .douban-button {
         @include clickable($text-color-1, $douban-color);
       }
+      .linkedin-button {
+        @include clickable($text-color-1, $linkedin-color);
+      }
+      .github-button {
+        @include clickable($text-color-1, $github-color);
+      }
       .npm-button {
         @include clickable($text-color-1, $npm-color);
-      }
-      .telegram-button {
-        @include clickable($text-color-1, $telegram-color);
       }
     }
   }

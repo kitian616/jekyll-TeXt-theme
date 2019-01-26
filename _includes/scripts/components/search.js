@@ -26,10 +26,10 @@
       modalVisible = visible;
       if (visible) {
         search.onShow && search.onShow();
-        useDefaultSearchBox && $searchInput[0].focus();
+        useDefaultSearchBox && $searchInput[0] && $searchInput[0].focus();
       } else {
         search.onShow && search.onHide();
-        useDefaultSearchBox && $searchInput[0].blur();
+        useDefaultSearchBox && $searchInput[0] && $searchInput[0].blur();
         setTimeout(function() {
           useDefaultSearchBox && ($searchInput.val(''), $searchBox.removeClass('not-empty'));
           search.clear && search.clear();

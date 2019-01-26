@@ -17,14 +17,6 @@
 
     {%- include snippets/get-locale-string.html key='FOLLOW_ME' -%}
 
-    {%- if _author.weibo -%}
-      <li title="{{ __return | replace: '[NAME]', 'Weibo' }}">
-        <a class="button button--circle weibo-button" itemprop="sameAs" href="https://weibo.com/{{ _author.weibo }}" target="_blank">
-          <div class="icon">{%- include svg/icon/social/weibo.svg -%}</div>
-        </a>
-      </li>
-    {%- endif -%}
-
     {%- if _author.facebook -%}
       <li title="{{ __return | replace: '[NAME]', 'Facebook' }}">
         <a class="button button--circle facebook-button" itemprop="sameAs" href="https://www.facebook.com/{{ _author.facebook }}" target="_blank">
@@ -41,6 +33,14 @@
       </li>
     {%- endif -%}
 
+    {%- if _author.weibo -%}
+      <li title="{{ __return | replace: '[NAME]', 'Weibo' }}">
+        <a class="button button--circle weibo-button" itemprop="sameAs" href="https://weibo.com/{{ _author.weibo }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/weibo.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
     {%- if _author.googleplus -%}
       <li title="{{ __return | replace: '[NAME]', 'Google+' }}">
         <a class="button button--circle googlepluse-button" itemprop="sameAs" href="https://plus.google.com/u/0/{{ _author.googleplus }}" target="_blank">
@@ -49,18 +49,18 @@
       </li>
     {%- endif -%}
 
-    {%- if _author.github -%}
-      <li title="{{ __return | replace: '[NAME]', 'Github' }}">
-        <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/{{ _author.github }}" target="_blank">
-          <div class="icon">{%- include svg/icon/social/github.svg -%}</div>
+    {%- if _author.telegram -%}
+      <li title="{{ __return | replace: '[NAME]', 'Telegram' }}">
+        <a class="button button--circle telegram-button" itemprop="sameAs" href="https://t.me/{{ _author.telegram }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/telegram.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
 
-    {%- if _author.linkedin -%}
-      <li title="{{ __return | replace: '[NAME]', 'Linkedin' }}">
-        <a class="button button--circle linkedin-button" itemprop="sameAs" href="https://www.linkedin.com/in/{{ _author.linkedin }}" target="_blank">
-          <div class="icon">{%- include svg/icon/social/linkedin.svg -%}</div>
+    {%- if _author.medium -%}
+      <li title="{{ __return | replace: '[NAME]', 'Medium' }}">
+        <a class="button button--circle medium-button" itemprop="sameAs" href="https://medium.com/{{ _author.medium }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/medium.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
@@ -73,6 +73,22 @@
       </li>
     {%- endif -%}
 
+    {%- if _author.linkedin -%}
+      <li title="{{ __return | replace: '[NAME]', 'Linkedin' }}">
+        <a class="button button--circle linkedin-button" itemprop="sameAs" href="https://www.linkedin.com/in/{{ _author.linkedin }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/linkedin.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if _author.github -%}
+      <li title="{{ __return | replace: '[NAME]', 'Github' }}">
+        <a class="button button--circle github-button" itemprop="sameAs" href="https://github.com/{{ _author.github }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/github.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
     {%- if _author.npm -%}
       <li title="{{ __return | replace: '[NAME]', 'npm' }}">
         <a class="button button--circle npm-button" itemprop="sameAs" href="https://www.npmjs.com/~{{ _author.npm }}" target="_blank">
@@ -81,12 +97,5 @@
       </li>
     {%- endif -%}
 
-    {%- if _author.telegram -%}
-      <li title="{{ __return | replace: '[NAME]', 'Telegram' }}">
-        <a class="button button--circle telegram-button" itemprop="sameAs" href="https://t.me/{{ _author.telegram }}" target="_blank">
-          <div class="icon">{%- include svg/icon/social/telegram.svg -%}</div>
-        </a>
-      </li>
-    {%- endif -%}
   </ul>
 </div>

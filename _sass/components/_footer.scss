@@ -5,10 +5,8 @@
 .footer {
   @include flexbox();
   @include align-items(center);
+  color: $footer-text-color;
   background: $footer-background;
-  p {
-    color: $footer-text-color;
-  }
   a {
     @include link-colors ($footer-text-color, $main-color-1);
   }

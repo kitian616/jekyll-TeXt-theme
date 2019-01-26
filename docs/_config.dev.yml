@@ -43,13 +43,14 @@ author:
   email     : 1
   facebook  : 1
   twitter   : 1
-  googleplus: 1
   weibo     : 1
+  googleplus: 1
+  telegram  : 1
+  medium    : 1
   douban    : 1
   linkedin  : 1
   github    : 1
   npm       : 1
-  telegram  : 1
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
