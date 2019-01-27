@@ -391,7 +391,12 @@ show_author_profile: true
       });
     });
   });
-})();</script></div><section class="page__comments d-print-none"><div id="js-gitalk-container"></div><script>
+})();</script></div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
 		window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
 		window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
 			var gitalk = new Gitalk({

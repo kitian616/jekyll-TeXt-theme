@@ -284,7 +284,7 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Grid</h1></header></div><meta itemprop="headline" content="Articles - Grid"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-27T22:34:32+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list grid grid--p-3"><div class="cell cell--12 cell--md-6 cell--lg-4">
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Grid</h1></header></div><meta itemprop="headline" content="Articles - Grid"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-27T23:31:42+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list grid grid--p-3"><div class="cell cell--12 cell--md-6 cell--lg-4">
           <div class="card card--flat"><div class="card__image"><img src="/jekyll-TeXt-theme/docs/assets/images/axure/page-single.jpg" /></div><div class="card__content">
                 <header>
                   <a href="/jekyll-TeXt-theme/page/single.html"><h2 class="card__header">Page - Single</h2></a>
@@ -389,7 +389,12 @@ articles:
 </code></pre></div>  </div>
 
 </div>
-</div><section class="page__comments d-print-none"><div id="js-gitalk-container"></div><script>
+</div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style><div class="gitalk-wrapper" id="js-gitalk-container"></div><script>
 		window.Lazyload.css('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css');
 		window.Lazyload.js('https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js', function() {
 			var gitalk = new Gitalk({
