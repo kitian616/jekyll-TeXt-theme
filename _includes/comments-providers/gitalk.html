@@ -5,9 +5,16 @@
 	site.comments.gitalk.owner and
 	site.comments.gitalk.admin -%}
 
+	<!-- fix text color in the input textarea of gitalk -->
+	<style type="text/css">
+		.gitalk-wrapper .gt-header-textarea {
+			color: #333 !important;
+		}
+	</style>
+
 	{%- include snippets/get-sources.html -%}
 	{%- assign _sources = __return -%}
-	<div id="js-gitalk-container"></div>
+	<div class="gitalk-wrapper" id="js-gitalk-container"></div>
 	{%- assign _admin = '' -%}
 	{%- for _admin_id in site.comments.gitalk.admin -%}
 		{%- assign _admin = _admin | append: ", '" | append: _admin_id | append: "'" -%}

@@ -18,21 +18,21 @@ ul.toc {
     @include link-colors($text-color, $main-color-1);
   }
   .toc-h1 {
-    a {
+    &, a {
       @include link-colors($text-color-d);
     }
     &.active {
-      a {
+      &, a {
         color: $main-color-1;
       }
     }
   }
   .toc-h5, .toc-h6 {
-    a {
+    &, a {
       @include link-colors($text-color-l);
     }
     &.active {
-      a {
+      &, a {
         color: $main-color-1;
       }
     }
