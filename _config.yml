@@ -46,8 +46,9 @@ author:
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name/
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name/
+  zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
+  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
+  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
@@ -153,6 +154,16 @@ pageview:
     app_class : # LeanCloud App class
 
 
+## => Search
+##############################
+search:
+  provider: default # "default" (default), false, "google", "custom"
+
+  ## Google Custom Search Engine
+  google:
+    custom_search_engine_id: # Google Custom Search Engine ID
+
+
 ## => Analytics
 ##############################
 analytics:
@@ -162,16 +173,6 @@ analytics:
   google:
     tracking_id : # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
-
-
-## => Search
-##############################
-search:
-  provider: default # "default" (default), false, "google", "custom"
-
-  ## Google Custom Search Engine
-  google:
-    custom_search_engine_id: # Google Custom Search Engine ID
 
 
 ## => Build

@@ -65,6 +65,14 @@
       </li>
     {%- endif -%}
 
+    {%- if _author.zhihu -%}
+      <li title="{{ __return | replace: '[NAME]', 'Zhihu' }}">
+        <a class="button button--circle zhihu-button" itemprop="sameAs" href="https://www.zhihu.com/people/{{ _author.zhihu }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/zhihu.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
     {%- if _author.douban -%}
       <li title="{{ __return | replace: '[NAME]', 'Douban' }}">
         <a class="button button--circle douban-button" itemprop="sameAs" href="https://www.douban.com/people/{{ _author.douban }}" target="_blank">

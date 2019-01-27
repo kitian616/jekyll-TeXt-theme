@@ -23,6 +23,9 @@
       .medium-button {
         @include clickable($text-color-1, $medium-color);
       }
+      .zhihu-button {
+        @include clickable($text-color-1, $zhihu-color);
+      }
       .douban-button {
         @include clickable($text-color-1, $douban-color);
       }
