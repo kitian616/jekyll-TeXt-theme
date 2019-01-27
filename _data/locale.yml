@@ -15,7 +15,9 @@ en: &EN
   LICENSE_ANNOUNCE        : "This work is licensed under a [LICENSE] license."
   POST_ON_GITHUB          : "Edit on Github"
   FOLLOW_ME               : "Follow me on [NAME]."
+  FOLLOW_US               : "Follow us on [NAME]."
   EMAIL_ME                : "Send me Email."
+  EMAIL_US                : "Send us Email."
   COPYRIGHT_DATES         : "2019"
 
 en-GB:
@@ -44,7 +46,9 @@ zh-Hans: &ZH_HANS
   LICENSE_ANNOUNCE        : "本文遵守 [LICENSE] 许可协议。"
   POST_ON_GITHUB          : "在 Github 上修改"
   FOLLOW_ME               : "在 [NAME] 上关注我。"
+  FOLLOW_US               : "在 [NAME] 上关注我们。"
   EMAIL_ME                : "给我发邮件。"
+  EMAIL_US                : "给我们发邮件。"
   COPYRIGHT_DATES         : "2019"
 
 zh:
@@ -71,7 +75,9 @@ zh-Hant: &ZH_HANT
   LICENSE_ANNOUNCE        : "本文遵守 [LICENSE] 許可協議。"
   POST_ON_GITHUB          : "在 Github 上修改"
   FOLLOW_ME               : "在 [NAME] 上關注我。"
+  FOLLOW_US               : "在 [NAME] 上關注我們。"
   EMAIL_ME                : "給我發郵件。"
+  EMAIL_US                : "給我們發郵件。"
   COPYRIGHT_DATES         : "2019"
 
 zh-TW:
@@ -96,7 +102,9 @@ ko: &KO
   LICENSE_ANNOUNCE        : "이 글의 저작권은 [LICENSE] 라이센스를 따릅니다."
   POST_ON_GITHUB          : "Github에서 확인하기"
   FOLLOW_ME               : "[NAME]에서 팔로우하기"
+  FOLLOW_US               : "[NAME]에서 팔로우하기"
   EMAIL_ME                : "이메일 보내기"
+  EMAIL_US                : "이메일 보내기"
   COPYRIGHT_DATES         : "2019"
 
 ko-KR:
