@@ -62,7 +62,8 @@
       }
     };
   })();
-})();(function() {
+})();
+(function() {
   window.throttle = function(func, wait) {
     var args, result, thisArg, timeoutId, lastCalled = 0;
 
@@ -89,7 +90,8 @@
       return result;
     };
   };
-})();(function() {
+})();
+(function() {
   var Set = (function() {
     var add = function(item) {
       var i, data = this._data;
@@ -231,7 +233,8 @@
       }
     };
   })(this.document);
-})();</script><script>
+})();
+</script><script>
   (function() {
     var TEXT_VARIABLES = {
       version: '2.2.4',
@@ -284,7 +287,7 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Item (Cover + Excerpt + Read More)</h1></header></div><meta itemprop="headline" content="Articles - Item (Cover + Excerpt + Read More)"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-28T00:24:31+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item"><div class="item__image"><img class="image" src="/jekyll-TeXt-theme/docs/assets/images/axure/page-single.jpg" /></div><div class="item__content">
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>Articles - Item (Cover + Excerpt + Read More)</h1></header></div><meta itemprop="headline" content="Articles - Item (Cover + Excerpt + Read More)"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-02-05T21:35:09+08:00"><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item"><div class="item__image"><img class="image" src="/jekyll-TeXt-theme/docs/assets/images/axure/page-single.jpg" /></div><div class="item__content">
           <header><a href="/jekyll-TeXt-theme/page/single.html"><h2 itemprop="headline" class="item__header">Page - Single</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">A post with a single column.</div><p><a href="/jekyll-TeXt-theme/page/single.html">Read more</a></p></div></div>
       </article><article class="item"><div class="item__image"><img class="image" src="/jekyll-TeXt-theme/docs/assets/images/axure/page-aside.jpg" /></div><div class="item__content">
@@ -488,7 +491,8 @@ articles:
     }
     $.fn.modal = modal;
   });
-})();</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
+})();
+</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
 (function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
@@ -573,7 +577,8 @@ articles:
       });
     }
   });
-})();</script><div class="search search--dark">
+})();
+</script><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -716,7 +721,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
   });
-});</script></div></div>
+});
+</script></div></div>
 
 
 <script>(function() {
@@ -731,7 +737,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.scrollToAnchor = scrollToAnchor;
   });
-})();(function() {
+})();
+(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     function affix(options) {
@@ -841,7 +848,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.affix = affix;
   });
-})();(function() {
+})();
+(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     function toc(options) {
@@ -947,9 +955,11 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.toc = toc;
   });
-})();/*(function () {
+})();
+/*(function () {
 
-})();*/</script><script>
+})();*/
+</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
@@ -981,6 +991,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     $root.dataset.isTouch = true;
     document.addEventListener('touchstart', function(){}, false);
   }
-})();</script>
+})();
+</script>
   </body>
 </html>

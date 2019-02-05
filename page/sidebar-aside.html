@@ -62,7 +62,8 @@
       }
     };
   })();
-})();(function() {
+})();
+(function() {
   window.throttle = function(func, wait) {
     var args, result, thisArg, timeoutId, lastCalled = 0;
 
@@ -89,7 +90,8 @@
       return result;
     };
   };
-})();(function() {
+})();
+(function() {
   var Set = (function() {
     var add = function(item) {
       var i, data = this._data;
@@ -231,7 +233,8 @@
       }
     };
   })(this.document);
-})();</script><script>
+})();
+</script><script>
   (function() {
     var TEXT_VARIABLES = {
       version: '2.2.4',
@@ -295,8 +298,8 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Page - Sidebar (Aside)</h1></header></div><meta itemprop="headline" content="Page - Sidebar (Aside)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jan 28, 2019</span>
-            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-01-28T00:24:31+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Page - Sidebar (Aside)</h1></header></div><meta itemprop="headline" content="Page - Sidebar (Aside)"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Feb 05, 2019</span>
+            </li></ul></div><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-02-05T21:35:09+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p>A post with a left sidebar.</p>
 
@@ -325,7 +328,7 @@ sidebar:
 <h3 id="header-21">Header 2.1</h3>
 
 <h2 id="header-3">Header 3</h2>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2019-01-28T00:24:31+08:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2019-02-05T21:35:09+08:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet --></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/jekyll-TeXt-theme/page/sidebar.html">Sidebar</a></div><div class="next"><span>NEXT</span><a href="/jekyll-TeXt-theme/page/article-header-overlay-background-fill.html">Article Header Overlay Background Fill</a></div></div></div>
 
@@ -354,7 +357,8 @@ sidebar:
       });
     });
   });
-})();</script></div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
+})();
+</script></div><section class="page__comments d-print-none"><!-- fix text color in the input textarea of gitalk -->
 	<style type="text/css">
 		.gitalk-wrapper .gt-header-textarea {
 			color: #333 !important;
@@ -500,7 +504,8 @@ sidebar:
     }
     $.fn.modal = modal;
   });
-})();</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
+})();
+</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
 (function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
@@ -585,7 +590,8 @@ sidebar:
       });
     }
   });
-})();</script><div class="search search--dark">
+})();
+</script><div class="search search--dark">
   <div class="main">
     <div class="search__header">Search</div>
     <div class="search-bar">
@@ -728,7 +734,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
   });
-});</script></div></div>
+});
+</script></div></div>
 
 
 <script>(function() {
@@ -743,7 +750,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.scrollToAnchor = scrollToAnchor;
   });
-})();(function() {
+})();
+(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     function affix(options) {
@@ -853,7 +861,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.affix = affix;
   });
-})();(function() {
+})();
+(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     function toc(options) {
@@ -959,15 +968,16 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
     $.fn.toc = toc;
   });
-})();/*(function () {
+})();
+/*(function () {
 
-})();*/</script><script>(function() {
+})();*/
+</script><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
 
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageMask = $('.js-page-mask');
     var $pageRoot = $('.js-page-root');
-    var $pageMain = $('.js-page-main');
     var $sidebarShow = $('.js-sidebar-show');
     var $sidebarHide = $('.js-sidebar-hide');
 
@@ -991,7 +1001,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       stopBodyScrolling(false); $pageRoot.removeClass('show-sidebar');
     });
   });
-})();</script><script>
+})();
+</script><script>
   /* toc must before affix, since affix need to konw toc' height. */(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
@@ -1026,7 +1037,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }, 100));
 
   });
-})();(function() {
+})();
+(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $window = $(window), $pageFooter = $('.js-page-footer');
@@ -1051,7 +1063,8 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
     window.pageAsideAffix = affix;
   });
-})();</script><script>
+})();
+</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
@@ -1083,6 +1096,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     $root.dataset.isTouch = true;
     document.addEventListener('touchstart', function(){}, false);
   }
-})();</script>
+})();
+</script>
   </body>
 </html>

@@ -62,7 +62,8 @@
       }
     };
   })();
-})();(function() {
+})();
+(function() {
   window.throttle = function(func, wait) {
     var args, result, thisArg, timeoutId, lastCalled = 0;
 
@@ -89,7 +90,8 @@
       return result;
     };
   };
-})();(function() {
+})();
+(function() {
   var Set = (function() {
     var add = function(item) {
       var i, data = this._data;
@@ -231,7 +233,8 @@
       }
     };
   })(this.document);
-})();</script><script>
+})();
+</script><script>
   (function() {
     var TEXT_VARIABLES = {
       version: '2.2.4',
@@ -447,7 +450,8 @@
     }
     $.fn.modal = modal;
   });
-})();</script></div>
+})();
+</script></div>
 
 
 <script>(function() {
@@ -462,7 +466,8 @@
     }
     $.fn.scrollToAnchor = scrollToAnchor;
   });
-})();(function() {
+})();
+(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     function affix(options) {
@@ -572,7 +577,8 @@
     }
     $.fn.affix = affix;
   });
-})();(function() {
+})();
+(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     function toc(options) {
@@ -678,9 +684,11 @@
     }
     $.fn.toc = toc;
   });
-})();/*(function () {
+})();
+/*(function () {
 
-})();*/</script><script>
+})();*/
+</script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
     $('.language-chart').each(function(){
@@ -712,6 +720,7 @@
     $root.dataset.isTouch = true;
     document.addEventListener('touchstart', function(){}, false);
   }
-})();</script>
+})();
+</script>
   </body>
 </html>
