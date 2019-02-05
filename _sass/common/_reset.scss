@@ -1,7 +1,21 @@
 @mixin block-elements {
-  h1, h2, h3, h4, h5, h6, p,
-  hr, blockquote, figure, pre, .highlighter-rouge,
-  ul, ol, dl, table, .footnotes {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  hr,
+  blockquote,
+  figure,
+  pre,
+  .highlighter-rouge,
+  ul,
+  ol,
+  dl,
+  table,
+  .footnotes {
     @content;
   }
 }
