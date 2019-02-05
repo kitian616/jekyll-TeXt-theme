@@ -10,8 +10,10 @@
     "demo-dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
     "demo-beta": "JEKYLL_ENV=beta bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
     "demo-production": "JEKYLL_ENV=production bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
-    "css-lint": "stylelint --syntax scss \"_sass/**/*.scss\"",
-    "css-fix": "stylelint --syntax scss \"_sass/**/*.scss\" --fix",
+    "eslint": "eslint \"_includes/**/*.js\"",
+    "eslint-fix": "eslint \"_includes/**/*.js\" --fix",
+    "stylelint": "stylelint --syntax scss \"_sass/**/*.scss\"",
+    "stylelint-fix": "stylelint --syntax scss \"_sass/**/*.scss\" --fix",
     "gem-build": "rm -fv jekyll-text-theme-*.gem && gem build jekyll-text-theme.gemspec",
     "gem-push": "gem push jekyll-text-theme-*.gem"
   },

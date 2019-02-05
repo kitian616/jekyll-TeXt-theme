@@ -4,7 +4,6 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageMask = $('.js-page-mask');
     var $pageRoot = $('.js-page-root');
-    var $pageMain = $('.js-page-main');
     var $sidebarShow = $('.js-sidebar-show');
     var $sidebarHide = $('.js-sidebar-hide');
 
