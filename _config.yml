@@ -35,7 +35,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : person # "person" (default), "organization"
-  name      : Glenn Paul Gara
+  name      : Glenn Paul P. Gara
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
