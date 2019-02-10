@@ -31,7 +31,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-    url: /hello.html
+    url: /publications.html
 
   - titles:
       en      : &EN       Students
