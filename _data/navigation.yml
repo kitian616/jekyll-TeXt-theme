@@ -48,7 +48,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-    url: /about.html
+    url: /index2.html
 
   - titles:
       en      : &EN       Teaching
