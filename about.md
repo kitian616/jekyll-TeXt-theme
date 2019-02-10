@@ -45,10 +45,12 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
 - RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
 
+
+<center>
 | 2017-Present | Doctor of Philosophy in Computer Science      |
 |    2012-2014 | Master in Information Technology              |
 |    2008-2012 | Bachelor of Science in Information Technology |
-
+</center>
 
 ## Skins
 
