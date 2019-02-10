@@ -14,7 +14,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       아카이브
       ko-KR   : *KO
-    url: /archive.html
+    url: /vitae.html
 
   - titles:
       en      : &EN       Publications
@@ -48,7 +48,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-    url: /index2.html
+    url: /archive.html
 
   - titles:
       en      : &EN       Teaching
