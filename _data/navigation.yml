@@ -1,6 +1,6 @@
 header:
   - titles:
-      en      : &EN       Archive
+      en      : &EN       Vitae
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -17,7 +17,24 @@ header:
     url: /archive.html
 
   - titles:
-      en      : &EN       About
+      en      : &EN       Research Projects
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  关于
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  關於
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       소개
+      ko-KR   : *KO
+    url: /about.html
+
+  - titles:
+      en      : &EN       Teaching
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
