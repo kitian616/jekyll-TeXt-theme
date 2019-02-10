@@ -65,4 +65,4 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-    url: /about.html
+    url: /404.html
