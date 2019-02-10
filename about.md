@@ -47,8 +47,7 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 
 
 
-| 2017-Present | Doctor of Philosophy in Computer Science      |
-|              | De La Salle University
+| 2017-Present | Doctor of Philosophy in Computer Science \\ De La Salle University |
 |    2012-2014 | Master in Information Technology              |
 |    2008-2012 | Bachelor of Science in Information Technology |
 
