@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 # articles:
 #   excerpt_type: html
 ---
