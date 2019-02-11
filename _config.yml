@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : Glenn Paul Gara
 description: > # this means to ignore newlines until "Language & timezone"
-  Machine learning beyond Euclidean space.
+  Learning beyond Euclidean space.
 
 
 ## => Language and Timezone
