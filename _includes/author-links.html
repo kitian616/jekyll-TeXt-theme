@@ -116,5 +116,16 @@
       </li>
     {%- endif -%}
 
+    {%- include snippets/get-locale-string.html key='SUBSCRIBE' -%}
+    {%- assign _locale_string_subscribe = __return -%}
+
+    {%- if site.paths.rss -%}
+      <li title="{{ _locale_string_subscribe }} via RSS">
+        <a class="button button--circle rss-button" itemprop="sameAs" href="{{ site.paths.rss }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/rss.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
   </ul>
 </div>
