@@ -2,7 +2,7 @@
 {%- assign _pageview = __return -%}
 
 
-{%- if page.layout == "home" -%}
+{%- if page.layout == "home" or page.layout == "articles" -%}
 
   {%- if jekyll.environment != "development" -%}
     {%- if site.pageview.provider == 'leancloud' -%}
