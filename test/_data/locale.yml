@@ -16,8 +16,8 @@ en: &EN
   POST_ON_GITHUB          : "Edit on Github"
   FOLLOW_ME               : "Follow me on [NAME]."
   FOLLOW_US               : "Follow us on [NAME]."
-  EMAIL_ME                : "Send me Email."
-  EMAIL_US                : "Send us Email."
+  EMAIL_ME                : "Send me an Email."
+  EMAIL_US                : "Send us an Email."
   COPYRIGHT_DATES         : "2019"
 
 en-GB:
