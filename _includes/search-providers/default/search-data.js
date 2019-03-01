@@ -4,10 +4,10 @@ window.TEXT_SEARCH_DATA={
     '{{ _collection.label }}':[
       {%- for _article in _collection.docs -%}
       {%- unless forloop.first -%},{%- endunless -%}
-      {'title':'{{ _article.title | url_encode }}',
+      {'title':{{ _article.title | jsonify }},
       {%- include snippets/prepend-baseurl.html path=_article.url -%}
       {%- assign _url = __return -%}
-      'url':'{{ _url | url_encode }}'}
+      'url':{{ _url | jsonify }}}
       {%- endfor -%}
     ]
   {%- endfor -%}
