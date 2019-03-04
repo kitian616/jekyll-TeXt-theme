@@ -89,6 +89,8 @@ TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob
 </p><style/onload=alert(1)>aa
 <a href="javascript:alert(1)>aa</a>
 
-<strong/onmouseover=alert(1)>aaa</a>aa
-         
-     
+<strong/onmouseover=alert(1)>aaa</strong>aa
+
+<code/onmouseover=alert(1)>aaa</code>aa
+
+<em/onmouseover=alert(1)>aaa</em>aa
