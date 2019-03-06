@@ -7,6 +7,9 @@
 
 .item__image {
   margin-right: map-get($spacers, 3);
+  display: grid;
+  justify-content: center;
+  align-items: center;
   & + .item__content {
     & > :first-child {
       margin-top: 0;
