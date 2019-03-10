@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: article
 title: Minecraft server starter
-categories: [python, script]
-description: Automatically wake-on-lan a server, remote access it, run commands, exit the console and let the commands running and run sudo commands without asking the password from the console.
-keywords: python, script, Minecraft, server, Minecraft server, wake-on-lan, wake on lan, remote access, ssh, plink, screen, linux, configparser
+tags: python, script, Minecraft, server, Minecraft server, wake-on-lan, wake on lan, remote access, ssh, plink, screen, linux, configparser
 ---
 
 I have an old laptop running Linux that I'm using as a server for my modded Minecraft world. And because I don't want the laptop to be on all the time I'm trying to make some scripts to automate the turn on and start of the server. This scripts will run from my main Windows computer.

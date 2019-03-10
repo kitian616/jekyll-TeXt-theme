@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: article
 title: Biblioteca
-categories: [c#, software]
-description: Software to manage a library
-keywords: C#, software, 2014, library, biblioteca, manage library, .net
+tags: C#, software, 2014, library, biblioteca, manage library, .net
 ---
 
 This is a software that I develop for school in 2014. The objective of the software is to manage a library. The software allows for the library worker to manage:

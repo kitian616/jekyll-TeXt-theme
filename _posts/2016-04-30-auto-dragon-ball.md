@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: article
 title: Auto Dragon Ball
-categories: [python, script]
-description: Automatically open a new episode of dragon ball Z and GT in VLC.
-keywords: python, script, dragon ball, z, gt, dbz, dbgt, dragon ball z, dragon ball gt, vlc
+tags: python, script, dragon ball, z, gt, dbz, dbgt, dragon ball z, dragon ball gt, vlc
 ---
 
 ## autoDBZ

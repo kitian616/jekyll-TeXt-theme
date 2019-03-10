@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: article
 title: Piano learning, week 1
-categories: [piano]
-description: Review of my first week of learning piano at home
-keywords: piano, piano learning, self learning, piano week
+tags: piano, piano learning, self learning, piano week
 ---
 
 ## Video review
