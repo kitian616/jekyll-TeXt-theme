@@ -1,12 +1,9 @@
 header:
-  - titles: Archive
+  - title: Archive
     url: /archive.html
 
-  - titles: About
+  - title: About
     url: /about.html
 
   - title: GitHub
     url: https://github.com/cyrillbrito
-
-  - title: Test
-    url: /folder/file
