@@ -1,7 +1,7 @@
 ---
 layout: article
-titles: About
+title: About
 key: page-about
 ---
 
-# This is the about page
+This is here I am going to write about me. Maybe like a cv
