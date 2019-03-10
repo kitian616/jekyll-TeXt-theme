@@ -6,7 +6,7 @@ tags: piano, piano learning, self learning, piano week
 
 ## Video review
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/hIW92Gde3zU" frameborder="0" allowfullscreen></iframe>
+<div>{%- include extensions/youtube.html id='hIW92Gde3zU' -%}</div>
 
 ## What have I done
 

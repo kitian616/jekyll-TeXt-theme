@@ -15,7 +15,7 @@ This is a software that I develop for school in 2014. The objective of the softw
 
 ## Video review
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/KrgrvRNMSUc" frameborder="0" allowfullscreen></iframe>
+<div>{%- include extensions/youtube.html id='KrgrvRNMSUc' -%}</div>
 
 ## Branches
 
