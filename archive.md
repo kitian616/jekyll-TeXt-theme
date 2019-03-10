@@ -1,5 +1,3 @@
 ---
 layout: archive
 ---
-
-this is the archive
