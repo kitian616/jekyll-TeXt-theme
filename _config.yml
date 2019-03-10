@@ -37,7 +37,7 @@ author:
   type      : # "person" (default), "organization"
   name      : Cyrill Brito
   url       : https://cyrillbrito.github.io
-  avatar    : # path or url of avatar image (square)
+  avatar    : https://media.licdn.com/dms/image/C5103AQG0LcxSObWUrg/profile-displayphoto-shrink_200_200/0?e=1557964800&v=beta&t=pay1o40qY1LO0_e-RbG_1-LjcEX74YeaogafiyE3K-E # path or url of avatar image (square)
   bio       : I am an amazing person.
   email     : cyrill.brito@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
@@ -49,7 +49,7 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : cyrill-brito-735075114 # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : cyrillbrito # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
@@ -74,7 +74,7 @@ paths:
 excerpt_separator: <!--more-->
 
 ## license
-license: # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
+license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 
 ## TOC
 toc:
@@ -207,12 +207,12 @@ defaults:
       type: posts
     values:
       layout: article
-      sharing: true
-      license: true
+      sharing: false
+      license: false
       aside:
         toc: true
-      show_edit_on_github: true
-      show_subscribe: true
+      show_edit_on_github: false
+      show_subscribe: false
       pageview: true
 
 
@@ -223,6 +223,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
 
 ## => Added by Cyrill
 ##############################
