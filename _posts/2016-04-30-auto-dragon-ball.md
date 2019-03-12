@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Auto Dragon Ball
-tags: python, script, dragon ball, z, gt, dbz, dbgt, dragon ball z, dragon ball gt, vlc
+title: Auto Dragon Ball Scripts
+tags: script python
 ---
 
 ## autoDBZ

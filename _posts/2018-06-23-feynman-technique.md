@@ -1,7 +1,7 @@
 ---
 layout: article
 title: The Feynman Technique
-tags: The Feynman Technique, Learning, Richard Feynman
+tags: self-improvement
 ---
 
 The Feynman Technique in a learning technique invented by Richard Feynman. This technique helps you to understand the subject you are trying to learn instead of just memorizing it. As Richard Feynman once said:

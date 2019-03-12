@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Piano learning, week 5
-tags: piano, piano learning, self learning, piano week
+tags: piano
 ---
 
 ## Video review
