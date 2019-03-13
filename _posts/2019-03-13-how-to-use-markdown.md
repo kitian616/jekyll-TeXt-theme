@@ -16,6 +16,4 @@ aside:
 GitHub Page使用markdown语法发布内容。
 :smile:
 
-123
-
-<script type="text/javascript" src="http://www.douban.com/service/badge/yanbook/?selection=random&amp;picsize=small&amp;show=collection&amp;n=2&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=2"></script>
+1234
