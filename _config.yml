@@ -118,7 +118,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: valine # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -137,8 +137,8 @@ comments:
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
   valine:
-    app_id      : # LeanCloud App id
-    app_key     : # LeanCloud App key
+    app_id      : ibiypvvh0LomMEw4eYC7ceV6-gzGzoHsz # LeanCloud App id
+    app_key     : c1i5IEmSfTJyOx1SpW6lykBt # LeanCloud App key
     placeholder : # Prompt information
     visitor     : # false (default)
     meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
@@ -169,11 +169,11 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: google # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : UA-136088776-1 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
