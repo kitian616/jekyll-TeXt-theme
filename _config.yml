@@ -19,7 +19,7 @@
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://fncool.info
-baseurl : # does not include hostname
+baseurl : / # does not include hostname
 title   : fncool.info
 description: > # this means to ignore newlines until "Language & timezone"
   Functionally cool information
