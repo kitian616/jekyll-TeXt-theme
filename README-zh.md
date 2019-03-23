@@ -90,7 +90,7 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 
 - 给该项目点赞 🌟
 - 赞同[这个知乎回答](https://www.zhihu.com/question/20223939/answer/122596506)
-- 关注我的 Github
+- 关注我的 GitHub
 - 打赏
 
 | 微信支付 | 支付宝 |

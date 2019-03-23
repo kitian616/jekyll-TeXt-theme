@@ -90,13 +90,13 @@
 .button--outline-theme-light {
   color: $main-color-theme-light;
   border: 1px solid $main-color-theme-light;
-  @include clickable($text-color-theme-dark, $main-color-theme-light);
+  @include clickable($main-color-theme-light, transparent, $text-color-theme-dark, $main-color-theme-light);
 }
 
 .button--outline-theme-dark {
   color: $main-color-theme-dark;
   border: 1px solid $main-color-theme-dark;
-  @include clickable($text-color-theme-light, $main-color-theme-dark);
+  @include clickable($main-color-theme-dark, transparent, $text-color-theme-light, $main-color-theme-dark);
 }
 
 .button--pill {
