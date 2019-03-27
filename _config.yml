@@ -7,7 +7,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 ## !USE TEXT THEME
-theme: jekyll-text-theme
+theme: jekyll-theme-cayman
 #
 # ,--------.      ,--.   ,--. ,--.
 # '--.  .--',---.  \  `.'  /,-'  '-.
