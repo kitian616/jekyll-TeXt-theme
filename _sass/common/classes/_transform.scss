@@ -1,4 +1,4 @@
 @mixin transform($value) {
   -webkit-transform: $value;
-          transform: $value;
+  transform: $value;
 }

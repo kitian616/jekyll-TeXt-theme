@@ -1,42 +1,24 @@
-.m-tags {
-  & > ul {
-    @include horizontal-space();
-    & > li > button {
-      box-sizing: border-box;
-      @include link-colors($text-color-1, $main-color-1, $text-color-2, $main-color-2, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
-      @include link-focus {
-        @include box-shadow(3, $main-color-2);
-      }
-      &.all {
-        @include link-colors($text-color-3, $main-color-3, $text-color-2, $main-color-2, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
-      }
-      & > .tag-count {
-        font-size: map-get($base, font-size-tiny);
-        display: inline-block;
-        line-height: 1;
-        margin-left: .2rem;
-        vertical-align: top;
-      }
+.site-tags {
+  .tag-button {
+    @include clickable($text-color-3, $main-color-3, default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+    & > .tag-button__count {
+      display: inline-block;
+      margin-left: map-get($spacers, 1);
+      font-size: map-get($base, font-size-xs);
+      line-height: 1;
+      vertical-align: top;
     }
   }
-  .tag-1 {
-    @include link-normal() {
-      background-color: rgba($main-color-1, .4);
-    }
+  .tag-button-1 {
+    @include clickable($text-color-1, rgba($main-color-1, .4), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
   }
-  .tag-2 {
-    @include link-normal() {
-      background-color: rgba($main-color-1, .55);
-    }
+  .tag-button-2 {
+    @include clickable($text-color-1, rgba($main-color-1, .55), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
   }
-  .tag-3 {
-    @include link-normal() {
-      background-color: rgba($main-color-1, .7);
-    }
+  .tag-button-3 {
+    @include clickable($text-color-1, rgba($main-color-1, .7), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
   }
-  .tag-4 {
-    @include link-normal() {
-      background-color: rgba($main-color-1, .9);
-    }
+  .tag-button-4 {
+    @include clickable($text-color-1, rgba($main-color-1, .9), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
   }
 }

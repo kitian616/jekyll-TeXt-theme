@@ -2,7 +2,7 @@
   @if $breakpoints == default {
     $breakpoints: $responsive;
   }
-  @media screen and (max-width: map-get($breakpoints, $name)) {
+  @media (max-width: map-get($breakpoints, $name) - 1) {
     @content;
   }
 }
@@ -11,8 +11,7 @@
   @if $breakpoints == default {
     $breakpoints: $responsive;
   }
-  @media screen and (min-width: map-get($breakpoints, $name)) {
+  @media (min-width: map-get($breakpoints, $name)) {
     @content;
   }
 }
-

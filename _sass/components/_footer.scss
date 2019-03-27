@@ -2,21 +2,32 @@
  * Site Info
  */
 
-.m-page-footer {
-  @include flexbox;
+.footer {
+  @include flexbox();
   @include align-items(center);
-  height: map-get($layout, footer-height);
-  margin-top: - map-get($layout, footer-height);
-  background-color: $main-color-3;
-  p {
-    color: $text-color-3;
-  }
+  color: $footer-text-color;
+  background: $footer-background;
   a {
-    @include link-text-colors ( $text-color-3, $main-color-1, $main-color-1);
+    @include link-colors ($footer-text-color, $main-color-1);
   }
   .site-info {
+    font-size: map-get($base, font-size-xs);
     text-align: center;
-    font-size: map-get($base, font-size-tiny);
-    margin: 0 auto;
+    .menu {
+      line-height: map-get($base, line-height-xs);
+      & > * {
+        &:not(:last-child) {
+          @include split-line(right, default, $footer-text-color);
+          padding-right: map-get($spacers, 1);
+          margin-right: map-get($spacers, 1);
+        }
+      }
+    }
+  }
+}
+.footer__author-links {
+  @include overflow(auto);
+  .author-links {
+    text-align: center;
   }
 }

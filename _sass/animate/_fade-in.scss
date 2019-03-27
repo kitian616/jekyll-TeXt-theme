@@ -1,4 +1,4 @@
-@keyframes fade-in {
+@include keyframes(fade-in) {
   from {
     opacity: 0;
   }

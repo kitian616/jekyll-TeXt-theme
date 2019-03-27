@@ -1,7 +1,19 @@
-.clearfix {
-  &:after {
-    content: "";
+@mixin clearfix() {
+  &::after {
     display: table;
     clear: both;
+    content: "";
   }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

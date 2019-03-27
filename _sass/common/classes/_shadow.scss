@@ -2,13 +2,21 @@
   @if $color == default {
     $color: #000;
   }
+  @if $level == 0 {
+    box-shadow: none;
+  }
   @if $level == 1 or $level == default {
-    box-shadow: 0 2px 10px rgba($color, 0.15);
+    box-shadow: 0 4px 8px rgba($color, .23), 0 1px 3px rgba($color, .08), 0 6px 12px rgba($color, .02);
   }
   @if $level == 2 {
-    box-shadow: 0 2px 4px rgba($color, .12), 0 2px 8px rgba($color, .06), 0 2px 10px rgba($color, .2);
+    box-shadow: 0 8px 16px rgba($color, .23), 0 2px 6px rgba($color, .08), 0 12px 24px rgba($color, .02);
   }
-  @if $level == 3 {
-    box-shadow: 0 4px 4px rgba($color, .16), 0 2px 8px rgba($color, .1), 0 4px 12px rgba($color, .25);
-  }
+}
+
+.box-shadow-1 {
+  @include box-shadow();
+}
+
+.box-shadow-2 {
+  @include box-shadow(2);
 }

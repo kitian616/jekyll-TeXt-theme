@@ -1,0 +1,34 @@
+---
+layout: article
+title: Page - Aside
+permalink: /page/aside.html
+key: page-aside
+cover: /docs/assets/images/axure/page-aside.jpg
+aside:
+  toc: true
+---
+
+A post with aside on the right.
+
+<!--more-->
+
+**front matter:**
+
+    ---
+    layout: article
+    title: Page - Aside
+    aside:
+      toc: true
+    ---
+
+## Header 1
+
+### Header 1.1
+
+### Header 1.2
+
+## Header 2
+
+### Header 2.1
+
+## Header 3
