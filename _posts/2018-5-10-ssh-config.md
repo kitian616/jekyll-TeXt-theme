@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ssh 配置文件 (ssh config) 介绍
 key: 20180510
 tags:
