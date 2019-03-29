@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="650 188 252 240" width="252" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="742 241 182 150" width="182" height="150">
   <defs/>
   <metadata> Produced by OmniGraffle 7.10.1 
-    <dc:date>2019-03-29 16:23:07 +0000</dc:date>
+    <dc:date>2019-03-29 16:58:22 +0000</dc:date>
   </metadata>
   <g id="Canvas_1" stroke-opacity="1" fill="none" fill-opacity="1" stroke-dasharray="none" stroke="none">
     <title>Canvas 1</title>
     <g id="Canvas_1: Layer 1">
       <title>Layer 1</title>
-      <g id="Graphic_12">
-        <ellipse cx="776" cy="308" rx="122.750196142458" ry="117.000186954522" fill="white"/>
-        <ellipse cx="776" cy="308" rx="122.750196142458" ry="117.000186954522" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
-      </g>
       <g id="Graphic_8">
         <title>Navigation</title>
-        <path d="M 776 210 L 701 373.64737 L 708.1 380 L 776 353.1579 L 843.9 380 L 851 373.64737 Z" fill="black"/>
+        <path d="M 924 316 L 760.3526 241 L 754 248.1 L 780.8421 316 L 754 383.9 L 760.3526 391 Z" fill="black"/>
       </g>
       <g id="Graphic_10">
         <title>WiFi Tethering</title>
