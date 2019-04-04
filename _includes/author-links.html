@@ -60,10 +60,10 @@
       </li>
     {%- endif -%}
 
-    {%- if _author.googlescholar -%}
-      <li title="{{ _locale_string_follow | replace: '[NAME]', 'googlescholar' }}">
-        <a class="button button--circle googlescholar-button" itemprop="sameAs" href="https://scholar.google.com/citations?user={{ _author.googlescholar }}&hl=en" target="_blank">
-          <div class="icon">{%- include svg/icon/social/googlescholar.svg -%}</div>
+    {%- if _author.Google_Scholar -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'Google_Scholar' }}">
+        <a class="button button--circle Google_Scholar-button" itemprop="sameAs" href="https://scholar.google.com/citations?user={{ _author.Google_Scholar }}&hl=en" target="_blank">
+          <div class="icon">{%- include svg/icon/social/Google_Scholar.svg -%}</div>
         </a>
       </li>
     {%- endif -%}

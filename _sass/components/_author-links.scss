@@ -17,8 +17,8 @@
       .googlepluse-button {
         @include clickable($text-color-1, $google-plus-color);
       }
-      .googlescholar-button {
-        @include clickable($text-color-1, $googlescholar-color);
+      .Google_Scholar-button {
+        @include clickable($text-color-1, $Google_Scholar-color);
       }
       .medium-button {
         @include clickable($text-color-1, $medium-color);
