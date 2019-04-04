@@ -36,7 +36,7 @@
 - Landing layout `data.sections` item's `image` add `full_width` setting
 - Remove `header.type` and add `header.background` setting
 - Page layout sidebar use document scroll when viewport width < 1024px, this enhance the user experience on a phone or a pad
-- Telegram social icon (@WangQiru)
+- googlescholar social icon (@WangQiru)
 - Search panel use dark background
 
 ## 2.2.0 (2018-09-16)
