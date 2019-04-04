@@ -22,13 +22,13 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : TransSim
 description: > # this means to ignore newlines until "Language & timezone"
-  A Github page to share the experience in ITS simulation.
+  A Github page to share the experience on ITS simulation.
 
 
 ## => Language and Timezone
 ##############################
 lang: # the language of your site, default as "en"
-timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone: Eire # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
@@ -36,8 +36,8 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : # "person" (default), "organization"
   name      : Ruisong Han
-  url       :
-  avatar    : # path or url of avatar image (square)
+  url       : https://tssg.org/staff/dr-ruisong-han/
+  avatar    : https://tssg.org/wp-content/uploads/2018/10/Ruisong-Han.jpg
   bio       : Postdoc Researcher at TSSG/WIT, Ireland.
   email     : rhan@tssg.org
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
@@ -48,14 +48,14 @@ author:
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  linkedin  : ruisonghan # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: ruisonghan/TransSim
 repository_tree: master
 
 
