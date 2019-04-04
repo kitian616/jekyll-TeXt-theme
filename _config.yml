@@ -209,7 +209,7 @@ defaults:
       layout: article
       sharing: true
       license: true
-      aside:
+      aside: true
         toc: true
       show_edit_on_github: true
       show_subscribe: true
