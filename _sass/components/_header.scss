@@ -86,8 +86,9 @@
     padding-bottom: 0;
     margin: 0;
     @include media-breakpoint-down(md) {
-      padding-bottom: 4px;
-      margin: -4px 0 0 0;
+      padding-top:1rem;
+      padding-bottom: 1rem;
+      margin: 0 0 0 0;
     }
     @include menu(3, 2, nowrap);
     @include align-items(center);
