@@ -17,6 +17,40 @@ header:
     url: /archive.html
 
   - titles:
+      en      : &EN       TransSec
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : *EN
+      zh      : *EN
+      zh-CN   : *EN
+      zh-SG   : *EN
+      zh-Hant : *EN
+      zh-TW   : *EN
+      zh-HK   : *EN
+      ko      : *EN
+      ko-KR   : *EN
+    url: http://www.transsec.eu/
+
+  - titles:
+      en      : &EN       TSSG
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : *EN
+      zh      : *EN
+      zh-CN   : *EN
+      zh-SG   : *EN
+      zh-Hant : *EN
+      zh-TW   : *EN
+      zh-HK   : *EN
+      ko      : *EN
+      ko-KR   : *EN
+    url: http://www.tssg.org/
+
+  - titles:
       en      : &EN       About
       en-GB   : *EN
       en-US   : *EN
