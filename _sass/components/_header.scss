@@ -18,7 +18,7 @@
   background: rgba(#000, .15);
   .navigation__item--active {
     &::after {
-      @include split-line(bottom, 40px, $text-color-theme-dark);
+      @include split-line(bottom, 4px, $text-color-theme-dark);
     }
   }
 }
@@ -28,7 +28,7 @@
   background: rgba(#fff, .15);
   .navigation__item--active {
     &::after {
-      @include split-line(bottom, 40px, $text-color-theme-light);
+      @include split-line(bottom, 4px, $text-color-theme-light);
     }
   }
 }
