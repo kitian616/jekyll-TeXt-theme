@@ -16,7 +16,13 @@ titles:
   ko      : &KO       소개
   ko-KR   : *KO
 key: page-about
+aside:
+toc:  true
 ---
+
+Thanks for visiting TransSim!
+
+You can visit the following links to know more about us.
 
 # About Me
 Check my profile on:
