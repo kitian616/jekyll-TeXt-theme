@@ -61,18 +61,18 @@
   @include flexbox();
   @include align-items(center);
   & > svg {
-    width: map-get($base, font-size-h4) * 10;
-    height: map-get($base, font-size-h4) * 10;
+    width: map-get($base, font-size-h4) * 8;
+    height: map-get($base, font-size-h4) * 8;
     margin-right: map-get($spacers, 10);
     vertical-align: bottom;
     @include media-breakpoint-down(md) {
-      width: map-get($base, font-size-h4) * 5;
-      height: map-get($base, font-size-h4) * 5;
+      width: map-get($base, font-size-h4) * 3;
+      height: map-get($base, font-size-h4) * 3;
     }
   }
   & > a {
     display: inline-block;
-    font-size: map-get($base, font-size-h4)*2;
+    font-size: map-get($base, font-size-h4)* 2;
     @include media-breakpoint-down(md) {
       font-size: map-get($base, font-size-h4-small);
     }
