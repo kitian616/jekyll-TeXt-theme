@@ -23,7 +23,7 @@ toc:  true
 
 We will use the BGL ```adjacency_list```, a template class with 6 template parameters.
 
-![adjacency_list](/assets/adjacency_list.jpg)
+![adjacency_list](/docs/assets/images/adjacency_list.jpg)
 
 Options for ```OutEdgeList``` and ```VertexList```:
 
