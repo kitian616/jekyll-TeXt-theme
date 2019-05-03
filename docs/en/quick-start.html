@@ -302,13 +302,37 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/1.1-quick-start.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Quick Start"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-05-03T17:19:56+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Quick Start"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-05-03T21:21:34+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p>TeXt Theme is 100% compatible with GitHub Pages and it has been developed as a <a href="https://jekyllrb.com/docs/themes/">gem-based themes</a> for easier use.</p>
 
 <p>In this document, you will learn how to <strong>install the theme</strong>, <strong>setup your site</strong>, <strong>local preview</strong> for development, <strong>build</strong> and <strong>publish</strong>.</p>
 
 <!--more-->
+
+<pre><code class="language-mermaid">graph LR;
+    A0[Installing TeXt]
+    B0[Common Method]
+    B1[Ruby Gem Method]
+    C0[Fork this repo]
+    C1[Clone from GitHub]
+    C2[Download]
+    D0[Setup Your Site]
+    E0[Installing Development Environment]
+    F0[Installing Directly]
+    F1[Docker]
+    A0--&gt;B0;
+    A0--&gt;B1;
+    B0--&gt;C0;
+    B0--&gt;C1;
+    B0--&gt;C2;
+    B1--&gt;D0;
+    C1--&gt;E0
+    C2--&gt;E0
+    D0--&gt;E0
+    E0--&gt;F0
+    E0--&gt;F1
+</code></pre>
 
 <h2 id="installing-the-theme">Installing the Theme</h2>
 
@@ -359,12 +383,6 @@
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-text-theme</span>
 </code></pre></div>    </div>
   </li>
-  <li>
-    <p>Then run Bundler to install the theme gem and dependencies:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="nt">--path</span> vendor/bundle
-</code></pre></div>    </div>
-  </li>
 </ol>
 
 <h2 id="setup-your-site">Setup Your Site</h2>
@@ -387,9 +405,44 @@
 
 <p>You can refer to the <a href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/test">/test folder</a>, this is a example with gem-based themes.</p>
 
+<h2 id="installing-development-environment">Installing Development Environment</h2>
+
+<p>If you want to run them them locally, you need first install Ruby and Jekyll, see <a href="https://jekyllrb.com/docs/installation/">Installation</a> for details.</p>
+
+<p>After that, run bundler to install the dependencies:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="nt">--path</span> vendor/bundle
+</code></pre></div></div>
+
+<p>And also, TeXt offer <a href="https://www.docker.com/">Docker</a> support for development and public, this make it easier to setup environment.</p>
+
+<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/docker.jpg" alt="Docker" /></p>
+
+<p>All you need todo is these 3 steps:</p>
+
+<ol>
+  <li>
+    <p><a href="https://docs.docker.com/install/">Install Docker</a>.</p>
+  </li>
+  <li>
+    <p>Generate <em>Gemfile.lock</em>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--rm</span> <span class="nt">-v</span> <span class="s2">"</span><span class="nv">$PWD</span><span class="s2">"</span>:/usr/src/app <span class="nt">-w</span> /usr/src/app ruby:2.6 bundle <span class="nb">install</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Build Docker image:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose <span class="nt">-f</span> ./docker/docker-compose.build-image.yml build
+</code></pre></div>    </div>
+  </li>
+</ol>
+
 <h2 id="local-preview">Local Preview</h2>
 
 <p>Run <code class="highlighter-rouge">bundle exec jekyll serve</code> to start the development server, then you can visit <a href="http://localhost:4000/">http://localhost:4000/</a> to preview your site.</p>
+
+<p>For Docker, run <code class="highlighter-rouge">docker-compose -f ./docker/docker-compose.default.yml up</code> to start the development server.</p>
 
 <h2 id="build-and-publish">Build and Publish</h2>
 
