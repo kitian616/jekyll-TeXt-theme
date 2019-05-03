@@ -2585,7 +2585,7 @@ ul.toc--navigator .toc-h4 {
     ul.toc--navigator .toc-h4 a:disabled {
       color: rgba(136, 136, 136, 0.2) !important; }
 ul.toc--navigator .toc-h1 {
-  color: #000; }
+  color: #222; }
   ul.toc--navigator .toc-h1, ul.toc--navigator .toc-h1 a {
     font-size: 1rem;
     line-height: 1.6; }
@@ -3032,7 +3032,6 @@ a > .item__header, a.item__header, .item__header > a {
       margin-right: 0; }
   @media (max-width: 499px) {
     .header__title {
-      height: 3rem;
       margin-right: 0; } }
   .header__title > .header__brand {
     -webkit-box-flex: 1;
@@ -3041,6 +3040,9 @@ a > .item__header, a.item__header, .item__header > a {
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1; }
+    @media (max-width: 499px) {
+      .header__title > .header__brand {
+        height: 3rem; } }
   .header__title > .search-button {
     display: none;
     margin-left: 0.5rem; }
