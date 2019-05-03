@@ -3032,6 +3032,7 @@ a > .item__header, a.item__header, .item__header > a {
       margin-right: 0; }
   @media (max-width: 499px) {
     .header__title {
+      height: auto;
       margin-right: 0; } }
   .header__title > .header__brand {
     -webkit-box-flex: 1;
