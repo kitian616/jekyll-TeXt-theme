@@ -42,11 +42,14 @@
   margin-right: map-get($spacers, 3);
   white-space: nowrap;
   @include media-breakpoint-down(md) {
-    height: map-get($layout, header-height-sm);
+    height: auto;
     margin-right: 0;
   }
   & > .header__brand {
     @include flex(1);
+    @include media-breakpoint-down(md) {
+      height: map-get($layout, header-height-sm);
+    }
   }
   & > .search-button {
     display: none;

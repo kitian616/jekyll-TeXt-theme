@@ -109,7 +109,7 @@ ul.toc--navigator {
       font-size: map-get($base, font-size);
       line-height: map-get($base, line-height);
     }
-    color: $text-color-d;
+    color: $text-color;
     a {
       @include link-colors($text-color-d);
     }
