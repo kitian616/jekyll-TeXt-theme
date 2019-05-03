@@ -292,7 +292,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-github-metadata
   - jemoji
 
 data_dir: /docs/_data
