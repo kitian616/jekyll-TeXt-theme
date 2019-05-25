@@ -58,19 +58,13 @@ Path=您的Potplayer安装路径\PotPlayerMini64.exe
 
 -- 美剧类：
 
-[人人影视](http://www.zmz2019.com)
-
-[天天美剧](http://www.ttzmz.vip)
+[人人影视](http://www.zmz2019.com)    [天天美剧](http://www.ttzmz.vip)
 
 各大字幕组
 
 -- 电影类：
 
-[电影天堂](https://www.dy2018.com)（非种子，只能迅雷） 
-
-[高清MP4吧](http://www.mp4ba.com)  
-
-[五号站](http://www.wuhaozhan.net/movie/list)
+[电影天堂](https://www.dy2018.com)（非种子，只能迅雷）     [高清MP4吧](http://www.mp4ba.com)      [五号站](http://www.wuhaozhan.net/movie/list)
 
 - 英文资源：
 
@@ -80,11 +74,7 @@ EZTV ,The Pirate Bay, YIFY
 
 - 字幕资源：
 
-[subHD](http:/subhd.com/)(中文） 
-
-[人人影视字幕](http://www.zmz2019.com/subtitle)（中文）  
-
-[opensubtitles 1](https://www.opensubtitles.org)（英文）  或者[opensubtitles 2](https://www.opensubtitles.com)
+[subHD](http:/subhd.com/)(中文）     [人人影视字幕](http://www.zmz2019.com/subtitle)（中文）      [opensubtitles 1](https://www.opensubtitles.org)（英文）  或者[opensubtitles 2](https://www.opensubtitles.com)
 
 各大字幕组
 
