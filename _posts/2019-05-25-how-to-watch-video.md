@@ -88,7 +88,9 @@ Path=您的Potplayer安装路径\PotPlayerMini64.exe
 
 各大字幕组
 
+---------
 参考
+
 [http://xiaolai.co/books/xiaolai-xuexi/1fb749afb52ed507ecd0d34e4d62d6e9.html](http://xiaolai.co/books/xiaolai-xuexi/1fb749afb52ed507ecd0d34e4d62d6e9.html)
 
 [https://digitalimmigrant.org/652](https://digitalimmigrant.org/652)
