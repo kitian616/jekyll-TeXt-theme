@@ -76,7 +76,7 @@ Path=您的Potplayer安装路径\PotPlayerMini64.exe
 
 [RARBG](https://rarbgprx.org/torrents.php) （推荐，最新最全最及时） 
 
-其它。。。
+EZTV ,The Pirate Bay, YIFY  
 
 - 字幕资源：
 
