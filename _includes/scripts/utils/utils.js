@@ -6,10 +6,6 @@
     return typeof val === 'string';
   };
 
-  window.decodeUrl = function(str) {
-    return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
-  };
-
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
   };

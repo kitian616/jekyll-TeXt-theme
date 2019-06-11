@@ -21,7 +21,7 @@
         appClass: '{{ _LEANCLOUD_APP_CLASS }}'
       });
       var key =   '{{ page.key }}';
-      var title = window.decodeUrl('{{ page.title | url_encode }}');
+      var title = {{ page.title | jsonify }};
       pageview.increase(key, title, function(view) {
         $("[data-page-key='{{ page.key }}']").text(view);
       });

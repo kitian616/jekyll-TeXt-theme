@@ -2,7 +2,7 @@ var SOURCES = window.TEXT_VARIABLES.sources;
 var PAHTS = window.TEXT_VARIABLES.paths;
 window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   var search = (window.search || (window.search = {}));
-  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
+  var searchData = window.TEXT_SEARCH_DATA || {};
 
   function memorize(f) {
     var cache = {};
@@ -11,21 +11,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       if (key in cache) return cache[key];
       else return cache[key] = f.apply(this, arguments);
     };
-  }
-
-  function initData(data) {
-    var _data = [], i, j, key, keys, cur;
-    keys = Object.keys(data);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i], _data[key] = [];
-      for (j = 0; j < data[key].length; j++) {
-        cur = data[key][j];
-        cur.title = window.decodeUrl(cur.title);
-        cur.url = window.decodeUrl(cur.url);
-        _data[key].push(cur);
-      }
-    }
-    return _data;
   }
 
   /// search
