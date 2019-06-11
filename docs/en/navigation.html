@@ -28,10 +28,6 @@
     return typeof val === 'string';
   };
 
-  window.decodeUrl = function(str) {
-    return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
-  };
-
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
   };
@@ -302,7 +298,7 @@
           <a class="edit-on-github"
             title="Edit on Github"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/en/2.2-navigation.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Navigation"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-05-08T00:36:00+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Navigation"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2019-06-11T23:16:25+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p>There are two types of navigation in TeXt: <strong>Header Navigation</strong> and <strong>Sidebar Navigation</strong>, both are defined in <em>data/navigation.yml</em>.</p>
 
@@ -660,7 +656,7 @@
 var PAHTS = window.TEXT_VARIABLES.paths;
 window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   var search = (window.search || (window.search = {}));
-  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
+  var searchData = window.TEXT_SEARCH_DATA || {};
 
   function memorize(f) {
     var cache = {};
@@ -669,21 +665,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       if (key in cache) return cache[key];
       else return cache[key] = f.apply(this, arguments);
     };
-  }
-
-  function initData(data) {
-    var _data = [], i, j, key, keys, cur;
-    keys = Object.keys(data);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i], _data[key] = [];
-      for (j = 0; j < data[key].length; j++) {
-        cur = data[key][j];
-        cur.title = window.decodeUrl(cur.title);
-        cur.url = window.decodeUrl(cur.url);
-        _data[key].push(cur);
-      }
-    }
-    return _data;
   }
 
   /// search

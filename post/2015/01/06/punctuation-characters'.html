@@ -28,10 +28,6 @@
     return typeof val === 'string';
   };
 
-  window.decodeUrl = function(str) {
-    return str ? decodeURIComponent(str.replace(/\+/g, '%20')) : '';
-  };
-
   window.hasEvent = function(event) {
     return 'on'.concat(event) in window.document;
   };
@@ -680,7 +676,7 @@
 var PAHTS = window.TEXT_VARIABLES.paths;
 window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   var search = (window.search || (window.search = {}));
-  var searchData = window.TEXT_SEARCH_DATA ? initData(window.TEXT_SEARCH_DATA) : {};
+  var searchData = window.TEXT_SEARCH_DATA || {};
 
   function memorize(f) {
     var cache = {};
@@ -689,21 +685,6 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
       if (key in cache) return cache[key];
       else return cache[key] = f.apply(this, arguments);
     };
-  }
-
-  function initData(data) {
-    var _data = [], i, j, key, keys, cur;
-    keys = Object.keys(data);
-    for (i = 0; i < keys.length; i++) {
-      key = keys[i], _data[key] = [];
-      for (j = 0; j < data[key].length; j++) {
-        cur = data[key][j];
-        cur.title = window.decodeUrl(cur.title);
-        cur.url = window.decodeUrl(cur.url);
-        _data[key].push(cur);
-      }
-    }
-    return _data;
   }
 
   /// search
@@ -1206,7 +1187,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
         appClass: 'TeXtDemo'
       });
       var key =   '20150106';
-      var title = window.decodeUrl('Test+-+%7E%60%21%40+%23%24%25%5E+%26%2A%28%29+-%3D_%2B+%5B%5D%7B%7D+%5C%7C%3B%3A+%2C.%3C%3E+%3F%2F%27%22+%CE%B1%CE%B2%CE%B3%CE%B4+%C3%81%C3%80%C3%82%C3%84%C3%83%C4%84%C3%86+%C2%AE%E2%98%83%EF%B8%8E%E2%8C%98%E2%9C%89%EF%B8%8E+%F0%9F%98%82%F0%9F%A4%A3%F0%9F%91%BB%F0%9F%91%BD');
+      var title = "Test - ~`!@ #$%^ &*() -=_+ []{} \\|;: ,.<> ?/'\" αβγδ ÁÀÂÄÃĄÆ ®☃︎⌘✉︎ 😂🤣👻👽";
       pageview.increase(key, title, function(view) {
         $("[data-page-key='20150106']").text(view);
       });
