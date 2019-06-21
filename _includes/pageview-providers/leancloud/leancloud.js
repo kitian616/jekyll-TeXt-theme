@@ -6,13 +6,14 @@
     }
   }
 
-  function pageview(_AV  ,options) {
+  function pageview(_AV, options) {
     var AV = _AV;
     var appId, appKey, appClass;
     appId = options.appId;
     appKey = options.appKey;
     appClass = options.appClass;
     AV.init({
+      serverURLs: 'https://avoscloud.com',
       appId: appId,
       appKey: appKey
     });
