@@ -237,7 +237,7 @@
       sources: {
         font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
-        leancloud_js_sdk: '//cdn1.lncld.net/static/js/3.4.1/av-min.js',
+        leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js',
         chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
         gitalk: {
           js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js',
@@ -302,7 +302,7 @@
 And here is <code class="highlighter-rouge"> `some` </code> text (note the two spaces so that one is left
 in the output!).</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'</span><span class="p">))();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!</span><span class="dl">'</span><span class="p">))();</span>
 </code></pre></div></div>
 
 <!--more-->
@@ -348,7 +348,7 @@ This text belongs to the same code block.
 
 <hr />
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'hello, world!'</span><span class="p">))();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello, world!</span><span class="dl">'</span><span class="p">))();</span>
 </code></pre></div></div>
 
 <p><strong>markdown:</strong></p>
@@ -365,7 +365,7 @@ This text belongs to the same code block.
 
 <h2 id="highlighting-code-snippets">Highlighting Code Snippets</h2>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'hello, world!'</span><span class="p">))();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello, world!</span><span class="dl">'</span><span class="p">))();</span></code></pre></figure>
 
 <p><strong>markdown:</strong></p>
 
@@ -380,10 +380,11 @@ This text belongs to the same code block.
 2
 3
 4
-</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">hello</span> <span class="o">=</span> <span class="s1">'hello'</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">world</span> <span class="o">=</span> <span class="s1">'world'</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">space</span> <span class="o">=</span> <span class="s1">' '</span><span class="p">;</span>
-<span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span><span class="p">))();</span></pre></td></tr></tbody></table></code></pre></figure>
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">hello</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">world</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">world</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">space</span> <span class="o">=</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">;</span>
+<span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">hello</span> <span class="o">+</span> <span class="nx">space</span> <span class="o">+</span> <span class="nx">world</span><span class="p">))();</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p><strong>markdown:</strong></p>
 
@@ -397,7 +398,7 @@ var space = ' ';
 
 <hr />
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'</span><span class="p">))();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!</span><span class="dl">'</span><span class="p">))();</span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-none" data-lang="none">(() =&gt; console.log('hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world! hello, world!'))();</code></pre></figure>
 
@@ -1193,13 +1194,14 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   }
 
-  function pageview(_AV  ,options) {
+  function pageview(_AV, options) {
     var AV = _AV;
     var appId, appKey, appClass;
     appId = options.appId;
     appKey = options.appKey;
     appClass = options.appClass;
     AV.init({
+      serverURLs: 'https://avoscloud.com',
       appId: appId,
       appKey: appKey
     });
@@ -1258,7 +1260,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 })();
 </script>
   <script>
-    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn1.lncld.net/static/js/3.4.1/av-min.js'], function() {
+    window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js'], function() {
       var pageview = window.pageview(AV, {
         appId:    'uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz',
         appKey:   'Mzf5m9skSwYVWVXhGiYMNyXs',
