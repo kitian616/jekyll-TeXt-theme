@@ -39,23 +39,26 @@ docs-en:
   - title:      Programming notes
     children:
       - title:  Python
-        url:    
+        url:
       - title:  R
-        url:    
+        url:
       - title:  C/C++
-        url:    
+        url:
       - title:  Visualization
-        url:          
+        url:
+      - title:  Etc
+        url:
   - title:      Mathematics / Statistics
   - title:      Projects
     children:
       - title:  Examples
-        url:    
+        url:
       - title:  kaggle
-        url:    
+        url:
   - title:      Papers
     children:
       - title:  Base
-        url:    
+        url:
       - title:  Finance
-        url:    
+        url:
+  - title:      Papers
