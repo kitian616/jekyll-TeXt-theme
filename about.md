@@ -15,12 +15,11 @@ titles:
   zh-HK   : *ZH_HANT
   ko      : &KO       소개
   ko-KR   : *KO
-key: page-about
+# key: page-about
 ---
 
 I am a graduate student in the Department of Computer Engineering at Inha University.  
-
-My research interests lie on the un/semi-supervised learning and anomaly detection.
+My research interests broadly lie on the data science, namely un/semi-supervised learning and anomaly detection.
 
 # Contact
 Email: djyoon0223@gmail.com
