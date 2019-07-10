@@ -15,7 +15,7 @@ titles:
   zh-HK   : *ZH_HANT
   ko      : &KO       소개
   ko-KR   : *KO
-# key: page-about
+key: page-about
 ---
 
 I am a graduate student in the Department of Computer Engineering at Inha University.  
