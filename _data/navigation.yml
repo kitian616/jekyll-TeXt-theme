@@ -1,3 +1,5 @@
+sidebar:
+  nav: docs-en
 header:
   - titles:
       en      : &EN       Archive
@@ -57,6 +59,3 @@ docs-en:
         url:    
       - title:  Finance
         url:    
-
-sidebar:
-  nav: docs-en
