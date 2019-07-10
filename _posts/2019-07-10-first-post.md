@@ -2,10 +2,8 @@
 layout: article
 title: First post
 tags: Etc
-aside:
-  toc: true
 sidebar:
-  nav: layouts
+  nav: docs-en
 ---
 
 This is the first post in my notes blog.  
