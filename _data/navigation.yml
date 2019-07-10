@@ -63,5 +63,6 @@ docs-en:
       - title:  Finance
         url: /archive.html?tag=Finance
   - title:      Etc
+    children:
       - title:  Etc
         url: /archive.html?tag=Etc
