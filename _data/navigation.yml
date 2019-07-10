@@ -32,3 +32,28 @@ header:
       ko      : &KO       소개
       ko-KR   : *KO
     url: /about.html
+
+docs-en:
+  - title:      Programming notes
+    children:
+      - title:  Python
+        url:    
+      - title:  R
+        url:    
+      - title:  C/C++
+        url:    
+      - title:  Visualization
+        url:          
+  - title:      Mathematics / Statistics
+  - title:      Projects
+    children:
+      - title:  Examples
+        url:    
+      - title:  kaggle
+        url:    
+  - title:      Papers
+    children:
+      - title:  Base
+        url:    
+      - title:  Finance
+        url:    
