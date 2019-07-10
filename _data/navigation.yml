@@ -37,26 +37,28 @@ docs-en:
   - title:      Programming notes
     children:
       - title:  Python
-        url:
+        url: /archive.html?tag=Python
       - title:  R
-        url:
+        url: /archive.html?tag=R
       - title:  C/C++
-        url:
+        url: /archive.html?tag=C/C++
       - title:  Visualization
-        url:
+        url: /archive.html?tag=Visualization
       - title:  Etc
-        url:
+        url: /archive.html?tag=Etc_prog
   - title:      Mathematics / Statistics
+    url: /archive.html?tag=Math & /archive.html?tag=Stat
   - title:      Projects
     children:
       - title:  Examples
-        url:
+        url: /archive.html?tag=Examples
       - title:  kaggle
-        url:
+        url: /archive.html?tag=kaggle
   - title:      Papers
     children:
       - title:  Base
-        url:
+        url: /archive.html?tag=Base_paper
       - title:  Finance
-        url:
+        url: /archive.html?tag=Finance
   - title:      Etc
+    url: /archive.html?tag=Etc
