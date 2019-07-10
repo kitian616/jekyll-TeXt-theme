@@ -34,7 +34,7 @@ header:
     url: /about.html
 
 docs-en:
-  - title:      Programming notes
+  - title:      Programming
     children:
       - title:  Python
         url: /archive.html?tag=Python
@@ -47,7 +47,9 @@ docs-en:
       - title:  Etc
         url: /archive.html?tag=Etc_prog
   - title:      Mathematics / Statistics
-    url: /archive.html?tag=Math & /archive.html?tag=Stat
+    children:
+      - title:  Base
+        url: /archive.html?tag=Math
   - title:      Projects
     children:
       - title:  Examples
@@ -61,4 +63,5 @@ docs-en:
       - title:  Finance
         url: /archive.html?tag=Finance
   - title:      Etc
-    url: /archive.html?tag=Etc
+      - title:  Etc
+        url: /archive.html?tag=Etc
