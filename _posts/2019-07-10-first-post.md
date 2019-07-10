@@ -1,5 +1,5 @@
 ---
-title: First post - D
+title: First post
 tags: Etc
 ---
 
