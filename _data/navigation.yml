@@ -66,3 +66,7 @@ docs-en:
     children:
       - title:  Etc
         url: /archive.html?tag=Etc
+      - title:  Github
+        url: /archive.html?tag=Github
+      - title:  Markdown
+        url: /archive.html?tag=Markdown
