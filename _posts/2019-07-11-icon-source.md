@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Favicon source
-tags: Etc
+tags: Github
 sidebar:
   nav: docs-en
 ---
