@@ -8,8 +8,7 @@ sidebar:
 
 **1. 이미지 다운**
 
-512x512 이상의 1:1 비율의 이미지(png 등)를 고른다.
-navigation bar에 나타나는 logo로 사용할 svg 혹은 ai 파일을 고른다. (`_includes/svg/icon/social`에 들어가보면 유명한 community svg 파일들이 있다)
+512x512 이상의 1:1 비율의 이미지(png 등)와 navigation bar에 나타나는 logo로 사용할 svg 혹은 ai 파일을 고른다. (`_includes/svg/icon/social`에 들어가보면 유명한 community svg 파일들을 사용해도 좋다!)
 
 **2. Favicon으로 변환**
 
