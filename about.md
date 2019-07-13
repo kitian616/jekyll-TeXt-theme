@@ -18,7 +18,7 @@ titles:
 key: page-about
 ---
 
-I am a graduate student in the Department of Computer Engineering at Inha University.
+I am a graduate student in the Department of Computer Engineering at Inha University.  
 My research interests broadly lie on the data science, namely un/semi-supervised learning and anomaly detection.
 
 # Contact
