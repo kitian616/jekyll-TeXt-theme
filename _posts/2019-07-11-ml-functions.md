@@ -296,6 +296,7 @@ np.sqrt(mean - zmargin), np.sqrt(mean + zmargin)
 ## 1. Use joblib
 ```Python
 import joblib
+
 joblib.dump(grid_search.best_estimator_, 'model_name.pkl')
 model_loaded = joblib.load('model_name.pkl')
 ```
@@ -305,6 +306,7 @@ model_loaded = joblib.load('model_name.pkl')
 ## 1. Set plot parameters
 ```Python
 import matplotlib.pyplot as plt
+
 plt.rcParams['axes.labelsize'] = 14
 plt.rcParams['xtick.labelsize'] = 12
 plt.rcParams['ytick.labelsize'] = 12
