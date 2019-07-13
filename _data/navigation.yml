@@ -46,6 +46,10 @@ docs-en:
         url: /archive.html?tag=Visualization
       - title:  Etc
         url: /archive.html?tag=Etc_prog
+  - title:      Machine learning
+    children:
+      - title:  Theory
+        url: /archive.html?tag=Theory
   - title:      Mathematics / Statistics
     children:
       - title:  Base
