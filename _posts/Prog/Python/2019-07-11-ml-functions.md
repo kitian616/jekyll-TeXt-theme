@@ -13,7 +13,7 @@ aside:
 
 ---
 # Import libraries
-{% highlight python %}
+{% highlight python linenos %}
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plot
