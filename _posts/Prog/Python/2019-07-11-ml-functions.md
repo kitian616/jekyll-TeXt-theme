@@ -13,12 +13,12 @@ aside:
 
 ---
 # Import libraries
-```Python
+{% highlight python %}
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plot
 %matplotlib inline
-```
+{% endhighlight %}
 
 # I. Get the data
 ## 1. Read CSV
