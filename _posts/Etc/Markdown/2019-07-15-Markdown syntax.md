@@ -9,13 +9,13 @@ aside:
 ---
 
 ### 1. Code block
-다음과 같이 적어주면 예쁜 syntax highlight를 볼 수 있다.
+다음과 같이 적어주면 예쁜 syntax highlight를 볼 수 있는데, markdown이 먹히질 않는다..
 
 **markdown:**
 
     {% highlight python linenos %}
     # Code here
-    {% endhighlight %}
+    {% endhighlight %}    
 
 <br>
 ### 2. LaTex symbols
