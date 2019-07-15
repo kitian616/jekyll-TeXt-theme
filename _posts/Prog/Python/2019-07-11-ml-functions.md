@@ -24,21 +24,21 @@ import matplotlib.pyplot as plot
 
 # I. Get the data
 ## 1. Read CSV
-```Python
+{% highlight python linenos %}
 housing = pd.read_csv(csv_path)
-```
+{% endhighlight %}
 
 ## 2. Abstract
-```Python
+{% highlight python linenos %}
 housing.head()
 housing.info()
 housing.describe()
 housing.hist(bins=50, figsize=(20, 15))
 housing['ocean_proximity'].value_couns()
-```
+{% endhighlight %}
 
 ## 3. Split stratified train and test set
-```Python
+{% highlight python linenos %}
 from sklearn.model_selection import train_test_split
 
 # In case, you should make strata
@@ -47,42 +47,42 @@ housing['income_cat'].where(housing['income_cat'] < 5, 5.0, inplace=True)
 
 train_set, test_set = train_test_split(housing, housing['income_cat'], test_size=0.2, random_state=42)
 train_set.drop('income_cat', axis=1, inplace=True);  test_set.drop('income_cat', axis=1, inplace=True)
-```
+{% endhighlight %}
 
 # II. Discover and visualize the data to gain insights
 ## 1. Detail plotting
-```Python
+{% highlight python linenos %}
 ax = housing.plot(kind='scatter', x='longitude', y='latitude', alpha=0.4,
                   s=housing['population'], label='Population', c='median_house_value',
                   cmap=plt.get_cmap('jet'), colorbar=True, sharex=False)
 ax.set(xlabel='Longitude', ylabel='Latitude')
-```
+{% endhighlight %}
 
 ## 2. Correlation analysis
-```Python
+{% highlight python linenos %}
 from pandas.plotting import scatter_matrix
 
 corr_mat = housing.corr()
 cc = corr_mat['median_house_value'].sort_values(ascending=False)
 attr = cc[:5]  # Top 5 correlation attributes
 scatter_matrix(housing[attr])
-```
+{% endhighlight %}
 
 ## 3. Combine attributes
-```Python
+{% highlight python linenos %}
 housing['rooms_per_household'] = housing['total_rooms'] / housing['households']
 cc = corr_mat['median_house_value'].sort_values(ascending=False)  # Check more higher correlation
-```
+{% endhighlight %}
 
 # III. Prepare the data for Machine Learning algorithms
 ## 1. Split attributes(features) and labels
-```Python
+{% highlight python linenos %}
 housing = train_set.drop('median_house_value', axis=1)
 housing_labels = train_set['median_house_value'].copy()
-```
+{% endhighlight %}
 
 ## 2. Process the missing values
-```Python
+{% highlight python linenos %}
 sample_incomplete_rows = housing[housing.isnull().any(axis=1)]  # Check first
 
 # Option 1
@@ -95,18 +95,18 @@ imputer = SimpleImputer(strategy='median')  # Storing the median is important!
 X = imputer.fit_transform(housing_num)
 imputer.statistics_  # Check median
 housing_tr = pd.DataFrame(X, columns=num_attr, index=housing.index)
-```
+{% endhighlight %}
 
 ## 3. Split number and categorical attributes
-```Python
+{% highlight python linenos %}
 cat_attr = ['ocean_proxmimy', ...]
 num_attr = [attr for attr in housing.columns if attr not in cat_attr]
 housing_cat = housing.drop(cat_attr)
 housing_num = housing[num_attr]
-```
+{% endhighlight %}
 
 ## 4. Preprocess pipeline
-```Python
+{% highlight python linenos %}
 from sklearn.compose import ColumnTransformer
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import pipeline
@@ -146,58 +146,58 @@ full_pipeline = ColumnTransformer([
 
 X_train_pp = full_pipeline.fit_transform(X_train)
 idx = Idx2enum()
-```
+{% endhighlight %}
 
 # IV. Select and train a model
 ## 1. Linear regression
-```Python
+{% highlight python linenos %}
 from sklearn.linear_model import LinearRegression
 
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 predictions = lin_reg.predict(housing_prepared)
-```
+{% endhighlight %}
 
 ## 2. Decision tree
-```Python
+{% highlight python linenos %}
 from sklearn.tree import DecisionTreeRegressor
 
 tree_reg = DecisionTreeRegressor(random_state=42)
 tree_reg.fit(housing_prepared, housing_labels)
 predictions = tree_reg.predict(housing_prepared)
-```
+{% endhighlight %}
 
 ## 3. RandomForest
-```Python
+{% highlight python linenos %}
 from sklearn.ensemble import RandomForestRegressor
 
 forest_reg = RandomForestRegressor(n_estimators=10, random_state=42)
 forest_reg.fit(housing_prepared, housing_labels)
 predictions = forest_reg.predict(housing_prepared)
-```
+{% endhighlight %}
 
 ## 4. SVM
-```Python
+{% highlight python linenos %}
 from sklearn.svm import SVR
 
 svm_reg = SVR(kernel='linear')  # 'rbf'
 svm_reg.fit(housing_prepared, housing_labels)
 predictions = svm_reg.predict(housing_prepared)
-```
+{% endhighlight %}
 
 
 ## 5. Metrics
-```Python
+{% highlight python linenos %}
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 lin_mse = mean_squared_error(housing_labels, predictions)
 lin_rmse = np.sqrt(lin_mse)
 lin_mae = mean_absolute_error(housing_labels, predictions)
-```
+{% endhighlight %}
 
 # V. Fine-tune the model
 ## 1. Cross validation
-```Python
+{% highlight python linenos %}
 from sklearn.model_selection import cross_val_score
 
 scores = cross_val_score(tree_reg, housing_prepared, housing_labels, scoring='neg_mean_squared_error', cv=10)
@@ -209,11 +209,11 @@ def display_scores(scores):
     print("Standard deviation:", scores.std())
 
 display_scores(tree_rmse_scores)
-```
+{% endhighlight %}
 
 ## 2. Grid / Random search
 ### 1) Grid search
-```Python
+{% highlight python linenos %}
 from sklearn.model_selection import GridSearchCV
 
 param_grid = [
@@ -225,10 +225,10 @@ forest_reg = RandomForestRegressor(random_state=42)
 grid_search = GridSearchCV(forest_reg, param_grid, cv=5,
                            scoring='neg_mean_squared_error', return_train_score=True)
 grid_search.fit(housing_prepared, housing_labels)
-```
+{% endhighlight %}
 
 ### 2) Random search
-```Python
+{% highlight python linenos %}
 from sklearn.model_selection import RandomSearchCV
 from scipy.stats import randint
 
@@ -240,20 +240,20 @@ forest_reg = RandomForestRegressor(random_state=42)
 rnd_search = RandomizedSearchCV(forest_reg, param_distributions=param_dist, n_iter=10, cv=5,
                                 scoring='neg_mean_squared_error', random_state=42)
 rnd_search.fit(housing_prepared, housing_labels)
-```
+{% endhighlight %}
 
 ### 3) Evaluation
-```Python
+{% highlight python linenos %}
 grid_search.best_params_  # equal to rnd_search
 grid_search.best_estimator_
 cvres = grid_search.cv_results_
 for mean_score, params in zip(cvres['mean_test_score'], cvres['params']):
     print(np.sqrt(-mean_score), params)
 pd.DataFrame(grid_search.cv_results_)
-```
+{% endhighlight %}
 
 ## 3. Feature importances
-```Python
+{% highlight python linenos %}
 feature_importances = grid_search.best_estimator_.feature_importances_
 
 extra_attribs = ["rooms_per_hhold", "bedrooms_per_room"]
@@ -261,11 +261,11 @@ cat_encoder = full_pipeline.named_transformers_["cat_encoder"]
 cat_one_hot_attr = list(cat_encoder.categories_[0])
 attributes = num_attr + extra_attr + cat_one_hot_attr
 sorted(zip(feature_importances, attributes), reverse=True)
-```
+{% endhighlight %}
 
 ## 4. Final scores
 ### 1) Final expectation value
-```Python
+{% highlight python linenos %}
 final_model = grid_search.best_estimator_
 
 X_test = test_set.drop('median_house_value', axis=1)
@@ -274,10 +274,10 @@ y_test = test_set['median_house_value'].copy()
 X_test_prepared = full_pipeline.transform(X_test)
 final_predictions = final_model.predict(X_test_prepared)
 final_rmse = np.sqrt(mean_squared_error(y_test, final_predictions))
-```
+{% endhighlight %}
 
 ### 2) 95% confidence interval for the test RMSE
-```Python
+{% highlight python linenos %}
 from scipy import stats
 
 # t-scores
@@ -292,21 +292,21 @@ np.sqrt(stats.t.interval(confidence, m - 1), loc=np.mean(squared_errors),
 zscore = stats.norm.ppf((1 + confidence) / 2)
 zmargin = zscore * squared_errors.std(ddof=1) / np.sqrt(m)
 np.sqrt(mean - zmargin), np.sqrt(mean + zmargin)
-```
+{% endhighlight %}
 
 # VI. Model persistence
 ## 1. Use joblib
-```Python
+{% highlight python linenos %}
 import joblib
 
 joblib.dump(grid_search.best_estimator_, 'model_name.pkl')
 model_loaded = joblib.load('model_name.pkl')
-```
+{% endhighlight %}
 
 
 # Visualization
 ## 1. Set plot parameters
-```Python
+{% highlight python linenos %}
 import matplotlib.pyplot as plt
 
 plt.rcParams['axes.labelsize'] = 14
@@ -315,10 +315,10 @@ plt.rcParams['ytick.labelsize'] = 12
 
 matplotlib.rc('font', family='NanumBarunGothic')  # 한글폰트 지원
 plt.rcParams['axes.unicode_minus'] = False
-```
+{% endhighlight %}
 
 ## 2. Save figure
-```Python
+{% highlight python linenos %}
 if os.path.isdir(dir_path):
     plt.savefig(img_path)
-```
+{% endhighlight %}
