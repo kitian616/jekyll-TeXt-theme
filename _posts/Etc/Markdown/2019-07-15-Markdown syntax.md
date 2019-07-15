@@ -11,9 +11,9 @@ aside:
 1. Code block
 다음과 같이 적어주면 예쁜 syntax highlight를 볼 수 있다.
 
-{% highlight python linenos %}
-# Code here
-{% endhighlight %}
+    {% highlight python linenos %}
+    # Code here
+    {% endhighlight %}
 
 
 2. LaTex symbols
@@ -28,9 +28,10 @@ highlight theme을 tomorrow로 사용할 떄만 사용할 수 있는 것 같다.
 - Alert
 Class: success, info, warning, error
 
-  Success Text.
-  {:.success}
+    Success Text.
+    {:.success}
 
 - Tag
 Class: success, info, warning, error
-  `_`{:.success}
+
+    `_`{:.success}
