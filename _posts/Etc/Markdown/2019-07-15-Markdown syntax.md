@@ -14,9 +14,7 @@ aside:
 **markdown:**
 
     {% highlight python linenos %}
-    {% highlight python linenos %}
     # Code here
-    {% endhighlight %}
     {% endhighlight %}
 
 <br>
