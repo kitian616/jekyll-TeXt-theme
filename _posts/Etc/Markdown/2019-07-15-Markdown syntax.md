@@ -13,11 +13,11 @@ aside:
 
 **markdown:**
 
-    ```
+    {% highlight python linenos %}
     {% highlight python linenos %}
     # Code here
     {% endhighlight %}
-    ```
+    {% endhighlight %}
 
 <br>
 ### 2. LaTex symbols
@@ -41,6 +41,7 @@ highlight theme을 tomorrow로 사용할 떄만 사용할 수 있는 것 같다.
 
     Success Text.
     {:.success}
+
 - Tag
 <br>Class: success, info, warning, error
 
