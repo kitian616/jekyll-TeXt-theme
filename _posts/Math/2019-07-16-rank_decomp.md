@@ -18,6 +18,8 @@ aside:
 <br> - $C \in \mathbb{R^{r \times n}}$, *rank $C$ = $r$*
 {:.success}
 
+<!--more-->
+
 1. *Let $\mathbf{b}_i \doteq$ i'th basis of $\mathbb{C}(A)$
 <br> $\mathbf{a}_j \doteq$ j'th column vector of $A$*
 
@@ -41,7 +43,7 @@ $$
 
 3. $$
 A =
-\begin{flalign}
+\begin{flushleft}
 \begin{pmatrix}
 \\
 \mathbf{a}_1 & \cdots & \mathbf{a}_n\\
@@ -57,6 +59,6 @@ c_{11} & \cdots & c_{1n}\\
 \vdots & \ddots & \vdots\\
 c_{r1} & \cdots & c_{rn}\\
 \end{pmatrix}
-\end{flalign}
+\end{flushleft}
  = BC
 $$
