@@ -39,3 +39,21 @@ $
 \mathbf{c}_{r1}\\
 \end{pmatrix}
 $
+
+3. $A = \begin{pmatrix}
+\\
+\mathbf{a}_1 & \cdots & \mathbf{a}_n  \\
+\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\\
+\mathbf{b}_1 & \cdots & \mathbf{b}_r\\
+\\
+\end{pmatrix}
+\begin{pmatrix}
+\mathbf{c}_{11}\\
+\vdots \\
+\mathbf{c}_{r1}\\
+\end{pmatrix}
+$
