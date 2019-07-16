@@ -21,6 +21,7 @@ aside:
 1. *Let $\mathbf{b}_i \doteq$ i'th basis of $\mathbb{C}(A)$ <br> $\mathbf{a}_j \doteq$ j'th column vector of $A$*
 
 2. *$\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$*
+<br>
 $\begin{pmatrix}
 \\
 \mathbf{a}_j \\
@@ -39,7 +40,6 @@ $\begin{pmatrix}
 \end{pmatrix}$
 
 
-
 3. $A = \begin{pmatrix}
 \\
 \mathbf{a}_1 & \cdots & \mathbf{a}_n \\
@@ -52,8 +52,7 @@ $\begin{pmatrix}
 \\
 \end{pmatrix}
 \begin{pmatrix}
-c_{11} & \cdots & c_{1r}\\
-\vdots & \\
-\mathbf{c}_{r1}\\
-\end{pmatrix}
-$
+c_{11} & \cdots & c_{1n}\\
+\vdots & \ddots & \vdots\\
+\mathbf{c}_{r1} & \cdots & c_{rn}\\
+\end{pmatrix}$
