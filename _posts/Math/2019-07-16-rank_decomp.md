@@ -22,6 +22,15 @@ aside:
 
 2. *$\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$*
 <br>
+
+\begin{pmatrix}
+\\
+\mathbf{a}_1 & \cdots & \mathbf{a}_n \\
+\\
+\end{pmatrix}
+
+---
+
 $\begin{bmatrix}
 \\
 \mathbf{a}_j \\
@@ -40,11 +49,7 @@ $\begin{bmatrix}
 \end{bmatrix}$
 
 
-3. $A = \begin{pmatrix}
-\\
-\mathbf{a}_1 & \cdots & \mathbf{a}_n \\
-\\
-\end{pmatrix}
+3. $A =
 =
 \begin{pmatrix}
 \\
