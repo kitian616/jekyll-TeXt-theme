@@ -22,22 +22,22 @@ aside:
 
 2. *$\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$*
 <br>
-$\begin{pmatrix}
+$\begin{bmatrix}
 \\
 \mathbf{a}_j \\
 \\
-\end{pmatrix}
+\end{bmatrix}
 =
-\begin{pmatrix}
+\begin{bmatrix}
 \\
 \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
 \\
-\end{pmatrix}
-\begin{pmatrix}
+\end{bmatrix}
+\begin{bmatrix}
 \mathbf{c}_{11}\\
 \vdots \\
 \mathbf{c}_{r1}\\
-\end{pmatrix}$
+\end{bmatrix}$
 
 
 3. $A = \begin{pmatrix}
