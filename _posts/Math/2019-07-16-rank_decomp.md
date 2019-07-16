@@ -22,7 +22,6 @@ aside:
 
 2. *$\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$*
 <br>
-
 $$
 \mathbf{a}_j =
 \begin{align*}
@@ -35,7 +34,7 @@ $$
 c_{11}\\
 \vdots\\
 c_{r1}\\
-\end{pmatrix}$
+\end{pmatrix}
 \end{align*}
 $$
 
