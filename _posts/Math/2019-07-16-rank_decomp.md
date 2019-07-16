@@ -23,30 +23,21 @@ aside:
 2. *$\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$*
 <br>
 
-\begin{pmatrix}
-<br>1 & 2 & 3 \\
-<br>\mathbf{a}_1 & \cdots & \mathbf{a}_n \\
-<br>4 & 5 & 6 \\
-\end{pmatrix}
-
+$$
+\begin{align*}
+& (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+$$
 ---
-
-$\begin{bmatrix}
-\\
-\mathbf{a}_j \\
-\\
-\end{bmatrix}
-=
-\begin{bmatrix}
-\\
-\mathbf{b}_1 & \cdots & \mathbf{b}_r\\
-\\
-\end{bmatrix}
-\begin{bmatrix}
-\mathbf{c}_{11}\\
-\vdots \\
-\mathbf{c}_{r1}\\
-\end{bmatrix}$
 
 
 3. $A =
