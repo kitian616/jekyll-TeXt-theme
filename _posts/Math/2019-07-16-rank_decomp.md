@@ -24,6 +24,22 @@ aside:
 <br>
 
 $$
+\begin{pmatrix}
+\\
+\mathbf{b}_1 & \cdots & \mathbf{b}_r\\
+\\
+\end{pmatrix}
+\begin{pmatrix}
+c_{11} & \cdots & c_{1n}\\
+\vdots & \ddots & \vdots\\
+\mathbf{c}_{r1} & \cdots & c_{rn}\\
+\end{pmatrix}$
+$$
+
+---
+
+
+$$
 \begin{align*}
 & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
       \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
@@ -37,18 +53,3 @@ $$
     \end{array} \right)
 \end{align*}
 $$
----
-
-
-3. $A =
-=
-\begin{pmatrix}
-\\
-\mathbf{b}_1 & \cdots & \mathbf{b}_r\\
-\\
-\end{pmatrix}
-\begin{pmatrix}
-c_{11} & \cdots & c_{1n}\\
-\vdots & \ddots & \vdots\\
-\mathbf{c}_{r1} & \cdots & c_{rn}\\
-\end{pmatrix}$
