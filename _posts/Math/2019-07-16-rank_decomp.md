@@ -4,8 +4,6 @@ title: Rank factorization
 tags: Math
 sidebar:
   nav: docs-en
-aside:
-  toc: true
 ---
 
 이번에 살펴볼 내용은 neural network를 구축할 때 기본적으로 머릿속에 담고 있어야하는 내용인 ***rank factorization*** 에 대해서 알아보겠습니다.  
