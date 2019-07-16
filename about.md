@@ -18,11 +18,11 @@ titles:
 key: page-about
 ---
 
-I am a graduate student in the Department of Computer Engineering at Inha University.  
+I am a graduate student in the Department of Computer Engineering at Inha University.
 My research interests broadly lie on the data science, namely un/semi-supervised learning and anomaly detection.
 
 # Contact
 Email: djyoon0223@gmail.com
 
 # Github repos
-- [Blog repo](https://github.com/djy-git/djy-git.github.io)
+- [Repos](https://github.com/djy-git/)
