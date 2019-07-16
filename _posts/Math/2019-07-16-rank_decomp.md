@@ -24,6 +24,24 @@ aside:
 <br>
 
 $$
+\mathbf{a}_j =
+\begin{align*}
+\begin{pmatrix}
+\\
+\mathbf{b}_1 & \cdots & \mathbf{b}_r\\
+\\
+\end{pmatrix}
+\begin{pmatrix}
+c_{11}\\
+\vdots\\
+c_{r1}\\
+\end{pmatrix}$
+\end{align*}
+$$
+
+3. $$
+A =
+\begin{align*}
 \begin{pmatrix}
 \\
 \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
@@ -32,24 +50,7 @@ $$
 \begin{pmatrix}
 c_{11} & \cdots & c_{1n}\\
 \vdots & \ddots & \vdots\\
-\mathbf{c}_{r1} & \cdots & c_{rn}\\
+c_{r1} & \cdots & c_{rn}\\
 \end{pmatrix}$
-$$
-
----
-
-
-$$
-\begin{align*}
-& (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
 \end{align*}
 $$
