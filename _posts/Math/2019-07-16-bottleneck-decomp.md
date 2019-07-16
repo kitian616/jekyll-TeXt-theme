@@ -12,3 +12,9 @@ aside:
 
 $A \in \mathbb{R^{m \times n}}$, *rank $A$ = $r$* 인 행렬 $A$는 $B \in \mathbb{R^{m \times r}}$, *rank $B$ = $r$* 인 행렬 B와 $C \in \mathbb{R^{r \times n}}$, *rank $C$ = $r$* 인 행렬 C의 곱으로 나타낼 수 있습니다.
 {:.success}
+
+<i>
+1. Let $\mathbf{b}_i \doteq$ i'th basis of $\mathbb{C}(A)$  
+2.
+
+</i>
