@@ -17,14 +17,14 @@ $ A = BC $ <br> such that $A \in \mathbb{R^{m \times n}}$, *rank $A$ = $r$*, $B 
 1. Let $\mathbf{b}_i \doteq$ i'th basis of $\mathbb{C}(A)$  
 $\mathbf{a}_j \doteq$ j'th column vector of $A$
 
-2. $\mathbf{a}_j$ = $\sum_{i=1}^r c_{ij} \mathbf{b}_i$  
+2. $\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$  
 
 3. $
 \begin{pmatrix}  
   \\  
   \mathbf{a}_i\\  
   \\  
-\end{pmatrix}$ = $\begin{pmatrix}  
+\end{pmatrix} = \begin{pmatrix}  
   \\  
   \mathbf{b}_1 & \cdots & \mathbf{b}_r\\  
   \\  
@@ -42,7 +42,8 @@ $
   \mathbf{a}_i & \cdots & \mathbf{a}_n\\  
   \\  
 \end{pmatrix}  
-= \begin{pmatrix}  
+=
+\begin{pmatrix}  
   \\  
   \mathbf{b}_1 & \cdots & \mathbf{b}_r\\  
   \\  
