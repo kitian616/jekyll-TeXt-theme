@@ -46,7 +46,7 @@ A =
 \\
 \mathbf{a}_1 & \cdots & \mathbf{a}_n\\
 \\
-\end{pmatrix} = 
+\end{pmatrix} =
 \begin{pmatrix}
 \\
 \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
@@ -58,4 +58,5 @@ c_{11} & \cdots & c_{1n}\\
 c_{r1} & \cdots & c_{rn}\\
 \end{pmatrix}
 \end{align*}
+ = BC
 $$
