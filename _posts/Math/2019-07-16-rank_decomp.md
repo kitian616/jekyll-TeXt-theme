@@ -20,5 +20,5 @@ aside:
 
 1. *Let $\mathbf{b}_i \doteq$ i'th basis of $\mathbb{C}(A)$ <br> $\mathbf{a}_j \doteq$ j'th column vector of $A$*
 
-2. *$\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$* <br>
-asdf
+2. *$\mathbf{a}_j = \sum_{i=1}^r c_{ij} \mathbf{b}_i$*
+*$\mathbf{a}_j $*
