@@ -26,7 +26,7 @@ aside:
 \begin{pmatrix}
 a & b & c\\
 \mathbf{a}_1 & \cdots & \mathbf{a}_n \\
-b * a * c\\
+b & a & c\\
 \end{pmatrix}
 
 ---
