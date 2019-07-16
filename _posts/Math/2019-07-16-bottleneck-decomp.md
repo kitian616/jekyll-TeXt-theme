@@ -19,38 +19,38 @@ $\mathbf{a}_j \doteq$ j'th column vector of $A$
 2. $\mathbf{a}_j$ = $\sum_{i=1}^r c_{ij} \mathbf{b}_i$  
 
 3. $
-\begin{pmatrix}
-  \\
-  \mathbf{a}_i\\
-  \\
-\end{pmatrix}$ = $\begin{pmatrix}
-  \\
-  \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
-  \\
-\end{pmatrix}
-\begin{pmatrix}
-  c_{11}\\
-  \vdots\\
-  c_{r1}\\
-\end{pmatrix}
+\begin{pmatrix}  
+  \\  
+  \mathbf{a}_i\\  
+  \\  
+\end{pmatrix}$ = $\begin{pmatrix}  
+  \\  
+  \mathbf{b}_1 & \cdots & \mathbf{b}_r\\  
+  \\  
+\end{pmatrix}  
+\begin{pmatrix}  
+  c_{11}\\  
+  \vdots\\  
+  c_{r1}\\  
+\end{pmatrix}  
 $
 
 4. $
-\begin{pmatrix}
-  \\
-  \mathbf{a}_i & \cdots & \mathbf{a}_n\\
-  \\
-\end{pmatrix}
-= \begin{pmatrix}
-  \\
-  \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
-  \\
-\end{pmatrix}
-\begin{pmatrix}
-  c_{11} & \cdots & c_{1n}\\
-  \vdots & \ddots & \vdots\\
-  c_{r1} & \cdots & c_{rn}\\
-\end{pmatrix}
+\begin{pmatrix}  
+  \\  
+  \mathbf{a}_i & \cdots & \mathbf{a}_n\\  
+  \\  
+\end{pmatrix}  
+= \begin{pmatrix}  
+  \\  
+  \mathbf{b}_1 & \cdots & \mathbf{b}_r\\  
+  \\  
+\end{pmatrix}  
+\begin{pmatrix}  
+  c_{11} & \cdots & c_{1n}\\  
+  \vdots & \ddots & \vdots\\  
+  c_{r1} & \cdots & c_{rn}\\  
+\end{pmatrix}  
 $
 
 5. $A = BC$
