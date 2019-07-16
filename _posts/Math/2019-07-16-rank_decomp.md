@@ -44,6 +44,11 @@ A =
 \begin{align*}
 \begin{pmatrix}
 \\
+\mathbf{a}_1 & \cdots & \mathbf{a}_n\\
+\\
+\end{pmatrix} = 
+\begin{pmatrix}
+\\
 \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
 \\
 \end{pmatrix}
@@ -51,6 +56,6 @@ A =
 c_{11} & \cdots & c_{1n}\\
 \vdots & \ddots & \vdots\\
 c_{r1} & \cdots & c_{rn}\\
-\end{pmatrix}$
+\end{pmatrix}
 \end{align*}
 $$
