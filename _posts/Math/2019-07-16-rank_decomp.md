@@ -24,9 +24,9 @@ aside:
 <br>
 
 \begin{pmatrix}
-<br>a & b & c \\
+<br>1 & 2 & 3 \\
 <br>\mathbf{a}_1 & \cdots & \mathbf{a}_n \\
-<br>b & a & c \\
+<br>4 & 5 & 6 \\
 \end{pmatrix}
 
 ---
