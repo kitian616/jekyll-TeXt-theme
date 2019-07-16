@@ -8,13 +8,49 @@ aside:
   toc: true
 ---
 
-행렬을 decomposition (factorization) 하는 여러가지 방법들이 있습니다. 오늘은 ***rank factorization*** 에 대해서 살펴보겠습니다.  
+이번에 살펴볼 내용은 neural network를 구축할 때 기본적으로 머릿속에 담고 있어야하는 내용인 ***rank factorization*** 에 대해서 알아보겠습니다.
 
-$A \in \mathbb{R^{m \times n}}$, *rank $A$ = $r$* 인 행렬 $A$는 $B \in \mathbb{R^{m \times r}}$, *rank $B$ = $r$* 인 행렬 B와 $C \in \mathbb{R^{r \times n}}$, *rank $C$ = $r$* 인 행렬 C의 곱으로 나타낼 수 있습니다.
+$ A = BC $ <br> such that $A \in \mathbb{R^{m \times n}}$, *rank $A$ = $r$*, $B \in \mathbb{R^{m \times r}}$, *rank $B$ = $r$*, $C \in \mathbb{R^{r \times n}}$, *rank $C$ = $r$*
 {:.success}
 
-<i>
 1. Let $\mathbf{b}_i \doteq$ i'th basis of $\mathbb{C}(A)$  
-2.
+$\mathbf{a}_j \doteq$ j'th column vector of $A$
 
-</i>
+2. $\mathbf{a}_j$ = $\sum_{i=1}^r c_{ij} \mathbf{b}_i$  
+
+3. $
+\begin{pmatrix}
+  \\
+  \mathbf{a}_i\\
+  \\
+\end{pmatrix}$ = $\begin{pmatrix}
+  \\
+  \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
+  \\
+\end{pmatrix}
+\begin{pmatrix}
+  c_{11}\\
+  \vdots\\
+  c_{r1}\\
+\end{pmatrix}
+$
+
+4. $
+\begin{pmatrix}
+  \\
+  \mathbf{a}_i & \cdots & \mathbf{a}_n\\
+  \\
+\end{pmatrix}
+= \begin{pmatrix}
+  \\
+  \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
+  \\
+\end{pmatrix}
+\begin{pmatrix}
+  c_{11} & \cdots & c_{1n}\\
+  \vdots & \ddots & \vdots\\
+  c_{r1} & \cdots & c_{rn}\\
+\end{pmatrix}
+$
+
+5. $A = BC$
