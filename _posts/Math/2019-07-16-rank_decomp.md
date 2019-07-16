@@ -42,8 +42,8 @@ c_{r1}\\
 $$
 
 3. $$
-A =
 \begin{aligned}
+A =
 \begin{pmatrix}
 \\
 \mathbf{a}_1 & \cdots & \mathbf{a}_n\\
@@ -59,6 +59,6 @@ c_{11} & \cdots & c_{1n}\\
 \vdots & \ddots & \vdots\\
 c_{r1} & \cdots & c_{rn}\\
 \end{pmatrix}
+= BC
 \end{aligned}
- = BC
 $$
