@@ -15,19 +15,24 @@ aside:
 
     {% highlight python linenos %}
     # Code here
-    {% endhighlight %}    
+    {% endhighlight %}
 
 <br>
 ### 2. LaTex symbols
-Bold체에도 몇 가지 종류가 있어서 목적에 맞는 문법을 사용하면 원하는 모양을 볼 수 있다.  
+- Bold체에도 몇 가지 종류가 있어서 목적에 맞는 문법을 사용하면 원하는 모양을 볼 수 있다.
 
 **markdown:**
-
+    \bf{}: 사용 이후에도 적용이 지속된다
     \textbf{}: Text
     \mathbf{}: Vector
     \mathbb{}: Special set (Real set)
-    \mathcal{}: Laplace, Fourier transform의 그것  
+    \mathcal{}: Laplace, Fourier transform의 그것
 
+- Color, bold, underline을 동시에 사용할 때 순서를 맞춰주어야 한다.
+
+**markdown:**
+
+    \bf{\underline{\color{red}1}}
 
 <br>
 ### 3. Jekyll(kramdown) styles
@@ -46,3 +51,6 @@ highlight theme을 tomorrow로 사용할 떄만 사용할 수 있는 것 같다.
 **markdown:**
 
     `_`{:.success}
+
+<br>
+### 4.
