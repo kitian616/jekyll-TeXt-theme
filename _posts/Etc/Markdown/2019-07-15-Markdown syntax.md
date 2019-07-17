@@ -52,6 +52,3 @@ highlight theme을 tomorrow로 사용할 떄만 사용할 수 있는 것 같다.
 **markdown:**
 
     `_`{:.success}
-
-<br>
-### 4.
