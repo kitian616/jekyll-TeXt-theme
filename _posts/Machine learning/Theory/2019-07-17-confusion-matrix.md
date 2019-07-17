@@ -47,7 +47,7 @@ Precision은 다른 모든 양성 sample들(FN)을 무시하기 때문에 이들
 특히, 두 분류기를 비교할 때 precision과 recall을 하나의 지표로 만든 F$_1$ score를 편리하게 사용할 수 있습니다.
 <br>
 
-# 6. P-R curve
+# 6. PR curve
 Precision-recall graph를 말합니다. <br>
 일반적으로 precision이 급격하게 줄어드는 하강점 직전을 threshold로 정하는 것이 좋습니다. 어떤 precision이 주어지더라도 만족시키는 분류기를 만들 순 있지만, recall이 너무 낮다면 사용할 수 없기 때문에 생성된 분류기의 성능을 고려해야 합니다.
 
