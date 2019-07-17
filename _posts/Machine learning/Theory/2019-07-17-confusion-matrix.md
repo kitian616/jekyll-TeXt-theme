@@ -16,10 +16,12 @@ aside:
 #### 3. Recall = TPR = $\frac{\text{TP}}{\text{TP + FN}}$
 #### 4. F$\bf{_1}$ score = $\frac{2}{\frac{1}{Precision} + \frac{1}{Recall}}$
 #### 5. FPR = $\frac{\text{FP}}{\text{FP + TN}}$
-<br><br>
+<br><br><br><br><br><br>
 {:.success}
 
 <!--more-->
+
+---
 
 # 1. Accuracy
 **Accuracy (정확도)** 는 가장 대표적인 분류기의 평가지표로 전체 sample들 중 정확하게 분류한 것들의 비율을 의미합니다. <br>
