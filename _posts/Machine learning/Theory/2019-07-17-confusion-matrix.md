@@ -52,7 +52,7 @@ Precision은 다른 모든 양성 sample들(FN)을 무시하기 때문에 이들
 # 6. P-R Curve
 Precision-recall graph를 말합니다. 이를 통해
 
-![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/prcuver.png){:.border}
+![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/prcurve.png){:.border.align-center}
 
 
 [^1]: 출처: [https://tex.stackexchange.com/questions/20267/how-to-construct-a-confusion-matrix-in-latex](https://tex.stackexchange.com/questions/20267/how-to-construct-a-confusion-matrix-in-latex)
