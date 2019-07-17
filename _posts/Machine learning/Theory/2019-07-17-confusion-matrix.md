@@ -18,6 +18,11 @@ aside:
 ### 5. FPR = $\frac{\text{FP}}{\text{FP + TN}}$
 {:.success}
 
+<!--more-->
+
+---
+
+success is?
 
 
 [^1]: 출처: https://tex.stackexchange.com/questions/20267/how-to-construct-a-confusion-matrix-in-latex
