@@ -12,7 +12,7 @@ aside:
 
 ![](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/confusion_matrix.png){:height="50%" width="50%"}
 
-it's!
+height, width
 
 
 
