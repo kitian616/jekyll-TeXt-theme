@@ -100,3 +100,12 @@ $$
     = BC
     \end{aligned}
     $$
+<br>
+
+# 5. Image
+<img src="https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/threshold.png">
+
+**markdown:**
+
+    <img src="https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/threshold.png">
+    ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/prcurve.png){:.border}
