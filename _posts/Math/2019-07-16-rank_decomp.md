@@ -39,7 +39,7 @@ c_{r1}\\
 \end{align*}
 $$
 
-3. $A = BC$
+3. $A = BC$ <br>
 $$
 \begin{aligned}
 A =
