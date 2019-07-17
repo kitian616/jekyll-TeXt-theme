@@ -6,7 +6,7 @@ sidebar:
   nav: docs-en
 ---
 
-이번에 살펴볼 내용은 neural network를 구축할 때 기본적으로 머릿속에 담고 있어야하는 내용인 ***rank factorization*** 에 대해서 알아보겠습니다.  
+이번에 살펴볼 내용은 neural network를 구축할 때 기본적으로 머릿속에 담고 있어야하는 내용인 ***rank factorization*** 에 대해서 알아보겠습니다.
 자세한 내용은 [https://en.wikipedia.org/wiki/Rank_factorization](https://en.wikipedia.org/wiki/Rank_factorization ) 을 참조하세요.
 <br>
 
@@ -39,7 +39,8 @@ c_{r1}\\
 \end{align*}
 $$
 
-3. $$
+3. $A = BC$
+$$
 \begin{aligned}
 A =
 \begin{pmatrix}
