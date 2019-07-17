@@ -6,7 +6,7 @@ sidebar:
   nav: docs-en
 ---
 
-이번에 살펴볼 내용은 neural network를 구축할 때 기본적으로 머릿속에 담고 있어야하는 내용인 ***rank factorization*** 에 대해서 알아보겠습니다.
+이번에 살펴볼 내용은 rank와 관련하여 행렬을 분해하는 방법인 **rank factorization** 입니다. <br>
 자세한 내용은 [https://en.wikipedia.org/wiki/Rank_factorization](https://en.wikipedia.org/wiki/Rank_factorization ) 을 참조하세요.
 <br>
 
