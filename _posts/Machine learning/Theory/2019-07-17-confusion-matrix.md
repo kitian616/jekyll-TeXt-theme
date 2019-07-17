@@ -17,5 +17,7 @@ aside:
 ### 3. Recall = TPR = $\frac{\text{TP}}{\text{TP + FN}}$
 ### 4. F$\bf{_1}$ score = $\frac{2}{\frac{1}{Precision} + \frac{1}{Recall}}$
 ### 5. FPR = $\frac{\text{FP}}{\text{FP + TN}}$
+{:.success}
+
 
 [^1]: 출처: https://tex.stackexchange.com/questions/20267/how-to-construct-a-confusion-matrix-in-latex
