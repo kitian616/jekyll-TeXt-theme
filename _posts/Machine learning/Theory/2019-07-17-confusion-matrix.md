@@ -42,7 +42,7 @@ $$ \textbf{Recall} = P(\color{green}{\textbf{predictive true }} | \color{blue}{\
 # 4. Precision / recall tradeoff
 Precision은 다른 모든 양성 sample들(FN)을 무시하기 때문에 이들을 반영하는 recall과 반드시 함께 평가되어야 합니다. 안타깝게도 두 지표를 동시에 올릴 수는 없습니다. 따라서 주어진 문제에 따라 가장 적절한 임곗값(threshold, decision function)을 정해야 합니다. 이를, **precision / recall tradeoff** 라고 부릅니다.
 
-<img src="https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/threshold.png">
+![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/threshold.png){:.shadow}
 
 
 # 5. F$\bf{_1}$ score
