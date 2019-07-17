@@ -52,3 +52,51 @@ highlight theme을 tomorrow로 사용할 떄만 사용할 수 있는 것 같다.
 **markdown:**
 
     `_`{:.success}
+
+<br>
+### 4. Matrix
+$$
+\begin{aligned}
+A =
+\begin{pmatrix}
+\\
+\mathbf{a}_1 & \cdots & \mathbf{a}_n\\
+\\
+\end{pmatrix} =
+\begin{pmatrix}
+\\
+\mathbf{b}_1 & \cdots & \mathbf{b}_r\\
+\\
+\end{pmatrix}
+\begin{pmatrix}
+c_{11} & \cdots & c_{1n}\\
+\vdots & \ddots & \vdots\\
+c_{r1} & \cdots & c_{rn}\\
+\end{pmatrix}
+= BC
+\end{aligned}
+$$
+
+**markdown:**
+
+    $$
+    \begin{aligned}
+    A =
+    \begin{pmatrix}
+    \\
+    \mathbf{a}_1 & \cdots & \mathbf{a}_n\\
+    \\
+    \end{pmatrix} =
+    \begin{pmatrix}
+    \\
+    \mathbf{b}_1 & \cdots & \mathbf{b}_r\\
+    \\
+    \end{pmatrix}
+    \begin{pmatrix}
+    c_{11} & \cdots & c_{1n}\\
+    \vdots & \ddots & \vdots\\
+    c_{r1} & \cdots & c_{rn}\\
+    \end{pmatrix}
+    = BC
+    \end{aligned}
+    $$
