@@ -22,6 +22,7 @@ aside:
 - Bold체에도 몇 가지 종류가 있어서 목적에 맞는 문법을 사용하면 원하는 모양을 볼 수 있다.
 
 **markdown:**
+
     \bf{}: 사용 이후에도 적용이 지속된다
     \textbf{}: Text
     \mathbf{}: Vector
