@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Scikit-Learn API functions
-tags: Python
+title: 2. End-to-End Machine Learning Project
+tags: Hands-On
 sidebar:
   nav: docs-en
 aside:

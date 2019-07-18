@@ -32,10 +32,28 @@ header:
       ko      : &KO       소개
       ko-KR   : *KO
     url: /about.html
+  - titles:
+      en      : &EN       Github
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  Github
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  Github
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       Github
+      ko-KR   : *KO
+    url: https://github.com/djy-git/djy-git.github.io
 
 docs-en:
   - title:      Programming
     children:
+      - title: Hands-On ML
+        url: /archive.html?tag=Hands-On
       - title:  Python
         url: /archive.html?tag=Python
       - title:  R
