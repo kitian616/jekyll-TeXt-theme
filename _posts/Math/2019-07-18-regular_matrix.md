@@ -17,7 +17,7 @@ Square matrix (정방행렬) 중에서 역행렬이 존재하는 행렬을 **reg
 ---
 
 행렬 $A$가 **정칙행렬**이라는 말에는 여러가지 중요한 의미들이 포함되어 있습니다. <br>
-**Notation**
+**Notation** <br>
 $A \in \mathbb{R^{n \times n}}: X \in \mathbb{R^n} → Y \in \mathbb{R^n}$ <br>
 $\mathbf{x_1, x_2} \in X , \ \mathbf{y} \in Y$ <br>
 
