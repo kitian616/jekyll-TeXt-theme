@@ -18,11 +18,9 @@ aside:
 0에서 9까지의 숫자 이미지를 분류하는 작업에서 linear SGDClassifier를 사용한 경우를 살펴봅시다. <br>
 
 
-#### 1. 먼저 confusion matrix를 구하고 `matshow()`를 사용하여 시각적으로 문제가 되는 지점을 분석합니다. <br>
-
+#### 1. 먼저 confusion matrix를 구하고 `matshow()`를 사용하여 시각적으로 문제가 되는 지점을 분석합니다.
 
 {% highlight python linenos %}
-
 y_train_pred = cross_val_predict(sgd_clf, X_train_scaled, y_train, cv=3)
 conf_mx = confusion_matrix(y_train, y_train_pred)
 
@@ -33,7 +31,7 @@ plt.show()
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/all_conf_mat.png){:.border} <br>
 
 
-#### 2. 대응되는 클래스의 이미지 개수로 나누어 에러 비율을 비교합니다. <br>
+#### 2. 대응되는 클래스의 이미지 개수로 나누어 에러 비율을 비교합니다.
 
 {% highlight python linenos %}
 
@@ -49,13 +47,13 @@ plt.show()
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/diag_conf_mat.png){:.border} <br>
 
 
-#### 3. 에러 항들을 자세히 분석합니다. <br>
-    1) 클래스 8과 9의 행과 열이 상당히 밝다 <br>
-        → 많은 이미지가 8과 9로 잘못 분류되었다 <br>
-    2) 클래스 0의 행과 열은 매우 어둡다 <br>
-        → 대부분의 숫자 0이 정확히 분류되었다 <br>
-    3) 3-5, 7-9 pair가 상당히 밝다 <br>
-        → 해당 pair의 이미지들을 더 모으거나 동심원의 수를 세는 알고리즘 등의 방법을 사용하여 개선할 필요가 있다 <br>
+#### 3. 에러 항들을 자세히 분석합니다.
+1) 클래스 8과 9의 행과 열이 상당히 밝다 <br>
+→ 많은 이미지가 8과 9로 잘못 분류되었다 <br>
+2) 클래스 0의 행과 열은 매우 어둡다 <br>
+→ 대부분의 숫자 0이 정확히 분류되었다 <br>
+3) 3-5, 7-9 pair가 상당히 밝다 <br>
+→ 해당 pair의 이미지들을 더 모으거나 동심원의 수를 세는 알고리즘 등의 방법을 사용하여 개선할 필요가 있다 <br>
 
 
 #### 4. 여기서 3-5, 7-9 pair에 대한 이미지를 출력해보았습니다.
@@ -99,5 +97,5 @@ plot_digit_confusion_mx(7, 9)
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/79.png){:.border} <br>
 
 
-#### 5. 결론 <br>
+#### 5. 결론
 여기서 사용된 모델은 linear SGDClassifer 였습니다. 선형 분류기는 이미지에 대해 단순히 픽셀 강도의 가중치 합을 클래스의 점수로 사용하기 때문에 **8과 9**, **3과 5** 그리고 **7과 9** 모두 몇 개의 픽셀만 다르기 때문에 모델이 쉽게 혼동할 수 있었던 것으로 생각해볼 수 있습니다. <br>
