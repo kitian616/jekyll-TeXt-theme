@@ -19,19 +19,22 @@ aside:
 
 1. 먼저 confusion matrix를 구하고 `matshow()`를 사용하여 시각적으로 문제가 되는 지점을 분석합니다. <br>
 
-```p
+
+{% highlight python linenos %}
+
 y_train_pred = cross_val_predict(sgd_clf, X_train_scaled, y_train, cv=3)
 conf_mx = confusion_matrix(y_train, y_train_pred)
 
 plt.matshow(conf_mx, cmap=plt.cm.gray)
 plt.show()
-```
+{% endhighlight %}
 
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/all_conf_mat.png){:.border} <br>
 
 2. 대응되는 클래스의 이미지 개수로 나누어 에러 비율을 비교합니다. <br>
 
-```p
+{% highlight python linenos %}
+
 row_sums = conf_mx.sum(axis=1, keepdims=True)
 norm_conf_mx = conf_mx / row_sums
 
@@ -39,7 +42,7 @@ norm_conf_mx = conf_mx / row_sums
 np.fill_diagonal(norm_conf_mx, 0)
 plt.matshow(norm_conf_mx, cmap=plt.cm.gray)
 plt.show()
-```
+{% endhighlight %}
 
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/diag_conf_mat.png){:.border} <br>
 
@@ -53,7 +56,8 @@ plt.show()
 
 4. 여기서 3-5, 7-9 pair에 대한 이미지를 출력해보았습니다.
 
-```p
+{% highlight python linenos %}
+
 def plot_digits(instances, images_per_row=10, **options):
     size = 28
     images_per_row = min(len(instances), images_per_row)
@@ -84,7 +88,7 @@ def plot_digit_confusion_mx(cl_a, cl_b):
 
 plot_digit_confusion_mx(3, 5)
 plot_digit_confusion_mx(7, 9)
-```
+{% endhighlight %}
 
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/35.png){:.border} <br>
 
