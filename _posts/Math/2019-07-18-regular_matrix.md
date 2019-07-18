@@ -9,7 +9,7 @@ aside:
 ---
 
 **Regular matrix / Singular matrix** <br>
-Square matrix (정방행렬) 중에서 역행렬이 존재하는 행렬을 **regular matrix (정칙행렬)**이라고 하고 역행렬이 존재하지 않는 행렬을 **singular matrix (특이행렬)**이라고 합니다.
+Square matrix (정방행렬) 중에서 역행렬이 존재하는 행렬을 **regular matrix (정칙행렬)**라고 하고 역행렬이 존재하지 않는 행렬을 **singular matrix (특이행렬)**라고 합니다.
 {:.success}
 
 <!--more-->
