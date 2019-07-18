@@ -16,10 +16,10 @@
 
 ## => Site Settings
 ##############################
-text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: tomorrow-night-eighties # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : /storage # does not include hostname
+baseurl : # does not include hostname
 title   : Heragong Tran
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
@@ -27,15 +27,15 @@ description: > # this means to ignore newlines until "Language & timezone"
 
 ## => Language and Timezone
 ##############################
-lang: vn # the language of your site, default as "en"
-timezone: #VN # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+lang: # the language of your site, default as "en"
+timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Hoang Tran
+  name      : Your Name
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
@@ -55,7 +55,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: trankhanhhoang/trankhanhhoang.github.io #user_name/repo_name
+repository: user_name/repo_name
 repository_tree: master
 
 
@@ -118,7 +118,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -127,11 +127,11 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : a00ffebde83aa2b4e8fc # GitHub Application Client ID
-    clientSecret: b683f8b6adf5287796a1c2c85c2c5e162748da5d # GitHub Application Client Secret
-    repository  : trankhanhhoang.github.io # GitHub repo
-    owner       : trankhanhhoang # GitHub repo owner
-    admin: #trankhanhhoang # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    clientID    : # GitHub Application Client ID
+    clientSecret: # GitHub Application Client Secret
+    repository  : # GitHub repo
+    owner       : # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
   ## Valine
@@ -208,7 +208,7 @@ defaults:
     values:
       layout: article
       sharing: true
-      license: false
+      license: true
       aside:
         toc: true
       show_edit_on_github: true
@@ -223,3 +223,4 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  
