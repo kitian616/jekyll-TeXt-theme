@@ -17,7 +17,7 @@ aside:
 
 0에서 9까지의 숫자 이미지를 분류하는 작업에서 linear SGDClassifier를 사용한 경우를 살펴봅시다. <br>
 
-1. 먼저 confusion matrix를 구하고 `matshow()`를 사용하여 시각적으로 문제가 되는 지점을 분석합니다. <br>
+#### 1. 먼저 confusion matrix를 구하고 `matshow()`를 사용하여 시각적으로 문제가 되는 지점을 분석합니다. <br>
 
 
 {% highlight python linenos %}
@@ -31,7 +31,7 @@ plt.show()
 
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/all_conf_mat.png){:.border} <br>
 
-2. 대응되는 클래스의 이미지 개수로 나누어 에러 비율을 비교합니다. <br>
+#### 2. 대응되는 클래스의 이미지 개수로 나누어 에러 비율을 비교합니다. <br>
 
 {% highlight python linenos %}
 
@@ -46,15 +46,15 @@ plt.show()
 
 ![Image](https://raw.githubusercontent.com/djy-git/djy-git.github.io/master/_posts/assets/diag_conf_mat.png){:.border} <br>
 
-3. 에러 항들을 자세히 분석합니다. <br>
-    1) 클래스 8과 9의 행과 열이 상당히 밝다
-        → 많은 이미지가 8과 9로 잘못 분류되었다
-    2) 클래스 0의 행과 열은 매우 어둡다
-        → 대부분의 숫자 0이 정확히 분류되었다
-    3) 3-5, 7-9 pair가 상당히 밝다
-        → 해당 pair의 이미지들을 더 모으거나 동심원의 수를 세는 알고리즘 등의 방법을 사용하여 개선할 필요가 있다
+#### 3. 에러 항들을 자세히 분석합니다. <br>
+    1) 클래스 8과 9의 행과 열이 상당히 밝다 <br>
+        → 많은 이미지가 8과 9로 잘못 분류되었다 <br>
+    2) 클래스 0의 행과 열은 매우 어둡다 <br>
+        → 대부분의 숫자 0이 정확히 분류되었다 <br>
+    3) 3-5, 7-9 pair가 상당히 밝다 <br>
+        → 해당 pair의 이미지들을 더 모으거나 동심원의 수를 세는 알고리즘 등의 방법을 사용하여 개선할 필요가 있다 <br>
 
-4. 여기서 3-5, 7-9 pair에 대한 이미지를 출력해보았습니다.
+#### 4. 여기서 3-5, 7-9 pair에 대한 이미지를 출력해보았습니다.
 
 {% highlight python linenos %}
 
