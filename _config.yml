@@ -131,7 +131,7 @@ comments:
     clientSecret: b683f8b6adf5287796a1c2c85c2c5e162748da5d # GitHub Application Client Secret
     repository  : trankhanhhoang.github.io # GitHub repo
     owner       : trankhanhhoang # GitHub repo owner
-    admin: trankhanhhoang # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    admin: #trankhanhhoang # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
   ## Valine
