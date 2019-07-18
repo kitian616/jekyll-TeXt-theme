@@ -28,14 +28,14 @@ description: > # this means to ignore newlines until "Language & timezone"
 ## => Language and Timezone
 ##############################
 lang: vn # the language of your site, default as "en"
-timezone: #+07:00 # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone: +07:00 # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : Hoang Tran
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
