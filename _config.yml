@@ -19,7 +19,7 @@
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night-eighties # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : /blog # does not include hostname
+baseurl : /storage # does not include hostname
 title   : Heragong Tran
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
@@ -28,14 +28,14 @@ description: > # this means to ignore newlines until "Language & timezone"
 ## => Language and Timezone
 ##############################
 lang: vn # the language of your site, default as "en"
-timezone: #+07:00 # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone: #VN # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : Hoang Tran
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
@@ -208,7 +208,7 @@ defaults:
     values:
       layout: article
       sharing: true
-      license: true
+      license: false
       aside:
         toc: true
       show_edit_on_github: true
