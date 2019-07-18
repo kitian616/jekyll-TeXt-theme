@@ -18,6 +18,7 @@ Square matrix (정방행렬) 중에서 역행렬이 존재하는 행렬을 **reg
 
 행렬 $A \in \mathbb{R^{n \times n}}: X \in \mathbb{R^n} → Y \in \mathbb{R^n}$가 **정칙행렬**이라는 말에는 여러가지 중요한 의미들이 포함되어 있습니다.
 
+# $A$ is a *regular matrix* means..
 ### 1. $A^{-1}$가 존재한다.
 
 ### 2. $A$는 injective mapping (단사 사상)이다.
