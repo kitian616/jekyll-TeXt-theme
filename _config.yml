@@ -19,7 +19,7 @@
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night-eighties # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : /blog # does not include hostname
+baseurl : blog # does not include hostname
 title   : Heragong Tran
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
@@ -55,7 +55,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: trankhanhhoang/trankhanhhoang.github.io #user_name/repo_name
 repository_tree: master
 
 
