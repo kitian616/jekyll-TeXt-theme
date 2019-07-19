@@ -86,11 +86,13 @@ docs-en:
         url: /archive.html?tag=Finance
   - title:      Etc
     children:
-      - title:  Etc
-        url: /archive.html?tag=Etc
+      - title:  Diary
+        url: /archive.html?tag=Diary
       - title:  Github
         url: /archive.html?tag=Github
       - title:  Markdown
         url: /archive.html?tag=Markdown
       - title:  Music
         url: /archive.html?tag=Music
+      - title:  Etc
+        url: /archive.html?tag=Etc
