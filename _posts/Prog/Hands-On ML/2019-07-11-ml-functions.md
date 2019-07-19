@@ -109,7 +109,7 @@ housing_num = housing[num_attr]
 {% highlight python linenos %}
 from sklearn.compose import ColumnTransformer
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.pipeline import pipeline
+from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from functools import partial
 from enum import IntEnum
