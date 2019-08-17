@@ -2,7 +2,7 @@
 layout: article
 title: Getting the Ball Rolling
 mathjax: true
-key: 17092019
+key: 20190817
 excerpt_separator: <!--more-->
 featured-img: /assets/images/paragliding.jpg
 image: /assets/images/paragliding.jpg
