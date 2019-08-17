@@ -3,17 +3,23 @@ layout: article
 title: Getting the Ball Rolling
 mathjax: true
 key: 17092019
+excerpt_separator: <!--more-->
+featured-img: /assets/images/paragliding.jpg
+image: /assets/images/paragliding.jpg
 tags:
 - Start
 - Casual
 - BlogMeta
 ---
 
-![](/docs/assets/images/paragliding.jpg)
+Hey there!
+I need to start writing here as soon as possible, otherwise I never will. I created this site about a month ago yet have not written a single word.
+
+<!--more-->
+
+![pic](/assets/images/paragliding.jpg)
 _Photo by [Leio McLaren (@leiomclaren) on Unsplash](https://unsplash.com/@leio)_
 
-Hey there!
-I need to start writing here, otherwise I never will. I created this site about a month ago yet have not wrote a single word.
 
 In general, the goal of this personal site is to write my very casual, unfiltered and unedited thoughts on whatever I have happening in my life. It could be travels, work or whatever. The content here won't see much editing - I want posting here to be as frictionless as possible such that I can produce more content. For more curated, high-quality content - take a look at [my medium page](https://medium.com/@stanislavkozlovski).
 
@@ -22,8 +28,8 @@ The target audience is simple - _**my future self**_. If anybody else is interes
 ###### Why Write?
 
 Over the years I have found writing to be more and more valuable. It helps me articulate my thoughts. It has the added benefit of documenting said thoughts so I never truly forget what I thought at a certain point in time.
-It's interesting to see what you thought back in 2012, for example.
 I have been journalling and writing my philosophy on life for the last three years semi-consistently - but it has all been private. I have a wealthy [Evernote](https://www.evernote.com/referral/Registration.action?sig=6e73c263c502023f9241ca649f6e6bcf272a887b87af9ac49c369c33e781df12&uid=192780579) where I keep a lot of personal thoughts (which I am not really ready to share with the world), material I've studied and digested, journals, goals and a lot of other things.
+Even if no one else reads it, having a personal journal of my thoughts, opinions and feelings at moments in time is an immensely valuable outlet for my own self-reflection and self-learning. 
  
 Further, I believe it is paramount to show the world who you are. People are not very genuine until you get to know them very well and this hinders our experience in life because it makes it harder to connect with like-minded people.
 For a self-improvement junkie like me who prefers to stay at home and spend time on activities that are sure to bring value to my life, rather than spend time with people you don't very well, it is hard to show your true self.
