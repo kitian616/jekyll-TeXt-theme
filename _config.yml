@@ -169,13 +169,22 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: false # false (default), "google", "matomo", "owa", "custom"
 
   ## Google Analytics
   google:
     tracking_id : # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
+  ## Matomo
+  matomo:
+    piwik_url: # Your Matomo URL without a trailing slash
+    site_id: # Matomo id for the site
+
+  ## Open Web Analytics
+  owa:
+    owa_url: # Your Open Web Analytics URL without a trailing slash
+    site_id: ## Open Web Analytics id for the site
 
 ## => Build
 ##############################

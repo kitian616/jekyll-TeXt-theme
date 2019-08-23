@@ -42,7 +42,7 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 - Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
 - Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
 - Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
+- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/), [Matomo](https://matomo.org), [Open Web Analytics](http://www.openwebanalytics.com/))
 - RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
 
 ## Skins
