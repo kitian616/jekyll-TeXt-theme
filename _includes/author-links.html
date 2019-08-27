@@ -17,6 +17,9 @@
       {%- assign _locale_string_email = __return -%}
       {%- include snippets/get-locale-string.html key='FOLLOW_ME' -%}
       {%- assign _locale_string_follow = __return -%}
+      {%- include snippets/get-locale-string.html key='DONATE' -%}
+      {%- assign _locale_string_donate = __return -%}
+
     {%- endif -%}
 
     {%- include snippets/get-locale-string.html key='EMAIL_ME' -%}
@@ -116,5 +119,12 @@
       </li>
     {%- endif -%}
 
+    {%- if _author.bitcoin -%}
+      <li title="{{ _locale_string_donate | replace: '[NAME]', 'Bitcoin' }}">
+        <a class="button button--circle bitcoin-button" itemprop="sameAs" href="https://www.blockchain.com/bitcoin/payment_request?address={{ _author.bitcoin }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/bitcoin.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
   </ul>
 </div>

@@ -38,6 +38,9 @@
       .npm-button {
         @include clickable($text-color-1, $npm-color);
       }
+      .bitcoin-button {
+        @include clickable($text-color-1, $bitcoin-color);
+      }
     }
   }
 }
