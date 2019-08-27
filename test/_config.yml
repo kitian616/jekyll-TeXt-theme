@@ -118,7 +118,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: false # false (default), "disqus", "gitalk", "valine", "hashover", "custom"
 
   ## Disqus
   disqus:
@@ -141,6 +141,10 @@ comments:
     app_key     : # LeanCloud App key
     placeholder : # Prompt information
 
+  ## Hashover
+  # please refer to http://tildehash.com/?page=hashover for more info
+  hashover:
+    src: # URL to hashover.php file
 
 ## => Pageview
 ##############################

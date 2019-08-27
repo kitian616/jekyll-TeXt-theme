@@ -120,7 +120,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "hashover", "custom"
   # provider: valine
 
   ## Disqus
@@ -144,6 +144,10 @@ comments:
     app_key     : Mzf5m9skSwYVWVXhGiYMNyXs
     placeholder : # Prompt information
 
+  ## Hashover
+  # please refer to http://tildehash.com/?page=hashover for more info
+  hashover:
+    src: # URL to hashover.php file
 
 ## => Pageview
 ##############################
