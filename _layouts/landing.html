@@ -12,12 +12,17 @@ article_header:
   {%- for _section in page.data.sections -%}
     {%- include snippets/get-nav-url.html path=_section.background_image.src -%}
     {%- assign _url = __return -%}
+    {%- if _section.id -%}
+      {%- assign _section_id = _section.id -%}
+      {%- else -%}
+        {%- assign _section_id = "hero-" | append: forloop.index -%}
+    {%- endif -%}
     {%- if _section.theme == 'light' -%}
-      <section class="hero hero--center hero--light" id="hero-{{ forloop.index }}"
+      <section class="hero hero--center hero--light" id="{{ _section_id }}"
     {%- elsif _section.theme == 'dark' -%}
-      <section class="hero hero--center hero--dark" id="hero-{{ forloop.index }}"
+      <section class="hero hero--center hero--dark" id="{{ _section_id }}"
     {%- else -%}
-      <section class="hero hero--center" id="hero-{{ forloop.index }}"
+      <section class="hero hero--center" id="{{ _section_id }}"
     {%- endif -%}
     {%- if _section.background_color -%}
         style="background-image: url({{ _url }}); background-color: {{ _section.background_color }};">
