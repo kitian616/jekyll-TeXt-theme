@@ -1,0 +1,28 @@
+{%- if site.contact.fncontact.id -%}
+<form id="contact-form" action="https://fncontact.com/{{ site.contact.fncontact.id }}/post" method="POST" onsubmit="return submitForm();">
+  {%- for field in include.fields -%}
+    {%- assign type = field.type | default: 'text' -%}
+    {%- if type != "submit" -%}
+      <label for="{{ field.name }}">{{ field.text }}</label>
+    {%- endif -%}
+    {%- assign tag = field.tag | default: "input" -%}
+    {%- if field.required == true -%}
+      {%- assign required = "required " -%}
+    {%- endif -%}
+    {%- if tag == "textarea" -%}
+      {%- assign closing_tag = "></textarea>" -%}
+      {%- else -%}
+        {%- assign closing_tag = ">" -%}
+    {%- endif -%}
+    {%- if forloop.last -%}
+      <div id="fnContactCaptcha"></div>
+      <script src="https://fncontact.com/captcha.js"></script>        
+    {%- endif -%}
+    <{{ tag }} encrypt="{{ field.encrypt | default: false }}" type="{{ type }}" id="{{ field.id | default: field.name}}" name="{{ field.name }}"
+      placeholder="{{ field.placeholder | default: '' }}" {{ required }} {%- if field.style -%} style="{{ field.style }}"
+      {%- endif -%} {%- if field.value -%} value="{{ field.value }}" {%- endif -%}{{ closing_tag }}
+
+    {% endfor %}
+
+</form>
+{%- endif -%}

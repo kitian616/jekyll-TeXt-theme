@@ -124,6 +124,9 @@ article_header:
 
               </div>
             </div>
+            {%- if _section.type == "contact" -%}
+              {% include contact-form.html, fields: section.fields %}
+            {%- endif -%}
           {%- endif -%}
 
       {%- if _section.image.full_width == true -%}

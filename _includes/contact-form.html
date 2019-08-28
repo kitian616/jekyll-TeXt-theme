@@ -1,0 +1,4 @@
+{%- if site.contact.provider -%}
+  <script type="text/javascript">{%- include scripts/components/contact-form.js -%}</script>
+  {%- include contact-form-providers/{{ site.contact.provider }}.html fields=include.fields -%}
+{%- endif -%}
