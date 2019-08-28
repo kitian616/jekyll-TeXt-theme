@@ -177,6 +177,15 @@ analytics:
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
+## => Contact Form
+##############################
+contact:
+  provider: # false (default), "fncontact", "custom"
+  pgp_public_key: # Base64-encoded PGP Public Key (default: none)
+
+  ## fnContact
+  fncontact:
+    id: # Your Form ID
 ## => Build
 ##############################
 markdown    : kramdown
