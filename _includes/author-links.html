@@ -121,7 +121,7 @@
 
     {%- if _author.bitcoin -%}
       <li title="{{ _locale_string_donate | replace: '[NAME]', 'Bitcoin' }}">
-        <a class="button button--circle bitcoin-button" itemprop="sameAs" href="https://www.blockchain.com/bitcoin/payment_request?address={{ _author.bitcoin }}" target="_blank">
+        <a class="button button--circle bitcoin-button" itemprop="sameAs" href="https://www.blockchain.com/btc/payment_request?address={{ _author.bitcoin }}" target="_blank">
           <div class="icon">{%- include svg/icon/social/bitcoin.svg -%}</div>
         </a>
       </li>
