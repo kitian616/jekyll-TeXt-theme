@@ -121,12 +121,12 @@ comments:
   provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   gitalk:
-    clientID    : 3a13a5a3958cdc3720f4 # GitHub Application Client ID
-    clientSecret: d87a0e49750ba6237dff36c663baa86471c7159e # GitHub Application Client Secret
-    repository  : danielcustduran.github.io # GitHub repo
-    owner       : daniecustduran # GitHub repo owner
+    clientID    : "3a13a5a3958cdc3720f4" # GitHub Application Client ID
+    clientSecret: "d87a0e49750ba6237dff36c663baa86471c7159e" # GitHub Application Client Secret
+    repository  : "danielcustduran.github.io" # GitHub repo
+    owner       : "danielcustduran" # GitHub repo owner
     admin:
-      28666420 # - your GitHub Id
+      "28666420" # - your GitHub Id
 
 ## => Pageview
 ##############################
