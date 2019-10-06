@@ -1,4 +1,5 @@
-## => Engish
+# @start locale config
+## => English
 ########################
 en: &EN
   SUBSCRIBE               : "Subscribe"
@@ -143,3 +144,4 @@ fr-FR:
   <<: *FR
 fr-LU:
   <<: *FR
+# @end locale config

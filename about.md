@@ -1,6 +1,7 @@
 ---
 layout: article
 titles:
+  # @start locale config
   en      : &EN       About
   en-GB   : *EN
   en-US   : *EN
@@ -21,6 +22,7 @@ titles:
   fr-CH   : *FR
   fr-FR   : *FR
   fr-LU   : *FR
+  # @end locale config
 key: page-about
 ---
 
