@@ -1,6 +1,7 @@
 ---
 layout: article
 titles:
+  # @start locale config
   en      : &EN       About
   en-GB   : *EN
   en-US   : *EN
@@ -15,6 +16,13 @@ titles:
   zh-HK   : *ZH_HANT
   ko      : &KO       소개
   ko-KR   : *KO
+  fr      : &KO       À propos
+  fr-BE   : *FR
+  fr-CA   : *FR
+  fr-CH   : *FR
+  fr-FR   : *FR
+  fr-LU   : *FR
+  # @end locale config
 key: page-about
 ---
 
