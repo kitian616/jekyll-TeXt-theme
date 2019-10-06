@@ -144,4 +144,31 @@ fr-FR:
   <<: *FR
 fr-LU:
   <<: *FR
+
+## => Dutch
+########################
+nl: &NL
+  SUBSCRIBE               : "Abonneren"
+  READMORE                : "Lees meer"
+  SEARCH                  : "Zoeken"
+  CANCEL                  : "Annuleren"
+  VIEWS                   : "keer bekenen"
+  LAST_UPDATED            : "Laatste update"
+  PREVIOUS                : "VORIGE"
+  NEXT                    : "VOLGENDE"
+  ARTICLE_DATE_FORMAT     : "%d %b, %Y"
+  ARTICLE_LIST_DATE_FORMAT: "%d %b"
+  STATISTICS              : "[POST_COUNT] artikelen, [PAGE_COUNT] pagina's."
+  LICENSE_ANNOUNCE        : "Dit werk valt onder de [LICENSE] licentie."
+  POST_ON_GITHUB          : "Pas aan op Github"
+  FOLLOW_ME               : "Volg mij op [NAME]."
+  FOLLOW_US               : "Volg ons op [NAME]."
+  EMAIL_ME                : "Stuur mij een email."
+  EMAIL_US                : "Stuur ons een email."
+  COPYRIGHT_DATES         : "2019"
+
+ nl-NL:
+   <<: *NL
+ nl-BE:
+   <<: *NL
 # @end locale config
