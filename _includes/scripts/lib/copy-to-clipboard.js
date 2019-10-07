@@ -1,6 +1,4 @@
 (function() {
-	// This script is built on clipboard.js, cf: https://clipboardjs.com/
-	// 1. find all code blocks defined under snippet class
 	var snippets = document.querySelectorAll('pre');
 	[].forEach.call(snippets, function(snippet) {
 		if (snippet.closest('.snippet') !== null) {
@@ -20,12 +18,13 @@
 		showTooltip(e.trigger, fallbackMessage(e.action));
 	});
 
-	// 2. add event listener for all created copy button
 	var btns = document.querySelectorAll('.btn');
 	for (var i = 0; i < btns.length; i++) {
 		btns[i].addEventListener('mouseleave', clearTooltip);
 		btns[i].addEventListener('blur', clearTooltip);
-		btns[i].addEventListener('mouseenter', showToolhint);
+		btns[i].addEventListener('mouseenter', function(e) {
+			showTooltip(e.currentTarget, "copy to clipboard")
+		}, false);
 	}
 
 	function clearTooltip(e) {
@@ -36,11 +35,6 @@
 	function showTooltip(elem, msg) {
 		elem.setAttribute('class', 'btn tooltipped tooltipped-s');
 		elem.setAttribute('aria-label', msg);
-	}
-
-	function showToolhint(e) {
-		e.currentTarget.setAttribute('class', 'btn tooltipped tooltipped-s');
-		e.currentTarget.setAttribute('aria-label', 'copy to clipboard');
 	}
 
 	function fallbackMessage(action) {
