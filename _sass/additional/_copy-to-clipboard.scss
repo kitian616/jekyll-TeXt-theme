@@ -61,13 +61,13 @@
 	transform: translateX(50%)
 }
 
-.clippy {
+.fa-copy {
 	margin-top: -3px;
 	position: relative;
 	top: 3px
 }
 
-.btn[disabled] .clippy {
+.btn[disabled] .fa-copy {
 	opacity: .3
 }
 
@@ -84,7 +84,8 @@
 	padding: 2px 6px;
 	position: absolute;
 	right: 4px;
-	top: 4px
+	top: 4px;
+	color: $copy-button-color
 }
 
 .snippet:hover .btn, .snippet .btn:focus {
