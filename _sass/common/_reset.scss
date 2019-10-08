@@ -49,13 +49,13 @@ body {
   margin: 0;
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
   ::-moz-selection {
-    background: $select-color;
+    @include set-property-from-map(background, select-color);
   }
   ::-webkit-selection {
-    background: $select-color;
+    @include set-property-from-map(background, select-color);
   }
   ::selection {
-    background: $select-color;
+    @include set-property-from-map(background, select-color);
   }
 }
 
@@ -66,7 +66,7 @@ body {
 
 input, textarea, select, button {
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
-  color: $text-color;
+  @include set-property-from-map(color, text-color);
 }
 
 h1,
@@ -81,7 +81,7 @@ strong {
 
 h1 {
   font-size: map-get($base, font-size-h1);
-  color: $text-color-d;
+  @include set-property-from-map(color, text-color-d);
   @include media-breakpoint-down(md) {
     font-size: map-get($base, font-size-h1-sm);
   }
@@ -89,7 +89,7 @@ h1 {
 
 h2 {
   font-size: map-get($base, font-size-h2);
-  color: $text-color-d;
+  @include set-property-from-map(color, text-color-d);
   @include media-breakpoint-down(md) {
     font-size: map-get($base, font-size-h2-sm);
   }
@@ -97,7 +97,7 @@ h2 {
 
 h3 {
   font-size: map-get($base, font-size-h3);
-  color: $text-color-d;
+  @include set-property-from-map(color, text-color-d);
   @include media-breakpoint-down(md) {
     font-size: map-get($base, font-size-h3-sm);
   }
@@ -105,7 +105,7 @@ h3 {
 
 h4 {
   font-size: map-get($base, font-size-h4);
-  color: $text-color;
+  @include set-property-from-map(color, text-color);
   @include media-breakpoint-down(md) {
     font-size: map-get($base, font-size-h4-sm);
   }
@@ -113,7 +113,7 @@ h4 {
 
 h5 {
   font-size: map-get($base, font-size-h5);
-  color: $text-color;
+  @include set-property-from-map(color, text-color);
   @include media-breakpoint-down(md) {
     font-size: map-get($base, font-size-h5-sm);
   }
@@ -121,7 +121,7 @@ h5 {
 
 h6 {
   font-size: map-get($base, font-size-h6);
-  color: $text-color-l;
+  @include set-property-from-map(color, text-color-l);
   @include media-breakpoint-down(md) {
     font-size: map-get($base, font-size-h6-sm);
   }
@@ -129,7 +129,7 @@ h6 {
 
 a {
   font-weight: map-get($base, font-weight-bold);
-  @include link-colors($main-color-1);
+  @extend .link, .link--primary;
 }
 
 pre, code {

@@ -1,0 +1,53 @@
+@mixin set-property-value($key, $property-value, $important: false) {
+  @if type-of($property-value) == "map" {
+    @each $name, $value in $property-value {
+      @if $important {
+        #{$key}: $value !important; /* stylelint-disable-line declaration-no-important */
+        #{$key}: var(--#{$name}) !important; /* stylelint-disable-line declaration-no-important */
+      } @else {
+        #{$key}: $value;
+        #{$key}: var(--#{$name});
+      }
+    }
+  } @else {
+    @if $important {
+      #{$key}: $property-value !important; /* stylelint-disable-line declaration-no-important */
+    } @else {
+      #{$key}: $property-value;
+    }
+  }
+}
+
+// @mixin set-property-values($key, $property-string, $property-value, $important: false) {
+//   @if type-of($property-value) == "map" {
+//     $property: $property-string;
+//     $property-var: $property-string;
+//     @each $name, $value in $property-value {
+//       $search: "[#{$name}]";
+//       $property: str-replace($property, $search, $value);
+//       $property-var: str-replace($property-var, $search, "var(--#{$name})");
+//       @if $important {
+//         #{$key}: #{$property} !important; /* stylelint-disable-line declaration-no-important */
+//         #{$key}: #{$property-var} !important; /* stylelint-disable-line declaration-no-important */
+//       } @else {
+//         #{$key}: #{$property};
+//         #{$key}: #{$property-var};
+//       }
+//     }
+//   } @else {
+//     @if $important {
+//       #{$key}: $property-value !important; /* stylelint-disable-line declaration-no-important */
+//     } @else {
+//       #{$key}: $property-value;
+//     }
+//   }
+// }
+
+@mixin set-property-from-map($key, $name, $map: default) {
+  @if $map == default {
+    $map: $default;
+  }
+  #{$key}: map-get($map, $name);
+  #{$key}: var(--#{$name});
+}
+

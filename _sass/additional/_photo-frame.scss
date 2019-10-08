@@ -4,7 +4,8 @@
   }
 
   img.border, .border > img {
-    border: 1px solid $border-color-l;
+    border: 1px solid;
+    @include set-property-from-map(border-color, border-color-l);
   }
 
   img.rounded, .rounded > img {

@@ -17,12 +17,12 @@
   margin-top: map-get($spacers, 4);
   font-size: map-get($base, font-size-h1);
   font-weight: map-get($base, font-weight-bold);
-  color: $text-color-d;
+  @include set-property-from-map(color, text-color-d);
   .search--light & {
-    color: $text-color-theme-light-d;
+    @include set-property-from-map(color, text-color-theme-light-d);
   }
   .search--dark & {
-    color: $text-color-theme-dark-d;
+    @include set-property-from-map(color, text-color-theme-dark-d);
   }
   @include media-breakpoint-down(md) {
     display: none;
@@ -49,7 +49,7 @@
     padding: 0 2rem;
     margin: 0;
     line-height: 1 !important;
-    color: $text-color;
+    @include set-property-from-map(color, text-color);
     background-color: transparent;
     border: 2px solid $border-color;
     border-radius: map-get($button, pill-radius);
@@ -59,37 +59,43 @@
       box-shadow: 0 0 0 2px rgba($border-color, .4);
     }
     .search--light & {
-      color: $text-color-theme-light;
-      border-color: $text-color-theme-light;
+      @include set-property-from-map(color, text-color-theme-light);
+      @include set-property-from-map(border-color, text-color-theme-light);
       @include focus {
         box-shadow: 0 0 0 2px rgba($text-color-theme-light, .4);
       }
     }
     .search--dark & {
-      color: $text-color-theme-dark;
-      border-color: $text-color-theme-dark;
+      @include set-property-from-map(color, text-color-theme-dark);
+      @include set-property-from-map(border-color, text-color-theme-dark);
       @include focus {
         box-shadow: 0 0 0 2px rgba($text-color-theme-dark, .4);
       }
     }
   }
   & > .search-box__icon-search {
-    color: $text-color-l;
+    top: 0;
+    left: 0;
+    @include set-property-from-map(color, text-color-l);
     .search--light & {
-      color: $text-color-theme-light-l;
+      @include set-property-from-map(color, text-color-theme-light-l);
     }
     .search--dark & {
-      color: $text-color-theme-dark-l;
+      @include set-property-from-map(color, text-color-theme-dark-l);
     }
   }
   & > .search-box__icon-clear {
+    top: 0;
+    right: 0;
+    display: none;
+
     & > a {
-      @include link-colors($text-color);
+      @extend .link, .link--text;
       .search--light & {
-        @include link-colors($text-color-theme-light);
+        @extend .link, .link--theme-light;
       }
       .search--dark & {
-        @include link-colors($text-color-theme-dark);
+        @extend .link, .link--theme-dark;
       }
       cursor: pointer;
     }
@@ -104,15 +110,6 @@
   }
   &.not-empty > .search-box__icon-clear {
     display: block;
-  }
-  & > .search-box__icon-clear {
-    top: 0;
-    right: 0;
-    display: none;
-  }
-  & > .search-box__icon-search {
-    top: 0;
-    left: 0;
   }
 }
 
@@ -132,13 +129,13 @@
   margin: map-get($spacers, 3) 0 map-get($spacers, 2) 0;
   font-size: map-get($base, font-size-lg);
   font-weight: map-get($base, font-weight-bold);
-  color: $text-color-l;
+  @include set-property-from-map(color, text-color-l);
   text-transform: uppercase;
   .search--light & {
-    color: $text-color-theme-light-l;
+    @include set-property-from-map(color, text-color-theme-light-l);
   }
   .search--dark & {
-    color: $text-color-theme-dark-l;
+    @include set-property-from-map(color, text-color-theme-dark-l);
   }
 }
 
@@ -147,26 +144,35 @@
   a {
     padding: map-get($spacers, 1) map-get($spacers, 3);
     @include transition(none);
-    @include clickable($text-color, transparent, $text-color-3, $main-color-3);
+    @include clickable-new(
+      ($text-color), null,
+      ($text-color-3), ($main-color-3)
+    );
     .search--light & {
-      @include clickable($text-color-theme-light, transparent, $text-color-theme-dark, $main-color-theme-light);
+      @include clickable-new(
+        ("text-color-theme-light": map-get($default, text-color-theme-light)), null,
+        ("text-color-theme-dark": map-get($default, text-color-theme-dark)), ("main-color-theme-light": map-get($default, main-color-theme-light))
+      );
     }
     .search--dark & {
-      @include clickable($text-color-theme-dark, transparent, $text-color-theme-light, $main-color-theme-dark);
+      @include clickable-new(
+        ("text-color-theme-dark": map-get($default, text-color-theme-dark)), null,
+        ("text-color-theme-light": map-get($default, text-color-theme-light)), ("main-color-theme-dark": map-get($default, main-color-theme-dark))
+      );
     }
   }
   &.active {
     a {
       @include plain() {
-        color: $text-color-3;
-        background-color: $main-color-3;
+        @include set-property-from-map(color, text-color-3);
+        @include set-property-from-map(background-color, main-color-3);
         .search--light & {
-          color: $text-color-theme-dark;
-          background-color: $main-color-theme-light;
+          @include set-property-from-map(color, text-color-theme-dark);
+          @include set-property-from-map(background-color, main-color-theme-light);
         }
         .search--dark & {
-          color: $text-color-theme-light;
-          background-color: $main-color-theme-dark;
+          @include set-property-from-map(color, text-color-theme-light);
+          @include set-property-from-map(background-color, main-color-theme-dark);
         }
       }
       @include active() {

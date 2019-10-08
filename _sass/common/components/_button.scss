@@ -1,8 +1,8 @@
 @mixin button() {
   display: inline-block;
   font-weight: map-get($button, font-weight);
-  line-height: 1 !important;
-  text-decoration: none !important;
+  line-height: 1 !important; /* stylelint-disable-line declaration-no-important */
+  text-decoration: none !important; /* stylelint-disable-line declaration-no-important */
   cursor: pointer;
   outline: none;
   @include user-select(none);
@@ -20,83 +20,123 @@
 }
 
 .button--primary {
-  @include clickable($text-color-1, $main-color-1);
+  @include clickable-new(
+    ("text-color-1": map-get($default, text-color-1)), ("main-color-1": map-get($default, main-color-1))
+  );
 }
 
 .button--secondary {
-  @include clickable($text-color-3, $main-color-3);
+  @include clickable-new(
+    ("text-color-3": map-get($default, text-color-3)), ("main-color-3": map-get($default, main-color-3))
+  );
 }
 
 .button--success {
-  @include clickable($text-color-function, $green);
+  @include clickable-new(
+    ("text-color-function": map-get($default, text-color-function)), ("green": map-get($default, green))
+  );
 }
 
 .button--info {
-  @include clickable($text-color-function, $blue);
+  @include clickable-new(
+    ("text-color-function": map-get($default, text-color-function)), ("blue": map-get($default, blue))
+  );
 }
 
 .button--warning {
-  @include clickable($text-color-function, $yellow);
+  @include clickable-new(
+    ("text-color-function": map-get($default, text-color-function)), ("yellow": map-get($default, yellow))
+  );
 }
 
 .button--error {
-  @include clickable($text-color-function, $red);
+  @include clickable-new(
+    ("text-color-function": map-get($default, text-color-function)), ("red": map-get($default, red))
+  );
 }
 
 .button--theme-light {
-  @include clickable($text-color-theme-dark, $main-color-theme-light);
+  @include clickable-new(
+    ("text-color-theme-dark": map-get($default, text-color-theme-dark)), ("main-color-theme-light": map-get($default, main-color-theme-light))
+  );
 }
 
 .button--theme-dark {
-  @include clickable($text-color-theme-light, $main-color-theme-dark);
+  @include clickable-new(
+    ("text-color-theme-light": map-get($default, text-color-theme-light)), ("main-color-theme-dark": map-get($default, main-color-theme-dark))
+  );
 }
 
 .button--outline-primary {
-  color: $main-color-1;
-  border: 1px solid $main-color-1;
-  @include clickable($main-color-1, transparent, $text-color-1, $main-color-1);
+  border: 1px solid;
+  @include set-property-from-map(border-color, main-color-1);
+  @include clickable-new(
+    ("main-color-1": map-get($default, main-color-1)), null,
+    ("text-color-1": map-get($default, text-color-1)), ("main-color-1-hover": map-get($default, main-color-1-hover))
+  );
 }
 
 .button--outline-secondary {
-  color: $main-color-3;
-  border: 1px solid $main-color-3;
-  @include clickable($main-color-3, transparent, $text-color-3, $main-color-3);
+  border: 1px solid;
+  @include set-property-from-map(border-color, main-color-3);
+  @include clickable-new(
+    ("main-color-3": map-get($default, main-color-3)), null,
+    ("text-color-3": map-get($default, text-color-3)), ("main-color-3-hover": map-get($default, main-color-3-hover))
+  );
 }
 
 .button--outline-success {
-  color: $green;
-  border: 1px solid $green;
-  @include clickable($green, transparent, $text-color-function, $green);
+  border: 1px solid;
+  @include set-property-from-map(border-color, green);
+  @include clickable-new(
+    ("green": map-get($default, green)), null,
+    ("text-color-function": map-get($default, text-color-function)), ("green-hover": map-get($default, green-hover))
+  );
 }
 
 .button--outline-info {
-  color: $blue;
-  border: 1px solid $blue;
-  @include clickable($blue, transparent, $text-color-function, $blue);
+  border: 1px solid;
+  @include set-property-from-map(border-color, blue);
+  @include clickable-new(
+    ("blue": map-get($default, blue)), null,
+    ("text-color-function": map-get($default, text-color-function)), ("blue-hover": map-get($default, blue-hover))
+  );
 }
 
 .button--outline-warning {
-  color: $yellow;
-  border: 1px solid $yellow;
-  @include clickable($yellow, transparent, $text-color-function, $yellow);
+  border: 1px solid;
+  @include set-property-from-map(border-color, yellow);
+  @include clickable-new(
+    ("yellow": map-get($default, yellow)), null,
+    ("text-color-function": map-get($default, text-color-function)), ("yellow-hover": map-get($default, yellow-hover))
+  );
 }
 
 .button--outline-error {
-  color: $red;
-  border: 1px solid $red;
-  @include clickable($red, transparent, $text-color-function, $red);
+  border: 1px solid;
+  @include set-property-from-map(border-color, red);
+  @include clickable-new(
+    ("red": map-get($default, red)), null,
+    ("text-color-function": map-get($default, text-color-function)), ("red-hover": map-get($default, red-hover))
+  );
 }
 
 .button--outline-theme-light {
-  color: $main-color-theme-light;
-  border: 1px solid $main-color-theme-light;
-  @include clickable($main-color-theme-light, transparent, $text-color-theme-dark, $main-color-theme-light);
+  border: 1px solid;
+  @include set-property-from-map(border-color, main-color-theme-light);
+  @include clickable-new(
+    ("main-color-theme-light": map-get($default, main-color-theme-light)), null,
+    ("text-color-theme-dark": map-get($default, text-color-theme-dark)), ("main-color-theme-light-hover": map-get($default, main-color-theme-light-hover))
+  );
 }
 
 .button--outline-theme-dark {
-  color: $main-color-theme-dark;
-  border: 1px solid $main-color-theme-dark;
-  @include clickable($main-color-theme-dark, transparent, $text-color-theme-light, $main-color-theme-dark);
+  border: 1px solid;
+  @include set-property-from-map(border-color, main-color-theme-dark);
+  @include clickable-new(
+    ("main-color-theme-dark": map-get($default, main-color-theme-dark)), null,
+    ("text-color-theme-light": map-get($default, text-color-theme-light)), ("main-color-theme-dark-hover": map-get($default, main-color-theme-dark-hover))
+  );
 }
 
 .button--pill {

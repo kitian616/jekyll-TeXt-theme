@@ -1,21 +1,21 @@
 .article__content {
   code.success {
-    color: $text-color-function;
-    background-color: $green;
+    @include set-property-from-map(color, text-color-function);
+    @include set-property-from-map(background-color, "green");
   }
 
   code.info {
-    color: $text-color-function;
-    background-color: $blue;
+    @include set-property-from-map(color, text-color-function);
+    @include set-property-from-map(background-color, "blue");
   }
 
   code.warning {
-    color: $text-color-function;
-    background-color: $yellow;
+    @include set-property-from-map(color, text-color-function);
+    @include set-property-from-map(background-color, "yellow");
   }
 
   code.error {
-    color: $text-color-function;
-    background-color: $red;
+    @include set-property-from-map(color, text-color-function);
+    @include set-property-from-map(background-color, "red");
   }
 }

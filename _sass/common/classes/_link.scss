@@ -10,3 +10,13 @@
   }
   @include clickable($clr, null, $hover-clr, null, $active-clr, null, $focus-clr, null, $theme, $ignore-path);
 }
+
+@mixin link-colors-new($pv_clr, $pv_hover-clr: default, $pv_active-clr: default, $pv_focus-clr: null, $theme: default, $ignore-path: default) {
+  @include clickable-new(
+    $pv_clr, null,
+    $pv_hover-clr, null,
+    $pv_active-clr, null,
+    $pv_focus-clr, null,
+    $ignore-path
+  );
+}

@@ -3,7 +3,7 @@
   padding: map-get($spacers, 2) map-get($spacers, 3);
   margin: map-get($spacers, 4) 0;
   font-size: map-get($base, font-size-sm);
-  background-color: $text-background-color;
+  @include set-property-from-map(background-color, text-background-color);
   @include media-breakpoint-down(md) {
     text-align: center;
   }
@@ -18,7 +18,7 @@
   font-size: map-get($base, font-size-lg);
   font-weight: map-get($base, font-weight-bold);
   a {
-    @include link-colors($text-color, $main-color-1);
+    @extend .link, .link--highlight-text;
   }
 }
 .author-profile__links {

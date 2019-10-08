@@ -157,3 +157,199 @@
     }
   }
 }
+
+
+@mixin clickable-new(
+  $pv_clr, $pv_bg-clr,
+  $pv_hover-clr: default, $pv_hover-bg-clr: default,
+  $pv_active-clr: default, $pv_active-bg-clr: default,
+  $pv_focus-clr: default, $pv_focus-bg-clr: default,
+  $ignore-path: default
+) {
+
+  @if $ignore-path == default {
+    $ignore-path: false;
+  } @else {
+    $ignore-path: true;
+  }
+
+  @include transition(map-get($clickable, transition));
+  @if $ignore-path == false {
+    svg {
+      path {
+        @include transition(map-get($clickable, transition));
+      }
+    }
+  }
+
+  $clr-key: "";
+  $bg-clr-key: "";
+  $default-hover-clr-key: "";
+  $default-active-clr-key: "";
+  $default-hover-bg-clr-key: "";
+  $default-active-bg-clr-key: "";
+
+  @if type-of($pv_clr) == map {
+    $clr-key: nth(map-keys($pv_clr), 1);
+    $default-hover-clr-key: $clr-key + "-hover";
+    $default-active-clr-key: $clr-key + "-active";
+  }
+  @if type-of($pv_hover-clr) == map {
+    $hover-clr-key: nth(map-keys($pv_hover-clr), 1);
+    $slice-index: str-length($hover-clr-key) - 5;
+    @if str-slice($hover-clr-key, $slice-index) == "-hover" {
+      $clr-key: str-slice($hover-clr-key, 0, $slice-index - 1);
+    }
+    $default-hover-clr-key: "";
+    $default-active-clr-key: $clr-key + "-active";
+  }
+
+  @if type-of($pv_bg-clr) == map  {
+    $bg-clr-key: nth(map-keys($pv_bg-clr), 1);
+    $default-hover-bg-clr-key: $bg-clr-key + "-hover";
+    $default-active-bg-clr-key: $bg-clr-key + "-active";
+  }
+  @if type-of($pv_hover-bg-clr) == map {
+    $hover-bg-clr-key: nth(map-keys($pv_hover-bg-clr), 1);
+    $slice-index: str-length($hover-bg-clr-key) - 5;
+    @if str-slice($hover-bg-clr-key, $slice-index) == "-hover" {
+      $bg-clr-key: str-slice($hover-bg-clr-key, 0, $slice-index - 1);
+    }
+    $default-hover-bg-clr-key: "";
+    $default-active-bg-clr-key: $bg-clr-key + "-active";
+  }
+
+  // @if $ignore-path == true {
+  //   @debug $clr-key, "|", $bg-clr-key;
+  //   @debug $default-hover-clr-key, "|", $default-hover-bg-clr-key;
+  //   @debug $default-active-clr-key, "|", $default-active-bg-clr-key;
+  //   @debug "====";
+  // }
+
+  // hover
+  @if $pv_hover-clr == default {
+    @if $pv_hover-bg-clr == null and map-has-key($default, $default-hover-clr-key) {
+      $pv_hover-clr: (
+        #{$default-hover-clr-key}: map-get($default, $default-hover-clr-key)
+      );
+    } @else {
+      $pv_hover-clr: $pv_clr;
+    }
+
+  }
+  @if $pv_hover-bg-clr == default {
+    @if map-has-key($default, $default-hover-bg-clr-key) {
+      $pv_hover-bg-clr: (
+        #{$default-hover-bg-clr-key}: map-get($default, $default-hover-bg-clr-key)
+      );
+    } @else {
+      $pv_hover-bg-clr: $pv_bg-clr;
+    }
+  }
+
+  // active
+  @if $pv_active-clr == default {
+    @if $pv_active-bg-clr == null and map-has-key($default, $default-active-clr-key) {
+      $pv_active-clr: (
+        #{$default-active-clr-key}: map-get($default, $default-active-clr-key)
+      );
+    } @else {
+      $pv_active-clr: $pv_hover-clr;
+    }
+  }
+
+  @if $pv_active-bg-clr == default {
+    @if map-has-key($default, $default-active-bg-clr-key) {
+      $pv_active-bg-clr: (
+        #{$default-active-bg-clr-key}: map-get($default, $default-active-bg-clr-key)
+      );
+    } @else {
+      $pv_active-bg-clr: $pv_hover-bg-clr;
+    }
+  }
+
+  // focus
+  @if $pv_focus-clr == default {
+    @if $pv_focus-bg-clr == null and map-has-key($default, $default-active-clr-key) {
+      $pv_focus-clr: (
+        #{$default-active-clr-key}: map-get($default, $default-active-clr-key)
+      );
+    } @else {
+      $pv_focus-clr: $pv_active-clr;
+    }
+  }
+
+  @if $pv_focus-bg-clr == default {
+    @if map-has-key($default, $default-active-bg-clr-key) {
+      $pv_focus-bg-clr: (
+        #{$default-active-bg-clr-key}: map-get($default, $default-active-bg-clr-key)
+      );
+    } @else {
+      $pv_focus-bg-clr: $pv_active-bg-clr;
+    }
+  }
+
+  // @debug $pv_clr, "|",$pv_bg-clr;
+  // @debug $pv_hover-clr, "|", $pv_hover-bg-clr;
+  // @debug $pv_active-clr, "|", $pv_active-bg-clr;
+  // @debug $pv_focus-clr, "|", $pv_focus-bg-clr;
+  // @debug "----";
+
+  @include plain() {
+    @include set-property-value(color, $pv_clr);
+    @if $ignore-path == false {
+      svg path {
+        @include set-property-value(fill, $pv_clr);
+      }
+    }
+    @if $pv_bg-clr {
+      @include set-property-value(background-color, $pv_bg-clr);
+    }
+  }
+  @include hover() {
+    @include set-property-value(color, $pv_hover-clr);
+    @if $ignore-path == false {
+      svg path {
+        @include set-property-value(fill, $pv_hover-clr);
+      }
+    }
+    @if $pv_hover-bg-clr {
+      @include set-property-value(background-color, $pv_hover-bg-clr);
+    }
+  }
+  @include active() {
+    @include set-property-value(color, $pv_active-clr);
+    @if $ignore-path == false {
+      svg path {
+        @include set-property-value(fill, $pv_active-clr);
+      }
+    }
+    @if $pv_active-bg-clr {
+      @include set-property-value(background-color, $pv_active-bg-clr);
+    }
+  }
+  @include focus() {
+    @include set-property-value(color, $pv_focus-clr);
+    @if $ignore-path == false {
+      svg path {
+        @include set-property-value(fill, $pv_focus-clr);
+      }
+    }
+    @if $pv_focus-bg-clr{
+      @include set-property-value(background-color, $pv_focus-bg-clr);
+      // box-shadow: 0 0 0 2px rgba($pv_focus-bg-clr, .4);
+    }
+  }
+  @include disabled() {
+    @include set-property-value(color, $pv_clr, important);
+    opacity: .2 !important; /* stylelint-disable-line declaration-no-important */
+    @if $ignore-path == false {
+      svg path {
+        @include set-property-value(fill, $pv_clr, important);
+      }
+    }
+    @if $pv_bg-clr {
+      @include set-property-value(background-color, $pv_bg-clr, important);
+    }
+  }
+}

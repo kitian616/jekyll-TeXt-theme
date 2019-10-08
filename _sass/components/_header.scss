@@ -1,9 +1,11 @@
 .header {
-  background: $header-background;
+  @include set-property-from-map(background, header-background);
   a {
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
-    @include link-colors($header-text-color, $main-color-1);
+    @include link-colors-new(
+      ("header-text-color": map-get($default, header-text-color)), ("main-color-1": map-get($default, main-color-1))
+    );
   }
   .main {
     @include flexbox();
@@ -18,7 +20,9 @@
   background: rgba(#000, .15);
   .navigation__item--active {
     &::after {
-      @include split-line(bottom, 4px, $text-color-theme-dark);
+      @include split-line(bottom, 4px, (
+        "text-color-theme-dark": map-get($default, text-color-theme-dark)
+      ));
     }
   }
 }
@@ -28,7 +32,9 @@
   background: rgba(#fff, .15);
   .navigation__item--active {
     &::after {
-      @include split-line(bottom, 4px, $text-color-theme-light);
+      @include split-line(bottom, 4px, (
+        "text-color-theme-light": map-get($default, text-color-theme-light)
+      ));
     }
   }
 }
@@ -115,9 +121,13 @@
 }
 .navigation__item--active {
   a {
-    @include link-colors($main-color-1, $main-color-1);
+    @include link-colors-new(
+      ("main-color-1": map-get($default, main-color-1)), ("main-color-1": map-get($default, main-color-1))
+    );
   }
   &::after {
-    @include split-line(bottom, 4px, $main-color-1);
+    @include split-line(bottom, 4px, (
+      "main-color-1": map-get($default, main-color-1)
+    ));
   }
 }

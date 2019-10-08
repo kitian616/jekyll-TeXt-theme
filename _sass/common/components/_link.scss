@@ -1,0 +1,77 @@
+.link {
+  @include plain() {
+    text-decoration: none;
+  }
+  @include hover() {
+    text-decoration: underline;
+  }
+  @include active() {
+    text-decoration: none;
+  }
+}
+
+.link--primary {
+  @include link-colors-new(
+    ("main-color-1": map-get($default, main-color-1))
+  );
+}
+
+.link--text {
+  @include link-colors-new(
+    ("text-color": map-get($default, text-color))
+  );
+}
+
+.link--text-d {
+  @include link-colors-new(
+    ("text-color-d": map-get($default, text-color-d))
+  );
+}
+
+.link--text-l {
+  @include link-colors-new(
+    ("text-color-l": map-get($default, text-color-l))
+  );
+}
+
+.link--theme-light {
+  @include link-colors-new(
+    ("text-color-theme-light": map-get($default, text-color-theme-light))
+  );
+}
+
+.link--theme-dark {
+  @include link-colors-new(
+    ("text-color-theme-dark": map-get($default, text-color-theme-dark))
+  );
+}
+
+.link--highlight-text {
+  @include link-colors-new(
+    ("text-color": map-get($default, text-color)), ("main-color-1-hover": map-get($default, main-color-1-hover))
+  );
+}
+
+.link--highlight-text-d {
+  @include link-colors-new(
+    ("text-color-d": map-get($default, text-color-d)), ("main-color-1-hover": map-get($default, main-color-1-hover))
+  );
+}
+
+.link--highlight-text-l {
+  @include link-colors-new(
+    ("text-color-l": map-get($default, text-color-l)), ("main-color-1-hover": map-get($default, main-color-1-hover))
+  );
+}
+
+.link--highlight-theme-light {
+  @include link-colors-new(
+    ("text-color-theme-light": map-get($default, text-color-theme-light)), ("main-color-1-hover": map-get($default, main-color-1-hover))
+  );
+}
+
+.link--highlight-theme-dark {
+  @include link-colors-new(
+    ("text-color-theme-dark": map-get($default, text-color-theme-dark)), ("main-color-1-hover": map-get($default, main-color-1-hover))
+  );
+}

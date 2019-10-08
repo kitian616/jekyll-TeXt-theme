@@ -1,14 +1,14 @@
 ul.toc {
   display: block;
   margin: 0;
-  color: $text-color;
+  @include set-property-from-map(color, text-color);
   list-style-type: none;
   & > li {
     margin: map-get($spacers, 1) / 2 0;
-    a {
+    a { /* stylelint-disable-line selector-max-type */
       display: inline-block;
       margin: map-get($spacers, 1) / 4 0;
-      text-decoration: none !important;
+      text-decoration: none !important; /* stylelint-disable-line declaration-no-important */
     }
   }
   .toc-h1,
@@ -18,11 +18,11 @@ ul.toc {
   .toc-h5,
   .toc-h6 {
     a {
-      @include link-colors($text-color, $main-color-1);
+      @extend .link, .link--highlight-text;
     }
     &.active {
       a {
-        @include link-colors($main-color-1);
+        @extend .link, .link--primary;
       }
     }
   }
@@ -42,14 +42,14 @@ ul.toc {
     @include split-line(bottom);
     padding: map-get($spacers, 2) 0 map-get($spacers, 1) 0;
     margin-bottom: map-get($spacers, 2);
-    color: $text-color-d;
+    @include set-property-from-map(color, text-color-d);
     &, a {
       font-size: map-get($base, font-size-sm);
       font-weight: map-get($base, font-weight-bold);
       line-height: map-get($base, line-height-sm);
     }
     a {
-      @include link-colors($text-color-d, $main-color-1);
+      @extend .link, .link--highlight-text-d;
     }
   }
   .toc-h2 {
@@ -68,9 +68,9 @@ ul.toc {
     margin-left: map-get($spacers, 3) * 3;
   }
   .toc-h6 {
-    color: $text-color-l;
+    @include set-property-from-map(color, text-color-l);
     a {
-      @include link-colors($text-color-l, $main-color-1);
+      @extend .link, .link--highlight-text-l;
     }
   }
 }
@@ -85,23 +85,25 @@ ul.toc--ellipsis {
 
 ul.toc--navigator {
   & > li {
-    a {
+    a { /* stylelint-disable-line selector-max-type */
       padding-left: map-get($spacers, 2);
       margin: map-get($spacers, 1) 0;
     }
     &.active {
-      a {
+      a { /* stylelint-disable-line selector-max-type */
         margin-left: -4px;
-        @include split-line(left, 4px, $main-color-1);
+        @include split-line(left, 4px, (
+          "main-color-1": map-get($default, main-color-1)
+        ));
       }
     }
   }
   .toc-h2,
   .toc-h3,
   .toc-h4 {
-    color: $text-color-l;
+    @include set-property-from-map(color, text-color-l);
     a {
-      @include link-colors($text-color-l);
+      @extend .link, .link--text-l;
     }
   }
   .toc-h1 {
@@ -109,9 +111,9 @@ ul.toc--navigator {
       font-size: map-get($base, font-size);
       line-height: map-get($base, line-height);
     }
-    color: $text-color;
+    @include set-property-from-map(color, text-color);
     a {
-      @include link-colors($text-color-d);
+      @extend .link, .link--text-d;
     }
   }
   .toc-h2 {

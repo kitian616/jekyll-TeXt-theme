@@ -1,8 +1,10 @@
-///
-// Skin: Default
-// Author: Tian Qi
-// Email: kitian616@outlook.com
-///
+/**
+ * Skin: Default
+ * Author: Tian Qi
+ * Email: kitian616@outlook.com
+ */
+
+/* stylelint-disable value-list-max-empty-lines, function-max-empty-lines */
 
 // main colors
 $main-color-1:     #fc4d50;
@@ -69,6 +71,134 @@ $douban-color:     #42bd56;
 $linkedin-color:   #1074af;
 $github-color:     #000;
 $npm-color:        #fff;
+
+$default: (
+  // main colors
+  main-color-1:         $main-color-1,
+  main-color-1-hover:   darken($main-color-1, 14%),
+  main-color-1-active:  darken($main-color-1, 20%),
+
+  text-color-1:         $text-color-1,
+  text-color-1-hover:   darken($text-color-1, 14%),
+  text-color-1-active:  darken($text-color-1, 20%),
+
+  main-color-2-active:  darken($main-color-2, 20%),
+  main-color-2-hover:   darken($main-color-2, 14%),
+  main-color-2:         $main-color-2,
+
+  text-color-2:         $text-color-2,
+  text-color-2-hover:   darken($text-color-2, 14%),
+  text-color-2-active:  darken($text-color-2, 20%),
+
+  main-color-3:         $main-color-3,
+  main-color-3-hover:   darken($main-color-3, 14%),
+  main-color-3-active:  darken($main-color-3, 20%),
+
+  text-color-3:         $text-color-3,
+  text-color-3-hover:   darken($text-color-3, 14%),
+  text-color-3-active:  darken($text-color-3, 20%),
+
+  main-color-theme-light:         $main-color-theme-light,
+  main-color-theme-light-hover:   lighten($main-color-theme-light, 18%),
+  main-color-theme-light-active:  lighten($main-color-theme-light, 32%),
+
+
+  main-color-theme-dark:          $main-color-theme-dark,
+  main-color-theme-dark-hover:    darken($main-color-theme-dark, 14%),
+  main-color-theme-dark-active:   darken($main-color-theme-dark, 20%),
+
+  // function colors
+  green:                $green,
+  green-hover:          darken($green, 14%),
+  green-active:         darken($green, 20%),
+
+  blue:                 $blue,
+  blue-hover:           darken($blue, 14%),
+  blue-active:          darken($blue, 20%),
+
+  yellow:               $yellow,
+  yellow-hover:         darken($yellow, 14%),
+  yellow-active:        darken($yellow, 20%),
+
+  red:                  $red,
+  red-hover:            darken($red, 14%),
+  red-active:           darken($red, 20%),
+
+  text-color-function:        $text-color-function,
+  text-color-function-hover:  darken($text-color-function, 14%),
+  text-color-function-active: darken($text-color-function, 20%),
+
+  // text colors
+  text-color-theme-light-d:         $text-color-theme-light-d,
+  text-color-theme-light-d-hover:   lighten($text-color-theme-light-d, 18%),
+  text-color-theme-light-d-active:  lighten($text-color-theme-light-d, 32%),
+
+  text-color-theme-light:           $text-color-theme-light,
+  text-color-theme-light-hover:     lighten($text-color-theme-light, 18%),
+  text-color-theme-light-active:    lighten($text-color-theme-light, 32%),
+
+  text-color-theme-light-l:         $text-color-theme-light-l,
+  text-color-theme-light-l-hover:   darken($text-color-theme-light-l, 14%),
+  text-color-theme-light-l-active:  darken($text-color-theme-light-l, 20%),
+
+  text-color-theme-dark-d:          $text-color-theme-dark-d,
+  text-color-theme-dark-d-hover:    darken($text-color-theme-dark-d, 14%),
+  text-color-theme-dark-d-active:   darken($text-color-theme-dark-d, 20%),
+
+  text-color-theme-dark:            $text-color-theme-dark,
+  text-color-theme-dark-hover:      darken($text-color-theme-dark, 14%),
+  text-color-theme-dark-active:     darken($text-color-theme-dark, 20%),
+
+  text-color-theme-dark-l:          $text-color-theme-dark-l,
+  text-color-theme-dark-l-hover:    darken($text-color-theme-dark-l, 14%),
+  text-color-theme-dark-l-active:   darken($text-color-theme-dark-l, 20%),
+
+  text-color-d:                     $text-color-theme-light-d,
+  text-color-d-hover:               lighten($text-color-theme-light-d, 18%),
+  text-color-d-active:              lighten($text-color-theme-light-d, 32%),
+
+  text-color:                       $text-color-theme-light,
+  text-color-hover:                 lighten($text-color-theme-light, 18%),
+  text-color-active:                lighten($text-color-theme-light, 32%),
+
+  text-color-l:                     $text-color-theme-light-l,
+  text-color-l-hover:               darken($text-color-theme-light-l, 14%),
+  text-color-l-active:              darken($text-color-theme-light-l, 20%),
+
+  text-background-color: rgba(#000, .05),
+
+  // border and shadow colors
+  border-color:     mix(#000, $background-color, 20%),
+  border-color-l:   mix(#000, $background-color, 10%),
+  decorate-color:   rgba(#000, .1),
+  mask-color:       rgba(#000, .9),
+  select-color:     rgba($main-color-1, .5),
+
+  // page background
+  background-color: $background-color,
+
+  // header and footer colors
+  header-text-color: $text-color-3,
+  header-background: $main-color-3,
+
+  footer-text-color: $text-color-3,
+  footer-background: $main-color-3,
+
+  // logo colors
+  mail-color:       #0072c5,
+  facebook-color:   #4267b2,
+  twitter-color:    #1da1f2,
+  weibo-color:      #e6162d,
+  google-plus-color:#ea4335,
+  telegram-color:   #32afed,
+  medium-color:     #000,
+  zhihu-color:      #0084ff,
+  douban-color:     #42bd56,
+  linkedin-color:   #1074af,
+  github-color:     #000,
+  npm-color:        #fff
+);
+
 
 // highlight colors
 @import "skins/highlight/tomorrow";

@@ -5,12 +5,12 @@
 
 .article__license, .article__subscribe {
   a {
-    @include link-colors($text-color, $main-color-1);
+    @extend .link, .link--highlight-text;
   }
 }
 
 .article__license {
-  color: $text-color-l;
+  @include set-property-from-map(color, text-color-l);
   img {
     height: map-get($base, font-size) * 1.6;
   }

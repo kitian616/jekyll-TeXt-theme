@@ -1,6 +1,8 @@
 /* stylelint-disable at-rule-name-space-after, at-rule-semicolon-space-before  */
 @charset "utf-8";
 @import
+  "common/classes/var",
+
   "common/classes/animation",
   "common/classes/transform",
   "common/classes/transition",

@@ -73,7 +73,7 @@ $github-color:     #000;
 $npm-color:        #fff;
 
 
-$default: (
+$default-dark: (
   // main colors
   main-color-1:         $main-color-1,
   main-color-1-hover:   darken($main-color-1, 14%),
@@ -100,14 +100,13 @@ $default: (
   text-color-3-active:  darken($text-color-3, 20%),
 
   main-color-theme-light:         $main-color-theme-light,
-  main-color-theme-light-hover:   darken($main-color-theme-light, 14%),
-  main-color-theme-light-active:  darken($main-color-theme-light, 20%),
+  main-color-theme-light-hover:   lighten($main-color-theme-light, 18%),
+  main-color-theme-light-active:  lighten($main-color-theme-light, 32%),
 
 
   main-color-theme-dark:          $main-color-theme-dark,
-  main-color-theme-dark-hover:    lighten($main-color-theme-dark, 18%),
-  main-color-theme-dark-active:   lighten($main-color-theme-dark, 32%),
-
+  main-color-theme-dark-hover:    darken($main-color-theme-dark, 14%),
+  main-color-theme-dark-active:   darken($main-color-theme-dark, 20%),
   // function colors
   green:                $green,
   green-hover:          darken($green, 14%),

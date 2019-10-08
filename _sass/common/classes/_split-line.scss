@@ -1,14 +1,18 @@
-@mixin split-line($direction: default, $width: default, $color: default) {
+@mixin split-line($direction: default, $width: default, $pv_color: default) {
   @if $direction == default {
     $direction: top;
   }
-  @if $color == default {
-    $color: $border-color-l;
+  @if $pv_color == default {
+    $pv_color: ("border-color-l": map-get($default, border-color-l));
   }
   @if $width == default {
     $width: 1px;
   }
-  border: 0 solid $color;
+  border: 0 solid;
+  @include set-property-value(
+    border-color,
+    $pv_color
+  );
   @if $direction == top {
     border-top-width: $width;
   }

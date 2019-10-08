@@ -1,6 +1,6 @@
 .article__info {
   font-size: map-get($base, font-size-sm);
-  color: $text-color-l;
+  @include set-property-from-map(color, text-color-l);
   .left-col {
     float: left;
     @include media-breakpoint-down(md) {
@@ -15,7 +15,9 @@
     }
     & > li {
       &:not(:last-child) {
-        @include split-line(right, default, $text-color-l);
+        @include split-line(right, default, (
+          "text-color-l": map-get($default, text-color-l)
+        ));
         padding-right: map-get($spacers, 2);
         margin-right: map-get($spacers, 2);
         line-height: map-get($base, line-height-xs);

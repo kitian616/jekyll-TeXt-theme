@@ -1,31 +1,31 @@
 @mixin text-light {
-  color: $text-color-theme-light;
+  @include set-property-from-map(color, text-color-theme-light);
   h1, h2, h3 {
-    color: $text-color-theme-light-d;
+    @include set-property-from-map(color, text-color-theme-light-d);
   }
   h4, h5 {
-    color: $text-color-theme-light;
+    @include set-property-from-map(color, text-color-theme-light);
   }
   h6 {
-    color: $text-color-theme-light-l;
+    @include set-property-from-map(color, text-color-theme-light-l);
   }
   a:not(.button) {
-    @include link-colors($text-color-theme-light, $main-color-1);
+    @extend .link, .link--highlight-theme-light;
   }
 }
 @mixin text-dark {
-  color: $text-color-theme-dark;
+  @include set-property-from-map(color, text-color-theme-dark);
   h1, h2, h3 {
-    color: $text-color-theme-dark-d;
+    @include set-property-from-map(color, text-color-theme-dark-d);
   }
   h4, h5 {
-    color: $text-color-theme-dark;
+    @include set-property-from-map(color, text-color-theme-dark);
   }
   h6 {
-    color: $text-color-theme-dark-l;
+    @include set-property-from-map(color, text-color-theme-dark-l);
   }
   a:not(.button) {
-    @include link-colors($text-color-theme-dark, $main-color-1);
+    @extend .link, .link--highlight-theme-dark;
   }
 }
 

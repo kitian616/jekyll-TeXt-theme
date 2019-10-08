@@ -1,0 +1,21 @@
+:root {
+  @each $name, $value in $default {
+    --#{$name}: #{$value};
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $value in $default-dark {
+      --#{$name}: #{$value};
+    }
+  }
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     @each $name, $value in $default-dark {
+//       --#{$name}: green;
+//     }
+//   }
+// }
