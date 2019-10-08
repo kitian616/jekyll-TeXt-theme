@@ -1,5 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-10-06T18:38:55+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
-</subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-10-09T01:09:03+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+</subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">Blog - What’s NEXT</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next.html" rel="alternate" type="text/html" title="Blog - What's NEXT" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next.html">&lt;p&gt;Dark Mode is cool, and TeXt is supporting it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/blog/dark-mode.gif&quot; alt=&quot;Dark Mode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is developing on &lt;code class=&quot;highlighter-rouge&quot;&gt;dev&lt;/code&gt; branch, you can run &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout dev&lt;/code&gt; to switch to this branch.&lt;/p&gt;
+
+&lt;p&gt;For now, ONLY &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; skin supports Dark Mode.&lt;/p&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Blog" /><summary type="html">Dark Mode is cool, and TeXt is supporting it. It is developing on dev branch, you can run git checkout dev to switch to this branch. For now, ONLY default skin supports Dark Mode.</summary></entry><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;success highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;info highlighter-rouge&quot;&gt;info&lt;/code&gt; &lt;code class=&quot;warning highlighter-rouge&quot;&gt;warning&lt;/code&gt; &lt;code class=&quot;error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
 
@@ -1085,38 +1091,4 @@ show_author_profile: true
 
 H2. TeXt Heading
 ------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">H1. TeXt Heading H2. TeXt Heading H3. TeXt Heading H4. TeXt Heading H5. TeXt Heading H6. TeXt Heading</summary></entry><entry><title type="html">Jekyll - Emphasis</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis.html" rel="alternate" type="text/html" title="Jekyll - Emphasis" /><published>2016-09-09T00:00:00+08:00</published><updated>2016-09-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/09/emphasis.html">&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*Should Old Acquaintance be forgot*
-_Should Old Acquaintance be forgot_
-**Should Old Acquaintance be forgot**
-__Should Old Acquaintance be forgot__
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This is a &lt;strong&gt;&lt;em&gt;text with light and strong emphasis&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;strong&gt;is &lt;em&gt;emphasized&lt;/em&gt; as well&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;em&gt;does _not_ work&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;This &lt;strong&gt;does __not__ work either&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a ***text with light and strong emphasis***.
-This **is _emphasized_ as well**.
-This *does _not_ work*.
-This **does __not__ work either**.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">Should Old Acquaintance be forgot Should Old Acquaintance be forgot Should Old Acquaintance be forgot Should Old Acquaintance be forgot</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">H1. TeXt Heading H2. TeXt Heading H3. TeXt Heading H4. TeXt Heading H5. TeXt Heading H6. TeXt Heading</summary></entry></feed>
