@@ -71,12 +71,12 @@
 	opacity: .3
 }
 
-.snippet {
+.copyable {
 	position: relative;
 	overflow: visible
 }
 
-.snippet .btn {
+.copyable .btn {
 	-webkit-transition: opacity .3s ease-in-out;
 	-o-transition: opacity .3s ease-in-out;
 	transition: opacity .3s ease-in-out;
@@ -88,6 +88,6 @@
 	color: $copy-button-color
 }
 
-.snippet:hover .btn, .snippet .btn:focus {
+.copyable:hover .btn, .copyable .btn:focus {
 	opacity: 1
 }

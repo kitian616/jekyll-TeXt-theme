@@ -1,7 +1,7 @@
 (function() {
 	var snippets = document.querySelectorAll('pre');
 	[].forEach.call(snippets, function(snippet) {
-		if (snippet.closest('.snippet') !== null) {
+		if (snippet.closest('.copyable') !== null) {
 			snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn" data-clipboard-snippet><i class="far fa-copy"></i></button>');
 		}
 	});
