@@ -26,7 +26,9 @@ titles: Bùi Minh Nhật
 key: page-about
 ---
 
-# Bùi Minh Nhật <img src="https://avatars3.githubusercontent.com/u/39076547?s=460&v=4" alt="drawing" width="200"/>
+ 
+# Bùi Minh Nhật  <img src="https://avatars3.githubusercontent.com/u/39076547?s=460&v=4" alt="drawing" width="200"/>
+
 
 sahkabska
 
