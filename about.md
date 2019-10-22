@@ -26,7 +26,10 @@ titles: Bùi Minh Nhật
 key: page-about
 ---
 
-![TeXt Theme](https://avatars3.githubusercontent.com/u/39076547?s=460&v=4 =320x320)
 <img src="https://avatars3.githubusercontent.com/u/39076547?s=460&v=4" alt="drawing" width="200"/>
+
+# Bùi Minh Nhật
+
+sahkabska
 
 TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
