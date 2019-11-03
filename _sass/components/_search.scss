@@ -17,12 +17,12 @@
   margin-top: map-get($spacers, 4);
   font-size: map-get($base, font-size-h1);
   font-weight: map-get($base, font-weight-bold);
-  @include set-property-from-map(color, text-color-d);
+  @include css-var(color, "var(--text-color-d)");
   .search--light & {
-    @include set-property-from-map(color, text-color-theme-light-d);
+    @include css-var(color, "var(--text-color-theme-light-d)");
   }
   .search--dark & {
-    @include set-property-from-map(color, text-color-theme-dark-d);
+    @include css-var(color, "var(--text-color-theme-dark-d)");
   }
   @include media-breakpoint-down(md) {
     display: none;
@@ -49,7 +49,7 @@
     padding: 0 2rem;
     margin: 0;
     line-height: 1 !important;
-    @include set-property-from-map(color, text-color);
+    @include css-var(color, "var(--text-color)");
     background-color: transparent;
     border: 2px solid $border-color;
     border-radius: map-get($button, pill-radius);
@@ -59,15 +59,15 @@
       box-shadow: 0 0 0 2px rgba($border-color, .4);
     }
     .search--light & {
-      @include set-property-from-map(color, text-color-theme-light);
-      @include set-property-from-map(border-color, text-color-theme-light);
+      @include css-var(color, "var(--text-color-theme-light)");
+      @include css-var(border-color, "var(--text-color-theme-light)");
       @include focus {
         box-shadow: 0 0 0 2px rgba($text-color-theme-light, .4);
       }
     }
     .search--dark & {
-      @include set-property-from-map(color, text-color-theme-dark);
-      @include set-property-from-map(border-color, text-color-theme-dark);
+      @include css-var(color, "var(--text-color-theme-dark)");
+      @include css-var(border-color, "var(--text-color-theme-dark)");
       @include focus {
         box-shadow: 0 0 0 2px rgba($text-color-theme-dark, .4);
       }
@@ -76,12 +76,12 @@
   & > .search-box__icon-search {
     top: 0;
     left: 0;
-    @include set-property-from-map(color, text-color-l);
+    @include css-var(color, "var(--text-color-l)");
     .search--light & {
-      @include set-property-from-map(color, text-color-theme-light-l);
+      @include css-var(color, "var(--text-color-theme-light-l)");
     }
     .search--dark & {
-      @include set-property-from-map(color, text-color-theme-dark-l);
+      @include css-var(color, "var(--text-color-theme-dark-l)");
     }
   }
   & > .search-box__icon-clear {
@@ -129,13 +129,13 @@
   margin: map-get($spacers, 3) 0 map-get($spacers, 2) 0;
   font-size: map-get($base, font-size-lg);
   font-weight: map-get($base, font-weight-bold);
-  @include set-property-from-map(color, text-color-l);
+  @include css-var(color, "var(--text-color-l)");
   text-transform: uppercase;
   .search--light & {
-    @include set-property-from-map(color, text-color-theme-light-l);
+    @include css-var(color, "var(--text-color-theme-light-l)");
   }
   .search--dark & {
-    @include set-property-from-map(color, text-color-theme-dark-l);
+    @include css-var(color, "var(--text-color-theme-dark-l)");
   }
 }
 
@@ -164,15 +164,15 @@
   &.active {
     a {
       @include plain() {
-        @include set-property-from-map(color, text-color-3);
-        @include set-property-from-map(background-color, main-color-3);
+        @include css-var(color, "var(--text-color-3)");
+        @include css-var(background-color, "var(--main-color-3)");
         .search--light & {
-          @include set-property-from-map(color, text-color-theme-dark);
-          @include set-property-from-map(background-color, main-color-theme-light);
+          @include css-var(color, "var(--text-color-theme-dark)");
+          @include css-var(background-color, "var(--main-color-theme-light)");
         }
         .search--dark & {
-          @include set-property-from-map(color, text-color-theme-light);
-          @include set-property-from-map(background-color, main-color-theme-dark);
+          @include css-var(color, "var(--text-color-theme-light)");
+          @include css-var(background-color, "var(--main-color-theme-dark)");
         }
       }
       @include active() {

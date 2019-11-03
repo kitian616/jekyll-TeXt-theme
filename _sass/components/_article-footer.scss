@@ -10,7 +10,7 @@
 }
 
 .article__license {
-  @include set-property-from-map(color, text-color-l);
+  @include css-var(color, "var(--text-color-l)");
   img {
     height: map-get($base, font-size) * 1.6;
   }

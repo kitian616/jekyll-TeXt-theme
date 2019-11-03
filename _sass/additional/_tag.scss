@@ -1,21 +1,21 @@
 .article__content {
   code.success {
-    @include set-property-from-map(color, text-color-function);
-    @include set-property-from-map(background-color, "green");
+    @include css-var(color, "var(--text-color-function)");
+    @include css-var(background-color, "var(--green-color)");
   }
 
   code.info {
-    @include set-property-from-map(color, text-color-function);
-    @include set-property-from-map(background-color, "blue");
+    @include css-var(color, "var(--text-color-function)");
+    @include css-var(background-color, "var(--blue-color)");
   }
 
   code.warning {
-    @include set-property-from-map(color, text-color-function);
-    @include set-property-from-map(background-color, "yellow");
+    @include css-var(color, "var(--text-color-function)");
+    @include css-var(background-color, "var(--yellow-color)");
   }
 
   code.error {
-    @include set-property-from-map(color, text-color-function);
-    @include set-property-from-map(background-color, "red");
+    @include css-var(color, "var(--text-color-function)");
+    @include css-var(background-color, "var(--red-color)");
   }
 }

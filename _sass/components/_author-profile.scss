@@ -3,7 +3,7 @@
   padding: map-get($spacers, 2) map-get($spacers, 3);
   margin: map-get($spacers, 4) 0;
   font-size: map-get($base, font-size-sm);
-  @include set-property-from-map(background-color, text-background-color);
+  @include css-var(background-color, "var(--text-background-color)");
   @include media-breakpoint-down(md) {
     text-align: center;
   }

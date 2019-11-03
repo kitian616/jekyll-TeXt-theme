@@ -3,16 +3,13 @@
     $direction: top;
   }
   @if $pv_color == default {
-    $pv_color: ("border-color-l": map-get($default, border-color-l));
+    $pv_color: "border-color-l";
   }
   @if $width == default {
     $width: 1px;
   }
   border: 0 solid;
-  @include set-property-value(
-    border-color,
-    $pv_color
-  );
+  @include css-var(border-color, "var(--#{$pv_color})");
   @if $direction == top {
     border-top-width: $width;
   }

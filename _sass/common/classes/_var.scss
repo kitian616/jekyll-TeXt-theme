@@ -43,11 +43,80 @@
 //   }
 // }
 
-@mixin set-property-from-map($key, $name, $map: default) {
+// @mixin set-property-from-map($key, $name, $map: default) {
+//   @if $map == default {
+//     $map: $default;
+//   }
+//   #{$key}: map-get($map, $name);
+//   #{$key}: var(--#{$name});
+// }
+
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function str-find-var($string) {
+  // @debug "112", $string;
+  $search-start: "var(--";
+  $search-end: ")";
+  $search-start-length: 6;
+  $start-at: str-index($string, $search-start);
+
+  @if $start-at {
+    $rest: str-slice($string, $start-at);
+    $end-at: str-index($rest, $search-end);
+
+    @if $end-at {
+      $end-at: $end-at + $start-at -1;
+      $variable: str-slice($string, $start-at + $search-start-length, $end-at - 1);
+      // @debug '---var', $variable, $start-at, $end-at;
+      @return (
+        variable: $variable,
+        start: $start-at,
+        end: $end-at
+      );
+    }
+  }
+  @return null;
+}
+
+@function str-replace-var($string, $map: default) {
   @if $map == default {
     $map: $default;
   }
-  #{$key}: map-get($map, $name);
-  #{$key}: var(--#{$name});
+  $var: str-find-var($string);
+  @if ($var) {
+    $variable-key: map-get($var, variable);
+    $variable-value: map-get($map, $variable-key);
+    // @debug 111, $variable-value;
+    $start-at: map-get($var, start);
+    $end-at: map-get($var, end);
+    @if ($variable-value) {
+      @return (
+        variable-in-map: true,
+        result: str-slice($string, 1, $start-at - 1) + $variable-value + str-slice($string, $end-at + 1)
+      );
+    }
+    @return (
+      variable-in-map: false,
+      result: str-slice($string, 1, $start-at - 1) + $variable-key + str-slice($string, $end-at + 1)
+    );
+  }
+  @return null;
 }
 
+@mixin css-var($name, $value, $map: default) {
+  $var: str-replace-var($value);
+  $var-value: map-get($var, result);
+  #{$name}: #{$var-value};
+  @if (map-get($var, variable-in-map)) {
+    #{$name}: #{$value};
+  }
+}

@@ -3,7 +3,7 @@
     padding: map-get($spacers, 2) map-get($spacers, 3);
     background-color: rgba($green, .1);
     border: 1px solid;
-    @include set-property-from-map(border-color, green);
+    @include css-var(border-color, "var(--green-color)");
     border-radius: map-get($base, border-radius);
   }
 
@@ -11,7 +11,7 @@
     padding: map-get($spacers, 2) map-get($spacers, 3);
     background-color: rgba($blue, .1);
     border: 1px solid;
-    @include set-property-from-map(border-color, blue);
+    @include css-var(border-color, "var(--blue-color)");
     border-radius: map-get($base, border-radius);
   }
 
@@ -19,7 +19,7 @@
     padding: map-get($spacers, 2) map-get($spacers, 3);
     background-color: rgba($yellow, .1);
     border: 1px solid;
-    @include set-property-from-map(border-color, yellow);
+    @include css-var(border-color, "var(--yellow-color)");
     border-radius: map-get($base, border-radius);
   }
 
@@ -27,7 +27,7 @@
     padding: map-get($spacers, 2) map-get($spacers, 3);
     background-color: rgba($red, .1);
     border: 1px solid;
-    @include set-property-from-map(border-color, red);
+    @include css-var(border-color, "var(--red-color)");
     border-radius: map-get($base, border-radius);
   }
 }

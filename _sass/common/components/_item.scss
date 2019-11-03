@@ -30,7 +30,7 @@ a > .item__header, a.item__header, .item__header > a {
 }
 
 .item__meta {
-  @include set-property-from-map(color, text-color-l);
+  @include css-var(color, "var(--text-color-l)");
 }
 
 .item__description {
@@ -45,7 +45,7 @@ a > .item__header, a.item__header, .item__header > a {
       margin-top: map-get($spacers, 3);
     }
     h1, h2, h3 {
-      @include set-property-from-map(color, text-color);
+      @include css-var(color, "var(--text-color)");
     }
     h1, h2 {
       padding: 0;

@@ -124,6 +124,24 @@ $default: (
   red-hover:            darken($red, 14%),
   red-active:           darken($red, 20%),
 
+  ////
+  green-color:                $green,
+  green-color-hover:          darken($green, 14%),
+  green-color-active:         darken($green, 20%),
+
+  blue-color:                 $blue,
+  blue-color-hover:           darken($blue, 14%),
+  blue-color-active:          darken($blue, 20%),
+
+  yellow-color:               $yellow,
+  yellow-color-hover:         darken($yellow, 14%),
+  yellow-color-active:        darken($yellow, 20%),
+
+  red-color:                  $red,
+  red-color-hover:            darken($red, 14%),
+  red-color-active:           darken($red, 20%),
+  ////
+
   text-color-function:        $text-color-function,
   text-color-function-hover:  darken($text-color-function, 14%),
   text-color-function-active: darken($text-color-function, 20%),

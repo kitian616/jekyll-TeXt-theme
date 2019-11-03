@@ -10,7 +10,7 @@
     width: 50%;
     & > span {
       font-weight: map-get($base, font-weight-bold);
-      @include set-property-from-map(color, text-color-l);
+      @include css-var(color, "var(--text-color-l)");
     }
     & > a {
       display: block;

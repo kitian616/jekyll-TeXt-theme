@@ -21,7 +21,6 @@
 /// @param {String} $replace ('') - New value
 /// @return {String} - Updated string
 @function str-replace($string, $search, $replace: "") {
-  @debug 334, $string, $search, $replace;
   $index: str-index($string, $search);
 
   @if $index {

@@ -48,10 +48,8 @@
   blockquote {
     padding-left: map-get($spacers, 3);
     font-size: map-get($base, font-size-sm);
-    @include set-property-from-map(color, text-color-l);
-    @include split-line(left, 4px, (
-      "border-color": map-get($default, border-color)
-    ));
+    @include css-var(color, "var(--text-color-l)");
+    @include split-line(left, 4px, "border-color");
     p {
       margin: map-get($spacers, 2) 0;
     }
@@ -78,7 +76,7 @@
   }
   code {
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    @include set-property-from-map(background-color, text-background-color);
+    @include css-var(background-color, "var(--text-background-color)");
     border-radius: map-get($base, border-radius);
     span {
       padding: 0;
@@ -107,7 +105,7 @@
     & > pre {
       padding: map-get($spacers, 3) 0 map-get($spacers, 3) map-get($spacers, 3);
       margin: 0;
-      @include set-property-from-map(background-color, text-background-color);
+      @include css-var(background-color, "var(--text-background-color)");
       border-radius: map-get($base, border-radius);
       & > code {
         display: block;
@@ -120,11 +118,11 @@
       display: block;
       padding: map-get($spacers, 2) map-get($spacers, 3) map-get($spacers, 2) 0;
       font-weight: map-get($base, font-weight-bold);
-      @include set-property-from-map(color, decorate-color);
+      @include css-var(color, "var(--decorate-color)");
       text-align: right;
       text-transform: uppercase;
       content: attr(data-lang);
-      @include set-property-from-map(background-color, text-background-color);
+      @include css-var(background-color, "var(--text-background-color)");
       border-top-left-radius: map-get($base, border-radius);
       border-top-right-radius: map-get($base, border-radius);
     }
@@ -163,7 +161,7 @@
               border-radius: 0;
               @include overflow(auto);
               &.lineno {
-                @include set-property-from-map(color, text-color-l);
+                @include css-var(color, "var(--text-color-l)");
                 @include user-select(none);
               }
             }
@@ -219,12 +217,12 @@
     border-collapse: collapse;
     @include overflow(auto);
     thead, tfoot {
-      @include set-property-from-map(background-color, text-background-color);
+      @include css-var(background-color, "var(--text-background-color)");
     }
     th, td {
       padding: map-get($spacers, 2);
       border: 1px solid;
-      @include set-property-from-map(border-color, border-color-l);
+      @include css-var(border-color, "var(--border-color-l)");
     }
     th {
       font-weight: map-get($base, font-weight-bold);

@@ -1,28 +1,28 @@
 @mixin text-light {
-  @include set-property-from-map(color, text-color-theme-light);
+  @include css-var(color, "var(--text-color-theme-light)");
   h1, h2, h3 {
-    @include set-property-from-map(color, text-color-theme-light-d);
+    @include css-var(color, "var(--text-color-theme-light-d)");
   }
   h4, h5 {
-    @include set-property-from-map(color, text-color-theme-light);
+    @include css-var(color, "var(--text-color-theme-light)");
   }
   h6 {
-    @include set-property-from-map(color, text-color-theme-light-l);
+    @include css-var(color, "var(--text-color-theme-light-l)");
   }
   a:not(.button) {
     @extend .link, .link--highlight-theme-light;
   }
 }
 @mixin text-dark {
-  @include set-property-from-map(color, text-color-theme-dark);
+  @include css-var(color, "var(--text-color-theme-dark)");
   h1, h2, h3 {
-    @include set-property-from-map(color, text-color-theme-dark-d);
+    @include css-var(color, "var(--text-color-theme-dark-d)");
   }
   h4, h5 {
-    @include set-property-from-map(color, text-color-theme-dark);
+    @include css-var(color, "var(--text-color-theme-dark)");
   }
   h6 {
-    @include set-property-from-map(color, text-color-theme-dark-l);
+    @include css-var(color, "var(--text-color-theme-dark-l)");
   }
   a:not(.button) {
     @extend .link, .link--highlight-theme-dark;

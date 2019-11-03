@@ -2,7 +2,7 @@
   &::before {
     display: block;
     font-size: map-get($base, font-size-h2);
-    @include set-property-from-map(color, text-color-l);
+    @include css-var(color, "var(--text-color-l)");
     text-align: center;
     letter-spacing: map-get($spacers, 4);
     content: "...";
