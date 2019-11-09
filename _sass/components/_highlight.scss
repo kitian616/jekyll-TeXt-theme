@@ -1,0 +1,74 @@
+figure.highlight::before {
+  @include css-var(color, "var(--highlight-comment) !important");
+  @include css-var(background-color, "var(--highlight-background) !important");
+}
+pre.lineno {
+  @include css-var(color, "var(--highlight-comment) !important");
+}
+.highlight > pre {
+  @include css-var(color, "var(--highlight-foreground)");
+  @include css-var(background-color, "var(--highlight-background) !important");
+  .c   { @include css-var(color, "var(--highlight-comment)"); } /* Comment */
+  .err { @include css-var(color, "var(--highlight-red)"); } /* Error */
+  .k   { @include css-var(color, "var(--highlight-purple)"); } /* Keyword */
+  .l   { @include css-var(color, "var(--highlight-orange)"); } /* Literal */
+  .n   { @include css-var(color, "var(--highlight-foreground)"); } /* Name */
+  .o   { @include css-var(color, "var(--highlight-aqua)"); } /* Operator */
+  .p   { @include css-var(color, "var(--highlight-foreground)"); } /* Punctuation */
+  .cm  { @include css-var(color, "var(--highlight-comment)"); } /* Comment.Multiline */
+  .cp  { @include css-var(color, "var(--highlight-comment)"); } /* Comment.Preproc */
+  .c1  { @include css-var(color, "var(--highlight-comment)"); } /* Comment.Single */
+  .cs  { @include css-var(color, "var(--highlight-comment)"); } /* Comment.Special */
+  .gd  { @include css-var(color, "var(--highlight-red)"); } /* Generic.Deleted */
+  .ge  { font-style: italic; } /* Generic.Emph */
+  .gh  { font-weight: bold; @include css-var(color, "var(--highlight-foreground)"); } /* Generic.Heading */
+  .gi  { @include css-var(color, "var(--highlight-green)"); } /* Generic.Inserted */
+  .gp  { font-weight: bold; @include css-var(color, "var(--highlight-comment)"); } /* Generic.Prompt */
+  .gs  { font-weight: bold; } /* Generic.Strong */
+  .gu  { font-weight: bold; @include css-var(color, "var(--highlight-aqua)"); } /* Generic.Subheading */
+  .kc  { @include css-var(color, "var(--highlight-purple)"); } /* Keyword.Constant */
+  .kd  { @include css-var(color, "var(--highlight-purple)"); } /* Keyword.Declaration */
+  .kn  { @include css-var(color, "var(--highlight-aqua)"); } /* Keyword.Namespace */
+  .kp  { @include css-var(color, "var(--highlight-purple)"); } /* Keyword.Pseudo */
+  .kr  { @include css-var(color, "var(--highlight-purple)"); } /* Keyword.Reserved */
+  .kt  { @include css-var(color, "var(--highlight-yellow)"); } /* Keyword.Type */
+  .ld  { @include css-var(color, "var(--highlight-green)"); } /* Literal.Date */
+  .m   { @include css-var(color, "var(--highlight-orange)"); } /* Literal.Number */
+  .s   { @include css-var(color, "var(--highlight-green)"); } /* Literal.String */
+  .na  { @include css-var(color, "var(--highlight-blue)"); } /* Name.Attribute */
+  .nb  { @include css-var(color, "var(--highlight-foreground)"); } /* Name.Builtin */
+  .nc  { @include css-var(color, "var(--highlight-yellow)"); } /* Name.Class */
+  .no  { @include css-var(color, "var(--highlight-red)"); } /* Name.Constant */
+  .nd  { @include css-var(color, "var(--highlight-aqua)"); } /* Name.Decorator */
+  .ni  { @include css-var(color, "var(--highlight-foreground)"); } /* Name.Entity */
+  .ne  { @include css-var(color, "var(--highlight-red)"); } /* Name.Exception */
+  .nf  { @include css-var(color, "var(--highlight-blue)"); } /* Name.Function */
+  .nl  { @include css-var(color, "var(--highlight-foreground)"); } /* Name.Label */
+  .nn  { @include css-var(color, "var(--highlight-yellow)"); } /* Name.Namespace */
+  .nx  { @include css-var(color, "var(--highlight-blue)"); } /* Name.Other */
+  .py  { @include css-var(color, "var(--highlight-foreground)"); } /* Name.Property */
+  .nt  { @include css-var(color, "var(--highlight-aqua)"); } /* Name.Tag */
+  .nv  { @include css-var(color, "var(--highlight-red)"); } /* Name.Variable */
+  .ow  { @include css-var(color, "var(--highlight-aqua)"); } /* Operator.Word */
+  .w   { @include css-var(color, "var(--highlight-foreground)"); } /* Text.Whitespace */
+  .mf  { @include css-var(color, "var(--highlight-orange)"); } /* Literal.Number.Float */
+  .mh  { @include css-var(color, "var(--highlight-orange)"); } /* Literal.Number.Hex */
+  .mi  { @include css-var(color, "var(--highlight-orange)"); } /* Literal.Number.Integer */
+  .mo  { @include css-var(color, "var(--highlight-orange)"); } /* Literal.Number.Oct */
+  .sb  { @include css-var(color, "var(--highlight-green)"); } /* Literal.String.Backtick */
+  .sc  { @include css-var(color, "var(--highlight-foreground)"); } /* Literal.String.Char */
+  .sd  { @include css-var(color, "var(--highlight-comment)"); } /* Literal.String.Doc */
+  .s2  { @include css-var(color, "var(--highlight-green)"); } /* Literal.String.Double */
+  .se  { @include css-var(color, "var(--highlight-orange)"); } /* Literal.String.Escape */
+  .sh  { @include css-var(color, "var(--highlight-green)"); } /* Literal.String.Heredoc */
+  .si  { @include css-var(color, "var(--highlight-orange)"); } /* Literal.String.Interpol */
+  .sx  { @include css-var(color, "var(--highlight-green)"); } /* Literal.String.Other */
+  .sr  { @include css-var(color, "var(--highlight-green)"); } /* Literal.String.Regex */
+  .s1  { @include css-var(color, "var(--highlight-green)"); } /* Literal.String.Single */
+  .ss  { @include css-var(color, "var(--highlight-green)"); } /* Literal.String.Symbol */
+  .bp  { @include css-var(color, "var(--highlight-foreground)"); } /* Name.Builtin.Pseudo */
+  .vc  { @include css-var(color, "var(--highlight-red)"); } /* Name.Variable.Class */
+  .vg  { @include css-var(color, "var(--highlight-red)"); } /* Name.Variable.Global */
+  .vi  { @include css-var(color, "var(--highlight-red)"); } /* Name.Variable.Instance */
+  .il  { @include css-var(color, "var(--highlight-orange)"); } /* Literal.Number.Integer.Long */
+}
