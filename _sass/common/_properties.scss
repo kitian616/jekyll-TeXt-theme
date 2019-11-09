@@ -6,16 +6,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @each $name, $value in $default-dark {
+    @each $name, $value in $dark {
       --#{$name}: #{$value};
     }
   }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     @each $name, $value in $default-dark {
-//       --#{$name}: green;
-//     }
-//   }
-// }

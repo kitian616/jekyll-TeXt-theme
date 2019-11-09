@@ -6,267 +6,97 @@
 
 /* stylelint-disable value-list-max-empty-lines, function-max-empty-lines */
 
-// main colors
-$main-color-1:     #fc4d50;
-$text-color-1:     #fff;
+$default: (
+  // main colors
+  main-color-1:     #fc4d50,
+  text-color-1:     #fff,
 
-$main-color-2:     #fca24d;
-$text-color-2:     #fff;
+  main-color-2:     #fca24d,
+  text-color-2:     #fff,
 
-$main-color-3:     #f2f2f2;
-$text-color-3:     #333;
+  main-color-3:     #f2f2f2,
+  text-color-3:     #333,
 
-$main-color-theme-light:  rgba(#000, .9);
-$main-color-theme-dark:   rgba(#fff, .9);
+  main-color-theme-light:  rgba(#000, .9),
+  main-color-theme-dark:   rgba(#fff, .9),
 
-// text colors
-$text-color-theme-light-d: #000;
-$text-color-theme-light:   #222;
-$text-color-theme-light-l: #888;
+  // text colors
+  text-color-theme-light-d: #000,
+  text-color-theme-light:   #222,
+  text-color-theme-light-l: #888,
 
-$text-color-theme-dark-d:  #fff;
-$text-color-theme-dark:    rgba(#fff, .95);
-$text-color-theme-dark-l:  rgba(#fff, .85);
+  text-color-theme-dark-d:  #fff,
+  text-color-theme-dark:    rgba(#fff, .95),
+  text-color-theme-dark-l:  rgba(#fff, .85),
 
-$text-color-d:     $text-color-theme-light-d;
-$text-color:       $text-color-theme-light;
-$text-color-l:     $text-color-theme-light-l;
+  text-color-d:  #000,
+  text-color:    #222,
+  text-color-l:  #888,
 
-$text-background-color: rgba(#000, .05);
+  text-background-color: rgba(#000, .05),
 
-// function colors
-$green:           #52c41a;
-$blue:            #1890ff;
-$yellow:          #fa8c16;
-$red:             #f5222d;
-$text-color-function: #fff;
+  // function colors
+  green-color:           #52c41a,
+  blue-color:            #1890ff,
+  yellow-color:          #fa8c16,
+  red-color:             #f5222d,
+  text-color-function:   #fff,
 
-// page
-$background-color: #fff;
-$select-color:     rgba($main-color-1, .5);
+  // page
+  background-color: #fff,
+  select-color:     rgba(#fc4d50, .5), // main-color-1
 
-// border and shadow
-$border-color:     mix(#000, $background-color, 20%);
-$border-color-l:   mix(#000, $background-color, 10%);
-$decorate-color:   rgba(#000, .1);
-$mask-color:       rgba(#000, .9);
+  // border and shadow
+  border-color:     mix(#000, #fff, 20%), // background-color
+  border-color-l:   mix(#000, #fff, 10%), // background-color
+  decorate-color:   rgba(#000, .1),
+  mask-color:       rgba(#000, .9),
 
-// header and footer
-$header-text-color: $text-color-3;
-$header-background: $main-color-3;
+  // header and footer
+  header-background: #f2f2f2, // main-color-3
+  header-text-color: #333, // text-color-3
 
-$footer-text-color: $text-color-3;
-$footer-background: $main-color-3;
+  footer-background: #f2f2f2, // main-color-3
+  footer-text-color: #333, // text-color-3
 
-// sidebar
-$sidebar-button-background-color: rgba($main-color-3, .75);
+  // sidebar
+  sidebar-button-background-color: rgba(#f2f2f2, .75), // main-color-3
 
-// tags
-$tag-button-background-color-1:   rgba($main-color-1, .4);
-$tag-button-background-color-2:   rgba($main-color-1, .55);
-$tag-button-background-color-3:   rgba($main-color-1, .7);
-$tag-button-background-color-4:   rgba($main-color-1, .9);
+  // tags
+  tag-button-background-color-1:   rgba(#fc4d50, .4),  // main-color-1
+  tag-button-background-color-2:   rgba(#fc4d50, .55), // main-color-1
+  tag-button-background-color-3:   rgba(#fc4d50, .7),  // main-color-1
+  tag-button-background-color-4:   rgba(#fc4d50, .9),  // main-color-1
 
-// logo colors
-$mail-color:       #0072c5;
-$facebook-color:   #4267b2;
-$twitter-color:    #1da1f2;
-$weibo-color:      #e6162d;
-$google-plus-color:#ea4335;
-$telegram-color:   #32afed;
-$medium-color:     #000;
-$zhihu-color:      #0084ff;
-$douban-color:     #42bd56;
-$linkedin-color:   #1074af;
-$github-color:     #000;
-$npm-color:        #fff;
+  // logo colors
+  mail-color:       #0072c5,
+  facebook-color:   #4267b2,
+  twitter-color:    #1da1f2,
+  weibo-color:      #e6162d,
+  google-plus-color:#ea4335,
+  telegram-color:   #32afed,
+  medium-color:     #000,
+  zhihu-color:      #0084ff,
+  douban-color:     #42bd56,
+  linkedin-color:   #1074af,
+  github-color:     #000,
+  npm-color:        #fff
+);
 
 @import "skins/common/functions";
 
-$default: (
-  // main colors
-  main-color-1:                     $main-color-1,
-  main-color-1--hover:              get-hover-color($main-color-1),
-  main-color-1--active:             get-active-color($main-color-1),
+@each $name, $value in $default {
+  @if str-index($name, "-color") {
+    @if map-has-key($default, "#{$name}--hover") == false {
+      $default: map-merge($default, ("#{$name}--hover": get-hover-color($value)));
+    }
+    @if map-has-key($default, "#{$name}--active") == false {
+      $default: map-merge($default, ("#{$name}--active": get-active-color($value)));
+    }
+  }
+}
 
-  text-color-1:                     $text-color-1,
-  text-color-1--hover:              get-hover-color($text-color-1),
-  text-color-1--active:             get-active-color($text-color-1),
-
-  main-color-2:                     $main-color-2,
-  main-color-2--hover:              get-hover-color($main-color-2),
-  main-color-2--active:             get-active-color($main-color-2),
-
-  text-color-2:                     $text-color-2,
-  text-color-2--hover:              get-hover-color($text-color-2),
-  text-color-2--active:             get-active-color($text-color-2),
-
-  main-color-3:                     $main-color-3,
-  main-color-3--hover:              get-hover-color($main-color-3),
-  main-color-3--active:             get-active-color($main-color-3),
-
-  text-color-3:                     $text-color-3,
-  text-color-3--hover:              get-hover-color($text-color-3),
-  text-color-3--active:             get-active-color($text-color-3),
-
-  main-color-theme-light:           $main-color-theme-light,
-  main-color-theme-light--hover:    get-hover-color($main-color-theme-light),
-  main-color-theme-light--active:   get-active-color($main-color-theme-light),
-
-  main-color-theme-dark:            $main-color-theme-dark,
-  main-color-theme-dark--hover:     get-hover-color($main-color-theme-dark),
-  main-color-theme-dark--active:    get-active-color($main-color-theme-dark),
-
-  // text colors
-  text-color-theme-light-d:         $text-color-theme-light-d,
-  text-color-theme-light-d--hover:  get-hover-color($text-color-theme-light-d),
-  text-color-theme-light-d--active: get-active-color($text-color-theme-light-d),
-
-  text-color-theme-light:           $text-color-theme-light,
-  text-color-theme-light--hover:    get-hover-color($text-color-theme-light),
-  text-color-theme-light--active:   get-active-color($text-color-theme-light),
-
-  text-color-theme-light-l:         $text-color-theme-light-l,
-  text-color-theme-light-l--hover:  get-hover-color($text-color-theme-light-l),
-  text-color-theme-light-l--active: get-active-color($text-color-theme-light-l),
-
-  text-color-theme-dark-d:          $text-color-theme-dark-d,
-  text-color-theme-dark-d--hover:   get-hover-color($text-color-theme-dark-d),
-  text-color-theme-dark-d--active:  get-active-color($text-color-theme-dark-d),
-
-  text-color-theme-dark:            $text-color-theme-dark,
-  text-color-theme-dark--hover:     get-hover-color($text-color-theme-dark),
-  text-color-theme-dark--active:    get-active-color($text-color-theme-dark),
-
-  text-color-theme-dark-l:          $text-color-theme-dark-l,
-  text-color-theme-dark-l--hover:   get-hover-color($text-color-theme-dark-l),
-  text-color-theme-dark-l--active:  get-active-color($text-color-theme-dark-l),
-
-  text-color-d:                     $text-color-d,
-  text-color-d--hover:              get-hover-color($text-color-d),
-  text-color-d--active:             get-active-color($text-color-d),
-
-  text-color:                       $text-color,
-  text-color--hover:                get-hover-color($text-color),
-  text-color--active:               get-active-color($text-color),
-
-  text-color-l:                     $text-color-l,
-  text-color-l--hover:              get-hover-color($text-color-l),
-  text-color-l--active:             get-active-color($text-color-l),
-
-  text-background-color:            $text-background-color,
-
-  // function colors
-  green-color:                      $green,
-  green-color--hover:               get-hover-color($green),
-  green-color--active:              get-active-color($green),
-
-  blue-color:                       $blue,
-  blue-color--hover:                get-hover-color($blue),
-  blue-color--active:               get-active-color($blue),
-
-  yellow-color:                     $yellow,
-  yellow-color--hover:              get-hover-color($yellow),
-  yellow-color--active:             get-active-color($yellow),
-
-  red-color:                        $red,
-  red-color--hover:                 get-hover-color($red),
-  red-color--active:                get-active-color($red),
-
-  text-color-function:              $text-color-function,
-  text-color-function--hover:       get-hover-color($text-color-function),
-  text-color-function--active:      get-active-color($text-color-function),
-
-  // page
-  background-color:                 $background-color,
-  select-color:                     $select-color,
-
-  // border and shadow
-  border-color:                     $border-color,
-  border-color-l:                   $border-color-l,
-  decorate-color:                   $decorate-color,
-  mask-color:                       $mask-color,
-
-  // header and footer
-  header-text-color:                $text-color-3,
-  header-background:                $main-color-3,
-
-  footer-text-color:                $text-color-3,
-  footer-background:                $main-color-3,
-
-  // sidebar
-  sidebar-button-background-color:          $sidebar-button-background-color,
-  sidebar-button-background-color--hover:   get-hover-color($sidebar-button-background-color),
-  sidebar-button-background-color--active:  get-active-color($sidebar-button-background-color),
-
-  //tags
-  tag-button-background-color-1:           $tag-button-background-color-1,
-  tag-button-background-color-1--hover:    get-hover-color($tag-button-background-color-1),
-  tag-button-background-color-1--active:   get-active-color($tag-button-background-color-1),
-
-  tag-button-background-color-2:           $tag-button-background-color-2,
-  tag-button-background-color-2--hover:    get-hover-color($tag-button-background-color-2),
-  tag-button-background-color-2--active:   get-active-color($tag-button-background-color-2),
-
-  tag-button-background-color-3:           $tag-button-background-color-3,
-  tag-button-background-color-3--hover:    get-hover-color($tag-button-background-color-3),
-  tag-button-background-color-3--active:   get-active-color($tag-button-background-color-3),
-
-  tag-button-background-color-4:           $tag-button-background-color-4,
-  tag-button-background-color-4--hover:    get-hover-color($tag-button-background-color-4),
-  tag-button-background-color-4--active:   get-active-color($tag-button-background-color-4),
-
-
-  // logo colors
-  mail-color:                       $mail-color,
-  mail-color--hover:                get-hover-color($mail-color),
-  mail-color--active:               get-active-color($mail-color),
-
-  facebook-color:                   $facebook-color,
-  facebook-color--hover:            get-hover-color($facebook-color),
-  facebook-color--active:           get-active-color($facebook-color),
-
-  twitter-color:                    $twitter-color,
-  twitter-color--hover:             get-hover-color($twitter-color),
-  twitter-color--active:            get-active-color($twitter-color),
-
-  weibo-color:                      $weibo-color,
-  weibo-color--hover:               get-hover-color($weibo-color),
-  weibo-color--active:              get-active-color($weibo-color),
-
-  google-plus-color:                $google-plus-color,
-  google-plus-color--hover:         get-hover-color($google-plus-color),
-  google-plus-color--active:        get-active-color($google-plus-color),
-
-  telegram-color:                   $telegram-color,
-  telegram-color--hover:            get-hover-color($telegram-color),
-  telegram-color--active:           get-active-color($telegram-color),
-
-  medium-color:                     $medium-color,
-  medium-color--hover:              get-hover-color($medium-color),
-  medium-color--active:             get-active-color($medium-color),
-
-  zhihu-color:                      $zhihu-color,
-  zhihu-color--hover:               get-hover-color($zhihu-color),
-  zhihu-color--active:              get-active-color($zhihu-color),
-
-  douban-color:                     $douban-color,
-  douban-color--hover:              get-hover-color($douban-color),
-  douban-color--active:             get-active-color($douban-color),
-
-  linkedin-color:                   $linkedin-color,
-  linkedin-color--hover:            get-hover-color($linkedin-color),
-  linkedin-color--active:           get-active-color($linkedin-color),
-
-  github-color:                     $github-color,
-  github-color--hover:              get-hover-color($github-color),
-  github-color--active:             get-active-color($github-color),
-
-  npm-color:                        $npm-color,
-  npm-color--hover:                 get-hover-color($npm-color),
-  npm-color--active:                get-active-color($npm-color)
-);
-
+@import "skins/default-dark";
 
 // highlight colors
 @import "skins/highlight/tomorrow";

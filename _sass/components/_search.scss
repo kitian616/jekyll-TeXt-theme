@@ -51,26 +51,26 @@
     line-height: 1 !important;
     @include css-var(color, "var(--text-color)");
     background-color: transparent;
-    border: 2px solid $border-color;
+    @include css-var(border, "2px solid var(--border-color)");
     border-radius: map-get($button, pill-radius);
     -webkit-appearance: none; /* fix iOS don't display box-shadow properly */
     @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
-    @include focus {
-      box-shadow: 0 0 0 2px rgba($border-color, .4);
-    }
+    // @include focus {
+    //   box-shadow: 0 0 0 2px rgba($border-color, .4);
+    // }
     .search--light & {
       @include css-var(color, "var(--text-color-theme-light)");
       @include css-var(border-color, "var(--text-color-theme-light)");
-      @include focus {
-        box-shadow: 0 0 0 2px rgba($text-color-theme-light, .4);
-      }
+      // @include focus {
+      //   box-shadow: 0 0 0 2px rgba($text-color-theme-light, .4);
+      // }
     }
     .search--dark & {
       @include css-var(color, "var(--text-color-theme-dark)");
       @include css-var(border-color, "var(--text-color-theme-dark)");
-      @include focus {
-        box-shadow: 0 0 0 2px rgba($text-color-theme-dark, .4);
-      }
+      // @include focus {
+      //   box-shadow: 0 0 0 2px rgba($text-color-theme-dark, .4);
+      // }
     }
   }
   & > .search-box__icon-search {

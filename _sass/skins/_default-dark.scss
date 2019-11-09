@@ -6,159 +6,67 @@
 
 /* stylelint-disable value-list-max-empty-lines, function-max-empty-lines */
 
-// main colors
-$main-color-1:     #ff9500;
-$text-color-1:     rgba(#fff, .8);
-
-$main-color-2:     #ff006a;
-$text-color-2:     rgba(#fff, .8);
-
-$main-color-3:     #202020;
-$text-color-3:     rgba(#fff, .8);
-
-$main-color-theme-light: rgba(#000, .8);
-$main-color-theme-dark:  rgba(#fff, .8);
-
-// page background
-$background-color: #121212;
-
-// text colors
-$text-color-theme-light-d: #000;
-$text-color-theme-light:   #222;
-$text-color-theme-light-l: #888;
-
-$text-color-theme-dark-d:  rgba(#fff, .8);
-$text-color-theme-dark:    rgba(#fff, .7);
-$text-color-theme-dark-l:  rgba(#fff, .5);
-
-$text-color-d:     $text-color-theme-dark-d;
-$text-color:       $text-color-theme-dark;
-$text-color-l:     $text-color-theme-dark-l;
-
-$text-background-color: rgba(#fff, .05);
-
-// header and footer colors
-$header-text-color: $text-color-3;
-$header-background: $main-color-3;
-
-$footer-text-color: $text-color-3;
-$footer-background: $main-color-3;
-
-// border and shadow colors
-$border-color:     mix(#fff, $background-color, 20%);
-$border-color-l:   mix(#fff, $background-color, 10%);
-$decorate-color:   rgba(#fff, .1);
-$mask-color:       rgba(#000, .9);
-$select-color:     rgba($main-color-1, .5);
-
-// function colors
-$green:           #5baa34;
-$blue:            #1c7cd4;
-$yellow:          #c9771f;
-$red:             #da3d45;
-$text-color-function: rgba(#fff, .8);
-
-// logo colors
-$mail-color:       #0072c5;
-$facebook-color:   #4267b2;
-$twitter-color:    #1da1f2;
-$weibo-color:      #e6162d;
-$google-plus-color:#ea4335;
-$telegram-color:   #32afed;
-$medium-color:     #000;
-$zhihu-color:      #0084ff;
-$douban-color:     #42bd56;
-$linkedin-color:   #1074af;
-$github-color:     #000;
-$npm-color:        #fff;
-
-
-$default-dark: (
+$dark: (
   // main colors
-  main-color-1:         $main-color-1,
-  main-color-1--hover:   darken($main-color-1, 14%),
-  main-color-1--active:  darken($main-color-1, 20%),
+  main-color-1:     #ff9500,
+  text-color-1:     rgba(#fff, .8),
 
-  text-color-1:         $text-color-1,
-  text-color-1--hover:   darken($text-color-1, 14%),
-  text-color-1--active:  darken($text-color-1, 20%),
+  main-color-2:     #ff006a,
+  text-color-2:     rgba(#fff, .8),
 
-  main-color-2--active:  darken($main-color-2, 20%),
-  main-color-2--hover:   darken($main-color-2, 14%),
-  main-color-2:         $main-color-2,
+  main-color-3:     #202020,
+  text-color-3:     rgba(#fff, .8),
 
-  text-color-2:         $text-color-2,
-  text-color-2--hover:   darken($text-color-2, 14%),
-  text-color-2--active:  darken($text-color-2, 20%),
-
-  main-color-3:         $main-color-3,
-  main-color-3--hover:   darken($main-color-3, 14%),
-  main-color-3--active:  darken($main-color-3, 20%),
-
-  text-color-3:         $text-color-3,
-  text-color-3--hover:   darken($text-color-3, 14%),
-  text-color-3--active:  darken($text-color-3, 20%),
-
-  main-color-theme-light:         $main-color-theme-light,
-  main-color-theme-light--hover:   lighten($main-color-theme-light, 18%),
-  main-color-theme-light--active:  lighten($main-color-theme-light, 32%),
-
-
-  main-color-theme-dark:          $main-color-theme-dark,
-  main-color-theme-dark--hover:    darken($main-color-theme-dark, 14%),
-  main-color-theme-dark--active:   darken($main-color-theme-dark, 20%),
-  // function colors
-  green:                $green,
-  green--hover:          darken($green, 14%),
-  green--active:         darken($green, 20%),
-
-  blue:                 $blue,
-  blue--hover:           darken($blue, 14%),
-  blue--active:          darken($blue, 20%),
-
-  yellow:               $yellow,
-  yellow--hover:         darken($yellow, 14%),
-  yellow--active:        darken($yellow, 20%),
-
-  red:                  $red,
-  red--hover:            darken($red, 14%),
-  red--active:           darken($red, 20%),
-
-  text-color-function:        $text-color-function,
-  text-color-function--hover:  darken($text-color-function, 14%),
-  text-color-function--active: darken($text-color-function, 20%),
-
-  // page background
-  background-color: $background-color,
+  main-color-theme-light: rgba(#000, .8),
+  main-color-theme-dark:  rgba(#fff, .8),
 
   // text colors
-  text-color-theme-light-d: $text-color-theme-light-d,
-  text-color-theme-light: $text-color-theme-light,
-  text-color-theme-light-l: $text-color-theme-light-l,
+  text-color-theme-light-d: #000,
+  text-color-theme-light:   #222,
+  text-color-theme-light-l: #888,
 
-  text-color-theme-dark-d: $text-color-theme-dark-d,
-  text-color-theme-dark: $text-color-theme-dark,
-  text-color-theme-dark-l: $text-color-theme-dark-l,
+  text-color-theme-dark-d:  rgba(#fff, .8),
+  text-color-theme-dark:    rgba(#fff, .7),
+  text-color-theme-dark-l:  rgba(#fff, .5),
 
-  text-color-d: $text-color-d,
-  text-color: $text-color,
-  text-color-l: $text-color-l,
+  text-color-d:     rgba(#fff, .8), // text-color-theme-dark-d
+  text-color:       rgba(#fff, .7), // text-color-theme-dark
+  text-color-l:     rgba(#fff, .5), // text-color-theme-dark-l
 
-  text-background-color: $text-background-color,
+  text-background-color: rgba(#fff, .05),
 
-  // header and footer colors
-  header-text-color: $text-color-3,
-  header-background: $main-color-3,
+  // function colors
+  green-color:          #5baa34,
+  blue-color:           #1c7cd4,
+  yellow-color:         #c9771f,
+  red-color:            #da3d45,
+  text-color-function:  rgba(#fff, .8),
 
-  footer-text-color: $text-color-3,
-  footer-background: $main-color-3,
+  // page
+  background-color: #121212,
+  select-color:     rgba(#ff9500, .5), // main-color-1
 
   // border and shadow colors
-  border-color: $border-color,
-  border-color-l: $border-color-l,
-  decorate-color: $decorate-color,
-  mask-color: $mask-color,
-  select-color: $select-color,
+  border-color:     mix(#fff, #121212, 20%), // background-color
+  border-color-l:   mix(#fff, #121212, 10%), // background-color
+  decorate-color:   rgba(#fff, .1),
+  mask-color:       rgba(#000, .9),
+
+  // header and footer colors
+  header-background: #202020, // main-color-3
+  header-text-color: rgba(#fff, .8), // text-color-3
+
+  footer-background: #202020, // main-color-3
+  footer-text-color: rgba(#fff, .8), // text-color-3
+
+  // sidebar
+  sidebar-button-background-color: rgba(#202020, .75), // main-color-3
+
+  // tags
+  tag-button-background-color-1:   rgba(#ff9500, .4),  // main-color-1
+  tag-button-background-color-2:   rgba(#ff9500, .55), // main-color-1
+  tag-button-background-color-3:   rgba(#ff9500, .7),  // main-color-1
+  tag-button-background-color-4:   rgba(#ff9500, .9),  // main-color-1
 
   // logo colors
   mail-color:       #0072c5,
@@ -174,6 +82,19 @@ $default-dark: (
   github-color:     #000,
   npm-color:        #fff
 );
+
+@import "skins/common/functions";
+
+@each $name, $value in $dark {
+  @if str-index($name, "-color") {
+    @if map-has-key($dark, "#{$name}--hover") == false {
+      $dark: map-merge($dark, ("#{$name}--hover": get-hover-color($value)));
+    }
+    @if map-has-key($dark, "#{$name}--active") == false {
+      $dark: map-merge($dark, ("#{$name}--active": get-active-color($value)));
+    }
+  }
+}
 
 // highlight colors
 @import "skins/highlight/tomorrow-night";
