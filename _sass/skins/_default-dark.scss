@@ -76,57 +76,57 @@ $npm-color:        #fff;
 $default-dark: (
   // main colors
   main-color-1:         $main-color-1,
-  main-color-1-hover:   darken($main-color-1, 14%),
-  main-color-1-active:  darken($main-color-1, 20%),
+  main-color-1--hover:   darken($main-color-1, 14%),
+  main-color-1--active:  darken($main-color-1, 20%),
 
   text-color-1:         $text-color-1,
-  text-color-1-hover:   darken($text-color-1, 14%),
-  text-color-1-active:  darken($text-color-1, 20%),
+  text-color-1--hover:   darken($text-color-1, 14%),
+  text-color-1--active:  darken($text-color-1, 20%),
 
-  main-color-2-active:  darken($main-color-2, 20%),
-  main-color-2-hover:   darken($main-color-2, 14%),
+  main-color-2--active:  darken($main-color-2, 20%),
+  main-color-2--hover:   darken($main-color-2, 14%),
   main-color-2:         $main-color-2,
 
   text-color-2:         $text-color-2,
-  text-color-2-hover:   darken($text-color-2, 14%),
-  text-color-2-active:  darken($text-color-2, 20%),
+  text-color-2--hover:   darken($text-color-2, 14%),
+  text-color-2--active:  darken($text-color-2, 20%),
 
   main-color-3:         $main-color-3,
-  main-color-3-hover:   darken($main-color-3, 14%),
-  main-color-3-active:  darken($main-color-3, 20%),
+  main-color-3--hover:   darken($main-color-3, 14%),
+  main-color-3--active:  darken($main-color-3, 20%),
 
   text-color-3:         $text-color-3,
-  text-color-3-hover:   darken($text-color-3, 14%),
-  text-color-3-active:  darken($text-color-3, 20%),
+  text-color-3--hover:   darken($text-color-3, 14%),
+  text-color-3--active:  darken($text-color-3, 20%),
 
   main-color-theme-light:         $main-color-theme-light,
-  main-color-theme-light-hover:   lighten($main-color-theme-light, 18%),
-  main-color-theme-light-active:  lighten($main-color-theme-light, 32%),
+  main-color-theme-light--hover:   lighten($main-color-theme-light, 18%),
+  main-color-theme-light--active:  lighten($main-color-theme-light, 32%),
 
 
   main-color-theme-dark:          $main-color-theme-dark,
-  main-color-theme-dark-hover:    darken($main-color-theme-dark, 14%),
-  main-color-theme-dark-active:   darken($main-color-theme-dark, 20%),
+  main-color-theme-dark--hover:    darken($main-color-theme-dark, 14%),
+  main-color-theme-dark--active:   darken($main-color-theme-dark, 20%),
   // function colors
   green:                $green,
-  green-hover:          darken($green, 14%),
-  green-active:         darken($green, 20%),
+  green--hover:          darken($green, 14%),
+  green--active:         darken($green, 20%),
 
   blue:                 $blue,
-  blue-hover:           darken($blue, 14%),
-  blue-active:          darken($blue, 20%),
+  blue--hover:           darken($blue, 14%),
+  blue--active:          darken($blue, 20%),
 
   yellow:               $yellow,
-  yellow-hover:         darken($yellow, 14%),
-  yellow-active:        darken($yellow, 20%),
+  yellow--hover:         darken($yellow, 14%),
+  yellow--active:        darken($yellow, 20%),
 
   red:                  $red,
-  red-hover:            darken($red, 14%),
-  red-active:           darken($red, 20%),
+  red--hover:            darken($red, 14%),
+  red--active:           darken($red, 20%),
 
   text-color-function:        $text-color-function,
-  text-color-function-hover:  darken($text-color-function, 14%),
-  text-color-function-active: darken($text-color-function, 20%),
+  text-color-function--hover:  darken($text-color-function, 14%),
+  text-color-function--active: darken($text-color-function, 20%),
 
   // page background
   background-color: $background-color,

@@ -3,9 +3,7 @@
   a {
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
-    @include link-colors-new(
-      ("header-text-color": map-get($default, header-text-color)), ("main-color-1": map-get($default, main-color-1))
-    );
+    @include link-colors("header-text-color", "main-color-1");
   }
   .main {
     @include flexbox();
@@ -117,9 +115,7 @@
 }
 .navigation__item--active {
   a {
-    @include link-colors-new(
-      ("main-color-1": map-get($default, main-color-1)), ("main-color-1": map-get($default, main-color-1))
-    );
+    @include link-colors("main-color-1", "main-color-1");
   }
   &::after {
     @include split-line(bottom, 4px, "main-color-1");

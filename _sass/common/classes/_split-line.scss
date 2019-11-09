@@ -1,15 +1,15 @@
-@mixin split-line($direction: default, $width: default, $pv_color: default) {
+@mixin split-line($direction: default, $width: default, $color: default) {
   @if $direction == default {
     $direction: top;
   }
-  @if $pv_color == default {
-    $pv_color: "border-color-l";
+  @if $color == default {
+    $color: "border-color-l";
   }
   @if $width == default {
     $width: 1px;
   }
   border: 0 solid;
-  @include css-var(border-color, "var(--#{$pv_color})");
+  @include css-var(border-color, "var(--#{$color})");
   @if $direction == top {
     border-top-width: $width;
   }

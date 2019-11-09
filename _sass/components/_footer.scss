@@ -8,9 +8,7 @@
   @include css-var(color, "var(--footer-text-color)");
   @include css-var(background, "var(--footer-background)");
   a {
-    @include link-colors-new(
-      ("footer-text-colo": map-get($default, footer-text-colo)), ("main-color-1": map-get($default, main-color-1))
-    );
+    @include link-colors("footer-text-color", "main-color-1");
   }
   .site-info {
     font-size: map-get($base, font-size-xs);

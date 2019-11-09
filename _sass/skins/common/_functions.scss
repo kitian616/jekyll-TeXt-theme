@@ -1,0 +1,23 @@
+@function get-hover-color($color) {
+  $theme: get-color-theme($color);
+  $hover-clr: $color;
+  @if $theme == "light" {
+    $hover-clr: darken($color, 14%);
+  }
+  @if $theme == "dark" {
+    $hover-clr: lighten($color, 18%);
+  }
+  @return $hover-clr;
+}
+
+@function get-active-color($color) {
+  $theme: get-color-theme($color);
+  $hover-clr: $color;
+  @if $theme == "light" {
+    $hover-clr: darken($color, 21%);
+  }
+  @if $theme == "dark" {
+    $hover-clr: lighten($color, 27%);
+  }
+  @return $hover-clr;
+}

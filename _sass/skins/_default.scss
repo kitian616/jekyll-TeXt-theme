@@ -16,11 +16,8 @@ $text-color-2:     #fff;
 $main-color-3:     #f2f2f2;
 $text-color-3:     #333;
 
-$main-color-theme-light: rgba(#000, .9);
-$main-color-theme-dark:  rgba(#fff, .9);
-
-// page background
-$background-color: #fff;
+$main-color-theme-light:  rgba(#000, .9);
+$main-color-theme-dark:   rgba(#fff, .9);
 
 // text colors
 $text-color-theme-light-d: #000;
@@ -37,26 +34,38 @@ $text-color-l:     $text-color-theme-light-l;
 
 $text-background-color: rgba(#000, .05);
 
-// header and footer colors
-$header-text-color: $text-color-3;
-$header-background: $main-color-3;
-
-$footer-text-color: $text-color-3;
-$footer-background: $main-color-3;
-
-// border and shadow colors
-$border-color:     mix(#000, $background-color, 20%);
-$border-color-l:   mix(#000, $background-color, 10%);
-$decorate-color:   rgba(#000, .1);
-$mask-color:       rgba(#000, .9);
-$select-color:     rgba($main-color-1, .5);
-
 // function colors
 $green:           #52c41a;
 $blue:            #1890ff;
 $yellow:          #fa8c16;
 $red:             #f5222d;
 $text-color-function: #fff;
+
+// page
+$background-color: #fff;
+$select-color:     rgba($main-color-1, .5);
+
+// border and shadow
+$border-color:     mix(#000, $background-color, 20%);
+$border-color-l:   mix(#000, $background-color, 10%);
+$decorate-color:   rgba(#000, .1);
+$mask-color:       rgba(#000, .9);
+
+// header and footer
+$header-text-color: $text-color-3;
+$header-background: $main-color-3;
+
+$footer-text-color: $text-color-3;
+$footer-background: $main-color-3;
+
+// sidebar
+$sidebar-button-background-color: rgba($main-color-3, .75);
+
+// tags
+$tag-button-background-color-1:   rgba($main-color-1, .4);
+$tag-button-background-color-2:   rgba($main-color-1, .55);
+$tag-button-background-color-3:   rgba($main-color-1, .7);
+$tag-button-background-color-4:   rgba($main-color-1, .9);
 
 // logo colors
 $mail-color:       #0072c5;
@@ -72,149 +81,190 @@ $linkedin-color:   #1074af;
 $github-color:     #000;
 $npm-color:        #fff;
 
+@import "skins/common/functions";
+
 $default: (
   // main colors
-  main-color-1:         $main-color-1,
-  main-color-1-hover:   darken($main-color-1, 14%),
-  main-color-1-active:  darken($main-color-1, 20%),
+  main-color-1:                     $main-color-1,
+  main-color-1--hover:              get-hover-color($main-color-1),
+  main-color-1--active:             get-active-color($main-color-1),
 
-  text-color-1:         $text-color-1,
-  text-color-1-hover:   darken($text-color-1, 14%),
-  text-color-1-active:  darken($text-color-1, 20%),
+  text-color-1:                     $text-color-1,
+  text-color-1--hover:              get-hover-color($text-color-1),
+  text-color-1--active:             get-active-color($text-color-1),
 
-  main-color-2-active:  darken($main-color-2, 20%),
-  main-color-2-hover:   darken($main-color-2, 14%),
-  main-color-2:         $main-color-2,
+  main-color-2:                     $main-color-2,
+  main-color-2--hover:              get-hover-color($main-color-2),
+  main-color-2--active:             get-active-color($main-color-2),
 
-  text-color-2:         $text-color-2,
-  text-color-2-hover:   darken($text-color-2, 14%),
-  text-color-2-active:  darken($text-color-2, 20%),
+  text-color-2:                     $text-color-2,
+  text-color-2--hover:              get-hover-color($text-color-2),
+  text-color-2--active:             get-active-color($text-color-2),
 
-  main-color-3:         $main-color-3,
-  main-color-3-hover:   darken($main-color-3, 14%),
-  main-color-3-active:  darken($main-color-3, 20%),
+  main-color-3:                     $main-color-3,
+  main-color-3--hover:              get-hover-color($main-color-3),
+  main-color-3--active:             get-active-color($main-color-3),
 
-  text-color-3:         $text-color-3,
-  text-color-3-hover:   darken($text-color-3, 14%),
-  text-color-3-active:  darken($text-color-3, 20%),
+  text-color-3:                     $text-color-3,
+  text-color-3--hover:              get-hover-color($text-color-3),
+  text-color-3--active:             get-active-color($text-color-3),
 
-  main-color-theme-light:         $main-color-theme-light,
-  main-color-theme-light-hover:   lighten($main-color-theme-light, 18%),
-  main-color-theme-light-active:  lighten($main-color-theme-light, 32%),
+  main-color-theme-light:           $main-color-theme-light,
+  main-color-theme-light--hover:    get-hover-color($main-color-theme-light),
+  main-color-theme-light--active:   get-active-color($main-color-theme-light),
 
-
-  main-color-theme-dark:          $main-color-theme-dark,
-  main-color-theme-dark-hover:    darken($main-color-theme-dark, 14%),
-  main-color-theme-dark-active:   darken($main-color-theme-dark, 20%),
-
-  // function colors
-  green:                $green,
-  green-hover:          darken($green, 14%),
-  green-active:         darken($green, 20%),
-
-  blue:                 $blue,
-  blue-hover:           darken($blue, 14%),
-  blue-active:          darken($blue, 20%),
-
-  yellow:               $yellow,
-  yellow-hover:         darken($yellow, 14%),
-  yellow-active:        darken($yellow, 20%),
-
-  red:                  $red,
-  red-hover:            darken($red, 14%),
-  red-active:           darken($red, 20%),
-
-  ////
-  green-color:                $green,
-  green-color-hover:          darken($green, 14%),
-  green-color-active:         darken($green, 20%),
-
-  blue-color:                 $blue,
-  blue-color-hover:           darken($blue, 14%),
-  blue-color-active:          darken($blue, 20%),
-
-  yellow-color:               $yellow,
-  yellow-color-hover:         darken($yellow, 14%),
-  yellow-color-active:        darken($yellow, 20%),
-
-  red-color:                  $red,
-  red-color-hover:            darken($red, 14%),
-  red-color-active:           darken($red, 20%),
-  ////
-
-  text-color-function:        $text-color-function,
-  text-color-function-hover:  darken($text-color-function, 14%),
-  text-color-function-active: darken($text-color-function, 20%),
+  main-color-theme-dark:            $main-color-theme-dark,
+  main-color-theme-dark--hover:     get-hover-color($main-color-theme-dark),
+  main-color-theme-dark--active:    get-active-color($main-color-theme-dark),
 
   // text colors
   text-color-theme-light-d:         $text-color-theme-light-d,
-  text-color-theme-light-d-hover:   lighten($text-color-theme-light-d, 18%),
-  text-color-theme-light-d-active:  lighten($text-color-theme-light-d, 32%),
+  text-color-theme-light-d--hover:  get-hover-color($text-color-theme-light-d),
+  text-color-theme-light-d--active: get-active-color($text-color-theme-light-d),
 
   text-color-theme-light:           $text-color-theme-light,
-  text-color-theme-light-hover:     lighten($text-color-theme-light, 18%),
-  text-color-theme-light-active:    lighten($text-color-theme-light, 32%),
+  text-color-theme-light--hover:    get-hover-color($text-color-theme-light),
+  text-color-theme-light--active:   get-active-color($text-color-theme-light),
 
   text-color-theme-light-l:         $text-color-theme-light-l,
-  text-color-theme-light-l-hover:   darken($text-color-theme-light-l, 14%),
-  text-color-theme-light-l-active:  darken($text-color-theme-light-l, 20%),
+  text-color-theme-light-l--hover:  get-hover-color($text-color-theme-light-l),
+  text-color-theme-light-l--active: get-active-color($text-color-theme-light-l),
 
   text-color-theme-dark-d:          $text-color-theme-dark-d,
-  text-color-theme-dark-d-hover:    darken($text-color-theme-dark-d, 14%),
-  text-color-theme-dark-d-active:   darken($text-color-theme-dark-d, 20%),
+  text-color-theme-dark-d--hover:   get-hover-color($text-color-theme-dark-d),
+  text-color-theme-dark-d--active:  get-active-color($text-color-theme-dark-d),
 
   text-color-theme-dark:            $text-color-theme-dark,
-  text-color-theme-dark-hover:      darken($text-color-theme-dark, 14%),
-  text-color-theme-dark-active:     darken($text-color-theme-dark, 20%),
+  text-color-theme-dark--hover:     get-hover-color($text-color-theme-dark),
+  text-color-theme-dark--active:    get-active-color($text-color-theme-dark),
 
   text-color-theme-dark-l:          $text-color-theme-dark-l,
-  text-color-theme-dark-l-hover:    darken($text-color-theme-dark-l, 14%),
-  text-color-theme-dark-l-active:   darken($text-color-theme-dark-l, 20%),
+  text-color-theme-dark-l--hover:   get-hover-color($text-color-theme-dark-l),
+  text-color-theme-dark-l--active:  get-active-color($text-color-theme-dark-l),
 
-  text-color-d:                     $text-color-theme-light-d,
-  text-color-d-hover:               lighten($text-color-theme-light-d, 18%),
-  text-color-d-active:              lighten($text-color-theme-light-d, 32%),
+  text-color-d:                     $text-color-d,
+  text-color-d--hover:              get-hover-color($text-color-d),
+  text-color-d--active:             get-active-color($text-color-d),
 
-  text-color:                       $text-color-theme-light,
-  text-color-hover:                 lighten($text-color-theme-light, 18%),
-  text-color-active:                lighten($text-color-theme-light, 32%),
+  text-color:                       $text-color,
+  text-color--hover:                get-hover-color($text-color),
+  text-color--active:               get-active-color($text-color),
 
-  text-color-l:                     $text-color-theme-light-l,
-  text-color-l-hover:               darken($text-color-theme-light-l, 14%),
-  text-color-l-active:              darken($text-color-theme-light-l, 20%),
+  text-color-l:                     $text-color-l,
+  text-color-l--hover:              get-hover-color($text-color-l),
+  text-color-l--active:             get-active-color($text-color-l),
 
-  text-background-color: rgba(#000, .05),
+  text-background-color:            $text-background-color,
 
-  // border and shadow colors
-  border-color:     mix(#000, $background-color, 20%),
-  border-color-l:   mix(#000, $background-color, 10%),
-  decorate-color:   rgba(#000, .1),
-  mask-color:       rgba(#000, .9),
-  select-color:     rgba($main-color-1, .5),
+  // function colors
+  green-color:                      $green,
+  green-color--hover:               get-hover-color($green),
+  green-color--active:              get-active-color($green),
 
-  // page background
-  background-color: $background-color,
+  blue-color:                       $blue,
+  blue-color--hover:                get-hover-color($blue),
+  blue-color--active:               get-active-color($blue),
 
-  // header and footer colors
-  header-text-color: $text-color-3,
-  header-background: $main-color-3,
+  yellow-color:                     $yellow,
+  yellow-color--hover:              get-hover-color($yellow),
+  yellow-color--active:             get-active-color($yellow),
 
-  footer-text-color: $text-color-3,
-  footer-background: $main-color-3,
+  red-color:                        $red,
+  red-color--hover:                 get-hover-color($red),
+  red-color--active:                get-active-color($red),
+
+  text-color-function:              $text-color-function,
+  text-color-function--hover:       get-hover-color($text-color-function),
+  text-color-function--active:      get-active-color($text-color-function),
+
+  // page
+  background-color:                 $background-color,
+  select-color:                     $select-color,
+
+  // border and shadow
+  border-color:                     $border-color,
+  border-color-l:                   $border-color-l,
+  decorate-color:                   $decorate-color,
+  mask-color:                       $mask-color,
+
+  // header and footer
+  header-text-color:                $text-color-3,
+  header-background:                $main-color-3,
+
+  footer-text-color:                $text-color-3,
+  footer-background:                $main-color-3,
+
+  // sidebar
+  sidebar-button-background-color:          $sidebar-button-background-color,
+  sidebar-button-background-color--hover:   get-hover-color($sidebar-button-background-color),
+  sidebar-button-background-color--active:  get-active-color($sidebar-button-background-color),
+
+  //tags
+  tag-button-background-color-1:           $tag-button-background-color-1,
+  tag-button-background-color-1--hover:    get-hover-color($tag-button-background-color-1),
+  tag-button-background-color-1--active:   get-active-color($tag-button-background-color-1),
+
+  tag-button-background-color-2:           $tag-button-background-color-2,
+  tag-button-background-color-2--hover:    get-hover-color($tag-button-background-color-2),
+  tag-button-background-color-2--active:   get-active-color($tag-button-background-color-2),
+
+  tag-button-background-color-3:           $tag-button-background-color-3,
+  tag-button-background-color-3--hover:    get-hover-color($tag-button-background-color-3),
+  tag-button-background-color-3--active:   get-active-color($tag-button-background-color-3),
+
+  tag-button-background-color-4:           $tag-button-background-color-4,
+  tag-button-background-color-4--hover:    get-hover-color($tag-button-background-color-4),
+  tag-button-background-color-4--active:   get-active-color($tag-button-background-color-4),
+
 
   // logo colors
-  mail-color:       #0072c5,
-  facebook-color:   #4267b2,
-  twitter-color:    #1da1f2,
-  weibo-color:      #e6162d,
-  google-plus-color:#ea4335,
-  telegram-color:   #32afed,
-  medium-color:     #000,
-  zhihu-color:      #0084ff,
-  douban-color:     #42bd56,
-  linkedin-color:   #1074af,
-  github-color:     #000,
-  npm-color:        #fff
+  mail-color:                       $mail-color,
+  mail-color--hover:                get-hover-color($mail-color),
+  mail-color--active:               get-active-color($mail-color),
+
+  facebook-color:                   $facebook-color,
+  facebook-color--hover:            get-hover-color($facebook-color),
+  facebook-color--active:           get-active-color($facebook-color),
+
+  twitter-color:                    $twitter-color,
+  twitter-color--hover:             get-hover-color($twitter-color),
+  twitter-color--active:            get-active-color($twitter-color),
+
+  weibo-color:                      $weibo-color,
+  weibo-color--hover:               get-hover-color($weibo-color),
+  weibo-color--active:              get-active-color($weibo-color),
+
+  google-plus-color:                $google-plus-color,
+  google-plus-color--hover:         get-hover-color($google-plus-color),
+  google-plus-color--active:        get-active-color($google-plus-color),
+
+  telegram-color:                   $telegram-color,
+  telegram-color--hover:            get-hover-color($telegram-color),
+  telegram-color--active:           get-active-color($telegram-color),
+
+  medium-color:                     $medium-color,
+  medium-color--hover:              get-hover-color($medium-color),
+  medium-color--active:             get-active-color($medium-color),
+
+  zhihu-color:                      $zhihu-color,
+  zhihu-color--hover:               get-hover-color($zhihu-color),
+  zhihu-color--active:              get-active-color($zhihu-color),
+
+  douban-color:                     $douban-color,
+  douban-color--hover:              get-hover-color($douban-color),
+  douban-color--active:             get-active-color($douban-color),
+
+  linkedin-color:                   $linkedin-color,
+  linkedin-color--hover:            get-hover-color($linkedin-color),
+  linkedin-color--active:           get-active-color($linkedin-color),
+
+  github-color:                     $github-color,
+  github-color--hover:              get-hover-color($github-color),
+  github-color--active:             get-active-color($github-color),
+
+  npm-color:                        $npm-color,
+  npm-color--hover:                 get-hover-color($npm-color),
+  npm-color--active:                get-active-color($npm-color)
 );
 
 

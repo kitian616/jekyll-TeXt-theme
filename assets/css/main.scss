@@ -3,6 +3,7 @@
 ---
 
 @import
+  "common/function",
 
   "skins/default-dark",
   "skins/{{ site.text_skin | default: site.data.variables.default.text_skin }}",
@@ -24,7 +25,6 @@
   "common/variables",
   "common/properties",
 
-  "common/function",
   "common/classes",
   "common/reset",
   "common/print",

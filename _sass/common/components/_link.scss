@@ -11,67 +11,45 @@
 }
 
 .link--primary {
-  @include link-colors-new(
-    ("main-color-1": map-get($default, main-color-1))
-  );
+  @include link-colors("main-color-1");
 }
 
 .link--text {
-  @include link-colors-new(
-    ("text-color": map-get($default, text-color))
-  );
+  @include link-colors("text-color");
 }
 
 .link--text-d {
-  @include link-colors-new(
-    ("text-color-d": map-get($default, text-color-d))
-  );
+  @include link-colors("text-color-d");
 }
 
 .link--text-l {
-  @include link-colors-new(
-    ("text-color-l": map-get($default, text-color-l))
-  );
+  @include link-colors("text-color-l");
 }
 
 .link--theme-light {
-  @include link-colors-new(
-    ("text-color-theme-light": map-get($default, text-color-theme-light))
-  );
+  @include link-colors("text-color-theme-light");
 }
 
 .link--theme-dark {
-  @include link-colors-new(
-    ("text-color-theme-dark": map-get($default, text-color-theme-dark))
-  );
+  @include link-colors("text-color-theme-dark");
 }
 
 .link--highlight-text {
-  @include link-colors-new(
-    ("text-color": map-get($default, text-color)), ("main-color-1-hover": map-get($default, main-color-1-hover))
-  );
+  @include link-colors("text-color", "main-color-1--hover");
 }
 
 .link--highlight-text-d {
-  @include link-colors-new(
-    ("text-color-d": map-get($default, text-color-d)), ("main-color-1-hover": map-get($default, main-color-1-hover))
-  );
+  @include link-colors("text-color-d", "main-color-1--hover");
 }
 
 .link--highlight-text-l {
-  @include link-colors-new(
-    ("text-color-l": map-get($default, text-color-l)), ("main-color-1-hover": map-get($default, main-color-1-hover))
-  );
+  @include link-colors("text-color-l", "main-color-1--hover");
 }
 
 .link--highlight-theme-light {
-  @include link-colors-new(
-    ("text-color-theme-light": map-get($default, text-color-theme-light)), ("main-color-1-hover": map-get($default, main-color-1-hover))
-  );
+  @include link-colors("text-color-theme-light", "main-color-1--hover");
 }
 
 .link--highlight-theme-dark {
-  @include link-colors-new(
-    ("text-color-theme-dark": map-get($default, text-color-theme-dark)), ("main-color-1-hover": map-get($default, main-color-1-hover))
-  );
+  @include link-colors("text-color-theme-dark", "main-color-1--hover");
 }

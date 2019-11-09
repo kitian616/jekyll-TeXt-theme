@@ -17,10 +17,7 @@
       margin-top: map-get($spacers, 3);
     }
     & > .anchor {
-      @include link-colors-new(
-        ("border-color": map-get($default, border-color)),
-        ("main-color-1": map-get($default, main-color-1))
-      );
+      @include link-colors("border-color", "main-color-1");
       margin-left: map-get($spacers, 1);
       text-decoration: none;
       visibility: hidden;

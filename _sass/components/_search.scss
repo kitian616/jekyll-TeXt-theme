@@ -144,21 +144,11 @@
   a {
     padding: map-get($spacers, 1) map-get($spacers, 3);
     @include transition(none);
-    @include clickable-new(
-      ($text-color), null,
-      ($text-color-3), ($main-color-3)
-    );
     .search--light & {
-      @include clickable-new(
-        ("text-color-theme-light": map-get($default, text-color-theme-light)), null,
-        ("text-color-theme-dark": map-get($default, text-color-theme-dark)), ("main-color-theme-light": map-get($default, main-color-theme-light))
-      );
+      @include clickable("text-color-theme-light", null, "text-color-theme-dark", "main-color-theme-light");
     }
     .search--dark & {
-      @include clickable-new(
-        ("text-color-theme-dark": map-get($default, text-color-theme-dark)), null,
-        ("text-color-theme-light": map-get($default, text-color-theme-light)), ("main-color-theme-dark": map-get($default, main-color-theme-dark))
-      );
+      @include clickable("text-color-theme-dark", null, "text-color-theme-light", "main-color-theme-dark");
     }
   }
   &.active {

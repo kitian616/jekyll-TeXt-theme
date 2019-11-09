@@ -28,15 +28,15 @@
   top: 50%;
   @extend .button, .button--circle;
   @include transform(translate(0, -50%));
-  @include clickable($text-color-d, rgba($main-color-3, .4));
+  @include clickable("text-color-d", "main-color-3");
 }
 
 .swiper--light .swiper__button {
-  @include clickable($text-color-theme-light, rgba($main-color-theme-dark, .4));
+  @include clickable("text-color-theme-light", "main-color-theme-dark");
 }
 
 .swiper--dark .swiper__button {
-  @include clickable($text-color-theme-dark, rgba($main-color-theme-light, .4));
+  @include clickable("text-color-theme-dark", "main-color-theme-light");
 }
 
 .swiper__button--prev {

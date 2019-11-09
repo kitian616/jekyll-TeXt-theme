@@ -87,7 +87,7 @@ html,
   }
 }
 .sidebar-button {
-  @include clickable($text-color-d, rgba($main-color-3, .75));
+  @include clickable("text-color-d", "sidebar-button-background-color");
 }
 
 .page__mask {
