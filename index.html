@@ -1,97 +1,191 @@
----
-layout: landing
-title: Jiqing WEN's Porfolio
-excerpt: >
-  A porfolio to show how great, smart and talented Jiqing is.
-permalink: /index.html
+<html>
+<head>
+<title>COMP5421 Project</title>
+<link href='http://fonts.googleapis.com/css?family=Nunito:300|Crimson+Text|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" title="Default" href="styles/github.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
 
-article_header:
-  actions:
-    - text: Getting Started
-      type: error
-      url: /docs/en/quick-start
-    - text: Demo
-      type: outline-theme-dark
-      url: /test/
-  height: 100vh
-  theme: dark
-  background_color: "#367a9a"
-  background_image:
-    gradient: "linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .6))"
-    src: /docs/assets/images/cover4.jpg
-data:
-  sections:
-    - title: Fully Responsive
-      excerpt: This theme will look great on any device, no matter the size!
-      theme: dark
-      image:
-        src: /screenshots/TeXt-responsive.png
-      background_color: "#515151"
-    - title: Super Customizable
-      excerpt: Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.
-      actions:
-        - text: See Examples
-          url: /samples.html
-        - text: Learn More
-          url: /docs/en/configuration
-      image:
-        src: /screenshots/TeXt-layouts.png
-        is_row: true
-        full_width: true
-        style: "max-width: 1200px;"
-    - title: Skins
-      excerpt: TeXt has 6 built-in skins, you can also set up your own skin.
-      image:
-        src: /screenshots/TeXt-skins.png
-        is_row: true
-        full_width: true
-        style: "max-width: 1000px;"
-    - title: Enhanced User Experience
-      children:
-        - title: Additional Styles
-          excerpt: TeXt offer some CSS classes for your page, including alert, tag, image, button, etc.
-          actions:
-            - text: Learn More
-              url: /docs/en/additional-styles
-        - title: Extensions
-          excerpt: Adding audios, videos, slides and demos to your page.
-          actions:
-            - text: Learn More
-              url: /docs/en/extensions
-        - title: Markdown Enhancements
-          excerpt: Using Mathjax, Mermaid and Charts in your page.
-          actions:
-            - text: Learn More
-              url: /docs/en/markdown-enhancements
-    - title: 100% Free
-      theme: dark
-      excerpt: Free to use however you want under the MIT License. Clone it, fork it, customize it, whatever!
-      actions:
-        - text: '<i class="fab fa-github"></i> GitHub'
-          type: outline-theme-dark
-          url: https://github.com/kitian616/jekyll-TeXt-theme
-      background_color: "#515151"
-    - title: Tip Me
-      children:
-        - title: 'PayPal <i class="fas fa-arrow-down"></i>'
-          image:
-            src: /docs/assets/images/tip_paypal.jpg
-            url: https://www.paypal.me/kitian616
-            style: "max-width: 200px; max-height: 200px"
-            is_row: true
-        - title: 'WeChat <i class="fas fa-arrow-down"></i>'
-          image:
-            src: /docs/assets/images/tip_wechat.jpg
-            style: "max-width: 200px; max-height: 200px"
-            is_row: true
-        - title: 'Alipay <i class="fas fa-arrow-down"></i>'
-          image:
-            src: /docs/assets/images/tip_alipay.jpg
-            style: "max-width: 200px; max-height: 200px"
-            is_row: true
-        - title: 'Bitcoin <i class="fas fa-arrow-down"></i>'
-          image:
-            src: /docs/assets/images/3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V.jpg
-            style: "max-width: 200px; max-height: 200px"
-          content: '<code style="font-size: .65rem; word-break: break-all">3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V</code>'
----
+<link rel="stylesheet" href="highlighting/styles/default.css">
+<script src="highlighting/highlight.pack.js"></script>
+
+<style type="text/css">
+body {
+	margin: 0px;
+	width: 100%;
+	font-family: 'Crimson Text', serif;
+	font-size: 20px;
+	background: #fcfcfc;
+}
+h1 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 28px;
+	margin: 25px 0px 0px 0px;
+	text-transform: lowercase;
+
+}
+
+h2 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 32px;
+	margin: 15px 0px 35px 0px;
+	color: #333;	
+	word-spacing: 3px;
+}
+
+h3 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 26px;
+	margin: 10px 0px 10px 0px;
+	color: #333;
+	word-spacing: 2px;
+}
+h4 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 22px;
+	margin: 10px 0px 10px 0px;
+	color: #333;
+	word-spacing: 2px;
+}
+
+h5 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	margin: 10px 0px 10px 0px;
+	color: #111;
+	word-spacing: 2px;
+}
+
+p, li {
+	color: #444;
+}
+
+a {
+	color: #DE3737;
+}
+
+.container {
+	margin: 0px auto 0px auto;
+	width: 1160px;
+}
+
+#header {
+	background: #333;
+	width: 100%;
+}
+
+#headersub {
+	color: #ccc;
+	width: 960px;
+	margin: 0px auto 0px auto;
+	padding: 20px 0px 20px 0px;
+}
+
+.chart {
+	width: 480px;
+}
+.lol {
+	font-size: 16px;
+	color: #888;
+	font-style: italic;
+}
+.sep {
+	height: 1px;
+	width: 100%;
+	background: #999;
+	margin: 20px 0px 20px 0px;
+}
+.footer{
+	font-size: 16px;
+}
+.latex {
+	width: 100%;
+}
+
+.latex img {
+	display: block;
+	margin: 0px auto 0px auto;
+}
+
+pre {
+	font-family: 'Droid Sans Mono';
+	font-size: 14px;
+}
+
+table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+table td img {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#contents a {
+}
+</style>
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+<body>
+<div id="header" >
+<div id="headersub">
+<h1>Jiqing Wen's Porfolio <span style="color: #DE3737"></h1>
+</div>
+</div>
+<div class="container">
+
+<h2>Wearable Cyber-Physical System for Dance Performance</h2>
+
+<div style="float: right; padding: 20px">
+<img src="image/reconstructed_realbox.png" alt="Albert" style="width:350px;height:350px;"/>
+<p style="font-size: 14px;text-align: center;">Example of Reconstruced 3-D Model.</p>
+</div>
+<p>Generally, in interactive dance performances, the visual backgrounds can be generated or controlled based on stage cues such as . Distance is the stage information that can be most easily perceived by the audience, and yet it has not been fully investigated in the literature.</p>
+
+<div style="clear:both">
+<h2>BLE Beacon-based Interaction</h2>
+<p>The system leverages a body area network, which is implicitly formed by a number of BLE beacons attached to a dancer's body parts, to recognize the dancer’s behavior on stage and trigger visual and sound effects accordingly. A mobile device is used as a gateway to measure the signal strength received from the beacon nodes. The measurement is thus denoted as RSS, which is processed to monitor a dancer's relative distances during dance performance. </p>
+<center>
+<img src="image/Pic1.png" width="800px">
+</center>
+<p>Based on an empirical analysis that the RSS decreases with increasing distance, the system monitors two kinds of distance information: the distance between the dancer and the audience, and the distance between the dancer’s body parts. In this project, we use multinomial logistic regression to perform the classification. We view the four beacon signals to form a data vector, and learn a weight for each of the three classes. The predicted class probability for each class <img src="http://latex.codecogs.com/gif.latex? i" />, is the exponential of <img src="http://latex.codecogs.com/gif.latex? \textbf{w}^{T}_{i}\textbf{z} + \textbf{b}_{i}" />, normalized by the sum of probabilities of all classes. We use the cross-entropy loss to maximize the probabilities of ground-truth class for all data. And the learning of weight is through gradient descent. </p>
+<p>To evaluate the performance of monitoring the distance to the audiences, we designed a 40 seconds dance sequence, and a dancer repeated this dance sequence standing at the center of these two regions. The dance sequence performed in region 1 is regarded as “close”, in region 2 is regarded as “medium” and in region 3 is regarded as “far”. </p>
+<center>
+<img src="image/Pic2.png" width="900px">
+</center>
+<p>To evaluate the performance of monitoring the distance between body parts, we designed three movements. In the first movement, the hands are closer than feet; in the second movement, the feet is closer than hands; and in the third movement, their distances are similar. The dancer repeated these three movements in the three regions same as the previous experiment. In each region, each movement is retained for 120 seconds. </p>
+<center>
+<img src="image/Pic3.png" width="430px">
+</center>
+<p>For dancers to edit media, a media authoring tool is provided. Inside this tool, dancers can select or upload the media resources they would like to use for the dance. The background images are tabulated on the right-hand panel, as shown in the figure. On the left-hand panel, dancers can check the MAC address of the connected beacons and the uploaded background music for their dances. <b>The source code can be found here: <a href="https://github.com/Jiqing1107/DanceOOP" target="_blank">Click</a></b>.</p>
+<h3>Accelerometer-based Interaction</h3>
+<p>Previously, we also tried to use an accelerometer to enable the interaction. The accelerometer sensor is put into a glove-shaped cloth, placed on the back of the hand of the dancer. Similarly, multinomial logistic regression is used to perform the classification. However, instead of monitoring the distance, in this project, the system monitors the acceleration of the dancer’s movements, which is an indicator of the movement strength. </p>
+<center>
+<h5><b>A demo performed by myself:</b></h5>
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://www.youtube.com/embed/etoeW2mEuxk"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
+<br />
+<br />
+<h5><b>Another demo by my partner Cindy Chen:</b></h5>
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://www.youtube.com/embed/8pme3IkHOcg"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
+</center>
+</body>
+</html>
