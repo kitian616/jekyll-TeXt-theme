@@ -12,7 +12,7 @@
 body {
 	margin: 0px;
 	width: 100%;
-	font-family: 'Crimson Text', serif;
+	font-family: 'Nunito', serif;
 	font-size: 20px;
 	background: #fcfcfc;
 }
@@ -111,7 +111,7 @@ a {
 }
 
 pre {
-	font-family: 'Droid Sans Mono';
+	font-family: 'Nunito';
 	font-size: 14px;
 }
 
@@ -144,32 +144,38 @@ table td img {
 
 <div style="float: right; padding: 20px">
 </div>
-<p>Interactive dance is the combination of art and technology. In interactive dance performance, the visual effects are automatically generated or controlled based on the movements of the dancers and the progression of the story. As a dancer and researcher, I devoted myself to interactive dance and seeked to create novel works with such combination:</p>
+<p>Interactive dance is the combination of art and technology. In interactive dance performance, the stage effects are automatically generated or controlled based on stage cues such as the dancer's movement. As a dancer and researcher, I devoted my study to the idea of building an interactive dance system and creating novel works with such combination:</p>
 <ul style="list-style-type:disc;">
   <li>BLE Beacon-based Interaction</li>
   <li>Accelerometer-based Interaction</li>
 </ul>
 <div style="clear:both">
-<h2>BLE Beacon-based Interaction</h2>
-<p>The system leverages a body area network, which is implicitly formed by a number of BLE beacons attached to a dancer's body parts, to recognize the dancer’s behavior on stage and trigger visual and sound effects accordingly. A mobile device is used as a gateway to measure the signal strength received from the beacon nodes. The measurement is thus denoted as RSS, which is processed to monitor a dancer's relative distances during dance performance. </p>
+<h2><b>BLE Beacon-based Interaction</b></h2>
+<p>In this project, the system leverages a body area network, which is implicitly formed by four BLE beacons attached to a dancer's body parts, to monitor the dancer's performance and trigger visual and sound effects accordingly. A mobile device is used as a gateway to measure the signal strength received from the beacon nodes. The measurement is thus denoted as RSS, which is processed to monitor a dancer's relative distances during dance performance. </p>
 <center>
 <img src="image/Pic1.png" width="800px">
+<p>Fig. 1: The body area network design and the mobile device. </p>
 </center>
-<p>Based on an empirical analysis that the RSS decreases with increasing distance, the system monitors two kinds of distance information: the distance between the dancer and the audience, and the distance between the dancer’s body parts. In this project, we use multinomial logistic regression to perform the classification. We view the four beacon signals to form a data vector, and learn a weight for each of the three classes. The predicted class probability for each class <img src="http://latex.codecogs.com/gif.latex? i" />, is the exponential of <img src="http://latex.codecogs.com/gif.latex? \textbf{w}^{T}_{i}\textbf{z} + \textbf{b}_{i}" />, normalized by the sum of probabilities of all classes. We use the cross-entropy loss to maximize the probabilities of ground-truth class for all data. And the learning of weight is through gradient descent. </p>
+<p>Based on an empirical analysis that the RSS decreases with increasing distance, the system monitors two kinds of distance information: the distance between the dancer and the audience, and the distance between the dancer’s body parts. Instead of computing the exact distance, we estimate the relative distance based on the RSS data of the four beacons, and divide the estimated results into several classes. In this project, multinomial logistic regression is used to perform the classification. We view the four beacon signals to form a data vector, and learn a weight for each of the three classes. The predicted class probability for each class <img src="http://latex.codecogs.com/gif.latex? i" />, is the exponential of <img src="http://latex.codecogs.com/gif.latex? \textbf{w}^{T}_{i}\textbf{z} + \textbf{b}_{i}" />, normalized by the sum of probabilities of all classes. We use the cross-entropy loss to maximize the probabilities of ground-truth class for all data. And the learning of weight is through gradient descent. </p>
 <p>To evaluate the performance of monitoring the distance to the audiences, we designed a 40 seconds dance sequence, and a dancer repeated this dance sequence standing at the center of these two regions. The dance sequence performed in region 1 is regarded as “close”, in region 2 is regarded as “medium” and in region 3 is regarded as “far”. </p>
 <center>
 <img src="image/Pic2.png" width="900px">
+<p>Fig. 2: Tested dance sequence for monitoring the relative distance to the audience. </p>
 </center>
 <p>To evaluate the performance of monitoring the distance between body parts, we designed three movements. In the first movement, the hands are closer than feet; in the second movement, the feet is closer than hands; and in the third movement, their distances are similar. The dancer repeated these three movements in the three regions same as the previous experiment. In each region, each movement is retained for 120 seconds. </p>
 <center>
 <img src="image/Pic3.png" width="430px">
+<p>Fig. 3: Tested movements for monitoring the relative distance between body parts. </p>
 </center>
-<p>For dancers to edit media, a media authoring tool is provided. The tool will first recommend a series of background images to dancers by learning their preferences for dance style. The recommended images are tabulated on the right-hand panel, as shown in the figure, and the dancers can select from these images. On the left-hand panel, dancers can check the MAC address of the connected beacons and the uploaded background music for their dances. <b>The source code can be found here: <a href="https://github.com/Jiqing1107/DanceOOP" target="_blank">Click</a></b>.</p>
+<p>For dancers to edit media, a media authoring tool is provided. The tool will first recommend a series of background images to dancers by learning their preferences for dance style. The recommended images are tabulated on the right-hand panel, as shown in the figure, and the dancers can select from these images. On the left-hand panel, dancers can check the MAC address of the connected beacons and the uploaded background music for their dances. After clicking the "Start
+Dance!" button, the system will keep monitoring the dancer's relative distance to the audience and the
+relative distance between the dancer's body parts accordingly and the monitoring results will be used to trigger the visuals.<b>The source code can be found here: <a href="https://github.com/Jiqing1107/DanceGUI" target="_blank">Click</a></b>.</p>
 <center>
 <img src="image/Pic4.png" width="800px">
+<p>Fig. 4: The user interface of the media authoring tool. </p>
 </center>
 <h3>Accelerometer-based Interaction</h3>
-<p>In a previous project, we also tried to use an accelerometer to enable the interaction. The accelerometer sensor is put into a glove-shaped cloth, placed on the back of the hand of the dancer. Instead of monitoring the distance, in this project, the system monitors the acceleration of the dancer’s movement, which is an indicator of the movement strength. </p>
+<p>In a previous project, we also tried to use an accelerometer to enable the interaction. The accelerometer sensor is put into a glove-shaped cloth, placed on the back of the hand of the dancer. In this project, the system monitors the acceleration of the dancer’s movement, which is an indicator of the movement strength, and trigger the stage effects. The followings are two demos:</p>
 <center>
 <h5><b>A demo performed by myself:</b></h5>
 <iframe 
@@ -181,7 +187,7 @@ table td img {
 </iframe>
 <br />
 <br />
-<h5><b>Another demo by my partner Cindy Chen:</b></h5>
+<h5><b>Another demo by my partner Qin Chen:</b></h5>
 <iframe 
     width="600" 
     height="350" 
