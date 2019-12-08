@@ -1,6 +1,6 @@
 {
   "name": "jekyll-text-theme",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.",
   "scripts": {
     "build": "cross-env JEKYLL_ENV=production bundle exec jekyll build",
