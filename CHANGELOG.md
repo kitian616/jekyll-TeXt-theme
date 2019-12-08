@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.2.4 (2019-12-08)
+
+### Enhancements
+
+- Update to Jekyll 4.0
+- Add custom snippets for main/top, main/bottom, article/top,  article/bottom, etc.
+- Add Medium, Zhihu social icons
+- Add Google Custom Search support
+- Add Korean locale (@ssosso)
+- Add French locale (@ctrl-q)
+- Add Docker support
+
 ## 2.2.4 (2018-12-10)
 
 ### Enhancements
@@ -17,9 +29,9 @@
 ### Enhancements
 
 - Add Swiper component
-- Special stylesheets for print
 - Add AddThis sharing service (@liao961120)
 - Add extensions for demos (CodePen)
+- Add special stylesheets for print
 
 ## 2.2.2 (2018-10-21)
 
