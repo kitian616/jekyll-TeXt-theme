@@ -40,8 +40,8 @@ author:
   avatar    : https://avatars3.githubusercontent.com/u/39076547?s=460&v=4 # path or url of avatar image (square)
   bio       : I'm
   email     : minhnhat@linuxmail.org
-  facebook  : buiminhnhatio # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : minhnhatio # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
+  facebook  : minhnhat.wtf # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  twitter   : minhnhatwtf # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
@@ -84,15 +84,14 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: # false (default), true
-mathjax_autoNumber: # false (default), true
+mathjax: true # false (default), true
+mathjax_autoNumber: true # false (default), true
 
 ## Mermaid
 mermaid: # false (default), true
 
 ## Chart
-chart: # false (default), true
-
+chart: true # false (default), true
 
 ## => Paginate
 ##############################
