@@ -22,6 +22,9 @@ titles:
   fr-CH   : *FR
   fr-FR   : *FR
   fr-LU   : *FR
+  nl      : &NL       Over
+  nl-NL   : *NL
+  nl-BE   : *NL
   # @end locale config
 key: page-about
 ---

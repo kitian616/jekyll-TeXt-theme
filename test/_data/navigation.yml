@@ -21,6 +21,9 @@ header:
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
+      nl      : &NL       Archief
+      nl-NL   : *NL
+      nl-BE   : *NL
       # @end locale config
     url: /archive.html
 
@@ -46,5 +49,8 @@ header:
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
+      nl      : &NL       Over
+      nl-NL   : *NL
+      nl-BE   : *NL
       # @end locale config
     url: /about.html
