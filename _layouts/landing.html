@@ -163,6 +163,9 @@ article_header:
             {%- endif -%}
           {%- endif -%}
 
+      {%- if _section.type == "contact" -%}
+        {%- include contact-form.html fields=_section.fields -%}
+      {%- endif -%}          
       {%- if _section.image.full_width != true -%}
         </div> {% comment %} end hero__content {% endcomment %}
       {%- endif -%}

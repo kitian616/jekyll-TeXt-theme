@@ -19,7 +19,8 @@
         },
         valine: '{{ _sources.valine }}',
         mathjax: '{{ _sources.mathjax }}',
-        mermaid: '{{ _sources.mermaid }}'
+        mermaid: '{{ _sources.mermaid }}',
+        openpgp: '{{ _sources.openpgp }}'
       },
       site: {
         toc: {
@@ -28,7 +29,8 @@
       },
       paths: {
         search_js: '{{ _paths_search_js }}'
-      }
+      },
+      pubKey: '{{ site.contact.pgp_public_key }}'
     };
     window.TEXT_VARIABLES = TEXT_VARIABLES;
   })();
