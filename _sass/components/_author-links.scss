@@ -38,6 +38,9 @@
       .npm-button {
         @include clickable($text-color-1, $npm-color);
       }
+      .steam-button{
+        @include clickable($text-color-1, $steam-color);
+      }
     }
   }
 }

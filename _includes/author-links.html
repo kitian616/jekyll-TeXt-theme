@@ -116,5 +116,13 @@
       </li>
     {%- endif -%}
 
+    {%- if _author.steam -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'Steam' }}">
+        <a class="button button--circle steam-button" itemprop="sameAs" href="https://steamcommunity.com/id/{{ _author.steam }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/steam.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
   </ul>
 </div>
