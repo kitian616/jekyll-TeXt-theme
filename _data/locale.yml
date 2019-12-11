@@ -20,7 +20,7 @@ en: &EN
   EMAIL_ME                : "Send me an Email."
   EMAIL_US                : "Send us an Email."
   COPYRIGHT_DATES         : "2019"
-
+  DONATE                  : "Donate [NAME]."
 en-GB:
   <<: *EN
 en-US:
@@ -51,6 +51,7 @@ zh-Hans: &ZH_HANS
   EMAIL_ME                : "给我发邮件。"
   EMAIL_US                : "给我们发邮件。"
   COPYRIGHT_DATES         : "2019"
+  DONATE                  : "Donate [NAME]."
 
 zh:
   <<: *ZH_HANS
@@ -80,6 +81,7 @@ zh-Hant: &ZH_HANT
   EMAIL_ME                : "給我發郵件。"
   EMAIL_US                : "給我們發郵件。"
   COPYRIGHT_DATES         : "2019"
+  DONATE                  : "捐 [NAME]"
 
 zh-TW:
   <<: *ZH_HANT
@@ -107,6 +109,7 @@ ko: &KO
   EMAIL_ME                : "이메일 보내기"
   EMAIL_US                : "이메일 보내기"
   COPYRIGHT_DATES         : "2019"
+  DONATE                  : "기부 [NAME]"
 
 ko-KR:
   <<: *KO
