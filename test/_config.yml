@@ -118,7 +118,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: false # false (default), "disqus", "gitalk", "valine", "hashover", "custom"
 
   ## Disqus
   disqus:
@@ -143,6 +143,10 @@ comments:
     visitor     : # false (default)
     meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
 
+  ## Hashover
+  # please refer to http://tildehash.com/?page=hashover for more info
+  hashover:
+    src: # URL to hashover.php file
 
 ## => Pageview
 ##############################
