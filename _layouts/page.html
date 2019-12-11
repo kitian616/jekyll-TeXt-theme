@@ -69,7 +69,7 @@ layout: base
 
       <div class="page__main-inner">
       {%- if _header != false -%}
-        <div class="page__header d-print-none">
+        <div class="page__header d-print-none" fade-in="{{ page.header.fade-in | default: "none" }}">
         {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
         {%- if _header_theme == 'dark'-%}
           {%- include header.html theme='dark' background=page.header.background -%}
@@ -142,7 +142,7 @@ layout: base
                 <div class="hero overlay" style="{{ _header_style }}">
               {%- endif -%}
             {%- endif -%}
-                <div class="hero__content">
+                <div class="hero__content" fade-in="{{ page.article_header.fade-in | default: "none" }}">
                   {%- if _full_width == false -%}
                     <div class ="main">
                   {%- endif -%}
@@ -264,6 +264,10 @@ layout: base
   {%- if page.aside.toc -%}{%- include scripts/aside/toc.js -%}{%- endif -%}
   {%- include scripts/aside/affix.js -%}
 </script>
+{%- endif -%}
+
+{%- if page.article_header.fade-in or page.header.fade-in -%}
+  {% include scripts/fade-in-on-view.js %}
 {%- endif -%}
 
 {%- include markdown-enhancements.html -%}

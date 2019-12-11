@@ -8,3 +8,7 @@
     @include transform(translateY(0));
   }
 }
+
+[fade-in=down][viewed=true] {
+  animation: fade-in-down 0.8s ;
+}

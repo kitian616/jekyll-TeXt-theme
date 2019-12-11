@@ -6,3 +6,7 @@
     opacity: 1;
   }
 }
+
+[fade-in=true][viewed=true] {
+  animation: fade-in 0.8s ;
+}
