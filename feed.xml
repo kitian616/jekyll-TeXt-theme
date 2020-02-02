@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-12-08T23:47:56+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-02T19:17:02+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 </subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">Blog - What’s NEXT</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next.html" rel="alternate" type="text/html" title="Blog - What's NEXT" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next.html">&lt;p&gt;Dark Mode is cool, and TeXt is supporting it.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/blog/dark-mode.gif&quot; alt=&quot;Dark Mode&quot; /&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
+
+&lt;p class=&quot;info&quot;&gt;Trying to use &lt;a href=&quot;https://github.com/postcss/postcss&quot;&gt;PostCSS&lt;/a&gt; for CSS Variable Polyfill and Auto Prefix.&lt;/p&gt;
 
 &lt;p&gt;It is developing on &lt;code class=&quot;highlighter-rouge&quot;&gt;dev&lt;/code&gt; branch, you can run &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout dev&lt;/code&gt; to switch to this branch.&lt;/p&gt;
 
@@ -179,7 +181,8 @@
 &lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
   &lt;iframe src=&quot;https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;!--more--&gt;
 
@@ -197,7 +200,8 @@
 &lt;p&gt;Available in Chinese mainland.&lt;/p&gt;
 
 &lt;div&gt;&lt;iframe class=&quot;extensions extensions--audio&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;amp;id=413812448&amp;amp;auto=1&amp;amp;height=66&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;&gt;
-&lt;/iframe&gt;&lt;/div&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
 
@@ -205,21 +209,24 @@
 
 &lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
   &lt;iframe src=&quot;https://www.youtube.com/embed/wbY97-hdD5c?rel=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;ted&quot;&gt;TED&lt;/h3&gt;
 
 &lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
   &lt;iframe src=&quot;https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;bilibili-哔哩哔哩&quot;&gt;bilibili (哔哩哔哩)&lt;/h3&gt;
 
 &lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
   &lt;iframe src=&quot;//player.bilibili.com/player.html?aid=11091080&amp;amp;page=1&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
   &lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;slide&quot;&gt;Slide&lt;/h2&gt;
 
@@ -228,7 +235,8 @@
 &lt;div&gt;&lt;div class=&quot;extensions extensions--slide&quot;&gt;
   &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/u9L9zDsqEWNKE1&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt;
   &lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;demos&quot;&gt;Demos&lt;/h2&gt;
 
@@ -236,7 +244,8 @@
 
 &lt;div&gt;&lt;div class=&quot;extensions extensions--demo&quot;&gt;
 &lt;iframe src=&quot;//codepen.io/kitian616/embed/aQmWZG/?theme-id=0&amp;amp;default-tab=html,result&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">With the help of extensions, you can easily add audios, videos, slides and demos in your posts.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">With the help of extensions, you can easily add audios, videos, slides and demos in your posts.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;a \ne 0&lt;/script&gt;, there are two solutions to &lt;script type=&quot;math/tex&quot;&gt;ax^2 + bx + c = 0&lt;/script&gt; and they are&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;x_1 = {-b + \sqrt{b^2-4ac} \over 2a}&lt;/script&gt;
 

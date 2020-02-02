@@ -1651,7 +1651,7 @@ a > .item__header.disabled, a > .item__header:disabled, a.item__header.disabled,
 
 .article-list .item__meta { padding: 0 1rem 0 0; font-family: Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace; font-size: 0.85rem; white-space: nowrap; }
 
-.article-list.gird--sm .card__header { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.article-list.grid--sm .card__header { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .article-list__group-header { margin-top: 1rem; }
 
