@@ -1,5 +1,5 @@
-**/*.min.css
-**/dist/
-**/vendor/
-/_gh_pages/
 /node_modules/
+/_gh_pages/
+**/dist/
+**/*.min.css
+**/vendor/
