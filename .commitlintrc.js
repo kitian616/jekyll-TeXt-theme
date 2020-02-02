@@ -18,7 +18,7 @@ module.exports = {
 			2,
 			'always',
 			[
-				'build',
+        'build',
 				'chore',
 				'ci',
 				'docs',
@@ -27,6 +27,7 @@ module.exports = {
 				'improvement',
 				'perf',
 				'refactor',
+        'release',
 				'revert',
 				'style',
 				'test'
