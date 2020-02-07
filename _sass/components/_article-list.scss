@@ -5,7 +5,7 @@
     font-size: map-get($base, font-size-sm);
     white-space: nowrap;
   }
-  &.gird--sm {
+  &.grid--sm {
     .card__header {
       overflow: hidden;
       text-overflow: ellipsis;

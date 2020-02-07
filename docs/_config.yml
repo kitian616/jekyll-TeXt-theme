@@ -143,6 +143,8 @@ comments:
     app_id      : uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
     app_key     : Mzf5m9skSwYVWVXhGiYMNyXs
     placeholder : # Prompt information
+    visitor     : # false (default)
+    meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
 
 
 ## => Pageview
