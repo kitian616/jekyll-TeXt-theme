@@ -1,6 +1,6 @@
 ---
-title: Post with Header Image
-tags: TeXt
+title: Hello World
+tags: Scripting
 article_header:
   type: cover
   image:
