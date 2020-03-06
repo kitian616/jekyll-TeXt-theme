@@ -100,7 +100,7 @@ layout: base
             {%- if page.article_header.background_image.gradient -%}
               {%- assign _header_background_image = page.article_header.background_image.gradient -%}
               {%- if _header_background_image_src -%}
-                {%- assign _header_background_image = _header_background_image | append: ',' -%}
+                {%- assign _header_background_image = _header_background_image_src | append: ',' -%}
               {%- endif -%}
             {%- endif -%}
 
