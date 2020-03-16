@@ -26,4 +26,4 @@ titles:
 key: page-about
 ---
 
-## About
+
