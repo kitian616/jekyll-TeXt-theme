@@ -15,11 +15,13 @@
 {%- if _tag_gap_size < 1 -%}
   {%- assign _tag_gap_size = 1 -%}
 {%- endif -%}
+{%- include snippets/get-locale-string.html key='TAGS_SHOW_ALL' -%}
+{%- assign _locale_tags_show_all = __return -%}
 <div class="site-tags js-tags">
   <ul class="menu">
     <li>
       <button type="button" class="button button--secondary button--pill tag-button tag-button--all" data-encode="">
-        Show All<div class="tag-button__count">{{ site.posts | size }}</div>
+        {{ _locale_tags_show_all }}<div class="tag-button__count">{{ site.posts | size }}</div>
       </button>
     </li>
     {%- for _tag in _tags -%}

@@ -20,6 +20,7 @@ en: &EN
   EMAIL_ME                : "Send me an Email."
   EMAIL_US                : "Send us an Email."
   COPYRIGHT_DATES         : "2020"
+  TAGS_SHOW_ALL           : "Show All"
 
 en-GB:
   <<: *EN
@@ -51,6 +52,7 @@ zh-Hans: &ZH_HANS
   EMAIL_ME                : "给我发邮件。"
   EMAIL_US                : "给我们发邮件。"
   COPYRIGHT_DATES         : "2020"
+  TAGS_SHOW_ALL           : "全部"
 
 zh:
   <<: *ZH_HANS
@@ -80,6 +82,7 @@ zh-Hant: &ZH_HANT
   EMAIL_ME                : "給我發郵件。"
   EMAIL_US                : "給我們發郵件。"
   COPYRIGHT_DATES         : "2020"
+  TAGS_SHOW_ALL           : "全部"
 
 zh-TW:
   <<: *ZH_HANT
@@ -107,6 +110,7 @@ ko: &KO
   EMAIL_ME                : "이메일 보내기"
   EMAIL_US                : "이메일 보내기"
   COPYRIGHT_DATES         : "2020"
+  TAGS_SHOW_ALL           : "모두 표시"
 
 ko-KR:
   <<: *KO
@@ -133,6 +137,7 @@ fr: &FR
   EMAIL_US                : "Envoyez-nous un courriel"
   COPYRIGHT_DATES         : "2020"
   DONATE                  : "Faites un don de [NAME]."
+  TAGS_SHOW_ALL           : "Afficher tous les"
 
 fr-BE:
   <<: *FR
