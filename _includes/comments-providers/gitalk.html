@@ -30,7 +30,8 @@
 				repo: '{{ site.comments.gitalk.repository }}',
 				owner: '{{ site.comments.gitalk.owner }}',
 				admin: [{{ _admin }}],
-				id: '{{ page.key }}'
+				id: '{{ page.key }}',
+				language: '{{ site.lang }}',
 			});
 			gitalk.render('js-gitalk-container');
 		});
