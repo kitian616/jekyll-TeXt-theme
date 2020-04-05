@@ -26,4 +26,5 @@ titles:
 key: page-about
 ---
 
+Hi, I am a fingerstyle guitarist. Currently studying Comp Eng at UWaterloo.
 
