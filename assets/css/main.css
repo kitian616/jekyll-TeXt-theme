@@ -147,53 +147,53 @@ pre.lineno { color: #8e908c !important; }
 
 .horizontal-rules::before { display: block; font-size: 1.9rem; color: #888; text-align: center; letter-spacing: 1.5rem; content: "..."; }
 
-.text--light, .card__image > .overlay--light, .hero--light, .header--light { color: #222; }
+.text--light, .header--light, .hero--light, .card__image > .overlay--light { color: #222; }
 
-.text--light h1, .card__image > .overlay--light h1, .hero--light h1, .header--light h1, .text--light h2, .card__image > .overlay--light h2, .hero--light h2, .header--light h2, .text--light h3, .card__image > .overlay--light h3, .hero--light h3, .header--light h3 { color: #000; }
+.text--light h1, .header--light h1, .hero--light h1, .card__image > .overlay--light h1, .text--light h2, .header--light h2, .hero--light h2, .card__image > .overlay--light h2, .text--light h3, .header--light h3, .hero--light h3, .card__image > .overlay--light h3 { color: #000; }
 
-.text--light h4, .card__image > .overlay--light h4, .hero--light h4, .header--light h4, .text--light h5, .card__image > .overlay--light h5, .hero--light h5, .header--light h5 { color: #222; }
+.text--light h4, .header--light h4, .hero--light h4, .card__image > .overlay--light h4, .text--light h5, .header--light h5, .hero--light h5, .card__image > .overlay--light h5 { color: #222; }
 
-.text--light h6, .card__image > .overlay--light h6, .hero--light h6, .header--light h6 { color: #888; }
+.text--light h6, .header--light h6, .hero--light h6, .card__image > .overlay--light h6 { color: #888; }
 
-.text--light a:not(.button):not(.swiper__button), .card__image > .overlay--light a:not(.button):not(.swiper__button), .hero--light a:not(.button):not(.swiper__button), .header--light a:not(.button):not(.swiper__button) { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.text--light a:not(.button):not(.swiper__button), .header--light a:not(.button):not(.swiper__button), .hero--light a:not(.button):not(.swiper__button), .card__image > .overlay--light a:not(.button):not(.swiper__button) { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-.text--light a:not(.button):not(.swiper__button), .card__image > .overlay--light a:not(.button):not(.swiper__button), .hero--light a:not(.button):not(.swiper__button), .header--light a:not(.button):not(.swiper__button), .text--light a:not(.button):not(.swiper__button):link, .card__image > .overlay--light a:not(.button):not(.swiper__button):link, .hero--light a:not(.button):not(.swiper__button):link, .header--light a:not(.button):not(.swiper__button):link, .text--light a:not(.button):not(.swiper__button):visited, .card__image > .overlay--light a:not(.button):not(.swiper__button):visited, .hero--light a:not(.button):not(.swiper__button):visited, .header--light a:not(.button):not(.swiper__button):visited { text-decoration: none; }
+.text--light a:not(.button):not(.swiper__button), .header--light a:not(.button):not(.swiper__button), .hero--light a:not(.button):not(.swiper__button), .card__image > .overlay--light a:not(.button):not(.swiper__button), .text--light a:not(.button):not(.swiper__button):link, .text--light a:not(.button):not(.swiper__button):visited { text-decoration: none; }
 
-.root[data-is-touch="false"] .text--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--light a:not(.button):not(.swiper__button):hover { text-decoration: underline; }
+.root[data-is-touch="false"] .text--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--light a:not(.button):not(.swiper__button):hover { text-decoration: underline; }
 
-.root[data-is-touch] .text--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button):active { text-decoration: none; }
+.root[data-is-touch] .text--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button):active { text-decoration: none; }
 
-.text--light a:not(.button):not(.swiper__button), .card__image > .overlay--light a:not(.button):not(.swiper__button), .hero--light a:not(.button):not(.swiper__button), .header--light a:not(.button):not(.swiper__button), .text--light a:not(.button):not(.swiper__button):link, .card__image > .overlay--light a:not(.button):not(.swiper__button):link, .hero--light a:not(.button):not(.swiper__button):link, .header--light a:not(.button):not(.swiper__button):link, .text--light a:not(.button):not(.swiper__button):visited, .card__image > .overlay--light a:not(.button):not(.swiper__button):visited, .hero--light a:not(.button):not(.swiper__button):visited, .header--light a:not(.button):not(.swiper__button):visited { color: #222; }
+.text--light a:not(.button):not(.swiper__button), .header--light a:not(.button):not(.swiper__button), .hero--light a:not(.button):not(.swiper__button), .card__image > .overlay--light a:not(.button):not(.swiper__button), .text--light a:not(.button):not(.swiper__button):link, .text--light a:not(.button):not(.swiper__button):visited { color: #222; }
 
-.root[data-is-touch="false"] .text--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--light a:not(.button):not(.swiper__button):hover { color: #fc4d50; }
+.root[data-is-touch="false"] .text--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--light a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--light a:not(.button):not(.swiper__button):hover { color: #fc4d50; }
 
-.root[data-is-touch] .text--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button):active { color: #f80408; }
+.root[data-is-touch] .text--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--light a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--light a:not(.button):not(.swiper__button):active { color: #f80408; }
 
-.text--light a:not(.button):not(.swiper__button).disabled, .card__image > .overlay--light a:not(.button):not(.swiper__button).disabled, .hero--light a:not(.button):not(.swiper__button).disabled, .header--light a:not(.button):not(.swiper__button).disabled, .text--light a:not(.button):not(.swiper__button):disabled, .card__image > .overlay--light a:not(.button):not(.swiper__button):disabled, .hero--light a:not(.button):not(.swiper__button):disabled, .header--light a:not(.button):not(.swiper__button):disabled { color: rgba(34, 34, 34, 0.2) !important; }
+.text--light a:not(.button):not(.swiper__button).disabled, .header--light a:not(.button):not(.swiper__button).disabled, .hero--light a:not(.button):not(.swiper__button).disabled, .card__image > .overlay--light a:not(.button):not(.swiper__button).disabled, .text--light a:not(.button):not(.swiper__button):disabled, .header--light a:not(.button):not(.swiper__button):disabled, .hero--light a:not(.button):not(.swiper__button):disabled, .card__image > .overlay--light a:not(.button):not(.swiper__button):disabled { color: rgba(34, 34, 34, 0.2) !important; }
 
-.text--dark, .card__image > .overlay, .card__image > .overlay--dark, .hero--dark, .header--dark { color: rgba(255, 255, 255, 0.95); }
+.text--dark, .header--dark, .hero--dark, .card__image > .overlay, .card__image > .overlay--dark { color: rgba(255, 255, 255, 0.95); }
 
-.text--dark h1, .card__image > .overlay h1, .card__image > .overlay--dark h1, .hero--dark h1, .header--dark h1, .text--dark h2, .card__image > .overlay h2, .card__image > .overlay--dark h2, .hero--dark h2, .header--dark h2, .text--dark h3, .card__image > .overlay h3, .card__image > .overlay--dark h3, .hero--dark h3, .header--dark h3 { color: #fff; }
+.text--dark h1, .header--dark h1, .hero--dark h1, .card__image > .overlay h1, .card__image > .overlay--dark h1, .text--dark h2, .header--dark h2, .hero--dark h2, .card__image > .overlay h2, .card__image > .overlay--dark h2, .text--dark h3, .header--dark h3, .hero--dark h3, .card__image > .overlay h3, .card__image > .overlay--dark h3 { color: #fff; }
 
-.text--dark h4, .card__image > .overlay h4, .card__image > .overlay--dark h4, .hero--dark h4, .header--dark h4, .text--dark h5, .card__image > .overlay h5, .card__image > .overlay--dark h5, .hero--dark h5, .header--dark h5 { color: rgba(255, 255, 255, 0.95); }
+.text--dark h4, .header--dark h4, .hero--dark h4, .card__image > .overlay h4, .card__image > .overlay--dark h4, .text--dark h5, .header--dark h5, .hero--dark h5, .card__image > .overlay h5, .card__image > .overlay--dark h5 { color: rgba(255, 255, 255, 0.95); }
 
-.text--dark h6, .card__image > .overlay h6, .card__image > .overlay--dark h6, .hero--dark h6, .header--dark h6 { color: rgba(255, 255, 255, 0.85); }
+.text--dark h6, .header--dark h6, .hero--dark h6, .card__image > .overlay h6, .card__image > .overlay--dark h6 { color: rgba(255, 255, 255, 0.85); }
 
-.text--dark a:not(.button):not(.swiper__button), .card__image > .overlay a:not(.button):not(.swiper__button), .card__image > .overlay--dark a:not(.button):not(.swiper__button), .hero--dark a:not(.button):not(.swiper__button), .header--dark a:not(.button):not(.swiper__button) { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.text--dark a:not(.button):not(.swiper__button), .header--dark a:not(.button):not(.swiper__button), .hero--dark a:not(.button):not(.swiper__button), .card__image > .overlay a:not(.button):not(.swiper__button), .card__image > .overlay--dark a:not(.button):not(.swiper__button) { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-.text--dark a:not(.button):not(.swiper__button), .card__image > .overlay a:not(.button):not(.swiper__button), .card__image > .overlay--dark a:not(.button):not(.swiper__button), .hero--dark a:not(.button):not(.swiper__button), .header--dark a:not(.button):not(.swiper__button), .text--dark a:not(.button):not(.swiper__button):link, .card__image > .overlay a:not(.button):not(.swiper__button):link, .card__image > .overlay--dark a:not(.button):not(.swiper__button):link, .hero--dark a:not(.button):not(.swiper__button):link, .header--dark a:not(.button):not(.swiper__button):link, .text--dark a:not(.button):not(.swiper__button):visited, .card__image > .overlay a:not(.button):not(.swiper__button):visited, .card__image > .overlay--dark a:not(.button):not(.swiper__button):visited, .hero--dark a:not(.button):not(.swiper__button):visited, .header--dark a:not(.button):not(.swiper__button):visited { text-decoration: none; }
+.text--dark a:not(.button):not(.swiper__button), .header--dark a:not(.button):not(.swiper__button), .hero--dark a:not(.button):not(.swiper__button), .card__image > .overlay a:not(.button):not(.swiper__button), .card__image > .overlay--dark a:not(.button):not(.swiper__button), .text--dark a:not(.button):not(.swiper__button):link, .text--dark a:not(.button):not(.swiper__button):visited { text-decoration: none; }
 
-.root[data-is-touch="false"] .text--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--dark a:not(.button):not(.swiper__button):hover { text-decoration: underline; }
+.root[data-is-touch="false"] .text--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--dark a:not(.button):not(.swiper__button):hover { text-decoration: underline; }
 
-.root[data-is-touch] .text--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button):active { text-decoration: none; }
+.root[data-is-touch] .text--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button):active { text-decoration: none; }
 
-.text--dark a:not(.button):not(.swiper__button), .card__image > .overlay a:not(.button):not(.swiper__button), .card__image > .overlay--dark a:not(.button):not(.swiper__button), .hero--dark a:not(.button):not(.swiper__button), .header--dark a:not(.button):not(.swiper__button), .text--dark a:not(.button):not(.swiper__button):link, .card__image > .overlay a:not(.button):not(.swiper__button):link, .card__image > .overlay--dark a:not(.button):not(.swiper__button):link, .hero--dark a:not(.button):not(.swiper__button):link, .header--dark a:not(.button):not(.swiper__button):link, .text--dark a:not(.button):not(.swiper__button):visited, .card__image > .overlay a:not(.button):not(.swiper__button):visited, .card__image > .overlay--dark a:not(.button):not(.swiper__button):visited, .hero--dark a:not(.button):not(.swiper__button):visited, .header--dark a:not(.button):not(.swiper__button):visited { color: rgba(255, 255, 255, 0.95); }
+.text--dark a:not(.button):not(.swiper__button), .header--dark a:not(.button):not(.swiper__button), .hero--dark a:not(.button):not(.swiper__button), .card__image > .overlay a:not(.button):not(.swiper__button), .card__image > .overlay--dark a:not(.button):not(.swiper__button), .text--dark a:not(.button):not(.swiper__button):link, .text--dark a:not(.button):not(.swiper__button):visited { color: rgba(255, 255, 255, 0.95); }
 
-.root[data-is-touch="false"] .text--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--dark a:not(.button):not(.swiper__button):hover { color: #fc4d50; }
+.root[data-is-touch="false"] .text--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .header--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .hero--dark a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay a:not(.button):not(.swiper__button):hover, .root[data-is-touch="false"] .card__image > .overlay--dark a:not(.button):not(.swiper__button):hover { color: #fc4d50; }
 
-.root[data-is-touch] .text--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button):active { color: #f80408; }
+.root[data-is-touch] .text--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button).active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button).active, .root[data-is-touch] .text--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .header--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .hero--dark a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay a:not(.button):not(.swiper__button):active, .root[data-is-touch] .card__image > .overlay--dark a:not(.button):not(.swiper__button):active { color: #f80408; }
 
-.text--dark a:not(.button):not(.swiper__button).disabled, .card__image > .overlay a:not(.button):not(.swiper__button).disabled, .card__image > .overlay--dark a:not(.button):not(.swiper__button).disabled, .hero--dark a:not(.button):not(.swiper__button).disabled, .header--dark a:not(.button):not(.swiper__button).disabled, .text--dark a:not(.button):not(.swiper__button):disabled, .card__image > .overlay a:not(.button):not(.swiper__button):disabled, .card__image > .overlay--dark a:not(.button):not(.swiper__button):disabled, .hero--dark a:not(.button):not(.swiper__button):disabled, .header--dark a:not(.button):not(.swiper__button):disabled { color: rgba(255, 255, 255, 0.2) !important; }
+.text--dark a:not(.button):not(.swiper__button).disabled, .header--dark a:not(.button):not(.swiper__button).disabled, .hero--dark a:not(.button):not(.swiper__button).disabled, .card__image > .overlay a:not(.button):not(.swiper__button).disabled, .card__image > .overlay--dark a:not(.button):not(.swiper__button).disabled, .text--dark a:not(.button):not(.swiper__button):disabled, .header--dark a:not(.button):not(.swiper__button):disabled, .hero--dark a:not(.button):not(.swiper__button):disabled, .card__image > .overlay a:not(.button):not(.swiper__button):disabled, .card__image > .overlay--dark a:not(.button):not(.swiper__button):disabled { color: rgba(255, 255, 255, 0.2) !important; }
 
 .of-auto { overflow: auto; -webkit-overflow-scrolling: touch; }
 
@@ -633,10 +633,7 @@ input:focus { outline: none; }
 
 .mermaidTooltip { display: none; }
 
-@media print { a, a:link, a:visited { text-decoration: underline; }
-  .root[data-is-touch="false"] a:hover { text-decoration: underline; }
-  .root[data-is-touch] a.active, .root[data-is-touch] a:active { text-decoration: underline; }
-  img, tr, pre, blockquote { page-break-inside: avoid; } }
+@media print { a, a:link, a:visited { text-decoration: underline; } .root[data-is-touch="false"] a:hover { text-decoration: underline; } .root[data-is-touch] a.active, .root[data-is-touch] a:active { text-decoration: underline; } img, tr, pre, blockquote { page-break-inside: avoid; } }
 
 .button, .swiper__button { display: inline-block; font-weight: 700; line-height: 1 !important; text-decoration: none !important; cursor: pointer; outline: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
@@ -1146,21 +1143,9 @@ input:focus { outline: none; }
 
 .hero p { font-size: 1.5rem; }
 
-@media (max-width: 1023px) { .hero h1 { font-size: 3rem; }
-  .hero h2 { font-size: 2rem; }
-  .hero h3 { font-size: 1.75rem; }
-  .hero h4 { font-size: 1.5rem; }
-  .hero h5 { font-size: 1.25rem; }
-  .hero h6 { font-size: 1.25rem; }
-  .hero p { font-size: 1.25rem; } }
+@media (max-width: 1023px) { .hero h1 { font-size: 3rem; } .hero h2 { font-size: 2rem; } .hero h3 { font-size: 1.75rem; } .hero h4 { font-size: 1.5rem; } .hero h5 { font-size: 1.25rem; } .hero h6 { font-size: 1.25rem; } .hero p { font-size: 1.25rem; } }
 
-@media (max-width: 499px) { .hero h1 { font-size: 2rem; }
-  .hero h2 { font-size: 1.5rem; }
-  .hero h3 { font-size: 1.35rem; }
-  .hero h4 { font-size: 1.15rem; }
-  .hero h5 { font-size: 1rem; }
-  .hero h6 { font-size: 1rem; }
-  .hero p { font-size: 1rem; } }
+@media (max-width: 499px) { .hero h1 { font-size: 2rem; } .hero h2 { font-size: 1.5rem; } .hero h3 { font-size: 1.35rem; } .hero h4 { font-size: 1.15rem; } .hero h5 { font-size: 1rem; } .hero h6 { font-size: 1rem; } .hero p { font-size: 1rem; } }
 
 .hero--center { text-align: center; }
 
@@ -2571,11 +2556,7 @@ body, html, .root, .layout--page { height: 100%; }
 
 @media (max-width: 1023px) { .has-aside .col-aside { display: none; } }
 
-@media (max-width: 1023px) { .page__sidebar { position: fixed; -webkit-transform: translate(-250px, 0); transform: translate(-250px, 0); }
-  .page__actions { display: block; }
-  .show-sidebar .page__actions { visibility: hidden; }
-  .show-sidebar .page__sidebar { -webkit-transform: translate(0); transform: translate(0); }
-  .show-sidebar .page__mask { opacity: 1; -webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: opacity 0.4s ease-in-out; transition: opacity 0.4s ease-in-out; } }
+@media (max-width: 1023px) { .page__sidebar { position: fixed; -webkit-transform: translate(-250px, 0); transform: translate(-250px, 0); } .page__actions { display: block; } .show-sidebar .page__actions { visibility: hidden; } .show-sidebar .page__sidebar { -webkit-transform: translate(0); transform: translate(0); } .show-sidebar .page__mask { opacity: 1; -webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: opacity 0.4s ease-in-out; transition: opacity 0.4s ease-in-out; } }
 
 .hero--light .article__info { color: #222; }
 
