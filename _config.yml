@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+^# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -26,7 +26,7 @@ description  :  blog for ryc~
 
 ## => Language and Timezone
 ##############################
-lang: ch # the language of your site, default as "en"
+lang: zh # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
