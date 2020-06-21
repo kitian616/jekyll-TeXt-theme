@@ -20,13 +20,13 @@ text_skin: ocean # "default" (default), "dark", "forest", "ocean", "chocolate", 
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : rycnet.tk
 baseurl : # does not include hostname
-title   : RYC BLOG
+title   : RYC'S BLOG
 description  :  blog for ryc~
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: ch # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -101,7 +101,7 @@ paginate_path: /page:num # don't change this unless for special need
 
 ## => Sources
 ##############################
-sources: # bootcdn (default), unpkg
+sources: bootcdn #(default), unpkg
 
 
 ## => Sharing
