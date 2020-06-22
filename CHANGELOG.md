@@ -151,7 +151,6 @@ Breaking changes, please check [Update from 1.x to 2.x](https://tianqi.name/jeky
 
 ### Enhancements
 
-- Use new liquid syntax `{%-` `-%}` to avoid unnecessary output whitespace
 - Add `paths.base` setting
 
 ## 1.4.1 (2017-12-05)
