@@ -1,12 +1,11 @@
 ---
-title: 'FastAI Series - Forward + Backward propagation with computational graph and chain rules'
-date: 2020-04-21
+title: FastAI Series - Forward + Backward propagation with computational graph and chain rules
+date: 2020-04-24
 tags: ['Machine Learning', 'Deep Learning']
 ---
 
 ![Cover](../../../assets/images/2020-05-24/cover.png)
 
-# FastAI Series - Forward + Backward propagation with computational graph and chain rules
 
 This article is quite special because it's hand written one. Hopefully you guys read it thoroughly and understand the key components of a standard neural networks.
 

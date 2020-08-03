@@ -1,14 +1,11 @@
 ---
-title: 'Cat & dog recognition using Keras'
+title: Cat & dog recognition using Keras
 date: 2020-04-26
 tags: ['Machine Learning', 'Deep Learning', 'Tensorflow', 'Computer Vision']
 ---
 
 ![Cover](../../../assets/images/2020-04-26/cover.jpg)
 
-
-
-# Cat & dog recognition using Keras
 
 For Machine Learning beginners who just know about basic agorithms and want more - get involved in [Computer Vision](https://en.wikipedia.org/wiki/Computer_vision) projects, cat & dog recognition is a fairly straightforward problem that everyone would solve when stepping in Computer Vision area (beside [MNIST](https://en.wikipedia.org/wiki/MNIST_database) - Hand written digits).
 

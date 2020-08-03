@@ -6,8 +6,6 @@ tags: ['Machine Learning', 'Tensorflow', 'ROCm']
 
 ![Cover](../../../assets/images/2020-04-21/cover.png)
 
-# Use Tensorflow with AMD graphic card on Ubuntu
-
 After I received my graphic card (Radeon RX 570 Series) from my cousin. So I started using Tensorflow and found out my training process was also extremely slow, like when training with my MacOS.
 
 After reading some articles and being through many tedious days, I successfully set up my Tensorflow with Docker based on it. So in this article, I would like to share with you how to set it up in the most convenient way.
