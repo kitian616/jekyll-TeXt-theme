@@ -6,6 +6,7 @@ tags: ['Machine Learning', 'Deep Learning', 'Tensorflow', 'Computer Vision']
 
 ![Cover](../../../assets/images/2020-04-26/cover.jpg)
 
+---
 
 For Machine Learning beginners who just know about basic agorithms and want more - get involved in [Computer Vision](https://en.wikipedia.org/wiki/Computer_vision) projects, cat & dog recognition is a fairly straightforward problem that everyone would solve when stepping in Computer Vision area (beside [MNIST](https://en.wikipedia.org/wiki/MNIST_database) - Hand written digits).
 
@@ -47,7 +48,7 @@ In the end, our project structure will look like this:
 
 
 
-### Write Python script to classify our training images
+### Classify our training images
 
 ```python
 import os
@@ -77,7 +78,7 @@ for file in files:
 
 
 
-### Import libraries and do a little analysing
+### Import the libraries and analyse
 
 ```python
 # Import libraries
@@ -118,7 +119,7 @@ plt.imshow(dog0)
 
 
 
-### It’s time to augment our data
+### Augment the data
 
 Data augmentation is an important process involved in the lack of data in small datasets. With a little transformation, we can turn an image to multiple different ones but are still clear enough to be learned by our model.
 
@@ -181,7 +182,7 @@ test_data = image_gen.flow_from_directory(directory,
 
 
 
-### Build and train our model
+### Build and train the model
 
 It is probably the most exciting task for many of you. Now we will create a **8-layers model** with the increasing filters after every couple of conv layer.
 

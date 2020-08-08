@@ -1,22 +1,22 @@
 ---
-title: Use Tensorflow with AMD GPU on Ubuntu
+title: Sử dụng Tensorflow với AMD GPU trên Ubuntu
 date: 2020-04-21
 tags: ['Machine Learning', 'Tensorflow', 'ROCm']
 ---
 
 ![Cover](../../../assets/images/2020-04-21/cover.png)
 
-After I received my graphic card (Radeon RX 570 Series) from my cousin. So I started using Tensorflow and found out my training process was also extremely slow, like when training with my MacOS.
+---
 
-After reading some articles and being through many tedious days, I successfully set up my Tensorflow with Docker based on it. So in this article, I would like to share with you how to set it up in the most convenient way.
+Sau khi tôi được cho card đồ  họa dòng Radeon RX 570 của hãng AMD từ anh họ (ngân sách hạn chế :D), tôi đã có một khoảng thời gian chật vật với nó, bởi vì nó không support cho việc train các model deep learning. Tôi thử test với Tensorflow, một framework hỗ trợ việc phát triển các model deep learning, và kết quả hiển nhiên là cực kì chậm, chậm như lúc train với CPU vậy.
 
-No more further instruction, let’s get started!
+Trải qua những ngày nhàm chán, tôi cuối cùng đã setup thành công Tensorflow với Docker chạy trên GPU của AMD. Vì vậy trong bài vì vậy trong bài viết này, tôi xin được chia sẻ cách để setup nhanh nhất.
 
 
 
-### Install ROCm on Ubuntu
+### Cài đặt ROCm trên Ubuntu
 
-1. Run the following code to ensure that your system is up to date:
+1. Chạy các dòng lệnh bên dưới để đảm bảo hệ thống đã được cập nhật:
 ```bash
 sudo apt update
 sudo apt dist-upgrade
@@ -24,18 +24,15 @@ sudo apt install libnuma-dev
 sudo reboot
 ```
 
-2. Add the ROCm apt repository:
+2. Cài đặt ROCM:
 ```bash
 wget -q -O - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
 echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list
-```
-
-3. Install the ROCm meta-package:
-```bash
 sudo apt update
 sudo apt install rocm-dkms
 ```
-4. Set permissions:
+
+3. Cấp quyền:
 ```bash
 groups
 sudo usermod -a -G video $LOGNAME
@@ -43,9 +40,9 @@ echo 'ADD_EXTRA_GROUPS=1' | sudo tee -a /etc/adduser.conf
 echo 'EXTRA_GROUPS=video' | sudo tee -a /etc/adduser.conf
 ```
 
-5. Restart the system
+4. Khởi động lại máy
 
-6. Verify ROCm installation is successful:
+5. Xác nhận ROCm được cài đặt thành công:
 ```bash
 /opt/rocm/bin/rocminfo
 /opt/rocm/opencl/bin/x86_64/clinfo
@@ -55,27 +52,28 @@ echo 'EXTRA_GROUPS=video' | sudo tee -a /etc/adduser.conf
 
 ![/opt/rocm/opencl/bin/x86_64/clinfo](../../../assets/images/2020-04-21/command-2.png)
 
-__Note:__ To run the ROCm programs more efficiently, add the ROCm binaries in your PATH.
+__Lưu ý:__ Chạy những dòng này để ROCm hoạt động hiểu quả hơn:
 ```bash
 echo 'export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bin/x86_64' | sudo tee -a /etc/profile.d/rocm.sh
 ```
 
 
 
-### Install Docker
+### Cài đặt Docker
 
-There are a ton of instruction in the Internet, but I recommend you to follow the steps which were written in this [article](https://do.co/2zcd8NI).
+Thật sự thì đã có rất nhiều hướng dẫn cài đặt Docker trên mạng, nhưng tôi khuyến khích các bạn làm theo hướng dẫn ở link [này](https://do.co/2zcd8NI).
 
 
 
-### Setup Tensorflow with ROCm
+### Cài đặt Tensorflow với ROCm
 
-1. Pull Tensorflow image (make sure your Docker is running):
+1. Pull Tensorflow image (đảm bảo Docker của bạn đang hoạt động):
 ```bash
+# image này khoảng 5-7 GB
 sudo docker pull rocm/tensorflow:latest
 ```
 
-2. Run container with image:
+2. Khởi động container với Tensorflow image:
 ```bash
 docker run -i -t \
     --name=tensorflow \
@@ -89,35 +87,39 @@ docker run -i -t \
     -v $HOME/your-working-directory:/docker rocm/tensorflow:latest /bin/bash
 ```
 
-__Note:__ If you restart your computer, you could exec to your container using these 2 following commands:
+__Lưu ý:__ Nếu bạn khởi động lại máy, bạn cần khởi động lại container và exec vào container để chạy:
 ```bash
 sudo docker container start tensorflow # container name
 sudo docker exec -it tensorflow /bin/bash
 ```
 
-3. Run Jupyter notebook:
+(Một cách khác là bạn có thể dùng daemon trong Docker để chạy container mỗi khi khởi động, tôi thì nghĩ cách này không hiệu quả lắm, khá tốn resource của máy).
+
+3. Chạy Jupyter notebook:
 ```bash
 jupyter notebook --allow-root
 ```
-![Run notebook](../../../assets/images/2020-04-21/image-1.png)
+![Chạy notebook](../../../assets/images/2020-04-21/image-1.png)
 
-4. Create a new notebook:
+4. Tạo một notebook mới:
 
-![Create notebook](../../../assets/images/2020-04-21/image-2.png)
+![Tạo notebook](../../../assets/images/2020-04-21/image-2.png)
 
-### Run Tensorflow
 
-In this tutorial, we will use Python to test our ROCm. (For someone who doens't know Python, I encourage you to take some crash courses on the Internet).
 
-We will test our ROCm with a basic neural network and MNIST dataset:
+### Sử dụng Tensorflow
+
+Tôi sẽ dùng Python để test ROCm đã thực sự chạy hay chưa. (Nếu bạn chưa biết Python, tôi khuyến khích bạn nên học một số khóa trên Udemy).
+
+Chúng ta sẽ tạo một neural network cơ bản trên tập MNIST dataset:
 
 ```python
-# Install required packages
+# Cài đặt một số thư viện cần thiết
 !pip install cv2 numpy matplotlib
 ```
 
 ```python
-# Load libraries
+# Load thư viện
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.models import Sequential
@@ -126,22 +128,21 @@ from tensorflow.keras.layers import Dense, MaxPooling2D, Conv2D, Flatten
 import os
 import cv2
 import numpy as np
-import matplotlib.image as mpimg
 ```
 
 ```python
-# Load dataset by Keras mnist
+# Load dataset bằng Keras mnist
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 ```
 
 ```python
-# Categorize target
+# Phân loại các class
 y_cat_train = to_categorical(y_train)
 y_cat_test = to_categorical(y_test)
 ```
 
 ```python
-# Standardize features
+# Chuẩn hóa input
 X_train = X_train / 255
 X_test = X_test / 255
 X_train = X_train.reshape(len(X_train), 28, 28, 1)
@@ -149,7 +150,7 @@ X_test = X_test.reshape(len(X_test), 28, 28, 1)
 ```
 
 ```python
-# Define model
+# Xác định model
 model = Sequential([
     Conv2D(filters=32, kernel_size=(5,5), input_shape=(28,28,1), activation='relu'),
     MaxPooling2D(),
@@ -168,32 +169,39 @@ model.compile(loss='categorical_crossentropy',
 model.summary()
 ```
 
-![Model summary](../../../assets/images/2020-04-21/image-3.png)
+![Kiến trúc của model](../../../assets/images/2020-04-21/image-3.png)
 
 ```python
 model.fit(X_train, y_cat_train, epochs=3)
 ```
 
-![Training result](../../../assets/images/2020-04-21/image-4.png)
+![Kết quả sau khi train](../../../assets/images/2020-04-21/image-4.png)
 
 ```python
 model.evaluate(X_test, y_cat_test)
 ```
 
-![Evaluation](../../../assets/images/2020-04-21/image-5.png)
+![Kết quả đánh giá model](../../../assets/images/2020-04-21/image-5.png)
 
 ```python
-# Save model
+# Lưu model
 model.save('model.h5')
 ```
 
-### Summary
 
-After going through various steps, we have our running Tensorflow in AMD GPU. It is worth for spending our time on doing this setup instead of wasting a ton of hours training without ROCm.
 
-So please don't hesitate any further, step your foots into Machine Learning world.
+### Tổng k
+Sau khi đi qua các bước này, chúng ta đã chạy được Tensorflow với AMD và GPU. Theo tôi, dành thời gian để setup ROCm còn tốt hơn việc train model mà không có GPU.
 
-### References:
-- [My source code](https://github.com/tailtq/ml-learning/blob/master/handmade-products/digit-recognition/model.ipynb)
-- [Set up ROCm](https://rocm-documentation.readthedocs.io/en/latest/Installation_Guide/Installation-Guide.html)
-- [Cover and also useful article](https://towardsdatascience.com/train-neural-networks-using-amd-gpus-and-keras-37189c453878)
+Tuy nhiên thì tôi cũng có một số đánh giá sau khi dùng ROCm trong một khoảng thời gian:
+- Chưa hỗ trợ Darknet framework (rất nổi tiếng với YOLO, một model nhận diện đối tượng real-time)
+- Làm việc với PyTorch không hiệu quả (có một số bug không fix được)
+
+Vì vậy, với các dòng card yếu thì tôi nghĩ dùng Google Colab sẽ hiệu quả hơn rất nhiều (11 GB GPU + 16 GB RAM), còn nếu bạn có card AMD mạnh thì bạn nên setup rồi đánh giá thử xem.
+
+Cảm ơn các bạn rất nhiều!
+
+### Nguồn tham khảo:
+- [Source code](https://github.com/tailtq/ml-learning/blob/master/handmade-products/digit-recognition/model.ipynb)
+- [Cài đặt ROCm](https://rocm-documentation.readthedocs.io/en/latest/Installation_Guide/Installation-Guide.html)
+- [Nguồn cover và bài viết hữu ích](https://towardsdatascience.com/train-neural-networks-using-amd-gpus-and-keras-37189c453878)
