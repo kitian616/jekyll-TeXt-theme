@@ -190,7 +190,7 @@ model.save('model.h5')
 
 
 
-### Tổng k
+### Tổng kết
 Sau khi đi qua các bước này, chúng ta đã chạy được Tensorflow với AMD và GPU. Theo tôi, dành thời gian để setup ROCm còn tốt hơn việc train model mà không có GPU.
 
 Tuy nhiên thì tôi cũng có một số đánh giá sau khi dùng ROCm trong một khoảng thời gian:
@@ -201,7 +201,7 @@ Vì vậy, với các dòng card yếu thì tôi nghĩ dùng Google Colab sẽ h
 
 Cảm ơn các bạn rất nhiều!
 
-### Nguồn tham khảo:
+### Nguồn tham khảo
 - [Source code](https://github.com/tailtq/ml-learning/blob/master/handmade-products/digit-recognition/model.ipynb)
 - [Cài đặt ROCm](https://rocm-documentation.readthedocs.io/en/latest/Installation_Guide/Installation-Guide.html)
 - [Nguồn cover và bài viết hữu ích](https://towardsdatascience.com/train-neural-networks-using-amd-gpus-and-keras-37189c453878)
