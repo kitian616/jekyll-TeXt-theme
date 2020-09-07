@@ -199,7 +199,7 @@ Tuy nhiên thì tôi cũng có một số đánh giá sau khi dùng ROCm trong m
 
 Vì vậy, với các dòng card yếu thì tôi nghĩ dùng Google Colab sẽ hiệu quả hơn rất nhiều (11 GB GPU + 16 GB RAM), còn nếu bạn có card AMD mạnh thì bạn nên setup rồi đánh giá thử xem.
 
-Cảm ơn các bạn rất nhiều!
+Cảm ơn các bạn đã đọc bài viết này và hãy tiếp tục nghiên cứu nhé :D.
 
 ### Nguồn tham khảo
 - [Source code](https://github.com/tailtq/ml-learning/blob/master/handmade-products/digit-recognition/model.ipynb)
