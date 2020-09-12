@@ -1,5 +1,5 @@
 ---
-title: RCNN - Region-based Convolutional Neural Network
+title: R-CNN - Region-based Convolutional Neural Network
 date: 2020-09-04
 tags: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Object Detection']
 ---
@@ -41,7 +41,9 @@ Các nội dung bên dưới được tham khảo từ [1]
 
 Bạn hẳn đã nghe đến việc sử dụng phương pháp __Sliding Window__ để phát hiện đối tượng trong một ảnh (hình dưới), tuy nhiên thì đây không phải là cách tiếp cận tốt cho Object Detection, nhất là với các đối tượng có kích thước đa dạng. Nếu chỉ nhận diện những đối tượng có hình dáng tương tự nhau thì hiệu suất sẽ khả quan, ví dụ để nhận diện người đi bộ thì chỉ cần quy định kích thước window là hình chữ nhật đứng. Nhưng nếu có nhiều đối tượng với các kích thước khác nhau, chúng ta cần phải scale window ở thành kích cỡ khác nhau và cho nó trượt khắp ảnh. Cách làm này sẽ tạo ra rất nhiều phần ảnh cần phải xử lý (hơn cả 2000).
 
+{:refdef: style="text-align: center;"}
 ![Sliding Window](../../../assets/images/2020-09-04/sliding-window.gif)
+{:refdef}
 
 
 #### Thuật toán region proposal
@@ -64,7 +66,9 @@ __Selective Search__ là một trong những thuật toán của __Region Propos
 3. Nhóm các phần liền kề dựa trên các thành phần (Màu sắc, kết cấu, kích thước, hình dạng,...)
 3. Quay lại step 2
 
+{:refdef: style="text-align: center;"}
 ![Hierarchical Segmentation](../../../assets/images/2020-09-04/hierarchical-segmentation.jpg)
+{:refdef}
 
 Để hiểu rõ hơn, bạn có thể xem thêm tại [1]
 
