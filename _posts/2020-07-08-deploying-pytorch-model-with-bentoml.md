@@ -252,7 +252,7 @@ Trong tương lai, tôi sẽ đào sâu hơn vào framework để hiểu đượ
 
 Cảm ơn các bạn đã đọc bài viết này và hãy tiếp tục nghiên cứu nhé :D.
 
-### Nguồn tham khảo
+### Tài liệu
 
 [[1] BentoML homepage](https://docs.bentoml.org/en/latest/)
 

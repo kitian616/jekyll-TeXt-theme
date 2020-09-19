@@ -262,5 +262,5 @@ plt.show()
 
 
 
-### Nguồn tham khảo
+### Tài liệu
 - [Tăng cường dữ liệu](https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/)

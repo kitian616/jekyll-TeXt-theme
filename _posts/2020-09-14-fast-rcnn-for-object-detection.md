@@ -1,5 +1,5 @@
 ---
-title: Fast R-CNN - Region-based Convolutional Neural Network
+title: Fast R-CNN cho nhận diện đối tượng
 date: 2020-09-04
 tags: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Object Detection']
 ---
@@ -40,7 +40,7 @@ Giả sử chúng ta cần phát hiện $K$ lớp đối tượng.
 1. Selective search được sử dụng để lấy các RoIs từ ảnh
 2. CNN chiết xuất tất cả đặc trưng của ảnh thành feature map
 3. Theo từng RoI, network ánh xạ đến feature map tổng để lấy một feature map trong vùng đó, sau đó cung cấp cho RoI Pooling Layer
-4. Kết quả từ RoI Pooling Layer là một feature vector và được cung cấp cho FCN, FCN sau khi đã chỉnh sửa thành 2 nhánh con sẽ cho ra xác suất cho $K$ lớp đối tượng đồng thời vị trí của mỗi đối tượng đó.
+4. Kết quả từ RoI Pooling Layer là một feature vector và được cung cấp cho fully connected layer, layer này được chia thành 2 nhánh con để thực hiện 2 nhiệm vụ khác nhau, và kết quả là xác suất cho $K$ lớp đối tượng đồng thời vị trí của mỗi đối tượng đó.
 
 Không quá phức tạp nhỉ? Đúng vậy, tuy nhiên để huấn luyện model này, chúng ta cần phải quan tâm đến các thành phần quan trọng như:
 
@@ -80,7 +80,7 @@ Tiếp theo, chúng ta hãy tìm hiểu khái niệm **RoI Pooling Layer**. Dự
 
 ### Huấn luyện
 
-Như đã đề cập ở trên, network đã được gom thành một thể thống nhất, việc huấn luyện sẽ trở nên dễ dàng hơn. Vì vậy, Loss function phải trở nên phức tạp hơn để bắt được mọi tình huống, từ nhiệm vụ phân loại cho đến xác định bounding box. Đồng thời Back propagation cũng cần phải được cải tiến để phù hợp với RoI Pooling Layer.
+Như đã đề cập ở trên, network đã được gom thành một thể thống nhất, việc huấn luyện sẽ trở nên dễ dàng hơn. Vì vậy, Loss function phải trở nên phức tạp hơn để đánh giá độ chính xác của hai nhiệm vụ, từ nhiệm vụ phân loại cho đến xác định bounding box. Đồng thời Back propagation cũng cần phải được cải tiến để phù hợp với RoI Pooling Layer.
 
 Trước khi tìm hiểu về Loss Function và Back propagation, chúng ta cần biết rằng Optimization function của Fast R-CNN là Stochastic Gradient Descent (SGD). Các bạn có thắc mắc rằng nếu nhiều đối tượng trong cùng một ảnh được huấn luyện thì quá trình converge sẽ lâu hơn không? Dựa trên paper, vấn đề này thực tế không xuất hiện, và Fast R-CNN train với ít lần lặp hơn so với R-CNN.
 
@@ -131,17 +131,40 @@ Trước tiên, chúng ta cần phải hiểu rằng nhiệm vụ này là một
 
 #### Back propagation
 
+Đã hiểu được RoI Pooling Layer rồi, bây giờ chúng ta cũng cần phải hiểu cách gradients từ fully connected layer được truyền qua layer này để cập nhật trọng số của các convolutional layer. Phần này tôi sẽ nói theo cách hiểu của mình dựa trên paper.
+
+Dưới đây là công thức toán học mô tả cách hoạt động của RoI Max Pooling (hiểu forward trước khi nghiên cứu backward):
+
+$$ y_{rj} = x_{i^*(r, j)} $$
+
+Với
+
+$$ i^*(r,j) = \underset{i' \in R(r, j)}{\operatorname{argmax}}x_{i'} $$
+
 <u>Ký hiệu:</u>
 - $x_i \in \mathbb{R}$: Giá trị đầu vào activation $i$ truyền vào RoI Pooling Layer
 - $y_{rj}$: Kết quả của layer $j$ từ RoI thứ $r$
 
-RoI Pooling Layer tính toán:
+Như đã nói ở trên, đối với mỗi RoI, chúng ta sẽ cần chiết xuất feature vector tương ứng. Dựa theo từng phần, ký hiệu là $ R(r, j) $, của kích thước trong RoI Max Pooling, ta cần tìm vị trí $ i∗(r, j) $ sao cho activation của vị trí này trong vùng $ R(r, j) $ là lớn nhất. Lưu ý rằng tùy theo giá trị của kích thước mà $j$ có thể thay đổi.
 
-$$ y_{rj} = x_{i^*(r, j)} $$ với $$ i^*(r,j) = \underset{i' \in R(r, j)}{\operatorname{argmax}}x_{i'} $$
+Tiếp theo đến phần backward, khi cập nhật gradient, chúng ta chỉ cần quan tâm đến các vị trí $ i = i∗(r, j) $ trong một RoI, các vị trí khác sẽ không có gradient, công thức ở dưới sẽ thể hiện rõ việc này.
 
+$$ \frac{\partial L}{\partial x_i} = \sum_{r}\sum_{j}[ i = i∗(r, j)] \frac{\partial L}{\partial y_{rj}} $$
 
-### Nguồn tham khảo
+---
 
-https://stackoverflow.com/questions/43430056/what-is-the-purpose-of-the-roi-layer-in-a-fast-r-cnn
+Vậy là chúng ta đã đi xong Fast R-CNN rồi, nếu bạn thắc mắc huấn luyện đa nhiệm vụ như thế nào, thì có thể tham khảo [link](https://github.com/hosseinshn/Basic-Multi-task-Learning/blob/master/MTL-Pytorch.ipynb) này, được viết bằng PyTorch. Trong bài viết sắp tới tôi sẽ nghiên cứu Faster R-CNN, các bạn nhớ theo dõi nhé.
 
-https://blog.acolyer.org/2017/03/21/convolution-neural-nets-part-2
+### Tài liệu
+
+1. [Paper](https://arxiv.org/pdf/1504.08083.pdf)
+
+2. [What is the purpose of the ROI layer in a Fast R-CNN?](https://stackoverflow.com/questions/43430056/what-is-the-purpose-of-the-roi-layer-in-a-fast-r-cnn)
+
+3. [Region of interest pooling explained](https://deepsense.io/region-of-interest-pooling-explained/)
+
+4. [Convolution neural nets, Part 2](https://blog.acolyer.org/2017/03/21/convolution-neural-nets-part-2)
+
+5. [Back propagation through Max Pooling layer](https://datascience.stackexchange.com/questions/11699/backprop-through-max-pooling-layers)
+
+6. [Multi-task training with PyTorch](https://github.com/hosseinshn/Basic-Multi-task-Learning/blob/master/MTL-Pytorch.ipynb)

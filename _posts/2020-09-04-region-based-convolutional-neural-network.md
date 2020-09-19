@@ -106,7 +106,7 @@ Cảm ơn các bạn đã đọc bài viết này và hãy tiếp tục nghiên 
 
 
 
-### Nguồn tham khảo
+### Tài liệu
 
 [[1] Selective Search for Object Detection](https://www.learnopencv.com/selective-search-for-object-detection-cpp-python/)
 

@@ -201,7 +201,7 @@ Vì vậy, với các dòng card yếu thì tôi nghĩ dùng Google Colab sẽ h
 
 Cảm ơn các bạn đã đọc bài viết này và hãy tiếp tục nghiên cứu nhé :D.
 
-### Nguồn tham khảo
+### Tài liệu
 - [Source code](https://github.com/tailtq/ml-learning/blob/master/handmade-products/digit-recognition/model.ipynb)
 - [Cài đặt ROCm](https://rocm-documentation.readthedocs.io/en/latest/Installation_Guide/Installation-Guide.html)
 - [Nguồn cover và bài viết hữu ích](https://towardsdatascience.com/train-neural-networks-using-amd-gpus-and-keras-37189c453878)
