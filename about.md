@@ -9,6 +9,6 @@ author: Yizi
 key: page-about
 ---
 
-Hi, I'm **Yizi Wang**, an undergraduate math student from the Chinese University of Hong Kong.  
+Hi, I'm **Yizi Wang**, an MPhil student from the Chinese University of Hong Kong.  
 
 This blog is mainly used to record my thoughts and lecture notes on mathematics, especially on geometry and topology.
