@@ -1,0 +1,7 @@
+version: "3.5"
+
+services:
+  jekyll-text-theme_dev:
+    build:
+      context: ../
+      dockerfile: Dockerfile.dev

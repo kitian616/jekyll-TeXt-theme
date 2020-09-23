@@ -2,35 +2,32 @@
  * Site Info
  */
 
-.m-page-footer {
-    @include flexbox;
-    @include align-items(center);
-    height: $footer-height;
-    margin-top: -$footer-height;
-    background-color: $main-color-3;
-    & > .main {
-        @include flexbox;
-        @include flex-direction(column);
-    }
-    p {
-        color: $text-color-3;
-    }
-    a {
-        @include link-text-colors (
-            $text-color-3,
-            $main-color-1
-        );
-    }
-    .follow-me {
-        padding: $content-gap 0 0 0;
-        .round-button {
-            box-shadow: $shadow-down;
+.footer {
+  @include flexbox();
+  @include align-items(center);
+  color: $footer-text-color;
+  background: $footer-background;
+  a {
+    @include link-colors ($footer-text-color, $main-color-1);
+  }
+  .site-info {
+    font-size: map-get($base, font-size-xs);
+    text-align: center;
+    .menu {
+      line-height: map-get($base, line-height-xs);
+      & > * {
+        &:not(:last-child) {
+          @include split-line(right, default, $footer-text-color);
+          padding-right: map-get($spacers, 1);
+          margin-right: map-get($spacers, 1);
         }
+      }
     }
-    .site-info {
-        display: table;
-        font-size: $tiny-font-size;
-        text-align: center;
-        margin: 0 auto;
-    }
+  }
+}
+.footer__author-links {
+  @include overflow(auto);
+  .author-links {
+    text-align: center;
+  }
 }
