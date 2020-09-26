@@ -1,10 +1,10 @@
 header:
-  - title: Archive
-    url: /archive.html
-  - title: About
-    url: /about.html
+- title: Welcome
+  url: /misc/welcome.html
+- title: Archive
+  url: /archive.html
 side-en:
-  - title: First Day At Work
-    children:
-      - title: Git is going to eat you and how to pretend you know Git.
-        url: 2020/09/21/git_is_going_to_eat_you.html    
+- title: First Day At Work
+  children:
+    - title: Git is going to eat you and how to pretend you know Git.
+      url: 2020/09/21/git_is_going_to_eat_you.html    

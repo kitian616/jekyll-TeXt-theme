@@ -1,6 +1,7 @@
 ---
-title: Git is going to eat you and how to pretend your know Git.
+title: How to pretend your know Git.
 layout: article
+tags: FirstDayAtWork, Git
 ---
 ## Prologue
 
