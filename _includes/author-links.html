@@ -44,6 +44,14 @@
       </li>
     {%- endif -%}
 
+    {%- if _author.bitbucket -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'Twitter' }}">
+        <a class="button button--circle twitter-button" itemprop="sameAs" href="https://bitbucket.com/{{ _author.bitbucket }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/bitbucket.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
     {%- if _author.weibo -%}
       <li title="{{ _locale_string_follow | replace: '[NAME]', 'Weibo' }}">
         <a class="button button--circle weibo-button" itemprop="sameAs" href="https://weibo.com/{{ _author.weibo }}" target="_blank">
