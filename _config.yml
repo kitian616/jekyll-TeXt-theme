@@ -37,8 +37,12 @@ author:
   type      : person # "person" (default), "organization"
   name      : Sergiy Bagdasar
   url       : 
-  avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
+  avatar    : assets/images/avatar/me_blog.png # path or url of avatar image (square)
+  bio       : >
+    Hi, and welcome to --help! This is my programming blog where I share my
+    knowledge and experience with the world. I hope you will find it useful.
+    Have a good day!
+  username  : sbagda01
   email     :
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : SergiosBagdasar # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
@@ -205,15 +209,16 @@ defaults:
       license: true
       aside:
         toc: true
-      show_edit_on_github: true
-      show_subscribe: true
+      show_edit_on_github: false
+      show_subscribe: false
       pageview: true
 
+sharing:
+  provider: custom
 
 ## => Plugins
 ##############################
 plugins:
-  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji

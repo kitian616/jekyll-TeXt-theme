@@ -34,6 +34,7 @@ layout: page
 {%- if _articles -%}
 
   <div class="layout--articles">
+    {%- include author.html -%}
 
     {%- if _type == 'grid' -%}
       {%- if page.articles.size == 'sm' -%}

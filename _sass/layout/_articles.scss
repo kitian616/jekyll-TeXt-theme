@@ -14,4 +14,33 @@
       }
     }
   }
+  .author {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    .author-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      -webkit-animation: 0.5s ease-in forwards fadein;
+      animation: 0.5s ease-in forwards fadein;
+      opacity: 1;
+    }
+
+    .author-name {
+      font-size: 1.7em;
+      margin-bottom: 2px;
+    }
+
+    .author-bio {
+      margin: 0 auto;
+      opacity: 0.9;
+      max-width: 393px;
+      line-height: 1.688;
+    }
+  }
 }

@@ -13,6 +13,18 @@ type: article
 
   <div class="article__content" itemprop="articleBody">{{ content }}</div>
 
+  <!-- Look the author details up from the site config. -->
+  {% assign author = site.data.authors[page.author] %}
+
+  <!-- Output author details if some exist. -->
+  {% if author %}
+      <span>
+          <!-- Personal Info. -->
+          Written by <a href="{{ author.web }}">{{ author.name }}</a>
+      </span>
+  {% endif %}
+
+
   {%- if _sharing -%}
     <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
   {%- endif -%}
@@ -27,3 +39,4 @@ type: article
 <script>
   {%- include scripts/article.js -%}
 </script>
+
