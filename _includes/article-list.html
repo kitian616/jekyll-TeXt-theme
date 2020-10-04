@@ -106,7 +106,9 @@
           {%- endif -%}
           <a itemprop="headline" class="item__header" href="{{ _article_url }}">{{ _article.title }}</a></div>
       </li>
-
+      {%- if include.group_by == 'year' -%}
+        {%- if forloop.last -%}</ul></section>{%- endif -%}
+      {%- endif -%}
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
         <div class="cell cell--12 cell--md-4 cell--lg-3">
