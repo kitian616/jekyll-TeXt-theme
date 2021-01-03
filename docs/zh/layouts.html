@@ -18,7 +18,7 @@
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
 
 <meta name="theme-color" content="#ffffff">
-<!-- end favicons snippet --><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><!-- start custom head snippets -->
+<!-- end favicons snippet --><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/main.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" ><!-- start custom head snippets -->
 
 <!-- end custom head snippets -->
 <script>(function() {
@@ -236,7 +236,7 @@
     var TEXT_VARIABLES = {
       version: '2.2.6',
       sources: {
-        font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
+        font_awesome: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js',
         chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
@@ -303,7 +303,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.3-layouts.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="布局"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2020-04-21T23:10:59+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="布局"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2021-01-03T23:02:04+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><pre><code class="language-mermaid">graph TB;
@@ -358,8 +358,8 @@
     </tr>
     <tr>
       <td><strong>key</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
-      <td>页面的唯一标识符，供评论系统和点击量统计使用。必须以字母（<code class="highlighter-rouge">[A-Za-z]</code>）开头，其后可以接若干字母、数字（<code class="highlighter-rouge">[0-9]</code>）、连字符（<code class="highlighter-rouge">-</code>）、下划线（<code class="highlighter-rouge">_</code>）、冒号（<code class="highlighter-rouge">:</code>）和小数点（<code class="highlighter-rouge">.</code>）。</td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
+      <td>页面的唯一标识符，供评论系统和点击量统计使用。必须以字母（<code class="language-plaintext highlighter-rouge">[A-Za-z]</code>）开头，其后可以接若干字母、数字（<code class="language-plaintext highlighter-rouge">[0-9]</code>）、连字符（<code class="language-plaintext highlighter-rouge">-</code>）、下划线（<code class="language-plaintext highlighter-rouge">_</code>）、冒号（<code class="language-plaintext highlighter-rouge">:</code>）和小数点（<code class="language-plaintext highlighter-rouge">.</code>）。</td>
       <td> </td>
     </tr>
     <tr>
@@ -370,116 +370,116 @@
     </tr>
     <tr>
       <td><strong>author</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
       <td>将在 <em>authors.yml</em> 中定义的作者作为某篇文章或页面的作者, 详情请看<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/authors">作者</a>。</td>
       <td>2.2.0</td>
     </tr>
     <tr>
       <td><strong>show_title</strong></td>
       <td>true (default), false</td>
-      <td>是否显示标题，默认显示，设置为 <code class="highlighter-rouge">false</code> 隐藏。</td>
+      <td>是否显示标题，默认显示，设置为 <code class="language-plaintext highlighter-rouge">false</code> 隐藏。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>show_edit_on_github</strong></td>
       <td>true, false (default)</td>
-      <td>是否显示“在 Github 上修改”按钮，设置为 <code class="highlighter-rouge">true</code> 显示。你需要先在 <em>_config.yml</em> 中设置 <code class="highlighter-rouge">repository</code> 和 <code class="highlighter-rouge">repository_tree</code>。</td>
+      <td>是否显示“在 Github 上修改”按钮，设置为 <code class="language-plaintext highlighter-rouge">true</code> 显示。你需要先在 <em>_config.yml</em> 中设置 <code class="language-plaintext highlighter-rouge">repository</code> 和 <code class="language-plaintext highlighter-rouge">repository_tree</code>。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>show_date</strong></td>
       <td>true (default), false</td>
-      <td>是否展示该页的发布日期，设置为 <code class="highlighter-rouge">false</code> 隐藏。</td>
+      <td>是否展示该页的发布日期，设置为 <code class="language-plaintext highlighter-rouge">false</code> 隐藏。</td>
       <td>2.2.0</td>
     </tr>
     <tr>
       <td><strong>show_tags</strong></td>
       <td>true (default), false</td>
-      <td>是否展示该页的标签，设置为 <code class="highlighter-rouge">false</code> 隐藏。</td>
+      <td>是否展示该页的标签，设置为 <code class="language-plaintext highlighter-rouge">false</code> 隐藏。</td>
       <td>2.2.0</td>
     </tr>
     <tr>
       <td><strong>full_width</strong></td>
       <td>true, false (default)</td>
-      <td>该页内容是否占据全部宽度，设置为 <code class="highlighter-rouge">true</code> 开启。</td>
+      <td>该页内容是否占据全部宽度，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>pageview</strong></td>
       <td>true, false (default)</td>
-      <td>是否开启阅读量统计，默认关闭，设置为 <code class="highlighter-rouge">true</code> 开启。</td>
+      <td>是否开启阅读量统计，默认关闭，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启。</td>
       <td>2.2.0</td>
     </tr>
     <tr>
       <td><strong>comment</strong></td>
       <td>true (default), false</td>
-      <td>是否开启评论支持，默认开启，设置为 <code class="highlighter-rouge">false</code> 关闭。</td>
+      <td>是否开启评论支持，默认开启，设置为 <code class="language-plaintext highlighter-rouge">false</code> 关闭。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>mathjax</strong></td>
       <td>true, false</td>
-      <td>是否开启 Mathjax 公式支持，设置为 <code class="highlighter-rouge">true</code> 开启。</td>
+      <td>是否开启 Mathjax 公式支持，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>mathjax_autoNumber</strong></td>
       <td>true, false</td>
-      <td>该页的 Mathjax 公式是否自动编号，设置为 <code class="highlighter-rouge">true</code> 开启。</td>
+      <td>该页的 Mathjax 公式是否自动编号，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>mermaid</strong></td>
       <td>true, false</td>
-      <td>是否开启 Mermaid 流程图支持，设置为 <code class="highlighter-rouge">true</code> 开启。</td>
+      <td>是否开启 Mermaid 流程图支持，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>chart</strong></td>
       <td>true, false</td>
-      <td>是否开启 Chart 图表支持，设置为 <code class="highlighter-rouge">true</code> 开启。</td>
+      <td>是否开启 Chart 图表支持，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>cover</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
       <td>封面图片的 URL。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>header</strong></td>
-      <td>false, <code class="highlighter-rouge">!!map</code></td>
-      <td>设置为 <code class="highlighter-rouge">false</code> 隐藏标题栏。</td>
+      <td>false, <code class="language-plaintext highlighter-rouge">!!map</code></td>
+      <td>设置为 <code class="language-plaintext highlighter-rouge">false</code> 隐藏标题栏。</td>
       <td>2.2.0</td>
     </tr>
     <tr>
       <td><strong>article_header</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
       <td> </td>
       <td>2.2.0</td>
     </tr>
     <tr>
       <td><strong>aside</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>sidebar</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>footer</strong></td>
       <td>false</td>
-      <td>设置为 <code class="highlighter-rouge">false</code> 隐藏底部栏。</td>
+      <td>设置为 <code class="language-plaintext highlighter-rouge">false</code> 隐藏底部栏。</td>
       <td>2.2.3</td>
     </tr>
     <tr>
       <td><strong>lightbox</strong></td>
       <td>true, false</td>
-      <td>该页的大图是否能点击预览，设置为 <code class="highlighter-rouge">true</code> 开启，你可以通过设置 <code class="highlighter-rouge">lightbox-ignore</code> 类名来忽略特定的图片元素。</td>
+      <td>该页的大图是否能点击预览，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启，你可以通过设置 <code class="language-plaintext highlighter-rouge">lightbox-ignore</code> 类名来忽略特定的图片元素。</td>
       <td>2.2.4</td>
     </tr>
   </tbody>
@@ -499,11 +499,11 @@
     <tr>
       <td><strong>theme</strong></td>
       <td>light, dark</td>
-      <td>当 type 为 <code class="highlighter-rouge">translucent</code> 时有效。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">translucent</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>background</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
       <td>当指定了 theme 值时有效。</td>
     </tr>
   </tbody>
@@ -537,22 +537,22 @@
     </tr>
     <tr>
       <td><strong>background_color</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
-      <td>当 type 为 <code class="highlighter-rouge">overlay</code> 时有效。当设置的背景色较深时，你需要设置 <code class="highlighter-rouge">theme</code> 为 dark。</td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">overlay</code> 时有效。当设置的背景色较深时，你需要设置 <code class="language-plaintext highlighter-rouge">theme</code> 为 dark。</td>
     </tr>
     <tr>
       <td><strong>background_image</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
-      <td>当 type 为 <code class="highlighter-rouge">overlay</code> 时有效，设置为 <code class="highlighter-rouge">false</code> 可覆盖 <code class="highlighter-rouge">cover</code> 禁止背景图片。</td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">overlay</code> 时有效，设置为 <code class="language-plaintext highlighter-rouge">false</code> 可覆盖 <code class="language-plaintext highlighter-rouge">cover</code> 禁止背景图片。</td>
     </tr>
     <tr>
       <td><strong>image</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
-      <td>当 type 为 <code class="highlighter-rouge">cover</code> 时有效。</td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">cover</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>actions</strong></td>
-      <td><code class="highlighter-rouge">!!seq</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!seq</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -571,13 +571,13 @@
   <tbody>
     <tr>
       <td><strong>gradient</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>src</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
-      <td>默认为 <code class="highlighter-rouge">cover</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
+      <td>默认为 <code class="language-plaintext highlighter-rouge">cover</code></td>
     </tr>
   </tbody>
 </table>
@@ -595,7 +595,7 @@
   <tbody>
     <tr>
       <td><strong>src</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -615,7 +615,7 @@
     <tr>
       <td><strong>toc</strong></td>
       <td>false (default), true</td>
-      <td>设置为 <code class="highlighter-rouge">true</code> 时展示右侧边栏目录。</td>
+      <td>设置为 <code class="language-plaintext highlighter-rouge">true</code> 时展示右侧边栏目录。</td>
     </tr>
   </tbody>
 </table>
@@ -633,7 +633,7 @@
   <tbody>
     <tr>
       <td><strong>nav</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -655,32 +655,32 @@
   <tbody>
     <tr>
       <td><strong>modify_date</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
-      <td>该文章的最后修改时间, 其格式为 <code class="highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code> 和 <code class="highlighter-rouge">date</code> 的格式相同</td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
+      <td>该文章的最后修改时间, 其格式为 <code class="language-plaintext highlighter-rouge">YYYY-MM-DD HH:MM:SS +/-TTTT</code> 和 <code class="language-plaintext highlighter-rouge">date</code> 的格式相同</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>sharing</strong></td>
       <td>true, false (default)</td>
-      <td>是否开启分享，设置为 <code class="highlighter-rouge">true</code> 开启。</td>
+      <td>是否开启分享，设置为 <code class="language-plaintext highlighter-rouge">true</code> 开启。</td>
       <td>2.2.2</td>
     </tr>
     <tr>
       <td><strong>show_author_profile</strong></td>
       <td>true, false (default)</td>
-      <td>是否在文章开头显示作者信息卡片，设置为 <code class="highlighter-rouge">true</code> 显示。</td>
+      <td>是否在文章开头显示作者信息卡片，设置为 <code class="language-plaintext highlighter-rouge">true</code> 显示。</td>
       <td> </td>
     </tr>
     <tr>
       <td><strong>show_subscribe</strong></td>
       <td>true, false (default)</td>
-      <td>是否在文章末尾显示订阅信息，设置为 <code class="highlighter-rouge">true</code> 显示。</td>
+      <td>是否在文章末尾显示订阅信息，设置为 <code class="language-plaintext highlighter-rouge">true</code> 显示。</td>
       <td>latest</td>
     </tr>
     <tr>
       <td><strong>license</strong></td>
       <td>true, false (default), CC-BY-4.0, CC-BY-SA-4.0, CC-BY-NC-4.0, CC-BY-ND-4.0</td>
-      <td>该文章的许可协议。设置为 <code class="highlighter-rouge">true</code> 使用在 <em>_config.yml</em> 中设置的 <code class="highlighter-rouge">license</code> 值，设置为 <code class="highlighter-rouge">false</code> 不使用许可协议。</td>
+      <td>该文章的许可协议。设置为 <code class="language-plaintext highlighter-rouge">true</code> 使用在 <em>_config.yml</em> 中设置的 <code class="language-plaintext highlighter-rouge">license</code> 值，设置为 <code class="language-plaintext highlighter-rouge">false</code> 不使用许可协议。</td>
       <td> </td>
     </tr>
   </tbody>
@@ -701,7 +701,7 @@
   <tbody>
     <tr>
       <td><strong>articles</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -720,7 +720,7 @@
   <tbody>
     <tr>
       <td><strong>data_source</strong></td>
-      <td><code class="highlighter-rouge">!!str</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!str</code></td>
       <td>如果你将将集合名设置为该项的值，该页面将会展示这个集合下的文章列表。你可以在 <a href="https://jekyllrb.com/docs/collections/">Collections</a> 找到更多关于集合的信息。</td>
     </tr>
     <tr>
@@ -731,42 +731,42 @@
     <tr>
       <td><strong>size</strong></td>
       <td>md, sm</td>
-      <td>当 type 为 <code class="highlighter-rouge">grid</code> 时有效。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">grid</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>article_type</strong></td>
       <td>BlogPosting</td>
-      <td>当 type 为 <code class="highlighter-rouge">normal</code> 时有效。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">normal</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>show_cover</strong></td>
       <td>true (default), false</td>
-      <td>当 type 为 <code class="highlighter-rouge">normal</code> 时有效。 在设置改参数为 <code class="highlighter-rouge">true</code> 前，你需要给集合里的每篇文章设置封面, 参考 <a href="#page-layout">Page 布局</a>的 <code class="highlighter-rouge">cover</code> 配置项。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">normal</code> 时有效。 在设置改参数为 <code class="language-plaintext highlighter-rouge">true</code> 前，你需要给集合里的每篇文章设置封面, 参考 <a href="#page-layout">Page 布局</a>的 <code class="language-plaintext highlighter-rouge">cover</code> 配置项。</td>
     </tr>
     <tr>
       <td><strong>cover_size</strong></td>
       <td>lg, md, sm</td>
-      <td>当 type 为 <code class="highlighter-rouge">normal</code> 时有效。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">normal</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>show_excerpt</strong></td>
       <td>true, false (default)</td>
-      <td>当 type 为 <code class="highlighter-rouge">normal</code> 时有效， 参考下面 <a href="#excerpt_type">excerpt_type</a> 章节。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">normal</code> 时有效， 参考下面 <a href="#excerpt_type">excerpt_type</a> 章节。</td>
     </tr>
     <tr>
       <td><strong>excerpt_type</strong></td>
       <td>text, html</td>
-      <td>当 type 为 <code class="highlighter-rouge">normal</code> 时有效。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">normal</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>show_readmore</strong></td>
       <td>true, false (default)</td>
-      <td>当 type 为 <code class="highlighter-rouge">normal</code> 时有效。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">normal</code> 时有效。</td>
     </tr>
     <tr>
       <td><strong>show_info</strong></td>
       <td>true, false (default)</td>
-      <td>当 type 为 <code class="highlighter-rouge">normal</code> 或 <code class="highlighter-rouge">brief</code> 时有效。</td>
+      <td>当 type 为 <code class="language-plaintext highlighter-rouge">normal</code> 或 <code class="language-plaintext highlighter-rouge">brief</code> 时有效。</td>
     </tr>
   </tbody>
 </table>
@@ -789,12 +789,12 @@
     </tr>
     <tr>
       <td><strong>html</strong></td>
-      <td>此时摘要为 HTML 文档，与文章内容一致，并且 <strong>默认展示整篇文章的内容</strong>。若想控制摘要内容，需要在文章中想要显示到的地方加上 <code class="highlighter-rouge">&lt;!--more--&gt;</code>，详情请戳 <a href="https://jekyllrb.com/docs/posts/#post-excerpts">这里</a>。</td>
+      <td>此时摘要为 HTML 文档，与文章内容一致，并且 <strong>默认展示整篇文章的内容</strong>。若想控制摘要内容，需要在文章中想要显示到的地方加上 <code class="language-plaintext highlighter-rouge">&lt;!--more--&gt;</code>，详情请戳 <a href="https://jekyllrb.com/docs/posts/#post-excerpts">这里</a>。</td>
     </tr>
   </tbody>
 </table>
 
-<p>对于 Home 页，你可以像这样把 <code class="highlighter-rouge">excerpt_type</code> 设置为 <code class="highlighter-rouge">HTML</code>：</p>
+<p>对于 Home 页，你可以像这样把 <code class="language-plaintext highlighter-rouge">excerpt_type</code> 设置为 <code class="language-plaintext highlighter-rouge">HTML</code>：</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">home</span>
 <span class="na">articles</span><span class="pi">:</span>
@@ -824,7 +824,7 @@
   <tbody>
     <tr>
       <td><strong>data</strong></td>
-      <td><code class="highlighter-rouge">!!map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!!map</code></td>
       <td> </td>
     </tr>
   </tbody>
@@ -833,7 +833,7 @@
 <h2 id="404-布局">404 布局</h2>
 
 <p>继承于 Page 布局。</p>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-04-21T23:10:59+08:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-01-03T23:02:04+08:00"><!-- start custom article footer snippet -->
 
 <div class="article__content my-3">
       <hr />
@@ -972,7 +972,7 @@
 </div>
 </div>
     </div><div class="site-info mt-2">
-      <div>© TeXt Theme 2020,
+      <div>© TeXt Theme 2021,
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>

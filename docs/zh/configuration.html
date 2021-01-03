@@ -18,7 +18,7 @@
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
 
 <meta name="theme-color" content="#ffffff">
-<!-- end favicons snippet --><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" ><!-- start custom head snippets -->
+<!-- end favicons snippet --><link rel="stylesheet" href="/jekyll-TeXt-theme/assets/css/main.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" ><!-- start custom head snippets -->
 
 <!-- end custom head snippets -->
 <script>(function() {
@@ -236,7 +236,7 @@
     var TEXT_VARIABLES = {
       version: '2.2.6',
       sources: {
-        font_awesome: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
+        font_awesome: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css',
         jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js',
         leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js',
         chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js',
@@ -303,7 +303,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.1-configuration.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2020-04-21T23:10:59+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2021-01-03T23:02:04+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><p>Jekyll 允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的  <em>_config.yml</em> 文件，也可以作为命令行的标记来配置。</p>
@@ -328,9 +328,9 @@
 <table>
   <thead>
     <tr>
-      <th><code class="highlighter-rouge">default</code></th>
-      <th><code class="highlighter-rouge">dark</code></th>
-      <th><code class="highlighter-rouge">forest</code></th>
+      <th><code class="language-plaintext highlighter-rouge">default</code></th>
+      <th><code class="language-plaintext highlighter-rouge">dark</code></th>
+      <th><code class="language-plaintext highlighter-rouge">forest</code></th>
     </tr>
   </thead>
   <tbody>
@@ -345,9 +345,9 @@
 <table>
   <thead>
     <tr>
-      <th><code class="highlighter-rouge">ocean</code></th>
-      <th><code class="highlighter-rouge">chocolate</code></th>
-      <th><code class="highlighter-rouge">orange</code></th>
+      <th><code class="language-plaintext highlighter-rouge">ocean</code></th>
+      <th><code class="language-plaintext highlighter-rouge">chocolate</code></th>
+      <th><code class="language-plaintext highlighter-rouge">orange</code></th>
     </tr>
   </thead>
   <tbody>
@@ -369,11 +369,11 @@
 <table>
   <thead>
     <tr>
-      <th><code class="highlighter-rouge">tomorrow</code></th>
-      <th><code class="highlighter-rouge">tomorrow-night</code></th>
-      <th><code class="highlighter-rouge">tomorrow-night-eighties</code></th>
-      <th><code class="highlighter-rouge">tomorrow-night-blue</code></th>
-      <th><code class="highlighter-rouge">tomorrow-night-bright</code></th>
+      <th><code class="language-plaintext highlighter-rouge">tomorrow</code></th>
+      <th><code class="language-plaintext highlighter-rouge">tomorrow-night</code></th>
+      <th><code class="language-plaintext highlighter-rouge">tomorrow-night-eighties</code></th>
+      <th><code class="language-plaintext highlighter-rouge">tomorrow-night-blue</code></th>
+      <th><code class="language-plaintext highlighter-rouge">tomorrow-night-bright</code></th>
     </tr>
   </thead>
   <tbody>
@@ -387,7 +387,7 @@
   </tbody>
 </table>
 
-<p>每个皮肤有一个默认的代码高亮主题，当然你可以通过 <code class="highlighter-rouge">highlight_theme</code> 配置项来指定其他主题。</p>
+<p>每个皮肤有一个默认的代码高亮主题，当然你可以通过 <code class="language-plaintext highlighter-rouge">highlight_theme</code> 配置项来指定其他主题。</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">highlight_theme</span><span class="pi">:</span> <span class="s">default</span> <span class="c1"># "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"</span>
 </code></pre></div></div>
@@ -396,13 +396,13 @@
 
 <p>网站的协议和域名。</p>
 
-<p>如果你的网站是搭建在 Github Pages 上的，这个只会被设置为 GitHub Pages 域名（CNAME 或个人域名）<sup id="fnref:gitHub_metadata"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>. 举个例子, https://kitian616.github.io 或者 https://tianqi.name 如果设置了 CNAME。</p>
+<p>如果你的网站是搭建在 Github Pages 上的，这个只会被设置为 GitHub Pages 域名（CNAME 或个人域名）<sup id="fnref:gitHub_metadata" role="doc-noteref"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>. 举个例子, https://kitian616.github.io 或者 https://tianqi.name 如果设置了 CNAME。</p>
 
-<p class="warning">在 3.3 及更高版本的 Jekyll 中运行 <code class="highlighter-rouge">jekyll serve</code> 命令会在开发模式时将其设置为 url: http://localhost:4000，你可以通过 <code class="highlighter-rouge">JEKYLL_ENV=production</code> 设置生产环境。</p>
+<p class="warning">在 3.3 及更高版本的 Jekyll 中运行 <code class="language-plaintext highlighter-rouge">jekyll serve</code> 命令会在开发模式时将其设置为 url: http://localhost:4000，你可以通过 <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production</code> 设置生产环境。</p>
 
 <h3 id="base-url">Base URL</h3>
 
-<p>网站的根路径，不包含域名，其默认值为“/”。如果你的网站是搭建在 Github Pages 上的，那么这个值会默认设置为网站对应的项目名<sup id="fnref:gitHub_metadata:1"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>。</p>
+<p>网站的根路径，不包含域名，其默认值为“/”。如果你的网站是搭建在 Github Pages 上的，那么这个值会默认设置为网站对应的项目名<sup id="fnref:gitHub_metadata:1" role="doc-noteref"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>。</p>
 
 <h3 id="网站标题">网站标题</h3>
 
@@ -423,14 +423,14 @@
 
 <h3 id="语言">语言</h3>
 
-<p>网站的语言，当然你可以在头信息<sup id="fnref:font_matter"><a href="#fn:font_matter" class="footnote">2</a></sup>里指定特定的文章或页面的语言，你可以在<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/i18n">国际化</a>找到更多信息。</p>
+<p>网站的语言，当然你可以在头信息<sup id="fnref:font_matter" role="doc-noteref"><a href="#fn:font_matter" class="footnote">2</a></sup>里指定特定的文章或页面的语言，你可以在<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/i18n">国际化</a>找到更多信息。</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">lang</span><span class="pi">:</span> <span class="s">en</span>
 </code></pre></div></div>
 
 <h3 id="时区">时区</h3>
 
-<p>设置时区，这个设置作用于 TZ 变量， Ruby 用它来处理日期和时间。使用 IANA Time Zone Database 标准，比如 America/New_York 。其默认值为操作系统的时区。详情请戳 <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">这里</a>。<sup id="fnref:jekyll_global_configuration"><a href="#fn:jekyll_global_configuration" class="footnote">3</a></sup></p>
+<p>设置时区，这个设置作用于 TZ 变量， Ruby 用它来处理日期和时间。使用 IANA Time Zone Database 标准，比如 America/New_York 。其默认值为操作系统的时区。详情请戳 <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">这里</a>。<sup id="fnref:jekyll_global_configuration" role="doc-noteref"><a href="#fn:jekyll_global_configuration" class="footnote">3</a></sup></p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">timezone</span><span class="pi">:</span> <span class="s">Asia/Shanghai</span>
 </code></pre></div></div>
@@ -467,7 +467,7 @@
 
 <p><a href="https://github.com/jekyll/github-metadata">GitHub Metadata</a> 插件的设置, 详情请戳 <a href="https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration">这里</a>。</p>
 
-<p>这个设置告诉 jekyll-github-metadata 插件应该从哪个项目中获取元数据，其格式为 <code class="highlighter-rouge">项目所有者 ID/项目名称</code>，例如：kitian616/jekyll-TeXt-theme。</p>
+<p>这个设置告诉 jekyll-github-metadata 插件应该从哪个项目中获取元数据，其格式为 <code class="language-plaintext highlighter-rouge">项目所有者 ID/项目名称</code>，例如：kitian616/jekyll-TeXt-theme。</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">repository</span><span class="pi">:</span> <span class="s">user_name/repo_name</span>
 </code></pre></div></div>
@@ -476,7 +476,7 @@
 
 <h3 id="摘要">摘要</h3>
 
-<p>该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 <em>_config.yml</em> 配置项 <code class="highlighter-rouge">excerpt_type</code> 的值为 <code class="highlighter-rouge">text</code> 时是 TEXT 模式，为 <code class="highlighter-rouge">html</code> 时是 HTML 模式，<strong>默认为 TEXT 模式</strong>。</p>
+<p>该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 <em>_config.yml</em> 配置项 <code class="language-plaintext highlighter-rouge">excerpt_type</code> 的值为 <code class="language-plaintext highlighter-rouge">text</code> 时是 TEXT 模式，为 <code class="language-plaintext highlighter-rouge">html</code> 时是 HTML 模式，<strong>默认为 TEXT 模式</strong>。</p>
 
 <table>
   <thead>
@@ -492,7 +492,7 @@
     </tr>
     <tr>
       <td><strong>html</strong></td>
-      <td>此时摘要为 HTML 文档，与文章内容一致，并且 <strong>默认展示整篇文章的内容</strong>。若想控制摘要内容，需要在文章中想要显示到的地方加上 <code class="highlighter-rouge">&lt;!--more--&gt;</code>，详情请戳 <a href="https://jekyllrb.com/docs/posts/#post-excerpts">这里</a>。</td>
+      <td>此时摘要为 HTML 文档，与文章内容一致，并且 <strong>默认展示整篇文章的内容</strong>。若想控制摘要内容，需要在文章中想要显示到的地方加上 <code class="language-plaintext highlighter-rouge">&lt;!--more--&gt;</code>，详情请戳 <a href="https://jekyllrb.com/docs/posts/#post-excerpts">这里</a>。</td>
     </tr>
   </tbody>
 </table>
@@ -563,7 +563,7 @@
 <span class="na">chart</span><span class="pi">:</span> <span class="no">true</span>
 </code></pre></div></div>
 
-<p>当然你也可以为某一篇文章或页面通过头信息<sup id="fnref:font_matter:1"><a href="#fn:font_matter" class="footnote">2</a></sup>来做单独的指定。</p>
+<p>当然你也可以为某一篇文章或页面通过头信息<sup id="fnref:font_matter:1" role="doc-noteref"><a href="#fn:font_matter" class="footnote">2</a></sup>来做单独的指定。</p>
 
 <p>在 <a href="/">撰写博客</a> 篇中有更详细的使用说明。</p>
 
@@ -585,7 +585,7 @@
 
 <h2 id="cdn-源">CDN 源</h2>
 
-<p>TeXt 使用 CDN<sup id="fnref:cdn"><a href="#fn:cdn" class="footnote">4</a></sup> 来加快载入速度，你可以选择 <a href="http://www.bootcdn.cn/">BootCDN</a>（默认项）或者<a href="https://unpkg.com/">unpkg</a>作为网站的 CDN 源。它们都是开源而免费的。</p>
+<p>TeXt 使用 CDN<sup id="fnref:cdn" role="doc-noteref"><a href="#fn:cdn" class="footnote">4</a></sup> 来加快载入速度，你可以选择 <a href="http://www.bootcdn.cn/">BootCDN</a>（默认项）或者<a href="https://unpkg.com/">unpkg</a>作为网站的 CDN 源。它们都是开源而免费的。</p>
 
 <p>国内用户请优先使用 BootCDN。</p>
 
@@ -635,7 +635,7 @@
     <span class="na">id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-addthis-pubid"</span>
 </code></pre></div></div>
 
-<p class="warning">你需要在页面的头信息里设置 <code class="highlighter-rouge">sharing</code> 属性为 <code class="highlighter-rouge">true</code> 来开启该页的评论，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#article-%E5%B8%83%E5%B1%80">这里</a>。</p>
+<p class="warning">你需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">sharing</code> 属性为 <code class="language-plaintext highlighter-rouge">true</code> 来开启该页的评论，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#article-%E5%B8%83%E5%B1%80">这里</a>。</p>
 
 <h2 id="评论">评论</h2>
 
@@ -710,7 +710,7 @@
     <span class="na">app_key </span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-key"</span>
 </code></pre></div></div>
 
-<p class="warning">对于上面所有的评论系统, 你都需要在页面的头信息里设置 <code class="highlighter-rouge">key</code> 属性来开启该页的评论，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
+<p class="warning">对于上面所有的评论系统, 你都需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">key</code> 属性来开启该页的评论，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
 
 <h2 id="文章点击量">文章点击量</h2>
 
@@ -765,7 +765,7 @@
     <span class="na">app_class </span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-class"</span>
 </code></pre></div></div>
 
-<p class="warning">对于上面所有的点击量统计, 你都需要在页面的头信息里设置 <code class="highlighter-rouge">key</code> 属性来开启该页的统计功能，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
+<p class="warning">对于上面所有的点击量统计, 你都需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">key</code> 属性来开启该页的统计功能，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
 
 <h2 id="站点统计">站点统计</h2>
 
@@ -790,7 +790,7 @@
 
 <h3 id="google-analytics">Google Analytics</h3>
 
-<p>你需要将 <code class="highlighter-rouge">tracking_id</code> 设置成你的 Google Analytics 账户中针对该网站的跟踪代码来启动这项功能。你也可以通过设置 <code class="highlighter-rouge">anonymize_ip</code> 为 <code class="highlighter-rouge">true</code> 将所有事件的 IP 地址匿名化。</p>
+<p>你需要将 <code class="language-plaintext highlighter-rouge">tracking_id</code> 设置成你的 Google Analytics 账户中针对该网站的跟踪代码来启动这项功能。你也可以通过设置 <code class="language-plaintext highlighter-rouge">anonymize_ip</code> 为 <code class="language-plaintext highlighter-rouge">true</code> 将所有事件的 IP 地址匿名化。</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">analytics</span><span class="pi">:</span>
   <span class="na">provider</span><span class="pi">:</span> <span class="s">google</span>
@@ -798,23 +798,23 @@
     <span class="na">tracking_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-google-analytics-tracking-code"</span>
     <span class="na">anonymize_ip</span><span class="pi">:</span> <span class="no">true</span>
 </code></pre></div></div>
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:gitHub_metadata">
-      <p><a href="https://github.com/jekyll/github-metadata#what-it-does">GitHub Metadata, a.k.a. site.github</a> <a href="#fnref:gitHub_metadata" class="reversefootnote">&#8617;</a> <a href="#fnref:gitHub_metadata:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    <li id="fn:gitHub_metadata" role="doc-endnote">
+      <p><a href="https://github.com/jekyll/github-metadata#what-it-does">GitHub Metadata, a.k.a. site.github</a> <a href="#fnref:gitHub_metadata" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:gitHub_metadata:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:font_matter">
-      <p><a href="https://jekyllrb.com/docs/frontmatter/">Front Matter</a> <a href="#fnref:font_matter" class="reversefootnote">&#8617;</a> <a href="#fnref:font_matter:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    <li id="fn:font_matter" role="doc-endnote">
+      <p><a href="https://jekyllrb.com/docs/frontmatter/">Front Matter</a> <a href="#fnref:font_matter" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:font_matter:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:jekyll_global_configuration">
-      <p><a href="https://jekyllrb.com/docs/configuration/#global-configuration">Configuration#Global Configuration</a> <a href="#fnref:jekyll_global_configuration" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:jekyll_global_configuration" role="doc-endnote">
+      <p><a href="https://jekyllrb.com/docs/configuration/#global-configuration">Configuration#Global Configuration</a> <a href="#fnref:jekyll_global_configuration" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:cdn">
-      <p><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content delivery network</a> <a href="#fnref:cdn" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:cdn" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content delivery network</a> <a href="#fnref:cdn" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-04-21T23:10:59+08:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-01-03T23:02:04+08:00"><!-- start custom article footer snippet -->
 
 <div class="article__content my-3">
       <hr />
@@ -953,7 +953,7 @@
 </div>
 </div>
     </div><div class="site-info mt-2">
-      <div>© TeXt Theme 2020,
+      <div>© TeXt Theme 2021,
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
