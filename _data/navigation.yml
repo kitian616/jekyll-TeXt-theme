@@ -24,6 +24,9 @@ header:
       # @end locale config
     url: /archive.html
 
+  - title:      GitHub
+    url:        https://github.com/phelps-matthew
+
   - titles:
       # @start locale config
       en      : &EN       About
