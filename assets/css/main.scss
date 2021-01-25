@@ -11,6 +11,8 @@
     // "skins/forest",
     // "skins/ocean",
     // "skins/orange",
+    // "skins/gruvbox",
+
 
     "skins/highlight/{{ site.highlight_theme | default: site.data.variables.default.highlight_theme }}",
     // "skins/highlight/tomorrow",

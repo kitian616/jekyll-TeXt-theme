@@ -1,0 +1,74 @@
+///
+// Skin: Gruvbox
+// Author: Matthew Phelps
+// Email: matthew@conformal.ai
+///
+
+// main colors
+$main-color-1:     #fe8019; // link highlight color
+$text-color-1:     rgba(#ebdbb2, .8); // some tag text under Archive
+
+$main-color-2:     rgba(#cc241d, 0.7); // active tag under Archive (background)
+$text-color-2:     rgba(#fbf1c7, .9); // active tag text under Archive
+
+$main-color-3:     #1d2021; // header bar, tags, and footer
+$text-color-3:     rgba(#fbf1c7, .8); // TEXT header bar, tags, footer
+
+$main-color-theme-light: rgba(#1d2021, .8); // search button
+$main-color-theme-dark:  rgba(#fbf1c7, .8); // search button background
+
+// page background
+$background-color: #282828;
+
+// text colors
+$text-color-theme-light-d: #000;
+$text-color-theme-light:   #222;
+$text-color-theme-light-l: #888;
+
+$text-color-theme-dark-d:  rgba(#fbf1c7, .9); // d3869b article titles
+$text-color-theme-dark:    rgba(#fbf1c7, .8); // body text
+$text-color-theme-dark-l:  rgba(#fbf1c7, .5); // dates and small text at footer
+
+$text-color-d:     $text-color-theme-dark-d;
+$text-color:       $text-color-theme-dark;
+$text-color-l:     $text-color-theme-dark-l;
+
+$text-background-color: rgba(#fabd2f, .05); // yellow
+
+// header and footer colors
+$header-text-color: $text-color-3;
+$header-background: $main-color-3;
+
+$footer-text-color: $text-color-3;
+$footer-background: $main-color-3;
+
+// border and shadow colors
+$border-color:     mix(#fff, $background-color, 20%);
+$border-color-l:   mix(#fff, $background-color, 10%);
+$decorate-color:   rgba(#fff, .1);
+$mask-color:       rgba(#000, .9);
+$select-color:     rgba($main-color-1, .5);
+
+// function colors
+$green:           #5baa34;
+$blue:            #1c7cd4;
+$yellow:          #c9771f;
+$red:             #da3d45;
+$text-color-function: rgba(#fff, .8);
+
+// logo colors
+$mail-color:       #0072c5;
+$facebook-color:   #4267b2;
+$twitter-color:    #1da1f2;
+$weibo-color:      #e6162d;
+$google-plus-color:#ea4335;
+$telegram-color:   #32afed;
+$medium-color:     #000;
+$zhihu-color:      #0084ff;
+$douban-color:     #42bd56;
+$linkedin-color:   #1074af;
+$github-color:     #000;
+$npm-color:        #fff;
+
+// highlight colors
+@import "skins/highlight/tomorrow-night-eighties";
