@@ -23,52 +23,43 @@ titles:
   fr-FR   : *FR
   fr-LU   : *FR
   # @end locale config
+aside:
+  toc: true
 key: page-about
 ---
+<style>  
+    .gfg { 
+        width:auto; 
+        padding:00px; 
+    } 
+    img { 
+        width: 30%; 
+        height: 30%; 
+        object-fit: contain; 
+	border-radius: 50%;
+    } 
+</style> 
+<div class = "gfg"> 
+        <p id="my-image"><img src="/matthew_hs_square2.jpg"> 
+    </p> 
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
+</div>
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+Hi there, I'm Matthew. Welcome to Conformal.ai. 
 
-```javascript
-(() => console.log('Hello, World!'))();
-```
+### What does conformal mean?
+A conformal transformation is a mathematical transformation that deals with scaling the properties of space. Roughly speaking, they are special scale transformations that stretch, bend, and compactify space.
 
-## Features
+### What is Conformal.ai?
+A personal site hosting content that aims to cover information of many scales – tech, data, math, physics, and the future.
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors
-- Additional styles (alert, tag, image, icon, button, grid, etc)
-- Extensions (audios, videos, slides, demos)
-- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
-- Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
-- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+### Tell me more about this "Matthew" human...
 
-## Skins
+#### Background
+After finishing [my PhD](https://github.com/phelps-matthew/Cosmological-Perturbations) in gravitation and cosmology, I moved deeper into the world of machine learning, with a special focus on improving the flow of data and algorithms (i.e. ML ops and data engineering). I am hopeful that the things I work on will have a positive influence on the evolution of humanity.
 
-TeXt has 6 built-in skins, you can also set up your own skin.
-
-| `default` | `dark` | `forest` |
-| --- |  --- | --- |
-| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
-
-| `ocean` | `chocolate` | `orange` |
-| --- |  --- | --- |
-| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
-
-### Highlight Theme
-
-TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
-
-| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
-| --- |  --- | --- | --- |  --- |
-| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
+#### Papers
+- [Three-dimensional and four-dimensional scalar, vector, tensor cosmological ﬂuctuations and the cosmological decomposition theorem](https://arxiv.org/abs/1912.10448) 
+- [Cosmological perturbations in conformal gravity II](https://arxiv.org/abs/1805.06807)
+- [Tunable transient decay times in nonlinear systems: Application to magnetic precession
+](https://arxiv.org/abs/1412.8224)
