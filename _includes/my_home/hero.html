@@ -1,0 +1,19 @@
+<style>
+.hero{
+    background-image: linear-gradient(135deg, rgba(30, 50, 150, .4), rgba(100, 0, 230, .2)), url("{{ site.author.cover }}");
+    height: 440px;
+}
+.hero__content{
+    height: auto;
+    width: auto;
+}
+</style>
+
+<div class="hero">
+  <div class="hero__content">
+    <h3 class="author-cover-title" style="color:#eeaa22; font-family:cursive; font-size:50px">{{ site.author.name }}</h3>
+    <p class="overlay__excerpt" style="color:#00ff7f; font-family:italic;">{{ site.author.bio }}</p>
+  </div>
+</div>
+
+

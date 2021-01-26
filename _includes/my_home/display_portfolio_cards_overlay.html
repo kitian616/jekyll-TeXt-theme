@@ -1,0 +1,32 @@
+<!-- Spacing topics-->
+<style>
+a { 
+    text-align: center;
+}
+
+.topics_card{
+    height: 4cm ; 
+    width: 20% ;
+    padding: 3px;
+}
+
+</style>
+
+
+{% assign topics = site.portfolio | sort: "display_order"%}
+
+{% for t in topics %}
+<div class="topics_card">
+  <div class="card__image">
+      <img class="image" src="{{ t.picture }}" />
+      <div class="overlay">
+          <a href="{{ t.url }}"><p align=center>{{ t.title }}</p></a>
+      </div>
+  </div>
+</div>  
+{% endfor %}
+
+
+
+
+

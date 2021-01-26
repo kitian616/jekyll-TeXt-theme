@@ -1,0 +1,902 @@
+,name,metadata,content,post
+0,2011-06-22-move-election.md,"{'layout': 'article', 'title': 'Elección de la jugada', 'show_title': True, 'tags': ['Chess']}","Ahora hablaré un poco sobre la elección de la jugada, con temas como las jugadas candidatas, momentos críticos, jugadas "" en cartera"",jugadas multiusos y profilaxis.
+
+Este es un tema bastante amplio por lo que no nos pararemos en profundidad a detallar todos estos conceptos, sólo a explicar en qué casos son útiles y cómo podemos estar seguros de una elección de jugada.
+
+Empezaré hablando sobre el árbol de variantes. Muchos programas de análisis y entrenadores usan un árbol de variantes, en los que van eligiendo sus jugadas y hacen análisis para determinar que posición es la que más interesa. Esto a práctica humana resulta bastante difícil de dominar, pues debemos tener memoria para memorizar todas las posiciones resultantes y jugadas, procedimiento y objetividad. Algo que puede ayudar mucho es el haber visto partidas antes con posiciones similares, porque sabemos los planes que hay que hacer y lo tenemos más claro.
+
+ Aún con todo, siempre pueden sorprendernos con una jugada diferente y tendremos que volver a empezar, o haber deseado escoger otra continuación. Aconsejo también seguir las variantes forzadas, es decir, si ves que una continuación para conseguir ventaja es más forzada que otra, guíate por esta continuación, porque vas a evitarte disgustos.
+
+Por último, están las jugadas como las profilácticas, jugadas en cartera, amenazas , y las multiusos. Es importante manejar siempre este tipo de jugadas, en algunas posiciones es posible que te quedes sin gasolina, es decir, sin un plan claro que hacer, en cuyo caso tienes que ver que haciendo jugadas normales vas a llegar a igualdad o a algo poco claro que no te gusta.  En ese caso hay que considerar :
+
+1 Jugadas profilácticas: Son aquellas que evitan los planes del contrario, es decir, si no tienes nada mejor que hacer, por lo menos haz que tu contrario lo pase mal. Un ejemplo de este tipo de jugadas es h3, aparentemente inofensiva, pero defiende una clavada con Ag4, y prepara el rey para una salida por h2 en un futuro. Esto te puede dar un tiempo extra a lo largo de la partida.
+
+2. Jugadas multiusos. Son aquellas jugadas que no se concentran sólo en una función. Puedes tener varios planes con esa misma jugada, lo cual es más difícil de detectar y/o parar. Un ejemplo de esto es el típico pase de torre a 3ª , con lo que el rival no sabe si pretendes doblar torres, o pasar la torre a la columna g o h para atacar. Simplemente mejorar la posición de las piezas o de los reyes también entra en este tipo de jugadas.
+
+3. Jugadas en cartera. Son aquellas jugadas que siempre tienes, como un cambio de peones, una jugada sencilla para defender la posición o una amenaza latente. Quizá en un momento determinado no te sirvan pero sirven para evitar planes del contrario y darte la iniciativa más tarde
+
+Con este tipo de conceptos creo que nos vamos acercando en un sentido más amplio y profundo a cómo piensa un jugador profesional, un GM, quizá todas estas cosas no sse digan pero están ahí y las sentimos, el ajedrez es más amplio de lo que se piensa.","Ahora hablaré un poco sobre la elección de la jugada, con temas como las jugadas candidatas, momentos críticos, jugadas "" en cartera"",jugadas multiusos y profilaxis.
+
+Este es un tema bastante amplio por lo que no nos pararemos en profundidad a detallar todos estos conceptos, sólo a explicar en qué casos son útiles y cómo podemos estar seguros de una elección de jugada.
+
+Empezaré hablando sobre el árbol de variantes. Muchos programas de análisis y entrenadores usan un árbol de variantes, en los que van eligiendo sus jugadas y hacen análisis para determinar que posición es la que más interesa. Esto a práctica humana resulta bastante difícil de dominar, pues debemos tener memoria para memorizar todas las posiciones resultantes y jugadas, procedimiento y objetividad. Algo que puede ayudar mucho es el haber visto partidas antes con posiciones similares, porque sabemos los planes que hay que hacer y lo tenemos más claro.
+
+ Aún con todo, siempre pueden sorprendernos con una jugada diferente y tendremos que volver a empezar, o haber deseado escoger otra continuación. Aconsejo también seguir las variantes forzadas, es decir, si ves que una continuación para conseguir ventaja es más forzada que otra, guíate por esta continuación, porque vas a evitarte disgustos.
+
+Por último, están las jugadas como las profilácticas, jugadas en cartera, amenazas , y las multiusos. Es importante manejar siempre este tipo de jugadas, en algunas posiciones es posible que te quedes sin gasolina, es decir, sin un plan claro que hacer, en cuyo caso tienes que ver que haciendo jugadas normales vas a llegar a igualdad o a algo poco claro que no te gusta.  En ese caso hay que considerar :
+
+1 Jugadas profilácticas: Son aquellas que evitan los planes del contrario, es decir, si no tienes nada mejor que hacer, por lo menos haz que tu contrario lo pase mal. Un ejemplo de este tipo de jugadas es h3, aparentemente inofensiva, pero defiende una clavada con Ag4, y prepara el rey para una salida por h2 en un futuro. Esto te puede dar un tiempo extra a lo largo de la partida.
+
+2. Jugadas multiusos. Son aquellas jugadas que no se concentran sólo en una función. Puedes tener varios planes con esa misma jugada, lo cual es más difícil de detectar y/o parar. Un ejemplo de esto es el típico pase de torre a 3ª , con lo que el rival no sabe si pretendes doblar torres, o pasar la torre a la columna g o h para atacar. Simplemente mejorar la posición de las piezas o de los reyes también entra en este tipo de jugadas.
+
+3. Jugadas en cartera. Son aquellas jugadas que siempre tienes, como un cambio de peones, una jugada sencilla para defender la posición o una amenaza latente. Quizá en un momento determinado no te sirvan pero sirven para evitar planes del contrario y darte la iniciativa más tarde
+
+Con este tipo de conceptos creo que nos vamos acercando en un sentido más amplio y profundo a cómo piensa un jugador profesional, un GM, quizá todas estas cosas no sse digan pero están ahí y las sentimos, el ajedrez es más amplio de lo que se piensa."
+1,2011-06-22-Chessbase.md,"{'layout': 'article', 'title': 'Chessbase', 'show_title': True, 'tags': ['Chess']}","El Chessbase es un programa para almacenar partidas en bases de datos. Esto es bastante resumido claro, los nuevos programas de Chessbasse, como el Chessbase 11, incluyen multitud de funciones, como módulos de análisis, analizar por tiempo indefinido, clasificar partidas por temas , finales, táctica, etc. También se pueden incluir comentarios, exportar a otros programas y correos, fusionar bases, hacer dossiers, ver información de los jugadores, clasificar sus aperturas y mucho más. Todo esto y más ha sido lo que ha convertido a este programa en el programa estrella del ajedrez a nivel mundiaen cuanto a preparación se refiere, tanto es así que se venden versiones gratuitas o LIGHT de este programa, en las cuales se suele inclluir una pequeña base de datos como modelo.
+
+Lo que la gente normalmente hace en el Chessbase es meter sus apuntes y análisis, analizar y prepararse contra cualquier rival, al tener una base de datos de mas de 30 millones de partidas en la cual entcontrar a un rival de mas de 2000 de Elo es bastante probable. Paso a comentar sin más las ventajas e inconvenientes del programa, también mi opinión sobre la funcionalidad del programa y sus partes fundamentales.
+
+### Ventajas:
+
+- Se dispone de una Big Database o Mega Database con varios millones de partidas
+- Se encuentran fácilmente las partidas de titulados en todo el mundo,  y es especialmente útil en el caso de los grandes campeones de la historia.
+- Se pueden crear tus propios apuntes, análisis,teoría, meter tus partidas a una propia base de datos, comentarlas, analizarlas,imprimirlas y exportarlas.
+- Se puede buscar por jugadores y torneos y pedir dossiers, e información sobre el jugador, como su edad, mayor elo, nacionalidad, así como ver sus partidas, aperturas, fusionar sus partidas y ver el repertorio que tiene, muy útil para prepararse
+- Las opciones de tablero y demás en el programa son muy variadas, da una gran versatibilidad y dinámica.
+- Es fácil buscar distintos tipos de partida o una partida en concreto a través del filtro
+
+
+### Inconvenientes:
+
+- La mayoría de veces , nos hacemos un lío intentando ordenar las partidas, eliminar duplicadas, y fusionar partidas.
+- Sólo incluye la Big Database y la Mega Database en algunos. Después de ahí cada uno se busca sus propias bases de datos, muchas personas las compran de internet, esto tiene la ventaja de que las partidas te vienen comentadas y ya están pasadas al ordenador, lo cual ahorra bastante trabajo.
+
+
+Y pasando a la conclusión, el Chessbase es un programa que todo jugador que se precie debería tener en su ordenador. Sus ventajas son esencialmente muy grandes en comparación con sus inconvenientes, que parecen mas bien chistosos en comparación con otros programas. Es un programa muy completo, del que cada vez sacan nuevas versiones con más  aplicaciones y funciones.","El Chessbase es un programa para almacenar partidas en bases de datos. Esto es bastante resumido claro, los nuevos programas de Chessbasse, como el Chessbase 11, incluyen multitud de funciones, como módulos de análisis, analizar por tiempo indefinido, clasificar partidas por temas , finales, táctica, etc. También se pueden incluir comentarios, exportar a otros programas y correos, fusionar bases, hacer dossiers, ver información de los jugadores, clasificar sus aperturas y mucho más. Todo esto y más ha sido lo que ha convertido a este programa en el programa estrella del ajedrez a nivel mundiaen cuanto a preparación se refiere, tanto es así que se venden versiones gratuitas o LIGHT de este programa, en las cuales se suele inclluir una pequeña base de datos como modelo.
+
+Lo que la gente normalmente hace en el Chessbase es meter sus apuntes y análisis, analizar y prepararse contra cualquier rival, al tener una base de datos de mas de 30 millones de partidas en la cual entcontrar a un rival de mas de 2000 de Elo es bastante probable. Paso a comentar sin más las ventajas e inconvenientes del programa, también mi opinión sobre la funcionalidad del programa y sus partes fundamentales.
+
+### Ventajas:
+
+- Se dispone de una Big Database o Mega Database con varios millones de partidas
+- Se encuentran fácilmente las partidas de titulados en todo el mundo,  y es especialmente útil en el caso de los grandes campeones de la historia.
+- Se pueden crear tus propios apuntes, análisis,teoría, meter tus partidas a una propia base de datos, comentarlas, analizarlas,imprimirlas y exportarlas.
+- Se puede buscar por jugadores y torneos y pedir dossiers, e información sobre el jugador, como su edad, mayor elo, nacionalidad, así como ver sus partidas, aperturas, fusionar sus partidas y ver el repertorio que tiene, muy útil para prepararse
+- Las opciones de tablero y demás en el programa son muy variadas, da una gran versatibilidad y dinámica.
+- Es fácil buscar distintos tipos de partida o una partida en concreto a través del filtro
+
+
+### Inconvenientes:
+
+- La mayoría de veces , nos hacemos un lío intentando ordenar las partidas, eliminar duplicadas, y fusionar partidas.
+- Sólo incluye la Big Database y la Mega Database en algunos. Después de ahí cada uno se busca sus propias bases de datos, muchas personas las compran de internet, esto tiene la ventaja de que las partidas te vienen comentadas y ya están pasadas al ordenador, lo cual ahorra bastante trabajo.
+
+
+Y pasando a la conclusión, el Chessbase es un programa que todo jugador que se precie debería tener en su ordenador. Sus ventajas son esencialmente muy grandes en comparación con sus inconvenientes, que parecen mas bien chistosos en comparación con otros programas. Es un programa muy completo, del que cada vez sacan nuevas versiones con más  aplicaciones y funciones."
+2,2016-12-26-algo-de-cuerdas.md,"{'layout': 'article', 'title': 'Algo de cuerdas', 'show_title': True, 'tags': ['Physics']}","Hola gente. Vengo a contaros más o menos, una pequeña introducción intuitiva sobre teoría de cuerdas, cuáles fueron sus orígenes, porqué se escucha en todos lados sobre ella y qué nos aporta a la comprensión de la física hoy en día.
+
+En primer lugar, la teoría de cuerdas es una teoría bastante antigua, aproximadamente tiene un siglo desde su nacimiento. En ella, se postula la existencia de cuerdas muy diminutas que cruzan el universo, cuyos modos de vibración determinan las partículas elementales: quarks, neutrinos, electrones, fotones, bosón de Higgs... que conocemos hoy en día lo que se conoce como el Modelo Estándar. De forma que cuanto mayor sea la frecuencia de oscilación, mayor energía estará asociada a ese modo y mayor será la masa de las partículas involucradas. Del mismo modo, partículas sin masa como el fotón están asociadas a vibraciones muy ligeras de estas cuerdas.
+
+Hay dos tipos de cuerdas: abiertas o cerradas. Cuerdas abiertas pueden unirse en sus extremos para formar cuerdas cerradas. Éstas interacciones corresponden a diagramas de partículas , como los diagramas de Feynmann que conocemos. Hay diferentes órdenes de corrección para las interacciones de cuerdas, al igual que para las partículas puntuales en teoría cuántica de campos. La ventaja es que estos diagramas no contienen infinitos, como sí que ocurrían en los loops a órdenes >1 en los diagramas de Feynmann.
+
+Las cuerdas poseen una llamada simetría conforme , por la cual hay dos puntos que son exactamente iguales. La condición para que no se rompa esta simetría por efectos cuánticos, es que las cuerdas deben vivir en ...26 dimensiones. La verdad es que parecen muchas para las que somos capaces de imaginar.
+
+Sin embargo, esta primera teoría de cuerdas presentaba algunos problemas. Quizá los mayores problemas venían de parte de que ese modelo no contenía a los fermiones, y de que necesitaba la existencia de taquiones (partículas que viajan hacia atrás en el tiempo).
+
+Para ello, se creó una teoría basada en la anterior llamada teoría de supercuerdas, que además, contiene oscilaciones fermiónicas. Entramos ya en la década de los 70 , con figuras como Ramond, Neveu y Schwarz. Conseguimos eliminar el problema de los fermiones y taquiones, pero a cambio hemos metido una nueva simetría , llamada ""Supersimetría"", por la cual cada partícula elemental tiene su compañera supersimétrica , e incluso más de una. Se descubre ahora que las cuerdas deben tener 10 dimensiones, parece que nos quitamos bastantes de encima. Una de las premisas de la teoría de cuerdas era que, debíamos intentar reconciliar la ""Mecánica Cuántica"" con la ""Relatividad General"", ya que sus leyes parecen entrar en contradicción cuando se analizan con más detenimiento. Para ello debíamos unificar todas las fuerzas en una sola.
+
+Siguiendo con nuestras cuerdas, las cuerdas cerradas pueden girar hacia derecha dextrógiras o hacia la izquierda levógiras.También podrían ser abiertas o cerradas. Además, hay dos tipos de oscilaciones fermiónicas : ψc o ψs .Ésto nos lleva a una clasificación de los distintos tipos de teoría de supercuerdas, para estudiar las consecuencias más adelante y ver si se adecúan a las predicciones teóricas:
+
+## TIPOS DE CUERDAS:
+
+### Tipo IIA: 
+Cuerdas cerradas , los modos levógiro y dextrógiro no son iguales : ψc y ψs
+### Tipo IIB: 
+Cuerdas cerradas, los modos levógiro y dextrógiro son iguales: ψs y ψs
+### Tipo I:
+Cuerdas abiertas y cuerdas cerradas noorientables
+### Heteróticas: 
+Cuerdas cerradas. Un modo fermiónico y el otro sólo bosónico.
+
+----------------------------------------------------------------------
+Las comentamos:
+
+- **Tipo II :** Dan lugar a teorías basadas en ""Supergravedad"", de 10 dimensiones, y donde el gravitón posee N=2 compañeros supersimétricos llamados ""gravitinos"". Sin embargo, en las cuerdas tipo IIB , ambos gravitinos son igualesmismaquiralidad, y en las IIA, quiralidad opuesta.
+- **Tipo I:** Dan lugar a teorías basadas en ""Supergravedad"", de 10 dimensiones, y el gravitón posee N=1 compañero supersimétrico llamado ""gravitino"". La ventaja es que posee interacciones Gauge como el Modelo Estándar.
+
+Hay ciertos problemas teóricos entre cómo los fermiones interactúan con los gravitones, y por ello, Edward Witten dió un paso al frente. Las teorías IIA no tienen problema porque el efecto de los dos gravitinos opuestos se cancela. Pero en los tipos IIB sí que hay un problema porque sus contribuciones se suman. Sin embargo en una teoría de cuerdas sin ""super"", éstos problemas se resuelven en IIB. En las de tipo I, se tienen anomalías extras que son de tipo gauge y que son insalvables, sin embargo, se descubrió que los problemas en las tipo I desaparecen en el grupo gauge SO32.
+
+La teoría más prometedora parecía sin duda, la de cuerdas tipo I , la primera revolución de supercuerdas se dió en esta dirección, puesto que en principio parecía que unificaría Relatividad General, Mecánica Cuántica, y las interacciones gauge del Modelo Estándar. Por ello, pasó a llamarse ""la teoría del todo"", aquella que pretendía explicar todas las fuerzas de la naturaleza en una y ser la teoría definitiva de la naturaleza. Pero al mismo tiempo, se desarrollaron las teorías de cuerdas tipo Heteróticas, que contenían un compañero supersimétrico del gravitón, 10 dimensiones, y contenían interacciones gauge. Éstas se dividen a su vez en HE  grupo de simetría E8×E8 y las HO gupo SO(32).
+
+Parece que nos quedan al final 5 tipos de supercuerdas, las IIB y IIA, las I y las Heteróticas tipo HE y HO. Para encajar las 10 dimensiones en el puzzle , Kaluza y Klein inventaron una idea matemática, basada en la concepción de 6 dimensiones extra diminutas que podemos asignar a cada punto del espacio,acurrucadas en una variedad compacta. Siendo tan pequeñas, sólo podríamos apreciarlas en experimentos a altas energías. Las variedades candidatas, son aquellas que satisfacen las ecuaciones de supergravedad, un tipo de ellas son las llamadas ""Calabi-Yau"", y tienen la propiedad de que no rompen la supersimetría de la teoría de cuerdas. Para cada variedad ""Calabi-Yau"", tendremos una teoría distinta en 4 dimensiones con distinto contenido de partículas, y distintos parámetros.
+
+El reto consistía ahora en obtener una variedad CY tal que se obtenga el modelo Estándar o su versión SUSY , supersimétrica. Pero claro, ésto se convirtió en la búsqueda de muchos , pero nadie encontró nada, mientras tanto se olvidaron de las otras teorías de cuerdas. Pero pronto llegaría la segunda revolución de supercuerdas...
+
+Y ésto es todo por hoy, ha sido denso, pero continuaré en otro post para hacer la lectura más agradable.
+
+> ""Gente del hoy y del mañana, del ayer hombre mono... Ahora tenemos otras necesidades"" 
+
+Un abrazo.","Hola gente. Vengo a contaros más o menos, una pequeña introducción intuitiva sobre teoría de cuerdas, cuáles fueron sus orígenes, porqué se escucha en todos lados sobre ella y qué nos aporta a la comprensión de la física hoy en día.
+
+En primer lugar, la teoría de cuerdas es una teoría bastante antigua, aproximadamente tiene un siglo desde su nacimiento. En ella, se postula la existencia de cuerdas muy diminutas que cruzan el universo, cuyos modos de vibración determinan las partículas elementales: quarks, neutrinos, electrones, fotones, bosón de Higgs... que conocemos hoy en día lo que se conoce como el Modelo Estándar. De forma que cuanto mayor sea la frecuencia de oscilación, mayor energía estará asociada a ese modo y mayor será la masa de las partículas involucradas. Del mismo modo, partículas sin masa como el fotón están asociadas a vibraciones muy ligeras de estas cuerdas.
+
+Hay dos tipos de cuerdas: abiertas o cerradas. Cuerdas abiertas pueden unirse en sus extremos para formar cuerdas cerradas. Éstas interacciones corresponden a diagramas de partículas , como los diagramas de Feynmann que conocemos. Hay diferentes órdenes de corrección para las interacciones de cuerdas, al igual que para las partículas puntuales en teoría cuántica de campos. La ventaja es que estos diagramas no contienen infinitos, como sí que ocurrían en los loops a órdenes >1 en los diagramas de Feynmann.
+
+Las cuerdas poseen una llamada simetría conforme , por la cual hay dos puntos que son exactamente iguales. La condición para que no se rompa esta simetría por efectos cuánticos, es que las cuerdas deben vivir en ...26 dimensiones. La verdad es que parecen muchas para las que somos capaces de imaginar.
+
+Sin embargo, esta primera teoría de cuerdas presentaba algunos problemas. Quizá los mayores problemas venían de parte de que ese modelo no contenía a los fermiones, y de que necesitaba la existencia de taquiones (partículas que viajan hacia atrás en el tiempo).
+
+Para ello, se creó una teoría basada en la anterior llamada teoría de supercuerdas, que además, contiene oscilaciones fermiónicas. Entramos ya en la década de los 70 , con figuras como Ramond, Neveu y Schwarz. Conseguimos eliminar el problema de los fermiones y taquiones, pero a cambio hemos metido una nueva simetría , llamada ""Supersimetría"", por la cual cada partícula elemental tiene su compañera supersimétrica , e incluso más de una. Se descubre ahora que las cuerdas deben tener 10 dimensiones, parece que nos quitamos bastantes de encima. Una de las premisas de la teoría de cuerdas era que, debíamos intentar reconciliar la ""Mecánica Cuántica"" con la ""Relatividad General"", ya que sus leyes parecen entrar en contradicción cuando se analizan con más detenimiento. Para ello debíamos unificar todas las fuerzas en una sola.
+
+Siguiendo con nuestras cuerdas, las cuerdas cerradas pueden girar hacia derecha dextrógiras o hacia la izquierda levógiras.También podrían ser abiertas o cerradas. Además, hay dos tipos de oscilaciones fermiónicas : ψc o ψs .Ésto nos lleva a una clasificación de los distintos tipos de teoría de supercuerdas, para estudiar las consecuencias más adelante y ver si se adecúan a las predicciones teóricas:
+
+## TIPOS DE CUERDAS:
+
+### Tipo IIA: 
+Cuerdas cerradas , los modos levógiro y dextrógiro no son iguales : ψc y ψs
+### Tipo IIB: 
+Cuerdas cerradas, los modos levógiro y dextrógiro son iguales: ψs y ψs
+### Tipo I:
+Cuerdas abiertas y cuerdas cerradas noorientables
+### Heteróticas: 
+Cuerdas cerradas. Un modo fermiónico y el otro sólo bosónico.
+
+----------------------------------------------------------------------
+Las comentamos:
+
+- **Tipo II :** Dan lugar a teorías basadas en ""Supergravedad"", de 10 dimensiones, y donde el gravitón posee N=2 compañeros supersimétricos llamados ""gravitinos"". Sin embargo, en las cuerdas tipo IIB , ambos gravitinos son igualesmismaquiralidad, y en las IIA, quiralidad opuesta.
+- **Tipo I:** Dan lugar a teorías basadas en ""Supergravedad"", de 10 dimensiones, y el gravitón posee N=1 compañero supersimétrico llamado ""gravitino"". La ventaja es que posee interacciones Gauge como el Modelo Estándar.
+
+Hay ciertos problemas teóricos entre cómo los fermiones interactúan con los gravitones, y por ello, Edward Witten dió un paso al frente. Las teorías IIA no tienen problema porque el efecto de los dos gravitinos opuestos se cancela. Pero en los tipos IIB sí que hay un problema porque sus contribuciones se suman. Sin embargo en una teoría de cuerdas sin ""super"", éstos problemas se resuelven en IIB. En las de tipo I, se tienen anomalías extras que son de tipo gauge y que son insalvables, sin embargo, se descubrió que los problemas en las tipo I desaparecen en el grupo gauge SO32.
+
+La teoría más prometedora parecía sin duda, la de cuerdas tipo I , la primera revolución de supercuerdas se dió en esta dirección, puesto que en principio parecía que unificaría Relatividad General, Mecánica Cuántica, y las interacciones gauge del Modelo Estándar. Por ello, pasó a llamarse ""la teoría del todo"", aquella que pretendía explicar todas las fuerzas de la naturaleza en una y ser la teoría definitiva de la naturaleza. Pero al mismo tiempo, se desarrollaron las teorías de cuerdas tipo Heteróticas, que contenían un compañero supersimétrico del gravitón, 10 dimensiones, y contenían interacciones gauge. Éstas se dividen a su vez en HE  grupo de simetría E8×E8 y las HO gupo SO(32).
+
+Parece que nos quedan al final 5 tipos de supercuerdas, las IIB y IIA, las I y las Heteróticas tipo HE y HO. Para encajar las 10 dimensiones en el puzzle , Kaluza y Klein inventaron una idea matemática, basada en la concepción de 6 dimensiones extra diminutas que podemos asignar a cada punto del espacio,acurrucadas en una variedad compacta. Siendo tan pequeñas, sólo podríamos apreciarlas en experimentos a altas energías. Las variedades candidatas, son aquellas que satisfacen las ecuaciones de supergravedad, un tipo de ellas son las llamadas ""Calabi-Yau"", y tienen la propiedad de que no rompen la supersimetría de la teoría de cuerdas. Para cada variedad ""Calabi-Yau"", tendremos una teoría distinta en 4 dimensiones con distinto contenido de partículas, y distintos parámetros.
+
+El reto consistía ahora en obtener una variedad CY tal que se obtenga el modelo Estándar o su versión SUSY , supersimétrica. Pero claro, ésto se convirtió en la búsqueda de muchos , pero nadie encontró nada, mientras tanto se olvidaron de las otras teorías de cuerdas. Pero pronto llegaría la segunda revolución de supercuerdas...
+
+Y ésto es todo por hoy, ha sido denso, pero continuaré en otro post para hacer la lectura más agradable.
+
+> ""Gente del hoy y del mañana, del ayer hombre mono... Ahora tenemos otras necesidades"" 
+
+Un abrazo."
+3,2016-12-14-mi-experiencia.md,"{'layout': 'article', 'title': 'REFLEXIONES: Mi experiencia', 'show_title': True, 'mathjax': True, 'tags': ['Physics']}","Hola gente. Bueno vengo a contaros un poco mi experiencia y parte de mi vida personal . Así, para desahogarme , y que me vayáis conociendo o identificándoos conmigo espero. Antes de nada decir que este post va a ser largo y para muchos aburrido, pero si os gusta mi contenido quizá os interese de más leerlo, porque aquí resumo toda mi experiencia de mis años de carrera en la UCM y todo lo que soy yo. Espero lo disfrute quien pueda.
+
+Nací en Córdoba, España, he vivido toda mi vida allí , aunque mi familia siempre fue de hacer muchos viajes a distintos lugares de Europa y de África. He tenido suerte en ese aspecto, siempre me enseñaron a valorar y aprender de otras culturas. Mis padres podían permitírselo y lo hacían, sin más.
+
+He pasado gran parte de mi vida jugando ajedrez, que es mi juego favorito. En parte, ahora pienso que fue gracias a personas carismáticas que supieron transmitirme su energía y apoyo y sin las cuales nunca habría llegado lejos, y en parte a esos padres que apoyaron a ciegas a su hijo. Llegué a ser bueno a mi edad , uno de los mejores de España. Pero el tiempo pasa y tiene poder sobre todos nosotros.
+
+Siempre fuí alguien de buenos y contados amigos, que no frikis, a quien se le dió bien las matemáticas y pensar sobre muchas cosas extravagantes. Hoy en día eso es relativamente normal. Leía, me informaba y me llamaba la atención la ciencia. Descubrí que mi carrera serían ciencias puras y estaba muy ilusionado con esto.
+
+Llegué a la universidad , con ánimos para empezar mi nueva carrera de Física , en Madrid. Parecía que tenía muy claro qué quería ser: Astrofísico. ""Como muchos"" me decían. El primer año me dijeron que para llegar lejos habría que tomárselo muy en serio todo, sobre todo en las notas. En mi colegio mayor pasé bastante tiempo con amigos que les gustaba salir y pasarlo bien como todo el mundo. Recuerdo no estudiar más de 1 o 2 horas al día y fue en parte mi confianza y mi error. Mis notas no fueron de escándalo pero si aceptables Notables. Supongo que llevaba buena base de Bachiller, a otros les costó bastante más. Los profesores eran simpáticos pero pasaban un poco de nosotros, en mi opinión, no se tomaban en serio las notas de cada uno ni los problemas de clase, ni se preparaban las clases, lo cual hacían de los apuntes un caos. Sin más.
+
+Llegué a 2º de carrera. ¡Vaya año! No he estudiado más y pasado peor en mi vida. Llegué a desesperarme y a querer irme de Madrid, cambiar de carrera y de vida. El colegio mayor ya no me gustaba, ya estaba bastante estresado en mi día a día como para permitirme fallar y dejarme caer en la vagueza con algunos. Si hubiese aprovechado al 100% mi tiempo, cosa que nunca supe hacer, hubiese sobrellevado la situación, pero al límite. Este año dimos toda la física clásica: Mecánica, Electromagnetismo, Métodos Matemáticos, Física Cuántica.., con Laboratorio siendo la asignatura más frustrante: todas las semanas más de 8 horas en laboratorio,más las horas de preparación y presentación de informes. Este año no saqué en general buenas notas y suspendí algunas asignaturas. Y los profesores, malos, por lo general.
+
+En 3º me cambié a piso con un amigo de la facultad. Todo parecía ir mejor y más tranquilo, podía hacer lo que quisiese cuando quisiese y no tener que depender de otros. Fue un año mucho más relajado que el anterior, aunque las asignaturas fueron complicándose, obviamente. Arrastraba un par de asignaturas de 2º , que fuí con paciencia sacándolas. Ya no había tanta gente que conocía. Algo extraño pasó en 2º de carrera , algunos se fueron, otros se quedaron, otros avanzaron y otros estaban rezagados. No pondré en juicio nada porque no me parece correcto, sigamos. Había asignaturas que ya sí, hay que decirlo: molaban más. Geometría diferencial y Astrofísica... !Por fin! Parece que ya hemos llegado adonde queremos , aun así los profesores parecen más majos que los de 2º , pero guardan la misma actitud pasota. Empiezan a notarse favoritismos con ciertos alumnos, peloteos prolongados y charlas de despacho. Bueno, nada raro que no hubiese ya en 2º , aunque los profesores saben cuando y porqué... Ya llevan años a sus espaldas. Y por fin, este año se acabaron las pesadas asignaturas de Laboratorio. ""Se acabó el estrés"" pensé.
+
+En 4º me dije: voy a coger asignaturas de más, entre ellas, algunas que me sirvan de para aprobar ""fácil"" y otras para estudiar de verdad y aprender. Ninguna otra opción era la mía , no quería jugármela a un todo o nada. Después de todo, demasiados horrores habían pasado ya como para hacerlo. Escogí ""Tutorías"", que después de todo no estuvo nada mal, e ""Historia de la Física"" como asignaturas que bueno... ahí están. En mis asignaturas optativas para estudiar escogí ""Partículas elementales"" con uno de los profesores más temidos de la facultad, y ""Relatividad General"" dos huesos bastante duros que bueno... algunos se tiraron vidas estudiando. Resulta que había dos asignaturas que eran ""optativas"", pero ""obligatorias de itinerario"" , lo cual me estresaba un poco: ""Electrodinámica Clásica"" y ""Física Atómíca y Molecular"". Física Atómica parecía fácil y nos la dió uno de los mejores profesores en mi opinión, pero adivinad qué, a mitad de curso , nos metieron 8 prácticas de laboratorio sorpresa, para que no nos aburriésemos antes de los exámenes. La cosa fue peor en Electrodinámica para mí, un profesor que decían era bueno, pero demasiado exigente , el cual me cogí. Suspendí en febrero y junio. Con todo lo demás aprobado, incluido el TFG el cual hay que decir que también pasaron bastante de nosotros, me hicieron repetir curso por una sola asignatura, teniendo en cuenta que poseía en ese momento 240 créditos, pero que al no tener la ""obligatoria de itinerario"" aprobada, no podía obtener la carrera porque era obligatorio ""1 itinerario"", y por lo cual me hicieron pagar otra vez el TFG aun teniéndolo aprobado para el año siguiente. Conclusión: sólo tengo 232 créditos , más un lío tremendo con la administración porque nunca lo ponen bien en el campus virtual.
+
+En ese 5º año me encuentro. Un año de preocupación y desasosiego, un año que pensé que no se produciría y que en tal caso habría un mecanismo para evitarlo y pasar con 240 créditos. Craso error de mi parte. Sobretodo aprendí de la experiencia: Nadie te regalará nada, y en caso que lo haga, será una sorpresa y deberás agradecerle muchísimo. Habrá amigos que estén ahí en los momentos que les interese, pero desaparecerán en los momentos que más los necesites. Habrá gente que sabe muy bien lo que quiere y no los entenderás hasta que pase lo que tenga que pasar. Tu también fallarás queriendo o no, pero no te dirán nada. Quizá algunos te juzguen por tu región de origen, otros directamente se crean superiores y otros simplemente sean gente abierta y normal. Habrá frikis, muchos, y gente fría. Habrá ""filósofos"" , como yo, que estén en varios proyectos e incluso creando un blog como éste.
+
+Pero sobretodo, habrá gente activa, gente que no se queda parada y que está suficientemente preparada y abierta , que es lo que hoy en día se necesita en el mundo. Por ello, doy gracias a todos los profesores, buenos y malos que hallamos encontrado, porque han formado parte de lo que somos hoy en día los científicos. Y os recomiendo mucho esta carrera , si sois de ese tipo de personas que se ha identificado conmigo y quiere llegar a ser algo útil en la vida y no simplemente un recurso humano de una empresa quealgunosloseremos,peroconunfondodetrás. Desde mi punto de vista ninguna otra carrera aparte de química y matemáticas es científica. Y ya pueden ponerse como quieran. La ciencia es método científico, y no sirve a ninguna empresa o interés particular. Se nutre por sí misma y quiere verse crecer, aumentar. No es para nada inservible ni inútil sin algún propósito que ofrecer, al contrario, es conocimiento humano y debe ser respetado y sufragado lo suficiente como para crear una humanidad digna y evolucionada.
+
+
+>  ""Gente del mañana y del hoy, evolución del ayer hombre mono. Ahora tenemos otras necesidades.""
+
+Un abrazo.","Hola gente. Bueno vengo a contaros un poco mi experiencia y parte de mi vida personal . Así, para desahogarme , y que me vayáis conociendo o identificándoos conmigo espero. Antes de nada decir que este post va a ser largo y para muchos aburrido, pero si os gusta mi contenido quizá os interese de más leerlo, porque aquí resumo toda mi experiencia de mis años de carrera en la UCM y todo lo que soy yo. Espero lo disfrute quien pueda.
+
+Nací en Córdoba, España, he vivido toda mi vida allí , aunque mi familia siempre fue de hacer muchos viajes a distintos lugares de Europa y de África. He tenido suerte en ese aspecto, siempre me enseñaron a valorar y aprender de otras culturas. Mis padres podían permitírselo y lo hacían, sin más.
+
+He pasado gran parte de mi vida jugando ajedrez, que es mi juego favorito. En parte, ahora pienso que fue gracias a personas carismáticas que supieron transmitirme su energía y apoyo y sin las cuales nunca habría llegado lejos, y en parte a esos padres que apoyaron a ciegas a su hijo. Llegué a ser bueno a mi edad , uno de los mejores de España. Pero el tiempo pasa y tiene poder sobre todos nosotros.
+
+Siempre fuí alguien de buenos y contados amigos, que no frikis, a quien se le dió bien las matemáticas y pensar sobre muchas cosas extravagantes. Hoy en día eso es relativamente normal. Leía, me informaba y me llamaba la atención la ciencia. Descubrí que mi carrera serían ciencias puras y estaba muy ilusionado con esto.
+
+Llegué a la universidad , con ánimos para empezar mi nueva carrera de Física , en Madrid. Parecía que tenía muy claro qué quería ser: Astrofísico. ""Como muchos"" me decían. El primer año me dijeron que para llegar lejos habría que tomárselo muy en serio todo, sobre todo en las notas. En mi colegio mayor pasé bastante tiempo con amigos que les gustaba salir y pasarlo bien como todo el mundo. Recuerdo no estudiar más de 1 o 2 horas al día y fue en parte mi confianza y mi error. Mis notas no fueron de escándalo pero si aceptables Notables. Supongo que llevaba buena base de Bachiller, a otros les costó bastante más. Los profesores eran simpáticos pero pasaban un poco de nosotros, en mi opinión, no se tomaban en serio las notas de cada uno ni los problemas de clase, ni se preparaban las clases, lo cual hacían de los apuntes un caos. Sin más.
+
+Llegué a 2º de carrera. ¡Vaya año! No he estudiado más y pasado peor en mi vida. Llegué a desesperarme y a querer irme de Madrid, cambiar de carrera y de vida. El colegio mayor ya no me gustaba, ya estaba bastante estresado en mi día a día como para permitirme fallar y dejarme caer en la vagueza con algunos. Si hubiese aprovechado al 100% mi tiempo, cosa que nunca supe hacer, hubiese sobrellevado la situación, pero al límite. Este año dimos toda la física clásica: Mecánica, Electromagnetismo, Métodos Matemáticos, Física Cuántica.., con Laboratorio siendo la asignatura más frustrante: todas las semanas más de 8 horas en laboratorio,más las horas de preparación y presentación de informes. Este año no saqué en general buenas notas y suspendí algunas asignaturas. Y los profesores, malos, por lo general.
+
+En 3º me cambié a piso con un amigo de la facultad. Todo parecía ir mejor y más tranquilo, podía hacer lo que quisiese cuando quisiese y no tener que depender de otros. Fue un año mucho más relajado que el anterior, aunque las asignaturas fueron complicándose, obviamente. Arrastraba un par de asignaturas de 2º , que fuí con paciencia sacándolas. Ya no había tanta gente que conocía. Algo extraño pasó en 2º de carrera , algunos se fueron, otros se quedaron, otros avanzaron y otros estaban rezagados. No pondré en juicio nada porque no me parece correcto, sigamos. Había asignaturas que ya sí, hay que decirlo: molaban más. Geometría diferencial y Astrofísica... !Por fin! Parece que ya hemos llegado adonde queremos , aun así los profesores parecen más majos que los de 2º , pero guardan la misma actitud pasota. Empiezan a notarse favoritismos con ciertos alumnos, peloteos prolongados y charlas de despacho. Bueno, nada raro que no hubiese ya en 2º , aunque los profesores saben cuando y porqué... Ya llevan años a sus espaldas. Y por fin, este año se acabaron las pesadas asignaturas de Laboratorio. ""Se acabó el estrés"" pensé.
+
+En 4º me dije: voy a coger asignaturas de más, entre ellas, algunas que me sirvan de para aprobar ""fácil"" y otras para estudiar de verdad y aprender. Ninguna otra opción era la mía , no quería jugármela a un todo o nada. Después de todo, demasiados horrores habían pasado ya como para hacerlo. Escogí ""Tutorías"", que después de todo no estuvo nada mal, e ""Historia de la Física"" como asignaturas que bueno... ahí están. En mis asignaturas optativas para estudiar escogí ""Partículas elementales"" con uno de los profesores más temidos de la facultad, y ""Relatividad General"" dos huesos bastante duros que bueno... algunos se tiraron vidas estudiando. Resulta que había dos asignaturas que eran ""optativas"", pero ""obligatorias de itinerario"" , lo cual me estresaba un poco: ""Electrodinámica Clásica"" y ""Física Atómíca y Molecular"". Física Atómica parecía fácil y nos la dió uno de los mejores profesores en mi opinión, pero adivinad qué, a mitad de curso , nos metieron 8 prácticas de laboratorio sorpresa, para que no nos aburriésemos antes de los exámenes. La cosa fue peor en Electrodinámica para mí, un profesor que decían era bueno, pero demasiado exigente , el cual me cogí. Suspendí en febrero y junio. Con todo lo demás aprobado, incluido el TFG el cual hay que decir que también pasaron bastante de nosotros, me hicieron repetir curso por una sola asignatura, teniendo en cuenta que poseía en ese momento 240 créditos, pero que al no tener la ""obligatoria de itinerario"" aprobada, no podía obtener la carrera porque era obligatorio ""1 itinerario"", y por lo cual me hicieron pagar otra vez el TFG aun teniéndolo aprobado para el año siguiente. Conclusión: sólo tengo 232 créditos , más un lío tremendo con la administración porque nunca lo ponen bien en el campus virtual.
+
+En ese 5º año me encuentro. Un año de preocupación y desasosiego, un año que pensé que no se produciría y que en tal caso habría un mecanismo para evitarlo y pasar con 240 créditos. Craso error de mi parte. Sobretodo aprendí de la experiencia: Nadie te regalará nada, y en caso que lo haga, será una sorpresa y deberás agradecerle muchísimo. Habrá amigos que estén ahí en los momentos que les interese, pero desaparecerán en los momentos que más los necesites. Habrá gente que sabe muy bien lo que quiere y no los entenderás hasta que pase lo que tenga que pasar. Tu también fallarás queriendo o no, pero no te dirán nada. Quizá algunos te juzguen por tu región de origen, otros directamente se crean superiores y otros simplemente sean gente abierta y normal. Habrá frikis, muchos, y gente fría. Habrá ""filósofos"" , como yo, que estén en varios proyectos e incluso creando un blog como éste.
+
+Pero sobretodo, habrá gente activa, gente que no se queda parada y que está suficientemente preparada y abierta , que es lo que hoy en día se necesita en el mundo. Por ello, doy gracias a todos los profesores, buenos y malos que hallamos encontrado, porque han formado parte de lo que somos hoy en día los científicos. Y os recomiendo mucho esta carrera , si sois de ese tipo de personas que se ha identificado conmigo y quiere llegar a ser algo útil en la vida y no simplemente un recurso humano de una empresa quealgunosloseremos,peroconunfondodetrás. Desde mi punto de vista ninguna otra carrera aparte de química y matemáticas es científica. Y ya pueden ponerse como quieran. La ciencia es método científico, y no sirve a ninguna empresa o interés particular. Se nutre por sí misma y quiere verse crecer, aumentar. No es para nada inservible ni inútil sin algún propósito que ofrecer, al contrario, es conocimiento humano y debe ser respetado y sufragado lo suficiente como para crear una humanidad digna y evolucionada.
+
+
+>  ""Gente del mañana y del hoy, evolución del ayer hombre mono. Ahora tenemos otras necesidades.""
+
+Un abrazo."
+4,2020-07-03-lc0-guia.md,"{'layout': 'article', 'title': 'Cómo instalar el engine “LeelaChessZero” (lc0) para su uso en cualquier interfaz de ajedrez.', 'tags': ['Chess', 'IA'], 'show_title': True}","Hola gente. Nuestro equipo ha decidido traer esta vez una guía sencilla, para instalar y configurar el motor de ajedrez conocido como LeelaChessZero o lc0.
+
+Para poneros en contexto, este motor de ajedrez ha sido desarrollado siguiendo el paper original de AlphaZero, el cual es un motor de ajedrez que usa la inteligencia artificial (IA) en vez de patrones definidos por el programador, para aprender de sus propias partidas. Éste motor, como muchos ya sabréis, causó alta expectación en su día, tanto por superar a Stockfish como por su estilo de juego.
+
+Pues bien, la reacción de la comunidad no se hizo esperar, y lanzó su propio proyecto de código abierto (LeelaChessZero) en el cual trabajan profesionales de la IA (y cualquier tipo de público en colaboración con ellos) para optimizar y entrenar la red neuronal que lo forma. Podéis encontrar los enlaces a este código más abajo en la guía.
+
+Es importante que destaquemos las características de estos nuevos tipos de motores que usan IA basada en redes neuronales, en contra de los motores de análisis tradicionales.
+
+### Características LC0 vs. traditionals:
+
+- Basada en NNs (Neural Networks), y usan algoritmos de Deep Learning.
+
+- Estas NNs necesitan ser entrenadas con sus propias partidas. Es decir, se deja que el motor juegue inicialmente contra sí mismo y vaya reajustando sus parámetros y su conocimiento de las posiciones a base de prueba-error (win / lose). En definitiva, se crea su propio estilo de juego desde 0.
+
+- Estos parámetros (conocidos como pesos o “weights”), son entrenados, almacenables, exportables y reutilizables. Es decir, podríamos coger los pesos calculados por otro usuario, seguir entrenando la NN, mejorar los iniciales y guardar el resultado. Esto hace que en la actualidad, pocos motores puedan competir contra este tipo de aprendizaje. Hay una mejora constante y abierta a la comunidad.
+
+- Puede nutrirse del análisis de partidas humanas. Para ésto, las plataformas de ajedrez que liberan/publican las partidas son útiles, en contraposición al material de pago que ofrece, por ejemplo, Chessbase (y su calaña).
+
+- Está pensado para hacer uso de la GPU (la unidad gráfica de nuestro ordenador) para realizar cálculos a mucha más velocidad. Así, al ser un proyecto en el que puede aportar cualquier persona y hacer uso de su GPU ( ~ x100 veces la capacidad CPU con la que solemos usar el ordenador), tenemos el equivalente al mayor supercomputador pensado jamás para entrenar este motor de ajedrez.
+
+Después de haber mencionado todo lo anterior, uno se puede hacer a la idea de porqué es interesante (y tanto) este motor de ajedrez. Sin más, vamos con la guía.
+
+# GUÍA DE INSTALACIÓN:
+
+El motor de ajedrez es un binario del sistema operativo en el que nos encontremos, y se debe cargar en cualquier interfaz de ajedrez a través de paneles como “Análisis”/”Analysis” ->”Cargar motor UCI”/”Load UCI engine”. Además de ésto, se necesita especificar el archivo de Pesos en la configuración del motor, a diferencia de otros motores tradicionales.
+
+Lo primero que tenemos que tener en cuenta es qué sistema operativo poseemos, así dividiremos en los siguientes grupos:
+
+### Windows:
+
+Sus archivos binarios son conocidos por su extensión “.exe”, que se ejecutan al abrir éstos archivos. El motor de ajedrez se puede descargar en el enlace. Y sus pesos en éste enlace.
+
+Los archivos comprimidos pueden contener código fuente del proyecto, por lo cual habría que buildear un binario “.exe” que añadiese ciertas funcionalidades en caso de ser necesario. Seguir leyendo el apartado “Linux”->”Compilar código fuente” para continuar el proceso general.
+
+### Linux:
+
+Una aclaración, es que Linux y sus derivados (Ubuntu, Fedora, RedHat, etc.) son los sistemas operativos que más se usan en software libre y por tanto, van en consonancia con la lógica del proyecto. En caso de que no poseáis una utilidad básica o programa necesitado por vuestro sistema(i.e. “git”), siempre podéis instalarlo desde vuestro gestor de paquetes (Google, bienvenido seas para ayudarme en esta ardua tarea). Podemos descargar los binarios a partir de archivos comprimidos llamados “tarballs” (.tar.gz), o bien compilar el código fuente del proyecto.
+
+1. **Descargar comprimidos:**
+
+    Click en el enlace para descargar. Una vez descargados, proseguir con:
+
+    `tar -xzvf <nombre_del_archivo>.tar.gz`
+    
+    Y ya tendremos nuestro binario llamado “lc0”. Descargar el archivo de pesos en éste enlace.
+
+2. **Compilar código fuente:**
+
+    Aquí el enlace al repositorio de lc0 en GitHub.
+
+    `git clone https://github.com/LeelaChessZero/lc0`
+
+    Esto os creará la carpeta “lc0” con los contenidos del repositorio online, en el directorio donde hayáis ejecutado el comando.
+
+    `cd ./lc0`
+
+    Desde aquí lo más recomendable siempre es seguir la guía de instalación, leyendo los archivos “README.md” o en su defecto, “INSTALL”. En el anexo de esta guía se ofrecerán referencias para poder construir el binario de manera que sea capaz de ejecutar el motor en GPU. Para instalar el binario compatible con CPU, se siguen los siguientes pasos:
+
+    Se instalan las dependencias necesarias marcadas por el proyecto. Una vez instaladas las dependencias, ejecutamos.
+
+    `./build.sh`
+
+    Y nos creará el binario en:
+
+    `cd ./build/release`
+
+    llamado “lc0”. Éste será el archivo que necesitaremos cargar. El archivo de pesos se puede descargar en éste enlace.
+
+### Mac OS:
+
+Para los sistemas operativos de la empresa Apple, como Mac OS, podemos seguir la compilación del código fuente como en el caso explicado antes de Linux, con la particularidad de que los compiladores que instalemos de nuestro gestor de paquetes lo harán en nuestra arquitectura de ordenador. Simplemente, se seguirá el proceso igual que en “Linux”->”Compilar código fuente”, y en el caso de faltar librerías o programas necesarios para la compilación, se instalarán desde el gestor de paquetes nativo (brew).
+
+## ANEXO 1. POST-INSTALACIÓN (opcional).
+
+Hay varias opciones adicionales que podemos tener en cuenta de manera general en el proceso post-instalación:
+
+- Añadir los binarios a la variable PATH del sistema. De esta forma, podemos ejecutar los comandos sin estar presentes en la carpeta donde se encuentren. En Windows, se procede editando la variable PATH del sistema y añadiendo la ruta (la carpeta donde se encuentran) de los binarios. En Linux, se puede editar el fichero “~/.bashrc” añadiendo lo siguiente:
+
+`export PATH=$PATH:<ruta_de_los_binarios>`
+
+
+## ANEXO 2. COMPATIBILIDAD CON GPU (opcional).
+
+Para el caso en que queramos compatibilidad con la poderosa GPU (lo cual puede ser muy útil para el entrenamiento del modelo y para cálculos congelados, es decir, aquellos en los que tenemos una posición del tablero fija y dejamos la máquina pensar un tiempo razonable), debemos seguir los pasos marcados en el repositorio oficial para el sistema operativo correspondiente.
+
+A grandes rasgos, hay que tener en cuenta los siguientes pasos:
+
+1. Comprobar si nuestro ordenador posee una GPU compatible con CUDA. CUDA es una tecnología de aceleración que permite a nuestro ordenador utilizar los recursos de la GPU originalmente destinados a cálculo de gráficos, a procesos de la CPU normal. CUDA es específico de las gráficas Nvidia, pero hoy en día su uso está tan extendido que es poco probable que no tengamos una GPU de Nvidia. Podemos consultar las GPU que soportan CUDA en éste enlace.
+2. En caso afirmativo de lo anterior, instalar el driver de GPU que corresponda al más actualizado y que soporte tu gráfica.
+3. Instalar CUDA-toolkit. Podemos hacerlo a través de la página oficial de CUDA, o a través de línea de comandos del sistema: `sudo apt-get install nvidia-cuda-toolkit`
+4. Compilar de nuevo el código fuente de “lc0”, ésta vez con las opciones que soporten CUDA, tal como se guía en el README.md del proyecto oficial en GitHub.
+
+-------------------------------
+Espero que este post os sea útil y que os aventuréis a probar este nuevo motor de análisis. Estoy seguro de que no os defraudará.","Hola gente. Nuestro equipo ha decidido traer esta vez una guía sencilla, para instalar y configurar el motor de ajedrez conocido como LeelaChessZero o lc0.
+
+Para poneros en contexto, este motor de ajedrez ha sido desarrollado siguiendo el paper original de AlphaZero, el cual es un motor de ajedrez que usa la inteligencia artificial (IA) en vez de patrones definidos por el programador, para aprender de sus propias partidas. Éste motor, como muchos ya sabréis, causó alta expectación en su día, tanto por superar a Stockfish como por su estilo de juego.
+
+Pues bien, la reacción de la comunidad no se hizo esperar, y lanzó su propio proyecto de código abierto (LeelaChessZero) en el cual trabajan profesionales de la IA (y cualquier tipo de público en colaboración con ellos) para optimizar y entrenar la red neuronal que lo forma. Podéis encontrar los enlaces a este código más abajo en la guía.
+
+Es importante que destaquemos las características de estos nuevos tipos de motores que usan IA basada en redes neuronales, en contra de los motores de análisis tradicionales.
+
+### Características LC0 vs. traditionals:
+
+- Basada en NNs (Neural Networks), y usan algoritmos de Deep Learning.
+
+- Estas NNs necesitan ser entrenadas con sus propias partidas. Es decir, se deja que el motor juegue inicialmente contra sí mismo y vaya reajustando sus parámetros y su conocimiento de las posiciones a base de prueba-error (win / lose). En definitiva, se crea su propio estilo de juego desde 0.
+
+- Estos parámetros (conocidos como pesos o “weights”), son entrenados, almacenables, exportables y reutilizables. Es decir, podríamos coger los pesos calculados por otro usuario, seguir entrenando la NN, mejorar los iniciales y guardar el resultado. Esto hace que en la actualidad, pocos motores puedan competir contra este tipo de aprendizaje. Hay una mejora constante y abierta a la comunidad.
+
+- Puede nutrirse del análisis de partidas humanas. Para ésto, las plataformas de ajedrez que liberan/publican las partidas son útiles, en contraposición al material de pago que ofrece, por ejemplo, Chessbase (y su calaña).
+
+- Está pensado para hacer uso de la GPU (la unidad gráfica de nuestro ordenador) para realizar cálculos a mucha más velocidad. Así, al ser un proyecto en el que puede aportar cualquier persona y hacer uso de su GPU ( ~ x100 veces la capacidad CPU con la que solemos usar el ordenador), tenemos el equivalente al mayor supercomputador pensado jamás para entrenar este motor de ajedrez.
+
+Después de haber mencionado todo lo anterior, uno se puede hacer a la idea de porqué es interesante (y tanto) este motor de ajedrez. Sin más, vamos con la guía.
+
+# GUÍA DE INSTALACIÓN:
+
+El motor de ajedrez es un binario del sistema operativo en el que nos encontremos, y se debe cargar en cualquier interfaz de ajedrez a través de paneles como “Análisis”/”Analysis” ->”Cargar motor UCI”/”Load UCI engine”. Además de ésto, se necesita especificar el archivo de Pesos en la configuración del motor, a diferencia de otros motores tradicionales.
+
+Lo primero que tenemos que tener en cuenta es qué sistema operativo poseemos, así dividiremos en los siguientes grupos:
+
+### Windows:
+
+Sus archivos binarios son conocidos por su extensión “.exe”, que se ejecutan al abrir éstos archivos. El motor de ajedrez se puede descargar en el enlace. Y sus pesos en éste enlace.
+
+Los archivos comprimidos pueden contener código fuente del proyecto, por lo cual habría que buildear un binario “.exe” que añadiese ciertas funcionalidades en caso de ser necesario. Seguir leyendo el apartado “Linux”->”Compilar código fuente” para continuar el proceso general.
+
+### Linux:
+
+Una aclaración, es que Linux y sus derivados (Ubuntu, Fedora, RedHat, etc.) son los sistemas operativos que más se usan en software libre y por tanto, van en consonancia con la lógica del proyecto. En caso de que no poseáis una utilidad básica o programa necesitado por vuestro sistema(i.e. “git”), siempre podéis instalarlo desde vuestro gestor de paquetes (Google, bienvenido seas para ayudarme en esta ardua tarea). Podemos descargar los binarios a partir de archivos comprimidos llamados “tarballs” (.tar.gz), o bien compilar el código fuente del proyecto.
+
+1. **Descargar comprimidos:**
+
+    Click en el enlace para descargar. Una vez descargados, proseguir con:
+
+    `tar -xzvf <nombre_del_archivo>.tar.gz`
+    
+    Y ya tendremos nuestro binario llamado “lc0”. Descargar el archivo de pesos en éste enlace.
+
+2. **Compilar código fuente:**
+
+    Aquí el enlace al repositorio de lc0 en GitHub.
+
+    `git clone https://github.com/LeelaChessZero/lc0`
+
+    Esto os creará la carpeta “lc0” con los contenidos del repositorio online, en el directorio donde hayáis ejecutado el comando.
+
+    `cd ./lc0`
+
+    Desde aquí lo más recomendable siempre es seguir la guía de instalación, leyendo los archivos “README.md” o en su defecto, “INSTALL”. En el anexo de esta guía se ofrecerán referencias para poder construir el binario de manera que sea capaz de ejecutar el motor en GPU. Para instalar el binario compatible con CPU, se siguen los siguientes pasos:
+
+    Se instalan las dependencias necesarias marcadas por el proyecto. Una vez instaladas las dependencias, ejecutamos.
+
+    `./build.sh`
+
+    Y nos creará el binario en:
+
+    `cd ./build/release`
+
+    llamado “lc0”. Éste será el archivo que necesitaremos cargar. El archivo de pesos se puede descargar en éste enlace.
+
+### Mac OS:
+
+Para los sistemas operativos de la empresa Apple, como Mac OS, podemos seguir la compilación del código fuente como en el caso explicado antes de Linux, con la particularidad de que los compiladores que instalemos de nuestro gestor de paquetes lo harán en nuestra arquitectura de ordenador. Simplemente, se seguirá el proceso igual que en “Linux”->”Compilar código fuente”, y en el caso de faltar librerías o programas necesarios para la compilación, se instalarán desde el gestor de paquetes nativo (brew).
+
+## ANEXO 1. POST-INSTALACIÓN (opcional).
+
+Hay varias opciones adicionales que podemos tener en cuenta de manera general en el proceso post-instalación:
+
+- Añadir los binarios a la variable PATH del sistema. De esta forma, podemos ejecutar los comandos sin estar presentes en la carpeta donde se encuentren. En Windows, se procede editando la variable PATH del sistema y añadiendo la ruta (la carpeta donde se encuentran) de los binarios. En Linux, se puede editar el fichero “~/.bashrc” añadiendo lo siguiente:
+
+`export PATH=$PATH:<ruta_de_los_binarios>`
+
+
+## ANEXO 2. COMPATIBILIDAD CON GPU (opcional).
+
+Para el caso en que queramos compatibilidad con la poderosa GPU (lo cual puede ser muy útil para el entrenamiento del modelo y para cálculos congelados, es decir, aquellos en los que tenemos una posición del tablero fija y dejamos la máquina pensar un tiempo razonable), debemos seguir los pasos marcados en el repositorio oficial para el sistema operativo correspondiente.
+
+A grandes rasgos, hay que tener en cuenta los siguientes pasos:
+
+1. Comprobar si nuestro ordenador posee una GPU compatible con CUDA. CUDA es una tecnología de aceleración que permite a nuestro ordenador utilizar los recursos de la GPU originalmente destinados a cálculo de gráficos, a procesos de la CPU normal. CUDA es específico de las gráficas Nvidia, pero hoy en día su uso está tan extendido que es poco probable que no tengamos una GPU de Nvidia. Podemos consultar las GPU que soportan CUDA en éste enlace.
+2. En caso afirmativo de lo anterior, instalar el driver de GPU que corresponda al más actualizado y que soporte tu gráfica.
+3. Instalar CUDA-toolkit. Podemos hacerlo a través de la página oficial de CUDA, o a través de línea de comandos del sistema: `sudo apt-get install nvidia-cuda-toolkit`
+4. Compilar de nuevo el código fuente de “lc0”, ésta vez con las opciones que soporten CUDA, tal como se guía en el README.md del proyecto oficial en GitHub.
+
+-------------------------------
+Espero que este post os sea útil y que os aventuréis a probar este nuevo motor de análisis. Estoy seguro de que no os defraudará."
+5,2016-12-20-cosas-no-rectas.md,"{'layout': 'article', 'title': 'Cosas que no son rectas , se viene...', 'show_title': True, 'tags': ['Physics'], 'mathjax': True, 'mathjax_autonumber': True}","Hola gente. Vengo a probar un poco de nuevas cómo es colocar ecuaciones en HTML a Latex , de momento me voy acostumbrando. Y voy a aprovechar para hablaros de conceptos fundamentales de relatividad general. Aunque de más está decir que no seguiré esta saga en orden cronológico en un principio, aunque más tarde lo haré.
+
+¿Os acordáis cuando definíamos la norma relacionada con la distancia de un vector ?
+
+$$|s| = \sqrt{s^2} = \sqrt{x^2+y^2+z^2} = \sqrt{\rho^2 + z^2} = r $$
+
+Algo análogo a ésto en un lenguaje más complicado es:
+
+$$ds^2=g^{\mu\nu}dx^{\mu}dx^{\nu}= dx_{\mu}dx^{\mu}$$
+
+Donde teníamos nuestra métrica euclidiana en 3D , las típicas x , y , z.
+
+$$g^{\mu\nu}= \left(\begin{array}{1cr} 
+ 1 & 0 & 0  \\ 
+0 & 1 & 0  \\ 
+ 0 & 0 & 1\\ 
+\end{array}\right)$$
+
+Bien , en relatividad especial y general, se trata al tiempo como una más de estas coordenadas, lógicamente para que el tiempo tenga dimensión de longitud, se multiplicará por una velocidad. ¿Cuál? . Por motivos intrínsecos a la misma teoría, se escoge la velocidad de la luz en el vacío $$c = 3*10^9 m/s$$
+
+$$\eta^{\mu\nu}= \left(\begin{array}{1cr} 
+ -1 & 0 & 0 & 0 \\ 
+ 0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0 \\ 
+ 0 & 0 & 0 & 1\\ 
+\end{array}\right)$$
+
+Tenemos aquí la llamada métrica plana de Minkowski. Nos relaciona la estructura del espacio −1 , con el resto de componentes espaciales 1. Las distancias aquí no son lo que llamábamos antes la raíz cuadrada del cuadrado de las componentes en 3D , cuando sólo teníamos esos unos en la métrica.
+
+
+Para $$x^\mu=\left(\begin{array}{1cr} ct \\ x \\ y \\ z \\ \end{array} \right)= \left(\begin{array}{1cr} x^0 \\ x^1 \\ x^2 \\ x^3 \\ \end{array} \right)$$
+
+
+Ahora $$ds^2=\eta^{\mu\nu}dx^{\mu}dx^{\nu}= -(ct)^2+x^2+y^2+z^2$$
+
+Y es más, ésta ""distancia"" entre dos sucesos es invariante ,es decir, no cambia.
+
+Podemos hacer una clasificación entre trayectorias posibles que podríamos encontrarnos.
+
+$$−(ct)^2+x^2+y^2+z^2<0$$ trayectoria de género tiempo 
+
+$$−(ct)^2+x^2+y^2+z^2=0$$ trayectoria género luz 
+
+$$−(ct)^2+x^2+y^2+z^2>0$$, trayectoria género espacio 
+
+Podréis adivinar que las partículas con masa siguen trayectorias de género tiempo. Aquellas que no tienen masa, como el fotón, siguen trayectorias de género luz. Y partículas teóricas , como los taquiones , que viajan hacia ""atrás en el tiempo"", poseen trayectorias de género espacio.
+
+Esto es todo por hoy, en otro post discutiremos los postulados de la relatividad general.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo.","Hola gente. Vengo a probar un poco de nuevas cómo es colocar ecuaciones en HTML a Latex , de momento me voy acostumbrando. Y voy a aprovechar para hablaros de conceptos fundamentales de relatividad general. Aunque de más está decir que no seguiré esta saga en orden cronológico en un principio, aunque más tarde lo haré.
+
+¿Os acordáis cuando definíamos la norma relacionada con la distancia de un vector ?
+
+$$|s| = \sqrt{s^2} = \sqrt{x^2+y^2+z^2} = \sqrt{\rho^2 + z^2} = r $$
+
+Algo análogo a ésto en un lenguaje más complicado es:
+
+$$ds^2=g^{\mu\nu}dx^{\mu}dx^{\nu}= dx_{\mu}dx^{\mu}$$
+
+Donde teníamos nuestra métrica euclidiana en 3D , las típicas x , y , z.
+
+$$g^{\mu\nu}= \left(\begin{array}{1cr} 
+ 1 & 0 & 0  \\ 
+0 & 1 & 0  \\ 
+ 0 & 0 & 1\\ 
+\end{array}\right)$$
+
+Bien , en relatividad especial y general, se trata al tiempo como una más de estas coordenadas, lógicamente para que el tiempo tenga dimensión de longitud, se multiplicará por una velocidad. ¿Cuál? . Por motivos intrínsecos a la misma teoría, se escoge la velocidad de la luz en el vacío $$c = 3*10^9 m/s$$
+
+$$\eta^{\mu\nu}= \left(\begin{array}{1cr} 
+ -1 & 0 & 0 & 0 \\ 
+ 0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0 \\ 
+ 0 & 0 & 0 & 1\\ 
+\end{array}\right)$$
+
+Tenemos aquí la llamada métrica plana de Minkowski. Nos relaciona la estructura del espacio −1 , con el resto de componentes espaciales 1. Las distancias aquí no son lo que llamábamos antes la raíz cuadrada del cuadrado de las componentes en 3D , cuando sólo teníamos esos unos en la métrica.
+
+
+Para $$x^\mu=\left(\begin{array}{1cr} ct \\ x \\ y \\ z \\ \end{array} \right)= \left(\begin{array}{1cr} x^0 \\ x^1 \\ x^2 \\ x^3 \\ \end{array} \right)$$
+
+
+Ahora $$ds^2=\eta^{\mu\nu}dx^{\mu}dx^{\nu}= -(ct)^2+x^2+y^2+z^2$$
+
+Y es más, ésta ""distancia"" entre dos sucesos es invariante ,es decir, no cambia.
+
+Podemos hacer una clasificación entre trayectorias posibles que podríamos encontrarnos.
+
+$$−(ct)^2+x^2+y^2+z^2<0$$ trayectoria de género tiempo 
+
+$$−(ct)^2+x^2+y^2+z^2=0$$ trayectoria género luz 
+
+$$−(ct)^2+x^2+y^2+z^2>0$$, trayectoria género espacio 
+
+Podréis adivinar que las partículas con masa siguen trayectorias de género tiempo. Aquellas que no tienen masa, como el fotón, siguen trayectorias de género luz. Y partículas teóricas , como los taquiones , que viajan hacia ""atrás en el tiempo"", poseen trayectorias de género espacio.
+
+Esto es todo por hoy, en otro post discutiremos los postulados de la relatividad general.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo."
+6,2016-12-14-existe-Dios.md,"{'layout': 'article', 'title': 'REFLEXIONES: ¿Existe Dios para un científico?', 'show_title': True, 'tags': ['Physics']}","Hoy trataremos un tema que siempre nos hemos preguntado todos. Yo, recordando que soy un científico con cierto optimismo, al menos en la evolución , quizá piense que la ciencia pueda dar respuesta ahora o en un futuro a esta pregunta : ¿Existe algo más allá de nosotros mismos , algo con poder sobrenatural, que haya creado o dirija nuestras vidas y el cosmos completo?. Más bien la pregunta sería : ¿Qué funciones tendría algo de este estilo, de ser que exista, y cuál es su relación con nosotros? Más aún, la pregunta que no me gustaría que hiciéseis sería: ¿Para qué me va a servir saber que existe o incluso pensar en Dios?. Pero conmigo, por favor no piensen en ""Para qué me sirve"".
+
+Pero sobretodo la pregunta que relaciona mi profesión sería: ¿Nos puede ayudar la ciencia a saber si Dios existe o no?. Para ello haré una distinción clara entre filosofía y religión , al menos en hechos cronológicos desde lo que sucedió en la antiguedad. Los primeros filósofos griegos, como Tales de Mileto, ya echaban por tierra los fenómenos a los que la gente solía identificar con Dioses, no me pararé a explicar más ésto. Por ende, la filosofía desde sus orígenes ha estado enfrentada con la religión. En una época de control social como la de Tomás de Aquino, muchos clérigos intentaron someter la filosofía a la religión con ideas que a mi parecer introducen falacias o falsedades que son aceptables culturalmente, pero que dejan mucho que desear para un examen exhaustivo.
+
+No daré inmediatamente el paso de filosofía a ciencia, porque principalmente, no lo tiene. Para mí son cosas distintas, aunque en sus inicios se complementaron muy bien. La filosofía aún sigue participando y aceptando ideas que son culturalmente aceptables, como la idea del bien o el mal universal, la verdad, y la subjetividad de cada uno de los invididuos, pero que como digo, un examen exhaustivo podría poner en duda muchos de estos conceptos. Parece que la filosofía es un terreno tremendamente subjetivo. Y es cierto que desde la subjetividad se pueden contemplar muchos puntos de vista e incluso apreciarlos, pero es un tipo de aprecio como el que un padre tiene a su hijo: soy el adulto y pienso mejor que tú, por tanto mi opinión será más válida. Aceptémoslo, la subjetividad siempre será así. Muchos científicos piensan que la filosofía es complementaria de la ciencia e incluso se necesitan mutuamente. Yo discrepo. Principalmente porque no piensan igual, las reglas del ""juego"" no son las mismas para ambas disciplinas. Las ideas de verdad y belleza no son necesarias para la ciencia, e incluso podrían llegar a contaminar la actividad científica. Alguien que haya leído biografías de científicos sabrán de lo que hablo. Pero no podemos despegarnos nunca de la subjetividad que nos hace humanos.
+
+Y ahora me diréis que llegaré a la conclusión de que la ciencia es la verdad objetiva y absoluta, que ansío llegar con este razonamiento ahí. Pues no. La ciencia se pregunta sobre sí misma y debe ser crítica en todo momento. Las personas somos subjetivas, incluso los científicos. Dentro de nosotros, sabemos que queremos llegar a algo bonito, un bonito final. Incluso yo tengo la idea de que quiero trabajar para encontrar algo bello y ordenado, no un universo lleno de caos e impredecibilidad. Incluso dentro del caos debemos buscar orden y comprensión. Muchos grandes científicos también trabajaron con esta idea en la cabeza :vamos a crear lo más simple dentro de nuestras teorías que nos permita comprender todos los fenómenos del mundo natural. Otro día os hablaré de Einstein-Podolsky-Rosen, también os recomiendo veáis la película `Matrix` para empezar a darle vueltas al tema. La ciencia intenta ser la verdad, pero algo lo suficientemente simple como para entender la naturaleza sin recurrir a ese misticismo sin sentido del pasado. ¿ Qué hay de verdad en todo esto?
+
+Estrictamente hablando , no existe conexión entre la idea de Dios y el mundo científico, al menos como lo pienso yo. ¿Porqué? Porque no sabemos qué es Dios. ¿Es el dios musulmán, el cristiano , o el de alguna tribu indígena? ¿Hay uno sólo? ¿Qué papel desempeña? ¿Fiarse de supuestos espíritus que nos hablan o de nuestra idea de belleza y simpleza es suficiente prueba para el método científico como para llegar a una conclusión? En mi opinión no, y nunca lo será. Porque tenemos que partir de algo que entendamos con nuestros sentidos y nuestra experiencia cotidiana, para indagar más sobre el asunto, incluso de forma matemática. Por ello creo que la única opinión coherente que puede tener la ciencia al respecto es el agnosticismo, tan válido como el que posee Stephen Hawking , entre otros.
+
+Lo que sí es cierto es que podemos obtener cientos de hechos objetivos, o ""pistas subjetivas"" para afirmar o negar la existencia de Dios. El hecho de que haya unas leyes en el universo y no otras, por ejemplo, permite nuestra delicada existencia. El tamaño y la carga de un electrón, las partículas que lo componen, sus interacciones, sus ratios, sus spines... la ""fuerza"" de la gravedad junto con otras e incluso la relatividad especial y general, la historia aparentemente caótica que siguió nuestro universo y en el cual predominó la materia sobre la antimateria...y algunas otras historias de un joven científico. Todo ello conjuntamente permite nuestra delicada existencia. Pregunta: ¿somos el resultado aleatorio de todo este conjunto de cosas que permiten nuestra delicada existencia , o algo ha creado este universo para que se mantenga estable siguiendo un orden cósmico y nosotros somos, al igual que todas las cosas , parte de ese plan? Respuesta: ¿qué vino antes, el huevo o la gallina? Imposible saberlo. Creo que sí que podríamos encontrar alguna civilización extraterrestre o incluso algún mecanismo de otra dimensión que influya en nuestras vidas e incluso nos dirija. ¿Pero llamaremos ""Dios"" a eso? ¿O algo se esconderá incluso detrás de ellos? El tiempo dirá que nos depara ese saber. Una cosa es clara, las preguntas no hacen más que comenzar.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo.","Hoy trataremos un tema que siempre nos hemos preguntado todos. Yo, recordando que soy un científico con cierto optimismo, al menos en la evolución , quizá piense que la ciencia pueda dar respuesta ahora o en un futuro a esta pregunta : ¿Existe algo más allá de nosotros mismos , algo con poder sobrenatural, que haya creado o dirija nuestras vidas y el cosmos completo?. Más bien la pregunta sería : ¿Qué funciones tendría algo de este estilo, de ser que exista, y cuál es su relación con nosotros? Más aún, la pregunta que no me gustaría que hiciéseis sería: ¿Para qué me va a servir saber que existe o incluso pensar en Dios?. Pero conmigo, por favor no piensen en ""Para qué me sirve"".
+
+Pero sobretodo la pregunta que relaciona mi profesión sería: ¿Nos puede ayudar la ciencia a saber si Dios existe o no?. Para ello haré una distinción clara entre filosofía y religión , al menos en hechos cronológicos desde lo que sucedió en la antiguedad. Los primeros filósofos griegos, como Tales de Mileto, ya echaban por tierra los fenómenos a los que la gente solía identificar con Dioses, no me pararé a explicar más ésto. Por ende, la filosofía desde sus orígenes ha estado enfrentada con la religión. En una época de control social como la de Tomás de Aquino, muchos clérigos intentaron someter la filosofía a la religión con ideas que a mi parecer introducen falacias o falsedades que son aceptables culturalmente, pero que dejan mucho que desear para un examen exhaustivo.
+
+No daré inmediatamente el paso de filosofía a ciencia, porque principalmente, no lo tiene. Para mí son cosas distintas, aunque en sus inicios se complementaron muy bien. La filosofía aún sigue participando y aceptando ideas que son culturalmente aceptables, como la idea del bien o el mal universal, la verdad, y la subjetividad de cada uno de los invididuos, pero que como digo, un examen exhaustivo podría poner en duda muchos de estos conceptos. Parece que la filosofía es un terreno tremendamente subjetivo. Y es cierto que desde la subjetividad se pueden contemplar muchos puntos de vista e incluso apreciarlos, pero es un tipo de aprecio como el que un padre tiene a su hijo: soy el adulto y pienso mejor que tú, por tanto mi opinión será más válida. Aceptémoslo, la subjetividad siempre será así. Muchos científicos piensan que la filosofía es complementaria de la ciencia e incluso se necesitan mutuamente. Yo discrepo. Principalmente porque no piensan igual, las reglas del ""juego"" no son las mismas para ambas disciplinas. Las ideas de verdad y belleza no son necesarias para la ciencia, e incluso podrían llegar a contaminar la actividad científica. Alguien que haya leído biografías de científicos sabrán de lo que hablo. Pero no podemos despegarnos nunca de la subjetividad que nos hace humanos.
+
+Y ahora me diréis que llegaré a la conclusión de que la ciencia es la verdad objetiva y absoluta, que ansío llegar con este razonamiento ahí. Pues no. La ciencia se pregunta sobre sí misma y debe ser crítica en todo momento. Las personas somos subjetivas, incluso los científicos. Dentro de nosotros, sabemos que queremos llegar a algo bonito, un bonito final. Incluso yo tengo la idea de que quiero trabajar para encontrar algo bello y ordenado, no un universo lleno de caos e impredecibilidad. Incluso dentro del caos debemos buscar orden y comprensión. Muchos grandes científicos también trabajaron con esta idea en la cabeza :vamos a crear lo más simple dentro de nuestras teorías que nos permita comprender todos los fenómenos del mundo natural. Otro día os hablaré de Einstein-Podolsky-Rosen, también os recomiendo veáis la película `Matrix` para empezar a darle vueltas al tema. La ciencia intenta ser la verdad, pero algo lo suficientemente simple como para entender la naturaleza sin recurrir a ese misticismo sin sentido del pasado. ¿ Qué hay de verdad en todo esto?
+
+Estrictamente hablando , no existe conexión entre la idea de Dios y el mundo científico, al menos como lo pienso yo. ¿Porqué? Porque no sabemos qué es Dios. ¿Es el dios musulmán, el cristiano , o el de alguna tribu indígena? ¿Hay uno sólo? ¿Qué papel desempeña? ¿Fiarse de supuestos espíritus que nos hablan o de nuestra idea de belleza y simpleza es suficiente prueba para el método científico como para llegar a una conclusión? En mi opinión no, y nunca lo será. Porque tenemos que partir de algo que entendamos con nuestros sentidos y nuestra experiencia cotidiana, para indagar más sobre el asunto, incluso de forma matemática. Por ello creo que la única opinión coherente que puede tener la ciencia al respecto es el agnosticismo, tan válido como el que posee Stephen Hawking , entre otros.
+
+Lo que sí es cierto es que podemos obtener cientos de hechos objetivos, o ""pistas subjetivas"" para afirmar o negar la existencia de Dios. El hecho de que haya unas leyes en el universo y no otras, por ejemplo, permite nuestra delicada existencia. El tamaño y la carga de un electrón, las partículas que lo componen, sus interacciones, sus ratios, sus spines... la ""fuerza"" de la gravedad junto con otras e incluso la relatividad especial y general, la historia aparentemente caótica que siguió nuestro universo y en el cual predominó la materia sobre la antimateria...y algunas otras historias de un joven científico. Todo ello conjuntamente permite nuestra delicada existencia. Pregunta: ¿somos el resultado aleatorio de todo este conjunto de cosas que permiten nuestra delicada existencia , o algo ha creado este universo para que se mantenga estable siguiendo un orden cósmico y nosotros somos, al igual que todas las cosas , parte de ese plan? Respuesta: ¿qué vino antes, el huevo o la gallina? Imposible saberlo. Creo que sí que podríamos encontrar alguna civilización extraterrestre o incluso algún mecanismo de otra dimensión que influya en nuestras vidas e incluso nos dirija. ¿Pero llamaremos ""Dios"" a eso? ¿O algo se esconderá incluso detrás de ellos? El tiempo dirá que nos depara ese saber. Una cosa es clara, las preguntas no hacen más que comenzar.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo."
+7,2016-12-13-apertura-pagina.md,"{'layout': 'article', 'title': 'REFLEXIONES: ¿Porqué abro esta página?', 'show_title': True, 'tags': ['Physics']}","Hola a todos , bienvenidos a mi nueva página , que hablará por y para la ciencia. Espero que esta sea la primera de muchas entradas que dedico a la ciencia y a la divulgación de la misma, sobre todo espero que sea algo más enfocado a la vida y evolución personal de un científico , que en mi caso, soy yo.
+
+Mi objetivo es acercar la ciencia a la gente, poniendo de manifiesto la belleza de la misma y su inquietud sobre temas existenciales que comparten otras ramas tan importantes como la misma religión o filosofía. Hablaremos de ellas , pero también hablaremos de temas más técnicos tratados con lenguaje científico y de noticias relacionadas con el mundo científico. Pero la idea principal es que todo el mundo sea capaz de entender cada una de las entradas de este blog y sea capaz de profundizar si así desea en el conocimiento de áreas tan importantes como la Astrofísica , Física Teórica  o Física de Altas Energías.
+
+Si estás pensando en ser científico o siempre te ha interesado el tema, esta página te resultará muy interesante y esclarecedora, así como mis post sobre ciencia, entrevistas... etc, que iré enlazando para que todos vosotros disfrutéis si os gusta pensar sobre el mundo y sobre cosas más allá de nuestra vida cotidiana. Como siempre, podéis mandarme mensajes a mi correo electrónico que dejaré en mi perfil.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo.","Hola a todos , bienvenidos a mi nueva página , que hablará por y para la ciencia. Espero que esta sea la primera de muchas entradas que dedico a la ciencia y a la divulgación de la misma, sobre todo espero que sea algo más enfocado a la vida y evolución personal de un científico , que en mi caso, soy yo.
+
+Mi objetivo es acercar la ciencia a la gente, poniendo de manifiesto la belleza de la misma y su inquietud sobre temas existenciales que comparten otras ramas tan importantes como la misma religión o filosofía. Hablaremos de ellas , pero también hablaremos de temas más técnicos tratados con lenguaje científico y de noticias relacionadas con el mundo científico. Pero la idea principal es que todo el mundo sea capaz de entender cada una de las entradas de este blog y sea capaz de profundizar si así desea en el conocimiento de áreas tan importantes como la Astrofísica , Física Teórica  o Física de Altas Energías.
+
+Si estás pensando en ser científico o siempre te ha interesado el tema, esta página te resultará muy interesante y esclarecedora, así como mis post sobre ciencia, entrevistas... etc, que iré enlazando para que todos vosotros disfrutéis si os gusta pensar sobre el mundo y sobre cosas más allá de nuestra vida cotidiana. Como siempre, podéis mandarme mensajes a mi correo electrónico que dejaré en mi perfil.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo."
+8,2016-12-20-string-theory.md,"{'layout': 'article', 'title': 'String Theory: Progress and Problems', 'show_title': True, 'tags': ['Physics']}","String theory became a hot subject in the mid-1980s when it became clear that it might give a deeper understanding of the origins of the standard model and a consistent quantum theory containing gravity. At that time five consistent string theories were known, each of which requires ten spacetime dimensions and supersymmetry. They are called:
+
+`Type I, Type IIA, Type IIB`
+
+`SO(32) heterotic, E8 × E8 heterotic`
+
+Each of these theories is entirely free of adjustable dimensionless parameters. All dimensionless parameters arise in either of two possible ways:
+
+- dynamically as the expectation values of scalar fields
+- as integers that count something such as topological invariants, physical objects (branes), or quantized fluxes.
+
+One scheme looked particularly promising in the mid-1980s. Specifically, the E8 × E8 heterotic theory has consistent vacuum solutions in which six spatial dimensions form a compact Calabi–Yau manifold, which has SU(3) holonomy, and the other four dimensions form Minkowski spacetime [4]. Thus, the ten-dimensional spacetime M10 is a direct product
+
+`M10 = CY6 × M3,1`
+
+The effective four-dimensional theories that characterize such solutions at low energies have the following attractive features:
+
+- They have the structure of supersymmetric grand unified theories. The well-known advantages of low-energy supersymmetry and grand unification are therefore naturally incorporated.
+
+- Each solution has a definite number of families of quarks and leptons determined by the topology of the CY space.
+
+- The standard model gauge symmetry is embedded in one E8 factor, and there is a hidden sector, associated to the second E8 factor. Supersymmetry can break dynamically (by gluino condensation) in the hidden sector. This breaking is communicated gravitationally to the visible sector. Such schemes suppress unwanted flavor-changing neutral currents, though possibly not as much as is required.
+
+- There are several good dark-matter candidates: The lightest supersymmetric particle, called the LSP (perhaps a neutralino) is absolutely stable if there is an unbroken R symmetry, as generally supposed to be the case. A stable neutralino has the right properties for weakly interacting cold dark matter (a WIMP). Other possibilities include gravitinos, axions, and hidden-sector particles. Despite the exuberance that was in the air in 1985,1 there was much that was not yet understood. The successes were qualitative, and there were many problems and puzzling questions. Some of these problems and questions were the following:
+
+- Hundreds of Calabi–Yau manifolds were known (now there are many thousands). Which one of them, if any, is the right one? Is there a principle (other than agreement with observations) by which the right one can be determined? Are there string-theory based schemes other than CY compactification of the E8 × E8 heterotic theory that can give quasi-realistic solutions?
+
+- Why are there four other consistent superstring theories? After all, we only need one fundamental theory. Are some of them inconsistent, or else, could some of them somehow be equivalent?
+
+- The CY compactification scenario was analyzed using perturbation theory, but there is no good reason to believe that the string coupling should be small. What new nonperturbative features appear at strong coupling? Does the same qualitative picture continue to hold at strong coupling?
+
+- The CY solutions typically give many massless scalars (called moduli). Since the moduli have gravitational strength interactions, they are ruled out by standard tests of GR. How can we get rid of them? The effective potential does not depend on the values of the moduli, so they describe flat directions. One should somehow stabilize the moduli by generating an effective potential with isolated minima and no flat directions.
+
+- What ensures that the vacuum energy density (or dark energy) is sufficiently small, namely of order 10−120 in Planck units? In 1985 it was generally believed to be zero, so one popular idea was to look for a symmetry principle that would enforce this. It is just as well that such a symmetry was never found, since we now know that the vacuum energy density is not exactly zero. A generic nonsupersymmetric vacuum is expected","String theory became a hot subject in the mid-1980s when it became clear that it might give a deeper understanding of the origins of the standard model and a consistent quantum theory containing gravity. At that time five consistent string theories were known, each of which requires ten spacetime dimensions and supersymmetry. They are called:
+
+`Type I, Type IIA, Type IIB`
+
+`SO(32) heterotic, E8 × E8 heterotic`
+
+Each of these theories is entirely free of adjustable dimensionless parameters. All dimensionless parameters arise in either of two possible ways:
+
+- dynamically as the expectation values of scalar fields
+- as integers that count something such as topological invariants, physical objects (branes), or quantized fluxes.
+
+One scheme looked particularly promising in the mid-1980s. Specifically, the E8 × E8 heterotic theory has consistent vacuum solutions in which six spatial dimensions form a compact Calabi–Yau manifold, which has SU(3) holonomy, and the other four dimensions form Minkowski spacetime [4]. Thus, the ten-dimensional spacetime M10 is a direct product
+
+`M10 = CY6 × M3,1`
+
+The effective four-dimensional theories that characterize such solutions at low energies have the following attractive features:
+
+- They have the structure of supersymmetric grand unified theories. The well-known advantages of low-energy supersymmetry and grand unification are therefore naturally incorporated.
+
+- Each solution has a definite number of families of quarks and leptons determined by the topology of the CY space.
+
+- The standard model gauge symmetry is embedded in one E8 factor, and there is a hidden sector, associated to the second E8 factor. Supersymmetry can break dynamically (by gluino condensation) in the hidden sector. This breaking is communicated gravitationally to the visible sector. Such schemes suppress unwanted flavor-changing neutral currents, though possibly not as much as is required.
+
+- There are several good dark-matter candidates: The lightest supersymmetric particle, called the LSP (perhaps a neutralino) is absolutely stable if there is an unbroken R symmetry, as generally supposed to be the case. A stable neutralino has the right properties for weakly interacting cold dark matter (a WIMP). Other possibilities include gravitinos, axions, and hidden-sector particles. Despite the exuberance that was in the air in 1985,1 there was much that was not yet understood. The successes were qualitative, and there were many problems and puzzling questions. Some of these problems and questions were the following:
+
+- Hundreds of Calabi–Yau manifolds were known (now there are many thousands). Which one of them, if any, is the right one? Is there a principle (other than agreement with observations) by which the right one can be determined? Are there string-theory based schemes other than CY compactification of the E8 × E8 heterotic theory that can give quasi-realistic solutions?
+
+- Why are there four other consistent superstring theories? After all, we only need one fundamental theory. Are some of them inconsistent, or else, could some of them somehow be equivalent?
+
+- The CY compactification scenario was analyzed using perturbation theory, but there is no good reason to believe that the string coupling should be small. What new nonperturbative features appear at strong coupling? Does the same qualitative picture continue to hold at strong coupling?
+
+- The CY solutions typically give many massless scalars (called moduli). Since the moduli have gravitational strength interactions, they are ruled out by standard tests of GR. How can we get rid of them? The effective potential does not depend on the values of the moduli, so they describe flat directions. One should somehow stabilize the moduli by generating an effective potential with isolated minima and no flat directions.
+
+- What ensures that the vacuum energy density (or dark energy) is sufficiently small, namely of order 10−120 in Planck units? In 1985 it was generally believed to be zero, so one popular idea was to look for a symmetry principle that would enforce this. It is just as well that such a symmetry was never found, since we now know that the vacuum energy density is not exactly zero. A generic nonsupersymmetric vacuum is expected"
+9,2011-06-17-e4-d4-c4.md,"{'layout': 'article', 'title': '1.e4 vs 1.d4 vs 1.c4', 'show_title': True, 'tags': ['Chess']}","Hablaré ahora sobre las distintas aperturas más conocidas y populares. Por supuesto que hay más aperturas y todas ellas merecen ser tomadas en consideración, pero dado que estas tres aperturas son las más jugadas y comunes en torneos y demás, hablaremos sobre estas 3 por motivos prácticos.De estas 3 aperturas se derivan la gran mayoría de esquemas y temas comunes, como el poeón de damaaislado, la estructura maaroczy, la estructura carlsbad, etc.
+
+A continuación iré describiendo en qué consiste cada salida y las consideraciones generales que se tienen sobre ellas y los tipos de jugadores y esquemas que se esconden tras ellas, será un buen comentario crítico sobre ellas, espero que os gust
+
+1 e4
+Los jugadores de e4 son , en su gran mayoría, agresivos y tácticos. Se recomiendaen edades tempranas jugar e4, porque se necesita crear una buena base táctica y desarrollar la lógica en el juego abierto. Se denominan aperturas abiertas a todas las aperturas que comienzan por 1 e4 e5. Se denominan aperturas semicerradas a culquier apertura cuya primera jugada blanca sea  1e4 y el negro responda cualquier otra cosa que no sea e5. Por tanto, e4 englobalas aperturas semicerradas y abiertas. En mi opinión es la mejro apertura, por tanto la juego, pero hay que saber bastante teoría, ya que en el juego abierto cualquiier fallo suele ser más peligroso que en el juego cerrado, con la ventaja de que también tu rival puede equivocarse antes y ganar tú, o como se dice, la partida tiene un ritmo rápido. También hay que mencionar que ciertas aperturas como la defensa Petrodf se consideran tablíferas, y que bastantes estructuras de e4 también. Aun así, es mi apertura.
+
+1 d4
+Los jugadores de d4 son en su mayoría estratégicos, auqnue eso no quiere decir que les falte la táctica. Dentro de esta jugada hay mucha variabilidad de esquemas , algunos más tácticos y activos que otros, , otros más cerrados, y tablíferos.Suele ser importante la elección de un plan de juego, aunque siempre lo es, especialmente en las possiciones de peon de dama.","Hablaré ahora sobre las distintas aperturas más conocidas y populares. Por supuesto que hay más aperturas y todas ellas merecen ser tomadas en consideración, pero dado que estas tres aperturas son las más jugadas y comunes en torneos y demás, hablaremos sobre estas 3 por motivos prácticos.De estas 3 aperturas se derivan la gran mayoría de esquemas y temas comunes, como el poeón de damaaislado, la estructura maaroczy, la estructura carlsbad, etc.
+
+A continuación iré describiendo en qué consiste cada salida y las consideraciones generales que se tienen sobre ellas y los tipos de jugadores y esquemas que se esconden tras ellas, será un buen comentario crítico sobre ellas, espero que os gust
+
+1 e4
+Los jugadores de e4 son , en su gran mayoría, agresivos y tácticos. Se recomiendaen edades tempranas jugar e4, porque se necesita crear una buena base táctica y desarrollar la lógica en el juego abierto. Se denominan aperturas abiertas a todas las aperturas que comienzan por 1 e4 e5. Se denominan aperturas semicerradas a culquier apertura cuya primera jugada blanca sea  1e4 y el negro responda cualquier otra cosa que no sea e5. Por tanto, e4 englobalas aperturas semicerradas y abiertas. En mi opinión es la mejro apertura, por tanto la juego, pero hay que saber bastante teoría, ya que en el juego abierto cualquiier fallo suele ser más peligroso que en el juego cerrado, con la ventaja de que también tu rival puede equivocarse antes y ganar tú, o como se dice, la partida tiene un ritmo rápido. También hay que mencionar que ciertas aperturas como la defensa Petrodf se consideran tablíferas, y que bastantes estructuras de e4 también. Aun así, es mi apertura.
+
+1 d4
+Los jugadores de d4 son en su mayoría estratégicos, auqnue eso no quiere decir que les falte la táctica. Dentro de esta jugada hay mucha variabilidad de esquemas , algunos más tácticos y activos que otros, , otros más cerrados, y tablíferos.Suele ser importante la elección de un plan de juego, aunque siempre lo es, especialmente en las possiciones de peon de dama."
+10,2016-12-14-ondas-gravitatorias.md,"{'layout': 'article', 'title': 'Ondas gravitatorias', 'show_title': True, 'mathjax': True}","Hola gente. Vengo hoy a explicaros qué es eso de las ondas gravitatorias y porqué se habla tanto de ellas. Podría poneros muchos links que lleven a páginas que lo expliquen y que os den información muy interesante, pero prefiero hacer mi propia charla de esto.
+
+- **Primera parte: ""Onda"".** Una onda es una perturbación que se propaga por el espacio a una velocidad finita. ¿Qué es una perturbación? Un cambio en las propiedades de un objeto o un campo. Con entender ésto medianamente me vale, hay muchas cosas que se podrían decir sobre las ondas.
+
+- **Segunda parte: ""Gravitacional"".** Medianamente entendible en lenguaje coloquial, muy complicado de entender en lenguaje físico. Entra aquí en juego la Relatividad General, y movidas para las cuales habría que estudiar unos años.
+
+Desde los tiempos de la Relatividad Especial, *Einstein* postuló la existencia de ondas gravitatorias, al tiempo que afirmaba que como nada podía viajar más rápido que la luz, tampoco podía hacerlo la gravedad, es decir, la acción que la gravedad ejerce sobre un cuerpo. Así, si el Sol desapareciera de repente, nuestra Tierra seguiría en órbita en torno a un punto imaginario durante aproximadamente 8 minutos el tiempo que tarda la luz en viajar del Sol a la Tierra. También , si se creara un Sol instantáneamente en algún punto del sistema Solar , nuestro planeta sufriría una nueva órbita pasado un cierto tiempo. Se puede entender entonces el concepto de ""Onda gravitatoria"" ahora, con lo que hemos dicho anteriormente.
+
+Algo más sutil encontramos cuando nos metemos en las tripas de la Relatividad General. En ella, las masas medianamente grandes, para efectos apreciables, deforman la estructura del espacio y el flujo del tiempo, de forma que las masas se atraen por efectos geométricos de este mismo espacio-tiempo, y no porque en sí haya una fuerza que medie entre ambas. La luz no sigue tampoco entonces una línea recta o deflexión de la luz, sino que ahora se cambia el concepto a seguir **líneas geodésicas**, dando a entender que no siempre lo recto es recto, al menos en presencia de masas considerables.
+
+Pues bien, como el todo es más que la suma de las partes, vamos a juntarlo todo. `Onda gravitatoria` es una perturbación de un objeto en los casos que podemos hallar,agujeros negros súper-masivos binarios , que consiste en una deformación del espacio-tiempo como consecuencia de una interacción, y que ésta se propaga a través del espacio y puede llegar o no, a nosotros. ¿Cómo sabemos que hemos visto una onda gravitatoria? Con experimentos de detección, cómo no. Uno de los más famosos es el experimento `LIGO (Laser Inteferometer Gravitational Observatory)`, usando láseres de alta precisión y un interferómetro , para medir la diferencia de longitudes entre dos brazos metálicos colocados en dos posiciones perpendiculares, haciendo así que un brazo se alargue o achique más que otro al detectar la presencia de una onda gravitatoria en su dirección. Os dejaré un artículo para que podáis informaros mejor del experimento.
+
+Éste demuestra la existencia de ondas gravitatorias que fueron postuladas un siglo atrás , por Albert Einstein. Esto nos da nuevos ojos para ver el Universo. ¿Porqué?. Porque hasta ahora sólo hemos tenido un sólo medio de información para ver el Universo : la luz (ondas electromagnéticas). Luz con sus diferentes intensidades y diferentes fuentes (se puede identificar los elementos químicos que crean luz a partir de su espectrografía), con sus modelos de comportamiento... En definitiva, se han llenado tomos y tomos sobre el Universo, mucha gente trabaja y se quiere dedicar (yo entre otros) a ésto, y nuestra única herramienta es la luz eso sí, estudiada al extremo. Quién sabe lo que se podría encontrar allí afuera con una nueva fuente de conocimiento, como son las ondas gravitatorias, aunque eso sí, de detección más dificultosa. Pero ahí están, y una nueva etapa de la ciencia está por descubrirse.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo.","Hola gente. Vengo hoy a explicaros qué es eso de las ondas gravitatorias y porqué se habla tanto de ellas. Podría poneros muchos links que lleven a páginas que lo expliquen y que os den información muy interesante, pero prefiero hacer mi propia charla de esto.
+
+- **Primera parte: ""Onda"".** Una onda es una perturbación que se propaga por el espacio a una velocidad finita. ¿Qué es una perturbación? Un cambio en las propiedades de un objeto o un campo. Con entender ésto medianamente me vale, hay muchas cosas que se podrían decir sobre las ondas.
+
+- **Segunda parte: ""Gravitacional"".** Medianamente entendible en lenguaje coloquial, muy complicado de entender en lenguaje físico. Entra aquí en juego la Relatividad General, y movidas para las cuales habría que estudiar unos años.
+
+Desde los tiempos de la Relatividad Especial, *Einstein* postuló la existencia de ondas gravitatorias, al tiempo que afirmaba que como nada podía viajar más rápido que la luz, tampoco podía hacerlo la gravedad, es decir, la acción que la gravedad ejerce sobre un cuerpo. Así, si el Sol desapareciera de repente, nuestra Tierra seguiría en órbita en torno a un punto imaginario durante aproximadamente 8 minutos el tiempo que tarda la luz en viajar del Sol a la Tierra. También , si se creara un Sol instantáneamente en algún punto del sistema Solar , nuestro planeta sufriría una nueva órbita pasado un cierto tiempo. Se puede entender entonces el concepto de ""Onda gravitatoria"" ahora, con lo que hemos dicho anteriormente.
+
+Algo más sutil encontramos cuando nos metemos en las tripas de la Relatividad General. En ella, las masas medianamente grandes, para efectos apreciables, deforman la estructura del espacio y el flujo del tiempo, de forma que las masas se atraen por efectos geométricos de este mismo espacio-tiempo, y no porque en sí haya una fuerza que medie entre ambas. La luz no sigue tampoco entonces una línea recta o deflexión de la luz, sino que ahora se cambia el concepto a seguir **líneas geodésicas**, dando a entender que no siempre lo recto es recto, al menos en presencia de masas considerables.
+
+Pues bien, como el todo es más que la suma de las partes, vamos a juntarlo todo. `Onda gravitatoria` es una perturbación de un objeto en los casos que podemos hallar,agujeros negros súper-masivos binarios , que consiste en una deformación del espacio-tiempo como consecuencia de una interacción, y que ésta se propaga a través del espacio y puede llegar o no, a nosotros. ¿Cómo sabemos que hemos visto una onda gravitatoria? Con experimentos de detección, cómo no. Uno de los más famosos es el experimento `LIGO (Laser Inteferometer Gravitational Observatory)`, usando láseres de alta precisión y un interferómetro , para medir la diferencia de longitudes entre dos brazos metálicos colocados en dos posiciones perpendiculares, haciendo así que un brazo se alargue o achique más que otro al detectar la presencia de una onda gravitatoria en su dirección. Os dejaré un artículo para que podáis informaros mejor del experimento.
+
+Éste demuestra la existencia de ondas gravitatorias que fueron postuladas un siglo atrás , por Albert Einstein. Esto nos da nuevos ojos para ver el Universo. ¿Porqué?. Porque hasta ahora sólo hemos tenido un sólo medio de información para ver el Universo : la luz (ondas electromagnéticas). Luz con sus diferentes intensidades y diferentes fuentes (se puede identificar los elementos químicos que crean luz a partir de su espectrografía), con sus modelos de comportamiento... En definitiva, se han llenado tomos y tomos sobre el Universo, mucha gente trabaja y se quiere dedicar (yo entre otros) a ésto, y nuestra única herramienta es la luz eso sí, estudiada al extremo. Quién sabe lo que se podría encontrar allí afuera con una nueva fuente de conocimiento, como son las ondas gravitatorias, aunque eso sí, de detección más dificultosa. Pero ahí están, y una nueva etapa de la ciencia está por descubrirse.
+
+> ""Gente del mañana y del hoy, evolución del ayer hombre mono.Ahora tenemos otras necesidades.""
+
+Un abrazo."
+11,2011-06-14-chess-my-history.md,"{'layout': 'article', 'title': 'Historia personal', 'show_title': True, 'tags': ['Chess']}","Este post puede llegar a ser muy aburrido y largo, quedan avisados, si se les cansa la vista por mi culpa , tienen que acudir a un oculista y/o les causo una depresión por aburrimiento, no me hago responsable ;). De todas formas intentaré ser breve.
+
+Empecé en esto hará unos 9 años. Yo por ese entonces tocaba el piano, mi padre me enseñó un día de buenas a primeras a jugar al ajedrez. Tras unos días de aprender, empecé a jugar partidas con él. La cosa era que yo tocaba media hora el piano y después echábamos una partida de ajedrez. Siempre me ganaba él.
+
+Hasta que un buen día, quizá un buen día en 2 o 3 meses, le gané yo. Empezó a gustarme. A partir de ahí me ganaba algunas y yo otras..., empezó a formarse en mí ese gusto por la competición limpia que todo jugador tiene. Un día mi padre decidió llevarme a mi primer club de Ajedrez , en el centro cívico Sebastián Cuevas, por aquel entonces regido por Francisco Javier Jiménez Crespo, alguien de quien tampoco me olvidaré nunca. Actualmente lo lleva Julián Campos, alumno de Fran, quien retomó el club después de que éste lo dejara.
+
+Al principio era un club lleno de chavales con más edad que yo, recuerdo que todos tenían entre 11 y 17 años , salvo algunos chiquillos que eran bastante más chicos que yo y alguien creo de mi edad. Había un segundo delegado del club llamado Daniel. Fran me empezaba a enseñar cosas mientras yo jugaba con todos los del club. Pasado un mes, tomé la costumbre de echar muchas partidas con Dani, al principio siempre me ganó pero luego fuí remontando. Entonces Fran me propuso federarme para jugar los campeonatos de Andalucía, y lo hice. Me dió entonces 2 grandes libros con temas generales de ajedrez para que me mirara. En el club hacíamos grandes pasapiezas de 8 tableros y alguna vez lo hicimos de 10 y 12, donde uno hacía de transportador de piezas. De vez en cuando yo jugaba algún torneo por cañero. Por aquellos entonces, esto fueron mis orígenes.
+
+Me aprendí bien lo que había en esos libros y seguí progresando. Entraba ese año como sub-12 en los campeonatos de andalucía, que se celebraron en Roquetas de Mar. No quedé muy bien parado pero fui conociendo a gente y ya definitivamente me gustaba.
+
+Cuando tenía 10 años, fuí a un torneo de Córdoba en la Fuensanta donde conocí a otro entrenador, y hasta ahora el que más me ha ayudado: Pedro Manuel Navarro Torres. A él le debo casi todo lo que sé y toda mi progresión ajedrecística en los últimos 5 años y medio. Me dijo que tenía un club y que me pasara, yo lo hice, también había otra panda de chavales, pero ya en un ambiente más serio. Dimos clase en muchos sitios y nos mandaba ejercicios de táctica. Yo siempre que podía se los hacía , otra gente no tanto. Empecé a dejar el club de Fran poco a poco, y éste medio año después no tuvo tiempo para seguir llevando el club y lo cerró. Como yo le hacía ejercicios de táctica y los llevaba al día, por así decirlo era un favorito de la clase.Empezó a darme ya mi primera teoría de apertura, la cual evado de mencionar aquí debido a la privacidad de mi repertorio, aunque supongo que mucha gente lo sabrá.
+
+El año siguiente me clasifiqué como campeón de sub12 en córdoba y fui pagado al campeonato de andalucía, tampoco recuerdo muy bien en qué puesto quedé. Empecé a jugar una serie de torneos importantes en esta etapa de 12 a 14 años,entre ellos los campeonatos de España por edades, de la que no recuerdo demasiado, en la cual me saqué el elo Fide ,Feda y Fada, que en ese entonces no paraba de aumentar.
+
+Con 14 años, recuerdo que me tiré un verano de trabajo intenso para los campeonatos de España. entre ese año y el año siguiente , yo con 15 años, ganamos el provincial de cordoba por equipos ( con mi equipo Postal Cordobés, del club de Pedro), yo gané además el provincial de córdoba de mi edad, después gané el campeonato de andalucía sub 16 y el sub 18 ( con 14 años) y por si fuera poco, gané mi primer c. absoluto de Córdoba. Fué un pedazo de año, y subí el elo como la espuma.
+
+Ya en los años posteriores, me concentré más en los estudios y dejé de estudiar ajedrez, se tradució en resultados , aunque no malos, tampoco nada espectaculares como los anteriores. bajé el elo 50 puntos de un plumazo en un campeonato de España del cual me retiré por mi mal juego. Aunque no estoy orgulloso de retirarme del torneo, se puede decir que en ese momento  yo me entendía. Gané 2 veces más el campeonato absoluto de Córdoba, aún con la participación de un MI. Y llegamos a la actualidad.
+
+Hay muchas cosas que he omitido porque no las considero necesarias o relevantes al caso, sólo mostrar cómo empecé, qué es lo que me hizo seguir y cómo llegué hasta mi nivel, por el único caminso posible, por el de el trabajo y la dedicación.","Este post puede llegar a ser muy aburrido y largo, quedan avisados, si se les cansa la vista por mi culpa , tienen que acudir a un oculista y/o les causo una depresión por aburrimiento, no me hago responsable ;). De todas formas intentaré ser breve.
+
+Empecé en esto hará unos 9 años. Yo por ese entonces tocaba el piano, mi padre me enseñó un día de buenas a primeras a jugar al ajedrez. Tras unos días de aprender, empecé a jugar partidas con él. La cosa era que yo tocaba media hora el piano y después echábamos una partida de ajedrez. Siempre me ganaba él.
+
+Hasta que un buen día, quizá un buen día en 2 o 3 meses, le gané yo. Empezó a gustarme. A partir de ahí me ganaba algunas y yo otras..., empezó a formarse en mí ese gusto por la competición limpia que todo jugador tiene. Un día mi padre decidió llevarme a mi primer club de Ajedrez , en el centro cívico Sebastián Cuevas, por aquel entonces regido por Francisco Javier Jiménez Crespo, alguien de quien tampoco me olvidaré nunca. Actualmente lo lleva Julián Campos, alumno de Fran, quien retomó el club después de que éste lo dejara.
+
+Al principio era un club lleno de chavales con más edad que yo, recuerdo que todos tenían entre 11 y 17 años , salvo algunos chiquillos que eran bastante más chicos que yo y alguien creo de mi edad. Había un segundo delegado del club llamado Daniel. Fran me empezaba a enseñar cosas mientras yo jugaba con todos los del club. Pasado un mes, tomé la costumbre de echar muchas partidas con Dani, al principio siempre me ganó pero luego fuí remontando. Entonces Fran me propuso federarme para jugar los campeonatos de Andalucía, y lo hice. Me dió entonces 2 grandes libros con temas generales de ajedrez para que me mirara. En el club hacíamos grandes pasapiezas de 8 tableros y alguna vez lo hicimos de 10 y 12, donde uno hacía de transportador de piezas. De vez en cuando yo jugaba algún torneo por cañero. Por aquellos entonces, esto fueron mis orígenes.
+
+Me aprendí bien lo que había en esos libros y seguí progresando. Entraba ese año como sub-12 en los campeonatos de andalucía, que se celebraron en Roquetas de Mar. No quedé muy bien parado pero fui conociendo a gente y ya definitivamente me gustaba.
+
+Cuando tenía 10 años, fuí a un torneo de Córdoba en la Fuensanta donde conocí a otro entrenador, y hasta ahora el que más me ha ayudado: Pedro Manuel Navarro Torres. A él le debo casi todo lo que sé y toda mi progresión ajedrecística en los últimos 5 años y medio. Me dijo que tenía un club y que me pasara, yo lo hice, también había otra panda de chavales, pero ya en un ambiente más serio. Dimos clase en muchos sitios y nos mandaba ejercicios de táctica. Yo siempre que podía se los hacía , otra gente no tanto. Empecé a dejar el club de Fran poco a poco, y éste medio año después no tuvo tiempo para seguir llevando el club y lo cerró. Como yo le hacía ejercicios de táctica y los llevaba al día, por así decirlo era un favorito de la clase.Empezó a darme ya mi primera teoría de apertura, la cual evado de mencionar aquí debido a la privacidad de mi repertorio, aunque supongo que mucha gente lo sabrá.
+
+El año siguiente me clasifiqué como campeón de sub12 en córdoba y fui pagado al campeonato de andalucía, tampoco recuerdo muy bien en qué puesto quedé. Empecé a jugar una serie de torneos importantes en esta etapa de 12 a 14 años,entre ellos los campeonatos de España por edades, de la que no recuerdo demasiado, en la cual me saqué el elo Fide ,Feda y Fada, que en ese entonces no paraba de aumentar.
+
+Con 14 años, recuerdo que me tiré un verano de trabajo intenso para los campeonatos de España. entre ese año y el año siguiente , yo con 15 años, ganamos el provincial de cordoba por equipos ( con mi equipo Postal Cordobés, del club de Pedro), yo gané además el provincial de córdoba de mi edad, después gané el campeonato de andalucía sub 16 y el sub 18 ( con 14 años) y por si fuera poco, gané mi primer c. absoluto de Córdoba. Fué un pedazo de año, y subí el elo como la espuma.
+
+Ya en los años posteriores, me concentré más en los estudios y dejé de estudiar ajedrez, se tradució en resultados , aunque no malos, tampoco nada espectaculares como los anteriores. bajé el elo 50 puntos de un plumazo en un campeonato de España del cual me retiré por mi mal juego. Aunque no estoy orgulloso de retirarme del torneo, se puede decir que en ese momento  yo me entendía. Gané 2 veces más el campeonato absoluto de Córdoba, aún con la participación de un MI. Y llegamos a la actualidad.
+
+Hay muchas cosas que he omitido porque no las considero necesarias o relevantes al caso, sólo mostrar cómo empecé, qué es lo que me hizo seguir y cómo llegué hasta mi nivel, por el único caminso posible, por el de el trabajo y la dedicación."
+12,2011-06-21-Portales-Internet-ICC.md,"{'layout': 'article', 'title': 'Portales de Internet (ICC)', 'show_title': True, 'tags': ['Chess']}","Ahora hablaré sobre el portal Internet Chess Club, o más abreviadamente, ICC. Se trata sobre un portal de uso privado al que se accede pagando en distintas cuotas, como un año , por meses o por varios años. Hay una oferta especial de estudiantes y alguna vez la fada hizo un trato especial con ellos para reducir el precio.
+Pasamos sin más a las ventajas e inconvenientes.
+
+## **Internet Chess Club (ICC):**
+
+### Ventajas:
+- Es internacional
+- Se encuentra un mayor número de titulados y en general, un nivel más alto
+- Se imparten clases gratis o pagadas en eventos
+- Se retransmiten los torneos de mayor relevancia a nivel mundial con jugadores de la talla de Carlsen , Kramnik, Karjakin, Nakamura, Radjabov, Ivanchuk y muchos más.
+- Se pueden ver las partidas rápidas que juegan distintos titulados como GM's en tiempo real.
+- La interfaz de la gráfica de retos es mejor que en otros portales y tiene mayores opciones de reto.
+- Se puede cambiar la visualización de los tableros en la pantalla de juego y tiene muchas más opciones que otros portales. Te dejan crear tu propio tablero y ver información acerca de otras personas con los comandos de la consola principal.
+- Posee varias salas de chat organizadas por temas y en los que no hay intrusos.
+- Ofrece simultáneas de titulados y bastantes torneos.
+
+### Inconvenientes:
+- Es un portal de uso privado, por tanto, de pago.
+- Es menos conocido a nivel de aficionados, por lo tanto no es muy útil al intentar jugar con cualquier amigo por este portal porque es muy probable que no lo tenga.
+- Para mí resulta un pequeño estorbo los mensajes de bienvenida y demás , aunque se pueden desactivar en el menú opciones.
+- La mayoría de audios y demás están en inglés, y por tanto, también éste es el idioma predominante en los chats y conversaciones con los rivales.
+- Muchas de las órdenes hay que ejecutarlas por comandos que hay que escribir en la consola principal.","Ahora hablaré sobre el portal Internet Chess Club, o más abreviadamente, ICC. Se trata sobre un portal de uso privado al que se accede pagando en distintas cuotas, como un año , por meses o por varios años. Hay una oferta especial de estudiantes y alguna vez la fada hizo un trato especial con ellos para reducir el precio.
+Pasamos sin más a las ventajas e inconvenientes.
+
+## **Internet Chess Club (ICC):**
+
+### Ventajas:
+- Es internacional
+- Se encuentra un mayor número de titulados y en general, un nivel más alto
+- Se imparten clases gratis o pagadas en eventos
+- Se retransmiten los torneos de mayor relevancia a nivel mundial con jugadores de la talla de Carlsen , Kramnik, Karjakin, Nakamura, Radjabov, Ivanchuk y muchos más.
+- Se pueden ver las partidas rápidas que juegan distintos titulados como GM's en tiempo real.
+- La interfaz de la gráfica de retos es mejor que en otros portales y tiene mayores opciones de reto.
+- Se puede cambiar la visualización de los tableros en la pantalla de juego y tiene muchas más opciones que otros portales. Te dejan crear tu propio tablero y ver información acerca de otras personas con los comandos de la consola principal.
+- Posee varias salas de chat organizadas por temas y en los que no hay intrusos.
+- Ofrece simultáneas de titulados y bastantes torneos.
+
+### Inconvenientes:
+- Es un portal de uso privado, por tanto, de pago.
+- Es menos conocido a nivel de aficionados, por lo tanto no es muy útil al intentar jugar con cualquier amigo por este portal porque es muy probable que no lo tenga.
+- Para mí resulta un pequeño estorbo los mensajes de bienvenida y demás , aunque se pueden desactivar en el menú opciones.
+- La mayoría de audios y demás están en inglés, y por tanto, también éste es el idioma predominante en los chats y conversaciones con los rivales.
+- Muchas de las órdenes hay que ejecutarlas por comandos que hay que escribir en la consola principal."
+13,2011-06-17-Portales-Internet-Buho21.md,"{'layout': 'article', 'title': 'Portales de internet ( Búho 21)', 'tags': ['Chess']}","Empiezo una serie sobre los portales de ajedrez en internet , mi objetivo es informar y expresar mi opinión acerca de cada uno de ellos.También las opiniones diversas que se tienen acerca de ellos. Comenzaré hablando por el quizá más popular Búho 21 entre las clases aficionadas, ya que es una plataforma bastante aceptable y de acceso gratuito. Iré poniendo lo que creo que son las ventajas e inconvenientes de cada portal, se agradecen comentarios.
+
+
+## Búho 21:
+
+### Ventajas:
+- Es gratuita
+- Tiene mucha actividad en torneos
+- Tiene una forma de premiar a sus usuarios y es concediéndoles medallas por los distintos torneos ganados
+- Posee más formas de juego que no son estrictamente ajedrez, por ejemplo, pasapiezas, comilón, ajedrez atómico, etc, lo que lo hace mucho más popular y dinámico al ser uno de los pocos portales de ajedrez que hacen esto.
+- Posee una interfaz gráfica bastante intuitiva y un chat bastante animado
+- Se pueden agregar y desagregar amigos y buscarlos para hablar con ellos.
+
+### Desventajas:
+- No posee eventos a retransmitir en la cuenta norma
+- No se dan clases ni otras muchas funciones que poseen otros portales, al ser gratuito esto no se financia.
+- En el chat siempre hay el típico que mete cizaña y es banneado
+- La pantalla del tablero no es de mi gusto y hay poca variabilidad para cambiarla
+- Si no eres usuario VIP , te pierdes las clases con maestros, los eventos, las simultáneas, las partidas que se retrasnmiten y mucho más.","Empiezo una serie sobre los portales de ajedrez en internet , mi objetivo es informar y expresar mi opinión acerca de cada uno de ellos.También las opiniones diversas que se tienen acerca de ellos. Comenzaré hablando por el quizá más popular Búho 21 entre las clases aficionadas, ya que es una plataforma bastante aceptable y de acceso gratuito. Iré poniendo lo que creo que son las ventajas e inconvenientes de cada portal, se agradecen comentarios.
+
+
+## Búho 21:
+
+### Ventajas:
+- Es gratuita
+- Tiene mucha actividad en torneos
+- Tiene una forma de premiar a sus usuarios y es concediéndoles medallas por los distintos torneos ganados
+- Posee más formas de juego que no son estrictamente ajedrez, por ejemplo, pasapiezas, comilón, ajedrez atómico, etc, lo que lo hace mucho más popular y dinámico al ser uno de los pocos portales de ajedrez que hacen esto.
+- Posee una interfaz gráfica bastante intuitiva y un chat bastante animado
+- Se pueden agregar y desagregar amigos y buscarlos para hablar con ellos.
+
+### Desventajas:
+- No posee eventos a retransmitir en la cuenta norma
+- No se dan clases ni otras muchas funciones que poseen otros portales, al ser gratuito esto no se financia.
+- En el chat siempre hay el típico que mete cizaña y es banneado
+- La pantalla del tablero no es de mi gusto y hay poca variabilidad para cambiarla
+- Si no eres usuario VIP , te pierdes las clases con maestros, los eventos, las simultáneas, las partidas que se retrasnmiten y mucho más."
+14,2011-06-17-time-control.md,"{'layout': 'article', 'title': 'Administración del tiempo', 'show_title': True, 'tags': ['Chess']}","Muchos jugadores tenemos un problema con el tiempo. Entre ellos, yo mismo. El tiempo es uno de los factores que más influye en una partida de ajedrez, tanto en rápidas como en lentas, más de una vez se nos ha dado un fallo por un apuro de tiempo, o nos hemos dejado alguna pieza, son cosas que pasan, en este post daréconsejos sobre el uso del tiempo y su racionación en las jugadas.
+
+1. Anotar en la planilla los momentos claves de la partida y de ser posible, todos o casi todos los tiempos que habéis gastado en las jugadas, luego se puede ver la relación tiempo-calidad de la jugada en los análisis posteriores y trabajar en esa área.
+2. Como norma general, se debe gastar entre 30 y 40 minutos en la apertura, si estamos hablando de partidas largas de 1:30 horas mas medio minuto de incremento por jugada.
+3. Es importante considerar los momentos críticos de las partidas. Estos son en los que debemos tomar una decisión importante, como un plan, un cambio de piezas, táctica o una operación estratégica. En estos momentos no debemos de tener miedo en tomarnos más tiempo del necesario, considerando todas las jugadas candidatas y análisis. Esto lo detallaré en la eleccion de la jugada.
+4. En un apuro de tiempo, es importante también saber cuándo es un momento importante y tener la sangre fría de parar un momento y pensar, del mismo modo, no debemos gastar más tiempo del necesario en jugadas evidentes como recapturas de piezas.
+5. Si consideramos dos alternativas como aproximadamente iguales, no debemos gastar más tiempo, y elegiremos la que más nos guste o la que parezca el plan más simple y efectivo. Gastar más tiempo del necesario hace que luego te estrelles en el apuro de tiempo.
+6. No levantarse en apuros de tiempo, y generalmente, hacer nuestras necesidades biológicas durante la partida para evitar malestar más tarde.
+
+Bueno, estos son los consejos que se me han ocurrido hasta ahora, si se les ocurren más les agradecería que comentaran el post.","Muchos jugadores tenemos un problema con el tiempo. Entre ellos, yo mismo. El tiempo es uno de los factores que más influye en una partida de ajedrez, tanto en rápidas como en lentas, más de una vez se nos ha dado un fallo por un apuro de tiempo, o nos hemos dejado alguna pieza, son cosas que pasan, en este post daréconsejos sobre el uso del tiempo y su racionación en las jugadas.
+
+1. Anotar en la planilla los momentos claves de la partida y de ser posible, todos o casi todos los tiempos que habéis gastado en las jugadas, luego se puede ver la relación tiempo-calidad de la jugada en los análisis posteriores y trabajar en esa área.
+2. Como norma general, se debe gastar entre 30 y 40 minutos en la apertura, si estamos hablando de partidas largas de 1:30 horas mas medio minuto de incremento por jugada.
+3. Es importante considerar los momentos críticos de las partidas. Estos son en los que debemos tomar una decisión importante, como un plan, un cambio de piezas, táctica o una operación estratégica. En estos momentos no debemos de tener miedo en tomarnos más tiempo del necesario, considerando todas las jugadas candidatas y análisis. Esto lo detallaré en la eleccion de la jugada.
+4. En un apuro de tiempo, es importante también saber cuándo es un momento importante y tener la sangre fría de parar un momento y pensar, del mismo modo, no debemos gastar más tiempo del necesario en jugadas evidentes como recapturas de piezas.
+5. Si consideramos dos alternativas como aproximadamente iguales, no debemos gastar más tiempo, y elegiremos la que más nos guste o la que parezca el plan más simple y efectivo. Gastar más tiempo del necesario hace que luego te estrelles en el apuro de tiempo.
+6. No levantarse en apuros de tiempo, y generalmente, hacer nuestras necesidades biológicas durante la partida para evitar malestar más tarde.
+
+Bueno, estos son los consejos que se me han ocurrido hasta ahora, si se les ocurren más les agradecería que comentaran el post."
+15,2011-06-13-inauguracion-blog.md,"{'layout': 'article', 'title': 'Inauguración', 'show_title': True, 'tags': ['Chess']}","Hoy empiezo un blog dedicado al ajedrez, a todos mis progresos, tendrá artículos interesantes, actualidad, moda ajedrecística, torneos, aperturas, medio juego, finales, debates, entrenamiento, táctica, estrategia , normativas, arbitraje y mucho más. 
+
+No sé cuánto tiempo tendré el blog en funcionamiento, ni siquiera si lo actualizaré debidamente o no. 
+
+Os lo dedico a vosotros, amantes del ajedrez, que desean superarse y enseñar a otros a hacerlo.","Hoy empiezo un blog dedicado al ajedrez, a todos mis progresos, tendrá artículos interesantes, actualidad, moda ajedrecística, torneos, aperturas, medio juego, finales, debates, entrenamiento, táctica, estrategia , normativas, arbitraje y mucho más. 
+
+No sé cuánto tiempo tendré el blog en funcionamiento, ni siquiera si lo actualizaré debidamente o no. 
+
+Os lo dedico a vosotros, amantes del ajedrez, que desean superarse y enseñar a otros a hacerlo."
+16,2011-06-14-presentation.md,"{'layout': 'article', 'title': 'Presentación', 'show_title': True, 'tags': ['Chess']}","Bueno, voy a empezar mi primer post comentando un poco mi nivel ahora que empiezo el blog y acreditándome. Primero voy a acreditarme.
+
+Mi nombre es *Álvaro Riobóo*, jugador español, de la provincia de *Córdoba* y federado por la *FADA*. Tengo 16 años, cumplo el 26/07 y nací en 1994. Actualmente:
+
+- Elo FADA: 2230
+- Elo FEDA (Federacion Española de Ajedrez): 2204
+- Elo FIDE( Federación Internacional de Ajedrez): 2202
+
+Debo comentar que ha habido fluctuaciones importantes del elo, así como en un momento llegué a tener 2270 Fada, bajó 50 o 60 puntos y luego recuperé. En pags como:
+
+http://www.elo-ajedrez.com/
+http://ratings.fide.com/
+
+Se puede ver mi elo y progresión Fide, igual con cualquier otro jugador que deseen.
+
+Ahora os comento mi nivel a fecha de este post:
+
+Soy un jugador que no se puede considerar ni demasiado inmaduro ni demasiado curtido en el juego. Un jugador promedio de nivel 2200, trabajé duro hace 1 o 2 años y conseguí llegar hasta este nivel, ahora lo que estoy haciendo es mantenerlo como puedo, si me preguntan como llegué hasta aquí diré que no hay otra forma sino con trabajo y esfuerzo , motivación , y un poco de organización. También es esencial un guía que te lleve por estos caminos, como representa la figura del entrenador, pues si no, uno mismo es difícil que tenga el orden y la certeza para discernir en qué campos debe trabajar y en cuáles no. El valor que aporta un buen entrenador es muy grande. Comentaré esto en otro post más ampliado.
+
+Saludos.","Bueno, voy a empezar mi primer post comentando un poco mi nivel ahora que empiezo el blog y acreditándome. Primero voy a acreditarme.
+
+Mi nombre es *Álvaro Riobóo*, jugador español, de la provincia de *Córdoba* y federado por la *FADA*. Tengo 16 años, cumplo el 26/07 y nací en 1994. Actualmente:
+
+- Elo FADA: 2230
+- Elo FEDA (Federacion Española de Ajedrez): 2204
+- Elo FIDE( Federación Internacional de Ajedrez): 2202
+
+Debo comentar que ha habido fluctuaciones importantes del elo, así como en un momento llegué a tener 2270 Fada, bajó 50 o 60 puntos y luego recuperé. En pags como:
+
+http://www.elo-ajedrez.com/
+http://ratings.fide.com/
+
+Se puede ver mi elo y progresión Fide, igual con cualquier otro jugador que deseen.
+
+Ahora os comento mi nivel a fecha de este post:
+
+Soy un jugador que no se puede considerar ni demasiado inmaduro ni demasiado curtido en el juego. Un jugador promedio de nivel 2200, trabajé duro hace 1 o 2 años y conseguí llegar hasta este nivel, ahora lo que estoy haciendo es mantenerlo como puedo, si me preguntan como llegué hasta aquí diré que no hay otra forma sino con trabajo y esfuerzo , motivación , y un poco de organización. También es esencial un guía que te lleve por estos caminos, como representa la figura del entrenador, pues si no, uno mismo es difícil que tenga el orden y la certeza para discernir en qué campos debe trabajar y en cuáles no. El valor que aporta un buen entrenador es muy grande. Comentaré esto en otro post más ampliado.
+
+Saludos."
+17,2011-06-17-chess-motivations.md,"{'layout': 'article', 'title': 'Motivaciones del ajedrez', 'show_title': True, 'tags': ['Chess']}","Bien os voy a hablar ahora sobre las motivaciones que el ajedrez presenta para nosotros, los aficionados, y para toda clase de niveles y edades, desde niños a adultos. Cuando hemos sido niños, lo más probable es que empezáramos en este del ajedrez porque nuestro padre nos enseñó, o porque nos lo propuso un amigo y entonces empezaste a jugar y a ganarle y de ahí cogiste el gusto por el juego. En mi caso me inició mi padre y cogí tal gusto, que incluso me enfadé con un amigo por no querer jugar a otras cosas.
+
+Después muchos de nosotros imagino que entramos a un club o escogimos a un monitor para que llevara adelante nuestro progreso e interés por este deporte. Jugamos nuestros primeros torneos, ganamos , perdimos, nos lo pasamos bien, conocimos gente, ( incluso a veces nos enamoramos) , y todo eso hace un efecto feedback o retroalimentador, que satisface nuestra necesidad de jugar, aparte de la propia satisfacción que da haber ganado al ajedrez , un juego de estrategia e inteligencia, propio de la elegancia y estilo de la persona, con lo cual podemos presumir hacia otras personas. Bien empezaré a enumerar nuestras principales motivaciones.
+
+- Los amigos/amigas: Nos gusta hacer amigos y amigas en los torneos y compartir ratos agradables con ellos, de eso no hay duda. ¿Quien puede decir que no se lo pasa bien en un torneo? si no lo hace es porque no quiere, sin duda. Ellos son una de nuestras principales motivaciones, ver gente ( por cierto muy simpática) a la que vemos poco y necesitamos ver, mucha gente tiene esto como una motivación.
+- Los entrenadores: Sí, os estaréis preguntando : ¿Qué?. Los entrenadores son a menudo personas magnéticas y carismáticas que nos tienen comiendo de sus manos, hacemos cuanto esté en nuestro poder para agradarles y por estar en su compañía, ya que disfrutamos de ella.
+- Nuestra necesidad de mostrar nuestra valía.
+- Nuestro amor por la lógica e inteligencia.
+- La presión de los padres/tutores.
+- La necesidad de relajarse unos días/vacaciones.","Bien os voy a hablar ahora sobre las motivaciones que el ajedrez presenta para nosotros, los aficionados, y para toda clase de niveles y edades, desde niños a adultos. Cuando hemos sido niños, lo más probable es que empezáramos en este del ajedrez porque nuestro padre nos enseñó, o porque nos lo propuso un amigo y entonces empezaste a jugar y a ganarle y de ahí cogiste el gusto por el juego. En mi caso me inició mi padre y cogí tal gusto, que incluso me enfadé con un amigo por no querer jugar a otras cosas.
+
+Después muchos de nosotros imagino que entramos a un club o escogimos a un monitor para que llevara adelante nuestro progreso e interés por este deporte. Jugamos nuestros primeros torneos, ganamos , perdimos, nos lo pasamos bien, conocimos gente, ( incluso a veces nos enamoramos) , y todo eso hace un efecto feedback o retroalimentador, que satisface nuestra necesidad de jugar, aparte de la propia satisfacción que da haber ganado al ajedrez , un juego de estrategia e inteligencia, propio de la elegancia y estilo de la persona, con lo cual podemos presumir hacia otras personas. Bien empezaré a enumerar nuestras principales motivaciones.
+
+- Los amigos/amigas: Nos gusta hacer amigos y amigas en los torneos y compartir ratos agradables con ellos, de eso no hay duda. ¿Quien puede decir que no se lo pasa bien en un torneo? si no lo hace es porque no quiere, sin duda. Ellos son una de nuestras principales motivaciones, ver gente ( por cierto muy simpática) a la que vemos poco y necesitamos ver, mucha gente tiene esto como una motivación.
+- Los entrenadores: Sí, os estaréis preguntando : ¿Qué?. Los entrenadores son a menudo personas magnéticas y carismáticas que nos tienen comiendo de sus manos, hacemos cuanto esté en nuestro poder para agradarles y por estar en su compañía, ya que disfrutamos de ella.
+- Nuestra necesidad de mostrar nuestra valía.
+- Nuestro amor por la lógica e inteligencia.
+- La presión de los padres/tutores.
+- La necesidad de relajarse unos días/vacaciones."
+18,2011-06-17-chess_variants.md,"{'layout': 'article', 'title': 'Pasapiezas, comilón, periódico, elefante y otros juegos', 'show_title': True, 'tags': ['Chess']}","El mundo del ajedrez es dinámico y diverso. A veces el ajedrez termina por cansarnos un poco e ideamos distintos juegos relacionados , sobre todo a nivel aficionado, juegos realmente estimulantes y divertidos para jugar con compañeros y amigos, e incluso con desconocidos en portales como Búho 21. Desarrollan otro tipo de habilidades que, en contra de lo que puedan decir algunos, yo considero interesantes. Flexibilidad de pensamiento, cálculo, agilidad mental, son algunos de ellos. De siempre se ha dicho que jugar a este tipo de juegos es malo para jugar al ajedrez. Todo lo contrario. Desarrolla bastantes habilidades que el ajedrez necesita y de una forma bastante divertida.Eso sí , como todo, no hay que pasarse. Pasaré a explicar algunos de los juegos que se han ideado y modalidades de ajedrez. Las damas, aunque se juegue en un tablero, no lo considero otra modalidad de juego, porque no hay piezas de ajedrez.
+
+- Pasapiezas:
+
+También llamado Vicio. Consiste en jugar por equipos , con tableros pares de 2. Pueden hacerse con 4, 8  o más tableros incluso, siempre que se alternen blancas-negras. En principio, las piezas que capturas del rival se las pasas a tu compañero y éste puede en su turno como quiera. Hay ciertas reglas que se pueden modificar como que valga entrar con jaque, que valga poner peones en séptima, que valga entrar en mate o que se corone dama o se quite pieza. Es muy diverso y sirve para desarrollar mucho la creatividad y el cálculo. Aunque siempre se ha dicho que jugar a esto en medio de un torneo es malísimo para las partidas porque no vas a poder meter una pieza de fuera dentro del tablero.Es uno de los más conocidos
+
+- Comilón:
+
+O comepiezas.Consiste en dejarse todas las piezas, incluso el rey. Cuando puedas capturar, estás obligado a capturar y se avisa diciendo "" Come"". Quien da mate, pierde.De nuevo se pueden modificar las reglas , como dejarse el rey o no, a jaque tener que mover el rey o poder mover otra pieza, dejarse el rey el último, etc. Desarrolla de nuevo el cálculo y flexibilidad de pensamiento, además tienes que tener en cuenta que  los peones es más difícil perderlos , por lo que no es fácil.
+
+- Periódico:
+
+Las columnas y diagonales continúan al otro lado del tablero. Puedes comer un peón de h con uno de a y viceversa, puedes pasar las piezas de un lado a otro... El mate hay que darlo en la primera o 8 fila.
+
+- Acumulativo:
+
+No sé como se llama en realidad, pero se trata de ir jugando , el primer movimiento con un tiempo, el segundo jugando dos veces, el tercero tres, así sucesivamente. Cuando se da un jaque, se vuelve a empezar con 1-2-3.
+
+Por ahora no se me ocurren más, si ven alguno más o quieren matizar algo, comenten.","El mundo del ajedrez es dinámico y diverso. A veces el ajedrez termina por cansarnos un poco e ideamos distintos juegos relacionados , sobre todo a nivel aficionado, juegos realmente estimulantes y divertidos para jugar con compañeros y amigos, e incluso con desconocidos en portales como Búho 21. Desarrollan otro tipo de habilidades que, en contra de lo que puedan decir algunos, yo considero interesantes. Flexibilidad de pensamiento, cálculo, agilidad mental, son algunos de ellos. De siempre se ha dicho que jugar a este tipo de juegos es malo para jugar al ajedrez. Todo lo contrario. Desarrolla bastantes habilidades que el ajedrez necesita y de una forma bastante divertida.Eso sí , como todo, no hay que pasarse. Pasaré a explicar algunos de los juegos que se han ideado y modalidades de ajedrez. Las damas, aunque se juegue en un tablero, no lo considero otra modalidad de juego, porque no hay piezas de ajedrez.
+
+- Pasapiezas:
+
+También llamado Vicio. Consiste en jugar por equipos , con tableros pares de 2. Pueden hacerse con 4, 8  o más tableros incluso, siempre que se alternen blancas-negras. En principio, las piezas que capturas del rival se las pasas a tu compañero y éste puede en su turno como quiera. Hay ciertas reglas que se pueden modificar como que valga entrar con jaque, que valga poner peones en séptima, que valga entrar en mate o que se corone dama o se quite pieza. Es muy diverso y sirve para desarrollar mucho la creatividad y el cálculo. Aunque siempre se ha dicho que jugar a esto en medio de un torneo es malísimo para las partidas porque no vas a poder meter una pieza de fuera dentro del tablero.Es uno de los más conocidos
+
+- Comilón:
+
+O comepiezas.Consiste en dejarse todas las piezas, incluso el rey. Cuando puedas capturar, estás obligado a capturar y se avisa diciendo "" Come"". Quien da mate, pierde.De nuevo se pueden modificar las reglas , como dejarse el rey o no, a jaque tener que mover el rey o poder mover otra pieza, dejarse el rey el último, etc. Desarrolla de nuevo el cálculo y flexibilidad de pensamiento, además tienes que tener en cuenta que  los peones es más difícil perderlos , por lo que no es fácil.
+
+- Periódico:
+
+Las columnas y diagonales continúan al otro lado del tablero. Puedes comer un peón de h con uno de a y viceversa, puedes pasar las piezas de un lado a otro... El mate hay que darlo en la primera o 8 fila.
+
+- Acumulativo:
+
+No sé como se llama en realidad, pero se trata de ir jugando , el primer movimiento con un tiempo, el segundo jugando dos veces, el tercero tres, así sucesivamente. Cuando se da un jaque, se vuelve a empezar con 1-2-3.
+
+Por ahora no se me ocurren más, si ven alguno más o quieren matizar algo, comenten."

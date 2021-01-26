@@ -1,0 +1,225 @@
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
+
+## => Site Settings
+##############################
+text_skin: chocolate  # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+url     : https://arioboo.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl :  # does not include hostname
+title   : Professional portfolio
+description: > # this means to ignore newlines until "Language & timezone"
+  This is my professional portfolio, where you can know about me, look for my experience and projects and contact me.
+
+## => Language and Timezone
+##############################
+lang: "en" # the language of your site, default as "en"
+timezone: Europe/Madrid # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+
+
+## => Author and Social
+##############################
+author:
+  type      : "person"                  # "person" (default), "organization"
+  name      : "Álvaro Riobóo de Larriva"
+  url       : https://arioboo.github.io
+  cover     : /assets/images/me/israel.jpg
+  avatar    : /assets/images/me/FOTOLAR.jpg               # path or url of avatar image (square)
+  bio       : Astrophysicist | Data Scientist | Machine Learning Engineer
+  email     : riodela.alvaro@gmail.com
+  facebook  : alvaro.rioboodelarriva #"user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  twitter   : arl94spejo        # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
+  linkedin  : arioboo94         # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  github    : arioboo           # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: arioboo/arioboo.github.io
+repository_tree: main
+
+
+## => Paths
+##############################
+paths:
+  root    : /               # title link url, "/" (default)
+  home    : /blog/          # home layout url, "/" (default)
+  archive : /blog/archive.html      # "/archive.html" (default)
+  rss     : /feed.xml       # "/feed.xml" (default)
+
+## => Collections
+##############################
+collections_dir: my_collections
+collections:
+    portfolio: 
+        output: true
+        permalink: /:collection/:name
+    CV:
+        output: false
+        permalink: /:collection/:name
+
+## => Post
+##############################
+## excerpt
+excerpt_separator: <!--more-->
+
+## license
+license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
+
+## TOC
+toc:
+  selectors: "h1,h2,h3" # "h1,h2,h3" (default)
+
+
+## => Markdown Enhancements
+##############################
+## Mathjax
+mathjax: # false (default), true
+mathjax_autoNumber: # false (default), true
+
+## Mermaid
+mermaid: # false (default), true
+
+## Chart
+chart: # false (default), true
+
+
+## => Paginate
+##############################
+#paginate: 8
+#paginate_path: /pages/page:num # don't change this unless for special need
+
+
+## => Sources
+##############################
+sources: bootcdn # bootcdn (default), unpkg
+
+
+
+## => Sharing
+##############################
+sharing:
+  provider: false # false (default), "addtoany", "addthis", "custom"
+
+  ## AddThis
+  addthis:
+    id: # AddThis pubid, e.g. ra-5xxxxxxxxxxx
+
+
+## => Comments
+##############################
+comments:
+  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+
+  ## Disqus
+  disqus:
+    shortname: # the Disqus shortname for the site
+
+  ## Gitalk
+  # please refer to https://github.com/gitalk/gitalk for more info.
+  gitalk:
+    clientID    : # GitHub Application Client ID
+    clientSecret: # GitHub Application Client Secret
+    repository  : # GitHub repo
+    owner       : # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+      # - your GitHub Id
+ 
+  ## Valine
+  # please refer to https://valine.js.org/en/ for more info.
+  valine:
+    app_id      : # LeanCloud App id
+    app_key     : # LeanCloud App key
+    placeholder : # Prompt information
+    visitor     : # false (default)
+    meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
+
+
+## => Pageview
+##############################
+pageview:
+  provider: false # false (default), "leancloud", "custom"
+
+  ## Leancloud
+  leancloud:
+    app_id    : # LeanCloud App id
+    app_key   : # LeanCloud App key
+    app_class : # LeanCloud App class
+
+
+## => Search
+##############################
+search:
+  provider: default # "default" (default), false, "google", "custom"
+
+  ## Google Custom Search Engine
+  google:
+    custom_search_engine_id: # Google Custom Search Engine ID
+
+
+## => Analytics
+##############################
+analytics:
+  provider: false # false (default), "google", "custom"
+
+  ## Google Analytics
+  google:
+    tracking_id : # Google Analytics id for the site
+    anonymize_ip: false # Anonymize IP tracking for Analytics
+
+
+## => Build
+##############################
+markdown    : kramdown
+highlighter : rouge
+permalink   : date
+
+
+includes: ["_pages"]
+exclude:
+  - CHANGELOG.md
+  - HOW_TO_RELEASE.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README-*.md
+  - README.md
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
+  - /docs
+  - /node_modules
+  - /screenshots
+  - /test
+  - /vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      sharing: true
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+        layout: page
+        sharing: true
+
+## => Plugins
+##############################
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
