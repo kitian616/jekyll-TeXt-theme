@@ -144,4 +144,29 @@ fr-FR:
   <<: *FR
 fr-LU:
   <<: *FR
+
+## => Japanese
+########################
+en: &JA
+  SUBSCRIBE               : "購読"
+  READMORE                : "さらに読む"
+  SEARCH                  : "検索"
+  CANCEL                  : "キャンセル"
+  VIEWS                   : "閲覧数"
+  LAST_UPDATED            : "最終更新"
+  PREVIOUS                : "前"
+  NEXT                    : "次"
+  ARTICLE_DATE_FORMAT     : "%Y年 %m月 %d日"
+  ARTICLE_LIST_DATE_FORMAT: "%m月 %d日"
+  STATISTICS              : "記事数 [POST_COUNT]件、[PAGE_COUNT]ページ"
+  LICENSE_ANNOUNCE        : "このサイトは[LICENSE]ライセンスの下に提供されています。"
+  POST_ON_GITHUB          : "Githubで編集する"
+  FOLLOW_ME               : "[NAME]でフォローする"
+  FOLLOW_US               : "[NAME]でフォローする"
+  EMAIL_ME                : "Eメールを送る"
+  EMAIL_US                : "Eメールを送る"
+  COPYRIGHT_DATES         : "2021"
+
+ja-JP:
+  <<: *JA
 # @end locale config

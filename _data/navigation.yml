@@ -21,6 +21,8 @@ header:
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
+      ja      : &JA       アーカイブ
+      ja-JP   : *JA
       # @end locale config
     url: /archive.html
 
@@ -46,5 +48,7 @@ header:
       fr-CH   : *FR
       fr-FR   : *FR
       fr-LU   : *FR
+      ja      : &JA       サイト概要
+      ja-JP   : *JA
       # @end locale config
     url: /about.html
