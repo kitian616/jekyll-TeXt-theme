@@ -19,16 +19,17 @@
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 # url     : # the base hostname & protocol for your site e.g. https://www.someone.com
-url     : "https://hyeondeok-seo.github.io/"
 baseurl : # does not include hostname
-title   : "Title"
+# title   : Your Site Title
+title   : "기록"
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+# lang: # the language of your site, default as "en"
+lang: ko
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -85,8 +86,10 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: # false (default), true
-mathjax_autoNumber: # false (default), true
+# mathjax: # false (default), true
+mathjax: true
+# mathjax_autoNumber: # false (default), true
+mathjax_autoNumber: true
 
 ## Mermaid
 mermaid: # false (default), true
