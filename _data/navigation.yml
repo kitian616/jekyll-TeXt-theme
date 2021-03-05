@@ -1,7 +1,7 @@
 header:
   - titles:
       # @start locale config
-      en      : &EN       Archive
+      en      : &EN       Home
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -22,11 +22,11 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /archive.html
+    url: /
 
   - titles:
       # @start locale config
-      en      : &EN       About
+      en      : &EN       Guidebook
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -47,4 +47,158 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /about.html
+    url: /guidebook.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Support
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  关于
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  關於
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       소개
+      ko-KR   : *KO
+      fr      : &FR       À propos
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      # @end locale config
+    url: /support.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Our Story
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  关于
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  關於
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       소개
+      ko-KR   : *KO
+      fr      : &FR       À propos
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      # @end locale config
+    url: /story.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Contact Us
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  关于
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  關於
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       소개
+      ko-KR   : *KO
+      fr      : &FR       À propos
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      # @end locale config
+    url: /contact-us.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Community
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  关于
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  關於
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       소개
+      ko-KR   : *KO
+      fr      : &FR       À propos
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      # @end locale config
+    url: /community.html
+
+guidebook-en:
+  - title:      Introduction
+    children:
+      - title:  Hate Crime Statistics
+        url:    /guidebook
+      - title:  Purpose of the Manual
+        url:    /guidebook
+      - title:  Legal Disclaimer
+        url:    /guidebook
+  - title:      What is hate crime?
+    children:
+      - title:  Legal Definition
+        url:    /guidebook
+      - title:  What is the difference between a hate crime and a hate incident?
+        url:    /guidebook
+      - title:  Examples of hate crimes and hate incidents
+        url:    /guidebook
+      - title:  Why report hate crimes and hate incidents?
+        url:    /guidebook
+  - title:      How to report hate crimes and incidents
+    children:
+      - title:  What to consider before reporting
+        url:    /guidebook
+      - title:  Different ways of reporting
+        url:    /guidebook
+      - title:  How can a victim of hate crime prepare for reporting?
+        url:    /guidebook
+  - title:      What can you expect to happen after reporting?
+    children:
+      - title:  Initial response
+        url:    /guidebook
+      - title:  Processing information
+        url:    /guidebook
+      - title:  Investigation
+        url:    /guidebook
+      - title:  Decisioning
+        url:    /guidebook
+      - title:  Post-decision
+        url:    /guidebook
+  - title:      What are your rights?
+    children:
+      - title:  When you report a crime
+        url:    /guidebook
+      - title:  During the police investigation
+        url:    /guidebook
+      - title:  Protecting the victim
+        url:    /guidebook
+      - title:  Secondary victimisation
+        url:    /guidebook
+      - title:  Self-defence
+        url:    /guidebook
+      - title:  How to make a complaint
+        url:    /guidebook
