@@ -201,6 +201,10 @@ exclude:
   - /test
   - /vendor
 
+collections:
+  guidebook:
+    output: true
+
 defaults:
   - scope:
       path: ""
@@ -214,7 +218,19 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
-
+  - scope:
+      path: "_guidebook/en"
+    values:
+      layout: article
+      nav_key: guidebook
+      sidebar:
+        nav: guidebook-en
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: false
+      show_date: false
+      # lightbox: true
 
 ## => Plugins
 ##############################
