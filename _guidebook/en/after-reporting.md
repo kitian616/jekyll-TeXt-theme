@@ -13,7 +13,7 @@ key: guidebook-after
       The police and community response to a hate crime or incident will vary depending on  <br>
       <ol> <li>whether the victim wishes to be contacted by the police, and</li>
            <li> whether the crime or incident was reported anonymously </li> </ol>
-    </div></div>    
+    </div></div>
     <div class="cell cell--6"><div>
       chinese translation
         <ol> <li>chinese 1</li>
@@ -47,9 +47,9 @@ key: guidebook-after
       <li>If required, the police can provide a translator or interpreter to provide assistance in Cantonese, Mandarin or other languages. [Insert link to language support from police / language line / stop hate UK]</li>
       <li>If the victim finds it difficult or upsetting to talk to the police, they can ask for a break at any point. </li>
     </ul></p>
-    </div></div>    
+    </div></div>
 
-    <div class="cell cell--6"><div>
+<div class="cell cell--6"><div>
     <p>如果受害者選擇實名報案，報案之後一名警官會聯絡受害人並且詢問受害人想要如何與警官進行談話.</p>
     <p><b>選項包括:</b>
     <ul>
@@ -70,7 +70,7 @@ key: guidebook-after
       <li>如果有需要，警方可能可以向受害者提供包括普通話、廣東話或其他語言的的翻譯服務，請在報案時提出相需求 [Insert link to language support from police / language line / stop hate UK]</li>
       <li>如果受害人在與警方將談期間身體或情緒上感受到任何的不適，受害人有權要求暫停訪談以便休息和/或平復心緒。</li>
     </ul></p>
-    </div></div>
+</div></div>
 
   </div>
 </div>
@@ -84,7 +84,7 @@ key: guidebook-after
     <p> You don’t have to show evidence of prejudice or hostility to report a hate incident. </p>
     <p> However, during investigation, the police officer dealing with the case must find evidence of prejudice or hostility to charge the suspect with a hate crime. This evidence will also be presented to the judge by the Crown Prosecution Service in court. </p>
     <p> So while all instances of hate crime and hate incidents should be reported to the police, it should be noted that not all reports will lead to prosecution, and not all prosecutions will lead to the suspect being found guilty. </p>
-    </div></div>    
+    </div></div>
     <div class="cell cell--6"><div>
     <p> 當警方接到關於仇恨犯罪的報案時，他們必須照實紀錄，不管接受報案的警官自己認為這算不算仇恨犯罪。</p>
     <p> 在舉報仇恨犯罪時，報案人不需要給出任何證明歧視或是仇恨的證據。但是，在調查時，警方必須要找到證明歧視或仇恨的證據才能向嫌疑人作出仇恨犯罪的指控。檢察部門將會把警方收集到的證據上呈給法庭。 </p>
@@ -100,7 +100,6 @@ key: guidebook-after
 <div class="grid-container">
   <div class="grid grid--p-3">
     <div class="cell cell--6"><div>
-
     After the police has gathered information from the victim, they will perform an initial triage and open a case through two steps: <br>
     <ol> <li> <b> <p> Determine whether the case is handled by the correct authority </p> </b> </li>
     <ul> <li> First, the authority that receives the report will make sure that they are the correct police force to investigate the crime you've reported. For example, if the hate crime or incident took place in a train station, this would be a matter for British Transport Police. In this case, the authority who received the initial report will send it to the correct police force to continue the investigation.</li>
@@ -109,19 +108,18 @@ key: guidebook-after
     <ul> <li> Once the case has been referred to the appropriate police force, they will issue you a crime reference number. How quickly this is done depends on the complexity of the incident and number of other authorities involved.</li>
     <li> What is a CRN? This is a unique number assigned to the victim’s case, the victim can quote this number to request updates from the police. </li> </ul> </ol>
 
+  </div></div>
 
-    </div></div>    
-
-    <div class="cell cell--6"><div>
+  <div class="cell cell--6"><div>
     警方向受害人收集完所需信息以後，他們會對案件進行分流並且正式立案，這一階段包含兩個步驟： <br>
     <ol> <li> <b> <p> 確保案件是由正確的機構審理 </p> </b> </li>
     <ul> <li> 首先，案件的受理機構會甄別他們是否是適合辦理受到的案件。 比方說，如果一個仇恨案件發生於火車站，那麼這個案件適用的偵辦機構就是英國交通警察。在這種情況下，受理機構就會將受理案件轉移給正確的偵辦機構，並由他們來正式進行調查和後續跟進：</li>
     <li> 請注意：向正確的偵辦機構有助於縮短案件的偵辦流程。如果案件發生在公共交通上， 請直接向英國交通警察進行報案。 點擊此處獲取英國交通警察報案渠道。 </li> </ul>
     <p> <li> <b> <p> 告知受害人案件查詢編碼 </p> </b> </li> </p>
     <ul> <li> 案件被轉移給正確的偵辦機構之後，該機構就回向受害人告知案件的查詢編碼。這個過程的時長取決於案件的複雜程度和涉及機構的數量。</li>
-    <li> ​每個案件都會有一個獨一無二的案件編碼。受害人在查詢案件進度時需要提供該編碼 </li> </ul> </ol>    
+    <li> ​每個案件都會有一個獨一無二的案件編碼。受害人在查詢案件進度時需要提供該編碼 </li> </ul> </ol>
 
-    </div></div>
+   </div></div>
 
   </div>
 </div>
@@ -131,7 +129,7 @@ key: guidebook-after
 
 <div class="grid-container">
   <div class="grid grid--p-3">
-    <div class="cell cell--6"><div>
+    <div class="cell cell--6"> <div>
     <p>Having ensured that the case is dealt with by the correct authority, the officer will conduct an initial investigation.</p>
     <p><b>This could involve:</b>
     <ul>
@@ -151,9 +149,9 @@ key: guidebook-after
       <li>likelihood it can be solved (i.e. whether or not there is an identified suspect)</li>
       <li>the most effective use of resource</li>
     </ul></p>
-    </div></div>    
+   </div></div>
 
-    <div class="cell cell--6"><div>
+   <div class="cell cell--6"><div>
     <p>在確保案件由正確的偵辦機構接手後，一名警方會對案件進行初步調查</p>
     <p><b>這可能包括:</b>
     <ul>
@@ -173,7 +171,7 @@ key: guidebook-after
       <li>案件可以被解決的可能性（ie. 是否有鎖定的嫌疑人</li>
       <li>資源的有效使用</li>
     </ul></p>
-    </div></div>
+   </div></div>
 
   </div>
 </div>
