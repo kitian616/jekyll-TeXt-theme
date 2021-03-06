@@ -25,7 +25,7 @@ header:
     url: /
 
   - title: Guidebook
-    url: /guidebook/en/quick-start
+    url: /guidebook/en/
     key: guidebook
 
   - titles:
@@ -132,7 +132,7 @@ guidebook-en:
   - title:      Introduction
     children:
       - title:  Hate Crime Statistics
-        url:    /guidebook
+        url:    /guidebook/en/hate-crime-statistics
       - title:  Purpose of the Manual
         url:    /guidebook
       - title:  Legal Disclaimer
