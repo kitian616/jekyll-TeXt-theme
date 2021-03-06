@@ -204,6 +204,10 @@ exclude:
 collections:
   guidebook:
     output: true
+  content:
+    output: true
+  support:
+    output: true
 
 defaults:
   - scope:
@@ -225,6 +229,16 @@ defaults:
       nav_key: guidebook
       sidebar:
         nav: guidebook-en
+      license: true
+      aside:
+        toc: true
+      show_edit_on_github: false
+      show_date: false
+  - scope:
+      path: "_content/en"
+    values:
+      layout: article
+      nav_key: content
       license: true
       aside:
         toc: true

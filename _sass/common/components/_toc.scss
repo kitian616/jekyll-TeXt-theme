@@ -33,9 +33,9 @@ ul.toc {
   .toc-h5,
   .toc-h6 {
     &, a {
-      font-size: map-get($base, font-size-xs);
+      font-size: map-get($base, font-size-sm);
       font-weight: map-get($base, font-weight);
-      line-height: map-get($base, line-height-xs);
+      line-height: map-get($base, line-height-s);
     }
   }
   .toc-h1 {
@@ -44,7 +44,7 @@ ul.toc {
     margin-bottom: map-get($spacers, 2);
     color: $text-color-d;
     &, a {
-      font-size: map-get($base, font-size-sm);
+      font-size: map-get($base, font-size-s);
       font-weight: map-get($base, font-weight-bold);
       line-height: map-get($base, line-height-sm);
     }
@@ -79,7 +79,7 @@ ul.toc--ellipsis {
   & > li {
     @include overflow(hidden);
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: wrap;
   }
 }
 

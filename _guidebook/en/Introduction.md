@@ -1,7 +1,7 @@
 ---
 titles: Guidebook
-permalink: /guidebook/en/hate-crime-statistics
-key: guidebook-stats
+permalink: /guidebook/en/introduction
+key: guidebook-intro
 ---
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
