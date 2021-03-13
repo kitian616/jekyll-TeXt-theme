@@ -101,10 +101,10 @@ key: guidebook-after
   <div class="grid grid--p-3">
     <div class="cell cell--6"><div>
     After the police has gathered information from the victim, they will perform an initial triage and open a case through two steps: <br>
-    <ol> <li> <b> <p> Determine whether the case is handled by the correct authority </p> </b> </li>
+    <ol> </li> </b> </p> Determine whether the case is handled by the correct authority </p> </b> </li>
     <ul> <li> First, the authority that receives the report will make sure that they are the correct police force to investigate the crime you've reported. For example, if the hate crime or incident took place in a train station, this would be a matter for British Transport Police. In this case, the authority who received the initial report will send it to the correct police force to continue the investigation.</li>
     <li> Note: Filing a report with the correct authority could potentially speed up the process. If the incident happened on public transport, report directly to British Transport Police if possible. Click here to find out how to report to British Transport police. </li> </ul>
-    <p> <li> <b> <p> Issue a crime reference number (CRN)</p> </b> </li> </p>
+    <p> </li> </b> </p> Issue a crime reference number (CRN)</p> </b> </li> </p>
     <ul> <li> Once the case has been referred to the appropriate police force, they will issue you a crime reference number. How quickly this is done depends on the complexity of the incident and number of other authorities involved.</li>
     <li> What is a CRN? This is a unique number assigned to the victim’s case, the victim can quote this number to request updates from the police. </li> </ul> </ol>
 
@@ -112,10 +112,10 @@ key: guidebook-after
 
   <div class="cell cell--6"><div>
     警方向受害人收集完所需信息以後，他們會對案件進行分流並且正式立案，這一階段包含兩個步驟： <br>
-    <ol> <li> <b> <p> 確保案件是由正確的機構審理 </p> </b> </li>
-    <ul> <li> 首先，案件的受理機構會甄別他們是否是適合辦理受到的案件。 比方說，如果一個仇恨案件發生於火車站，那麼這個案件適用的偵辦機構就是英國交通警察。在這種情況下，受理機構就會將受理案件轉移給正確的偵辦機構，並由他們來正式進行調查和後續跟進：</li>
+    <ol> </li> <b> <p> 確保案件是由正確的機構審理 </p> </b> </li>
+    <ul> </li> 首先，案件的受理機構會甄別他們是否是適合辦理受到的案件。 比方說，如果一個仇恨案件發生於火車站，那麼這個案件適用的偵辦機構就是英國交通警察。在這種情況下，受理機構就會將受理案件轉移給正確的偵辦機構，並由他們來正式進行調查和後續跟進：</li>
     <li> 請注意：向正確的偵辦機構有助於縮短案件的偵辦流程。如果案件發生在公共交通上， 請直接向英國交通警察進行報案。 點擊此處獲取英國交通警察報案渠道。 </li> </ul>
-    <p> <li> <b> <p> 告知受害人案件查詢編碼 </p> </b> </li> </p>
+    <p> </li> </b> </p> 告知受害人案件查詢編碼 </p> </b> </li> </p>
     <ul> <li> 案件被轉移給正確的偵辦機構之後，該機構就回向受害人告知案件的查詢編碼。這個過程的時長取決於案件的複雜程度和涉及機構的數量。</li>
     <li> ​每個案件都會有一個獨一無二的案件編碼。受害人在查詢案件進度時需要提供該編碼 </li> </ul> </ol>
 
@@ -141,7 +141,6 @@ key: guidebook-after
     </ul></p>
     <p> The length of investigation will vary depending on the availability of evidence and complexity of the hate crime or incident. The officer in charge of the case will aim to provide regular updates to the victim. </p>
     <p> At the end of initial investigation, the police will review all of the information gathered and make an initial decision on whether to investigate the victim’s report further. They may proceed to make an arrest, close the case, or choose to refer the case for further investigation. </p>
-
     <p><b>The police will base our decision on four key factors:</b>
     <ul>
       <li>vulnerability of the victim</li>
@@ -163,7 +162,6 @@ key: guidebook-after
     </ul></p>
     <p> 偵辦時常會根據案件複雜程度和收集到的證據有所變化。負責偵辦的警官應當確保受害人定期受到案件進展的通知. </p>
     <p> 初步調查結束以後，警方會審閱所有已收集到的信息並決定是否對案件進行更進一步的調查。警方在這個階段可能選擇包括逮捕嫌疑犯、結案、更進一步調查。</p>
-
     <p><b>警方在下判斷時會考慮以下四個因素：</b>
     <ul>
       <li>受害人的脆弱程度</li>
