@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "https://gems.ruby-china.com/"
 
 # gem "jekyll-text-theme", path: "../"
 gem "jekyll-text-theme"
