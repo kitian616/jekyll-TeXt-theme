@@ -26,7 +26,7 @@ description: 爱的存在本身已经足够浪漫 # this means to ignore newline
 
 ## => Language and Timezone
 ##############################
-lang: zh-Hans # the language of your site, default as "en"
+lang: en # the language of your site, default as "en"
 timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -208,9 +208,8 @@ defaults:
       layout: article
       sharing: false
       license: true
-      aside:
-        toc: true
-      show_edit_on_github: true
+      aside: false
+      show_edit_on_github: false
       show_subscribe: false
       pageview: true
 
