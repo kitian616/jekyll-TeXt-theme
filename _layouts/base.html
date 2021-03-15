@@ -13,6 +13,9 @@ layout: none
       {%- include scripts/lib/lazyload.js -%}
     </script>
     {%- include scripts/variables.html -%}
+    {%- if jekyll.environment == 'production' -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}
   </head>
   <body>
     <div class="root" data-is-touch="false">
