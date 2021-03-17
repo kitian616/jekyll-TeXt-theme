@@ -4,7 +4,7 @@ tags: TeXt
 article_header:
   type: cover
   image:
-    src: /screenshot.jpg
+    src: /assets/dog.jpeg
 author: 无敌摇钱树
 ---
 
