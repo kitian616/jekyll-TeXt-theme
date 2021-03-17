@@ -11,6 +11,8 @@
 
 /.vscode/
 
+.idea
+
 node_modules/
 .sass-cache/
 
