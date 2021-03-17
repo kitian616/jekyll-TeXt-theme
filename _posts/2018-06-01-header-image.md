@@ -6,6 +6,7 @@ article_header:
   image:
     src: /screenshot.jpg
 author: 无敌摇钱树
+show_author_profile: true
 ---
 
 A Post with Header Image, See [Page layout](https://tianqi.name/jekyll-TeXt-theme/samples.html#page-layout) for more examples.
