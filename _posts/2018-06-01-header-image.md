@@ -1,15 +1,13 @@
 ---
-layout: article
-title: Post with Header Image
+title: 带背景图的一个博客
 tags: TeXt
 article_header:
   type: cover
   image:
     src: /screenshot.jpg
 author: 无敌摇钱树
-show_author_profile: true
 ---
 
-A Post with Header Image, See [Page layout](https://tianqi.name/jekyll-TeXt-theme/samples.html#page-layout) for more examples.
+啥也不说了，就是测试个图片而已
 
 <!--more-->
