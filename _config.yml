@@ -20,7 +20,7 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : 无敌摇钱树的博客
+title   : 姚乾坤的博客
 description: > # this means to ignore newlines until "Language & timezone"
   老板不要放香菜，影响我写代码
 
@@ -35,7 +35,7 @@ timezone: Asia/Shanghai
 ##############################
 author:
   type      : person # "organization"
-  name      : 无敌摇钱树
+  name      : 姚乾坤
   url       :
   avatar    : /assets/dog.jpeg
   bio       : 老板不要放香菜
