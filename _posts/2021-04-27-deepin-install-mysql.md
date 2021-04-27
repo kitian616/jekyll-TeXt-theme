@@ -18,7 +18,7 @@ Update:简单无脑的 MySQL 安装笔记
 -  更新软件源 `sudo apt-get update`
 
 ### 2. 安装
--  执行那个命令 ` sudo apt-get install mysql-server` 安装
+-  执行那个命令 `sudo apt-get install mysql-server` 安装
 -  安装过程中会要求输入管理员root密码，需牢记
 -  安装过程执行完以后，输入 `mysql -h 127.0.0.1 -uroot -p`，然后输入密码验证安装是否完成
 -  开始愉快的使用 MySQL
