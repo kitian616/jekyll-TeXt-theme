@@ -1,3 +1,4 @@
+
 ---
 title: "Harbor 部署小笔记"
 subtitle: '使用 docker 部署 Harbor'
@@ -40,12 +41,12 @@ Update:最终我终于摸到了 Harbor 的皮毛
 - **解压** <br>
     ```
     tar xvf harbor-offline-installer-v1.7.5.tgz
-    ``` 
+    ```
 - **配置** <br>
 cd到解压后的目录中，存在```harbor.cfg```文件，此文件为Harbor的配置文件，将```hostname```修改为主机IP，其余配置选项下一节细述。
 - **安装**
     运行```install.sh```文件，将会进行自动安装。<br>
-    
+
 &emsp;&emsp;安装完成以后，在浏览器中输入上一步中配置的hostname，默认端口为80，即可进入Harbor登陆界面，默认管理员账号admin，密码Harbor12345 。
 
 ### 3. 配置文件介绍
@@ -130,7 +131,7 @@ project_creation_restriction = everyone
       - log
     logging:
       driver: "syslog"
-      options:  
+      options:
         syslog-address: "tcp://127.0.0.1:1514"
         tag: "proxy"
 ```
