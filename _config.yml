@@ -16,12 +16,12 @@
 
 ## => Site Settings
 ##############################
-text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://www.growhaewon.com
+text_skin: "default" # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: "default" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+url     : "https://www.growhaewon.com"
 baseurl : # does not include hostname
-title   :  In no time
-description: > # this means to ignore newlines until "Language & timezone"
+title   :  "In no time"
+description: > Daily Summary # this means to ignore newlines until "Language & timezone"
   
 
 
