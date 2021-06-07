@@ -27,7 +27,7 @@ description: > Daily Summary # this means to ignore newlines until "Language & t
 
 ## => Language and Timezone
 ##############################
-lang: ko
+lang: en
 timezone: KR
 
 ## => Author and Social
