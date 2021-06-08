@@ -1,0 +1,16 @@
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/opt/homebrew/opt/ruby/bin/ruby -I /opt/homebrew/Cellar/ruby/3.0.1/lib/ruby/3.0.0 -r ./siteconf20210607-50315-9m1u6r.rb extconf.rb
+creating Makefile
+
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= clean
+
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\=
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20210607-50315-2ghzx2

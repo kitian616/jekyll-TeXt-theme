@@ -38,6 +38,12 @@
       .npm-button {
         @include clickable($text-color-1, $npm-color);
       }
+      .behance-button {
+        @include clickable($text-color-1, $behance-color);
+      }
+      .instagram-button {
+        @include clickable($text-color-1, $instagram-color);
+      }
     }
   }
 }

@@ -108,13 +108,21 @@
       </li>
     {%- endif -%}
 
-    {%- if _author.npm -%}
-      <li title="{{ _locale_string_follow | replace: '[NAME]', 'npm' }}">
-        <a class="button button--circle npm-button" itemprop="sameAs" href="https://www.npmjs.com/~{{ _author.npm }}" target="_blank">
-          <div class="icon">{%- include svg/icon/social/npm.svg -%}</div>
+    {%- if _author.behance -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'behance' }}">
+        <a class="button button--circle behance-button" itemprop="sameAs" href="https://www.behance.net/{{ _author.behance }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/behance.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
+
+    {%- if _author.instagram -%}
+    <li title="{{ _locale_string_follow | replace: '[NAME]', 'instagram' }}">
+      <a class="button button--circle instagram-button" itemprop="sameAs" href="https://www.instagram.com/{{ _author.instagram }}" target="_blank">
+        <div class="icon">{%- include svg/icon/social/instagram.svg -%}</div>
+      </a>
+    </li>
+  {%- endif -%}
 
   </ul>
 </div>

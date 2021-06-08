@@ -1,3 +1,53 @@
 /* start custom scss snippet */
 
+.friend-box {
+    float: left;
+    max-width: calc(50% - 20px);
+    min-width: calc(50% - 20px);
+    margin: 15px 10px;
+    background-color: rgba(152,149,155,0.05);
+    padding: 15px;
+    border-radius: 10px;
+
+    img.friend-avatar{
+        border-radius: 50% !important;
+        width: 80px;
+        height: 80px;
+        float: left;
+        margin:0 15px 0 0 !important;
+    }
+
+    .flink-info{
+        height: 80px;
+        overflow: hidden;
+        line-height: 24px;
+        padding-left: 30px;
+        font-size: 14px;
+
+        a {
+            font-size: 18px;
+            background: linear-gradient(180deg, transparent 75%, RGBA(152,149,155,0.4) 0); // !important;
+            margin-bottom: 10px;
+        }
+        .flink-info-desc {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 993px) {
+    .friend-box {
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .flink-info-desc {
+        display: none;
+    }
+}
+
+
+
 /* end custom scss snippet */

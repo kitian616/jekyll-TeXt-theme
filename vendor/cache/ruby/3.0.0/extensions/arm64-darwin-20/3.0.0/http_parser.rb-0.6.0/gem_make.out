@@ -1,0 +1,16 @@
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/opt/homebrew/opt/ruby/bin/ruby -I /opt/homebrew/Cellar/ruby/3.0.1/lib/ruby/3.0.0 -r ./siteconf20210607-50315-c4u6gj.rb extconf.rb
+creating Makefile
+
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\= clean
+
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\=
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/xing/Documents/xwang20.github.io/vendor/cache/ruby/3.0.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20210607-50315-88h2bo
