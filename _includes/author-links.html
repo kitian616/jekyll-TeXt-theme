@@ -108,6 +108,14 @@
       </li>
     {%- endif -%}
 
+    {%- if site.paths.rss -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'RSS' }}">
+        <a class="button button--circle rss-button" itemprop="sameAs" href="{{ url }} {{ site.paths.rss }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/rss.svg -%}</div>
+        </a>
+      </li>
+    {%- endif -%}
+
     {%- if _author.npm -%}
       <li title="{{ _locale_string_follow | replace: '[NAME]', 'npm' }}">
         <a class="button button--circle npm-button" itemprop="sameAs" href="https://www.npmjs.com/~{{ _author.npm }}" target="_blank">
