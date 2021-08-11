@@ -17,29 +17,29 @@
 ## => Site Settings
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+highlight_theme: forest # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+url     : hezizizi.site # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : hezizizi Blog
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  赫兹梓籽的博客，记录一些日常小事，当作朋友圈用(?
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: zh # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
-  type      : # "person" (default), "organization"
-  name      : Your Name
-  url       :
-  avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
-  email     :
+  type      : 沙雕 # "person" (default), "organization"
+  name      : 赫兹梓籽
+  url       : hezizizi.site
+  avatar    : https://blogger-1257147945.cos.ap-nanjing.myqcloud.com/logo.jpg # path or url of avatar image (square)
+  bio       : 就是一个沙雕/平常人，有个喜欢的人
+  email     : cool@hezizizi.site
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
