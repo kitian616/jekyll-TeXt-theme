@@ -144,4 +144,27 @@ fr-FR:
   <<: *FR
 fr-LU:
   <<: *FR
+
+## => Turkish
+########################
+tr: &TR
+  SUBSCRIBE               : "Takip et"
+  READMORE                : "Devamını Oku"
+  SEARCH                  : "İçerik Ara"
+  CANCEL                  : "İptal"
+  VIEWS                   : "gösterim"
+  LAST_UPDATED            : "Son güncellenme"
+  PREVIOUS                : "ÖNCEKİ"
+  NEXT                    : "SONRAKİ"
+  ARTICLE_DATE_FORMAT     : "%d %b, %Y"
+  ARTICLE_LIST_DATE_FORMAT: "%d %b"
+  STATISTICS              : "Toplam [POST_COUNT] adet gönderim ve [PAGE_COUNT] adet sayfa bulunuyor."
+  LICENSE_ANNOUNCE        : "Bu içerik [LICENSE] ile lisanslanmıştır."
+  POST_ON_GITHUB          : "Github üzerinde düzenle"
+  FOLLOW_ME               : "Beni [NAME] üzerinden takip et."
+  FOLLOW_US               : "Bizi [NAME] üzerinden takip edin."
+  EMAIL_ME                : "Bana email ile ulaşın."
+  EMAIL_US                : "Bize email ile ulaşın."
+  COPYRIGHT_DATES         : "2021"
+
 # @end locale config
