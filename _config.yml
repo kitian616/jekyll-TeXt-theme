@@ -85,25 +85,25 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: # false (default), true
-mathjax_autoNumber: # false (default), true
+mathjax: ture # false (default), true
+mathjax_autoNumber: ture # false (default), true
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid:  ture # false (default), true
 
 ## Chart
-chart: # false (default), true
+chart: ture # false (default), true
 
 
 ## => Paginate
 ##############################
-paginate: 8
+paginate: 10
 paginate_path: /page:num # don't change this unless for special need
 
 
 ## => Sources
 ##############################
-sources: # bootcdn (default), unpkg
+sources: bootcdn # bootcdn (default), unpkg
 
 
 ## => Sharing
@@ -119,20 +119,22 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
     shortname: # the Disqus shortname for the site
 
+
+
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    clientID    : 5e94fa783193e60847dd # GitHub Application Client ID
+    clientSecret: 86db485b4fafc0e415080f82b6d523db5e06e475 # GitHub Application Client Secret
+    repository  : leoijeon.github.io/ # GitHub repo
+    owner       : Leoijeon # GitHub repo owner
+    admin: Leoijeon # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
   ## Valine
