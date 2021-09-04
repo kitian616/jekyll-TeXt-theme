@@ -132,7 +132,7 @@ comments:
   gitalk:
     clientID    : 5e94fa783193e60847dd # GitHub Application Client ID
     clientSecret: 86db485b4fafc0e415080f82b6d523db5e06e475 # GitHub Application Client Secret
-    repository  : leoijeon.github.io/ # GitHub repo
+    repository  : Leoijeon/leoijeon.github.io/ # GitHub repo
     owner       : Leoijeon # GitHub repo owner
     admin: Leoijeon # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
