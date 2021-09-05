@@ -119,6 +119,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
+
   provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
@@ -130,6 +131,7 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
+    enable      : ture
     clientID    : 5e94fa783193e60847dd # GitHub Application Client ID
     clientSecret: 86db485b4fafc0e415080f82b6d523db5e06e475 # GitHub Application Client Secret
     repository  : leoijeon.github.io # GitHub repo
