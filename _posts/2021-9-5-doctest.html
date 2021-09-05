@@ -8,11 +8,6 @@ toc: ture
 header:
   theme: dark
   background: 'linear-gradient(135deg, rgb(34, 139, 87), rgb(139, 34, 139))'
-article_header:
-  type: overlay
-  theme: dark
-  background_color: '#123'
-  background_image: false
 aside:
     toc: true
 sitemap: true
@@ -31,132 +26,11 @@ nocite: "[@*]"
 ---
 
   <title> 拓扑超导文献调研</title>
-  <style>
 
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 1em;
-      }
-    }
-    @media print {
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
-      font-size: 85%;
-      margin: 0;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+ <!-- <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-</head>
 <body>
 <header id="title-block-header">
 <h1 class="title"> 拓扑超导文献调研</h1>
@@ -165,12 +39,12 @@ nocite: "[@*]"
 <h1 id="拓扑相变">拓扑相变</h1>
 <p>在数学中，拓扑是只考虑几何图形或空间中的位置关系，在经过形变后一些性质仍然保持不变的学科。一个常见的例子是甜甜圈和马克杯，它们都只有一个贯穿的孔洞，可以通过连续的形变的得到，亏格（genus）都为1（亏格n指沿闭简单曲线切开但不切断曲面的最大曲线条数）。这里的亏格，也可理解为一个几何形状所具有的孔洞数。如图<a href="#genus" data-reference-type="ref" data-reference="genus">1</a>，描述四种不同的拓扑形状。</p>
 <figure>
-<img src="genus.png" id="genus" style="width:50.0%" alt="不同的拓扑类" /><figcaption aria-hidden="true">不同的拓扑类</figcaption>
+<img src="./_assets/TSC/genus.png" id="genus" style="width:50.0%" alt="不同的拓扑类" /><figcaption aria-hidden="true">不同的拓扑类</figcaption>
 </figure>
 <p>一般地，可以用欧拉示性数<span class="math inline">\(\chi=2-2g=\mbox{顶点数}-\mbox{边数}+\mbox{面数}\)</span>来描述，<span class="math inline">\(g\)</span>为亏格。例如一个四面体和一个球体，互相通过连续形变可以得到，那么二者欧拉示性数就是相同的 而更一般的情况下，需要使用Gauss-Bonnet定理<span class="citation" data-cites="gb-theo"></span>：几何形状的拓扑数<span class="math inline">\(\chi(M)=\frac{1}{2\pi}\int_M R(x) d^2x\)</span>，其中<span class="math inline">\(R(x)\)</span>为流形<span class="math inline">\(M\)</span>上<span class="math inline">\(x\)</span>处的高斯曲率。</p>
 <p>这些，都是研究在实空间的拓扑结构。引入到能带理论，则是在<span class="math inline">\(k\)</span>空间中的拓扑结构。由于周期性，只需要关注一个布里渊区。<span class="math inline">\(k=k+G\)</span>，一个<span class="math inline">\(n\)</span>维的布里渊区可以用一个<span class="math inline">\(n\)</span>维的面包圈结构表示。例如二维下可以将一个布里渊区卷曲接合成一个环面（<span class="math inline">\(T^2\)</span>）</p>
 <figure>
-<img src="T2.png" id="T2" style="width:50.0%" alt="二维布里渊区及其拓扑形状" /><figcaption aria-hidden="true">二维布里渊区及其拓扑形状</figcaption>
+<img src="./_assets/TSC/T2.png" id="T2" style="width:50.0%" alt="二维布里渊区及其拓扑形状" /><figcaption aria-hidden="true">二维布里渊区及其拓扑形状</figcaption>
 </figure>
 <p>在动量空间里，类比引入一个拓扑数——Berry相位<span class="math inline">\(\gamma\)</span><span class="citation" data-cites="niu-2010rmp"></span>。</p>
 <p>对任意波函数<span class="math inline">\(\ket{\phi(t)}\)</span>，在<span class="math inline">\(k\)</span>空间演化过程中相因子变化来源于两部分： <span class="math display">\[\ket{\phi(t)}\rightarrow e^{i\left[\theta(k)+\gamma(k)\right]}\ket{\phi(t)}\]</span> <span class="math display">\[\alpha(k)=\theta(k)+\gamma(k)\]</span> 其中： <span class="math display">\[\theta(k)\equiv -\frac{1}{h}\int_{k_{initial}}^{k_{final}}E_n(k)\cdot dk\]</span>为动力学部分， <span class="math display">\[\gamma(k)\equiv\oint_C\bra{u(k)}\nabla_k\ket{u(k)}\cdot dk\]</span>为几何相位部分。</p>
@@ -197,7 +71,7 @@ nocite: "[@*]"
 <h3 id="wilson-loop">Wilson loop</h3>
 <p>通过DFT计算，用wilson loop来区分拓扑类型（ref: Yu Rui<span class="citation" data-cites="yuruiz2"></span>）。</p>
 <figure>
-<img src="wilsonloopexmp.png" style="width:40.0%" alt="一个计算得到的Wilson loop 的例图" /><figcaption aria-hidden="true">一个计算得到的Wilson loop 的例图<span class="citation" data-cites="zhihubrook"></span></figcaption>
+<img src="./_assets/TSC/wilsonloopexmp.png" style="width:40.0%" alt="一个计算得到的Wilson loop 的例图" /><figcaption aria-hidden="true">一个计算得到的Wilson loop 的例图<span class="citation" data-cites="zhihubrook"></span></figcaption>
 </figure>
 <p>通常所说的<span class="math inline">\(\mathbb{Z}_2\)</span>数是在一个2维闭合曲面内定义的一个拓扑数，比如在<span class="math inline">\(k_x =0\)</span>的平面内（由于布里渊区的周期性，所以有闭合曲面的概 念）。这里a-f六幅图分别画的是在 <span class="math inline">\(k_1=0.0\)</span>、<span class="math inline">\(k_1=0.5\)</span>、 <span class="math inline">\(k_2=0.0\)</span>、<span class="math inline">\(k_2=0.5\)</span>、 <span class="math inline">\(k_3=0.0\)</span>、<span class="math inline">\(k_3=0.5\)</span>平面内的Wilson loop演化图，从这些演化图中可以知道每一幅图的<span class="math inline">\(\mathbb{Z}_2\)</span>数。规则是：在图中画一条从左到右的曲线，数这条曲线和图中曲线的交叉点个数。如果交叉点个数为奇数，那么<span class="math inline">\(\mathbb{Z}_2\)</span>数为1，拓扑非平庸；如果为偶数，那么<span class="math inline">\(\mathbb{Z}_2\)</span>数为0，拓扑平庸。</p>
 <h2 id="tsc的理论基础">TSC的理论基础</h2>
@@ -219,10 +93,10 @@ nocite: "[@*]"
 PRL104.040502.2010 Jay D. Sau，Phys. Rev. Lett. 105, 077001(2010)., Phys. Rev. Lett. 105, 177002 (2010).<br />
 Rashba 原子线缺陷（RALD ）<span class="citation" data-cites="RALDprx2021"></span></p>
 <figure>
-<img src="RALD.png" id="rald" style="width:30.0%" alt="RALD模型简图：沿 (1,1) 方向单层 Fe(Te,Se)，缺失 Te、Se 原子的原子线缺陷。蓝、绿分别是上下层 的 Te、Se，银色是 Fe。随机分布的浅绿色是 Se 原子，深绿色是 Te 原子。" /><figcaption aria-hidden="true">RALD模型简图：沿 (1,1) 方向单层 Fe(Te,Se)，缺失 Te、Se 原子的原子线缺陷。蓝、绿分别是上下层 的 Te、Se，银色是 Fe。随机分布的浅绿色是 Se 原子，深绿色是 Te 原子。</figcaption>
+<img src="./_assets/TSC/RALD.png" id="rald" style="width:30.0%" alt="RALD模型简图：沿 (1,1) 方向单层 Fe(Te,Se)，缺失 Te、Se 原子的原子线缺陷。蓝、绿分别是上下层 的 Te、Se，银色是 Fe。随机分布的浅绿色是 Se 原子，深绿色是 Te 原子。" /><figcaption aria-hidden="true">RALD模型简图：沿 (1,1) 方向单层 Fe(Te,Se)，缺失 Te、Se 原子的原子线缺陷。蓝、绿分别是上下层 的 Te、Se，银色是 Fe。随机分布的浅绿色是 Se 原子，深绿色是 Te 原子。</figcaption>
 </figure>
 <p>生长的原子线缺陷对应于 Fe 平面上方缺失的一条 Te/Se原子线，缺失原子打破了下面的铁原子作为中心的反转对称性，产生了大的 Rashba 旋轨耦合 <span class="math inline">\(\alpha_R\)</span>。为了强调这一性质，将后者称为 Rashba 原子线缺陷 (RALD)。文中展示了由于原子缺失导致的反转对称性破缺和电荷转移，引至占据受主杂质能带和穿过线缺陷的临近电子混合宇称的自旋单态、三态库珀配对。</p>
-<p><span><embed src="schematic.pdf" title="fig:" id="fig:schematic" /></span></p>
+<p><span><embed src="./_assets/TSC/schematic.pdf" title="fig:" id="fig:schematic" /></span></p>
 <h3 id="半导体-超导体异质结">半导体-超导体异质结</h3>
 <p>这是研究很多的一个方向。rashba 旋轨耦合的近邻半导体是比较成功的一类平台，但是需要试加较大的磁场以达到拓扑状态。这对超导电性、器件化以及应用场景都是不利因素。用铁磁层代替外磁场的想法下，发展了加入FM绝缘层的结构。（这里可以对比一下RALD平台）<br />
 (a)InAs/EuS/Al heterostructures: <span class="citation" data-cites="liuyu-nanolett2020 marcusZBP2021 liu.followmarcus"></span><br />
@@ -240,7 +114,7 @@ Rashba 原子线缺陷（RALD ）<span class="citation" data-cites="RALDprx2021"
 <h3 id="铁基">铁基<span class="citation" data-cites="hujp2018iron WangSCI2018 ZhangSCI2018"></span></h3>
 <p>前面提到复合体系中常选择常规超导，但如果在高温超导中实现本征的拓扑超导，将在更高的温度鲁棒地研究马约拉纳费米子相关的物理。但自旋单重态的限制使得铁基超导体很难处于本征的拓扑超导态。但是在铁基超导体中，存在其他途径可以实现拓扑超导态。</p>
 <p>图  <a href="#fig:ironPNdope" data-reference-type="ref" data-reference="fig:ironPNdope">5</a> 给出了一个分别由空穴掺杂和电子掺杂 的单层 FeSe/SrTiO<span class="math inline">\(_3\)</span>构成的 p-n 结、空穴掺杂的部 分提供拓扑的边界态， 电子掺杂的部分提供超导 态， 两部分的边界在外加磁场或者铁磁绝缘体的作 用下可以形成一维的拓扑超导态。 在这种设计中， 拓扑和超导复合在同一种材料中， 因此可以通过改 变掺杂或者用不同的衬底来调制这种复合进而实 现拓扑超导。</p>
-<p><span><img src="ironPNdope.png" title="fig:" id="fig:ironPNdope" alt="通过 p 型和 n 型掺杂的 FeSe/SrTiO_3来实现拓扑超导的示意图。其中 S 表示超导态,， T 表示拓扑态,。在外 加磁场下，它们的边界可以产生一维的拓扑超导态" /></span></p>
+<p><span><img src="./_assets/TSC/ironPNdope.png" title="fig:" id="fig:ironPNdope" alt="通过 p 型和 n 型掺杂的 FeSe/SrTiO_3来实现拓扑超导的示意图。其中 S 表示超导态,， T 表示拓扑态,。在外 加磁场下，它们的边界可以产生一维的拓扑超导态" /></span></p>
 <h3 id="sr_2ruo_4"> Sr<span class="math inline">\(_2\)</span>RuO<span class="math inline">\(_4\)</span><span class="citation" data-cites="kerrSrRuO2006 UenoPRLSrRuO2013"></span></h3>
 <p>1994 年，Maeno 等人首先在 Sr<span class="math inline">\(_2\)</span>RuO<span class="math inline">\(_4\)</span>晶体中发现了超导电性，超导 <span class="math inline">\(T_c\)</span>是 0.8 K（晶体质量提高后有所增加）， 具有和高温超导类似的晶体结构。通过理论计算发现，它具有破坏时间反演对称性的自旋为三重态的 <span class="math inline">\(p_x\pm ip_y\)</span>配对方式。在之后的核磁共振、磁光Kerr效应、中子散射、输运测量等实验中得到验证</p>
 <h3 id="kagome晶格">kagome晶格<span class="citation" data-cites="yanbinghai2021kagome chenxh2021kagome"></span></h3>
@@ -255,7 +129,7 @@ Rashba 原子线缺陷（RALD ）<span class="citation" data-cites="RALDprx2021"
 <p>对于cooper pairs来说，配对形成依赖与时间反演和反转对称性。对spin-singlet配对缺失TRS会抑制，对spin-triplet，inversion symmetric则是必须的。由于金属性材料对电场的屏蔽效果，不便于直接改变反转对称性。但如果晶体本身不具有反转中心，那就会使得研究更容易进行。<span class="citation" data-cites="SIGRIST2007536"></span></p>
 <p>考虑两种对称性操作，空间反演对称性P和时间反演对称性T，对于一个动量空间波矢ｋ，存在两个单粒子简并态，<span class="math inline">\(\ket{k,a}\)</span>和<span class="math inline">\(TP\ket{k,a}\)</span>。当空间反演对称性被移除后，存在的相互作用使这两种态简并劈裂，也就是反对称自旋轨道耦合（Anti-symmetric spin-orbit coupling），这可以诱导一些奇特的物理性质。例如在二维电子气中，在准粒子激发中加入Rashba SOC 后，会产生一个能量为<span class="math inline">\(\epsilon_\pm=\frac{\hbar k^2}{2m}\pm \alpha|k|\)</span>的螺旋态（helicity state），如图<a href="#helicity" data-reference-type="ref" data-reference="helicity">6</a></p>
 <figure>
-<img src="helicitystate.png" id="helicity" style="width:30.0%" alt="具有Rashba SOC 相互作用的螺旋态。箭头表示自旋本征态的方向，虚线表示由这些状态组成的cooper pair。" /><figcaption aria-hidden="true">具有Rashba SOC 相互作用的螺旋态。箭头表示自旋本征态的方向，虚线表示由这些状态组成的cooper pair。<span class="citation" data-cites="SmidmanRev_2017"></span></figcaption>
+<img src="./_assets/TSC/helicitystate.png" id="helicity" style="width:30.0%" alt="具有Rashba SOC 相互作用的螺旋态。箭头表示自旋本征态的方向，虚线表示由这些状态组成的cooper pair。" /><figcaption aria-hidden="true">具有Rashba SOC 相互作用的螺旋态。箭头表示自旋本征态的方向，虚线表示由这些状态组成的cooper pair。<span class="citation" data-cites="SmidmanRev_2017"></span></figcaption>
 </figure>
 <p>对于Rashba自旋轨道耦合效应比超导能隙更大的情况，从图<a href="#helicity" data-reference-type="ref" data-reference="helicity">6</a>中可以看出，每一个方向只能在费米面上存在两个零动量的库珀对并且在图中用虚线标出。所有库珀对来自于自旋方向相反的一对电子，这表明将不存在自旋相同的库珀对。换而言之，在这种情况下不存在<span class="math inline">\(\ket{k,\uparrow}\)</span> <span class="math inline">\(／\ket{k,\uparrow}\)</span>或者<span class="math inline">\(\ket{k,\downarrow}\)</span>／<span class="math inline">\(\ket{k,\downarrow}\)</span>的库珀对。这种特性虽然是在Rashba自旋轨道耦合情况下考虑，事实上在所有缺失空间反演对称性的反对称自旋轨道耦合情况下都存在这种情况。对于存在空间反演对称性的系统，是可能存在一个自旋单态和三个自旋三重态。正如上面讨论的，如果移除了空间反演对称性，反对称自旋轨道耦合将会抑制三个自旋三重态中两个的超导转变温度，一旦反对称自旋轨道耦合能量大于超导能隙，只有一个自旋三重态能够保留下来。</p>
 <p>总的来说自旋单态不会受到空间反演对称性的影响，并且有一个单一的自旋三重态会受到保护。<span class="citation" data-cites="FrigeriPRL2004wthotInversion"></span></p>
@@ -272,7 +146,7 @@ Rashba 原子线缺陷（RALD ）<span class="citation" data-cites="RALDprx2021"
 <h3 id="cetx_3-t-transition-metal-x-si-or-ge.">CeTX<span class="math inline">\(_3\)</span> (T = transition metal, X = Si or Ge). </h3>
 <p>除了CePt<span class="math inline">\(_3\)</span>Si在常压下的超导电性外，在CeTX<span class="math inline">\(_3\)</span>(T=过渡金属，=X Si，Ge)系列中的几个化合物中还发现了压力诱导超导电性，它们以图4(B)插图所示的体心四方晶体结构(空间群<span class="math inline">\(I4 mm\)</span>)结晶。 与CePt<span class="math inline">\(_3\)</span>Si的晶体结构非常相似，没有垂直于c轴的镜面，这导致了反转对称性的破坏。据报道，其中四种化合物显示出超导性， CeRhSi<span class="math inline">\(_3\)</span> for <span class="math inline">\(p~&gt;\)</span> 1.2 GPa <span class="citation" data-cites="CeRhSi3SC"></span>, CeIrSi<span class="math inline">\(_3\)</span> for <span class="math inline">\(p~&gt;\)</span> 1.8 GPa <span class="citation" data-cites="CeIrSi3SC"></span>, CeCoGe<span class="math inline">\(_3\)</span> for <span class="math inline">\(p~&gt;\)</span> 4.3 GPa <span class="citation" data-cites="CeCoGe3SC"></span> and CeIrGe<span class="math inline">\(_3\)</span> for <span class="math inline">\(p~&gt;\)</span> 20 GPa <span class="citation" data-cites="CeIrGe3SC"></span>。所有这些化合物在常压下都是反铁磁性有序的，但施加压力会抑制<span class="math inline">\(T_N\)</span>，从而观察到超导穹顶。CeTX<span class="math inline">\(_3\)</span>的性质通常在Doniach相图[56，57]的上下文中解释，在该相图中，导致磁性有序的位间Ruderman-Kittel-Kasuya-Yosida(RKKY)相互作用和有利于形成非磁性单态的在位Kondo相互作用之间存在竞争.</p>
 <p>CeTX<span class="math inline">\(_3\)</span>超导体的一个显著特征是<span class="math inline">\(H_{C2}(T)\)</span>的极大和各向异性的值[69-71]，如图 <a href="#fig5" data-reference-type="ref" data-reference="fig5">[fig5]</a>对于施加在ab平面上的场，CeRhSi<span class="math inline">\(_3\)</span>的<span class="math inline">\(H_{c2}(0)\)</span>达到约<span class="math inline">\(7\)</span> T，但是对于沿c轴施加的场，<span class="math inline">\(H_{c2}(0)\)</span>要大得多，其中<span class="math inline">\(H_{c2}(T)\)</span>显示出在p=2.9  GPa时在T=0时达到 30 T的向上曲率。如插图所示，沿着c轴的行为明显偏离了通常用于描述传统BCS超导体的Werthamer-Helfand-Hohenberg(WHH)模型。这些值表明，与CePt<span class="math inline">\(_3\)</span>Si的情况一样，BCS Pauli限制场在所有方向上都被超过，但与在<span class="math inline">\(H_{C2}(T)\)</span>中仅表现出小的各向异性的CePt<span class="math inline">\(_3\)</span>Si不同，CeTX<span class="math inline">\(_3\)</span>中沿c轴施加的场的值要大得多。</p>
-<p><span><img src="fig5.png" title="fig:" id="CeIrSi3NMRfig" /></span></p>
+<p><span><img src="./_assets/TSC/fig5.png" title="fig:" id="CeIrSi3NMRfig" /></span></p>
 <p>这与这种结构的受保护三重态的自旋磁化率的计算是一致的，这些计算表明在一个方向上没有泡利限制，而在其他方向上有一个增强的泡利限制场。在这种情况下，<span class="math inline">\(H_{C2}(T)\)</span>将受到<span class="math inline">\(H_{\parallel ab}\)</span>的顺磁对破裂的限制，但仅由<span class="math inline">\(H_{\parallel c}\)</span>的轨道限制场决定，该限制场可能在QCP附近增强[72，73]。在这种情况下，预测在涡旋状态下磁化强度垂直于外加磁场<span class="math inline">\(H_{\parallel ab}\)</span>。</p>
 <p>为了进一步表征配对状态，还对CeIrSi<span class="math inline">\(_3\)</span>进行了NMR测量([Figs. <a href="#CeIrSi3NMRfig" data-reference-type="ref" data-reference="CeIrSi3NMRfig">7</a>(b) and (c)])。多晶样品的核磁共振测量表明，<span class="math inline">\(T^3\)</span> 依赖于<span class="math inline">\(1/T_1\)</span>，在<span class="math inline">\(T_c\)</span>以下没有相干峰，这表明在超导带隙中有线节点的非传统配对态(图5(B))[74]，类似于其他几个重费米子超导体。这些测量是在 <span class="math inline">\(2.7~-~2.8\)</span>  GPa的压力下进行的，此时反铁磁性被完全抑制，在正常状态下，<span class="math inline">\(1/T_1\)</span>表现出<span class="math inline">\(\sim T/\sqrt{T+\theta}\)</span> 依赖关系，<span class="math inline">\(\theta\sim0\)</span>在2.7  GPa，这表明它非常接近QCP。还在2.8 GPa的压力下对单晶进行了NMR测量，如图 <a href="#CeIrSi3NMRfig" data-reference-type="ref" data-reference="CeIrSi3NMRfig">7</a>(c)所示，虽然沿[001]方向施加的磁场在Tc以下的奈特位移没有变化，但沿[110]方向的磁场有明显的下降，这与在CePt<span class="math inline">\(_3\)</span>Si中观察到的各向同性常数值明显不同。 这种<span class="math inline">\(H\perp c\)</span> 奈特偏移的减小更符合在强自旋-轨道耦合极限下的预期行为。然而，奈特偏移的降幅仍然相对较小，仅达到正常状态值的90%，而预期的降幅为50%，这可能再次表明由于强电子关联而有所增强。</p>
 <h2 id="弱关联的节超导体体系">弱关联的节超导体体系</h2>
