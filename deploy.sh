@@ -30,4 +30,4 @@ cd ..
 # mv index.html.backup index.html
 
 # remove cloudfront cache by invalidation
-aws cloudfront create-invalidation --distribution-id=EWMKSYP4AE9P9 --paths "/*"
+# aws cloudfront create-invalidation --distribution-id=EWMKSYP4AE9P9 --paths "/*"
