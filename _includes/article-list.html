@@ -24,8 +24,7 @@
   <div class="article-list grid grid--p-3">
   {%- endif -%}
 {%- endif -%}
-
-  {%- for _article in _sorted_list -%}
+  {%- for _article in _sorted_list reversed -%}
 
     {%- include snippets/prepend-baseurl.html path=_article.url -%}
     {%- assign _article_url = __return -%}
