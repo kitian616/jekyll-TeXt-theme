@@ -9,19 +9,19 @@ header:
       # @start locale config
       zh-Hant : &ZH_HANT  家人的懐念
       # @end locale config
-    url: /archive.html
+    url: /archive.html?tag=家人的懐念
   - titles:
       # @start locale config
       zh-Hant : &ZH_HANT  聖徒的見證
       # @end locale config
-    url: /archive.html
+    url: /archive.html?tag=聖徒的見證
   - titles:
       # @start locale config
       zh-Hant : &ZH_HANT  影音
       # @end locale config
-    url: /videos.html
+    url: /archive.html?tag=影音
   - titles:
       # @start locale config
       zh-Hant : &ZH_HANT  照片
       # @end locale config
-    url: /photos.html
+    url: /archive.html?tag=照片
