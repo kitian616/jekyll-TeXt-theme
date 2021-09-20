@@ -1,0 +1,13 @@
+---
+layout: home
+# articles:
+#   excerpt_type: html
+---
+
+<h1>照片</h1>
+
+{% for image in site.static_files %}
+    {% if image.path contains 'photos' %}
+        <img style="width: 45%" src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+    {% endif %}
+{% endfor %}
