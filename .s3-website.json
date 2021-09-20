@@ -1,0 +1,12 @@
+{
+   "index": "index.html",
+   "region": "us-east-1",
+   "uploadDir": ".",
+   "prefix": "",
+   "exclude": [],
+   "corsConfiguration": [],
+   "enableCloudfront": false,
+   "retries": 20,
+   "domain": "brothersouchan.org",
+   "configFile": ".s3-website.json"
+}
