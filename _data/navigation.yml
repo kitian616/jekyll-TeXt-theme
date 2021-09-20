@@ -17,6 +17,11 @@ header:
     url: /archive.html
   - titles:
       # @start locale config
+      zh-Hant : &ZH_HANT  影音
+      # @end locale config
+    url: /videos.html
+  - titles:
+      # @start locale config
       zh-Hant : &ZH_HANT  照片
       # @end locale config
     url: /photos.html
