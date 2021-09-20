@@ -4,7 +4,7 @@ header:
       # @start locale config
       zh-Hant : &ZH_HANT  生平簡介
       # @end locale config
-    url: /life.html
+    url: /2021/09/01/life.html
   - titles:
       # @start locale config
       zh-Hant : &ZH_HANT  家人的懐念
