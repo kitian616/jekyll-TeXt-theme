@@ -13,7 +13,8 @@ header:
     url:        /about.html
   - title:      GitHub
     url:        https://github.com/kitian616/jekyll-TeXt-theme
-
+  - title:      Submit dataset
+    url:        /submit.html
 
 docs-en:
   - title:      Start
