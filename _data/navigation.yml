@@ -1,20 +1,26 @@
 header:
-  - title: Submission
-    children:
-      - title: Test
-        url: /request.html
-      - title: Test2
-        url: /request.html
   - titles:
       # @start locale config
-      en      : &EN       Submission request
+      en      : &EN       Submission process
       # @end locale config
-    url: /request.html
+    url: /submission.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Request data process
+      # @end locale config
+    url: /request-data.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       About
+      # @end locale config
+    url: /about.html
   
   - titles:
       # @start locale config
-      en      : &EN       Dataset submission
+      en      : &EN       Legal
       # @end locale config
-    url: /submit.html
+    url: /legal.html
 
 
