@@ -2,12 +2,18 @@
 layout: article
 titles:
     # @start locale config
-    en      : &EN       About
+    en      : &EN       Submit request
 key: page-single
 ---
 
-Page containin
+This page contains the information needed for submitting a request with the SDA.
 
-## How to submit a request
+### Who can submit to SDA
 
-To submit a request with the Swedish Sensitive Data Archive please fill the form below.
+### Information about the process
+- Submit the request
+- Get contacted by a data steward
+- Get instructions about the submission
+
+### Form for request
+- Add form
