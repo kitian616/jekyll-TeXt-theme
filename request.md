@@ -3,9 +3,10 @@ layout: article
 titles:
     # @start locale config
     en      : &EN       About
-
-key: page-request
+key: page-single
 ---
+
+Page containin
 
 ## How to submit a request
 
