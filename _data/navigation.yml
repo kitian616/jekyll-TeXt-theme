@@ -9,7 +9,7 @@ header:
       # @start locale config
       en      : &EN       Request data process
       # @end locale config
-    url: /request-data.html
+    url: /request-dataset.html
 
   - titles:
       # @start locale config

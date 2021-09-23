@@ -4,7 +4,7 @@ titles:
     # @start locale config
     en      : &EN       Submit dataset
     # @end locale config
-key: page-submit
+key: page-single
 ---
 
 This page contains the information needed for submitting data to the SDA.
