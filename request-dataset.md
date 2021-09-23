@@ -4,7 +4,7 @@ titles:
     # @start locale config
     en      : &EN       Request dataset
     # @end locale config
-key: page-request-data
+key: page-single
 ---
 
 This page contains the information needed for requesting data from the SDA.
