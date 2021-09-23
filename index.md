@@ -1,9 +1,5 @@
 ---
 layout: article
-titles:
-  # @start locale config
-  en      : &EN       Home
-  # @end locale config
 key: page-single
 ---
 
