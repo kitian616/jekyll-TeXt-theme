@@ -24,7 +24,7 @@
   <div class="article-list grid grid--p-3">
   {%- endif -%}
 {%- endif -%}
-  {%- for _article in _sorted_list reversed -%}
+  {%- for _article in _sorted_list -%}
 
     {%- include snippets/prepend-baseurl.html path=_article.url -%}
     {%- assign _article_url = __return -%}
@@ -101,7 +101,7 @@
       <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
         <div class="item__content">
           {%- if include.show_info -%}
-            <span class="item__meta">{{ _article.date | date: __return }}</span>
+            <!-- <span class="item__meta">{{ _article.date | date: __return }}</span> -->
           {%- endif -%}
           <a itemprop="headline" class="item__header" href="{{ _article_url }}">{{ _article.title }}</a></div>
       </li>
