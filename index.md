@@ -7,8 +7,6 @@ titles:
 key: page-single
 ---
 
-## What is it?
-
 The Swedish sensitive data archive is a secure data archive and
 sharing platform for sensitive datasets. The archive is designed for
 large volumes of research data store and currently has the capacity to
