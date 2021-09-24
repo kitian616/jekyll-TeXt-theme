@@ -27,7 +27,7 @@ Another preparatory step for submission is to encrypt your data. The
 public key for the archive (used for encrypting before uploads) is
 availabe [here](https://github.com/NBISweden/EGA-SE-user-docs/blob/main/crypt4gh_key.pub). Upload
 instructions are currently available [on GitHub](
-https://github.com/NBISweden/EGA-SE-user-docs/blob/main/user-guide.md).
+https://github.com/NBISweden/EGA-SE-user-docs/blob/main/README.md).
 
 
 ### User documentation
