@@ -8,8 +8,6 @@ key: page-single
 #  toc: true
 ---
 
-A post with aside on the right.
-
 ## Who can submit data to SDA
 
 ## Submit Request

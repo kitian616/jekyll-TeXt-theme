@@ -19,8 +19,7 @@ This page contains the information needed for submitting data to the SDA.
 In preparation for submission you need to verify that a data
 processing agreement between the data producing university and Uppsala
 University is in place. A list of established such data processing
-agreements can be found [here]({% link
-support/general-processing-agreements.md %}) (Case 3, EGA-SE). If no
+agreements can be found [here](https://nbis.se/support/general-processing-agreements.html). If no
 suitable agreement is listed, contact the Data Protection Officer at
 your university to establish one.
 

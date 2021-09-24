@@ -1,9 +1,11 @@
 ---
 layout: article
+titles:
+    # @start locale config
+    en      : &EN       Swedish Sensitive Data Archive
+    # @end locale config
 key: page-single
 ---
-
-# Swedish Sensitive Data Archive
 
 ## What is it?
 
