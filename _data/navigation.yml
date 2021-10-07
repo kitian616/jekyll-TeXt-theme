@@ -17,9 +17,9 @@ header:
     url: /archive.html?tag=聖徒的見證
   - titles:
       # @start locale config
-      zh-Hant : &ZH_HANT  朋友的見證
+      zh-Hant : &ZH_HANT  朋友的追念
       # @end locale config
-    url: /archive.html?tag=朋友的見證
+    url: /archive.html?tag=朋友的追念
   - titles:
       # @start locale config
       zh-Hant : &ZH_HANT  影音
