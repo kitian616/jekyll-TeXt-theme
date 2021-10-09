@@ -24,7 +24,7 @@ header:
       # @start locale config
       zh-Hant : &ZH_HANT  影音
       # @end locale config
-    url: /2021/10/04/影音
+    url: /2021/10/04/影音.html
   - titles:
       # @start locale config
       zh-Hant : &ZH_HANT  照片
