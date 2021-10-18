@@ -13,9 +13,23 @@
             {%- assign _page_url = __return -%}
             {%- if _nav_url == _page_url -%}
               <li class="toc-h2 active"><a href="{{ _nav_url }}">{{ _child.title }}</a></li>
+            {%- elsif _child.children -%}
+              <li class="toc-h2"><a href="{{ _child.children[0].url }}">{{ _child.title }}</a></li>
+              {%- for _child2 in _child.children -%}
+                {%- include snippets/get-nav-url.html path=_child2.url -%}
+                {%- assign _nav_url2 = __return -%}
+                {%- include snippets/get-nav-url.html path=page.url -%}
+                {%- assign _page_url = __return -%}
+                {%- if _nav_url2 == _page_url -%}
+                  <li class="toc-h3 active"><a href="{{ _nav_url2 }}">{{ _child2.title }}</a></li>
+                {%- else _nav_url -%}
+                  <li class="toc-h3"><a href="{{ _nav_url2 }}">{{ _child2.title }}</a></li>
+                {%- endif -%}
+              {%- endfor -%}
             {%- else -%}
               <li class="toc-h2"><a href="{{ _nav_url }}">{{ _child.title }}</a></li>
             {%- endif -%}
+
           {%- endfor -%}
         {%- endif -%}
       {%- endfor -%}
