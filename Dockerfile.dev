@@ -1,9 +1,11 @@
-FROM ruby:2.7
+FROM ruby:3.0.2
 
 # Set default locale for the environment
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
+
+RUN gem install bundler:2.2.29
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
