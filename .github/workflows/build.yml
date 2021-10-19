@@ -26,6 +26,7 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           LOCAL_DIR: _site
+          REMOTE_DIR: data
           METHOD: sftp
           PORT: 22
           ARGS: --delete
