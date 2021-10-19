@@ -14,7 +14,7 @@ jobs:
       - name: Step 2 - Create test.txt
         run: |
           cd downloads
-          echo docker --version
+          docker --version
           echo test > test.txt
           cd ../
 
