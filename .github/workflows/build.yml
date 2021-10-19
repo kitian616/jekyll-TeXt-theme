@@ -14,7 +14,7 @@ jobs:
       - name: Step 2 - Create test.txt
         run: |
           cd downloads
-          echo 'test' > test.txt
+          echo docker --version > test.txt
           cd ../
 
       - name: Step 3 - Use the Upload artifact Github Action
