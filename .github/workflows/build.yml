@@ -7,6 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Git checkout
+        uses: actions/checkout@v1
+
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
+
+      - name: testing
+        run: ls
 
       - name: Step 1 - Create downloads folder
         run: mkdir downloads
@@ -15,6 +23,7 @@ jobs:
         run: |
           cd downloads
           docker --version
+          docker-compose --version
           echo test > test.txt
           cd ../
 
