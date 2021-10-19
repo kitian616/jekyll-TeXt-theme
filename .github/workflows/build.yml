@@ -1,0 +1,26 @@
+on: [push]
+
+jobs:
+  # `build` is a user-defined name for this job
+  test:
+    # Set the base environment to run the Action on
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Step 1 - Create downloads folder
+        run: mkdir downloads
+
+      - name: Step 2 - Create test.txt
+        run: |
+          cd downloads
+          echo 'test' > test.txt
+          cd ../
+
+      - name: Step 3 - Use the Upload artifact Github Action
+        uses: actions/upload-artifact@v3
+        with:
+          name: assets-for-download
+          path: downloads
+
+    
