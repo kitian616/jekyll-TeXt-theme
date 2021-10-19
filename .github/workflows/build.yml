@@ -19,10 +19,15 @@ jobs:
       - name: Step 4 - Generate site
         run: docker-compose -f ./docker/docker-compose.prod.yml up jekyll-text-theme_build
 
-      - name: Step 5 - Use the Upload artifact Github Action
-        uses: actions/upload-artifact@v2
-        with:
-          name: assets-for-download
-          path: _site
+      - name: Step 5 - FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          LOCAL_DIR: _site
+          METHOD: sftp
+          PORT: 22
+          ARGS: --delete
 
     
