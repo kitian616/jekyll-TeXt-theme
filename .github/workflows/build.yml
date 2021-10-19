@@ -7,33 +7,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Git checkout
+      - name: Step 1 - Git checkout
         uses: actions/checkout@v1
 
-      - name: Branch name
+      - name: Step 2 - echo Branch name
         run: echo running on branch ${GITHUB_REF##*/}
 
-      - name: Run docker-compose
+      - name: Step 3 - Build build image
         run: docker-compose -f ./docker/docker-compose.build-image.yml up
 
-      - name: testing
-        run: ls
+      - name: Step 4 - Generate site
+        run: docker-compose -f ./docker/docker-compose.prod.yml up jekyll-text-theme_build
 
-      - name: Step 1 - Create downloads folder
-        run: mkdir downloads
-
-      - name: Step 2 - Create test.txt
-        run: |
-          cd downloads
-          docker --version
-          docker-compose --version
-          echo test > test.txt
-          cd ../
-
-      - name: Step 3 - Use the Upload artifact Github Action
+      - name: Step 5 - Use the Upload artifact Github Action
         uses: actions/upload-artifact@v2
         with:
           name: assets-for-download
-          path: downloads
+          path: _site
 
     
