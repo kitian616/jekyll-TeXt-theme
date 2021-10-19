@@ -13,6 +13,9 @@ jobs:
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/}
 
+      - name: Run docker-compose
+        run: docker-compose -f ./docker/docker-compose.build-image.yml up
+
       - name: testing
         run: ls
 
