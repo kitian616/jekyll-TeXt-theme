@@ -118,6 +118,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
+  provider: gitalk
   gitalk:
     clientID    :  8c189220a827a1563580
     clientSecret:  f2e3816303fea3264e70aaecf1c688d398ce7f8a
