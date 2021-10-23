@@ -4,7 +4,7 @@ services:
   jekyll-text-theme_build:
     image: docker_jekyll-text-theme_dev
     environment:
-      - JEKYLL_ENV
+      - JEKYLL_ENV=production
     ports:
       - 4000:4000
     container_name: jekyll-text-theme_build
