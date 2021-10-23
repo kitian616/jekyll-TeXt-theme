@@ -1,5 +1,8 @@
-on: [push]
-
+on: 
+  pull_request:
+    branches:
+      - my-blog
+    types: [closed]
 jobs:
   # `build` is a user-defined name for this job
   publish-blog-content:
