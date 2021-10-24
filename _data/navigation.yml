@@ -1,9 +1,7 @@
 header:
 
-  - titles:
-      en      : &EN       About
-      url: /about.html
+  - title: About
+    url: /about.html
 
-  - titles:
-      en      : &EN       Contact
-      url: mailto:info@mosquito.games
+  - title: Contact
+    url: /contact.html
