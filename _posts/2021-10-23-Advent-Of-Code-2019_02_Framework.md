@@ -23,9 +23,7 @@ After some hours trying, I have made a small example of how I want it to be.
 
 It is still far off from what I want to achieve, however, I was already able to send messages to the web page. I needed this for my code output during the code run.
 
-I still had some issues while developing
-
-- Did not yet find how to put breakpoints in the code - is this possible?
+The main question I had after day 1, was if there was any way to put breakpoints in the code. - To be continued...
 
 ### Day 2
 
@@ -41,13 +39,19 @@ The second issue I had was about using the component system. I have 1 parent com
 
 By re-reading the introduction, I discovered that [the yew repository](https://github.com/yewstack/yew/tree/master/examples) is filled with examples. Probably worth it to take a look there if there is a similar case to mine.
 
-After looking into the samples repository, I found the `Pub_Sub` sample, which lets 2 components talk to each other via an `event_bus`.
-I will use the same architecture in my example.
+After looking into the samples repository, I found the `Pub_Sub` sample [^2], which lets 2 components talk to each other via an `event_bus`.
+I will use the same architecture in my example: first I had the intention to build a `main` component, that contains a list with links to all the days, and a `day` component, which changes when a day is clicked. The current build up is a `main` component, with a `list` component and a `day` component in it. Communication between the `list` and `day` components happens using the `event_bus`, similar as the example app [^2].
 
-After again a few hours of tinkering, I have now a front end app where I can select days from a list (= a list component). Via the event bus, the days are sent to a second component, which will display the UI for running my AoC code. Following topics are the ones I had to research a bit more to get my app working
+After again some tinkering, I have now a front end app where I can select days from a list (= a list component). Via the event bus, the days are sent to a second component, which will display the UI for running my AoC code. Following topics are the ones I had to research a bit more to get my app working
 
 - Rust modules and how to import them
 - Converting an Enum to a string and vice versa
 - The workings of the event bus
 
+Next up, adding the logic of the AoC code to web app. My plan is to create a separate library project for the AoC logic. This allows me to create a console app as well, which will allow for easy testing locally. The public accessors for this library will be the following
+
+- An enum which contains all the days that have already been implemented
+- The `solution` struct, which can be initialized with an enum value containing the day, and 2 functions: part 1 and part 2
+
 [^1]: [Yew website, debugging section](https://yew.rs/more/debugging){:target="_blank"}
+[^2]: [Pub sub sample from yew example repository](https://github.com/yewstack/yew/tree/master/examples/pub_sub)
