@@ -19,8 +19,7 @@ To satisfy the requirements for my AoC target (see previous post), I started loo
 I followed the introduction on their website, and started creating a front end app which will become the base for my Advent Of Code 2019.
 After some hours trying, I have made a small example of how I want it to be.
 
-//TODO: fix image
-![My results with yew after some hours trying](../assets/images/yew_day_1.png)
+![My results with yew after some hours trying](/assets/images/yew_day_1.png)
 
 It is still far off from what I want to achieve, however, I was already able to send messages to the web page. I needed this for my code output during the code run.
 
@@ -31,8 +30,6 @@ I still had some issues while developing
 ### Day 2
 
 I searched for a way to debug my web application. Unfortunately, this does not seem possible yet, as there is currently no support for source maps in Rust/Wasm web apps [^1]. The only way to have some interaction between my source code and the web app was to use some sort of console logger. I chose to use the `ConsoleService`, as it is included within `yew`.
-
-// TODO use a gist
 
 ```rust
 use yew::services::ConsoleService;
