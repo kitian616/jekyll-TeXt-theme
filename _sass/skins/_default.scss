@@ -5,7 +5,7 @@
 ///
 
 // main colors
-$main-color-1:     #fc4d50;
+$main-color-1:     #0072c5;
 $text-color-1:     #fff;
 
 $main-color-2:     #fca24d;
@@ -14,8 +14,8 @@ $text-color-2:     #fff;
 $main-color-3:     #f2f2f2;
 $text-color-3:     #333;
 
-$main-color-theme-light: rgba(#000, .9);
-$main-color-theme-dark:  rgba(#fff, .9);
+$main-color-theme-light: rgba(#fff, .9);
+$main-color-theme-dark:  rgba(#000, .9);
 
 // page background
 $background-color: #fff;
@@ -51,10 +51,10 @@ $select-color:     rgba($main-color-1, .5);
 
 // function colors
 $green:           #52c41a;
-$blue:            #1890ff;
+$blue:            #0072c5;
 $yellow:          #fa8c16;
 $red:             #f5222d;
-$text-color-function: #fff;
+$text-color-function: rgba(#fff, .9);
 
 // logo colors
 $mail-color:       #0072c5;

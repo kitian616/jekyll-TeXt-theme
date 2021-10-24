@@ -1,5 +1,22 @@
+$title-font: 'Libertinus', 'Book Antiqua', 'Georgia', serif;
+
+@font-face {
+  font-family: "Libertinus";
+  src: url(../assets/fonts/LibertinusSerif-Regular.otf) format('opentype') font-weight-normal,
+       url(../assets/fonts/LibertinusSerif-Bold.otf) format('opentype') font-weight-bold,
+       url(../assets/fonts/LibertinusSerif-Italic.otf) format('opentype') font-italic,
+       url(../assets/fonts/LibertinusSerif-BoldItalic.otf) format('opentype') font-italic font-weight-bold;
+}
+
+@font-face {
+  font-family: "Libertinus Sans";
+  src: url(../assets/fonts/LibertinusSans-Regular.otf) format('opentype') font-weight-normal,
+  url(../assets/fonts/LibertinusSans-Bold.otf) format('opentype') font-weight-bold,
+  url(../assets/fonts/LibertinusSans-Italic.otf) format('opentype') font-italic;
+}
+
 $base: (
-  font-family:            (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif),
+  font-family:            ("Libertinus Sans", Helvetica, Arial, sans-serif),
   font-family-code:       (Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace),
 
   font-size-root:         16px,
