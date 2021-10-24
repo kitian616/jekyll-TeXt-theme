@@ -13,10 +13,6 @@ type: article
 
   <div class="article__content" itemprop="articleBody">{{ content }}</div>
 
-  {%- if _sharing -%}
-    <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>
-  {%- endif -%}
-
   <div class="d-print-none">
     {%- include article-footer.html -%}
     {%- include article-section-navigator.html -%}
