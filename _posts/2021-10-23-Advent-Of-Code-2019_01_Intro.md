@@ -2,7 +2,7 @@
 layout: article
 title: Advent Of Code 2019
 key: Advent Of Code 2019
-tags: aoc
+tags: aoc2019
 aside:
     toc: true
 ---
