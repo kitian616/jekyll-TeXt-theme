@@ -2,6 +2,7 @@
 layout: article
 title: About
 key: page-about
+permalink: /about/
 ---
 
 **The year is 1819.**
