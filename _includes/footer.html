@@ -4,9 +4,9 @@
 
     {%- assign _site_author = site.author -%}
     {%- if _site_author.type == 'organization' -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Organization' -%}
+      {%- assign _site_author_itemtype = 'https://schema.org/Organization' -%}
     {%- else -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
+      {%- assign _site_author_itemtype = 'https://schema.org/Person' -%}
     {%- endif -%}
 
     <div itemscope itemtype="{{ _site_author_itemtype }}">

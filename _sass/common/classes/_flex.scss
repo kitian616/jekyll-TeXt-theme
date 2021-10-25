@@ -1,5 +1,5 @@
 // Flexbox Mixins
-// http://philipwalton.github.io/solved-by-flexbox/
+// https://philipwalton.github.io/solved-by-flexbox/
 // https://github.com/philipwalton/solved-by-flexbox
 //
 // Copyright (c) 2013 Brian Franco
@@ -23,7 +23,7 @@
 //
 // This is a set of mixins for those who want to mess around with flexbox
 // using the native support of current browsers. For full support table
-// check: http://caniuse.com/flexbox
+// check: https://caniuse.com/flexbox
 //
 // Basically this will use:
 //
@@ -32,15 +32,15 @@
 //
 // This was inspired by:
 //
-// * http://dev.opera.com/articles/view/advanced-cross-browser-flexbox/
+// * https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/
 //
 // With help from:
 //
-// * http://w3.org/tr/css3-flexbox/
-// * http://the-echoplex.net/flexyboxes/
-// * http://msdn.microsoft.com/en-us/library/ie/hh772069(v=vs.85).aspx
-// * http://css-tricks.com/using-flexbox/
-// * http://dev.opera.com/articles/view/advanced-cross-browser-flexbox/
+// * https://w3.org/tr/css3-flexbox/
+// * https://the-echoplex.net/flexyboxes/
+// * https://msdn.microsoft.com/en-us/library/ie/hh772069(v=vs.85).aspx
+// * https://css-tricks.com/using-flexbox/
+// * https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/
 // * https://developer.mozilla.org/en-us/docs/web/guide/css/flexible_boxes
 
 //----------------------------------------------------------------------
@@ -55,7 +55,7 @@
 //
 // display: flex | inline-flex
 //
-// http://w3.org/tr/css3-flexbox/#flex-containers
+// https://w3.org/tr/css3-flexbox/#flex-containers
 //
 // (Placeholder selectors for each type, for those who rather @extend)
 
@@ -92,7 +92,7 @@
 // Values: row | row-reverse | column | column-reverse
 // Default: row
 //
-// http://w3.org/tr/css3-flexbox/#flex-direction-property
+// https://w3.org/tr/css3-flexbox/#flex-direction-property
 
 @mixin flex-direction($value: row) {
   @if $value == row-reverse {
@@ -127,7 +127,7 @@
 // Values: nowrap | wrap | wrap-reverse
 // Default: nowrap
 //
-// http://w3.org/tr/css3-flexbox/#flex-wrap-property
+// https://w3.org/tr/css3-flexbox/#flex-wrap-property
 
 @mixin flex-wrap($value: nowrap) {
   // No Webkit Box fallback.
@@ -152,7 +152,7 @@
 // Values: <flex-direction> | <flex-wrap>
 // Default: row nowrap
 //
-// http://w3.org/tr/css3-flexbox/#flex-flow-property
+// https://w3.org/tr/css3-flexbox/#flex-flow-property
 
 @mixin flex-flow($values: (row nowrap)) {
   // No Webkit Box fallback.
@@ -171,7 +171,7 @@
 //
 // Default: 0
 //
-// http://w3.org/tr/css3-flexbox/#order-property
+// https://w3.org/tr/css3-flexbox/#order-property
 
 @mixin order($int: 0) {
   -ms-flex-order: $int;
@@ -190,7 +190,7 @@
 //
 // Default: 0
 //
-// http://w3.org/tr/css3-flexbox/#flex-grow-property
+// https://w3.org/tr/css3-flexbox/#flex-grow-property
 
 @mixin flex-grow($int: 0) {
   -webkit-box-flex: $int;
@@ -209,7 +209,7 @@
 //
 // Default: 1
 //
-// http://w3.org/tr/css3-flexbox/#flex-shrink-property
+// https://w3.org/tr/css3-flexbox/#flex-shrink-property
 
 @mixin flex-shrink($int: 1) {
   -webkit-flex-shrink: $int;
@@ -227,7 +227,7 @@
 // Values: Like "width"
 // Default: auto
 //
-// http://www.w3.org/TR/css3-flexbox/#flex-basis-property
+// https://www.w3.org/TR/css3-flexbox/#flex-basis-property
 
 @mixin flex-basis($value: auto) {
   -webkit-flex-basis: $value;
@@ -249,7 +249,7 @@
 // Values: none | <flex-grow> <flex-shrink> || <flex-basis>
 // Default: See individual properties (1 1 0).
 //
-// http://w3.org/tr/css3-flexbox/#flex-property
+// https://w3.org/tr/css3-flexbox/#flex-property
 
 @mixin flex($fg: 1, $fs: null, $fb: null) {
 
@@ -286,7 +286,7 @@
 // Values: flex-start | flex-end | center | space-between | space-around
 // Default: flex-start
 //
-// http://w3.org/tr/css3-flexbox/#justify-content-property
+// https://w3.org/tr/css3-flexbox/#justify-content-property
 
 @mixin justify-content($value: flex-start) {
   @if $value == flex-start {
@@ -326,7 +326,7 @@
 // Values: flex-start | flex-end | center | baseline | stretch
 // Default: stretch
 //
-// http://w3.org/tr/css3-flexbox/#align-items-property
+// https://w3.org/tr/css3-flexbox/#align-items-property
 
 @mixin align-items($value: stretch) {
   @if $value == flex-start {
@@ -377,7 +377,7 @@
 // Values: flex-start | flex-end | center | space-between | space-around | stretch
 // Default: stretch
 //
-// http://w3.org/tr/css3-flexbox/#align-content-property
+// https://w3.org/tr/css3-flexbox/#align-content-property
 
 @mixin align-content($value: stretch) {
   // No Webkit Box Fallback.

@@ -1,9 +1,9 @@
 {%- assign _author = include.author -%}
 
 {%- if _author.type == 'organization' -%}
-  {%- assign _author_itemtype = 'http://schema.org/Organization' -%}
+  {%- assign _author_itemtype = 'https://schema.org/Organization' -%}
 {%- else -%}
-  {%- assign _author_itemtype = 'http://schema.org/Person' -%}
+  {%- assign _author_itemtype = 'https://schema.org/Person' -%}
 {%- endif -%}
 
 <div itemscope itemtype="{{ _author_itemtype }}" class="author-profile card card--flat item">

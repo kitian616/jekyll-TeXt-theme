@@ -37,7 +37,7 @@
 
     {%- if include.type == 'item' -%}
       {%- if include.article_type == 'BlogPosting' -%}
-        <article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="item" itemscope itemtype="https://schema.org/BlogPosting">
       {%- else -%}
         <article class="item">
       {%- endif -%}
@@ -99,7 +99,7 @@
         {%- endif -%}
       {%- endif -%}
       {%- include snippets/get-locale-string.html key='ARTICLE_LIST_DATE_FORMAT' -%}
-      <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
+      <li class="item" itemscope itemtype="https://schema.org/BlogPosting" data-tags="{{ _tags }}">
         <div class="item__content">
           {%- if include.show_info -%}
             <span class="item__meta">{{ _article.date | date: __return }}</span>
