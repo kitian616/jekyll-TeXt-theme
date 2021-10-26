@@ -25,7 +25,9 @@
       <div>
         {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
         {%- assign _locale_copyright_dates = __return -%}
-        © {{ site.title }} {{ _locale_copyright_dates }}.
+        <a href="/privacy/">Privacy Policy</a>
+        <br>
+        © {{ site.time | date: '%Y' }} {{ site.title }}.
         Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt</a> theme.
       </div>
     </div>
