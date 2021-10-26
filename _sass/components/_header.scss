@@ -75,9 +75,9 @@
   }
   & > a {
     display: inline-block;
-    font-size: map-get($base, font-size-h4);
+    font-size: map-get($base, font-size-h3);
     @include media-breakpoint-down(md) {
-      font-size: map-get($base, font-size-h4-small);
+      font-size: map-get($base, font-size-h3-small);
     }
   }
 }

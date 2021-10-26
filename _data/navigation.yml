@@ -1,8 +1,8 @@
 header:
   - title: Home
     url: /
-  - title: Docs
-    url: /docs
+  # - title: Docs
+  #   url: /docs
   - titles:
       # @start locale config
       en      : &EN       Archive

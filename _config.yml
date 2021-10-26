@@ -132,7 +132,7 @@ comments:
     repository  : blog_comments # GitHub repo
     owner       : pengloo53 # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+      - pengloo53
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
