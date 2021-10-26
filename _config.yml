@@ -131,6 +131,7 @@ comments:
     clientSecret: 57c9f4e275306f2c98a1c01b22445c6b58ee584e # GitHub Application Client Secret
     repository  : blog_comments # GitHub repo
     owner       : pengloo53 # GitHub repo owner
+    proxy       : https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       - pengloo53
 
