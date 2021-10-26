@@ -97,13 +97,12 @@ pageview:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: google # false (default), "google"
 
   ## Google Analytics
   google:
     tracking_id : G-4BSC94KYTH # Google Analytics id for the site
     anonymize_ip: true # Anonymize IP tracking for Analytics
-
 
 ## => Build
 ##############################
