@@ -22,7 +22,7 @@ url     : https://iamlupeng.com # the base hostname & protocol for your site e.g
 baseurl : # does not include hostname
 title   : 九零字节 · 博客
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  生活工作随笔，产品技术分享
 
 
 ## => Language and Timezone
@@ -127,10 +127,10 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : d328d8327572df3b885c # GitHub Application Client ID
+    clientSecret: 57c9f4e275306f2c98a1c01b22445c6b58ee584e # GitHub Application Client Secret
+    repository  : blog_comments # GitHub repo
+    owner       : pengloo53 # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
 
