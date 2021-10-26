@@ -1,7 +1,7 @@
 ---
 title: bitvise - 一款强大的个人免费SSH客户端
 date: 2016-04-12
-tags: [tool,bitvise,ssh] 
+tags: [tool,ssh] 
 ---
 
 推荐一款强大的个人免费的SSH客户端，很长一段时间我都是使用[putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/)和[winSCP](http://winscp.net/eng/docs/lang:chs)这两者来进行远程，一个负责命令行，一个负责文件传输，两个配合得非常完美，当初看上他哥两是因为够轻量，够简洁。

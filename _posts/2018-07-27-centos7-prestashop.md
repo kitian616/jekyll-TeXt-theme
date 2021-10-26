@@ -1,7 +1,7 @@
 ---
 title: CentOS 7 搭建开源商城 prestashop
 date: 2018-07-21 14:15
-tags: [linux,centos7,prestashop]
+tags: linux
 ---
 
 隔一段时间，就得折腾一次，不然记的那些Linux命令就差不多忘光了。

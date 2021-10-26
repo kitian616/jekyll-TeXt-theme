@@ -2,7 +2,7 @@
 title: 打造表单的极致用户体验：Web 开发实战
 date: 2019-01-30
 categories: 技术
-tags: [编程,web,表单]
+tags: web
 ---
 
 本文来源于个人[付费Chat](https://gitbook.cn/gitchat/activity/5c372defd919fc76096b599f)，感兴趣可扫码下方二维码查看。

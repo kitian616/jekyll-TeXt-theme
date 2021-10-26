@@ -1,7 +1,7 @@
 ---
 title: 了解express的路由方法 - Node实战
 date: 2017-06-23
-tags: [node,express,路由]
+tags: [node,express]
 ---
 
 一直使用Express脚手架（express-generator模块）直接生成项目目录，使用命令`express -e ./test`，生成目录后会创建一些项目目录，如下：

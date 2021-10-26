@@ -1,7 +1,7 @@
 ---
 title: 全栈开发入门实战：后台管理系统
 date: 2019-05-28
-tags: [node,编程]
+tags: node
 ---
 
 本文首发于 GitChat 平台，免费 Chat

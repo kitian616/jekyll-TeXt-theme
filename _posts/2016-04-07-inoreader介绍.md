@@ -1,7 +1,7 @@
 ---
 title: inoreader - 让你的kindle也能用上RSS
 date: 2016-04-07
-tags: [tool,inoreader,reabble,rss]
+tags: [tool,rss]
 ---
 
 这同样是一款类似Google Reader的RSS阅读器，它的优点：轻便、快捷、快速、优雅，balabalabala......百度上搜索`inoreader`介绍它的文章不在少数，这里就不多说了，推荐的目的就是让大家知道，然后去使用它，感受生活的美好，懒得搜索的直接点击下面链接就可以了，我帮大家搜索好了。
