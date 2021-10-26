@@ -29,6 +29,8 @@ __1. To provide email updates__
 
 We use the personal information you provide when you subscribe to our mailing list solely to send you occasional email updates. These updates may contain news on the development and sale of _1819 Singapore_, opportunities for you to support game development, or information about related products or services.
 
+We do not engage in [email tracking](https://en.wikipedia.org/wiki/Email_tracking).
+
 We never use your personal data for other purposes. With the exception of our mailing list provider (EmailOctopus), we never transfer, exchange, or sell your personal data to any other third party.
 
 If you unsubscribe from our mailing list, you will stop receiving our email updates, but EmailOctopus does not automatically delete your personal data. Thus, we periodically clean our mailing list to irrevocably delete the personal data of those who have unsubscribed.
