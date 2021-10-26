@@ -27,7 +27,7 @@ description: > # this means to ignore newlines until "Language & timezone"
 
 ## => Language and Timezone
 ##############################
-lang: zh-CN # the language of your site, default as "en"
+lang: # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -37,7 +37,7 @@ author:
   type      : # "person" (default), "organization"
   name      : lupeng
   url       : https://iamlupeng.com
-  avatar    : # path or url of avatar image (square)
+  avatar    : /assets/images/90byte.png # path or url of avatar image (square)
   bio       : A Producter & A Father.
   email     : lupeng@90byte.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
