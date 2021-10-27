@@ -44,6 +44,7 @@
   @include media-breakpoint-down(md) {
     height: auto;
     margin-right: 0;
+    padding-top: 10px; 
   }
   & > .header__brand {
     @include flex(1);
@@ -63,21 +64,23 @@
 .header__brand {
   @include flexbox();
   @include align-items(center);
-  & > svg {
-    width: map-get($base, font-size-h4) * 1.6;
-    height: map-get($base, font-size-h4) * 1.6;
+  & > svg, & > img {
+    width: map-get($base, font-size-h3) * 1.6;
+    height: map-get($base, font-size-h3) * 1.6;
     margin-right: map-get($spacers, 3);
     vertical-align: middle;
+    border-radius: 50%;
     @include media-breakpoint-down(md) {
-      width: map-get($base, font-size-h4) * 1.2;
-      height: map-get($base, font-size-h4) * 1.2;
+      width: map-get($base, font-size-h3) * 1.2;
+      height: map-get($base, font-size-h3) * 1.2;
     }
   }
   & > a {
     display: inline-block;
-    font-size: map-get($base, font-size-h3);
+    font-weight: bold;
+    font-size: map-get($base, font-size-h4);
     @include media-breakpoint-down(md) {
-      font-size: map-get($base, font-size-h3-small);
+      font-size: map-get($base, font-size-h4-sm);
     }
   }
 }

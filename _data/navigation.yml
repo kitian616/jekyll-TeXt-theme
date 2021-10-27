@@ -1,5 +1,10 @@
 header:
-  - title: Home
+  - titles: 
+      # @start locale config
+      en      : &EN       Home
+      zh-Hans : &ZH_HANS  首页
+      zh      : *ZH_HANS
+      # @end locale config
     url: /
   # - title: Docs
   #   url: /docs

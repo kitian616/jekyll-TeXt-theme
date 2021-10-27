@@ -23,11 +23,11 @@ baseurl : # does not include hostname
 title   : 九零字节 · 博客
 description: > # this means to ignore newlines until "Language & timezone"
   生活工作随笔，产品技术分享
-
+logo    : /assets/images/logo/logo.jpg
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: zh # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
