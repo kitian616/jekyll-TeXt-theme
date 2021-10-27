@@ -14,14 +14,14 @@ In this age of [surveillance capitalism](https://news.harvard.edu/gazette/story/
 
 1. We use [EmailOctopus](https://emailoctopus.com) to collect the email address you give us when you subscribe to our mailing list.[^1]
   - We can and do access this data to send you emails, also via EmailOctopus.
-  - For more details, see EmailOctopus' [Privacy Policy](https://emailoctopus.com/legal/privacy).
+  - EmailOctopus is [GDPR-compliant](https://emailoctopus.com/legal/gdpr). For more details, see their [Privacy Policy](https://emailoctopus.com/legal/privacy).
 2. This website is hosted on [GitHub Pages](https://pages.github.com), which may log your IP address and other information for security purposes.
   - We do not (and cannot) access this data.
-  - For more details, see GitHub's [Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages).
+  - GitHub is [GDPR-compliant](https://github.blog/2018-04-19-updates-to-our-privacy-statement-and-terms-of-service/). For more details, see their [Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages).
 3. This website is served around the world through the [Cloudflare](https://cloudflare.com) content delivery network. Cloudflare may log your IP address and other information for maintenance and security purposes.
   - We do not (and cannot) access this data.
   - We can and do access aggregate metrics about this website using Cloudflare's [analytics tool](https://www.cloudflare.com/web-analytics/).
-  - For more details, see Cloudflare's [Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+  - Cloudflare is [GDPR-compliant](https://www.cloudflare.com/trust-hub/gdpr/). For more details, see their [Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 
 ### How we use your data
 
