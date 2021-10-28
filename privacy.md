@@ -5,7 +5,7 @@ key: page-privacy
 permalink: /privacy/
 ---
 
-**Last updated: 26 October 2021**
+**Last updated: 28 October 2021**
 
 In this age of [surveillance capitalism](https://news.harvard.edu/gazette/story/2019/03/harvard-professor-says-surveillance-capitalism-is-undermining-democracy/), we endeavor to collect as little data about you as possible. This Privacy Policy outlines how we (Mosquito Games) collect, use, and process your data in accordance with the Singapore [Personal Data Protection Act](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) and the European [General Data Protection Regulation](https://gdpr-info.eu/).
 
