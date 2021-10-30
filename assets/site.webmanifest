@@ -1,19 +1,20 @@
 {
-    "name": "TeXt Theme",
-    "short_name": "TeXt Theme",
+    "name": "Mosquito Games",
+    "short_name": "Mosquito Games",
     "icons": [
         {
-            "src": "android-chrome-192x192.png",
+            "src": "/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "android-chrome-512x512.png",
+            "src": "/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#d35434",
+    "background_color": "#d35434",
+    "start_url": "https://mosquito.games",
     "display": "standalone"
 }
