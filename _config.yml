@@ -170,7 +170,7 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: custom # false (default), "google", "custom"
 
   ## Google Analytics
   google:

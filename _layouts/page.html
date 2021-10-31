@@ -182,14 +182,13 @@ layout: base
           <div class ="main">
         {%- endif -%}
             <div class="grid grid--reverse">
-
+              {%- if page.aside -%}
               <div class="col-aside d-print-none js-col-aside">
-                {%- if page.aside -%}
                   <aside class="page__aside js-page-aside">
-                    {%- include aside/toc.html -%}
+                    <div class="toc-aside js-toc-root"></div>
                   </aside>
-                {%- endif -%}
               </div>
+              {%- endif -%}
 
               <div class="col-main cell cell--auto">
                 {%- include main/top/custom.html -%}
