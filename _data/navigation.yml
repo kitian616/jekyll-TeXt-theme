@@ -6,8 +6,6 @@ header:
       zh      : *ZH_HANS
       # @end locale config
     url: /
-  # - title: Docs
-  #   url: /docs
   - titles:
       # @start locale config
       en      : &EN       Archive
@@ -32,7 +30,11 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /archive.html
-
+  - titles:
+      en      : &EN       Product
+      zh-Hans : &ZH_HANS  作品
+      zh      : *ZH_HANS
+    url: /product.html
   - titles:
       # @start locale config
       en      : &EN       About
