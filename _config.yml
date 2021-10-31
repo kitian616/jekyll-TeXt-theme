@@ -20,7 +20,7 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://iamlupeng.com # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : 九零字节 · 博客
+title   : lupeng · blog
 description: > # this means to ignore newlines until "Language & timezone"
   生活工作随笔，产品技术分享
 logo    : /assets/images/logo/logo.jpg
@@ -129,7 +129,7 @@ comments:
   gitalk:
     clientID    : d328d8327572df3b885c # GitHub Application Client ID
     clientSecret: 57c9f4e275306f2c98a1c01b22445c6b58ee584e # GitHub Application Client Secret
-    repository  : blog_comments # GitHub repo
+    repository  : pengloo53.github.io # GitHub repo
     owner       : pengloo53 # GitHub repo owner
     proxy       : https://shielded-brushlands-08810.herokuapp.com/https://github.com/login/oauth/access_token
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
