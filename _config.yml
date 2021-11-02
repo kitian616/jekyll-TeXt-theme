@@ -223,3 +223,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+## 主题
+theme: jekyll-text-theme
