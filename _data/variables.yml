@@ -60,6 +60,17 @@ sources:
     gitalk:
       js: 'https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js'
       css: 'https://unpkg.com/gitalk@1.2.2/dist/gitalk.css'
-    valine: 'https//unpkg.com/valine/dist/Valine.min.js'
+    valine: 'https://unpkg.com/valine/dist/Valine.min.js'
     mathjax: 'https://unpkg.com/mathjax@2.7.4/unpacked/MathJax.js?config=TeX-MML-AM_CHTML'
     mermaid: 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js'
+  90byte:
+    font_awesome: 'https://www.90byte.com/assets/blog/static/all.css'
+    jquery: 'https://www.90byte.com/assets/blog/static/jquery.min.js'
+    leancloud_js_sdk: 'https://www.90byte.com/assets/blog/static/av-min.js'
+    chart: 'https://www.90byte.com/assets/blog/static/Chart.bundle.min.js'
+    gitalk:
+      js: 'https://www.90byte.com/assets/blog/static/gitalk.min.js'
+      css: 'https://www.90byte.com/assets/blog/static/gitalk.min.css'
+    valine: 'https://www.90byte.com/assets/blog/static/Valine.min.js'
+    mathjax: 'https://www.90byte.com/assets/blog/static/MathJax.js'
+    mermaid: 'https://www.90byte.com/assets/blog/static/mermaid.min.js'
