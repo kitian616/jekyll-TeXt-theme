@@ -35,11 +35,11 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : Holon
   url       :
-  avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
-  email     :
+  avatar    : https://cdn.jsdelivr.net/gh/wholon/image@main/uPic/A9BDE2A2-9971-43E3-9702-7C733E48E00D.jpeg # path or url of avatar image (square)
+  bio       : 念念不忘，必有回响
+  email     : holon.cn@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -55,8 +55,8 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
-repository_tree: master
+repository: wholon/wholon.github.io
+repository_tree: main
 
 
 ## => Paths
