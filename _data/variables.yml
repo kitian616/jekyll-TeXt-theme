@@ -67,10 +67,10 @@ sources:
     font_awesome: '/assets/3rd/static/all.css'
     jquery: '/assets/3rd/static/jquery.min.js'
     leancloud_js_sdk: '/assets/3rd/static/av-min.js'
-    chart: '/assets/3rd/static/Chart.bundle.min.js'
+    chart: '/assets/3rd/static/Chart.min.js'
     gitalk:
       js: '/assets/3rd/static/gitalk.min.js'
-      css: '/assets/3rd/static/gitalk.min.css'
+      css: '/assets/3rd/static/gitalk.css'
     valine: '/assets/3rd/static/Valine.min.js'
     mathjax: '/assets/3rd/static/MathJax.js'
     mermaid: '/assets/3rd/static/mermaid.min.js'
