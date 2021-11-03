@@ -23,8 +23,7 @@ url     : https://wholon.github.io # the base hostname & protocol for your site 
 baseurl : # does not include hostname
 title   : Holon's blog
 # this means to ignore newlines until "Language & timezone"
-description: >
-    "君子终日乾乾，夕惕若厉，无咎"
+description: "君子终日乾乾，夕惕若厉，无咎"
 
 
 ## => Language and Timezone
