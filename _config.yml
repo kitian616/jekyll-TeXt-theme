@@ -12,7 +12,7 @@
 #    `--'   `----''--'   '--' `--'
 
 
-
+remote_theme: jekyll-text-theme
 
 ## => Site Settings
 ##############################
@@ -225,4 +225,4 @@ plugins:
   - jemoji
 
 ## 主题
-theme: jekyll-text-theme
+
