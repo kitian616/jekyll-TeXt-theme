@@ -28,7 +28,7 @@ description: > # this means to ignore newlines until "Language & timezone"
 
 ## => Language and Timezone
 ##############################
-lang: zh_cn # the language of your site, default as "en"
+lang: zh_CN # the language of your site, default as "en"
 timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
