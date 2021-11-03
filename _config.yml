@@ -13,7 +13,7 @@
 
 # 主题
 # 这里的 remote 似乎指的是 Gemfile 文件中的主题
-theme: jekyll-text-theme
+remote_theme: jekyll-text-theme
 
 ## => Site Settings
 ##############################
