@@ -22,13 +22,13 @@ highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "t
 url     : https://wholon.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : Holon's blog
-description: #> # this means to ignore newlines until "Language & timezone"
+description: > # this means to ignore newlines until "Language & timezone"
   君子终日乾乾，夕惕若厉，无咎
 
 
 ## => Language and Timezone
 ##############################
-lang: zh_CN # the language of your site, default as "en"
+lang: zh # the language of your site, default as "en"
 timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
