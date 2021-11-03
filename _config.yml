@@ -11,7 +11,7 @@
 #    |  |  \   --. /  .'.  \  |  |
 #    `--'   `----''--'   '--' `--'
 
-
+# 主题
 remote_theme: jekyll-text-theme
 
 ## => Site Settings
@@ -223,6 +223,3 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
-
-## 主题
-
