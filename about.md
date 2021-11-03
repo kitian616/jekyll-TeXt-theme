@@ -24,6 +24,7 @@ titles:
   fr-LU   : *FR
   # @end locale config
 key: page-about
+title: 
 ---
 
 ## 关于站长
