@@ -46,15 +46,11 @@ key: page-about
 
 除非自己做点事情出来，否则像我这样的技能树，在职场中几乎没有什么优势了。
 
-对于自己的经历，之前写过一个系列，[我的产品技术之旅](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=1337905242612269057&scene=173&subscene=10000&sessionid=0&enterid=1635909369&from_msgid=2649197686&from_itemidx=1&count=3&nolastread=1#wechat_redirect)。
+对于自己的过往经历，之前写过一个系列，[我的产品技术之旅](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MDQ4NjUwMg==&action=getalbum&album_id=1337905242612269057&scene=173&subscene=10000&sessionid=0&enterid=1635909369&from_msgid=2649197686&from_itemidx=1&count=3&nolastread=1#wechat_redirect)，这个系列应该会接着写下去，写的过程中，就是进一步认识自己的过程。
 
-### 联系方式
+最近的一次自我总结：[近两年最深刻的自我总结：我的成长，我的经历，我的悲观，我的理想](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198349&idx=1&sn=447de65c26524e56b5213bfd73b6778f&chksm=be5735848920bc923fdd2abe40fba831c992082061d9f238b280d4d65c849148fdccb07fc14b&token=1584174037&lang=zh_CN#rd)。
 
-- 邮箱：lupeng@90byte.com
-- 微信公众号：[i90byte](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198549&idx=1&sn=632d4d005ec3efa9b7400bbca5a2a60c&chksm=be57355c8920bc4af1487ee4c648e97ed191838927215b4f7aa833654c1644e82441406563ec#rd)，自由日记
-- GitHub：[pengloo53](https://github.com/pengloo53)
-
-![](/assets/images/wechat.jpg)
+> PS. 很多文章都是链接到了公众号，因为懒得迁移了，重点应该放在未来，而不是过去，不是吗。
 
 ### 近期在做的事
 
@@ -70,3 +66,14 @@ key: page-about
 ### 未来可能要做的事
 
 一款读书笔记整理工具产品。
+
+---
+
+### 联系我
+
+- 邮箱：lupeng@90byte.com
+- 微信公众号：[i90byte](http://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198549&idx=1&sn=632d4d005ec3efa9b7400bbca5a2a60c&chksm=be57355c8920bc4af1487ee4c648e97ed191838927215b4f7aa833654c1644e82441406563ec#rd)，自由日记
+- GitHub：[pengloo53](https://github.com/pengloo53)
+
+![](/assets/images/wechat.jpg)
+
