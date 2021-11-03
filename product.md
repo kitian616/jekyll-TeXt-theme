@@ -17,11 +17,11 @@ key: page-product
 
 这里记录我做的一些小产品。
 
-### Kindle2flomo
+### [Kindle2flomo](http://kindle2flomo.90byte.com/index.html)
 
-![](image/image-20211103133703673.png)
+![](/assets/images/product/kindle2flomo.png)
 
-近期在做的一款工具产品，结合 flomo 的笔记服务，实现将 Kindle 读书笔记一键导入到 flomo 中，产品的形态已经经过两个版本的迭代，但我仍然觉得这不是最终形态，即便是一个简单的工具产品，也应该具备更好的产品体验，帮助到更多的人，实现它的价值。
+近期在做的一款工具产品，结合 [flomo](https://flomoapp.com/) 的笔记服务，实现将 Kindle 读书笔记一键导入到 flomo 中，产品的形态已经经过两个版本的迭代，但我仍然觉得这不是最终形态，即便是一个简单的工具产品，也应该具备更好的产品体验，帮助到更多的人，实现它的价值。
 
 做这个小工具的一些记录：
 
@@ -31,11 +31,11 @@ key: page-product
 - [kindle2flomo 2.0 帮助你提高写读书笔记的效率](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198375&idx=1&sn=7e50878c8e7046293a84b64bdec89918&chksm=be5735ae8920bcb87a66306af0038d29d265750d13136ce067887e129edf9c95051d509cc4d5&token=1584174037&lang=zh_CN#rd)
 - [kindle2flomo 更新一二事，适配移动端](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198414&idx=1&sn=33fd4821387b8ad50190cef56de5d38d&chksm=be5735c78920bcd13e4f18262d5f0853b979ba4744f4ffed565b366ca4ebf28042ef88d280e6&token=1584174037&lang=zh_CN#rd)
 
+---
 
+### [MD2Wechat](http://md2wechat.90byte.com/index.html)
 
-### MD2Wechat
-
-![image-20211103145111552](image/image-20211103145111552.png)
+![](/assets/images/md2wechat.png)
 
 这是一款针对微信公众号发文的 Markdown 在线编辑器。
 

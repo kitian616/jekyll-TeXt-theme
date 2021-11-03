@@ -28,11 +28,6 @@ Windows 电脑建议提前安装 [Git 客户端](https://gitforwindows.org/)，�
 
 好了，可以尝试 `ssh root@xxx.xxx.xxx.xxx` 登陆服务器了。
 
-### Git 分支基础
-
-
-
-
 ### Git 裸库（服务端中心库）
 
 裸仓库一般情况下是作为远端的中心仓库而存在的，它不包含**工作区**，不能在这个目录下执行 Git 命令。其他非裸仓库 可以 push 代码到裸仓库，可以从裸仓库 pull 代码到本地。
@@ -48,6 +43,7 @@ git init --bare xxx.git
 以上命令会在 `/home/repo` 目录下生成 `xxx.git` 的目录，即为裸仓库。
 
 ####  切换裸库的分支
+
 在裸库中执行 `git checkout <branch-name>` 会报错如下：
 
 ```
@@ -56,11 +52,9 @@ fatal: this operation must be run in a work tree
 
 因为裸库是不存在工作区的，可使用命令 `git symbolic-ref HEAD refs/heads/<branch-name>` 替代。
 
-
 #### 与其他远程仓库镜像
 
 `git push --mirror http://github.com/pengloo53/xxx`
-
 
 ### Git 钩子自动化部署
 
@@ -109,7 +103,6 @@ bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW -q
 rm -rf $TMP_GIT_CLONE
 exit
 ```
-
 
 ### Git 本地仓库
 
