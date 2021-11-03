@@ -130,7 +130,7 @@ git remote add origin root@xxx.xxx.xxx.xxx:/www/repo/xxx.git #关联远程仓库
 `git checkout xxx` 切换到分支 xxx
 `git checkout -b xxx` 创建分支 xxx，并切换到 xxx 上（基于当前 HEAD 指向的分支，创建新分支）
 
-`git checkout -b <new-branch> <existing-branch>`  基于 existing-branch 创建 new-branch，<new-branch> 和 <existing-branch> 可以是远程分支，例如：origin/xxx
+`git checkout -b new-branch existing-branch`  基于 existing-branch 创建 new-branch，new-branch 和 existing-branch 可以是远程分支，例如：origin/xxx
 
 `git fetch --all` 拉取所有远程分支
 
@@ -143,8 +143,8 @@ git remote add origin root@xxx.xxx.xxx.xxx:/www/repo/xxx.git #关联远程仓库
 
 #### 删除远程分支
 
-`git push origin --delete new_branch_jiyik` 
-`git push origin :new_branch_jiyik`
+`git push origin --delete branch_name` 
+`git push origin :branch_name`
 
 
 
