@@ -13,7 +13,7 @@
 
 # 主题
 # 这里的 remote 似乎指的是 Gemfile 文件中的主题
-remote_theme: jekyll-text-theme
+theme: jekyll-text-theme
 
 ## => Site Settings
 ##############################
@@ -23,7 +23,8 @@ url     : https://wholon.github.io # the base hostname & protocol for your site 
 baseurl : # does not include hostname
 title   : Holon's blog
 # this means to ignore newlines until "Language & timezone"
-description: "君子终日乾乾，夕惕若厉，无咎"
+description: >
+  君子终日乾乾，夕惕若厉，无咎
 
 
 ## => Language and Timezone
