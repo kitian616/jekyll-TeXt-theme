@@ -35,7 +35,7 @@ key: page-product
 
 ### [MD2Wechat](http://md2wechat.90byte.com/index.html)
 
-![](/assets/images/md2wechat.png)
+![](/assets/images/product/md2wechat.png)
 
 这是一款针对微信公众号发文的 Markdown 在线编辑器。
 
