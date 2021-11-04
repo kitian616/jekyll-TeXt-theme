@@ -2,6 +2,7 @@
 title: 近期又折腾了下博客
 date: 2021-10-27
 tags: [博客,jekyll,hexo]
+key: about-blog 
 ---
 
 这两天又花了些时间折腾博客，自己有时也不明白，还折腾这玩意干啥，关键是要写，而不是写到哪去。
@@ -13,7 +14,7 @@ tags: [博客,jekyll,hexo]
 
 哎，你还别说，第三方平台服务越是方便，越是担忧。总觉得发出去的文章就不再是自己的感觉，虽然写的东西也没多大价值吧，但是，对于那些怀旧的人来说，这些无聊的文字，却尤其珍贵。特别是，夜深人静的时候，翻看过往写的那些略带青涩且搞笑的文字，也是一种怀念。
 
-### [GitHub Pages](https://docs.github.com/cn/pages/getting-started-with-github-pages/about-github-pages)
+## [GitHub Pages](https://docs.github.com/cn/pages/getting-started-with-github-pages/about-github-pages)
 
 我已经记不起来，具体是什么时候开始在互联网上写文章了，只是记得，在博客还比较火的时候，写过的第三方平台就有博客园、简书、CSDN 等等。
 
@@ -35,7 +36,7 @@ tags: [博客,jekyll,hexo]
 - [hexo 小书](https://hexo.course.90byte.com/)
 - [Hexo-theme-light_cn](https://github.com/pengloo53/Hexo-theme-light_cn)
 
-### [Bitcron](https://www.bitcron.com/)
+## [Bitcron](https://www.bitcron.com/)
 
 正如我开头第一句所说，搭建博客，最重要的是去写，锻炼自己写作的能力，并获得反馈，而不是为了搭建博客而搭建博客。
 
@@ -61,11 +62,11 @@ tags: [博客,jekyll,hexo]
 
 但是，心中难免有些遗憾，在一些社交平台上，写个人简介的时候，连个带有个性域名的主页链接都没有。
 
-### 自建服务
+## 自建服务
 
 自从上班之后，我一直都续费着一台服务器，折腾服务器也是业余一大爱好，并且做的一些小产品，也可以托管在上面。
 
-#### Index
+### Index
 
 说到个人主页，这个就很简单了，打开编辑器，新建一个 html 文件，写了一个 index 页面，直接扔到自己服务器上，绑上自己的域名，像下面这样的个人主页，是不是也足够充当门面了。
 
@@ -77,7 +78,7 @@ tags: [博客,jekyll,hexo]
 
 期间又尝试了好多的博客方案，前端技术在**静态站点生成**这块的框架，倒是层出不穷，例如：Ghost、Hugo、VuePress 等，这些方案，除了折腾好玩，对于一个静态博客来说，似乎没啥本质的区别。
 
-#### Hexo
+### Hexo
 
 逛来逛去，最后又回到了 Hexo 上，又又又走上了折腾主题这条老路上，最终选了 [NexT](https://github.com/theme-next/hexo-theme-next) 主题作为*以为是最后选择的最后选择*。
 
@@ -98,7 +99,7 @@ tags: [博客,jekyll,hexo]
 
 这不，怀旧的情感一上头，就想着还得再折腾折腾。
 
-#### Jekyll
+### Jekyll
 
 最终（应该是最终）的方案回到了原点，利用 Jekyll + Github Pages 的方案。这个方案最大的优点就是：文稿即站点。把文稿 push 到 Github 上，站点就生成了。
 
@@ -110,7 +111,15 @@ tags: [博客,jekyll,hexo]
 
 接下来，就是选主题，在 GitHub 上搜索浏览了一番，最后选定了 [TeXt](https://github.com/kitian616/jekyll-TeXt-theme) 这个主题，略微配置外加修改部分样式，最后效果如下图：
 
-![](D:\Git\pengloo53.github.io\_posts\2021-10-27-blog-to-jekyll\Snipaste_2021-11-04_15-53-53.jpg)
+![](/image/2021-10-27-blog-to-jekyll/blog.png)
 
-![](D:\Git\pengloo53.github.io\_posts\2021-10-27-blog-to-jekyll\Snipaste_2021-11-04_15-54-51.jpg)
+由于是现成的主题，样式这块倒是没有花多少的精力，反倒是博客文稿的迁移花了一些时间，另外就是认真写了「我的作品」和「关于我」两篇文稿。
+
+这两篇文稿单独做了独立的 Page，便于日后的更新，他们也将是这个博客站点的名片。
+
+## 最后
+
+博客和公众号的定位，我是这么考虑的。
+
+公众号上发的内容，还是希望稍微正式一些，工作生活中的碎碎念就不在公众号上推送了。但是，很多时候又想要记录一些碎碎念（特别是学习技术的一些笔记），我想，博客应该是最好的载体了。
 
