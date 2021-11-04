@@ -1,5 +1,5 @@
 ---
-title: 又折腾了下许久没有更新的博客
+title: 近期又折腾了下博客
 date: 2021-10-27
 tags: [博客,jekyll,hexo]
 ---
@@ -105,4 +105,12 @@ tags: [博客,jekyll,hexo]
 换台电脑的话，直接把文稿对应的 repo pull 下来，就可以了新增文章了，写完之后，再 push 上去，站点就更新了。
 
 甚至可以打开 GitHub 在线编辑 repo，commit 之后，站点就更新了，简直不能再方便了，省去了中间配置环境的步骤。
+
+这样更新文章的方式果然是最简单的，第一次把主题定下来之后，本地也不需要再配置其他任何环境了。只管更新文章就可以了。
+
+接下来，就是选主题，在 GitHub 上搜索浏览了一番，最后选定了 [TeXt](https://github.com/kitian616/jekyll-TeXt-theme) 这个主题，略微配置外加修改部分样式，最后效果如下图：
+
+![](D:\Git\pengloo53.github.io\_posts\2021-10-27-blog-to-jekyll\Snipaste_2021-11-04_15-53-53.jpg)
+
+![](D:\Git\pengloo53.github.io\_posts\2021-10-27-blog-to-jekyll\Snipaste_2021-11-04_15-54-51.jpg)
 

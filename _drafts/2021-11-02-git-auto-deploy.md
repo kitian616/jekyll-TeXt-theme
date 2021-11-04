@@ -8,7 +8,7 @@
 
 Windows 电脑建议提前安装 [Git 客户端](https://gitforwindows.org/)，千万别用 cmd 来操作。
 
-![](D:/Git/pengloo53.github.io/image/2021-11-02-git-auto-deploy/image-20211102174256261.png)
+![](./2021-11-02-git-auto-deploy/image-20211102174256261.png)
 
 然后就可以在用户根目录下找到 `.ssh` 目录了，里面有一个 `id_rsa.pub` 的文件，就是本机的公钥了。
 

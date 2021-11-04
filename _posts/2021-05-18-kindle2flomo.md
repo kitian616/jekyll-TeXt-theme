@@ -6,6 +6,8 @@ tags: kindle2flomo
 
 断断续续花了一周的时间，终于把这个小工具做完了，做成了自己满意的样子。
 
+<!-- more -->
+
 ![](/image/kindle2flomo/image-20210518220806470.png)
 
 这个小工具是为了快速将 Kindle 读书笔记，一键导入 Flomo 中。
