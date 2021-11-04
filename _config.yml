@@ -24,7 +24,7 @@ baseurl : # does not include hostname
 title   : Holon's blog
 # this means to ignore newlines until "Language & timezone"
 description: >
-  君子终日乾乾，夕惕若厉，无咎
+  Think Different
 
 
 ## => Language and Timezone
