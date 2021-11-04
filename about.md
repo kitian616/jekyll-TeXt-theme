@@ -27,7 +27,6 @@ key: page-about
 title: 
 ---
 
-## 关于站长
 ![箴言](https://cdn.jsdelivr.net/gh/wholon/image@main/uPic/93C62984-2A8B-4B18-88B1-DE4B6D2BD3B0.png)
 
 ## 联系我
