@@ -1,7 +1,7 @@
 ---
 title: 《苹果三剑客》之我见
 date: 2018-02-21
-tags: [read,book]
+tags: [书评,book]
 ---
 
 ![](/image/about_book/apple-three.png)

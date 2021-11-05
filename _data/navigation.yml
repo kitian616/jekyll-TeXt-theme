@@ -35,6 +35,8 @@ header:
       zh-Hans : &ZH_HANS  作品
       zh      : *ZH_HANS
     url: /product.html
+  - title: 小专栏
+    url: https://xiaozhuanlan.com/lupeng?rel=lupeng
   - titles:
       # @start locale config
       en      : &EN       About

@@ -1,7 +1,7 @@
 ---
 title: 初步使用sequelize模块 - Node实战
 date: 2017-10-31
-tags: [node,sequelize]
+tags: [node]
 description: Node Web开发中，换台机器开发就要检查数据库表结构是否一致，直接操作SQL来写代码实在是太Low，太不方便了，有没有替代方案？我怎么这么晚才发现sequelize模块呢
 ---
 

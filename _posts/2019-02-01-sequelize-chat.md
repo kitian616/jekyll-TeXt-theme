@@ -1,7 +1,6 @@
 ---
 title: 打造表单的极致用户体验：Web 开发实战
 date: 2019-01-30
-categories: 技术
 tags: web
 ---
 

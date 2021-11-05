@@ -1,7 +1,7 @@
 ---
 title: 关于自我成长的几篇文章
 date: 2021-07-23
-tags: [个人成长,经历]
+tags: [成长]
 ---
 
 [你的优势是什么？](https://mp.weixin.qq.com/s?__biz=MjM5MDQ4NjUwMg==&mid=2649198248&idx=1&sn=5a4d84864e7f6a746ce379c3dc133043&chksm=be5734218920bd378fbdc49fc053409d439b000eee729c21fea294357f935758455e38807991&token=1584174037&lang=zh_CN#rd)

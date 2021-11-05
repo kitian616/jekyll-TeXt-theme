@@ -1,7 +1,7 @@
 ---
-title: 小专栏
+title: 关于我的小专栏
 date: 2021-11-05
-tags: 小专栏
+tags: 专栏
 ---
 
 <!-- more -->

@@ -2,7 +2,7 @@
 title: 每天1个俯卧撑，这样也行？《微习惯》的力量
 date: 2018-03-18
 categories: 读书
-tags: [read,微习惯]
+tags: [书评,微习惯]
 ---
 
 ![](/image/about_book/mini-habits.png)

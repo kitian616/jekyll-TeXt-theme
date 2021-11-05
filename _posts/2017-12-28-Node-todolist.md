@@ -1,7 +1,7 @@
 ---
 title: 想做一个线上待办清单引发的思考 - Node开发
 date: 2018-03-21
-tags: [node,随笔]
+tags: [node]
 ---
 
 > 启动服务

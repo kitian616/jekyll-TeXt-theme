@@ -1,7 +1,7 @@
 ---
 title: 哇哦，酷毙了，Firefox Quantum
 date: 2017-11-16
-tags: [tool,firefox]
+tags: [tool]
 description: 一直支持Firefox，希望越来越棒，作为一家非营利组织Mozilla的产品，令人赞叹!
 ---
 
