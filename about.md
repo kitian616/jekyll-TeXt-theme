@@ -7,7 +7,7 @@ titles:
   en-US   : *EN
   en-CA   : *EN
   en-AU   : *EN
-  zh-Hans : &ZH_HANS  
+  zh-Hans : &ZH_HANS  NULL
   zh      : *ZH_HANS
   zh-CN   : *ZH_HANS
   zh-SG   : *ZH_HANS
