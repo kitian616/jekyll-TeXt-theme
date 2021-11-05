@@ -46,10 +46,10 @@ holon.cn@gmail.com
 
 有关 Jekyll 
 
-  请访问: https://jekyllrb.com
+* 请访问: https://jekyllrb.com
 
-  热心网友中文版: https://jekyllcn.com
+* 热心网友中文版: https://jekyllcn.com
 
 有关 TeXt Theme
 
-  请访问: https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start
+* 请访问: https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start
