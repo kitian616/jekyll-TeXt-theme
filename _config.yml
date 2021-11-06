@@ -183,6 +183,17 @@ analytics:
 ##############################
 markdown    : kramdown
 highlighter : rouge
+# For posts, Jekyll also provides the following built-in styles for convenience:
+# date
+# /:categories/:year/:month/:day/:title:output_ext
+# pretty
+# /:categories/:year/:month/:day/:title/
+# ordinal
+# /:categories/:year/:y_day/:title:output_ext
+# weekdate
+# /:categories/:year/W:week/:short_day/:title:output_ext
+# none
+# /:categories/:title:output_ext
 permalink   : none
 
 exclude:
