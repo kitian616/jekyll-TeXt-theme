@@ -239,7 +239,7 @@ plugins:
 
 
 collections:
-  algorithm:
+  algorithms:
     output: true
     # permalink: /algorithm/:title
 
