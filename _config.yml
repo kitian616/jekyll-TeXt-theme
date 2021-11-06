@@ -243,9 +243,9 @@ collections:
     output: true
     # permalink: /algorithm/:title
 
-defaults:
-  - scope:
-      path: ""
-      type: algorithms
-    values:
-      layout: article
+# defaults:
+#   - scope:
+#       path: ""
+#       type: algorithms
+#     values:
+#       layout: article
