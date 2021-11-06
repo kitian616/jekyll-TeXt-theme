@@ -246,6 +246,6 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: algorithm
+      type: algorithms
     values:
       layout: article
