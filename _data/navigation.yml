@@ -16,8 +16,8 @@ header:
     url: /about.html
   - titles: 
       # @start locale config
-      en      : &EN       Archive
-      zh-Hans : &ZH_HANS  归档
+      en      : &EN       Algorithm
+      zh-Hans : &ZH_HANS  算法
       zh      : *ZH_HANS
       # @end locale config
     url: /algorithm.html
