@@ -236,3 +236,16 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+
+collections:
+  algorithm:
+    output: true
+    # permalink: /algorithm/:title
+
+defaults:
+  - scope:
+      path: ""
+      type: algorithm
+    values:
+      layout: article
