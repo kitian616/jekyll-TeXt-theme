@@ -14,7 +14,7 @@ header:
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
       # @end locale config
-    url: /docs/algorithm
+    url: /algorithm
 
   - titles:
       # @start locale config
