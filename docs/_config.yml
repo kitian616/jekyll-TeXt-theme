@@ -18,24 +18,24 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://tianqi.name
-baseurl : /jekyll-TeXt-theme
-title   : TeXt Theme
+url     : https://wholon.github.io
+baseurl : /algorithm
+title   : 算法记录
 description: >
-  A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+  算法记录
 
 
 ## => Language and Timezone
 ##############################
-lang: en # the language of your site, default as "en"
+lang: zh # the language of your site, default as "en"
 timezone: Asia/Shanghai
 
 
 ## => Author and Social
 ##############################
 author:
-  type      : organization # "person" (default), "organization"
-  name      : TeXt
+  type      :  # "person" (default), "organization"
+  name      : Holon
   url       :
   avatar    : /assets/apple-touch-icon.png
   bio: >
@@ -57,8 +57,8 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: kitian616/jekyll-TeXt-theme
-repository_tree: master
+repository: wholon/wholon.github.io
+repository_tree: main
 
 
 ## => Paths
