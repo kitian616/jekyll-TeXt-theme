@@ -251,9 +251,10 @@ defaults:
     values:
       layout: article
       author: "Holon" # 给站点里的所有文章设置作者 Holon
-# defaults:
-#   - scope:
-#       path: ""
-#       type: algorithms
-#     values:
-#       layout: article
+
+  - scope:
+      path: "_posts/algorithms"
+      type: algorithms
+    values:
+      layout: articles
+      author: Holon
