@@ -249,6 +249,7 @@ defaults:
       path: ""
       type: "posts"
     values:
+      layout: article
       author: "Holon"
 # defaults:
 #   - scope:
