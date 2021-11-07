@@ -243,6 +243,13 @@ collections:
     output: true
     # permalink: /algorithm/:title
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Holon"
 # defaults:
 #   - scope:
 #       path: ""
