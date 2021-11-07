@@ -239,9 +239,11 @@ plugins:
 
 
 collections:
-  algorithms:
+  posts:
     output: true
     # permalink: /algorithm/:title
+  algorithms:
+    output: true
 
 defaults:
   -
