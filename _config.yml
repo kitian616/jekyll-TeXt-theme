@@ -245,7 +245,7 @@ collections:
   algorithms:
     output: true
 
-algorithms_dir: posts/algorithms
+collections_dir: my_collections
 
 defaults:
   -
@@ -256,9 +256,9 @@ defaults:
       layout: article
       author: "Holon" # 给站点里的所有文章设置作者 Holon
 
-  - scope:
-      path: "_posts/algorithms"
-      type: algorithms
-    values:
-      layout: articles
-      author: Holon
+  # - scope:
+  #     path: "_posts/algorithms"
+  #     type: algorithms
+  #   values:
+  #     layout: articles
+  #     author: Holon
