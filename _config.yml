@@ -245,6 +245,8 @@ collections:
   algorithms:
     output: true
 
+algorithms_dir: posts/algorithms
+
 defaults:
   -
     scope:
