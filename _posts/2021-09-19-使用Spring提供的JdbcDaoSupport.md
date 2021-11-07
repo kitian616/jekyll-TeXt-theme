@@ -1,6 +1,4 @@
 ---
-title: 使用Spring提供的JdbcDaoSupport
-author: Holon
 tags: Java Spring
 ---
 

@@ -1,5 +1,4 @@
 ---
-author: Holon
 tags: Java HashMap
 ---
 

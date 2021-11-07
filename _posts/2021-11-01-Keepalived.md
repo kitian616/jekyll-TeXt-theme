@@ -1,6 +1,4 @@
 ---
-title: Keepalived
-author: Holon
 tags: Linux Keepalived
 ---
 
