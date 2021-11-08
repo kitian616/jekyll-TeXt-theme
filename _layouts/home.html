@@ -25,12 +25,15 @@ titles:
   # @end locale config
 show_title: false
 articles:
+  type: normal
   data_source: paginator.posts
   article_type: BlogPosting
-  show_cover: false
+  show_cover: true
+  <!-- cover_size: lg,md,sm -->
   show_excerpt: true
   show_readmore: true
   show_info: true
+  excerpt_type: html
 ---
 <div class="layout--home">
   {%- include paginator.html -%}
