@@ -6,7 +6,7 @@ permalink: /collection/miniprogram/12_cloud_database_develop
 
 正如上篇所讲，数据库这块除了熟练使用几个 API，确实没啥可讲的，那么就来回答一下，在第 8 篇文章中，开发「历史上的今天」小工具时，留下来的思考题吧。题目如下：
 
-> 由于类似的第三方数据接口，都是付费服务，这个接口虽然免费，但是限制调用次数。
+> 由于类似的第三方数据接口，都是付费服务，这个接口虽然免费，但是限制调用次数。  
 > 如何通过改进代码，最低限度调用第三方接口？
 
 当时给了两个思路：
@@ -36,18 +36,18 @@ permalink: /collection/miniprogram/12_cloud_database_develop
 ### 数据库准备
 打开「云开发」界面，选择「数据库」。
 
-![](/image/collections/miniprogram/2019-09-12-21-07-51.png)
+![](/image/collection/miniprogram/2019-09-12-21-07-51.png)
 
 新建集合 `history`，设置集合权限为：所有人可读。如下图所示：
 
-![](/image/collections/miniprogram/2019-09-12-21-09-19.png)
+![](/image/collection/miniprogram/2019-09-12-21-09-19.png)
 
 一人请求后，数据便写入云数据库，后续所有人都可以直接读取，而无需再次请求第三方接口。
 
 ### 代码实现：云函数
 新建页面 `cloud_database` 用做演示，新建云函数 `history_save`，目录结构如下：
 
-![](/image/collections/miniprogram/2019-09-12-20-46-11.png)
+![](/image/collection/miniprogram/2019-09-12-20-46-11.png)
 
 首先编写云函数 `history_save`，代码如下：
 
@@ -102,13 +102,13 @@ exports.main = async (event, context) => {
 
 下图为本地测试结果：
 
-![](/image/collections/miniprogram/2019-09-13-08-10-34.png)
+![](/image/collection/miniprogram/2019-09-13-08-10-34.png)
 
 图中我已经标注非常清楚了，就不多做解释了。**另外需要注意的一点是**，本地测试的云函数，其中调用的其他云函数是在云端的。所以，务必确保调用的那个云函数在云端是没有问题的。
 
 最后看一下数据库中，是否已经有了数据，如下图：
 
-![](/image/collections/miniprogram/2019-09-13-08-13-16.png)
+![](/image/collection/miniprogram/2019-09-13-08-13-16.png)
 
 跟预想的一样。云端测试这里就不演示了，接下来就是小程序端的功能实现了。
 
@@ -163,7 +163,7 @@ onLoad: function (options) {
 
 最后，还是留一个思考题：
 
-![](/image/collections/miniprogram/2019-09-13-11-00-31.png)
+![](/image/collection/miniprogram/2019-09-13-11-00-31.png)
 
 如上图，云函数的调用也是有限额的，超了的话，也是需要付费的，能不能通过改进代码，实现最低限度的调用云函数？答案其实在之前的文章里，已经给过了。
 

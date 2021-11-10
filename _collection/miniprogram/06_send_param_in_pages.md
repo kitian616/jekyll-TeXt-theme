@@ -8,11 +8,11 @@ permalink: /collection/miniprogram/06_send_param_in_pages
 
 下面就接着上一篇的例子，继续完善程序，我们在 pages 目录下，新建 days 目录，然后在 days 目录下，新建 Page index 用来显示日期列表，目录结构如下图：
 
-![](/image/collections/miniprogram/2019-09-05-15-12-31.png)
+![](/image/collection/miniprogram/2019-09-05-15-12-31.png)
 
 index 页面的代码实现，就不多介绍了，它就是一个显示日期的列表，大概样子如下：
 
-![](/image/collections/miniprogram/2019-09-04-10-43-41.png)
+![](/image/collection/miniprogram/2019-09-04-10-43-41.png)
 
 建议你能够照着上面这个样子，把代码写出来，不要认为看着简单，就不想动手，写出来才是自己的。
 
@@ -50,7 +50,7 @@ goto: function(e){
 
 第二层，是从 A 页面传输到 B 页面，页面的跳转，官方提供了以下几种 API：
 
-![](/image/collections/miniprogram/2019-09-05-15-58-12.png)
+![](/image/collection/miniprogram/2019-09-05-15-58-12.png)
 
 具体用法看[文档](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html)，这里我们使用的是 `wx.navigateTo`，在 URL 后面加上 `?key1=value1&key2=value` 的方式，就可以将参数传输到下一个页面。
 

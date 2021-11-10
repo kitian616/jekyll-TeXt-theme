@@ -8,7 +8,7 @@ permalink: /collection/miniprogram/11_cloud_develop_document
 
 说到云开发的文档，就想再叨叨几句，其实文档写得很不错了，但是对于没有全栈开发经验的新手来说，还是难免有点迷糊。例如下图，其实是同一个东西，整出三份文档，而且很多内容都是重复的。
 
-![](/image/collections/miniprogram/2019-09-12-15-28-28.png)
+![](/image/collection/miniprogram/2019-09-12-15-28-28.png)
 
 这只是文档呈现的问题，并不是文档本身的问题，反而，我觉得这样的呈现方式挺好。分门别类，你是哪种开发场景，直接进入对应的文档目录查看就行了，其他两份根本就不用看。
 
@@ -17,7 +17,7 @@ permalink: /collection/miniprogram/11_cloud_develop_document
 ### 小程序端 API 文档
 小程序端，顾名思义，就是在小程序端调用，准确的说，是在小程序页面的逻辑层中调用。**注意：虽然云函数目录似乎和小程序的目录在一块，但一定要区别对待。其实，我更喜欢下面这样的目录结构。**（原谅我一开始没有讲，循序渐进比较好）
 
-![](/image/collections/miniprogram/2019-09-12-16-10-48.png)
+![](/image/collection/miniprogram/2019-09-12-16-10-48.png)
 
 云函数一个单独目录，小程序一个单独目录，通过 `project.config.json` 文件关联起来，关联的两个设置项如下：
 
@@ -83,7 +83,7 @@ POST https://api.weixin.qq.com/tcb/invokecloudfunction?access_token=ACCESS_TOKEN
 ### 总结
 讲了这么多，应该大概知道，云开发文档为什么要整成三份了吧。如果我再把文档目录这样给你对比一下，是不是更加清晰了呢？
 
-![](/image/collections/miniprogram/2019-09-12-16-01-06.png)
+![](/image/collection/miniprogram/2019-09-12-16-01-06.png)
 
 可以看出，「服务端 API 文档」多出来的部分，就是它的独特优势。看到这里，你大概知道自己是哪种开发场景了，知道去哪个部分查看文档了。
 

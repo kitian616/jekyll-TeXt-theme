@@ -36,7 +36,7 @@ add: function () {
 
 再次添加数据的时候，我们可以在控制台 Storage 中，看到保存的数据。
 
-![](/image/collections/miniprogram/2019-09-03-07-43-53.png)
+![](/image/collection/miniprogram/2019-09-03-07-43-53.png)
 
 PS. 上面添加逻辑，把默认的两条地址数据一块保存了，但是点击它们的时候，却无法打开地址，可以想一下为什么？
 

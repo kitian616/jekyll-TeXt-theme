@@ -6,7 +6,7 @@ permalink: /collection/miniprogram/09_cloud_function_develop
 
 上一篇内容，我们初次接触了网络开发，使用第三方的接口数据，由于微信公众账号的限制与管控，在线使用第三方的服务器，都必须要添加合法域名信息，如下图所示：
 
-![](/image/collections/miniprogram/2019-09-10-21-57-45.png)
+![](/image/collection/miniprogram/2019-09-10-21-57-45.png)
 
 能找到第三方数据接口已经很不容易了，还必须是 `https` 以及域名备案的，这个就有点过分了。
 
@@ -33,15 +33,7 @@ permalink: /collection/miniprogram/09_cloud_function_develop
 
 右键该目录，就可以创建云函数了，如下图：
 
-![](/image/collections/miniprogram/2019-09-11-15-08-53.png)
-
-![](/image/collections/miniprogram/2019-09-11-15-08-57.png)
-
-![](/image/collections/miniprogram/2019-09-11-15-09-09.png)
-
-![](/image/collections/miniprogram/2019-09-11-15-09-11.png)
-
-![](/image/collections/miniprogram/2019-09-11-18-01-55.png)
+![](/image/collection/miniprogram/2019-09-11-18-01-55.png)
 
 这里我们创建一个名为 `history` 的云函数，会给我们新建两个默认文件 `index.js` 和 `package.json`，其实这就是一个简化版的 Node 服务，其中 `index.js` 代码如下：
 
@@ -116,20 +108,20 @@ exports.main = async (event, context) => {
 
 上传部署之前，要确保已经开通了云开发能力，点击「云开发」，然后跟着流程走就可以了，一个小程序，可以创建两个环境，一个用来测试，一个用于生产。
 
-![](/image/collections/miniprogram/2019-09-11-15-37-41.png)
+![](/image/collection/miniprogram/2019-09-11-15-37-41.png)
 
 由于这里我早已创建好了，就不再演示了。
 
 选择要上传的环境，然后右键 history 目录，创建并部署，就可以了。
 
-![](/image/collections/miniprogram/2019-09-11-15-42-48.png)
+![](/image/collection/miniprogram/2019-09-11-15-42-48.png)
 
 ### 云函数调用
 假设云函数都搞定了，功能在本地和云端都测试通过了。（如果没有通过，先不着急，下一篇详解本地和云端的测试）
 
 现在再回到小程序的文件夹中，我们新建一个页面用作示例，如下图：
 
-![](/image/collections/miniprogram/2019-09-11-17-09-04.png)
+![](/image/collection/miniprogram/2019-09-11-17-09-04.png)
 
 页面代码可以 copy 一下上一篇中的 request 页面，然后编辑 `index.js` 代码如下：
 
@@ -156,7 +148,7 @@ onLoad: function (options) {
 
 最后，在首页中加入一个导航链接，进入 cloudfunction 页面，发现，果然没有什么事情是一帆风顺的。控制台报错如下：
 
-![](/image/collections/miniprogram/2019-09-11-17-37-02.png)
+![](/image/collection/miniprogram/2019-09-11-17-37-02.png)
 
 上述错误的提示已经很明显了，就是没有初始化，具体查看这里的[文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/init.html)。
 
@@ -171,7 +163,7 @@ wx.cloud.init({
 
 把环境变量替换成自己的，环境变量 ID 在这里查看。
 
-![](/image/collections/miniprogram/2019-09-11-17-42-45.png)
+![](/image/collection/miniprogram/2019-09-11-17-42-45.png)
 
 ### 总结
 这篇文章介绍了云函数的基本使用，并带你完成了，云函数异步请求第三方数据的功能，通过这种方式，可以不使用 `wx.request` API 来获得第三方接口的数据，从而避免要设置合法域名信息的限制。

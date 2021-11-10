@@ -30,7 +30,7 @@ permalink: /collection/miniprogram/03_map_api_use
 
 重新进入 address 页面，显示效果如下图：
 
-![](/image/collections/miniprogram/2019-09-02-21-25-30.png)
+![](/image/collection/miniprogram/2019-09-02-21-25-30.png)
 
 按钮中，绑定了一个 add 的事件函数，当我们点击按钮的时候，将调用 add 函数。
 
@@ -60,7 +60,7 @@ add: function () {
 
 返回的数据，我们直接添加 lists 列表中，页面将会即时显示出新增加的地址。如下图：
 
-![](/image/collections/miniprogram/2019-09-02-21-40-05.png)
+![](/image/collection/miniprogram/2019-09-02-21-40-05.png)
 
 ### 页面传参
 从上面的 API 中，我们获取到了一个地址的 4 个参数值：name、address、latitude 以及 longitude，我们需要将这些参数值渲染到页面中。
@@ -105,7 +105,7 @@ gotoLocation: function(e){
 
 这里主要调用了打开地址 API  [wx.openLocation](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.openLocation.html)，传入页面中的 4 个参数值，即可实现如下图所示功能页面，而无需再写页面代码。
 
-![](/image/collections/miniprogram/2019-09-02-21-54-57.png)
+![](/image/collection/miniprogram/2019-09-02-21-54-57.png)
 
 通过两个地图 API 的调用，使得我们这个页面多了一些交互，能够选择并添加地址，还能够打开地址，显示导航。
 

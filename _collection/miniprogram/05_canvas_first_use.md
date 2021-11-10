@@ -8,11 +8,11 @@ permalink: /collection/miniprogram/05_canvas_first_use
 
 其本质就是将页面元素，生成一张图片，并且保存到相册中。这块功能的实现需要借助 canvas 画布的 API。这也是「计算日子」这个小工具，一个关键的功能点，最终生成卡片效果如下图所示：
 
-![](/image/collections/miniprogram/IMG_3386.JPG)
+![](/image/collection/miniprogram/IMG_3386.JPG)
 
 下面将以它的实现代码为例进行介绍。首先在 pages 目录下，创建 canvas 目录，新建 Page，命名 canvas，目录如下图所示：
 
-![](/image/collections/miniprogram/2019-09-04-13-36-06.png)
+![](/image/collection/miniprogram/2019-09-04-13-36-06.png)
 
 编写 canvas.wxml 文件，结构很简单，一个画布元素，一个按钮，代码如下：
 
@@ -136,8 +136,8 @@ saveToImg: function () {
 
 给个提示：尝试使用 [clearRect](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.clearRect.html)，当然页面也要有对应的修改。最终效果如下图：
 
-![](/image/collections/miniprogram/2019-09-04-15-20-19.png)
+![](/image/collection/miniprogram/2019-09-04-15-20-19.png)
 
-![](/image/collections/miniprogram/IMG_3390.JPG)
+![](/image/collection/miniprogram/IMG_3390.JPG)
 
 假设尝试过了，还是不行，[点这里](https://github.com/pengloo53/miniprogram-demos)查看源代码。

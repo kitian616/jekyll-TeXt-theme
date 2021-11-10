@@ -39,7 +39,7 @@ permalink: /collection/miniprogram/08_use_the_third_data
 
 接下来就是请求第三方的 API 数据了，先看一下易源的接口文档：[历史上的今天-易源接口文档](https://www.showapi.com/apiGateway/view?apiCode=119)，大致内容如下图：
 
-![](/image/collections/miniprogram/2019-09-10-16-14-45.png)
+![](/image/collection/miniprogram/2019-09-10-16-14-45.png)
 
 接口返回格式为 json，请求数据需要 4 个参数，这是为了校验，需要我们注册账户才可以获取。
 
@@ -106,15 +106,15 @@ onLoad: function (options) {
 
 最终页面显示如下图所示：
 
-![](/image/collections/miniprogram/2019-09-10-16-42-01.png)
+![](/image/collection/miniprogram/2019-09-10-16-42-01.png)
 
 **需要注意的是：**线上版本一定要在小程序公众平台进行域名信息配置，开发工具中，在此处查看信息。
 
-![](/image/collections/miniprogram/2019-09-10-16-45-54.png)
+![](/image/collection/miniprogram/2019-09-10-16-45-54.png)
 
 开发测试阶段，可以勾选「不校验」选项，方便在开发工具中进行调试。
 
-![](/image/collections/miniprogram/2019-09-10-16-47-41.png)
+![](/image/collection/miniprogram/2019-09-10-16-47-41.png)
 
 ### 总结
 本篇文章介绍了微信小程序使用服务器（也就是后台开发）的三种方式，分别是：使用第三方数据接口、使用云开发以及自建服务器。

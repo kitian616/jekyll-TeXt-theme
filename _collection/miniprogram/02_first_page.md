@@ -13,18 +13,18 @@ permalink: /collection/miniprogram/02_first_page
 ### 新建项目
 打开微信开发者工具，新建项目，如下图：
 
-![](/image/collections/miniprogram/2019-09-02-15-18-34.png)
+![](/image/collection/miniprogram/2019-09-02-15-18-34.png)
 
 你也可以在 GitHub 上，下载我写的 [demo](https://github.com/pengloo53/miniprogram-demos)，然后导入项目。（新手建议自己去创建）
 
-![](/image/collections/miniprogram/2019-09-02-15-22-43.png)
+![](/image/collection/miniprogram/2019-09-02-15-22-43.png)
 
 如上图是默认的项目目录，所有的页面都保存在 pages 里，其他代码先不用管，我们来创建一个页面。
 
 ### 新建页面
 在 pages 目录下，新建一个目录叫 address，然后在 address 目录下，新建 page，同样命名为 address。最后结果如下：
 
-![](/image/collections/miniprogram/2019-09-02-15-25-49.png)
+![](/image/collection/miniprogram/2019-09-02-15-25-49.png)
 
 你会发现，在新建 page 的时候，会自动创建同名的 js/json/wxml/wxss 4 个文件。前面提到过，这是微信开发者工具提供的自动化功能。如果你在使用其他 IDE 或 编辑器，可能就没有这种便利性了。
 
@@ -120,11 +120,11 @@ data: {
 
 这里可以看出，写法跟 HTML 几乎一样，在标签中使用 `style` 属性，直接定义样式，最后显示效果如下：
 
-![](/image/collections/miniprogram/2019-09-02-21-02-28.png)
+![](/image/collection/miniprogram/2019-09-02-21-02-28.png)
 
 点击「收藏地址」链接，如果不出意外，将会跳转到，刚完成的 address 页面，显示效果如下：
 
-![](/image/collections/miniprogram/2019-09-02-21-05-09.png)
+![](/image/collection/miniprogram/2019-09-02-21-05-09.png)
 
 小程序的第一个页面，我们就写完了。
 

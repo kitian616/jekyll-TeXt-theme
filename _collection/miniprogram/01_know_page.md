@@ -11,11 +11,11 @@ permalink: /collection/miniprogram/01_know_page
 ### 目录结构
 每一个页面对应一个目录，目录里有 4 个文件：wxml、wxss、js 以及 json，它们分别代表页面结构、样式、逻辑以及配置，4 个文件的命名，必须是一样的，否则会报错。如下图所示：
 
-![](/image/collections/miniprogram/2019-08-29-20-19-34.png)
+![](/image/collection/miniprogram/2019-08-29-20-19-34.png)
 
 在微信开发者工具中，右键可以很方便的创建一个页面，选择「新建 Page」，会自动生成这 4 个文件。
 
-![](/image/collections/miniprogram/2019-08-29-20-24-09.png)
+![](/image/collection/miniprogram/2019-08-29-20-24-09.png)
 
 ### 事件函数
 自动生成 js 文件中，会写入默认的代码，如下所示：
@@ -109,17 +109,17 @@ Page({
 ### 生命周期
 关于页面的生命周期，官方给了一张图，现在不太懂，没关系，随着开发的进行，会慢慢了解的。
 
-![](/image/collections/miniprogram/2019-09-02-14-12-42.jpg)
+![](/image/collection/miniprogram/2019-09-02-14-12-42.jpg)
 
 
 ### 页面路由
 小程序的页面路由由框架进行管理，我们真正需要了解的是，**什么情况下，会触发什么事件函数？**看下面这张图：
 
-![](/image/collections/miniprogram/2019-09-02-14-20-32.png)
+![](/image/collection/miniprogram/2019-09-02-14-20-32.png)
 
 Tab 切换
 
-![](/image/collections/miniprogram/2019-09-02-14-22-47.png)
+![](/image/collection/miniprogram/2019-09-02-14-22-47.png)
 
 这里特别需要提醒一下的是，虽然触发的事件函数，有一定的先后顺序，但是，函数里代码的执行顺序可就不一定了。
 
@@ -130,4 +130,4 @@ Tab 切换
 ### 小结
 本篇主要是介绍了小程序的**页面构成**和**生命周期**。
 
-虽然还不涉及到一行代码的编写，但是内容非常重要，建议再过一遍官方文档：[框架 | 微信开放文档](https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html)，它会给后续代码的调试带来很大的帮助。
+虽然还不涉及到一行代码的编写，但是内容非常重要，建议再过一遍官方文档：[微信开放文档](https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html)，它会给后续代码的调试带来很大的帮助。

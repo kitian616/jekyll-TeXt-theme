@@ -13,29 +13,29 @@ permalink: /collection/miniprogram/10_cloud_function_test
 ### 本地测试
 还是以上一篇创建的云函数 `history` 为例，右键目录，点击「本地调试」。
 
-![](/image/collections/miniprogram/2019-09-12-08-29-39.png)
+![](/image/collection/miniprogram/2019-09-12-08-29-39.png)
 
 将会进入一个专门用来调试的界面，如下图：
 
-![](/image/collections/miniprogram/2019-09-12-08-31-16.png)
+![](/image/collection/miniprogram/2019-09-12-08-31-16.png)
 
 如果有多个云函数的话，都会显示在左侧边栏上，中间是主要的调试区域，最常用的就是 `console` 标签以及 `Source` 标签。`Console` 就是控制台打印，代码中的打印语句都会显示在这里，也是最常用的调试方法。
 
-![](/image/collections/miniprogram/2019-09-12-08-32-53.png)
+![](/image/collection/miniprogram/2019-09-12-08-32-53.png)
 
 `Source` 部分可以进行代码单步调试，对于复杂的逻辑，可以采用这种方法，使用方法与 Chrome 浏览器的调试几乎一致。
 
-![](/image/collections/miniprogram/2019-09-12-08-34-56.png)
+![](/image/collection/miniprogram/2019-09-12-08-34-56.png)
 
 最右侧用来触发云函数，也就是模拟调用，支持传入参数。
 
-![](/image/collections/miniprogram/2019-09-12-14-22-55.png)
+![](/image/collection/miniprogram/2019-09-12-14-22-55.png)
 
 **注意**：开启本地调试的时候，会检查本地是否安装相应的依赖，如果没有安装的话，需要以命令行的形式，进入该云函数的目录，运行 `npm i` 命令。
 
 这个示例不需要任何的依赖，保持默认，点击调用，控制台得到如下图所示结果：
 
-![](/image/collections/miniprogram/2019-09-12-14-27-22.png)
+![](/image/collection/miniprogram/2019-09-12-14-27-22.png)
 
 说明数据返回正常，第三方接口的调用应该没有问题。
 
@@ -44,19 +44,19 @@ permalink: /collection/miniprogram/10_cloud_function_test
 
 下面来看看云端测试如何操作？首先打开云开发界面。
 
-![](/image/collections/miniprogram/2019-09-12-14-32-18.png)
+![](/image/collection/miniprogram/2019-09-12-14-32-18.png)
 
 选择云函数，并点击「云端测试」，进行云端调试界面。
 
-![](/image/collections/miniprogram/2019-09-12-14-32-57.png)
+![](/image/collection/miniprogram/2019-09-12-14-32-57.png)
 
 云端调试界面相对本地调试，要简单得多了，编辑传入的参数，然后耐心等待结果返回即可。如下图：
 
-![](/image/collections/miniprogram/2019-09-12-14-38-12.png)
+![](/image/collection/miniprogram/2019-09-12-14-38-12.png)
 
 一定要耐心等待，因为调用是从云服务器上发起，也许服务器运行很快，但是返回结果到开发工具**很慢很慢**。嗯，写完这句话，结果返回了，如下图：
 
-![](/image/collections/miniprogram/2019-09-12-14-37-32.png)
+![](/image/collection/miniprogram/2019-09-12-14-37-32.png)
 
 看到这一堆乱码，恭喜你，证明数据请求成功了，显示成这样，只能说明，开发工具这块还需要优化。
 

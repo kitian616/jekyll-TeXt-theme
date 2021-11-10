@@ -27,11 +27,11 @@ npm i dayjs --production
 
 然后打开开发者工具，在本地设置中，勾选**使用 npm 模块**，如下图：
 
-![](/image/collections/miniprogram/2019-09-09-15-22-45.png)
+![](/image/collection/miniprogram/2019-09-09-15-22-45.png)
 
 最后，打开工具菜单，点击构建 npm 即可。
 
-![](/image/collections/miniprogram/2019-09-09-15-28-33.png)
+![](/image/collection/miniprogram/2019-09-09-15-28-33.png)
 
 ### 目录变化
 构建完成后，项目目录中会多出几个文件：
@@ -43,7 +43,7 @@ npm i dayjs --production
 
 前面三个是 npm 初始化时，默认生成的，最后一个目录是开发者工具构建 npm 时生成的，可以理解为小程序版的 npm 包。
 
-![](/image/collections/miniprogram/2019-09-09-15-30-18.png)
+![](/image/collection/miniprogram/2019-09-09-15-30-18.png)
 
 使用方法与 node.js 开发一致，下面就来完善上一篇中的例子。
 
@@ -118,4 +118,4 @@ PS. 目前 demo 中只缺少添加日期，显示日期列表，以及存储日�
 
 写完这篇文章，距离国庆节还剩下 22 天。
 
-![](/image/collections/miniprogram/wxf51bdbc02e495a2b.o6zAJs72N3pGGs-m3FtEnWYH4dV0.tTNlyGcwPgPS26c6ad682e91781e721148c3068d6ee2.jpg)
+![](/image/collection/miniprogram/wxf51bdbc02e495a2b.o6zAJs72N3pGGs-m3FtEnWYH4dV0.tTNlyGcwPgPS26c6ad682e91781e721148c3068d6ee2.jpg)
