@@ -31,6 +31,11 @@ header:
       # @end locale config
     url: /archive.html
   - titles:
+      en      : &EN       Collection
+      zh-Hans : &ZH_HANS  合集
+      zh      : *ZH_HANS
+    url: /collection.html
+  - titles:
       en      : &EN       Product
       zh-Hans : &ZH_HANS  作品
       zh      : *ZH_HANS
