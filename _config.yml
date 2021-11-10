@@ -202,6 +202,10 @@ exclude:
   - /test
   - /vendor
 
+collections:
+  collection:
+    output: true
+
 defaults:
   - scope:
       path: ""
@@ -215,6 +219,36 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
+  - scope:
+      path: "_collection/tech"
+      type: collection
+    values: 
+      layout: article
+      nav_key: docs
+      sidebar:
+        nav: collection-tech
+      license: true
+      aside:
+        toc: true
+      lang: zh
+      show_edit_on_github: true
+      show_date: false
+      lightbox: true
+  - scope:
+      path: "_collection/miniprogram"
+      type: collection
+    values: 
+      layout: article
+      nav_key: docs
+      sidebar:
+        nav: collection-miniprogram
+      license: true
+      aside:
+        toc: true
+      lang: zh
+      show_edit_on_github: true
+      show_date: false
+      lightbox: true
 
 
 ## => Plugins

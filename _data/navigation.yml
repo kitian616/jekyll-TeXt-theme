@@ -61,3 +61,51 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /about.html
+
+collection-miniprogram
+  - title:      开始
+    children:
+      - title:  前言
+        url:    /collection/miniprogram/00_introduction
+      - title:  最佳实践
+        url:    /collection/miniprogram/00_first
+  - title:      入门篇
+    children:
+      - title:  了解小程序的页面逻辑
+        url:    /collection/miniprogram/01_know_page
+      - title:  Hello, World | 写一个完整的页面
+        url:    /collection/miniprogram/02_first_page
+      - title:  实现页面交互 | 地图 API 的使用
+        url:    /collection/miniprogram/03_map_api_use
+      - title:  数据持久化保存 | Storage API 的使用
+        url:    /collection/miniprogram/04_storage_use
+      - title:  初次使用 Canvas 画布
+        url:    /collection/miniprogram/05_canvas_first_use
+      - title:  页面数据（参数）传输的方式
+        url:    /collection/miniprogram/06_send_param_in_pages
+      - title:  如何使用第三方 npm 扩展包
+        url:    /collection/miniprogram/07_use_npm_package
+      - title:  如何调用第三方数据接口
+        url:    /collection/miniprogram/08_use_the_third_data
+      - title:  初步使用云函数开发
+        url:    /collection/miniprogram/09_cloud_function_introduction
+      - title:  学会云函数的测试
+        url:    /collection/miniprogram/10_cloud_function_test
+      - title:  从文档出发来聊一聊小程序的服务端开发
+        url:    /collection/miniprogram/11_cloud_develop_document
+      - title:  初步使用云数据库开发
+        url:    /collection/miniprogram/12_cloud_database_develop
+  - title:      效率篇
+    # children:
+    #   - title:  撰写博客
+    #     url:    /collection/miniprogram/writing-posts
+    #   - title:  附加样式
+    #     url:    /collection/miniprogram/additional-styles
+    #   - title:  扩展
+    #     url:    /collection/miniprogram/extensions
+    #   - title:  Markdown 增强
+    #     url:    /collection/miniprogram/markdown-enhancements
+  - title:      实战篇
+    # children:
+    #   - title:  English
+    #     url:    /docs/en/quick-start
