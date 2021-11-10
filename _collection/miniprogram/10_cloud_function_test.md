@@ -1,6 +1,7 @@
 ---
 title: 学会云函数的本地以及云端的测试
 date: 2019-09-12
+permalink: /collection/miniprogram/10_cloud_function_test
 ---
 
 上一篇介绍了云函数的初步使用，对于新手来说，可能有点迷糊，没关系，多创建几个项目试试，慢慢就会熟悉了。

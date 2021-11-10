@@ -1,6 +1,7 @@
 ---
 title: 生成分享卡片 | Canvas 初使用
 date: 2019-09-04
+permalink: /collection/miniprogram/05_canvas_first_use
 ---
 
 这是微信小程序开发频率最高的功能，绝大部分的小程序都会做这个，因为小程序页面不可以分享到朋友圈。所以，为了达到分享的目的，大家几乎都是通过生成分享卡片的方式实现。

@@ -84,21 +84,21 @@ collection-miniprogram:
         url:    /collection/miniprogram/03_map_api_use
       - title:  数据持久化保存 | Storage API 的使用
         url:    /collection/miniprogram/04_storage_use
-      - title:  初次使用 Canvas 画布
+      - title:  生成分享卡片 | Canvas 初使用
         url:    /collection/miniprogram/05_canvas_first_use
       - title:  页面数据（参数）传输的方式
         url:    /collection/miniprogram/06_send_param_in_pages
       - title:  如何使用第三方 npm 扩展包
         url:    /collection/miniprogram/07_use_npm_package
-      - title:  如何调用第三方数据接口
+      - title:  如何调用第三方接口数据
         url:    /collection/miniprogram/08_use_the_third_data
       - title:  初步使用云函数开发
-        url:    /collection/miniprogram/09_cloud_function_introduction
-      - title:  学会云函数的测试
+        url:    /collection/miniprogram/09_cloud_function_develop
+      - title:  学会云函数的本地以及云端的测试
         url:    /collection/miniprogram/10_cloud_function_test
       - title:  从文档出发来聊一聊小程序的服务端开发
         url:    /collection/miniprogram/11_cloud_develop_document
-      - title:  初步使用云数据库开发
+      - title:  初步使用云开发中数据库的能力
         url:    /collection/miniprogram/12_cloud_database_develop
   - title:      效率篇
     # children:

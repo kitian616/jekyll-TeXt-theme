@@ -1,6 +1,7 @@
 ---
 title: 从文档出发来聊一聊小程序的服务端开发
 date: 2019-09-13
+permalink: /collection/miniprogram/11_cloud_develop_document
 ---
 
 前面两篇内容分别介绍了**云函数**的开发与测试。原本这篇文章想介绍云数据库的开发，然而发现云数据库的开发，并没有什么特别的内容，大抵就是学会几个 API 的使用，看看文档就行了。

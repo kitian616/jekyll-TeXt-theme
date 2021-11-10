@@ -1,6 +1,7 @@
 ---
 title: 初步使用云开发中数据库的能力
 date: 2019-09-14
+permalink: /collection/miniprogram/12_cloud_database_develop
 ---
 
 正如上篇所讲，数据库这块除了熟练使用几个 API，确实没啥可讲的，那么就来回答一下，在第 8 篇文章中，开发「历史上的今天」小工具时，留下来的思考题吧。题目如下：

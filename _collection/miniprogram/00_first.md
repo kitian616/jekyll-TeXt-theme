@@ -1,6 +1,7 @@
 ---
 title: 微信小程序，入门移动端产品的最佳实践 
 date: 2019-08-04
+permalink: /collection/miniprogram/00_first
 ---
 
 > 声明：下文所述的「小程序」，都指的是「微信小程序」。因为目前「小程序」的平台，不仅仅只有微信一家。  
@@ -53,7 +54,7 @@ date: 2019-08-04
 
 由于这块技术发展较快，不建议使用搜索引擎查找问题，因为大部分时候，搜出来的解决方案可能都是过时的。
 
-尽量通过官方的途径来获得支持，一个是开发者社区：[开发者专区 | 微信开放社区](https://developers.weixin.qq.com/community/)，另一个就是开发文档：[微信官方文档 | 微信开放文档](https://developers.weixin.qq.com/doc/)。
+尽量通过官方的途径来获得支持，一个是开发者社区：[微信开放社区](https://developers.weixin.qq.com/community/)，另一个就是开发文档：[微信开放文档](https://developers.weixin.qq.com/doc/)。
 
 建议：**先通读一遍官方文档，没事的时候，多浏览官方社区。**
 

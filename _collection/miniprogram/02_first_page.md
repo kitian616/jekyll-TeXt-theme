@@ -1,6 +1,7 @@
 ---
 title: Hello, World | 写一个完整的页面
 date: 2019-09-02
+permalink: /collection/miniprogram/02_first_page
 ---
 
 上一篇，大致了解了小程序的页面，这篇就可以直接上手开发了，先写一个页面试试。当然不是真的让你写个 **Hello, World** 的页面，因为那个没有任何意义。

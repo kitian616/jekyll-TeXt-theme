@@ -1,6 +1,7 @@
 ---
 title: 初步使用云函数开发
 date: 2019-09-11
+permalink: /collection/miniprogram/09_cloud_function_develop
 ---
 
 上一篇内容，我们初次接触了网络开发，使用第三方的接口数据，由于微信公众账号的限制与管控，在线使用第三方的服务器，都必须要添加合法域名信息，如下图所示：
@@ -32,7 +33,15 @@ date: 2019-09-11
 
 右键该目录，就可以创建云函数了，如下图：
 
-![](/image/collections/miniprogram/2019-09-11-15-08-53.png)![](/image/collections/miniprogram/2019-09-11-15-08-57.png)![](/image/collections/miniprogram/2019-09-11-15-09-09.png)![](/image/collections/miniprogram/2019-09-11-15-09-11.png)![](/image/collections/miniprogram/2019-09-11-18-01-55.png)
+![](/image/collections/miniprogram/2019-09-11-15-08-53.png)
+
+![](/image/collections/miniprogram/2019-09-11-15-08-57.png)
+
+![](/image/collections/miniprogram/2019-09-11-15-09-09.png)
+
+![](/image/collections/miniprogram/2019-09-11-15-09-11.png)
+
+![](/image/collections/miniprogram/2019-09-11-18-01-55.png)
 
 这里我们创建一个名为 `history` 的云函数，会给我们新建两个默认文件 `index.js` 和 `package.json`，其实这就是一个简化版的 Node 服务，其中 `index.js` 代码如下：
 

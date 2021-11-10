@@ -1,6 +1,7 @@
 ---
 title: 数据持久化保存 | Storage API 的使用
 date: 2019-09-03
+permalink: /collection/miniprogram/04_storage_use
 ---
 
 上一篇，我们已经实现了添加地址的功能，并且能够在列表中，及时显示添加的地址。

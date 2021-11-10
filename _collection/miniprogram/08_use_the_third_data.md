@@ -1,6 +1,7 @@
 ---
 title: 如何调用第三方接口数据
 date: 2019-09-10
+permalink: /collection/miniprogram/08_use_the_third_data
 ---
 
 了解完前面的那些内容，动手能力强的，基本上就可以完成很多类别的小程序了。

@@ -1,6 +1,7 @@
 ---
 title: 实现页面交互 | 地图 API 的使用
 date: 2019-09-02
+permalink: /collection/miniprogram/03_map_api_use
 ---
 
 在前面一篇，我们已经写完了 address 页面，页面中显示的，并非是地址数据，那是直接写在 data 中的测试数据，并没有实际意义。

@@ -1,6 +1,7 @@
 ---
 title: 如何使用第三方 npm 扩展包
 date: 2019-09-09
+permalink: /collection/miniprogram/07_use_npm_package
 ---
 
 上一篇传参的示例中，不知道你是否注意到，像 `isPast`（判断日期是否为过去） 或者 `number`（距离当前的天数） 参数，根本就不需要传输嘛，这些应该是计算出来的。
