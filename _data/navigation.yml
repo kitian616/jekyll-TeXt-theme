@@ -101,16 +101,46 @@ collection-miniprogram:
       - title:  初步使用云开发中数据库的能力
         url:    /collection/miniprogram/12_cloud_database_develop
   - title:      效率篇
-    # children:
-    #   - title:  撰写博客
-    #     url:    /collection/miniprogram/writing-posts
-    #   - title:  附加样式
-    #     url:    /collection/miniprogram/additional-styles
-    #   - title:  扩展
-    #     url:    /collection/miniprogram/extensions
-    #   - title:  Markdown 增强
-    #     url:    /collection/miniprogram/markdown-enhancements
   - title:      实战篇
-    # children:
-    #   - title:  English
-    #     url:    /docs/en/quick-start
+
+collection-tech: 
+  - title: Linux
+    children: 
+      - title: 基础命令
+        url: /collection/tech_notes/2014-05-04-Linux_basic
+      - title: 当你拿到一台 Ubuntu 服务器 1
+        url: /collection/tech_notes/2017-06-05-ubuntu1
+      - title: 当你拿到一台 Ubuntu 服务器 2
+        url: /collection/tech_notes/2018-01-30-ubuntu2
+      - title: 当你拿到一台 Ubuntu 服务器 3
+        url: /collection/tech_notes/2018-05-21-ubuntu3
+      - title: 运维之道笔记 1
+        url: /collection/tech_notes/2014-12-09-Linux_1
+      - title: 运维之道笔记 2
+        url: /collection/tech_notes/2015-06-22-Linux_2
+      - title: LNMP环境搭建（CentOS+meiupic）
+        url: /collection/tech_notes/2015-03-29-centos-meiupic
+      - title: CentOS 7 搭建开源商城 prestashop
+        url: /collection/tech_notes/2018-07-27-centos7-prestashop
+      - title: 为了写操作手册，顺手搭了个文档管理系统
+        url: /collection/tech_notes/2018-12-12-mindoc
+  - title: Git
+    children: 
+      - title: Git 基础
+        url: /collection/tech_notes/2014-05-16-Git-common
+      - title: Git 进阶
+        url: /collection/tech_notes/2015-12-14-Git_advance
+  - title: Vim
+    children: 
+      - title: Vim 基础
+        url: /collection/tech_notes/2014-07-05-Vim_basic
+      - title: Vim 进阶
+        url: /collection/tech_notes/2014-10-19-Vim_plugin
+  - title: tmux
+    children: 
+      - title: tmux 基础操作
+        url: /collection/tech_notes/2016-08-07-tmux
+  - title: Vue
+    children: 
+      - title: Vue 入门
+        url: /collection/tech_notes/2019-05-19-vue
