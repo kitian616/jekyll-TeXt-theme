@@ -252,9 +252,12 @@ defaults:
     scope:
       path: "" # 一个空的字符串代表项目中所有的文件
       type: "posts"
+      
     values:
       layout: article
       author: "Holon" # 给站点里的所有文章设置作者 Holon
+      aside:
+        toc: true
 
   # - scope:
   #     path: "_posts/algorithms"
