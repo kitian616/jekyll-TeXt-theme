@@ -62,7 +62,7 @@ header:
       # @end locale config
     url: /about.html
 
-collection-miniprogram
+collection-miniprogram:
   - title:      开始
     children:
       - title:  前言
