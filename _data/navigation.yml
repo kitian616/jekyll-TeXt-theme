@@ -48,3 +48,10 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /about.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Cheat Sheets
+      # @end locale config
+    url: /cheat_sheets.html
+
