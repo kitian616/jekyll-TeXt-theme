@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Advent Of Code 2019
+title: "Advent Of Code 2019 :santa:"
 key: Advent Of Code 2019
 tags: aoc2019
 aside:
