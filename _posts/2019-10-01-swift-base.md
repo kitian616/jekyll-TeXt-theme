@@ -185,8 +185,7 @@ class Teacher {
 ### 内存结构
 
 可以看到如下的数据结构：
-![Image](/assets/images/swift/01-swift-struct.png){:.border}
-![Image](/imgs/01-swift-struct.png){:.border}
+![Image](xiaofeifei/assets/images/swift/01-swift-struct.png){:.border}
 
 **存储属性要么是常量存储(let 修饰)属性，要么是变量存储(var 修饰)属性**：
 
