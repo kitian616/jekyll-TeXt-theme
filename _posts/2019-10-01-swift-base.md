@@ -185,12 +185,7 @@ class Teacher {
 ### 内存结构
 
 可以看到如下的数据结构：
-![Image](../assets/images/swift/01-swift-struct.png){:.border}
-![Image](./assets/images/swift/01-swift-struct.png){:.border}
-![Image](assets/images/swift/01-swift-struct.png){:.border}
-<img src="../assets/images/swift/01-swift-struct.png" />
-<img src="xiaofeifei/assets/images/swift/01-swift-struct.png" />
-<img src="xiaofeifei/assets/images/swift/01-swift-struct.png" />
+![Image]({{ site.baseurl }}/assets/images/swift/01-swift-struct.png){:.border}
 <img src="{{ site.baseurl }}/assets/images/swift/01-swift-struct.png">
 image:
   src: /assets/images/swift/01-swift-struct.png
