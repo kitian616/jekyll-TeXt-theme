@@ -186,7 +186,6 @@ class Teacher {
 
 可以看到如下的数据结构：
 ![Image]({{ site.baseurl }}/assets/images/swift/01-swift-struct.png){:.border}
-<img src="{{ site.baseurl }}/assets/images/swift/01-swift-struct.png">
 
 存储属性要么是常量存储(let 修饰)属性，要么是变量存储(var 修饰)属性：
 {:.warning}

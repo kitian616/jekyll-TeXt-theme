@@ -57,5 +57,8 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "shelljs": "^0.8.4"
   }
 }
