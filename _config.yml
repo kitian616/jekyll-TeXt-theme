@@ -224,7 +224,6 @@ defaults:
       path: "_collection/tech_notes"
       type: collection
     values: 
-      # permalink: /collection/tech_notes/:title
       layout: article
       nav_key: docs
       sidebar:
@@ -234,7 +233,7 @@ defaults:
         toc: true
       lang: zh
       show_edit_on_github: true
-      show_date: false
+      show_date: true
       lightbox: true
   - scope:
       path: "_collection/miniprogram"
@@ -249,7 +248,7 @@ defaults:
         toc: true
       lang: zh
       show_edit_on_github: true
-      show_date: false
+      show_date: true
       lightbox: true
 
 

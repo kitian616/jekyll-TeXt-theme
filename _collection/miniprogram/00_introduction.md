@@ -1,5 +1,6 @@
 ---
 title: 前言
+date: 2019-09-15
 permalink: /collection/miniprogram/00_introduction
 ---
 
