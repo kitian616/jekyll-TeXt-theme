@@ -18,8 +18,8 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://github.com/xiaerfei/xiaofeifei
-baseurl : xiaofeifei
+url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl : # does not include hostname
 title   : 我是小飞飞
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
@@ -36,7 +36,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : # "person" (default), "organization"
   name      : erge
-  url       : https://github.com/xiaerfei/xiaofeifei
+  url       :
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
   email     :
@@ -55,7 +55,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: xiaerfei/xiaofeifei
+repository: user_name/repo_name
 repository_tree: master
 
 
