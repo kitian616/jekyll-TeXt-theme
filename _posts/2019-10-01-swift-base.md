@@ -16,7 +16,7 @@ var t = Teacher();
 
 初始化的时候汇编调用如下：
 
-```assembly
+```swift
 SwiftDemo`Teacher.__allocating_init():
     0x100003c90 <+0>:  pushq  %rbp
     0x100003c91 <+1>:  movq   %rsp, %rbp
@@ -185,7 +185,7 @@ class Teacher {
 ### 内存结构
 
 可以看到如下的数据结构：
-![Image](images/swift/01-swift-struct.png){:.border}
+![Image](/assets/images/swift/01-swift-struct.png){:.border}
 
 **存储属性要么是常量存储(let 修饰)属性，要么是变量存储(var 修饰)属性**：
 
@@ -198,7 +198,7 @@ class Teacher {
 
 **SIL 码如下：**
 
-```assembly
+```swift
 class Teacher {
   @_hasStorage @_hasInitialValue final let age: Int { get }
   @_hasStorage @_hasInitialValue var name: String { get set }
@@ -225,7 +225,7 @@ class Square {// 16
 
 **SIL 码如下：**
 
-```assembly
+```swift
 class Square {
   @_hasStorage @_hasInitialValue var width: Double { get set }
   var area: Double { get set }
