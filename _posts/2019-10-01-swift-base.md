@@ -191,6 +191,7 @@ class Teacher {
 <img src="../assets/images/swift/01-swift-struct.png" />
 <img src="xiaofeifei/assets/images/swift/01-swift-struct.png" />
 <img src="xiaofeifei/assets/images/swift/01-swift-struct.png" />
+<img src="{{ site.baseurl }}/assets/images/swift/01-swift-struct.png">
 image:
   src: /assets/images/swift/01-swift-struct.png
 **存储属性要么是常量存储(let 修饰)属性，要么是变量存储(var 修饰)属性**：
