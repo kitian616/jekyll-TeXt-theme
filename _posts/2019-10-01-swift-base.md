@@ -261,3 +261,57 @@ class Teacher {
 
 注意：属性观察者在初始化期间是不会被调用的，原因在于初始化的时候，比如上面的代码，如果 name 的属性观察者中调用了 age 属性，那么得到的值是未知的，这不安全。
 {:.warning}
+
+**属性观察者继承**
+
+如下代码：
+
+```swift
+class Person {
+    var age: Int = 18;
+    // 属性观察者
+    var name: String {
+        // 新值存储之前
+        willSet {
+            print("willSet: \(newValue)");
+        }
+        // 新值存储之后
+        didSet {
+            print("didSet: \(oldValue)")
+        }
+    }
+    // 初始化期间不会调用 属性观察者
+    init() {
+        self.name = "haha";
+        self.age = 18;
+    }
+}
+
+class Student: Person {
+    override
+    var name: String {
+        willSet {
+            print("override: \(newValue)")
+        }
+        didSet {
+            print("override: \(oldValue)")
+        }
+    }
+    override init() {
+        super.init()
+        self.name = "xioaming"
+    }
+}
+```
+结果如下：
+
+```
+override: xiaoming
+willSet: xiaoming
+didSet: haha
+override: haha
+```
+
+注意：在继承的属性观察者中，初始化期间却被调用了，因为之前已经被初始化过了。
+{:.warning}
+
