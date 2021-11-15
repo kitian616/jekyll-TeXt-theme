@@ -18,7 +18,7 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : https://github.com/xiaerfei/xiaofeifei
 baseurl : # does not include hostname
 title   : 我是小飞飞
 description: > # this means to ignore newlines until "Language & timezone"
@@ -36,7 +36,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : # "person" (default), "organization"
   name      : erge
-  url       :
+  url       : https://github.com/xiaerfei/xiaofeifei
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
   email     :
