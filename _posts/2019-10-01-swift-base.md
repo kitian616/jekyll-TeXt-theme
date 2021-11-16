@@ -196,6 +196,13 @@ class Teacher {
     var name: String = "erge";
 }
 ```
+我们可以通过如下命令来查看 SIL 码：
+
+```shell
+swiftc -emit-sil main.swift | xcrun swift-demangle >> main.sil
+# xcrun swift-demangle 将混淆的名称还原
+```
+
 
 **SIL 码如下：**
 
@@ -315,3 +322,167 @@ override: haha
 注意：在继承的属性观察者中，初始化期间却被调用了，因为之前已经被初始化过了。
 {:.warning}
 
+### lazy
+测试源码如下：
+
+```swift
+class Dog {
+   lazy var age:Int = 2
+}
+
+var d = Dog()
+print(d.age);
+```
+
+可以通过内存查看访问前后值的变化：
+
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type00.png){:width="200px" height="200px"}
+
+为了更确切的了解底层实现，我们生成的SIL码：
+
+```swift
+class Dog {
+  lazy var age: Int { get set }
+  @_hasStorage @_hasInitialValue final var $__lazy_storage_$_age: Int? { get set }
+  @objc deinit
+  init()
+}
+```
+
+**从 SIL 码可以看出，lazy 修饰的属性其实会变为可选类型**
+
+当我们用 **get** 方法第一次去访问的时候：
+
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type01.png){:width="200px" height="200px"}
+
+所以：
+
+````swift
+class Dog {
+  // 16 + 9 = 25  ---> 32
+   lazy var age:Int = 2 // Optional
+}
+````
+
+所以我们可以用：
+
+```swift
+print(class_getInstanceSize(Dog.self))
+```
+
+来查看 **lazy** 对类内存大小的影响：当设置为 lazy 修饰的时候类的大小为：**32**  
+
+非 lazy 修饰的时候大小为：   **24**
+
+可以查看一下 **Optional<Int>** 的大小：
+
+
+```swift
+print(MemoryLayout<Optional<Int>>.size);
+print(MemoryLayout<Optional<Int>>.stride);
+```
+
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type02.png){:width="200px" height="200px"}
+
+
+所以总结一下，用 lazy 修饰的属性：
+
+- 延迟存储属性必须有一个默认的初始值；
+- 延迟存储在被第一次访问的时候才被赋值；
+- 延迟存储属性并不能保证线程安全；
+- 延迟存储属性对实例的大小有影响；
+
+## 类属性
+如下代码：
+
+```swift
+class Dog {
+    static var age:Int = 15
+}
+```
+
+生成 SIL 码来查看具体的内容：
+
+```swift
+class Dog {
+  @_hasStorage @_hasInitialValue static var age: Int { get set }
+  @objc deinit
+  init()
+}
+
+// static Dog.age
+sil_global hidden @static main.Dog.age : Swift.Int : $Int
+```
+
+由此可以看出，类属性是一个全局的静态变量。
+
+我们分析一下访问的过程：
+
+```swift
+// 创建一个变量 d
+alloc_global @main.d : Swift.Int                     // id: %2
+// 将 %3 = d
+%3 = global_addr @main.d : Swift.Int : $*Int         // users: %17, %9
+%4 = metatype $@thick Dog.Type
+// function_ref Dog.age.unsafeMutableAddressor
+// 去调用 函数 Dog.age.unsafeMutableAddressor
+%5 = function_ref @main.Dog.age.unsafeMutableAddressor : Swift.Int : $@convention(thin) () -> Builtin.RawPointer // user: %6
+%6 = apply %5() : $@convention(thin) () -> Builtin.RawPointer // user: %7
+%7 = pointer_to_address %6 : $Builtin.RawPointer to [strict] $*Int // user: %8
+%8 = begin_access [read] [dynamic] %7 : $*Int   // users: %10, %9
+// 将返回的值赋值给 %3
+copy_addr %8 to [initialization] %3 : $*Int     // id: %9
+```
+
+来看一下函数 **Dog.age.unsafeMutableAddressor** 的实现：
+
+```swift
+// one-time initialization function for age
+// 这个函数的功能主要是赋值 15
+sil private [global_init_once_fn] @one-time initialization function for age : $@convention(c) () -> () {
+bb0:
+  alloc_global @static main.Dog.age : Swift.Int             // id: %0
+  %1 = global_addr @static main.Dog.age : Swift.Int : $*Int // user: %4
+  %2 = integer_literal $Builtin.Int64, 15         // user: %3
+  %3 = struct $Int (%2 : $Builtin.Int64)          // user: %4
+  store %3 to %1 : $*Int                          // id: %4
+  %5 = tuple ()                                   // user: %6
+  return %5 : $()                                 // id: %6
+} // end sil function 'one-time initialization function for age'
+
+
+// Dog.age.unsafeMutableAddressor
+sil hidden [global_init] @main.Dog.age.unsafeMutableAddressor : Swift.Int : $@convention(thin) () -> Builtin.RawPointer {
+bb0:
+  %0 = global_addr @one-time initialization token for age : $*Builtin.Word // user: %1
+  %1 = address_to_pointer %0 : $*Builtin.Word to $Builtin.RawPointer // user: %3
+  // function_ref one-time initialization function for age
+  // 调用 @one-time 函数进行初始化值 15
+  %2 = function_ref @one-time initialization function for age : $@convention(c) () -> () // user: %3
+  // 这里调用了 once
+  %3 = builtin "once"(%1 : $Builtin.RawPointer, %2 : $@convention(c) () -> ()) : $()
+  %4 = global_addr @static main.Dog.age : Swift.Int : $*Int // user: %5
+  %5 = address_to_pointer %4 : $*Int to $Builtin.RawPointer // user: %6
+  return %5 : $Builtin.RawPointer                 // id: %6
+} // end sil function 'main.Dog.age.unsafeMutableAddressor : Swift.Int'
+```
+
+我们来看看 **once** ，实际上是调用了 **swift_once**
+
+```c++
+void swift::swift_once(swift_once_t *predicate, void (*fn)(void *),
+                       void *context) {
+#if defined(__APPLE__)
+  dispatch_once_f(predicate, context, fn);
+#elif defined(__CYGWIN__)
+  _swift_once_f(predicate, context, fn);
+#else
+  std::call_once(*predicate, [fn, context]() { fn(context); });
+#endif
+}
+```
+
+所以它很像是 objc 中的 **dispatch_once** 函数。
+
+最终，类属性是线程安全的。
+{:.success}
