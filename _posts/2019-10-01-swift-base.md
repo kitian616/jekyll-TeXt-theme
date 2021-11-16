@@ -336,7 +336,7 @@ print(d.age);
 
 可以通过内存查看访问前后值的变化：
 
-![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type00.png){:width="200px" height="200px"}
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type00.png){:width="394px" height="401px"}
 
 为了更确切的了解底层实现，我们生成的SIL码：
 
@@ -353,7 +353,7 @@ class Dog {
 
 当我们用 **get** 方法第一次去访问的时候：
 
-![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type01.png){:width="200px" height="200px"}
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type01.png){:width="745px" height="481px"}
 
 所以：
 
@@ -382,7 +382,7 @@ print(MemoryLayout<Optional<Int>>.size);
 print(MemoryLayout<Optional<Int>>.stride);
 ```
 
-![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type02.png){:width="200px" height="200px"}
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-value-type02.png){:width="447px" height="198px"}
 
 
 所以总结一下，用 lazy 修饰的属性：
@@ -486,3 +486,12 @@ void swift::swift_once(swift_once_t *predicate, void (*fn)(void *),
 
 最终，类属性是线程安全的。
 {:.success}
+
+所以 **Swift** 中的单例：
+
+```swift
+class UserInfo {
+    static let instance = UserInfo()
+    private init() {}
+}
+```
