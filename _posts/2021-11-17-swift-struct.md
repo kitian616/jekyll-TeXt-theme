@@ -15,7 +15,7 @@ struct Teacher {
 ```
 
 如下：
-![Image]({{ site.baseurl }}/assets/images/02-swift-struct-00.png)
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-struct-00.png)
 
 查看 SIL 码：
 
@@ -163,7 +163,7 @@ t.items.append(1)
 
 会出现如下的错误：
 
-![Image]({{ site.baseurl }}/assets/images/02-swift-struct-01.png)
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-struct-01.png)
 
 
 如果将 **let** 改换成 **var**，那就没有问题了。
@@ -181,11 +181,11 @@ struct Teacher {
 
 错误如下：
 
-![Image]({{ site.baseurl }}/assets/images/02-swift-struct-02.png)
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-struct-02.png)
 
 为什么会出现这样的错误呢？我们来看看 SIL 码：
 
-![Image]({{ site.baseurl }}/assets/images/02-swift-struct-03.png)
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-struct-03.png)
 
 和我们上面的例子一模一样，这里的 **let 要改换成 var 才行**。那我们来变通一下：
 
@@ -225,7 +225,7 @@ print(t.items)
 
 没有发现任何错误，为什么，查看一下 SIL 码：
 
-![Image]({{ site.baseurl }}/assets/images/02-swift-struct-04.png)
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-struct-04.png)
 
 我们发现了几处细微的变化，其中 **$*Teacher** 可以确定不是传值，而是传递的指针。
 
@@ -234,7 +234,7 @@ print(t.items)
 
 如下示例代码：
 
-![Image]({{ site.baseurl }}/assets/images/02-swift-inout-00.png)
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-inout-00.png)
 
 为什么会报错，**其实函数的参数，默认是不可变的， let**。所以要使用 **inout**：
 
@@ -288,7 +288,7 @@ t.push(item: 1)
 
 我们来看一下汇编代码：
 
-![Image]({{ site.baseurl }}/assets/images/02-swift-struct-05.png)
+![Image]({{ site.baseurl }}/assets/images/swift/02-swift-struct-05.png)
 
 可以无论调用的 **Teacher.init() 方法 和 Teacher.push(item: Swift.Int) -> () 方法 都是 call 一个明确的地址，没有什么方法查找什么的。**
 
