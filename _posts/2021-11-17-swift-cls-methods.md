@@ -6,7 +6,7 @@ tags: Swift
 类声明中的方法是通过 V-table 来进行调度的
 {:.success}
 
-**V-table** 在 SIL 中是如下表示的：
+`V-table`{:.info} 在 SIL 中是如下表示的：
 
 ```swift
 decl ::= sil-vtable
@@ -33,7 +33,7 @@ t.method2()
 print(t)
 ```
 
-查看 **Swift-source** 源码：
+查看 `Swift-source`{:.info} 源码：
 
 ```c++
 static void initClassVTable(ClassMetadata *self) {
