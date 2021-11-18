@@ -55,11 +55,11 @@ sil_vtable Subject {
 
 我们调试一下调用过程：
 
-![]({{ site.baseurl }}/assets/images/03-swift-method-00.png)
+![]({{ site.baseurl }}/assets/images/swift/03-swift-method-00.png)
 
 我画了如下图来加强理解：
 
-![]({{ site.baseurl }}/assets/images/03-swift-method-01.png)
+![]({{ site.baseurl }}/assets/images/swift/03-swift-method-01.png)
 
 也可以在 **Swift-source** 中看到初始化的时候，按顺序取加载方法：
 
@@ -108,7 +108,7 @@ sil_vtable Subject {
 
 我们可以调试一下：
 
-![]({{ site.baseurl }}/assets/images/03-swift-method-02.png)
+![]({{ site.baseurl }}/assets/images/swift/03-swift-method-02.png)
 
 当调用 **method3** 的时候，直接调用的是确切的地址，而不是去 V-table 中去调用。
 
