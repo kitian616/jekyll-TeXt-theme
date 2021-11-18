@@ -1,6 +1,11 @@
 header:
   - titles:
       # @start locale config
+      en      : &EN       Quick Guide
+      # @end locale config
+    url: /quick-guide.html
+  - titles:
+      # @start locale config
       en      : &EN       Submission process
       # @end locale config
     url: /submission.html
