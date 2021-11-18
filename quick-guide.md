@@ -1,10 +1,10 @@
 ---
 layout: article
-title: Quick Guide
+title: SDA Submission Guide
 key: page-single
 ---
 
-This is a quick guide to submit data to the EGA.
+This is a guide to submit data to SDA.
 {% include quick-guide-table.html %}
 
 

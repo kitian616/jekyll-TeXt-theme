@@ -1,7 +1,7 @@
 header:
   - titles:
       # @start locale config
-      en      : &EN       Quick Guide
+      en      : &EN      SDA Submission guide
       # @end locale config
     url: /quick-guide.html
   - titles:
