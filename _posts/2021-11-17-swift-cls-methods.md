@@ -111,6 +111,7 @@ sil_vtable Subject {
 ![]({{ site.baseurl }}/assets/images/swift/03-swift-method-02.png)
 
 当调用 **method3** 的时候，直接调用的是确切的地址，而不是去 V-table 中去调用。
+{:.success}
 
 ### final 关键字
 
