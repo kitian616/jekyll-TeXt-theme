@@ -7,7 +7,7 @@ if(!commit || commit.length == 0) {
 }
 
 console.log(commit);
-
+shell.exec('proxy');
 shell.exec('npm run build');
 shell.exec('git add .');
 shell.exec("git commit -m '" + commit + "' --no-verify");
