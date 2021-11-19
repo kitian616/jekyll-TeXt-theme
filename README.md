@@ -10,3 +10,33 @@ The portal is using the [TeXt-theme](https://github.com/kitian616/jekyll-TeXt-th
 
 Currently the page is published from the `master` branch. To make changes, edit and/or add a new `.md` file in the root folder and push the changes. Once the changes are merged to the master branch, the page will update. Note that the actual update may take a few minutes as it needs to wait for the github to render the new changes.
 
+
+# Executing SDA Web Locally
+
+This guide explains how to execute the SDA web locally in you system.
+
+## Prerequisites
+
+In order to able to deploy the web locally, you need to have [jekyll](https://jekyllrb.com/docs/) installed in your machine. 
+
+## Jekyll Execution
+
+First, we start the rbenv in your shell. 
+
+```bash
+rbenv init
+```
+
+Install the bundler gems
+
+```bash
+gem install jekyll bundler
+```
+
+Build the site and make it available on a local server
+
+```bash
+bundle exec jekyll serve
+```
+
+Browse to http://localhost:4000 to see the SDA Web portal.

@@ -3,7 +3,7 @@ header:
       # @start locale config
       en      : &EN      SDA Submission guide
       # @end locale config
-    url: /quick-guide.html
+    url: /sda-submission-guide.html
   - titles:
       # @start locale config
       en      : &EN       Submission process
