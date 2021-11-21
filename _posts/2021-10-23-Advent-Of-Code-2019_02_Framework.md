@@ -8,7 +8,7 @@ aside:
 mermaid: true
 ---
 
-To satisfy the requirements for my AoC target (see previous post), I started looking into [Yew](https://yew.rs/){:target="_blank"}, a front-end framework similar to **React**, but based on Rust instead of javascript/typescript.
+To satisfy the requirements for my AoC target (see [previous post](/2021/10/23/Advent-Of-Code-2019_01_Intro.html)), I started looking into [Yew](https://yew.rs/){:target="_blank"}, a front-end framework similar to **React**, but based on Rust instead of javascript/typescript.
 
 <!--more-->
 
