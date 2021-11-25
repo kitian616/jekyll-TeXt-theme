@@ -1,5 +1,4 @@
+read -p  "please input commit comments:" msg
 git add .
-echo "请输入commit:"
-read commitString
-git commit -m commitString
+git commit -m "$msg"
 git push origin
