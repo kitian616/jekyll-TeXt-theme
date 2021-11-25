@@ -3,8 +3,8 @@
 # 获取脚本所在绝对路径
 SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 cd $SHELL_FOLDER
-read "msg?please input commit comments:"
+# read "msg?please input commit comments:"
 git add .
-git commit -m "$msg"
+git commit -m "$0"
 git push origin
 
