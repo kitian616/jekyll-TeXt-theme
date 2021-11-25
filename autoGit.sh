@@ -1,3 +1,4 @@
+cd /Users/holon/Documents/GitHub/wholon.github.io
 read -p  "please input commit comments:" msg
 git add .
 git commit -m "$msg"
