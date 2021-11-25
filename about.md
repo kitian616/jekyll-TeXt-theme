@@ -40,16 +40,3 @@ title:
 ## 联系我
 
 holon.cn@gmail.com
-
-## 关于本站
-本站基于 Jekyll & TeXt Theme.
-
-有关 Jekyll 
-
-* [Jekyll 官网](https://jekyllrb.com)
-
-* [Jekyll 官网中文镜像](https://jekyllcn.com)
-
-有关 TeXt Theme
-
-* [TeXt Theme 文档](https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start)
