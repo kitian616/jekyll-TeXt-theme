@@ -52,10 +52,10 @@
       </li>
     {%- endif -%}
 
-    {%- if _author.googleplus -%}
-      <li title="{{ _locale_string_follow | replace: '[NAME]', 'Google+' }}">
-        <a class="button button--circle googlepluse-button" itemprop="sameAs" href="https://plus.google.com/u/0/{{ _author.googleplus }}" target="_blank">
-          <div class="icon">{%- include svg/icon/social/googleplus.svg -%}</div>
+    {%- if _author.youtube -%}
+      <li title="{{ _locale_string_follow | replace: '[NAME]', 'YouTube' }}">
+        <a class="button button--circle youtube-button" itemprop="sameAs" href="https://youtube.com/c/{{ _author.youtube }}" target="_blank">
+          <div class="icon">{%- include svg/icon/social/youtube.svg -%}</div>
         </a>
       </li>
     {%- endif -%}
