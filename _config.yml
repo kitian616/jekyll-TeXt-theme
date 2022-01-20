@@ -36,7 +36,7 @@ timezone: Asia/Seoul # see https://en.wikipedia.org/wiki/List_of_tz_database_tim
 author:
   type      : # "person" (default), "organization"
   name      : dorimori
-  url       : 
+  url       : https://blog.naver.com/dorimori_bebe
   avatar    : # path or url of avatar image (square)
   bio       : 예비 개발자, 취미백만개 infj✨
   email     : dorimori_bebe@naver.com
