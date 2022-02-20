@@ -29,4 +29,9 @@ header:
       en      : &EN       Cheat Sheets
       # @end locale config
     url: /cheat_sheets.html
+  - titles:
+      # @start locale config
+      en      : &EN       Projects
+      # @end locale config
+    url: /projects.html
 

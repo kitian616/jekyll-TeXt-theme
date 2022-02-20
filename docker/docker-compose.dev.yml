@@ -12,4 +12,4 @@ services:
       - ..:/usr/src/app
     stdin_open: true
     tty: true
-    command: bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.dev.yml
+    command: bundle exec jekyll serve -H 0.0.0.0 -t --config ./_config.yml
