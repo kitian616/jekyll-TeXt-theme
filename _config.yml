@@ -22,12 +22,12 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : 赵晓伟的博客
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  PX4 Linux .
 
 
 ## => Language and Timezone
 ##############################
-lang: CN # the language of your site, default as "en"
+lang: zh-Hans # the language of your site, default as "en"
 timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -39,7 +39,7 @@ author:
   url       :
   avatar    : # path or url of avatar image (square)
   bio       : 飞控开发，PX4开发，Linux BSP开发，Linux应用开发.
-  email     :
+  email     : xiaowei_zhao1013@163.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -96,7 +96,7 @@ chart: # false (default), true
 
 ## => Paginate
 ##############################
-paginate: 8
+paginate: 10
 paginate_path: /page:num # don't change this unless for special need
 
 
