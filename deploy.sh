@@ -16,7 +16,7 @@ echo Deploy
 # cp index.html index.html.backup
 # gzip -9 index.html
 
-s3-website create brothernat.org
+s3-website create nathanielkongmemorial.com
 
 bundle exec jekyll build # --watch
 

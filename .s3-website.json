@@ -7,6 +7,6 @@
    "corsConfiguration": [],
    "enableCloudfront": false,
    "retries": 20,
-   "domain": "brothernat.org",
+   "domain": "nathanielkongmemorial.com",
    "configFile": ".s3-website.json"
 }
