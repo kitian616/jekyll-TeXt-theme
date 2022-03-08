@@ -1,0 +1,1 @@
+sudo microk8s helm3 uninstall -n blog blog

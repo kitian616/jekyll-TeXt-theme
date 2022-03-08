@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nginx
+spec:
+  serviceName: nginx
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 80
+          volumeMounts:
+          - name: nginx-data
+            mountPath: /usr/share/nginx/html
+      volumes:
+      - name: nginx-data
+        persistentVolumeClaim:
+          claimName: nginx-pvc

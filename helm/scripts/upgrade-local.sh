@@ -1,0 +1,1 @@
+sudo microk8s helm3 upgrade -f ../values-local.yml -n blog blog ../
