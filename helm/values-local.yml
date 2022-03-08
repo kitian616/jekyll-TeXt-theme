@@ -1,2 +1,10 @@
+general:
+# This should be the name of your PC
+  hostname: willem-lenovo-ideapad-330-15arr
+
 blog:
-  path: /TODO
+  path: /home/willem/Repos/jekyll-blog/_site
+
+ingress:
+  enable_tls: false
+  blog_hostname: blog.local

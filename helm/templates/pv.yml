@@ -4,7 +4,7 @@ metadata:
   name: nginx-pv
 spec:
   capacity:
-    storage: 5Gi
+    storage: 1Gi
   volumeMode: Filesystem
   accessModes:
   - ReadWriteOnce
@@ -18,4 +18,4 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - willem-server
+          - {{ .Values.general.hostname }}
