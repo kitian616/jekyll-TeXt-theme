@@ -1,5 +1,26 @@
 ---
-layout: home
-# articles:
-#   excerpt_type: html
+layout: page
+full_width: true
+full_name: Nathaniel Kong
+headline: Lover of Christ and the Church and a loving shepherd
+date_range: October 14, 1962 - February 28, 2022
+data:
+  sections:
+    theme: dark
+
 ---
+
+<div class="hero hero--center hero--dark" style="width: 100%; position: relative; top: -50px; background-color: #{{site.hero_background_color}}">
+  <div class="hero__content">
+    <h1>{{page.full_name}}</h1>
+    <h4>{{page.headline}}</h4>
+    <p>{{page.date_range}}</p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell cell--4"></div>
+  <div class="cell cell--4">
+    <img class="image image--xl" src="assets/headshot.jpeg"/></div>
+  <div class="cell cell--4"></div>
+</div>
