@@ -1,0 +1,19 @@
+---
+layout: page
+full_width: true
+---
+
+<div class="hero hero--center hero--dark" style="width: 100%; position: relative; top: -50px; background-color: #{{site.hero_background_color}}">
+  <div class="hero__content">
+    <h1>Videos</h1>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell cell--2"></div>
+  <div class="cell cell--8">
+    {%- for _video_id in site.data.videos.video_ids -%}
+      {%- include extensions/youtube.html id=_video_id -%}
+    {%- endfor -%}
+  </div>
+</div>
