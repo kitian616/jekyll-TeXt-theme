@@ -10,13 +10,19 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       Testimonies
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
+      en      : &EN       Family
       # @end locale config
-    url: /testimonies.html
+    url: /archive.html?tag=family
+  - titles:
+      # @start locale config
+      en      : &EN       Saints
+      # @end locale config
+    url: /archive.html?tag=saints
+  - titles:
+      # @start locale config
+      en      : &EN       Friends
+      # @end locale config
+    url: /archive.html?tag=friends
 
   - titles:
       # @start locale config
