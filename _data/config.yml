@@ -6,6 +6,9 @@ memorial_meeing:
     datetime: March 19th 10am-12pm
     venue: Mack Powell Event Center
     address: 2003 Howe Ave, Sacramento, CA 95825
+biography:
+  title: A Short Biography of Nathaniel Kong
+  subtitle: “A Life Out-poured”
 video_ids:
   - kWM4X1gA56U
   - p5RSornvPgU

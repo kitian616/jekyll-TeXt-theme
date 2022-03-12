@@ -1,24 +1,21 @@
 ---
 layout: page
-title:
 tags: biography
+full_width: false
 show_date: false
 show_edit_on_github: false
 ---
 
-<div class="hero hero--center" style="width: 100%;">
+<div class="hero hero--center">
   <div class="hero__content">
-    <h2>A Short Biography of Nathaniel Kong</h2>
-    <h3>“A Life Out-poured”</h3>
-    <p>(October 14, 1962 - February 28, 2022)</p>
+    <h2>{{site.data.config.biography.title}}</h2>
+    <h3>{{site.data.config.biography.subtitle}}</h3>
+    <p>{{site.data.config.date_range}}</p>
   </div>
 </div>
 
-<div class="grid">
-  <div class="cell cell--4"></div>
-  <div class="cell cell--4">
-    <img class="image image--xl" src="assets/headshot.jpeg"/></div>
-  <div class="cell cell--4"></div>
+<div style="text-align: center">
+  <img class="image image--xl" src="assets/headshot.jpeg" >
 </div>
 
 **SACRAMENTO, Calif., March 5, 2022** – Nathaniel “Brother Nat” Kong, 59, was tragically killed this week while supervising a court-ordered family visit that turned violent. The Mora Guitierrez sisters – 13-year-old Samia, 10-year-old Samantha and 9-year-old Samarah – also died in the heartbreaking attack before their father ended his own life.  This family had been attending the church in Sacramento under the shepherding care of Nathaniel for almost 5 years before this tragic event happened.  Since many have made inquiries about Nathaniel, a short version of his history is presented below.
