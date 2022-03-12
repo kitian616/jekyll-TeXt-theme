@@ -23,7 +23,6 @@ baseurl : # does not include hostname
 title   : Nathaniel Kong Memorial
 description: > # this means to ignore newlines until "Language & timezone"
   Lover of Christ and the Church and a loving shepherd
-hero_background_color: 004A80
 
 
 ## => Language and Timezone
