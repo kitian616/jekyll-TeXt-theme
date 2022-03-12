@@ -28,7 +28,7 @@
       <div>
         {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
         {%- assign _locale_copyright_dates = __return -%}
-        © {{ site.title }} {{ _locale_copyright_dates }},        
+        © {{ site.data.config.title }} {{ _locale_copyright_dates }},        
       </div>
     </div>
   </div>

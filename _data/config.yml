@@ -1,28 +1,29 @@
+title   : Nathaniel Kong Memorial
+description: Lover of Christ and the Church and a loving shepherd
 full_name: Nathaniel Kong
 date_range: October 14, 1962 - February 28, 2022
 hero_background_color: 004A80
 headline: Lover of Christ and the Church and a loving shepherd
 navigation:
   - titles:
-      en      : &EN       Biography
+      en: Biography
     url: /biography.html
 
   - titles:
-      en      : &EN       Family
+      en: Family
     url: /archive.html?tag=family
   - titles:
-      en      : &EN       Saints
+      en: Saints
     url: /archive.html?tag=saints
   - titles:
-      en      : &EN       Friends
+      en: Friends
     url: /archive.html?tag=friends
 
   - titles:
-      en      : &EN       Videos
+      en: Videos
     url: /videos.html
-
   - titles:
-      en      : &EN       Photos
+      en: Photos
     url: /photos.html
 
 memorial_meeing:
