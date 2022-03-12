@@ -2,13 +2,38 @@ full_name: Nathaniel Kong
 date_range: October 14, 1962 - February 28, 2022
 hero_background_color: 004A80
 headline: Lover of Christ and the Church and a loving shepherd
+navigation:
+  - titles:
+      en      : &EN       Biography
+    url: /biography.html
+
+  - titles:
+      en      : &EN       Family
+    url: /archive.html?tag=family
+  - titles:
+      en      : &EN       Saints
+    url: /archive.html?tag=saints
+  - titles:
+      en      : &EN       Friends
+    url: /archive.html?tag=friends
+
+  - titles:
+      en      : &EN       Videos
+    url: /videos.html
+
+  - titles:
+      en      : &EN       Photos
+    url: /photos.html
+
 memorial_meeing:
     datetime: March 19th 10am-12pm
     venue: Mack Powell Event Center
     address: 2003 Howe Ave, Sacramento, CA 95825
+
 biography:
   title: A Short Biography of Nathaniel Kong
   subtitle: “A Life Out-poured”
+
 video_ids:
   - kWM4X1gA56U
   - p5RSornvPgU

@@ -19,10 +19,10 @@
           <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
         {%- endif -%}
       </div>
-      {%- if site.data.navigation.header -%}
+      {%- if site.data.config.navigation -%}
       <nav class="navigation">
         <ul>
-          {%- for _item in site.data.navigation.header -%}
+          {%- for _item in site.data.config.navigation -%}
             {%- include snippets/get-nav-url.html path=_item.url -%}
             {%- assign _nav_url = __return -%}
             {%- include snippets/get-nav-url.html path=page.url -%}
