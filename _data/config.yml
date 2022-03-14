@@ -35,12 +35,52 @@ biography:
   title: A Short Biography of Nathaniel Kong
   subtitle: “A Life Outpoured”
 
-video_ids:
-  - kWM4X1gA56U
-  - p5RSornvPgU
-  - hkyQqltBeLI
-  - bIktm0ka6o0
-  - XTZRkb8r59E
-  - 5CWW3QpZQkg
-  - TCur3_4X6RY
-  - YrtiHh_GLnU
+videos:
+  -
+    id: YrtiHh_GLnU
+    title: Until the Chens Arrive
+  -
+    id: TCur3_4X6RY
+    title: Volleyball
+  -
+    id: bIktm0ka6o0
+    title: Skateboarding
+  -
+    id: kWM4X1gA56U
+    title: Bible Camp 2020 Theme Song
+  -
+    id: hkyQqltBeLI
+    title: Greeting Our Relative
+  -
+    id: p5RSornvPgU
+    title: Building the Fire
+  -
+    id: QLc_iNbG7vY
+    title: Planning a Greeting
+  -
+    id: p58IxsFlGKQ
+    title: Cry Out and Shout (Hallelujah)!
+  -
+    id: QDRCGZ5R6Ic
+    title: Manning the Zoom Camera
+  -
+    id: QDRCGZ5R6Ic
+    title: Playing Biblical Heads Up
+  -
+    id: DrrS43zu3Rk
+    title: Bible Study on God's Love
+  -
+    id: 9AiN_zx0Ai8
+    title: Volleyball the Setter
+  -
+    id: 6XRuqkpyoC4
+    title: On a Trail in Munich
+  -
+    id: VRGbvrTKXPg
+    title: Singing at a Sac State Bible Study
+  -
+    id: a5LP3NvwR0o
+    title: Oh Lord, Amen, Hallelujah, Jesus!
+  -
+    id: XTZRkb8r59E
+    title: IMG 0044
