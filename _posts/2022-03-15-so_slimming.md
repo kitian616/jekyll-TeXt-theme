@@ -1,6 +1,6 @@
 ---
 title: "动态库瘦身"
-tags: [Linux strip]
+tags: [linux,strip]
 ---
 
 
