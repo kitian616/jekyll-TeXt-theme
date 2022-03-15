@@ -26,3 +26,4 @@ titles:
 key: page-about
 ---
 
+赵晓伟，目前就职于一飞智控（天津）科技有限公司，负责飞控业务开发，Linux BSP开发，Linux应用开发，熟悉[PX4-Autopilot]()开发及其他相关技术栈如mavlink、mavsdk、mavros等，了解Linux Uboot移植、kernel移植、文件系统裁剪等业务逻辑，具备产品量产经验，当前专注于室内外编队系统开发。
