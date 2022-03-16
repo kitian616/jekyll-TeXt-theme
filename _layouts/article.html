@@ -22,8 +22,10 @@ type: article
     {%- include article-section-navigator.html -%}
   </div>
 
+  {%- if _comment != false -%}
+    <section class="page__comments d-print-none">{%- include comments.html -%}</section>
+  {%- endif -%}
 </div>
-
 <script>
   {%- include scripts/article.js -%}
 </script>

@@ -53,11 +53,6 @@ html,
     padding-bottom: 0;
   }
 }
-
-.page__comments {
-  margin: map-get($spacers, 4) 0;
-}
-
 .page__aside {
   .toc-aside {
     padding: map-get($spacers, 5) 0 map-get($spacers, 3) map-get($spacers, 5);

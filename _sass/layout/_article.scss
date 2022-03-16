@@ -27,3 +27,6 @@
     text-align: right;
   }
 }
+.page__comments {
+  margin: map-get($spacers, 4) 0;
+}
