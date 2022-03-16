@@ -1,5 +1,5 @@
 title   : Nathaniel Kong Memorial
-description: Lover of Christ and the Church and a loving shepherd
+description: A Lover of Christ and the Church and A Loving Shepherd
 full_name: Nathaniel Kong
 date_range: October 14, 1962 - February 28, 2022
 hero_background_color: 004A80
@@ -34,6 +34,12 @@ memorial_meeing:
 biography:
   title: A Short Biography of Nathaniel Kong
   subtitle: “A Life Outpoured”
+
+authors:
+  Wanchi:
+    name: Wanchi Kong
+  Joseph:
+    name: Joseph Kong
 
 videos:
   -
