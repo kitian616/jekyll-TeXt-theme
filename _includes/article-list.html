@@ -101,9 +101,9 @@
       {%- include snippets/get-locale-string.html key='ARTICLE_LIST_DATE_FORMAT' -%}
       <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
         <div class="item__content">
-          {%- if include.show_info -%}
+          <!-- {%- if include.show_info -%}
             <span class="item__meta">{{ _article.date | date: __return }}</span>
-          {%- endif -%}
+          {%- endif -%} -->
           <a itemprop="headline" class="item__header" href="{{ _article_url }}">{{ _article.title }}</a></div>
       </li>
 
