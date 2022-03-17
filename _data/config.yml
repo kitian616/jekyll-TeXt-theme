@@ -16,10 +16,6 @@ navigation:
       en: Saints
     url: /archive.html?tag=saints
   - titles:
-      en: Friends
-    url: /archive.html?tag=friends
-
-  - titles:
       en: Videos
     url: /videos.html
   - titles:
