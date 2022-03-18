@@ -11,17 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 - Git checkout
-        uses: actions/checkout@v1
 
-      - name: Step 2 - echo Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
-
-      - name: Step 3 - Build build image
-        run: docker-compose -f ./docker/docker-compose.build-image.yml up
-
-      - name: Step 4 - Generate site
-        run: docker-compose -f ./docker/docker-compose.prod.yml up jekyll-text-theme_build
+      - name: test
+        run: mkdir test && cd test && > foo.txt
 
       - name: Step 5 - FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
@@ -29,10 +21,8 @@ jobs:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: _site
-          REMOTE_DIR: /home/willem-sftp/blog
+          LOCAL_DIR: test
+          REMOTE_DIR: /var/sftp/blog
           METHOD: sftp
           PORT: 22
           ARGS: --delete
-
-    
