@@ -1,0 +1,1 @@
+microk8s helm3 install -f ../values-local.yml -n blog blog ../

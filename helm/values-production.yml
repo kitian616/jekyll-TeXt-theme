@@ -1,0 +1,11 @@
+general:
+# This should be the name of your PC
+  hostname: willem-production-server
+
+blog:
+  path: /var/sftp/blog/
+
+ingress:
+  enable_tls: true
+  blog_hostname: willem-ca.ddns.net
+  tls_clusterIssuer: "letsencrypt-production"
