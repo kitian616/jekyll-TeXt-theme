@@ -3,7 +3,7 @@ general:
   hostname: willem-production-server
 
 blog:
-  path: /home/willem/Repos/jekyll-blog/_site/
+  path: /var/sftp/blog/
 
 ingress:
   enable_tls: true
