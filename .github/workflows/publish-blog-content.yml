@@ -1,5 +1,5 @@
 on: 
-  always:
+  push
   #pull_request:
   #  branches:
   #    - my-blog
