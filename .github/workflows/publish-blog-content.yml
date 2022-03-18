@@ -14,7 +14,6 @@ jobs:
       - name: test
         run: mkdir test && cd test && > foo.txt
 
-        
       - name: Step 5 - FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
