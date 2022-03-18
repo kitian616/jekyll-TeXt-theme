@@ -1,8 +1,9 @@
 on: 
-  pull_request:
-    branches:
-      - my-blog
-    types: [closed]
+  always:
+  #pull_request:
+  #  branches:
+  #    - my-blog
+  #  types: [closed]
 jobs:
   # `build` is a user-defined name for this job
   publish-blog-content:
@@ -29,7 +30,7 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           LOCAL_DIR: _site
-          REMOTE_DIR: data
+          REMOTE_DIR: blog
           METHOD: sftp
           PORT: 22
           ARGS: --delete
