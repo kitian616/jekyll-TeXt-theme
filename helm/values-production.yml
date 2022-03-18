@@ -1,10 +1,11 @@
 general:
 # This should be the name of your PC
-  hostname: willem-server
+  hostname: willem-production-server
 
 blog:
-  path: /home/willem/Repos/jekyll-blog/_site
+  path: /home/willem/Repos/jekyll-blog/_site/
 
 ingress:
-  enable_tls: false
-  blog_hostname: willemserruys.com
+  enable_tls: true
+  blog_hostname: willem-ca.ddns.net
+  tls_clusterIssuer: "letsencrypt-production"
