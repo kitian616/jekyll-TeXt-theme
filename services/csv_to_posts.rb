@@ -5,9 +5,9 @@ require 'erb'
 require 'byebug'
 
 class CsvToPosts < Struct.new(:csv_row)
-  def self.run
+  def self.run(csv_file_path = 'services/posts.csv')
     # iterator-style:
-    CSV.foreach('posts.csv', headers: true) do |csv_row|
+    CSV.foreach(csv_file_path, headers: true) do |csv_row|
       CsvToPosts.new(csv_row).write
     end
   end
