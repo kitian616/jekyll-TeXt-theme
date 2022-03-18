@@ -12,7 +12,7 @@ hero_title: Videos
 <div class="grid">
   <div class="cell cell--2"></div>
   <div class="cell cell--8">
-    {%- for _video in site.data.config.videos -%}
+    {%- for _video in site.data.videos.videos -%}
       {%- include extensions/youtube.html id=_video.id title=_video.title -%}
     {%- endfor -%}
   </div>
