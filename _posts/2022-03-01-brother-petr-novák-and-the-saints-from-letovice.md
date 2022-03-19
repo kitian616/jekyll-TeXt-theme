@@ -13,5 +13,5 @@ Praise the Lord, in June 2012, the church was planted in Letovice and we were ab
 
 We will remember Brother Nat as someone who brought the gospel to us. He was ready in season and out of season. He was a servant of Christ with much love for the Church. We are very sorry to see him go, but our Lord knows and took him to Himself.
 
-We bless his entire family and we are grateful that we were able to know them as well. Praise the Lord Jesus Christ, He is Victor! 
+We bless his entire family and we are grateful that we were able to know them as well. Praise the Lord Jesus Christ, He is Victor!
 With the love of Christ on behalf of the saints from Letovice,
