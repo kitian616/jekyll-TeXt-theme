@@ -15,7 +15,11 @@ class CsvToPosts < Struct.new(:csv_row)
   def write
     # puts csv_row.to_h.to_s
     File.open(jekyll_file_name, 'w') do |f|
-      file_string = ERB.new(template_string).result(binding)
+      file_string = if csv_row['type'] == 'video'
+                      ERB.new(video_template_string).result(binding)
+                    else
+                      ERB.new(post_template_string).result(binding)
+                    end
       puts file_string
       f.write file_string
     end
@@ -23,7 +27,7 @@ class CsvToPosts < Struct.new(:csv_row)
 
   private
 
-  def template_string
+  def post_template_string
     "---
 layout: article
 author: <%= csv_row['author']&.strip %>
@@ -32,6 +36,19 @@ tags: <%= csv_row['tags']&.strip %>
 full_width: false
 ---
 <%= csv_row['content']&.strip %>
+"
+  end
+
+  def video_template_string
+    "---
+layout: article
+author: <%= csv_row['author']&.strip %>
+location: <%= csv_row['location']&.strip %>
+tags: <%= csv_row['tags']&.strip %>
+full_width: false
+---
+
+{%- include extensions/youtube.html id='<%= csv_row['content']&.strip %>' -%}
 "
   end
 
