@@ -5,4 +5,4 @@ location: Anaheim, California
 tags: saints
 full_width: false
 ---
-MxbBzQTUqaA
+{%- include extensions/youtube.html id='MxbBzQTUqaA' title='Bob Danker Speaking' -%}
