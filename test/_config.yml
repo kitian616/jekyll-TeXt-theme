@@ -102,7 +102,7 @@ paginate_path: /page:num # don't change this unless for special need
 
 ## => Sources
 ##############################
-sources: # bootcdn (default), unpkg
+sources: # bootcdn (default), unpkg, bytedance
 
 
 ## => Sharing

@@ -62,3 +62,14 @@ sources:
     valine: 'https//unpkg.com/valine/dist/Valine.min.js'
     mathjax: 'https://unpkg.com/mathjax@2.7.4/unpacked/MathJax.js?config=TeX-MML-AM_CHTML'
     mermaid: 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js'
+  bytedance: # https://cdn.bytedance.com/
+    font_awesome: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/5.15.1/css/all.css'
+    jquery: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js'
+    leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js'
+    chart: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/Chart.js/2.7.1/Chart.min.js'
+    gitalk:
+      js: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/gitalk/1.2.2/gitalk.min.js'
+      css: 'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/gitalk/1.2.2/gitalk.min.css'
+    valine: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/valine/1.4.16/Valine.min.js'
+    mathjax: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'
+    mermaid: 'https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/mermaid/8.14.0/mermaid.min.js'
