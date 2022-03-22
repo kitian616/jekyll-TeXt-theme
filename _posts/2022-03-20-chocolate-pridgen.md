@@ -1,0 +1,8 @@
+---
+layout: article
+author: Chocolate Pridgen
+location: Sacramento, California
+tags: saints
+full_width: false
+---
+Our dear brother Nat had a heart for man like none other. In my time of knowing him, I was always greatly appreciative of his cherishing and supportive shepherding. To me, Nat was someone I considered to be a spiritual father figure in my life especially in my college years and even to this day. Because of that it is one the very reasons why I call the church life home today. Nat always took the time to check on me. I would’ve thought that there were always other ones he could have taken care of, and indeed there were but he always found a way. No matter what was going on in my day, he found a way to have time to fellowship with me. He was the kind of brother that made me want to fight for my times with the saints because I knew he always made himself available for me. Even when I was living alone, he would bike over to my house just to read the Morning Revival with me. It was always the little things that meant the most to me. Those moments when I knew, I truly was never alone. I’m so grateful to have known our brother and to have such a pattern in my going on. I would just like to end my thoughts with this verse Psalm 133:1 “Behold, how good and how pleasant it is / For brothers to dwell in unity!”. Thank you, to the Kong family for practically caring for me as a home away from home in all that you have done. My heart is warm and comforted by the supply you all have provided all these years. Saints, although our brother may not physically be with us anymore, may his pattern and testimony live on in us for the rest of our going on.
