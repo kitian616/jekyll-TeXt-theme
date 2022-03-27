@@ -1,3 +1,115 @@
 /* start custom scss snippet */
+//custom 
+$DegradadoInvertido:linear-gradient( 104deg, #5089CC  0%, #378707 100%);
+$Degradado:linear-gradient(104deg, #378707 0%, #5089CC 100%);
+.menu-principal{
+    height: 300px;
+    width: auto;
+    display: flex;
 
+  
+}
+
+.space-one{
+    
+    margin: 0px;
+    padding: 0px;
+  
+    height: 100%;
+    width: 20%;
+
+    align-self:flex-start;
+    // border: solid;
+    // border-color: black;
+
+}
+.space-two{
+    
+    margin: 0px;
+    padding: 0px;
+  
+    height: 100%;
+    width: 40%;
+ 
+    align-self:flex-start;
+    
+    // border: solid;
+    // border-color: black;
+
+}.space-two-projects{
+    
+    margin: 0px;
+    padding: 0px;
+  
+    height: 100%;
+ 
+ 
+    align-self:flex-start;
+    
+    // border: solid;
+    // border-color: black;
+
+}
+.space-tree{
+    
+    margin: 0px;
+    padding: 0px;
+  
+    height: 100%;
+    width: 35%;
+    align-self:flex-start;
+    // border: solid;
+    // border-color: black;
+
+}
+.main-section{
+    margin: 0px;
+    padding: 0px;
+    height: 30%;
+    width: auto;
+    text-align: center;
+}
+.main-section-2{
+    margin: 0px;
+    padding: 0px;
+    height: 60%;
+    width: auto;
+
+
+
+}
+.menu-principal-projects{
+
+    width: auto;
+    display: flex;
+
+  
+}
+.main-section-2-projects{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: auto;
+}
+.iconoImagen{
+
+    width: 80%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-fondo{
+    color: white;
+    background-image:$DegradadoInvertido ;
+
+}
+.logoPersonalizado{
+    width: 1.92rem;
+    height: 1.92rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 30px;
+}
 /* end custom scss snippet */
