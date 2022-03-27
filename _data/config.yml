@@ -8,13 +8,16 @@ navigation:
   - titles:
       en: Biography
     url: /biography.html
-
+  - titles:
+      en: Meeting Slides
+    url: /meeting.html
   - titles:
       en: Family
     url: /archive.html?tag=family
   - titles:
       en: Saints
     url: /archive.html?tag=saints
+
   - titles:
       en: Videos
     url: /videos.html
