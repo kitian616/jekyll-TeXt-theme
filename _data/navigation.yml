@@ -128,7 +128,7 @@ header:
 
 
 # 侧边导航栏
-docs-en:
+cs:
   - title:      编程语言
     children:
       - title:  C
@@ -151,4 +151,10 @@ docs-en:
         url:    /docs/en/configuration
       - title:  Navigation
         url:    /docs/en/navigation
-      
+  
+  - title:      测试
+    children:
+      - title:  博客
+        url:    /assets/category/work/tool/blog.html
+      - title:  Office
+        url:    /assets/category/work/tool/office.html
