@@ -31,7 +31,7 @@
 				owner: '{{ site.comments.gitalk.owner }}',
 				admin: [{{ _admin }}],
 				id: '{{ page.key }}',
-				proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+				proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
 			});
 			gitalk.render('js-gitalk-container');
 		});
