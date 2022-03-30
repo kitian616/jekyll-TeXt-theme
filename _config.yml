@@ -241,9 +241,10 @@ plugins:
 collections:
   posts:
     output: true
-    # permalink: /algorithm/:title
+    permalink: /:categories/:year/:month/:day/:title/
   algorithms:
     output: true
+    permalink: /:categories/:year/:month/:day/:title/
 
 collections_dir: my_collections
 
