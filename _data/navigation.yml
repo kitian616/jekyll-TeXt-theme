@@ -1,140 +1,77 @@
 header:
   - titles:
     # @start locale config
-      en      : &EN       Home
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  主页
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  主页
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
+      en      :   Home
+      zh      :   主页
+      zh-Hans :   主页
+      zh-Hant :   主页
       # @end locale config
     url: /
 
   - titles:
     # @start locale config
-      en      : &EN       CS
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  计算机科学
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  计算机科学
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
+      en      :   CS
+      zh      :   计算机科学
+      zh-Hans :   计算机科学
+      zh-Hant :   计算机科学
       # @end locale config
-    url: /cs
+    url: /CS
 
   - titles:
     # @start locale config
-      en      : &EN       AI
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  人工智能
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  人工智能
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
+      en      :   AI
+      zh      :   人工智能
+      zh-Hans :   人工智能
+      zh-Hant :   人工智能
       # @end locale config
-    url: /ai
+    url: /AI
   
   - titles:
     # @start locale config
-      en      : &EN       Algorithm
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  算法
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  算法
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
+      en      :   Algorithms
+      zh      :   算法
+      zh-Hans :   算法
+      zh-Hant :   算法
       # @end locale config
-    url: /algorithms
+    url: /Algorithms
 
   - titles:
     # @start locale config
-      en      : &EN       Blog
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  个人生活
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  个人生活
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
+      en      :   Blog
+      zh      :   随笔
+      zh-Hans :   随笔
+      zh-Hant :   随笔
       # @end locale config
     url: /blog
 
   - titles:
-      # @start locale config
-      en      : &EN       Archive
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  归档
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸檔
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
+    # @start locale config
+      en      :   Archive
+      zh      :   归档
+      zh-Hans :   归档
+      zh-Hant :   归档
       # @end locale config
     url: /archive.html
 
   - titles:
-      # @start locale config
-      en      : &EN       About
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  关于
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關於
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      ko      : &KO       소개
-      ko-KR   : *KO
-      fr      : &FR       À propos
-      fr-BE   : *FR
-      fr-CA   : *FR
-      fr-CH   : *FR
-      fr-FR   : *FR
-      fr-LU   : *FR
+    # @start locale config
+      en      :   About
+      zh      :   关于
+      zh-Hans :   关于
+      zh-Hant :   关于
+      # @end locale config
       # @end locale config
     url: /about.html
 
 
 # 侧边导航栏
-cs:
+CS:
   - title:      编程语言
     children:
-      - title:  C
-        url:    /docs/en/quick-start
+      - title:  C/C++
+        url:    /CS/C&C++/
       - title:  Java
-        url:    /docs/en/structure
+        url:    /CS/Java/
       - title:  JavaScript
         url:    /
       

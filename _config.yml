@@ -23,7 +23,7 @@ url     : https://wholon.github.io # the base hostname & protocol for your site 
 baseurl :  # does not include hostname
 title   : Holon's Blog # 踏歌行
 # this means to ignore newlines until "Language & timezone"
-description: >
+description: >-
   Think Different
 
 
@@ -38,17 +38,17 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 author:
   type      : # "person" (default), "organization"
   name      : Holon
-  url       :
+  url       : https://holon.wang
   avatar    : https://cdn.jsdelivr.net/gh/wholon/image@main/uPic/A9BDE2A2-9971-43E3-9702-7C733E48E00D.jpeg # path or url of avatar image (square)
   bio       : 念念不忘，必有回响
   email     : holon.cn@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
+  weibo     : 5718657072 # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
-  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
+  telegram  : Wholon # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
+  zhihu     : jeffrey-8-68 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : wholon # "user_name" the last part of your profile url, e.g. https://github.com/user_name
@@ -86,14 +86,14 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: # false (default), true
-mathjax_autoNumber: # false (default), true
+mathjax: true # false (default), true
+mathjax_autoNumber: true # false (default), true
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid: true # false (default), true
 
 ## Chart
-chart: # false (default), true
+chart: true # false (default), true
 
 
 ## => Paginate
@@ -120,7 +120,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -129,12 +129,12 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : b4a82d948d102103c8f2 # GitHub Application Client ID
+    clientSecret: f8f05eab2a82e4956aeb1f275ccb03335fc65aea # GitHub Application Client Secret
+    repository  : wholon.github.io # GitHub repo
+    owner       : wholon # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+      - 55683600 # - your GitHub Id
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
@@ -149,13 +149,13 @@ comments:
 ## => Pageview
 ##############################
 pageview:
-  provider: false # false (default), "leancloud", "custom"
+  provider: leancloud # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
+    app_id    : cilQp1y35tu306dtvpUYQdai-gzGzoHsz # LeanCloud App id
+    app_key   : jVCnL11R3DvbBvS7T6Vg0lPc # LeanCloud App key
+    app_class : BlogPageView # LeanCloud App class
 
 
 ## => Search

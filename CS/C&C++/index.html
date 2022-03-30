@@ -1,7 +1,7 @@
 ---
 layout: articles
-articles:
-  excerpt_type: text
+# articles:
+#   excerpt_type: html
 
 # 展示侧边栏 在 _data/navigation.yml 中设置
 sidebar:
@@ -10,7 +10,7 @@ sidebar:
 
 <ul>
     {% for cat in site.categories %}
-        {% if cat[0] == "CS" %}
+        {% if cat[0] == "C++" %}
         {% for post in cat[1] %}
         {{post.date | date:"%Y/%m/%d"}}
         <font size="3"><a href={{post.url}} title={{ cat[0] }}>{{post.title}}</a></font>
