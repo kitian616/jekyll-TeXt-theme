@@ -1,6 +1,57 @@
 header:
   - titles:
     # @start locale config
+      en      : &EN       Home
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  主页
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  主页
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      # @end locale config
+    url: /
+
+  - titles:
+    # @start locale config
+      en      : &EN       CS
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  计算机科学
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  计算机科学
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      # @end locale config
+    url: /cs
+
+  - titles:
+    # @start locale config
+      en      : &EN       AI
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  人工智能
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  人工智能
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      # @end locale config
+    url: /ai
+  
+  - titles:
+    # @start locale config
       en      : &EN       Algorithm
       en-GB   : *EN
       en-US   : *EN
@@ -15,6 +66,23 @@ header:
       zh-HK   : *ZH_HANT
       # @end locale config
     url: /algorithms
+
+  - titles:
+    # @start locale config
+      en      : &EN       Blog
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  个人生活
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  个人生活
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      # @end locale config
+    url: /blog
 
   - titles:
       # @start locale config
@@ -61,14 +129,23 @@ header:
 
 # 侧边导航栏
 docs-en:
-  - title:      Start
+  - title:      编程语言
     children:
-      - title:  Quick Start
+      - title:  C
         url:    /docs/en/quick-start
-      - title:  Structure
+      - title:  Java
         url:    /docs/en/structure
+      - title:  JavaScript
+        url:    /
       
-  - title:      Customization
+  - title:      操作系统
+    children:
+      - title:  Configuration
+        url:    /docs/en/configuration
+      - title:  Navigation
+        url:    /docs/en/navigation
+  
+  - title:      计算机网络
     children:
       - title:  Configuration
         url:    /docs/en/configuration
