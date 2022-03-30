@@ -30,7 +30,8 @@
 				repo: '{{ site.comments.gitalk.repository }}',
 				owner: '{{ site.comments.gitalk.owner }}',
 				admin: [{{ _admin }}],
-				id: '{{ page.key }}'
+				id: '{{ page.key }}',
+				proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
 			});
 			gitalk.render('js-gitalk-container');
 		});
