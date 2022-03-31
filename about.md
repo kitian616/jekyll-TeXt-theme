@@ -8,10 +8,10 @@ layout: article
 #   zh-Hant :   关于
 #   # @end locale config
 #   # @end locale config
-show_title: false
+# show_title: false
 ---
 
-# Keep It Simple, Stupid
+## Keep It Simple, Stupid
 
 ![箴言](https://cdn.jsdelivr.net/gh/wholon/image@main/uPic/93C62984-2A8B-4B18-88B1-DE4B6D2BD3B0_1_201_a.jpeg)
 
