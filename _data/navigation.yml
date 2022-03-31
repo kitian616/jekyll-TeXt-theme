@@ -15,7 +15,7 @@ header:
       zh-Hans :   计算机科学
       zh-Hant :   计算机科学
       # @end locale config
-    url: /CS
+    url: /cs.html
 
   - titles:
     # @start locale config
@@ -51,7 +51,7 @@ header:
       zh-Hans :   归档
       zh-Hant :   归档
       # @end locale config
-    url: /archive.html
+    url: /archive
 
   - titles:
     # @start locale config
@@ -61,7 +61,7 @@ header:
       zh-Hant :   关于
       # @end locale config
       # @end locale config
-    url: /about.html
+    url: /about
 
 
 # 侧边导航栏
