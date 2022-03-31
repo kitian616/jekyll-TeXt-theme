@@ -15,7 +15,7 @@ header:
       zh-Hans :   计算机科学
       zh-Hant :   计算机科学
       # @end locale config
-    url: /cs.html
+    url: /assets/category/cs/index.html
 
   - titles:
     # @start locale config
@@ -24,7 +24,7 @@ header:
       zh-Hans :   人工智能
       zh-Hant :   人工智能
       # @end locale config
-    url: /AI
+    url: /assets/category/ai/index.html
   
   - titles:
     # @start locale config
@@ -33,7 +33,7 @@ header:
       zh-Hans :   算法
       zh-Hant :   算法
       # @end locale config
-    url: /Algorithms
+    url: /assets/category/algorithms/index.html
 
   - titles:
     # @start locale config
@@ -42,7 +42,7 @@ header:
       zh-Hans :   随笔
       zh-Hant :   随笔
       # @end locale config
-    url: /blog
+    url: /assets/category/blog/index.html
 
   - titles:
     # @start locale config
@@ -68,30 +68,43 @@ header:
 CS:
   - title:      编程语言
     children:
+      - title:  汇总
+        url:    /assets/category/cs/lang/index.html
       - title:  C/C++
-        url:    /CS/C&C++/
+        url:    /assets/category/cs/lang/cpp.html
       - title:  Java
-        url:    /CS/Java/
+        url:    /assets/category/cs/lang/java.html
       - title:  JavaScript
-        url:    /
+        url:    /assets/category/cs/lang/javascript.html
+      - title:  HTML
+        url:    /assets/category/cs/lang/html.html
       
   - title:      操作系统
     children:
-      - title:  Configuration
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
+      - title:  汇总
+        url:    /assets/category/cs/os/index.html
+      - title:  Linux
+        url:    /assets/category/cs/os/linux.html
+      - title:  Mac
+        url:    /assets/category/cs/os/mac.html
   
   - title:      计算机网络
     children:
-      - title:  Configuration
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
-  
-  - title:      测试
+      - title:  汇总
+        url:    /assets/category/cs/network/index.html
+
+  - title:      软件工程
     children:
-      - title:  博客
-        url:    /assets/category/work/tool/blog.html
-      - title:  Office
-        url:    /assets/category/work/tool/office.html
+      - title:  汇总
+        url:    /assets/category/cs/se/index.html
+      - title:  设计模式
+        url:    /assets/category/cs/se/designpattern.html
+      - title:  数据库
+        url:    /assets/category/cs/se/database.html
+  
+  - title:      开发工具
+    children:
+      - title:  汇总
+        url:    /assets/category/cs/tool/index.html
+  
+  

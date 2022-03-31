@@ -1,16 +1,16 @@
 ---
 layout: article
-titles:
-  # @start locale config
-  en      :   About
-  zh      :   关于
-  zh-Hans :   关于
-  zh-Hant :   关于
-  # @end locale config
-  # @end locale config
+# titles:
+#   # @start locale config
+#   en      :   About
+#   zh      :   关于
+#   zh-Hans :   关于
+#   zh-Hant :   关于
+#   # @end locale config
+#   # @end locale config
 ---
 
-
+# Keep It Simple, Stupid
 
 ![箴言](https://cdn.jsdelivr.net/gh/wholon/image@main/uPic/93C62984-2A8B-4B18-88B1-DE4B6D2BD3B0_1_201_a.jpeg)
 
