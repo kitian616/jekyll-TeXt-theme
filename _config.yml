@@ -194,7 +194,7 @@ highlighter : rouge
 # /:categories/:year/W:week/:short_day/:title:output_ext
 # none
 # /:categories/:title:output_ext
-permalink   : date
+permalink   : pretty
 
 exclude:
   - CHANGELOG.md
