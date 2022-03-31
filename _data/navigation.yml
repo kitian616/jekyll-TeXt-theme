@@ -61,7 +61,7 @@ header:
       zh-Hant :   关于
       # @end locale config
       # @end locale config
-    url: /about
+    url: /about.html
 
 
 # 侧边导航栏
