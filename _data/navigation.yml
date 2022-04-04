@@ -29,27 +29,27 @@ header:
   
       # @end locale config
     url: /projects.html
-  - titles:
-      # @start locale config
-      en      : &EN       Events
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-  
-      # @end locale config
-    url: /calendar.html
-
-  - titles:
-      # @start locale config
-      en      : &EN       Governance
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-  
-      # @end locale config
-    url: /governance.html
+    #  - titles:
+    #      # @start locale config
+    #      en      : &EN       Events
+    #      en-GB   : *EN
+    #      en-US   : *EN
+    #      en-CA   : *EN
+    #      en-AU   : *EN
+    #  
+    #      # @end locale config
+    #    url: /calendar.html
+    #
+    #  - titles:
+    #      # @start locale config
+    #      en      : &EN       Governance
+    #      en-GB   : *EN
+    #      en-US   : *EN
+    #      en-CA   : *EN
+    #      en-AU   : *EN
+    #  
+    #      # @end locale config
+    #    url: /governance.html
 
   - titles:
       # @start locale config
