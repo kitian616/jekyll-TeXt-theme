@@ -15,9 +15,9 @@ key: page-projects
 
 ### DECA 
 
-The Decentralized Climate Foundation manages the organization, development and decision-making of DECA, a decentralized carbon-based economy.
+The Decentralized Climate Foundation (DCF) is a non-profit organization that supports the DECA ecosystem and related technologies. DCF's role is to lead the development of DECA while the DAO development concludes, which will take DCF's role.
 
-The foundation oversees the operation of this economy in its transition towards decentralization and coordinates the free participation of citizens interested in supporting this project to fight climate change.
+The foundation oversees the operation of this ecosystem in its transition towards decentralization and coordinates the free participation of citizens interested in supporting this project.
 
 As a citizen effort, the foundation enables DECA to build its own informed community, capable of making decisions on behalf of the environment.
 
