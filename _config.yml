@@ -22,7 +22,7 @@ url     : https://decentralizedclimate.foundation # the base hostname & protocol
 baseurl : # does not include hostname
 title   : Decentralized Climate Foundation
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  The Decentralized Climate Foundation (DCF) is a non-profit organization which supports decentralization of environmental and social projects
 
 
 ## => Language and Timezone
@@ -49,7 +49,7 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : DECENTRALIZEDCLIMATE # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
