@@ -1,4 +1,10 @@
 header:
+- titles:
+      # @start locale config
+      en      : &EN       History
+      # @end locale config
+    url: /Docs
+
   - titles:
       # @start locale config
       en      : &EN       Archive
