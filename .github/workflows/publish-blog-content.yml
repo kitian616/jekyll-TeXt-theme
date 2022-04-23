@@ -29,9 +29,17 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           LOCAL_DIR: _site
-          REMOTE_DIR: data
+          REMOTE_DIR: blog
           METHOD: sftp
           PORT: 22
           ARGS: --delete
 
-    
+      - name: Step 6 - Restart kubernetes deployment
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          script: microk8s kubectl rollout restart statefulset nginx -n blog
