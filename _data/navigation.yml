@@ -15,6 +15,13 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       아카이브
       ko-KR   : *KO
+      de      : &DE       Archiv
+      de-AT   : *DE
+      de-BE   : *DE
+      de-CH   : *DE
+      de-DE   : *DE
+      de-LI   : *DE
+      de-LU   : *DE
       fr      : &FR       Archives
       fr-BE   : *FR
       fr-CA   : *FR
@@ -41,6 +48,13 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
+      de      : &DE       Über diese Seite
+      de-AT   : *DE
+      de-BE   : *DE
+      de-CH   : *DE
+      de-DE   : *DE
+      de-LI   : *DE
+      de-LU   : *DE
       fr      : &FR       À propos
       fr-BE   : *FR
       fr-CA   : *FR
