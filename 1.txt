@@ -1,0 +1,3734 @@
+commit 3349b1ace06d062e5445f4c17e8e67081f7badc1
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Apr 26 16:33:49 2022 +0800
+
+    add disqus
+
+commit 39c2c880090525bb32be0816450bd8ece826292b
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Apr 26 16:17:14 2022 +0800
+
+    only a test
+
+commit 72499a17ae2e153fc21cdf4b5bf93668e3d32526
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Apr 26 16:15:00 2022 +0800
+
+    update leancloud config
+
+commit 9ac089f13dbc5b8e2481fdf108ce1cbda8fb90ea
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Apr 26 10:44:36 2022 +0800
+
+    add google analytics
+
+commit 2cdc3e7f1a06cdf781dd5ed1dfca6ad4f213ce03
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Apr 26 10:15:45 2022 +0800
+
+    update rake file add key
+
+commit 21a3025b427aea00f48aee8207c63e7528ba95b5
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Mon Apr 25 17:50:30 2022 +0800
+
+    add lc test
+
+commit 83b93c2ae126773ea389952ded12d0299ba64336
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Fri Apr 22 10:33:51 2022 +0800
+
+    fix
+
+commit 1cec399ee4308f107d544c3c7a5a048287b0888f
+Merge: 9d908433 6be5b766
+Author: ShiauweiZhao <xiaowei_zhao1013@163.com>
+Date:   Fri Apr 22 09:32:57 2022 +0800
+
+    Merge pull request #6 from ShiauweiZhao/delete_git_remote_branch
+    
+    add delete git remote branch
+
+commit 6be5b7667a2f234cee16e1fad9dd54cd2ad56b5f
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Fri Apr 22 09:30:33 2022 +0800
+
+    add delete git remote branch
+
+commit 9d908433c3ae378ad0d29085238c70426d224605
+Merge: ccbe0410 04b83dd1
+Author: ShiauweiZhao <xiaowei_zhao1013@163.com>
+Date:   Wed Apr 20 00:09:31 2022 -0700
+
+    Merge pull request #5 from ShiauweiZhao/pr-for-px4
+    
+    pr to px4
+
+commit 04b83dd163624c9f18ed8c4b703dc51b095a908b
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Wed Apr 20 13:59:33 2022 +0800
+
+    pr to px4
+
+commit ccbe0410f1fc6e3d63956b2364f169d8c25ee326
+Merge: 60aa227f fba1a8b4
+Author: ShiauweiZhao <xiaowei_zhao1013@163.com>
+Date:   Wed Mar 16 09:46:57 2022 +0800
+
+    Merge pull request #4 from ShiauweiZhao/xiaowei/add_aboutme
+    
+    update
+
+commit 60aa227f45cce8ef8fbb03927c9435cd05e06144
+Merge: 5e0cc3fa 34228491
+Author: ShiauweiZhao <xiaowei_zhao1013@163.com>
+Date:   Tue Mar 15 19:52:13 2022 +0800
+
+    Merge pull request #3 from ShiauweiZhao/xiaowei/add_aboutme
+    
+    update zxw about me file
+
+commit 5e0cc3fa88660dc0daf4c1ede4bbb9d1e800deab
+Merge: dcfb570a 0d531811
+Author: ShiauweiZhao <xiaowei_zhao1013@163.com>
+Date:   Tue Mar 15 17:23:26 2022 +0800
+
+    Merge pull request #2 from ShiauweiZhao/xiaowei/fix_bug
+    
+    update
+
+commit dcfb570ace4d1239932a9ef18dbb20c45b694a8e
+Merge: 15b3da88 ebdfb728
+Author: ShiauweiZhao <xiaowei_zhao1013@163.com>
+Date:   Tue Mar 15 17:12:36 2022 +0800
+
+    Merge pull request #1 from ShiauweiZhao/xiaowei/swupdate_file
+    
+    update file
+
+commit fba1a8b48ac8977ede6d16718be2c1ff2ae76695
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Mar 15 13:38:51 2022 +0800
+
+    update
+
+commit 34228491b23c845eb3418c5a132800c422f8e14c
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Mar 15 11:51:40 2022 +0800
+
+    update zxw about me file
+
+commit 0d531811d8a8b136e2f5cf7129c53db4ce16d9e3
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Mar 15 09:21:21 2022 +0800
+
+    update
+
+commit ebdfb728d5dd162ef100960b5774d6326dded38b
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Mar 15 08:09:39 2022 +0800
+
+    update file
+
+commit 15b3da88395f219ae22a2b513de38164de6cb73b
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Tue Mar 8 14:54:03 2022 +0800
+
+    add swupdate doc
+
+commit d5eac6014722582774be30120827e42f6c8298cd
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Mon Mar 7 14:41:32 2022 +0800
+
+    update config
+
+commit 74c594a2a592c836a8fe2ede5082ea3da4e40a9a
+Author: zhaoxiaowei <zhaoxiaowei@efy-tech.com>
+Date:   Sat Mar 5 20:45:56 2022 +0800
+
+    update
+
+commit 9f93f63c34f4b423a87ed11bc397bcdfc331c159
+Merge: 9e6bc41f 858760e8
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Sun Feb 20 22:37:00 2022 +0800
+
+    Merge pull request #353 from tanersenyurt/master
+    
+    Turkish language support added.
+
+commit 858760e8628645d96f66d112e197749cfaa6aa5d
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:25:28 2021 +0300
+
+    Update navigation.yml
+    
+    Turkish language support added
+
+commit 62b2816b592ddd81ae34739bad526c1260e6aa98
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:23:39 2021 +0300
+
+    Update locale.yml
+    
+    Turkish language support added
+
+commit 05c4f3de107c5535b84d8aedc9e7965c04b3749a
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:22:02 2021 +0300
+
+    Update locale.yml
+    
+    Turkish language support added
+
+commit 5f16d355ffc57362539533faec5229f7fed63954
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:20:48 2021 +0300
+
+    Update home.html
+    
+    Turkish language support added
+
+commit 04e9eee30cbef3a18b4f20905bcd4f66244e04aa
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:19:52 2021 +0300
+
+    Update archive.html
+    
+    Turkish language support added
+
+commit 587ef6293d6781952c07f91408102f926d938c70
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:18:49 2021 +0300
+
+    Update 2.7-i18n.md
+    
+    Turkish language support added
+
+commit 75f1b81e6e65a9670c725d79d620832143ca6501
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:05:13 2021 +0300
+
+    Update navigation.yml
+    
+    Turkish language support added to file
+
+commit d30b11cc57dc615d5a72a4c889b9a288a4b1967c
+Author: Taner Şenyurt <taner@tsenyurt.com>
+Date:   Sun Aug 29 02:03:50 2021 +0300
+
+    Update locale.yml
+    
+    Turkish language support added to file
+
+commit 9e6bc41f19a6cb0f6a27ab68f4f5dfe4e954b13e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 3 22:58:11 2021 +0800
+
+    feat: happy 2021
+
+commit 135025978745cc7ea57ebc296fcd71a84caf5c78
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Apr 21 23:06:53 2020 +0800
+
+    fix: <img> with end tag, fix #266
+
+commit 40a8a8712b89533dd3f88c07a22c04b2d036e36e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Feb 2 23:51:13 2020 +0800
+
+    release: v2.2.6
+
+commit e407c083d69446c8881ec4312c1b90c47b9d26a4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Feb 2 23:41:54 2020 +0800
+
+    docs: update
+
+commit 63581b2715ad24161e0324ab6e0b887e7bf18a42
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Feb 2 19:44:17 2020 +0800
+
+    fix: locale config errors
+
+commit db785c335155636deeef30b7b521baee38bd9754
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Feb 2 19:39:04 2020 +0800
+
+    chore: update for editorconfig
+
+commit 310a279ac98394e3b3f059d7d1a2ea4dbd08537a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Feb 2 19:13:29 2020 +0800
+
+    docs: update
+
+commit 79b42a61bf1fecf49f403159822b623c95eac6aa
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Feb 2 19:11:10 2020 +0800
+
+    chore: add commitlint and editorconfig
+
+commit 757d6683f609158e3e44cffb4805ebac3c30e55a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 8 23:43:27 2019 +0800
+
+    release: v2.2.5
+
+commit 6b10095309c9ec038baf39ea6a36752d6971b86c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 8 23:42:10 2019 +0800
+
+    chore: update configs
+
+commit 2a765d2e5c5938d53f8c45e9adc025104e63b2b3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 8 23:05:20 2019 +0800
+
+    docs: update
+
+commit b2b25d9a1ad27a40e0633fb1be12efcddc3299c0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Oct 9 01:04:28 2019 +0800
+
+    docs: add what next post
+
+commit dba3fe55efae4fbbc4a39077f7d8aeffa3b8a66d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 6 18:34:37 2019 +0800
+
+    chore: update to Jekyll 4.0
+
+commit f98ca4380b1a712517bc873f2e7dcb8138d01dbd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 6 17:13:08 2019 +0800
+
+    docs: update
+
+commit 9b77b1f915a33458eb39cd88b11bb7a5ef7c66c3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 6 16:59:03 2019 +0800
+
+    fix: demo lang to en
+
+commit 179cacbfeb52e2cf16637bd0baacd97008d792ad
+Merge: 44873e74 b6509913
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 6 16:31:58 2019 +0800
+
+    Merge branch 'ctrl-q-add-locale-fr'
+
+commit b65099131fed1b69e96fce00bae84662524fa492
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 6 16:31:34 2019 +0800
+
+    feat: add french locale
+
+commit b1a23d68187af6c4e9878dc5cd5f97a9c18b35bd
+Merge: 44873e74 90ea085d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 6 15:17:10 2019 +0800
+
+    Merge branch 'add-locale-fr' of https://github.com/ctrl-q/jekyll-TeXt-theme into ctrl-q-add-locale-fr
+
+commit 90ea085d593f15484174179b3ac015726f1cfece
+Author: ctrl-q <34975747+ctrl-q@users.noreply.github.com>
+Date:   Wed Aug 28 00:34:33 2019 -0400
+
+    Feat: locale : Add french
+
+commit 44873e7448c6fc15d2f76f80aba8995a78936f18
+Merge: ee8e6ebf 01191e25
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Sun Aug 18 14:23:34 2019 +0800
+
+    Merge pull request #172 from jamiebyunsage/patch-1
+    
+    Update 2.4-logo-and-favicon.md
+
+commit ee8e6ebf9ece33c593d607dc0b82c88352e77f07
+Merge: 7530913e 4bc973b6
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Sat Jun 22 22:52:16 2019 +0900
+
+    Merge pull request #191 from HenryQW/fix/leancloud
+    
+    紧急修复：leancloud 域名被封，指向新域名
+
+commit 4bc973b6f7635702445cbcd4baed65bf7aa1375f
+Author: Henry <hi@henry.wang>
+Date:   Sat Jun 22 00:36:09 2019 +0100
+
+    fix: point to new leancloud domain
+
+commit db26ee920951c46b9259ceddb442d72eba870169
+Author: Henry <hi@henry.wang>
+Date:   Sat Jun 22 00:33:51 2019 +0100
+
+    deps: replace leancloud SDK address
+
+commit 7530913e2d3a13fd17261a8fb1fafc3d542ae1c7
+Merge: fc485547 c9abb29b
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Wed Jun 12 00:14:27 2019 +0900
+
+    Merge pull request #160 from Krinkle/json-search
+    
+    Use 'jsonify' instead of 'url_encode' for JavaScript data export
+
+commit fc4855470e1bb45996f5cbc52b58c9f0b6f0b83b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed May 8 00:33:44 2019 +0800
+
+    feat: update google custom search scripts, close #174
+
+commit 01185b584af24e2e697f0d869fb86a76aba0b375
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat May 4 00:30:25 2019 +0800
+
+    feat: fix styles, update docs
+
+commit d9e5e08f528db92bec085f8bbb5102916226e340
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri May 3 21:19:34 2019 +0800
+
+    docs: add Docker
+
+commit 66d4a02fff75e5efd7d417f20a5582422cfc359d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri May 3 17:13:51 2019 +0800
+
+    docs: update
+
+commit 45fd0d5e56da544c206e0fd3a16500ecc037cd32
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri May 3 17:13:25 2019 +0800
+
+    feat: add Docker support
+
+commit 01191e253b029c9e7f1623e17f79f135db11f1d7
+Author: jamiebyunsage <49735044+jamiebyunsage@users.noreply.github.com>
+Date:   Wed Apr 24 13:45:50 2019 -0700
+
+    Update 2.4-logo-and-favicon.md
+
+commit 40b90e9a5cae803099219f7cc5d7fd9c7665cd2f
+Merge: fc34d940 d6b4053d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 24 00:47:52 2019 +0800
+
+    Merge branch 'master' of github.com:kitian616/jekyll-TeXt-theme
+
+commit fc34d9409d818152d0d47bf5113bf657ab57856e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 24 00:39:55 2019 +0800
+
+    feat: new cover (Tsinghua) for landing page
+
+commit 44894bef9cdcacc016feb0629dd42f8548f111b8
+Author: Zerone <lingyi.yang@outlook.com>
+Date:   Sat Feb 2 01:42:22 2019 +0800
+
+    valine-visitor&config
+
+commit c9abb29b484f52ea9e1dcb055d2bca9f9658b5d7
+Author: Timo Tijhof <krinklemail@gmail.com>
+Date:   Fri Mar 1 18:48:10 2019 +0000
+
+    Use 'jsonify' instead of 'url_encode' for JavaScript data export
+    
+    The JSON data format is natively compatible with the parsing of
+    JavaScript code. It can be used as the literal value of any
+    JavaScript variable or JavaScript object property value.
+    
+    Previously:
+    
+    > window.DATA = {'title':'Foo%20%22Bar%22'};
+    > title = decodeUrl(DATE.title)
+    
+    Now:
+    
+    > window.DATA = {'title':"Foo \"Bar\""};
+    > title = DATE.title
+
+commit d6b4053db27d3b0ec1e0448959b13fb498d36681
+Merge: 73e33189 05f0dd1b
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Thu Feb 21 17:58:06 2019 +0800
+
+    Merge pull request #151 from HenryQW/patch
+    
+    fix: locale grammar
+
+commit 05f0dd1b5001096922d151c67aec76aba1a32bc9
+Author: henry.wang <hi@henry.wang>
+Date:   Mon Feb 18 16:11:38 2019 +0000
+
+    fix: locale grammar
+
+commit 73e3318925520def1ac863fc65411876963c62aa
+Merge: 560bad5c cc323eb1
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Sun Feb 17 22:43:46 2019 +0800
+
+    Merge pull request #146 from ZeroneCat/master
+    
+    valine-visitor&config
+
+commit 560bad5c9a61d641080bb0aac2d70f13a81d1abe
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Feb 6 20:21:37 2019 +0800
+
+    feat: update toc style
+
+commit a16fd1f58e25269ff398fc6ff46c1a7187442735
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Feb 5 21:32:30 2019 +0800
+
+    chore: update eslintrc
+
+commit 9172e970b2a5b686be93f87794488384f95850a9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Feb 5 21:23:31 2019 +0800
+
+    chore: update stylelintrc
+
+commit cc323eb1cdcf08f047510e6e11ebaaae0c96a8f0
+Author: Zerone <lingyi.yang@outlook.com>
+Date:   Sat Feb 2 01:42:22 2019 +0800
+
+    valine-visitor&config
+
+commit 647fb2ae2483d841e4a38a32e075c6afbe474e46
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jan 28 00:21:58 2019 +0800
+
+    fix: avatar image style, close #143
+
+commit 83cc17ab2550cce7e499b4d1d570a36e1aa69b5e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jan 28 00:08:07 2019 +0800
+
+    fix: update toc style
+
+commit 0a8451a569830006e628820de21f9491e062b3ad
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 27 23:29:15 2019 +0800
+
+    fix: style on dark theme, close #144
+
+commit ae015c2635724220e07cfaba8bca67729a8d23b6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 27 22:32:13 2019 +0800
+
+    feat: add "follow us" and "email us" (Korean need update), close #137
+
+commit 677ec62f073444fc758a4c0b7f88efe096b8708e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 27 22:04:31 2019 +0800
+
+    feat: add Zhihu icon
+
+commit 542453ba1c4344ddab5e987e84c72a6db568be31
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 27 11:59:09 2019 +0800
+
+    docs: update authors
+
+commit 50b6fcabe7e1413c97ed7b92c7c2564837121888
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 27 11:56:00 2019 +0800
+
+    docs: update authors
+
+commit 5003287804e1214cd9b3fd1f3d54e006ece59c86
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 27 00:04:23 2019 +0800
+
+    feat: add Medium icon, close #138
+
+commit 6366e4fa7bb7f86ae987715463e0830852efc7a5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jan 25 09:48:51 2019 +0800
+
+    fix: style error, close #140
+
+commit 0ba14a942220f5785701eec04a5d16615d7a3db2
+Merge: 22167d6e 658bbd3d
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Thu Jan 24 22:13:42 2019 +0800
+
+    Merge pull request #136 from ojw28/patch-1
+    
+    Google Custom Search - Fix missing colon
+
+commit 22167d6e3549b934f516b9b40e5c0167507296b8
+Merge: 3d2db68d 332b43e3
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Thu Jan 24 09:41:32 2019 +0800
+
+    Merge pull request #141 from ziofil/patch-1
+    
+    corrected two typos
+
+commit 332b43e3a3f67b63593d20c7bc1c3aae0b155a77
+Author: ziofil <ziofil@users.noreply.github.com>
+Date:   Thu Jan 24 00:36:49 2019 +0100
+
+    corrected two typos
+
+commit 658bbd3d69d0cf9d50c3fbada842092eae3533b8
+Author: Oliver Woodman <olly@google.com>
+Date:   Thu Jan 17 20:04:02 2019 +0000
+
+    Google Custom Search - Fix missing colon
+    
+    This fixes an issue that prevents GCS from loading properly (or at least without the user explicitly bypassing a warning in their browser) on https pages.
+
+commit 3d2db68d612c4a8355be7bcf0dfcf681e48f3458
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 12 22:20:20 2019 +0800
+
+    fix: sample page error
+
+commit 05f3ee79ce40d667d414920743b168d8c9587ecd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 12 01:05:52 2019 +0800
+
+    feat: add `key` setting for navigation.header and `nav_key` setting for page layout, resolve #127
+
+commit 492be40963d09722a1d35a81c9fd7b3394fccadb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 12 01:02:52 2019 +0800
+
+    docs: update
+
+commit a17af8ee9d9e5a401ec91838affe9b9cabd583e2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jan 11 10:51:48 2019 +0800
+
+    docs: update
+
+commit d268a692fd6621ef744631c7841429a5d230c07f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jan 11 00:39:40 2019 +0800
+
+    docs: update, resolve #134
+
+commit 9abb5af71d5d8edf269897d1dc86d5d18909529f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jan 11 00:02:58 2019 +0800
+
+    fix: Google Custom Search Engine support not work on page with emoji, resolve #128
+
+commit 4517bac780cc34eb489d317b8afb19e9ae5b04e7
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jan 8 01:19:35 2019 +0800
+
+    fix: when search.provdier is false, search button is still exist
+
+commit 7b6d157e12703f2f9d29970ef2fb2a6ef9c246ad
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jan 7 23:32:13 2019 +0800
+
+    feat: add Google Custom Search Engine support, resolve #128
+
+commit 63658f221deca192e731534757895e7eb3db1a3e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 6 18:00:21 2019 +0800
+
+    docs: update
+
+commit cb60204ffbb487f67d7fa2b175eb523b3f0e2f77
+Merge: bf8133d9 29f99968
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 5 17:16:46 2019 +0800
+
+    Merge branch 'ssosso-add-korean-locale'
+
+commit 29f9996887cb0dc95ee5ebf98eafec5c205877ac
+Merge: bf8133d9 bf80f1ff
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 5 17:16:29 2019 +0800
+
+    feat: merge
+
+commit bf8133d98ff2944b29ed591c4d6b8e0866f6f99c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 5 16:32:31 2019 +0800
+
+    feat: update language examples and add doc for i18n
+
+commit bf80f1ff6be8ec1caff035760733ce26f4ce2537
+Author: ssosso <ssossohow@gmail.com>
+Date:   Sat Jan 5 17:25:34 2019 +0900
+
+    modify subscribe Korean locale
+
+commit e4e96029cea7220efb1dce5e296f867bcd212ddd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 5 14:17:42 2019 +0800
+
+    feat: update locale
+
+commit d192fb4a5f283e3cf1bb547afb147e83b6d89b71
+Author: ssosso <ssossohow@gmail.com>
+Date:   Sat Jan 5 13:49:19 2019 +0900
+
+    add 'home' korean locale
+
+commit 6f57aa4584dd6f0b991750a388ca5154ed08318a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 5 12:40:06 2019 +0800
+
+    chore: remove old issue templates
+
+commit d884b3dadf2f19461d9896d224c4f1c887ddd8b9
+Author: ssosso <ssossohow@gmail.com>
+Date:   Fri Jan 4 23:43:57 2019 +0900
+
+    add korean locale
+
+commit c3fa92731711c92283164dede1ab394e6efd4a9b
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Sat Jan 5 12:34:05 2019 +0800
+
+    chore: update issue templates
+
+commit 13cab4e90baa29a3caaae34de8e68a23a6df914e
+Author: ssosso <ssossohow@gmail.com>
+Date:   Fri Jan 4 23:43:57 2019 +0900
+
+    add korean locale
+
+commit 21a5851be8e772884ed6c067c0272de969388c90
+Merge: 35a0a90e 63b9bf74
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Wed Jan 2 17:49:42 2019 +0800
+
+    Merge pull request #130 from jelizaga3-gatech/master
+    
+    Update locale.yml
+
+commit 35a0a90e62b3cbefb4eb6a7b648c951a629d977e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jan 1 13:50:58 2019 +0800
+
+    fix: button style
+
+commit 63b9bf74dd7f22973334acf27dc13ab7b371435d
+Author: jelizaga3-gatech <42556514+jelizaga3-gatech@users.noreply.github.com>
+Date:   Mon Dec 31 14:45:52 2018 -0700
+
+    Update locale.yml
+    
+    Small indentation fix
+
+commit 8564a991907e0489a8ede94914da52f3cbd52342
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jan 1 00:20:36 2019 +0800
+
+    feat: happy 2019
+
+commit 34d7fe1be8377e2a11bec2f13825df7f7f9b9642
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Dec 27 22:42:14 2018 +0800
+
+    feat: new footer, add show_subscribe config for article layout
+
+commit 1ce48d057348479d26b84e117d0e16d731be0d3c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 23 15:46:37 2018 +0800
+
+    feat: update clickable, lintk, button and article-list
+
+commit 23e91af44513b3c0c023587703bd5960c3eea318
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 22 19:42:13 2018 +0800
+
+    docs: update doc
+
+commit 4b2229c0ebf73f9408da03ed9adae3c46a026906
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 22 01:10:17 2018 +0800
+
+    fix: display error when section children's size is not divisible by 12 in landing layout
+
+commit 3e72de361e86a5f2ec563a0a6d509f9d7738a7ed
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 22 00:28:49 2018 +0800
+
+    feat: landing layout add content key for each sectioin, update README
+
+commit 81522fdc2e8b6fcd0d0ac46343cee4996014fd18
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Dec 21 23:24:59 2018 +0800
+
+    feat: update landing layout, add new tip way
+
+commit 8a40f5b7ca6bd365ce8f230269f0f0ec72c41a24
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Dec 21 00:32:52 2018 +0800
+
+    docs: update
+
+commit e5b8a805e98d3c315b9272c88550c9c5b11bf786
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Dec 20 22:46:25 2018 +0800
+
+    feat: add custom snippets for main/top, main/bottom, article/top and article/footer
+
+commit 8bf3ff47ffabd21c4c660813946cccc1b906ba27
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Dec 20 00:12:03 2018 +0800
+
+    docs: update README
+
+commit dd42afb30b75fe6763644a67e1eedea8bc5cc5d4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Dec 20 00:09:44 2018 +0800
+
+    docs: update README
+
+commit e366ef94ae48c12fcf5ca8545d38f7924139f8ef
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Dec 19 23:27:45 2018 +0800
+
+    feat: add main-bottom/custom.html, update googlead for doc
+
+commit 9b4d98fe49732df09ced086ae18878e2a87d96cc
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Dec 19 00:13:49 2018 +0800
+
+    fix: sidebar layout error on Firefox
+
+commit c37588e53199438aeee732e0ef46e25ceb6ce1a2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Dec 18 23:59:35 2018 +0800
+
+    feat: doc on production disable lightbox
+
+commit fcc41ef99553c43f05c84601e3970b0bccec1fd1
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Dec 18 23:57:07 2018 +0800
+
+    feat: update head and footer
+
+commit 68e47fa31271db5bd7d189fc160870f1a3bae311
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 16 21:21:12 2018 +0800
+
+    feat: gallery supports pan-to-move
+
+commit a571ed01aa143ffdb6a8939f44a6cabf09193b1b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 15 23:57:17 2018 +0800
+
+    feat: modal add hideWhenWindowScroll option, gallery supports pinch-to-zoom
+
+commit a345c617c81dee4c9db00953e571310b4380a9d1
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 15 23:55:21 2018 +0800
+
+    chore: update eslintrc
+
+commit cd96df2ab5177b75f6d78dbce00c874ea262e694
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Dec 10 23:50:47 2018 +0800
+
+    release: v2.2.4
+
+commit 943a8b4eaf192b348dd2dd2195583b0720d1832f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Dec 10 23:32:46 2018 +0800
+
+    docs: add Valine
+
+commit 9b0656fb70fbd9b2672517859c6dcfab9a29505d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 9 17:39:08 2018 +0800
+
+    feat: add Valine comment system
+
+commit 20fdbb446cce00ca1b013617d6de04f57fedc367
+Merge: 28ea739d d711755a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 9 16:10:51 2018 +0800
+
+    Merge branch 'Lloyar-master'
+
+commit d711755ab545314726c6b3f4d8575413d9091824
+Merge: 28ea739d 9c30d76e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 9 16:09:17 2018 +0800
+
+    Merge branch 'master' of https://github.com/Lloyar/jekyll-TeXt-theme into Lloyar-master
+
+commit 28ea739d4a9aa8ae1e1b79fbc296718f748dc532
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Dec 6 22:50:55 2018 +0800
+
+    feat: get description text bigger
+
+commit 6e6fa8b5ad9141ec3697fe3d5d02bb414d0b2c2f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Dec 4 00:25:38 2018 +0800
+
+    fix: search did't scroll on Android devices
+
+commit 567e7e867e63e6ace725eabad8e036338ee2980c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Dec 3 23:28:30 2018 +0800
+
+    feat: update skins
+
+commit 2ae9bcc97c95eb138c49a11a00327552baaf8e3d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 2 23:20:55 2018 +0800
+
+    feat: use `lightbox-ignore` class name to ignore certain image
+
+commit 6b2197a52f192a1a393d8256fa6b56850652bd9d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 2 22:07:15 2018 +0800
+
+    feat: update imageLoad utils function
+
+commit 0bbbb267451aa133f3671de83f3a4007dc3c7230
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 2 20:47:27 2018 +0800
+
+    feat: add modal mixin, sidebar mask now has transition effect just like modal
+
+commit 6222a746d64405681c049453fe085ccd9ed54a01
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 2 20:22:11 2018 +0800
+
+    feat: modal supports ESC key to hide
+
+commit f820ff5ffeeea74e5550262cd1cda0a3780a6513
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 2 17:01:16 2018 +0800
+
+    feat: gallery supports left and right arrow key to go back and next
+
+commit ccc7fbb2199a217260fd57f4d3aac0d93122d9e0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 2 16:21:32 2018 +0800
+
+    docs: update swipe and image file
+
+commit 07f6ef56b09df2e0ffd6a3b8d1ff852f1fb8e1cf
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 2 16:19:22 2018 +0800
+
+    feat: swiper can slide using mouse move
+
+commit cdf5560e65c2dc8848ef11c238a9edc920998767
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 1 23:43:31 2018 +0800
+
+    feat: add imagesLoad util
+
+commit 7fb22d569212677042d4d9ed1b84576e12fa45f3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 1 23:42:33 2018 +0800
+
+    feat: update lighbox, gallery and swiper
+
+commit 1e719863ccb04013782fc98942b55a40b815cc38
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 30 22:18:32 2018 +0800
+
+    feat: overflow style enhancement
+
+commit 8ca11d7262027d588877ab5f6f8b96029d3af537
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 29 23:54:10 2018 +0800
+
+    docs: update example posts
+
+commit b89308ea90d39989461e252947e87789a7d1b927
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 29 23:53:49 2018 +0800
+
+    fix: table style error
+
+commit 9c30d76e85a9b6e2c67eeecc198a92a3f6267ff7
+Author: Librarius <lloyar@live.com>
+Date:   Thu Nov 29 13:04:18 2018 +0800
+
+    [Add] add valine comment system
+
+commit 23254a98ded8a25acddbedab3d7710de348e76dd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Nov 26 23:02:04 2018 +0800
+
+    docs: add lightbox for Chinese doc
+
+commit 79589d7adf4ab6c2af23655604ec7ce036f0eec8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Nov 26 23:01:03 2018 +0800
+
+    docs: fix spelling mistakes
+
+commit d80629735a77588e07e96978502423b6e6bda56a
+Merge: 251eabc1 dce3f9bc
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Mon Nov 26 10:32:06 2018 +0800
+
+    Merge pull request #117 from Krinkle/2018-typos
+    
+    fix "from" and "here" spellings
+
+commit dce3f9bcba211153281ac9f2d84ef505f959f6ed
+Author: Timo Tijhof <krinklemail@gmail.com>
+Date:   Sun Nov 25 21:53:26 2018 +0000
+
+    Fix "from" and "here" spellings
+    
+    I've kept the permalinks and keys unchanged for compatibility.
+
+commit 251eabc14d07eab662f6404b74dfae6376525f26
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 25 22:42:08 2018 +0800
+
+    fix: search pannel toggle error
+
+commit 0fa6d15a58ab29e8ba82b5f7ee397674445a8699
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 25 21:34:50 2018 +0800
+
+    change gallery to lightbox, add lightbox front matter setting
+
+commit 8054a74876aeddf56067c741e40984d832186a12
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 25 16:45:50 2018 +0800
+
+    feat: add gaallery viewer for large images
+
+commit 55baff9680436ef79bdd20b9c9441798d874be4b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 17 22:39:42 2018 +0800
+
+    feat: add modal component
+
+commit aae94c28d5c12e89850dbded552ad5f7af25f438
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 17 01:15:47 2018 +0800
+
+    feat: update toc style
+
+commit b45f11acec9b29932f96083b15f7e5058bfd2219
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 11 23:47:20 2018 +0800
+
+    release: v2.2.3
+
+commit 892ccd75577a0988a95d0ff85a19fca9e46d5bb6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 11 16:43:15 2018 +0800
+
+    feat: add `footer` setting for page layout, close #105
+
+commit 8b54d71baba551497b3e16bb90a48d56197cfbc5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 11 16:05:59 2018 +0800
+
+    feat: add demo plugins (CodePen)
+
+commit 93bf6d8ea01c4ff5cf677eab49b896146ed6f362
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 10 15:48:51 2018 +0800
+
+    docs: update
+
+commit 8dd954be835fec129e6f749f34961d1fe4c6c0a9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 9 23:32:40 2018 +0800
+
+    fix: add addthis
+
+commit ea9b3a0b10e197e9948fbb841ddbcd6660fc210a
+Merge: ce907dc3 7daeb9db
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 9 23:01:45 2018 +0800
+
+    Merge branch 'master' of github.com:kitian616/jekyll-TeXt-theme
+
+commit ce907dc327aaddf708e5e2833be7a2f8f8b7aa2f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 9 22:59:15 2018 +0800
+
+    feat: update shadow and item description style
+
+commit 7daeb9db17ed7d6665d1155febc91105221cf031
+Merge: 2a9ec778 8607b7b5
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Fri Nov 9 22:58:16 2018 +0800
+
+    Merge pull request #115 from liao961120/master
+    
+    feat: add 'addthis' as another sharing provider
+
+commit 2a9ec778f5bd694f1c95e0d8a89604722483332c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 9 00:29:56 2018 +0800
+
+    chore: use spacers for padding or margin value
+
+commit 8607b7b5f25e3b02483aa88d3473c3f3054d527e
+Author: Yongfu Liao <liao961120@gmail.com>
+Date:   Thu Nov 8 23:55:30 2018 +0800
+
+    Add 'addthis' as another sharing provider
+    
+    https://www.addthis.com/
+
+commit aadf7b6af54b7b08d2db4ba64d32aad281f28a38
+Author: Yongfu Liao <liao961120@gmail.com>
+Date:   Thu Nov 8 23:54:27 2018 +0800
+
+    Add 'addthis' as another sharing provider
+    
+    https://www.addthis.com/
+
+commit 26dade990e03ca8403aa37d9e1e090dd70f9fa7e
+Author: Yongfu Liao <liao961120@gmail.com>
+Date:   Thu Nov 8 23:49:44 2018 +0800
+
+    Add 'addthis' as another sharing provider
+    
+    https://www.addthis.com/
+
+commit 5e42594c83b9e098ca9d9749ef8c9bf5f5efd2bb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 8 23:36:23 2018 +0800
+
+    chore: remove vertical-space* scss variables
+
+commit 7e6c5cbaec586d469a5c518780ba945cb38af8b1
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 4 23:01:42 2018 +0800
+
+    feat: add print support
+
+commit a5db52d0ecbce35723a246c20798b126fa78c7cd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 4 19:36:41 2018 +0800
+
+    feat: update grid, display
+
+commit 997406abee02ff8885ca2bbc59d74d14902fe48e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 28 20:53:30 2018 +0800
+
+    feat: update swiper and doc
+
+commit a397461ffa9d3c9c89a3fd4d76a7275d7792d559
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 28 02:24:29 2018 +0800
+
+    fix: archive style
+
+commit 3cf9aeeccfa27966a05457823c8daac683ede9f3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 28 02:23:40 2018 +0800
+
+    feat: add swiper
+
+commit 6947ed893de68df9a18f4030984bc0325b62eed8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 28 02:16:49 2018 +0800
+
+    fix: update lib/affix and lib/toc
+
+commit ccce74647f8c989afd00d1318dc53d28114fbfbb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 28 00:55:47 2018 +0800
+
+    feat: add disabled() mixin, clickable add disabled pseudo, update hero and item components
+
+commit 6b0fb1120bef3cd75cfe33b53b66be2cb7ca4e99
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 28 00:52:46 2018 +0800
+
+    chore: move search*.js to components/search, rename scroll.js to scroll-to.js
+
+commit 7e5c8b1eceacc89ac809ab66a71ba8afac73361e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Oct 22 00:05:52 2018 +0800
+
+    docs: update features, configuration and how_to_release
+
+commit ceb829a8dcc23f5ab13c817a19b0181d684a477d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 21 23:16:37 2018 +0800
+
+    release: v2.2.2
+
+commit 98d97877f272353c89b758150b1b6e8986742b60
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 21 23:16:14 2018 +0800
+
+    docs: update landing, extensions and changlog
+
+commit 91527195867fe8efb38bf14e5ffc26d87175c7a2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 21 01:31:48 2018 +0800
+
+    feat: rename plugins to extensions
+
+commit 8f275dfc37c9c3f1446b897b19d2b171d67a0586
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 21 00:23:40 2018 +0800
+
+    docs: update
+
+commit 181bbc3dfa03103e95454e3db8fab7dc676e65aa
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 20 23:25:19 2018 +0800
+
+    docs: add plugins
+
+commit 6dc85e546b0cf90487bc80f627c07998ec4ad720
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 16 23:39:54 2018 +0800
+
+    feat: 404 layout and search panel  style optimized
+
+commit e9bd7c25751a826e0ed25e935dddeb782b1b6e8b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 14 18:11:04 2018 +0800
+
+    feat: add sharing
+
+commit 1a8556a024ae0280357d54e383997f5f81ff5ab2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 14 14:47:51 2018 +0800
+
+    feat: update media
+
+commit 1e98e6ecf788b846654aea29ebb8fe892c15d6f8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 14 00:38:05 2018 +0800
+
+    feat: add media plugins (SoundCloud)
+
+commit 0f62671df258f63f8ab2e268857971d0687c4111
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 13 19:17:17 2018 +0800
+
+    feat: add media plugins (TED, SlideShare), larger image for home layout
+
+commit afa427a4666b14073ec92ff17ba2f2dcbcb46ea6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 13 17:03:51 2018 +0800
+
+    feat: add media plugins (Netease Cloud Music, YouTube and bilibili)
+
+commit bf1b9ee41f50dd6379e4d6900e9bf449741bbcda
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 12 23:28:11 2018 +0800
+
+    opti: search style
+
+commit b880f38348a1e8e6988f0b3d10e675ec88dfce8e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 2 15:23:38 2018 +0800
+
+    release: v2.2.1
+
+commit 1e0e71bedb1aefb206f5b788b5d886387a10f839
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 2 15:21:57 2018 +0800
+
+    docs: update changelog
+
+commit c5dfe200c50d1c19608fcacd6000ceedce08cf43
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 2 14:50:23 2018 +0800
+
+    fix: add telegram icon
+
+commit 695585733a3535d227897fb853e859f1455025e3
+Merge: 64e2a96f 94dc59e0
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Tue Oct 2 14:27:41 2018 +0800
+
+    Merge pull request #98 from HenryQW/dev
+    
+    feat: add telegram icon
+
+commit 64e2a96fe8fb8a8c70d735bf98e2d1230485b380
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 2 01:41:55 2018 +0800
+
+    feat: search panel use dark background
+
+commit cfabdb289d558a25b8d0207772f1db7029e20785
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 2 00:04:28 2018 +0800
+
+    fix: after toggle search panel, document scorll back to top
+
+commit 8cfae6707fb44223dd583e5edf5a3ec3923fe7af
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 30 23:43:55 2018 +0800
+
+    feat: enhance page with sidebar
+
+commit 5040b93442679758c10dc951be531a2b7b2d2507
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 30 23:42:30 2018 +0800
+
+    fix: path error
+
+commit cd372c9b9c6c5254662f2b2929bb5b1215bcddfb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Sep 26 23:37:53 2018 +0800
+
+    fix: add googlead script in demo
+
+commit 3c18d83e305a52b2b552f0c880170caf379d8bb2
+Merge: 41776d85 5c33949f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Sep 26 23:29:00 2018 +0800
+
+    Merge branch 'master' of github.com:kitian616/jekyll-TeXt-theme
+
+commit 41776d8519f305d8c76bd3059da3e0f17eff4a6f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Sep 26 23:19:25 2018 +0800
+
+    feat: add google ad
+
+commit 5c33949fa8307dd29aefe7e9155c23605994aaab
+Merge: 0a1af1c4 03c33f9a
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Tue Sep 25 15:07:41 2018 +0800
+
+    Merge pull request #100 from Huxpro/patch-1
+    
+    fix: suppress liquid warning
+
+commit 03c33f9a6f56763c73a5b7baac2f2f56894d4c44
+Author: Xuan Huang <huxpro@gmail.com>
+Date:   Tue Sep 25 02:58:08 2018 -0400
+
+    Surpress warning
+    
+    Hi I was refactoring part of my blog theme based on this and found this tiny flaw ;)
+    Great works btw! ;)
+
+commit 0a1af1c4ec8afdce12755b5e0c2b1a7ae6c099e2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 23 00:01:17 2018 +0800
+
+    docs: remove English tag, update links post, etc
+
+commit 3c684c15bcd214091128b8270689b165ce881abd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 22 23:32:44 2018 +0800
+
+    docs: update page examples, add languages example, etc
+
+commit d3e5a1b61003d801b297594ad504c93e6e28ce0f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 22 23:31:50 2018 +0800
+
+    feat: remove header.type and add header.background
+
+commit 94dc59e0a7bed7ff0a29ad270c1f693267989ce6
+Author: Henry <hi@henry.wang>
+Date:   Fri Sep 21 19:56:42 2018 +0100
+
+    Add telegram icon
+
+commit c7fc673c9411e071dd60903c48409ee520442d49
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Sep 21 00:00:18 2018 +0800
+
+    docs: update assets/images
+
+commit f1520bd5a5def11ce93b0bdc30834cbad3b65e4c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Sep 20 22:19:05 2018 +0800
+
+    docs: update docs and screenshots
+
+commit 5a95aae2448cab208220138a0345ac2304790841
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Sep 20 22:18:10 2018 +0800
+
+    feat: some details
+
+commit ef57cb03de28eae0f2a4436c0a06dd305b014453
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Sep 18 00:06:19 2018 +0800
+
+    docs: update landing page, add screenshots
+
+commit 7a6ebab9cdb19a13d429ff92f95973ed31c88fa0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Sep 17 23:47:19 2018 +0800
+
+    docs: update docs, docs image and screenshots
+
+commit 20712e36472eec2fd7843bf9a9303ffa7a14e109
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Sep 17 23:39:42 2018 +0800
+
+    feat: update hero, images in landing suport full_size
+
+commit fa5fbd38e6c820a3503b26ee79de447e0a2bab47
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 16 22:04:29 2018 +0800
+
+    release: v2.2.0
+
+commit 5e2b050d3b71f84e4b8a6bdfcf005fedcb9cf9d4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 16 21:40:03 2018 +0800
+
+    docs: update
+
+commit 8260a0e2000d14e7061a98f0021bf7c57d361c9e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 16 21:39:29 2018 +0800
+
+    docs: add HOW_TO_RELEASE.md
+
+commit efd60c7becef751a9855cc82cdeb898d69d3f81e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 16 21:37:37 2018 +0800
+
+    feat: article_header.background_image default to cover
+
+commit 664a1f93f6ffcb59113a08d599c4c546bbfa4a30
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 16 18:04:33 2018 +0800
+
+    docs: update
+
+commit 6a430146a816c7c9182878916948c1d2c6f4ef2d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 16 01:22:27 2018 +0800
+
+    feat: add another example image
+
+commit d0380bc514a2eeb36b0d8aa2f4b1df0f5ebad792
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 16 00:48:32 2018 +0800
+
+    fix: replace lenna test image
+
+commit 1894c3ed350e6101f5dbb0d27b81f458901bbc10
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 15 22:56:51 2018 +0800
+
+    docs: update
+
+commit 2e7c5317c2d180219f03112914904ecec471025c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 15 22:24:02 2018 +0800
+
+    docs: update
+
+commit 83b2b602d65fbf7112d96c455d0ea6fd8a4ff044
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 15 22:17:39 2018 +0800
+
+    feat: add tag additional style
+
+commit 4b662a678ae5861931c19bcb3e7cb28340d4d07a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 15 18:16:36 2018 +0800
+
+    feat: chart.js update to 2.7.2, mathjax update to 2.7.4 mermaid update to 8.0.0-rc.8
+
+commit bdc15ed5fc13bfa73f2e4decdbc666de88d5dda8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 15 13:19:35 2018 +0800
+
+    feat: no toc or anchor when heading don't have id
+
+commit 7aceb106734b08359c1f1a23c238611f9e254ff2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Sep 14 22:40:00 2018 +0800
+
+    feat: card component, config and some other small changes
+
+commit 337b74312ee4b3b63e6a5abddb97e83334bd9b49
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Sep 11 23:02:30 2018 +0800
+
+    feat: new layout articles, componnets refactor
+
+commit 33ac9c6f07ff457faa34adbdba02fc0b148eb890
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 8 21:09:20 2018 +0800
+
+    docs: add grid, icons, button docments
+
+commit f6cee5ec27ec03333498de12d3d99e7f21b343ba
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 8 20:33:41 2018 +0800
+
+    feat: new gird
+
+commit dbc7d5be54af63f6fc1b3d748e05c1967efaf9fa
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 8 20:33:23 2018 +0800
+
+    chore: refactor
+
+commit fc7c30ace8c68f075331201b7e1183422f0edc7d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Sep 5 21:39:21 2018 +0800
+
+    docs: update layout cover images
+
+commit 888a511bf016cef42f3885655c3ba3a653448f6f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Sep 5 01:44:59 2018 +0800
+
+    docs: update layout cover images
+
+commit 597ac303c80380e428d0f7034eb1743000fa7284
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Sep 5 00:50:59 2018 +0800
+
+    docs: layouts add cover image
+
+commit f1112efcae739a49896a71c92e7c7f701fd92bbf
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Sep 5 00:50:08 2018 +0800
+
+    feat: add image component, update article-list component
+
+commit e2e76bb68264a9e489a317817f69e8f5dd16b7b8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Sep 4 21:48:52 2018 +0800
+
+    docs: update layout samples
+
+commit 56067048db576db885d7e11b2ce3d08c3cee8c6e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Sep 3 00:11:46 2018 +0800
+
+    fix: aside is incoherence when resize window
+
+commit b621c1d5c3d8eb9c9debf978f9240473aa9014c3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 2 23:24:53 2018 +0800
+
+    docs: samples for layouts
+
+commit 491513ecdbeaa7af95acb2ce4e96bbde05eb48d2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Sep 2 23:24:21 2018 +0800
+
+    feat: add hero component, article header
+
+commit 98338fbf8b70bd9e8da19a1454a98ce235ebb856
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 1 23:39:22 2018 +0800
+
+    feat: update cover
+
+commit 1971008c87db7f2e190988cf085db53b8e26ae85
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Sep 1 23:11:20 2018 +0800
+
+    feat: add images
+
+commit f6970bd5e8fd28f57ff053d9463b5af42e72fd03
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 26 15:42:27 2018 +0800
+
+    release: v2.1.0
+
+commit 059bbee6c97d4336e81602168c7f253725e4ddf2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 26 15:32:31 2018 +0800
+
+    docs: update
+
+commit 43d30b190d965d049684393d6c2152fcc82e36de
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 26 15:15:29 2018 +0800
+
+    chore: stylelint --fix
+
+commit 4898f487476a18176e20aedebe4ba6f3e7ee5d66
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 26 15:15:14 2018 +0800
+
+    chore: add stylelint
+
+commit 8819f759d057e80b2e9ecc2176269ab6df319b0d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 26 13:54:16 2018 +0800
+
+    opti: update style
+
+commit 6f0e2839a7ca981caddc5362c5a44d364fe47343
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 26 13:23:42 2018 +0800
+
+    feat: update google analytics to gtag.js, close #87
+
+commit f9726f93fba951e0d7b7a402ea6e0ee45e532c59
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 26 01:33:36 2018 +0800
+
+    feat: search pannel supports up / down arrow key and enter key shortcuts
+
+commit 0f6b514f53b7f0edba5d4df657596401a9b82ed5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Aug 25 22:51:49 2018 +0800
+
+    feat: search multi-language
+
+commit 70d1f709a66624cc06ee0a21faa2ef9aa1e1ff13
+Merge: 7a3504a3 183856b5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Aug 25 22:34:40 2018 +0800
+
+    Merge branch 'master' of github.com:kitian616/jekyll-TeXt-theme
+
+commit 7a3504a375cf37d4628d555c01459ec99d1b1d9c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Aug 25 22:34:27 2018 +0800
+
+    feat: new search pannel
+
+commit 86f8d5e4b294dc787266cf55dd2cd9c14f169784
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Aug 25 22:19:05 2018 +0800
+
+    docs: update code-blocks demo post
+
+commit 29a40f44ca68b639aac22f63753f7b9fc4f2fee1
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Aug 25 22:18:16 2018 +0800
+
+    feat: overflow for social buttons and paginator
+
+commit 183856b58abc95c2804ecdc30437d5c5dd2a588b
+Merge: 5e815aa5 9b042894
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Sat Aug 25 22:15:05 2018 +0800
+
+    Merge pull request #93 from xingty/master
+    
+    fix: item__content width over the limit, close #92
+
+commit 9b0428944f86c7864035086317c40999f0e315b4
+Author: bigbyto <bigbyto@bigbyto-mac.local>
+Date:   Sat Aug 25 18:11:52 2018 +0800
+
+    fix: item__content width over the limit
+
+commit 5e815aa5147c98a5ffb142b2c72eaa4ad7e637ec
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Aug 23 02:09:11 2018 +0800
+
+    fix: shortcut filter input
+
+commit b5ee28c8b9506be485cd59389d708b5488a57a0b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Aug 22 12:54:48 2018 +0800
+
+    fix: typo
+
+commit 2969a825e7233bcd369d363391e1e72ae83b35fd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Aug 22 00:27:38 2018 +0800
+
+    feat: search hotkey ('s' or '/' to open search, ESC to close)
+
+commit 727f7cfea390cce21d43bf0254c4994b14125c27
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Aug 21 00:20:57 2018 +0800
+
+    opti: style and config
+
+commit c527e2aa1f7b77dc52f367a87e7c4f0c46dbfd92
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Aug 21 00:20:39 2018 +0800
+
+    fix: edit on github url may have 2 /
+
+commit 4555ccd1818a37a1ee1bf095021e48bea9819244
+Merge: 9144113e 98af9528
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Aug 20 23:45:39 2018 +0800
+
+    Merge branch 'master' of github.com:kitian616/jekyll-TeXt-theme
+
+commit 98af95286712e6c0d15f1f7818b436b75a4b75e6
+Merge: 830a4c24 02182f16
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Mon Aug 20 23:45:14 2018 +0800
+
+    Merge pull request #88 from HenryQW/dev
+    
+    feat: add npm social
+
+commit 9144113ef162004750551d53232c7ffcea2168dc
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Aug 20 23:40:02 2018 +0800
+
+    opti: article list style
+
+commit 29e180cc970343b8ee692125d5331bb73083f28b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Aug 20 23:38:34 2018 +0800
+
+    fix: wrong edit on github url when site.collections_dir is set
+
+commit 830a4c2415db7745a1c9d7f6af66f1acae6ead67
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Aug 20 01:34:17 2018 +0800
+
+    feat: use js for search data, update docs
+
+commit 40afec6f86e77e8b6bd0eab3a49e656db71e7f16
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 19 18:26:57 2018 +0800
+
+    docs: path change
+
+commit 4484a5a1d9a9bcc26367adb611b257351a474751
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 19 17:50:50 2018 +0800
+
+    feat: new search
+
+commit 02182f161368010bac088cbbd9fde83891211dd5
+Author: Henry <hi@henry.wang>
+Date:   Thu Aug 16 19:17:33 2018 +0100
+
+    Add npm icon
+
+commit 2465d59fcf1f96a7d315be7d1ec7242406da7ec2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Aug 12 18:30:13 2018 +0800
+
+    feat: search panel, article-list
+
+commit 5056c80a7748beafd3ba0911d277ac0e889b8d19
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Aug 11 03:05:33 2018 +0800
+
+    fix: toc not active in Safari, close #84
+
+commit 187148113ed500b400d7d84c82b86318100b8007
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Aug 3 00:58:10 2018 +0800
+
+    fix: relative import path in skin may cause problem, fix #83
+
+commit 785fc2c4adc37dca9290880ac060b0b95c17c65c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Aug 3 00:14:55 2018 +0800
+
+    feat: task-list
+
+commit 42a9edd9892e4abe3bb9ee4d95726de6fc88540f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Aug 1 00:19:54 2018 +0800
+
+    feat: sections in landing support backgroundColor setting, details imporve
+
+commit 01b90488b3d880795f40a12f06bd3bc3b043b46b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jul 30 00:05:22 2018 +0800
+
+    docs: update description
+
+commit cdd05a101aeae51421b6452032cfbe93c0a8b7a0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 29 23:23:59 2018 +0800
+
+    release: v2.0.2
+
+commit 398967a52b2d00d9ebe0e2c5492139bc46a1eb90
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 29 21:44:54 2018 +0800
+
+    feat: details imporve
+
+commit 7a1a736f7b9f8be0a2188470388655f4dcd4accd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 29 17:31:15 2018 +0800
+
+    fix: aside toc show immediately after page get ready
+
+commit b3ae279e4e73cc6bb2d507fe96962ae914bafe4b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 29 17:21:36 2018 +0800
+
+    feat: articles whit sidebar.toc support section navigator(previous and next navigator)
+
+commit 433a20c1d30c90e5f6c53ce1d54be913d03fb152
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 29 14:23:14 2018 +0800
+
+    docs: update
+
+commit 3ff3acdd4cde9083cacfbff7f3322cb3a2b336af
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 29 13:46:48 2018 +0800
+
+    fix: toc affix may error when scroll to bottom
+
+commit 1d6bb0be7a6549ff041ceebebd94fd221ccfb9e4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 29 00:14:39 2018 +0800
+
+    docs: update screenshots
+
+commit c3faa45d17e7e91943e2f9a9d26a93d513d59a5b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 28 22:53:40 2018 +0800
+
+    feat: update skins
+
+commit eabf76d2ce3fa95d3be96a500cdd7443ddb2a87d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 28 15:31:35 2018 +0800
+
+    opti: easier snippets
+
+commit c325d05fdc2cd9147b45ccb2c087b53a27b9ba74
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Jul 25 00:35:41 2018 +0800
+
+    docs: update about and welcome
+
+commit 562e44b56d9a095c0677be856ee8a5c22c359dc3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jul 24 22:29:38 2018 +0800
+
+    fix: #80
+
+commit 50727e2790c41686eac43b83007fe63eda47e180
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jul 23 10:32:53 2018 +0800
+
+    feat: .menu--vertical, fade-in-up animate
+
+commit 678a9ed0b33cac919be5cd3e492e08a271be6162
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 21 15:29:59 2018 +0800
+
+    opti: toc style
+
+commit 9b98eb5bbee83f4f240e313b2024720b1bcbe44b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 15 18:53:02 2018 +0800
+
+    feat: add highlight theme in configuration docs
+
+commit 7ae4ba773afe5c29c8ddc377bc516286a54f97fc
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 15 00:19:06 2018 +0800
+
+    fix: doc error, nbsp error
+
+commit 455af9b90d1a8e57977e686d2a591e800f379a98
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 14 19:15:30 2018 +0800
+
+    feat: highlight theme
+
+commit 1e769b8f743c0a6d336f822e1f49e7cae9bc0339
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jul 9 23:01:09 2018 +0800
+
+    feat: interaction details optimize, code highlighting use tomorrow color theme
+
+commit ca0feeb1e3794c505890f856d5764b7dd138fb22
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 8 00:12:24 2018 +0800
+
+    docs: update screenshots
+
+commit 4a0aef71f4a8826b16a6222bd51ab98dd15d052f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 7 23:46:36 2018 +0800
+
+    release: v2.0.1
+
+commit 96d21c2d18e2e4c4ad952ed2e14a0dd1800a8658
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 7 23:20:37 2018 +0800
+
+    docs: update navigation
+
+commit 79bd285ce57833cea0d3f06327b437e285523a38
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 7 23:20:18 2018 +0800
+
+    feat: interaction optimize, mainly for input in archive layout
+
+commit ac6b80e75b7651bd5e0a70f5b6b4af5a4e39303d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 7 15:30:29 2018 +0800
+
+    chore: clickable mixin
+
+commit f62fe3a4e059f22d8f40ecdc5ddeb264338599df
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 7 14:15:20 2018 +0800
+
+    feat: interaction details optimize, resolve #71
+
+commit a01c63d044bebab6416ef32cb4cdf57645412624
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 7 00:22:27 2018 +0800
+
+    feat: update doc, landing page and copywriters
+
+commit 993625565930b5a8d8f2bdc9b86ddbf2768fd33d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jul 7 00:21:19 2018 +0800
+
+    feat: interaction optimize, mainly for buttons and links
+
+commit d91a2b94aba7a97867a32f2124dda82fd5d0a5bb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Jul 4 22:42:30 2018 +0800
+
+    fix: mathjax mermaid config may not work, close #72
+
+commit d9d0349948bf4844b443574512ee83cedc76dec5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 1 22:45:39 2018 +0800
+
+    release: v2.0.0
+
+commit a83bf074f202831f963021facb649c00cb45d536
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 1 19:30:06 2018 +0800
+
+    feat: update logo and screenshots
+
+commit 12ce0e0757f866774d9bba4cd712beaf31a1dbd7
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 1 15:42:39 2018 +0800
+
+    docs: add welcome post
+
+commit 4bc994883d4d2276113980caec02a626d1010173
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jul 1 00:57:03 2018 +0800
+
+    feat: rename `text_color_theme` in _config.yml to `text_skin`
+
+commit 1cf02b7a82023a20dec764721f7c89a468bbb6cb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jun 30 23:46:52 2018 +0800
+
+    docs: review
+
+commit 49e5180b45d924a10e6d410315f562870f5f4cf9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jun 30 21:30:46 2018 +0800
+
+    fix: code review
+
+commit dad73fd3f286bc8760e3c7a409a6601636888269
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jun 30 00:36:25 2018 +0800
+
+    feat: update configs comment and docs
+
+commit 4e8735912cc5ae04403ae4a87c06842d13bcc70e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jun 24 21:36:12 2018 +0800
+
+    feat: add author configs
+
+commit 84c58d0072e535ffe84d9f2fc199ab56f878f878
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jun 23 18:55:00 2018 +0800
+
+    feat: update docs, add license config
+
+commit 0c3c5e1752af25cda91d005f5020af3599e02716
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jun 23 16:04:46 2018 +0800
+
+    feat: update style, edit_on_github config
+
+commit 565ce72d22477b2b31e53a331d30acf5945408fb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jun 19 00:52:03 2018 +0800
+
+    fix: home layout HTML parse error, seems jekyll-pagination's bug
+
+commit b4cbfbc7104b846880f4cc8c9a208711938ffd4e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jun 18 23:01:26 2018 +0800
+
+    docs: update docs
+
+commit 61fad90ef2cc8e31039697faf17e6b2361feb80c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jun 18 20:57:02 2018 +0800
+
+    feat: add landing layout
+
+commit 4bb6400260568c074d03956307d0255541aa1449
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jun 17 21:25:33 2018 +0800
+
+    feat: default border-size & add spacing & add grid close #13
+
+commit e3bd6954a81265063f540dbf11138c08a53f519b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jun 12 23:55:17 2018 +0800
+
+    docs: update docs
+
+commit d8470c2b14c5976e4d084fac54efdd8201eb2d10
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jun 12 00:36:03 2018 +0800
+
+    feat: use RealFaviconGenerator for generating favicon
+
+commit e74600a6ad148bfa4dac74aa7c7ce959a9633027
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jun 8 00:03:25 2018 +0800
+
+    docs: update
+
+commit 13a5032578691466c1cb7466167aa14fb83ff6a5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Jun 6 01:01:13 2018 +0800
+
+    docs: update doc
+
+commit 02fd74a63008402196254b2580c8b530bbc221eb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Jun 6 01:01:01 2018 +0800
+
+    opti: styles
+
+commit 576fedec0e563c031a2189981a09a3da35d34fa6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jun 4 23:37:17 2018 +0800
+
+    opti: style
+
+commit 885aaf7e138862f4527aa385881060a19cf7afd3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed May 30 00:38:44 2018 +0800
+
+    feat: post-list layout -> home layout, toc bottom bugs fix, mermaid bugs fix
+
+commit 9e7f84b453d37bb97b908f0916f10ef09eea3fac
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon May 28 00:55:41 2018 +0800
+
+    docs: update README
+
+commit 68af05f52c945584ec31027bbdda7c8d11793da6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon May 28 00:40:31 2018 +0800
+
+    feat: update docs
+
+commit dd01dce28ab5a1ece7f8460fd1f8b4dcdd7029ed
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon May 28 00:35:14 2018 +0800
+
+    fix: update travis settings
+
+commit dd2b0309228b66245f91724ea7ba35815a08a368
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon May 28 00:32:00 2018 +0800
+
+    docs: update docs
+
+commit 26d5814a45287818d2cd740e98ba85d498f39648
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun May 27 00:48:23 2018 +0800
+
+    opti: syltes
+
+commit ebc211d839a3c45c7e372be722c002cab373fbd2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun May 27 00:01:13 2018 +0800
+
+    docs: update README, default to English
+
+commit 0098c2ae94bd115349c27856c5e5b3d2c74bf11d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat May 26 23:37:41 2018 +0800
+
+    fix: all page url error
+
+commit 89d0aae0516b91b76061f978b449246c1998b8b7
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat May 26 23:28:46 2018 +0800
+
+    docs: update images
+
+commit b6ab44759b99647b2da0ea41eb4379785b24cfc0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat May 26 23:20:59 2018 +0800
+
+    feat: page layout configs & layout/all -> layout/archive & layout/home -> layout/post-list & layout/error-404 -> layout/404
+
+commit e4e81464991a423947d8a0368f68765a8a6cd904
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat May 26 15:27:32 2018 +0800
+
+    feat: combine layout
+
+commit 4315cac7905743ddfa98b6d9babe2378be0cb72a
+Merge: ac86cdf6 e0bc411a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu May 24 22:08:26 2018 +0800
+
+    Merge branch 'master' of github.com:kitian616/jekyll-TeXt-theme
+
+commit ac86cdf673270b4f0038d7fe6a70fd120ed49eee
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu May 24 22:08:11 2018 +0800
+
+    feat: add 2-col layout
+
+commit e0bc411a27503c6cc27e209a33d5153269516768
+Merge: da1775ff 7d2d6066
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Thu May 24 21:41:37 2018 +0800
+
+    Merge pull request #63 from maddovr/master
+    
+    Add Anonymize IP option for GA
+
+commit 7d2d6066c7b65b5d32ac70a84a8c6c0b34cc05d2
+Author: maddovr <madhutter@live.it>
+Date:   Sun May 20 09:08:47 2018 +0200
+
+    Add Anonymize IP option for GA
+
+commit aa4fc0d86fc90866be608e6a4c547161d80b3514
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun May 20 13:58:08 2018 +0800
+
+    refactor: scss styles
+
+commit 6ffc9cc931fb453f381d5428c68b320407359f44
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue May 15 23:44:52 2018 +0800
+
+    docs: add Chinese documents
+
+commit da1775ffd34d291b13f658250a8706dde3a02d39
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat May 5 23:15:58 2018 +0800
+
+    docs: update readme-en
+
+commit 429be28eec78fe16ceff4c8de9e8b1640be0c6a2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat May 5 22:56:40 2018 +0800
+
+    docs: add document - configuration & writing post, update config
+
+commit c8f0ee04c9059dc65eedc37f5970e9c7dfc3d9ef
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed May 2 22:46:58 2018 +0800
+
+    docs: add document - quick start
+
+commit f168f05d9d1fa15d391ec3a7b4cd3f9abaa6464a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Apr 28 22:53:52 2018 +0800
+
+    chore: add _sass/additional & lazyload, throttle to lib & update gitignore
+
+commit 3562fcbee5875403516809a3f62f091aca8855a7
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Apr 23 23:32:15 2018 +0800
+
+    fix: all page error & update config, close #46
+
+commit 55003d265269ac2a555153a6f07414ddb8a50c35
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Apr 19 22:13:18 2018 +0800
+
+    feat: update search box and footer's social links style
+
+commit 5f7a9f29169f36b034fcb88b68dfe9671a857b7f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Apr 18 00:32:09 2018 +0800
+
+    fix: update gem source to rubygems.org && update travis ruby version to
+    2.4.1
+
+commit 2d81a668c91110219023bae8a1651732d584cb59
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Apr 17 23:24:48 2018 +0800
+
+    chore: add providers in _includes
+
+commit bee65eed65dd86bff6803acdbded67adbf1c441f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Apr 7 23:14:34 2018 +0800
+
+    opti: affix & toc
+
+commit 4d2b6106c7ebdd75606b220e14a0da9ef69281bd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Apr 7 19:07:56 2018 +0800
+
+    opti: utils to js file
+
+commit d163367c60ed3005885271f1f1b764fd16a22aae
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Apr 6 23:17:59 2018 +0800
+
+    opti: script to js file, close #42
+
+commit 7aa6b2bb72864559b3ff4c5093a5b2b2761113da
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Apr 4 23:14:18 2018 +0800
+
+    opti: toc
+
+commit 218bda9cf8bc2b0c097a62d5ff259b492ca616a8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Mar 28 23:35:19 2018 +0800
+
+    fix: remove content img max-height, close #45
+
+commit 2b8d03afc55425a4bbcaab30b174212f404f5151
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 18 15:45:24 2018 +0800
+
+    release: v1.5.0
+
+commit 120739866b9d71cfe6b7e18f4d39a67035b79bcd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 18 15:26:58 2018 +0800
+
+    docs: update readme-en & screenshots, to update the theme on jekylltheme
+
+commit fc1fee9de08f30ec0d19e01e5dfcb9b692d70754
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 18 01:54:07 2018 +0800
+
+    docs: update readme & screenshots
+
+commit fc4cef28abece72a3552c88edc8e95cbcb0a284b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 17 20:44:08 2018 +0800
+
+    fix: input clear on IE & Edge
+
+commit 3bd2785bc20742641d0481f288137877718151cc
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 17 20:00:06 2018 +0800
+
+    opti: article styles
+
+commit 6c3cdfbfca19bd5274ab7d91b927a0b11525df1d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 17 17:43:43 2018 +0800
+
+    fix: some text on iOS is larger
+
+commit 1db8173312372546a9b10dd084b7d3ce5ae036fb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 17 17:03:59 2018 +0800
+
+    opti: search icons, close #33
+
+commit 82c0edc405bf2cd8b38d30f2192dffbe3b585232
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 17 14:50:34 2018 +0800
+
+    opti: search style
+
+commit 1c1e96473ef8f6451fa47bb8cb88ac9a3f1dcc5f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 17 00:25:20 2018 +0800
+
+    feat: add search
+
+commit f633fb75672655c578a18eb997f762385a74eb94
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Mar 9 23:06:29 2018 +0800
+
+    chore: update travis
+
+commit 73cca829d7545d7e57238ba6834c1a537315c9be
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Mar 9 22:09:38 2018 +0800
+
+    feat: update & fix styles
+
+commit 25aae014a58c014269e36fb97adc0e355dcf3860
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Mar 7 23:48:04 2018 +0800
+
+    fix: footer links style
+
+commit 63b495046052f006a65c91d2eb59c969e8cc0d4d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Mar 7 23:04:56 2018 +0800
+
+    fix: views number not work on index page, thx @WangQiru, close #41
+
+commit 110578c35219f7782dff1c298006e1b76635679e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 4 16:52:58 2018 +0800
+
+    docs: test posts & readme
+
+commit 5f88b3a869503f2ab054583b684f268d55623eff
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 4 14:56:45 2018 +0800
+
+    opti: link style
+
+commit 4e5bc1b5056b84067c63c2eb08dc6cd2b771e15e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 4 01:16:31 2018 +0800
+
+    fix: no post all page data error
+
+commit 266244fb2540535061b41bedef31e9a2da7c440d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 4 00:26:16 2018 +0800
+
+    fix: anchor & buttons style
+
+commit 9a587277d0a960c9a05160a07ee521509e995cbe
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Mar 4 00:23:32 2018 +0800
+
+    feat: opti link feedback on touch device
+
+commit 7e75ec4b1bfecf346b126e6ccdf0664be809c096
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 3 16:53:24 2018 +0800
+
+    opti: all page script
+
+commit 85b1bc15e9ae859b5fdce1b245c2d8399fd85b31
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 3 02:35:56 2018 +0800
+
+    feat: sources
+
+commit 51ba6b416a214b768d5672b30203a79c0d47b99d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 3 02:18:46 2018 +0800
+
+    docs: test posts
+
+commit 48f7b64622b7cd0f39be1a087affb33a3a633b82
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 3 01:53:19 2018 +0800
+
+    feat: toc ul ol styles
+
+commit cc6f11bed6ab94cb85111909f1453367010162f3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Mar 3 01:19:31 2018 +0800
+
+    feat: click feedback
+
+commit 4f4568e8e4a4ae05a255258acc20131c3068d5f8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Mar 1 23:03:44 2018 +0800
+
+    feat: all page & muti sources
+
+commit 3bedeb1e6abc760f8b99fd6416078204b385cd0f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Feb 21 14:42:08 2018 +0800
+
+    fix: style & Lazyload
+
+commit 4a42fa3b2b12ea2a1c18ff7951f9a86aa626f1c9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 19 20:50:12 2018 +0800
+
+    feat: icons
+
+commit 45e26f4bc620b03dab1bf113c08a25f2880c4e59
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 19 20:48:38 2018 +0800
+
+    feat: scripts
+
+commit fb2a060064cfe71d22254048eb70fd63c6355e0d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Feb 14 00:12:22 2018 +0800
+
+    docs: test posts
+
+commit 18e90eb2c57326105c11cd7dfa0a5744e5a1509f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Feb 13 23:58:04 2018 +0800
+
+    opti: shape & space
+
+commit 6dff75781ea65e8ecca3a82e0cf0b4aaf5bd16ba
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Feb 13 23:01:34 2018 +0800
+
+    feat: split-line mixin
+
+commit 4176946d86113308fd9b8451758c85384225113c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Feb 13 22:25:52 2018 +0800
+
+    feat: image rounded & cirle additional styles
+
+commit f316a779387af54b3ec3ac8baa043c49aa1a2286
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Feb 13 22:25:36 2018 +0800
+
+    docs: test posts
+
+commit cd4a8737b6b4bc9d6ee4c1292e2d2e656a6a3d10
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Feb 13 22:25:13 2018 +0800
+
+    opti: table style & dl style & article previous next
+
+commit 95fafde05bccf20e13c1b154aad1a3ee6839557b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 12 23:40:37 2018 +0800
+
+    fix: previous & next post href error
+
+commit 2efc49159ca2b470257c655810e2544c828924c8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 12 23:06:35 2018 +0800
+
+    feat: animation variable
+
+commit ba788a8d3355fba26c62fa1c93e2bf7db65d7554
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 12 23:05:10 2018 +0800
+
+    feat: update color themes
+
+commit 24990f2a57d5c02f264d3ff30d5d9280d9f0832b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 12 21:39:14 2018 +0800
+
+    feat: previous & next post
+
+commit 7b79646d4327501840281638f819ed7106317ec0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 12 21:38:48 2018 +0800
+
+    opti: article heading anchor
+
+commit 5e32c33b6317f94fbe3d0c56f79eb3aadeb13fc4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 23:57:43 2018 +0800
+
+    docs: update test posts
+
+commit a4539a233d217b4ce0d7d8dcdae09c1d749f6ecb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 21:48:46 2018 +0800
+
+    docs: readme readme-en & test posts
+
+commit c8129993e6d251921916e275c2c48d705d7d1d85
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 21:48:13 2018 +0800
+
+    feat: mathjax autoNumber
+
+commit 490843d4e77f8380f51492bc9500db850b9f292b
+Merge: b7ff15f9 f85ea7dc
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 21:15:09 2018 +0800
+
+    Merge branch 'liao961120-patch-1'
+
+commit f85ea7dc0c87c6da2800c4a6dd9a7b8c5f20c229
+Merge: b7ff15f9 4c792b24
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 21:14:15 2018 +0800
+
+    Merge branch 'patch-1' of https://github.com/liao961120/liao961120.github.io into liao961120-patch-1
+
+commit b7ff15f93225075f7527f9abf78cd324e44e160f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 18:38:22 2018 +0800
+
+    opti: article heading anchor
+
+commit 7935dabdcbffadaddf4bf689a3a13b61318775e3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 18:23:57 2018 +0800
+
+    docs: update readme & test post
+
+commit eea5d4dce61fb1b39f1ecc6323a4bfe1359fea9b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 18:07:28 2018 +0800
+
+    feat: pagination too long
+
+commit 7855420c320dd00c56a44ff0e5a52608ad4ca34c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 10 16:17:49 2018 +0800
+
+    feat: article heading anchor
+
+commit b17d4907e3a087fe561d01bcf285ee98a4dbe0b0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Feb 9 21:34:20 2018 +0800
+
+    feat: add border shadow style
+
+commit 4c792b24ef66d2b786d87664c09eb00c919c0d79
+Author: liao961120 <32927002+liao961120@users.noreply.github.com>
+Date:   Fri Feb 9 19:53:23 2018 +0800
+
+    add equation numbering and reference support
+    
+    Hi, I included a second variable, "mathjax_autoNumber", to enable support for equation autoNumbering and referencing. I think this feature is very useful for people who write a lot of math equations on the posts.
+    
+    The official documentation of this feature:
+    http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering
+    
+    How the post looks like with equation autoNumbering & referencing:
+    https://liao961120.github.io/2018/01/27/mathjax.html
+    
+    The post mentioned above at GitHub (.md):
+    https://github.com/liao961120/liao961120.github.io/blob/master/_posts/2018-01-27-mathjax.md
+
+commit 9034d766c25bc51d5735e53174e9d582795ba9f6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Feb 9 01:12:26 2018 +0800
+
+    feat: update style
+
+commit 38bcb04760c2cee37cb05a8d9323897f22556e46
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Feb 9 01:12:11 2018 +0800
+
+    feat: content extra style
+
+commit f1852d92a74697a3ea364f2503c4d763c1e46791
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Feb 8 22:37:08 2018 +0800
+
+    docs: update demo posts
+
+commit 9747779f3d06d101b1b4b6b345db0608364742ad
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Feb 7 22:04:01 2018 +0800
+
+    feat: mathjax use svg
+
+commit 384560e4d5249da0b6afaea17dc8e75123ec2f18
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Feb 7 00:43:03 2018 +0800
+
+    feat: add char support
+
+commit 0edada142449a00569647a9ab261af03596badee
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Feb 5 23:26:07 2018 +0800
+
+    feat: update color themes style
+
+commit 26058a46bf29517b83f13afc66021816e8665463
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Feb 3 21:23:28 2018 +0800
+
+    feat: update code style
+
+commit a2d05cbf6bc928ae3ce66ad4af6f9324f476fdb9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 27 18:31:09 2018 +0800
+
+    feat: update font-family
+
+commit dd51ad336623e2c11f17048a47e0a29f8b3bd86b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 27 15:40:15 2018 +0800
+
+    opti: default variables config
+
+commit 0d8cf7c22aa586c53bace99f83a88c8d4095e73d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 27 02:28:11 2018 +0800
+
+    feat: text_color_theme config, close #30
+
+commit 10577e12c2c05798b3e9a75ab4060260a7358e39
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 27 01:59:52 2018 +0800
+
+    feat: mermaid style
+
+commit 8ba5532006c1681761deb07ae443aff9eb628028
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jan 23 00:44:04 2018 +0800
+
+    feat: new site header style
+
+commit abb616537a812902b46905ded0cedb0cd83e7f7e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jan 22 00:57:40 2018 +0800
+
+    feat: optimize style
+
+commit bafecf3b5163d5946802952daab126d8ac14326c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Jan 22 00:12:47 2018 +0800
+
+    feat: smaller head font size
+
+commit 98d4730b2fda961a6be7c91845ba5886185db14d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 23:46:11 2018 +0800
+
+    fix: col-2 overflow BFC
+
+commit b692a789a8febf24a58e18d3477f122451da46b1
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 21:08:07 2018 +0800
+
+    feat: update table style
+
+commit 2cadcae6e18d2fbc1450e495f4574825750de499
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 20:57:46 2018 +0800
+
+    feat: update config & toc style
+
+commit 0f0c1658568dff0e013272417dd99b8530d74d4f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 20:46:13 2018 +0800
+
+    chore: optimize style
+
+commit 3d76051374649241863ccd3c0fb2910d1a83f450
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 20:09:19 2018 +0800
+
+    feat: add box-shadow mixin
+
+commit dcc1b0aa9668f4a8260ea4a5578d1e5faf9ba519
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 20:08:54 2018 +0800
+
+    chore: optimize style
+
+commit ab76a3d98a1c5f2a0c9376148d5a8e600ff88502
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 18:01:57 2018 +0800
+
+    fix: ol ul, button inactive
+
+commit 92479c4bf1217a957d7d589960df57eb3b46b25c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 21 17:49:24 2018 +0800
+
+    chore: collate sass styles
+
+commit e99816309aba57560fd5d8d330711dba25c1fb63
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 20 00:17:49 2018 +0800
+
+    chore: em to rem
+
+commit 3f87c09ac6b5f17d08374a826177f010dba69fb4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Jan 17 22:50:02 2018 +0800
+
+    chore: code formatting
+
+commit b14856bc759d6bcab1b54765f4932a30fe3a6a88
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 14 20:10:07 2018 +0800
+
+    fix: code style error on iOS
+
+commit 519ede77a4178af794bd4086e10dbb560e97f373
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Jan 14 18:21:59 2018 +0800
+
+    feat: code with line No
+
+commit ececc09c97d43c209052c37ec90ad08516c15e89
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 13 21:51:44 2018 +0800
+
+    release: v1.4.3
+
+commit 135d70fed8c243096a08e06c987d3a591bc66087
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 13 21:46:16 2018 +0800
+
+    docs: changelog
+
+commit c119f7872de34705f3f0806421e498877b733e3f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Jan 13 18:12:29 2018 +0800
+
+    feat: toc style
+
+commit 6517e31de2dbd04733a93c9fe35e1cf84cedafbb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jan 12 23:01:06 2018 +0800
+
+    site.paths & site.nav_lists support absolute url, close #21
+
+commit b7da2f8a30e9c3c757a51876e7fc7335c7b7e2d8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jan 12 22:31:13 2018 +0800
+
+    fix: code style
+
+commit 9263762cdad6520e0b2ac9ffe64f337fb0db90e4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Jan 12 00:35:17 2018 +0800
+
+    fix: code on safari
+
+commit 3f115f9d680b24a605e50bd4fdf0e65a0464b6d9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Jan 11 23:55:52 2018 +0800
+
+    feat: add mermaid & mathjax suport `$` `\(`
+
+commit e0a3a40ac131df1e90b0659f392412ec50f217ef
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jan 2 23:29:47 2018 +0800
+
+    feat: update button style
+
+commit d8d74e5fb6c9d08e10da104eec8201d65853d731
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Jan 2 22:05:00 2018 +0800
+
+    feat: happy 2018
+
+commit 5887588863afdd56ffe14836827c8bf2f843cfff
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 24 22:04:39 2017 +0800
+
+    docs: update readme
+
+commit 6607b9fb6fe162d14ae1986d4f3141707d06b1e6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 24 21:18:06 2017 +0800
+
+    chore: update _config
+
+commit 5038e2da81a98f6b8aea060c76c41af1210c2398
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 23 00:57:47 2017 +0800
+
+    feat: style enhance: break word
+
+commit aa7cf6643ae7bfb8681ebce3914f4f8b97e2fc2e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 23 00:29:55 2017 +0800
+
+    feat: add gitalk support
+
+commit 5cc4ba378a6b070d92ea592d8dce8d662fe2b8e9
+Merge: 24b5a2c0 20870fc1
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Dec 19 22:08:49 2017 +0800
+
+    Merge branch 'WangQiru-local' into dev
+
+commit 20870fc1e5b880e24d02278db46f967fee21fe04
+Author: henry.wang <henry@chi.swan.ac.uk>
+Date:   Mon Dec 18 14:27:34 2017 +0000
+
+    Add gitalk as commenting system
+    
+    https://github.com/gitalk/gitalk
+
+commit cb5eba1608c1ddc43d2aba99a43fc81769853049
+Author: henry.wang <henry@chi.swan.ac.uk>
+Date:   Mon Dec 18 14:27:11 2017 +0000
+
+    Gems source and annotation update
+    
+    - Add gems source.
+    - Add gems for dev under windows, pls refer to *Gemfile*. (strongly advise against it though)
+    - Annotation 'gems' is being deprecated, use 'plugins' instead.
+
+commit 24b5a2c0ac0b88e832c6febe73fe11d23c5a452b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Dec 18 21:02:33 2017 +0800
+
+    fix: locale.yml
+
+commit 136b10459f6425704e52b4187e2203a36c7c59da
+Merge: ee64e3f8 960bfc9e
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Mon Dec 18 21:00:41 2017 +0800
+
+    chore: Merge pull request #19 from WangQiru/local
+    
+    Update 'fetchWhenSave()' to parameter in Save() as it's being deprecated
+
+commit 960bfc9ea42f31bc3f17056399306b6a6e95df48
+Author: henry.wang <henry@chi.swan.ac.uk>
+Date:   Mon Dec 18 10:26:55 2017 +0000
+
+    Update 'fetchWhenSave()' to parameter in Save() as it's being deprecated
+
+commit ee64e3f8920016a0e5aeacd1472abdb283cb9071
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Dec 16 13:23:35 2017 +0800
+
+    fix: social buttons not center
+
+commit 9f25258e527c3ed6706cf39732f0c251e0abf1a5
+Merge: e0977147 6e58812a
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Thu Dec 14 17:54:38 2017 +0800
+
+    Merge pull request #16 from llovvoll/master
+    
+    fix: Google Analytics Error
+
+commit 6e58812addae71aa6e11127d7c9d5768bdc2b3c9
+Author: llovvoll <Rick.Jiang@aol.com>
+Date:   Thu Dec 14 14:03:09 2017 +0800
+
+    Fix Google Analytics Error
+
+commit e09771473da12bf75390d9ff2c6645e1c35baaea
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Dec 13 23:54:20 2017 +0800
+
+    fix: inline-list style
+
+commit 020adc06e83826f4f4f0a4e0ac2dbd08608f6213
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Dec 13 00:07:19 2017 +0800
+
+    test: update example posts
+
+commit 83f2b5e9733877c7bc9c59a0ce54d3527538f8e3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Dec 13 00:01:36 2017 +0800
+
+    test: update images example post
+
+commit de484575e7e3bae1f9f398f6e45e11617ecfe847
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Dec 11 02:01:26 2017 +0800
+
+    fix: pagination 1 url error
+
+commit a90ec8d25884d978046de79e015bac3ebd56b3e6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 10 23:36:59 2017 +0800
+
+    chore: ignore Gemfile.lock
+
+commit e53f1110c9474ba882111091aae8735c184275e7
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 10 23:15:15 2017 +0800
+
+    release: v1.4.2
+
+commit 8aad9fc6a4491dbcb5f6a2c5bc3742e23ab2f884
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 10 16:50:30 2017 +0800
+
+    fix: inline-list, update config comment
+
+commit 22ae836d6a625d4f6232f3215985a47f49e78dbb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 10 12:33:41 2017 +0800
+
+    feat: update jekyll gem & use liquid whitespace control
+
+commit ccc558dabba4549ae1775a0534009099fedc4dc4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 10 12:23:31 2017 +0800
+
+    feat: add paths.base config & paths config surpport http:// | https://
+
+commit 22181a1e4ed359a7d35f947d41002b9016d2c04e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Dec 10 00:19:12 2017 +0800
+
+    doc: update readme, _config comment, fix test post spelling error
+
+commit 3dfca35df9c25ac3d1abf34563510fa6b0abf57f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Dec 6 00:02:02 2017 +0800
+
+    release: v1.4.1
+
+commit 1d80fc459200fed1d5adecb6dfa43449c389dd4f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Dec 5 23:38:41 2017 +0800
+
+    doc: update readme
+
+commit dfc7580594ec8d27aab0d0025eb9d59f56c287af
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Dec 5 23:36:46 2017 +0800
+
+    feat: new themes & change test post & update readme
+
+commit b36beca15c206443c38c1ae82c1c77f363097083
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 23 23:53:25 2017 +0800
+
+    fix: update travis.yml
+
+commit aa8fc0885fcb0d92bda15d676daddbe991f5f1fd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 23 23:40:39 2017 +0800
+
+    chore: change code indentation
+
+commit e6f24217d682d03606fecf5bc007c8ef627f5ab4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 23 23:33:46 2017 +0800
+
+    chore: update _config
+
+commit ba65e9abf0e71c728158b8d224a181c5a9316fb7
+Merge: debfbdef 6641e6bb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 23 17:25:09 2017 +0800
+
+    fix: gitignore, close #9
+
+commit 6641e6bb1bd5093d0c71e190e49ef9fec4e1dd93
+Merge: b534374e 91ae6d85
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Wed Nov 22 23:59:40 2017 +0800
+
+    Merge pull request #8 from Bakumon/master
+    
+    fix:#7
+
+commit 91ae6d855871f62e038703069e82ab8dc7f8827a
+Author: Bakumon <bakumon@aliyun.com>
+Date:   Wed Nov 22 17:06:16 2017 +0800
+
+    fix:#7
+
+commit debfbdef425db8c6c80a4236ff1619dc56e334a9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Nov 21 23:55:36 2017 +0800
+
+    chore: change code indentation from 4 to 2
+
+commit b534374efb111d94ca2fcce7ad757fcebeb26d5b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Nov 20 23:43:08 2017 +0800
+
+    fix: some url errors
+
+commit 3c92c8d8703029f65a74dc002ad502e793c6f853
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Nov 20 00:32:28 2017 +0800
+
+    chore: update _configs
+
+commit 2f1400b8d917a0fe138e0accaf0dc23406d92213
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Nov 20 00:16:59 2017 +0800
+
+    release: v1.4.0
+
+commit 77746598f142f9c8bffa3a0c3a3e929c65299543
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 19 22:34:28 2017 +0800
+
+    fix: post_count error
+
+commit 21093ca6b2178bf64742606108c311f6181a68fb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 19 22:20:12 2017 +0800
+
+    feat: add paths config
+
+commit 631776d155ef9f9c7e8544e15d03ebdc86c45a12
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 19 21:03:00 2017 +0800
+
+    chore: prepend-baseurl
+
+commit c45246a5223e159d79fb1650eeede1e812557d0c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 23:30:49 2017 +0800
+
+    doc: update readme
+
+commit f2a8cd45aaa1cae622addf9196b14ea1c36336d8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 23:16:32 2017 +0800
+
+    fix: site.nav_lists base on site.baseurl
+
+commit 70e3fb53923a5fafd9bdacef149dfa01a70abb0a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 23:03:26 2017 +0800
+
+    fix: demo baseurl
+
+commit e290fdb7d68338359516f941780c6f5fe3c17753
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 22:52:06 2017 +0800
+
+    chore: update travis-cli settings
+
+commit a56be9b1694d03aac956519e8eb8a826f3baf933
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 22:41:52 2017 +0800
+
+    chore: update travis-cli settings
+
+commit ff51779fc27cf453bc52e1ad08167e3907ebdd9f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 22:39:20 2017 +0800
+
+    chore: update travis-cli settings
+
+commit 41a5c9c0cc42e012a96c34300102c30bb89f5585
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 22:22:56 2017 +0800
+
+    chore: update package.json && add travis-ci
+
+commit af2c17c15728327266c1db013b10e9b09ebf98a5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 17:46:25 2017 +0800
+
+    chore: update locale.yml
+
+commit eb6d42b94858bb6d98195476be751ae940e5d728
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 17:24:26 2017 +0800
+
+    doc: update readme, add Multi-language doc
+
+commit c67bae1ec8264bc0e7719b4af941ef097800051f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 15:44:11 2017 +0800
+
+    test: update test posts
+
+commit f30e9d593a5a135a7cc8b5a75abeddcde28e9dea
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 15:26:00 2017 +0800
+
+    feat: change _config.*.yml
+
+commit c990c5add5f32b3322447dd60c89d81e016704c9
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 15:22:13 2017 +0800
+
+    feat: nav_lists multi languages - titles
+
+commit bb2689734d1b9e397937be7b7d83fbf2f0a99e2f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 14:40:34 2017 +0800
+
+    feat: page  lang variable
+
+commit 6974ce3b45195265b2b5e5f040d07cf51ae64eea
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 14:18:46 2017 +0800
+
+    feat: multi languages support follow me title
+
+commit ae36cd009bcee88552fd48b94da85c55cf595a61
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 14:02:55 2017 +0800
+
+    chore: locale to string
+
+commit cdd60639db42f30d56e5efa35cc6e7f45e351c11
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 00:34:38 2017 +0800
+
+    feat: multi languages support post & page
+
+commit 98badeaca23eca717f01c89ec45168b99222d1df
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 18 00:20:34 2017 +0800
+
+    feat: multi languages support license
+
+commit aeace5ee7bf73469a745f48d62b1fc27bf9c06bf
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 17 23:12:47 2017 +0800
+
+    feat: multi languages support traditional Chinese
+
+commit 9095e931bfff57c591a811e308df0e3cfb22c475
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 16 23:52:16 2017 +0800
+
+    feat: multi languages
+
+commit ba6711e9a7f4d4ea2889b94588ea26cc5b2cb68f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Nov 15 22:58:37 2017 +0800
+
+    doc: update readme en
+
+commit 3f668a7e227dc9a490812cf2ecf5291b0ac2caa4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Nov 15 00:10:21 2017 +0800
+
+    doc: add english edition link
+
+commit 74c79678eb6862a13bb37203851aae1d9cc40b3b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Nov 15 00:07:53 2017 +0800
+
+    doc: update readme & add english readme
+
+commit 98a8ee1bf3ddf80be395ee3f49ffa2884d68e793
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 12 22:06:02 2017 +0800
+
+    chore: footer style
+
+commit 6ce76f59d7fe960b2a3519b9776b00b2f1539794
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 12 00:17:17 2017 +0800
+
+    chore: upadte test & add _config.dev & readme
+
+commit c8daca2f5010185ade4d79ed2f78d2c936caf858
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 20:10:29 2017 +0800
+
+    doc: update readme
+
+commit 40a06df25a4072719e4990aef3f1c6fc081a13c8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 19:44:00 2017 +0800
+
+    doc: update readme
+
+commit 6379379f130b5a7cbe2445f461236e5c29914eed
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 19:34:40 2017 +0800
+
+    doc: reade add jekyll gem theme instructor
+
+commit ad3902fd0f5e7924e919a64d6130cb8cf9af4844
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 18:52:23 2017 +0800
+
+    chore: update gitignore
+
+commit e2c66423d6d261623ac021c5f5d0a05e461c1032
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 18:51:54 2017 +0800
+
+    chore: update package.json
+
+commit 300d2f311f756104d535b7bfb9326376afdb6e1e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 18:46:20 2017 +0800
+
+    feat: add gem theme exmaple.  => see ./test
+
+commit 2888dcbd0f4e04fe9932fc7ce38273258ebe3fb0
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 16:55:13 2017 +0800
+
+    doc: readme add gem shield
+
+commit 19e4fc3417ee8a8b214b1c324e4698fce7c7243c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 16:43:03 2017 +0800
+
+    feat: publish to gem
+
+commit bb071b559afb71f62b00ea4fd8a79fc9d627ee92
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 11 15:04:19 2017 +0800
+
+    release: v1.3.0
+
+commit d22e586d6c2314100127573eb82b9e5d5fa2029a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 10 23:51:09 2017 +0800
+
+    feat: all page tag sort
+
+commit 0b387342d96559f6f0f1a0d5fe5d70960122d62a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 10 23:29:08 2017 +0800
+
+    feat: list style & update readme
+
+commit 25a61a4453c80119683819a550780c5e7aa0bf34
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 10 23:23:21 2017 +0800
+
+    feat: titles in phone smaller
+
+commit 49fc63e972eaf2f23eabea4746de7a35aa04d724
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Nov 10 23:11:22 2017 +0800
+
+    feat: style change & update readme
+
+commit 73bca0fe92b1b33e8841f38482e3961d0fea3747
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 9 23:43:29 2017 +0800
+
+    doc: update readme
+
+commit c7eab547796fada7b552013c20997be8f95e0b1a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 9 23:36:58 2017 +0800
+
+    chore: update test md
+
+commit 5dbcf92d319289584c45b3e11378a5816677a5b4
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 9 23:36:23 2017 +0800
+
+    feat: tag support all chars
+
+commit f7209d4ba1afaf809888b1ba4a4fb7636c5e0e03
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Nov 9 01:13:34 2017 +0800
+
+    feat: tag use data
+
+commit 7cae3bfd3e84308f6f384ded15fd8bc27adf8d08
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 5 20:59:20 2017 +0800
+
+    doc: update readme & examples
+
+commit e26eb5c7c47479ca50fbdb3990dc889afda3e10c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 5 13:15:31 2017 +0800
+
+    doc: update readme
+
+commit ed45dfdccb228b5782e275148a486be3a752b049
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 5 12:56:39 2017 +0800
+
+    feat: add excerpt_type, close #6
+
+commit 4dc5b96968330f93c2dd46c8ae0883338cda3076
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 5 12:12:48 2017 +0800
+
+    fix: !home page  excerpt style error
+
+commit bf9a282f7fcfcc3a442a8b497e356db58fab137a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Nov 5 12:10:48 2017 +0800
+
+    feat: long table example
+
+commit cece14b32468e9a70d227ec7b34631e06fe5fc57
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 4 13:28:20 2017 +0800
+
+    realease: v1.2.2
+
+commit 7cf48a4fca990d11b9d56758decf8bba6d59e757
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 4 13:21:18 2017 +0800
+
+    doc: update readme
+
+commit 2dd85dbc21bfe790c1a512f8c94c1568e82bfafa
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 4 12:58:36 2017 +0800
+
+    doc: update readme
+
+commit 6ac07c94b03df2b7273f2be4d47c65933a81b1f8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 4 12:54:34 2017 +0800
+
+    doc: update readme
+
+commit fa6d490263fd4bd7f098c18f0cf831ba72469d01
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Nov 4 12:41:03 2017 +0800
+
+    fix: site title url
+
+commit 7cd7679364c73cb7f92ab6da569cb22833f8c3bf
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 31 00:29:19 2017 +0800
+
+    fix: col-1 style
+
+commit b802d235646bbde228f523d557bc031b4d241c81
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Oct 30 23:59:05 2017 +0800
+
+    fix: col-1 style
+
+commit dec3ce0389850f3e95db499a55eed2edf5e75b5d
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Oct 30 23:48:35 2017 +0800
+
+    fix: table style & enhangce excerpt headings style
+
+commit 0f2094c01278246db7bedc0a042efb0ee57dd18f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 29 22:26:29 2017 +0800
+
+    fix: toc focus error
+
+commit 6b9efadf57baf72e6cfae684266968e3cffebcf5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 28 23:22:08 2017 +0800
+
+    fix: paginate 1 error
+
+commit 0f8e47906e543532e1f06481254836e69f12e500
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 28 23:10:35 2017 +0800
+
+    feat: 404 page & prefix mixins
+
+commit f11fc0b013fa1131dabd51d8535009e36a6a398c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 28 22:31:29 2017 +0800
+
+    feat: change toc style
+
+commit c8a142e8eb0ac05c58424a19519e65dd5c8d8a8c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 28 21:23:25 2017 +0800
+
+    feat: update examples
+
+commit ea6164094b7088fe61394f24c3ba1155eeb72cab
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 28 13:37:48 2017 +0800
+
+    feat: add  readmore, fix #3
+
+commit 62f185541e1e864c706a90227b6ff551301960e6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 27 23:11:31 2017 +0800
+
+    add mathjax
+
+commit b4f7123632293093e9c854fe40ee7c492a5b42a6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 27 22:41:57 2017 +0800
+
+    Doc: update changelog
+
+commit 7357c12d531f515a030fde00402713e4b6324aac
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 27 22:15:42 2017 +0800
+
+    release: v1.2.1
+
+commit b19ae8047e68d710df9b5ac394a7057843b3ce48
+Merge: 5e44307b 83437e9a
+Author: Tian Qi (田琦) <kitian616@outlook.com>
+Date:   Fri Oct 27 11:27:09 2017 +0800
+
+    Merge pull request #5 from yuxianda/master
+    
+    fixed issuse #4
+
+commit 83437e9a97fbab5127c3ee06f55c3e13a8cdcce4
+Author: yuxianda <yxd9721@qq.com>
+Date:   Thu Oct 26 20:41:54 2017 +0800
+
+    fixed issuse #4
+
+commit 5e44307b4d8411058bb7a38b47fa587fec77c768
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 24 20:59:29 2017 +0800
+
+    doc: update readme
+
+commit 2aceb8c0ff8ce239110abc96c5cfb00f5db28203
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 24 10:40:15 2017 +0800
+
+    fix: email
+
+commit e8a5680250914fcd765f39cc90cee3766c4f06f5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 24 00:28:06 2017 +0800
+
+    fix: article licese href error
+
+commit 1ebf8889d3f9ba6fe577485b4346e9ac9a355889
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Oct 23 23:36:35 2017 +0800
+
+    feat: optimization article TOC
+
+commit e651c5ece883d02c1a5adfbaefa3a0f59bcbe8ee
+Author: kitian616 <kitian616@outlook.com>
+Date:   Mon Oct 23 22:29:48 2017 +0800
+
+    fix: fix some style errors
+
+commit e4c2f4eb82c3ff11ac6106d1e2d7f52a4c6cd512
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 22 20:59:05 2017 +0800
+
+    fix: botton margin not default 0 on safari
+
+commit 69ac890afa06295a3ccc4fd4d342b30a9466fafa
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 22 18:32:06 2017 +0800
+
+    release: v1.2.0
+
+commit 1d9fe20819b2c0c101538a5af1a931ff48561f99
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 22 18:11:09 2017 +0800
+
+    fix: change color theme
+
+commit bddc34daac68f3acb8d95919be293220662a33ad
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 22 17:32:51 2017 +0800
+
+    fix: some fix
+
+commit 5e01729e914836ac8459fd90db027348aac54117
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 22 16:18:38 2017 +0800
+
+    feat: config keys change
+
+commit a108901c29e01e690f561c4c13ab44cde796a512
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 22 16:07:16 2017 +0800
+
+    chore: review code
+
+commit c6893380d3f3d912e56d5df0dae0f88f3230a66b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 21 19:42:36 2017 +0800
+
+    fix: if LeanCloud is not set, 0 view won't display
+
+commit bd060e9f60c85056a22105e8ea249a847bec3b94
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 21 18:49:46 2017 +0800
+
+    doc: update readme
+
+commit 8ee20a522153618f18dd29270a2f514c32bb35a2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 21 18:49:32 2017 +0800
+
+    fix: fix article toc bug
+
+commit 07011d602f4608a93aa6216b06ee1ed468d49613
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 21 18:21:47 2017 +0800
+
+    fix: fix article toc bug
+
+commit d0f1349c63bafa73740a4356d51c1fc0f1679e55
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 21 18:21:14 2017 +0800
+
+    feat: change some configs key
+
+commit 1b4158e54a097626ee9699ee3026e0dd983fc3eb
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 20 00:32:42 2017 +0800
+
+    doc: update readme
+
+commit 039aa59535e5dfa0ef69a3ccd5fcd73045359238
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 20 00:28:52 2017 +0800
+
+    doc: update readme
+
+commit 666682b452b790a6d0630cb4b6f94b7b1f124543
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 20 00:19:20 2017 +0800
+
+    doc: update readme
+
+commit 57afe23ba1e01324fe6c334e1968c3e74b7e894b
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 20 00:07:15 2017 +0800
+
+    chore: update package.json & colors.cscc & add checklist
+
+commit a233c700a76ceb59b6ba18b673c2cab738c7622f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Fri Oct 20 00:03:15 2017 +0800
+
+    Fixes #2
+
+commit e56d21e83eb98913e92f31e57b16c97890277f5c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Oct 19 01:00:49 2017 +0800
+
+    doc: update readme
+
+commit 7be55116d98b3305bfb26ad23ec3fb4f021e85e5
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Oct 19 00:47:22 2017 +0800
+
+    doc: update readme
+
+commit 9056cdd9c0a8d7e884a7d7a88afc0517a285d884
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Oct 19 00:29:42 2017 +0800
+
+    release: v1.1.0
+
+commit 875b8f8b01bd9200eba4435dfbef729f2e9e154c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Oct 19 00:20:00 2017 +0800
+
+    chore: update _config & add readme
+
+commit d312a64abf3cb51e3c687016424fdda81ce8d098
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Oct 19 00:13:31 2017 +0800
+
+    doc: update readme
+
+commit 84c1b1c5cc491c7758d91fbff60329decbb16bf6
+Merge: bc1c8c47 bc7280d8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Oct 19 00:01:39 2017 +0800
+
+    Merge branch 'dev'
+
+commit bc7280d8c349b2b376825f9caf96a43c91db2211
+Author: kitian616 <kitian616@outlook.com>
+Date:   Thu Oct 19 00:01:15 2017 +0800
+
+    feat: new test & screenshots & fix
+
+commit bc1c8c47b410bf851fa9b3b6d3a04b072bf79b68
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Oct 18 13:32:51 2017 +0800
+
+    doc: update readme
+
+commit 8b405cd0dce6fc03ea3b00473b93dc306e79edac
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Oct 18 13:30:25 2017 +0800
+
+    feat: add screnshots
+
+commit 2cdae9272f222cf21c57ed38ab6dcc872f4fa7e6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Oct 18 01:25:10 2017 +0800
+
+    fix: footer height & all page js
+
+commit a75257b7ba869c730e384cf1882f2db5beb8075c
+Author: kitian616 <kitian616@outlook.com>
+Date:   Wed Oct 18 00:34:19 2017 +0800
+
+    feat: color  variables & themes
+
+commit f48cb79065c975a15395f0d876372cef688eb22f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 17 22:31:23 2017 +0800
+
+    chore: add changelog
+
+commit ef70432b5e242a0420c12796f9cdcfede7fce018
+Merge: 128232a5 fcf49a36
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 17 14:30:01 2017 +0800
+
+    Merge branch 'master' into dev
+
+commit fcf49a364ad671aac635a1f98562ae03ba6a6fff
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 17 14:28:01 2017 +0800
+
+    feat: update readme
+
+commit 128232a5c294a0c516a7de6372e8789b83a4d7e8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 17 01:28:20 2017 +0800
+
+    feat: color themes & test post
+
+commit aeef8ca086273ee9372dc3626896d31a74aab908
+Author: kitian616 <kitian616@outlook.com>
+Date:   Tue Oct 17 00:01:55 2017 +0800
+
+    feat: update colors variable
+
+commit bb6347ec18da2203080a34ed67646d1062967099
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 15 23:56:37 2017 +0800
+
+    fix: code block style & readme
+
+commit 3970d9446f2c97c1d20819ebbcc0bf6d559cfbb3
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 15 22:07:45 2017 +0800
+
+    fix: remove picture_max_width md header & fix errors about TOC
+
+commit 8b410d35edb856c6fe911d4102dd762c23b8045f
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 15 20:10:33 2017 +0800
+
+    fix: 文章 toc 代码优化，使用 jemoji，加快页面展示速度
+
+commit 6722d2be46530e6691a1ac56ff836a646cb92097
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 15 18:35:08 2017 +0800
+
+    fix: 优化文章 Toc 布局
+
+commit 0f88f1a077b0863259b361a4aebe94aab503f8d2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 15 12:04:12 2017 +0800
+
+    fix: colors to default
+
+commit fde7d97bd2bc5fa92c333e0cf85c82fba7aa67c6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 15 11:59:33 2017 +0800
+
+    chore: 一些设置项名称的更改
+
+commit fb5e64d343415f27f43f45b3ec1602dde4370bb8
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 15 00:30:06 2017 +0800
+
+    feat: add dark & green color theme
+
+commit 674847761b2eea0be461c4cf1e8fc265401c12d2
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 14 01:12:54 2017 +0800
+
+    feat: update Readme
+
+commit adf5805049547c03b49224c1b0819f76fbc461fe
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 14 01:11:44 2017 +0800
+
+    feat: update Readme
+
+commit 8e0e4b2af0a617ffaa054a33b4d2ed9a751e53af
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 14 00:56:10 2017 +0800
+
+    fix: readme & _config annotation
+
+commit 80e61b0cf14738c90b42fd01bf9abb8ba27cc265
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sun Oct 8 23:18:55 2017 +0800
+
+    fix: 修改 README.md:
+
+commit 33bfc02ab47ca6fc80da22e94bc877ae249df90a
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 23:39:27 2017 +0800
+
+    fix: 修改 README.md:
+
+commit ea40a7a29b29588ff10f31098701f65bf15cc9ad
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 23:39:00 2017 +0800
+
+    fix: 修改 README.md:
+
+commit 59f976b06098f7d30b4a83ade81f0ce484485e3e
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 23:35:15 2017 +0800
+
+    feat: 配置项的修改
+
+commit 39528c59be9e2246b06056c0a69945522306be06
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 23:09:24 2017 +0800
+
+    feat: README.md 增加图片
+
+commit 1439656fd396b982e9e51d23d7ebed4d24e698ca
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 23:03:48 2017 +0800
+
+    fix: 校对 README.md
+
+commit 17a0b9d35213dcf7bcaa9d7e13945c59b23027b6
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 23:00:44 2017 +0800
+
+    fix: 校对 README.md
+
+commit 1ee1df16bf3d0151f1e5676d4fe05565d92210cd
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 22:57:51 2017 +0800
+
+    fix: 校对 README.md
+
+commit a8639222529e0016a5da5bbf945e26a2d352c524
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 22:26:41 2017 +0800
+
+    feat: README & footer
+
+commit a7d1176e96ed79b175e58d5d7717be311e098174
+Author: kitian616 <kitian616@outlook.com>
+Date:   Sat Oct 7 22:07:33 2017 +0800
+
+    feat: README.md
+
+commit 641d2857ab3259a22608e838169bc650e7b43393
+Author: tianqi.tian <tianqi.tian@quanr.com>
+Date:   Sat Oct 7 18:19:14 2017 +0800
+
+    feat: init
+
+commit 0d537bc63b03418ea16262ff8526019ca3d16f58
+Author: tianqi.tian <tianqi.tian@quanr.com>
+Date:   Sat Oct 7 18:09:25 2017 +0800
+
+    feat: init
+
+commit 2f8e1111a8dbc5537b1f2f3c1a110d50797e428e
+Author: Tian Qi <kitian616@outlook.com>
+Date:   Sat Oct 7 05:04:40 2017 -0500
+
+    Initial commit
