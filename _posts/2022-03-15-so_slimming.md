@@ -1,5 +1,6 @@
 ---
 title: "动态库瘦身"
+key: "MjAyMi0wMy0xNS1zb19zbGltbWluZy5tZA=="
 tags: [linux,strip]
 ---
 
