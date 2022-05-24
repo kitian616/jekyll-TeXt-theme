@@ -1,0 +1,22 @@
+---
+layout: page
+full_width: true
+hero_title: Photos
+---
+
+<div class="hero hero--center hero--dark" style="width: 100%; position: relative; top: -50px; background-color: #{{site.data.config.hero_background_color}}">
+  <div class="hero__content">
+    <h1>{{page.hero_title}}</h1>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell cell--1"></div>
+  <div class="cell cell--10">
+    {% for image in site.static_files %}
+        {% if image.path contains 'photos' %}
+            <img style="width: 47%; margin: 5px;" src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+        {% endif %}
+    {% endfor %}
+  </div>
+</div>

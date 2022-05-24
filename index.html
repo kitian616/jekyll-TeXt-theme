@@ -1,5 +1,35 @@
 ---
-layout: home
-# articles:
-#   excerpt_type: html
+layout: page
+full_width: true
 ---
+
+<div class="hero hero--center hero--dark" style="width: 100%; position: relative; top: -50px; background-color: #{{site.data.config.hero_background_color}}">
+  <div class="hero__content">
+    <h1>{{site.data.config.full_name}}</h1>
+    <h4>{{site.data.config.headline}}</h4>
+    <p>{{site.data.config.date_range}}</p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell cell--2"></div>
+  <div class="cell cell--8">
+    {%- include extensions/youtube.html id='Q1lBv6CiP34' -%}
+  </div>
+</div>
+
+<div class="grid">
+  <div class="cell cell--2"></div>
+  <div class="cell cell--4">
+    <div class="article__content">
+      <p class="info">
+        If you have any videos, photos or testimonials to contribute, please send them to or upload to Google Drive and then share them with <a herf="mailto:natkongremembrance@gmail.com">natkongremembrance@gmail.com</a>.</br></br>
+        If you would like to remain anonymous, please indicate so in your email. If you have any inquiries, please also email to the same email address and leave your contact information. We will get back to you.
+      </p>
+    </div>
+  </div>
+  <div class="cell cell--1"></div>
+  <div class="cell cell--4">
+    <img class="image image--xl" src="assets/headshot.jpeg"/>
+  </div>
+</div>

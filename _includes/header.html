@@ -11,18 +11,18 @@
           {%- include svg/logo.svg -%}
           {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
           {%- include snippets/get-nav-url.html path=_paths_root -%}
-          {%- if site.title -%}
-            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
+          {%- if site.data.config.title -%}
+            <a title="{%- if site.data.config.description -%}{{ site.data.config.description }}{%- endif -%}" href="{{ __return }}">{{ site.data.config.title }}</a>
           {%- endif -%}
         </div>
         {%- if site.search.provider -%}
           <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
         {%- endif -%}
       </div>
-      {%- if site.data.navigation.header -%}
+      {%- if site.data.config.navigation -%}
       <nav class="navigation">
         <ul>
-          {%- for _item in site.data.navigation.header -%}
+          {%- for _item in site.data.config.navigation -%}
             {%- include snippets/get-nav-url.html path=_item.url -%}
             {%- assign _nav_url = __return -%}
             {%- include snippets/get-nav-url.html path=page.url -%}
