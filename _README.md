@@ -61,3 +61,15 @@
                 key: 20190103
                 tags: 도움말
                 ---
+
+* Change logo
+    Change _include/svg.logl.svg
+
+* Change favicon
+    After getting the resource from https://realfavicongenerator.net/
+        1. Change _include/head/favicon.html
+        2. Change assets/*
+        3. Change /favicon.ico
+    - Reference
+    1. [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
+    2. https://realfavicongenerator.net/
