@@ -1,5 +1,5 @@
 ---
-title: GPU Environment and Conda Installation for Tensorflow/Pytorch
+title: GPU and Conda environment
 sidebar:
     nav: docs-en
 aside:
@@ -18,9 +18,12 @@ tags: SetUp
     </p>
 </p>
     
-#2 각 라이브러리(Tensorflow or PyTorch version) 에 맞는 Python/Compiler/Build tool/cuDNN/CUDA 버전 확인하기
+#2 Python/Compiler/Build tool/cuDNN/CUDA 버전 확인하기
 -----------------------------------
-    
+
+모든 패키지를 설치전에 항상 종속되는 장비의 버전을 먼저 확인해보고 들어가야 함을 주의하자. 
+각 라이브러리(Tensorflow or PyTorch version) 에 맞는 Python/Compiler/Build tool/cuDNN/CUDA 버전을 하단 링크를 통해 확인하고 다음으로 넘어가자.
+
 Tensorflow: [https://www.tensorflow.org/install/source](https://www.tensorflow.org/install/source)
 
 PyTorch: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
@@ -126,97 +129,98 @@ cuDNN: [https://developer.nvidia.com/rdp/cudnn-archive](https://developer.nvidia
     
 - 윈도우의 경우 **경로 추가**는 항상 필수!
 
-- #4 Anaconda 설치하기
+#5 Anaconda 설치하기
+-----------------------------------
     
-    Multi user와 Single user의 차이는 생각 보다 간단하게, “권한을 나누는 방식”을 알면 이해하기 쉽다. 로컬시스템에서 그룹에게 conda가 설치된 폴더에 권한을 줘서 read와 write를 하게 해주면 된다. 그리고 Anaconda 대신 Miniconda를 설치한 이유는 하단에 적은 듯이 Miniconda에 meta package를 제외시키고 공용으로 사용하는 부분의 무게를 덜기 위해서 이다. 
+Multi user와 Single user의 차이는 생각 보다 간단하게, “권한을 나누는 방식”을 알면 이해하기 쉽다. 로컬시스템에서 그룹에게 conda가 설치된 폴더에 권한을 줘서 read와 write를 하게 해주면 된다. 그리고 Anaconda 대신 Miniconda를 설치한 이유는 하단에 적은 듯이 Miniconda에 meta package를 제외시키고 공용으로 사용하는 부분의 무게를 덜기 위해서 이다. 
+
+#### 1. `cd /tmp` 
+#### 2. Download the installation file in the terminal
+
+`curl -O https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh Miniconda3-py38_4.12.0-Linux-x86_64.sh` 
+
+#### 3. Install Miniconda
+
+`bash Miniconda3-py38_4.12.0-Linux-x86_64.sh`
     
-    - Referece. [https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
-    1. `cd /tmp` 
-    2. `curl -O https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh Miniconda3-py38_4.12.0-Linux-x86_64.sh` 
-    3. `bash Miniconda3-py38_4.12.0-Linux-x86_64.sh`
+conda의 path에 따라 sudo를 사용해야할 수도 있다. sudo를 사용하는 Conda initialization에서 path가 root/.bashrc 에서 설정되니 no를 추천한다.
+
+#### 4. After agreeing the license, you need to set the path of conda 
+
+<p>
+    <img src="/assets/images/post/2022-07-01-os-setup/gpuenv_4.png"> 
+    <p align="center">
+    <em> Installation Path Option when installing conda</em>
+    </p>
+</p>    
         
-        conda의 path에 따라 sudo를 사용해야할 수도 있다. sudo를 사용하는 Conda initialization에서 path가 root/.bashrc 에서 설정되니 no를 추천한다.
+<sub>[reference](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)</sub>
+이 경우 원하는 경로를 사용해준다. 필자는 `/opt/miniconda3` 로 설정하였다.
+    
+#### 5. Selecting conda initialization
+
+<p>
+    <img src="/assets/images/post/2022-07-01-os-setup/gpuenv_5.png"> 
+    <p align="center">
+    <em> Selection of initialization while installing the conda</em>
+    </p>
+</p>    
+
+<sub>[reference](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)</sub>
+필자의 경우 `no` 를 선택하고 이후 6번의 과정에서 bash configuration을 수정했다. (conda init을 사용하는 사람들도 있는데 그 방법도 비슷한 설정일 것 같다.)
+
+#### 6. bash configuration
+    
+본인의 계정(user)에서 conda 명령어를 사용하고 싶은 경우에 반드시 bash configuration이 필요하다. 이는 Ubuntu환경에서 /home/[user_name]/.bashrc 에서 수정할 수 있다.
+
+```bash
+# cuda
+export PATH="/usr/local/cuda-11.2/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-11.2/lib64:$LD_LIBRARY_PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+export PATH=/opt/anaconda3/bin:/opt/anaconda3/condabin:$PATH
+```
+
+반드시 수정한 후에는 `source [bash configuration file]` 을 해야 설정이 된다. (ex. `source /home/[user_name]/.bashrc`)
+
+이제 conda를 이용해서 환경을 구성하면 된다!
+    
+#### Reference
+
+- [Single-user Anaconda installation](https://docs.anaconda.com/anaconda/install/linux/)
         
-    4. After agreeing the license, you need to set the path of conda 
+- [Anaconda installation in Terminal on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
         
-        ![Installation Path Option when installing conda](img/gpuenv_4.png)
+- [Multi-user Anaconda installation](https://docs.anaconda.com/anaconda/install/multi-user/)
         
-        Reference. [https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
-        
-        이 경우 원하는 경로를 사용해준다. 필자는 `/opt/miniconda3` 로 설정하였다.
-        
-    5. Selecting conda initialization
-        
-        ![Question for initialization of conda](img/gpuenv_5.png)
-        
-        Reference. [https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
-        
-        필자의 경우 `no` 를 선택하고 이후 6번의 과정에서 bash configuration을 수정했다. (conda init을 사용하는 사람들도 있는데 그 방법도 비슷한 설정일 것 같다.)
-        
-    6. bash configuration
-        
-        본인의 계정(user)에서 conda 명령어를 사용하고 싶은 경우에 반드시 bash configuration이 필요하다. 이는 Ubuntu환경에서 /home/[user_name]/.bashrc 에서 수정할 수 있다.
-        
-        ```bash
-        # cuda
-        export PATH="/usr/local/cuda-11.2/bin:$PATH"
-        export LD_LIBRARY_PATH="/usr/local/cuda-11.2/lib64:$LD_LIBRARY_PATH"
-        
-        # >>> conda initialize >>>
-        # !! Contents within this block are managed by 'conda init' !!
-        __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-        if [ $? -eq 0 ]; then
-            eval "$__conda_setup"
-        else
-            if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-                . "/opt/anaconda3/etc/profile.d/conda.sh"
-            else
-                export PATH="/opt/anaconda3/bin:$PATH"
-            fi
-        fi
-        unset __conda_setup
-        # <<< conda initialize <<<
-        export PATH=/opt/anaconda3/bin:/opt/anaconda3/condabin:$PATH
-        ```
-        
-        반드시 수정한 후에는 `source [bash configuration file]` 을 해야 설정이 된다. (ex. `source /home/[user_name]/.bashrc`)
-        
-        이제 conda를 이용해서 환경을 구성하면 된다!
-        
-    - Reference
-        - Single-user Anaconda installation
+- [MiniConda installation](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
             
-            [https://docs.anaconda.com/anaconda/install/linux/](https://docs.anaconda.com/anaconda/install/linux/)
-            
-        - Anaconda installation in Terminal on Ubuntu
-            
-            [https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
-            
-        - Multi-user Anaconda installation
-            
-            [https://docs.anaconda.com/anaconda/install/multi-user/](https://docs.anaconda.com/anaconda/install/multi-user/)
-            
-        - MiniConda installation
-            
-            [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
-            
-    - Q. 왜 Tensorflow blog에서는 miniconda를 쓰라고 할까?
-        
-        Reference. [https://stackoverflow.com/questions/45421163/anaconda-vs-miniconda](https://stackoverflow.com/questions/45421163/anaconda-vs-miniconda)
-        
-        <aside>
-        💡 `conda` is both a command line tool, and a python package.
-        
-        Miniconda installer = Python + `conda`
-        
-        Anaconda installer = Python + `conda` + *meta package* `anaconda`
-        
-        meta Python pkg `anaconda` = about 160 Python pkgs for daily use in data science
-        
-        Anaconda installer = Miniconda installer + `conda install anaconda`
-        
-        </aside>
-      
+#### Q. 왜 Tensorflow blog에서는 miniconda를 쓰라고 할까?
+    
+Reference. [https://stackoverflow.com/questions/45421163/anaconda-vs-miniconda](https://stackoverflow.com/questions/45421163/anaconda-vs-miniconda)
+
+```bash
+💡 `conda` is both a command line tool, and a python package.
+Miniconda installer = Python + `conda`
+Anaconda installer = Python + `conda` + *meta package* `anaconda`
+meta Python pkg `anaconda` = about 160 Python pkgs for daily use in data science
+Anaconda installer = Miniconda installer + `conda install anaconda`
+```
+
 #5 Tensorflow 설치하기
 -----------------------------------
     

@@ -78,15 +78,16 @@ header:
     url: /whoami.html
 
 docs-en:
-  - title: Test TOC
+  - title: Setup Software for Machine Learning
     children:
-      - title:  test
-        url:    /2022/06/18/test-for-post.html
-  - title: Test TOC 1
-    children:
-      - title:  test1
-        url:    /2022/06/19/test-for-post-1.html
-  - title: Test TOC 2
-    children:
-      - title:  test2
-        url:    /2022/06/20/test-for-post-2.html
+      - title:  Overview
+        url:    /2022/07/01/os-setup-for-machine-learning.html
+      - title:  Disk Partition and Mount
+        url:    /2022/07/01/disk-partition-and-mount.html
+      - title:  GPU and Conda environment
+        url:    /2022/07/01/gpu-conda-environment-for-tensorflow-pytorch.html
+      - title:  Authencation to User and Group
+        url:    /2022/07/01/user-and-group.html
+      - title:  Installation Samba
+        url:    /2022/07/01/samba-installation-in-ubuntu
+    

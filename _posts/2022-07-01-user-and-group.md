@@ -1,5 +1,5 @@
 ---
-title: Authorization to User and Group, 그룹과 유저관리
+title: Authorization to User and Group
 sidebar:
     nav: docs-en
 aside:

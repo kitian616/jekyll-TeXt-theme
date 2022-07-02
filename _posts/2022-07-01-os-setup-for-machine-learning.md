@@ -13,7 +13,7 @@ OS image를 바꿔주는 서비스, 예를 들어 Linux 18.04를 설치했다가
 
 #### 2. Disk Partition and Mount<sub>[link](/2022/07/01/disk-partition-and-mount)</sub>
 
-#### 3. GPU Environment and Conda Installation for Tensorflow/Pytorch<sub>[link](/2022/07/01/gpu-conda-environment-for-tensorflow-pytorch)</sub>
+#### 3. GPU and Conda environment<sub>[link](/2022/07/01/gpu-conda-environment-for-tensorflow-pytorch)</sub>
 
 #### 4 고정 아이피 설정
 - Gateway 주소: (일반적으로) 192.168.1.1,
