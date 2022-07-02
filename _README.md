@@ -73,3 +73,6 @@
     - Reference
     1. [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
     2. https://realfavicongenerator.net/
+
+* Add Caption 
+    https://geniewishescometrue.tistory.com/entry/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EA%B4%80%EB%A0%A8-%ED%8C%81-%EA%B8%80-%EC%83%89%EC%83%81-%ED%98%95%EA%B4%91%ED%8E%9C
