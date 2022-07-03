@@ -8,8 +8,7 @@ key: 20220701
 tags: SetUp
 ---
 #### 1. OS 설치(Ubuntu 20.04 LTS)
-Ventoy: [https://www.ventoy.net/en/index.html](https://www.ventoy.net/en/index.html)
-OS image를 바꿔주는 서비스, 예를 들어 Linux 18.04를 설치했다가 20.04를 다시 설치해야할 때 OS image를 지우고 다시 까는 것이 아니라, Ventoy를 이용하면 OS 스위칭이 가능하다.
+[Ventoy](https://www.ventoy.net/en/index.html): OS image를 바꿔주는 서비스, 예를 들어 Linux 18.04를 설치했다가 20.04를 다시 설치해야할 때 OS image를 지우고 다시 까는 것이 아니라, Ventoy를 이용하면 OS 스위칭이 가능하다.
 
 #### 2. Disk Partition and Mount<sub>[link](/2022/07/01/disk-partition-and-mount)</sub>
 

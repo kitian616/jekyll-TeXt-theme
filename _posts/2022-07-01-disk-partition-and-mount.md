@@ -24,11 +24,9 @@ tags: SetUp
 <p>
     <img src="/assets/images/post/2022-07-01-os-setup/disk_1.png" width="700" height="500">
     <p align="center">
-      <em> the list of disks through "fdisk -l"</em>
+      <em> "fdisk -l", 할당을 마친 후의 드라이브 목록</em>
     </p>
 </p>
-
-할당을 마친 후의 드라이브 목록
 
 할당되지 않은 상태에서는 sda1, 2가 차례로 있지 않았다. 저 부분을 파티션 할당을 해주면 된다. 리눅스는 보통 첫번째 드라이브가 /dev/sda1,2,3,… 두번째 드라이브가 /dev/sdb1,2,3… 이렇게 설정된다.
 
@@ -48,15 +46,15 @@ tags: SetUp
 #### 1. fdisk/dev/[디스트명]
 새로운 하드디스크를 추가한다.
 
-1. primary partition
+- primary partition
 
     최대 4개까지 생성 가능하고 파티션 번호는 1-4가 있다.
     
-2. extended partition
+- extended partition
     
     파일 저장용도로 사용 못하며 논리 파티션을 생성하기 위한 공간이다. 파티션 번호는 1-4가 있다.
     
-3. logical disk
+- logical disk
     
     Primary partition과 같은 역할을 하며 확장 파티션 내에서만 생성 가능하다. 파티션 번호는 5~ 이며 제한 갯수는 없다.
     
@@ -278,21 +276,20 @@ UUID=e001a7f9-1154-129e-a916-dad0b54116f2 /second              ext4    defaults 
 ```
     
 #### 3. Detail `vi /etc/fstab`
-- Reference. [https://it-serial.tistory.com/entry/Linux-df-명령어-마운트-자동-등록fstab-UUID란⑤](https://it-serial.tistory.com/entry/Linux-df-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%A7%88%EC%9A%B4%ED%8A%B8-%EC%9E%90%EB%8F%99-%EB%93%B1%EB%A1%9Dfstab-UUID%EB%9E%80%E2%91%A4)
-    
-    <p>
-        <img src="/assets/images/post/2022-07-01-os-setup/disk_3.png"> 
-        <p align="center">
-        <em> fstab 설정 값</em>
-        </p>
+<p>
+    <img src="/assets/images/post/2022-07-01-os-setup/disk_3.png"> 
+    <p align="center">
+    <em> fstab 설정 값</em>
     </p>
-    
+</p>
+
+- Reference. [https://it-serial.tistory.com/entry/Linux-df-명령어-마운트-자동-등록fstab-UUID란⑤](https://it-serial.tistory.com/entry/Linux-df-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%A7%88%EC%9A%B4%ED%8A%B8-%EC%9E%90%EB%8F%99-%EB%93%B1%EB%A1%9Dfstab-UUID%EB%9E%80%E2%91%A4)    
 - 마운트 정보 순서: [디스크 이름 or 디스크 UUID] [마운트 포인트] [파일 시스템] [마운트 옵션] [덤프(백업)유무] [fsck 검사 순서]
 - 값들과 값들 사이에 공간은 1칸 이상만 띄우면 된다.
 - defaults 옵션            
-    <aside>
-    💡 auto : 부팅시 자동으로 마운트
-    
+
+    auto : 부팅시 자동으로 마운트
+
     exec(execute) : 실행 파일을 실행할 수 있게 마운트
     
     suid : setUID, setGID를 사용할 수 있게 마운트
@@ -301,13 +298,14 @@ UUID=e001a7f9-1154-129e-a916-dad0b54116f2 /second              ext4    defaults 
     
     nouser : 일반 유저들은 마운트 권한 없음
     
-    </aside>
+- 기타 옵션
     
     ro(read only) : r 권한만 가지고 마운트
     
     usrquota 또는 grpquota : 유저 쿼터 or 그룹 쿼터를 나눔
     
     defaults외에 다른 옵션을 사용하고 싶을 때 "auto, exec, suid, ro" 이런식으로 분리해서 적으면 된다.
+
 - 반대 옵션 기존 옵션에 no를 붙이기, ex. noauto, noexec
 - 덤프 사용 유무, 0(사용안함) or 1(사용): 백업의 개념으로 사용한다 정도만 알고 넘어가도록 합시다.
 - fsck (file system check) : 0(검사 안함), 1(1순위로 검사), 2(1순위 다음 검사) 3개로 나타냅니다. fsck명령어를 통한 파일 시스템 체크 순서를 정하는 것입니다.

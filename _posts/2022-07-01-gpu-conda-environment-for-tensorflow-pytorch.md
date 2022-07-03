@@ -10,7 +10,9 @@ tags: SetUp
 
 #1 [선택사항] 기기에 연결된 GPU 확인해보기
 -----------------------------------  
+
 `sudo lshw -C display`
+
 <p>
     <img src="/assets/images/post/2022-07-01-os-setup/gpuenv_0.png"> 
     <p align="center">
@@ -154,8 +156,7 @@ conda의 path에 따라 sudo를 사용해야할 수도 있다. sudo를 사용하
     </p>
 </p>    
         
-<sub>[reference](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)</sub>
-이 경우 원하는 경로를 사용해준다. 필자는 `/opt/miniconda3` 로 설정하였다.
+이 경우 원하는 경로를 사용해준다. 필자는 `/opt/miniconda3` 로 설정하였다.<sup>[1](#footnote_1)</sup>
     
 #### 5. Selecting conda initialization
 
@@ -166,8 +167,7 @@ conda의 path에 따라 sudo를 사용해야할 수도 있다. sudo를 사용하
     </p>
 </p>    
 
-<sub>[reference](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)</sub>
-필자의 경우 `no` 를 선택하고 이후 6번의 과정에서 bash configuration을 수정했다. (conda init을 사용하는 사람들도 있는데 그 방법도 비슷한 설정일 것 같다.)
+필자의 경우 `no` 를 선택하고 이후 6번의 과정에서 bash configuration을 수정했다. (conda init을 사용하는 사람들도 있는데 그 방법도 비슷한 설정일 것 같다.)<sup>[1](#footnote_1)</sup>
 
 #### 6. bash configuration
     
@@ -201,6 +201,8 @@ export PATH=/opt/anaconda3/bin:/opt/anaconda3/condabin:$PATH
     
 #### Reference
 
+- <a name="footnote_1"><sup>1</sup>Conda Installation</a> : [https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
+
 - [Single-user Anaconda installation](https://docs.anaconda.com/anaconda/install/linux/)
         
 - [Anaconda installation in Terminal on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
@@ -226,7 +228,7 @@ Anaconda installer = Miniconda installer + `conda install anaconda`
     
 아래 내용은 Tensorflow는 원하는 버전에 맞춰서 [Tensorflow 공식 링크](https://www.tensorflow.org/install/pip)의 설명대로 설치해주면 된다. 
 
-링크와 똑같은 내용을 왜 구지 적었냐고? 
+링크와 똑같은 내용을 왜 굳이 적었냐고? 
 
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/ 
