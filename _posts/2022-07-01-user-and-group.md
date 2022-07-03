@@ -13,9 +13,9 @@ tags: SetUp
     - [TODO] Port, VPN 세팅
 - Mac은 터미널 사용, 윈도우는 MobaXterm사용
 
-#1 유저 추가 `adduser [name]` , `passewd [username]`
-------------------------------------------
-#### 1. **TL;DR**
+### 1. 유저 추가 `adduser [name]` , `passewd [username]`
+
+#### 1) **TL;DR**
 - 새로운 패키지를 설치하면 관리자가 된 사람이 더 쉽게 사용자 계정을 만들 수 있다. Debian/Ubuntu 기준, 설치 명령어는 다음과 같다
     
     ```bash
@@ -51,7 +51,7 @@ tags: SetUp
     - shell 변경하기: `sudo useradd -D -s /bin/bash`
     - /etc/default/useradd 에서 기본 설정을 확인 가능
 
-#### 2. **Description of the option**
+#### 2) **Description of the option**
 
 | Option | Description | Example |
 | --- | --- | --- |
@@ -67,14 +67,14 @@ tags: SetUp
 | -r(--system) | 옵션을 사용하여 시스템 사용자 계정 생성, 시스템 사용자는 만료 날짜 없이 생성된다. 해당 UID는 login.defs 파일에 지정된 시스템 사용자 ID 범위에서 선택되며, 일반 사용자에게 사용되는 범위와는 다르다. | useradd -r [user_name] |
 | -D | /etc/default/useradd 파일의 값을 수동으로 편집하여 기본 사용자 추가 옵션을 보고 변경 | useradd -D [-option] [change_condition] |
 
-#1-1 유저 바꾸기, `su [name]`
-------------------------------------------
+### 1-1. 유저 바꾸기, `su [name]`
+
 - `su -`, `su root` : 루트 권한으로 들어간다.
     - 초기에 비밀번호가 설정돼 있지 않으므로, sudo passwd를 통해 관리자 권한이 있는 계정으로 수정해야한다.
 - su [user_name]
 
-#1-2 sudo, 권력자 만들기 😈 
-------------------------------------------
+### 1-2. sudo, 권력자 만들기 😈 
+
 루트 root 는 슈퍼 사용자, root로 로그인하지 않고도 관리자 특권을 가질 수 있다.
 
 한 사용자에게 sudo 능력을 제공하려면, 사용자 이름을 sudoers 파일에 추가하여야 한다. 이 파일은 텍스트 에디터에서 직접 편집하지 않아야 하며, sudoers 파일을 정확하게 편집하지 않으면 시스템에 접근할 수 없게 될 것이다.
@@ -87,8 +87,8 @@ tags: SetUp
 
 `sudo visudo`
     
-#2 그룹 추가
------------------------------------------- 
+### 2. 그룹 추가
+
 그룹에 대한 정보는 /etc/group 경로로 들어가면 group ID를 볼 수 있다.
 
 - 추가: `groupadd [group_name]`
@@ -110,8 +110,7 @@ tags: SetUp
     | -d(--deletet) | 사용자를 그룹에서 삭제 | (TODO) |
     | -M(--members) | 여러명의 사용자를 그룹에 추가, 콤마(,)로 구분 | (TODO) |
         
-#3 파일, 권한, 디렉토리 소유권, 권한 보기: `ls -al`
-------------------------------------------
+### 3. 파일, 권한, 디렉토리 소유권, 권한 보기: `ls -al`
     
 -a : (all) 숨겨진 파일 혹은 모든 파일을 보여주기
 
@@ -135,10 +134,9 @@ tags: SetUp
 - Jun 13 14:01: 최종 접근 날짜/시간
 - . : 디렉토리
 
-#4 권한/소유자 바꾸기, `chmod` `chown`
-------------------------------------------
+### 4. 권한/소유자 바꾸기, `chmod` `chown`
     
-#### 1. TL;DR, chmod, chown and chgrp
+#### 1) TL;DR, chmod, chown and chgrp
 
 `chmod`는 모드 변경(change)의 줄임말이다. chmod는 파일과 디렉토리의 권한을 변경할 때 사용한다. chmod 명령어는 권한을 설정하기 위해 아래와 같은 (팔진법으로 알려진) 문자나 숫자와 함께 사용된다. 
 권한: r, w, x, s, t
@@ -153,7 +151,7 @@ tags: SetUp
     
 `chgrp` own은 소유자, grp는 그룹
 
-#### 2. Detail
+#### 2) Detail
 
 | Letter w/ Permission | Meaning |
 | --- | --- |
@@ -172,7 +170,7 @@ tags: SetUp
 
 권한을 주는 방법으로 **예시**를 들면 다음과 같다. `chmod u+r, g+x [filename]`이는 filename을 u: user, r: read, g: group, x: execute 로 + 하겠다는 말이며, 파일에 대해서 사용자에게 읽기 권한을 주고 그룹에게는 실행권한을 준다는 말이다. **한 번의 설정에서 여러 권한을 줄 때는 설정 사이에 쉼표(,)를 넣어야 한다.**
 
-#### 3. 그럼 t(sticky bit) 와 s(setuid bit)는 어떤 용도로 사용할까?
+#### 3) 그럼 t(sticky bit) 와 s(setuid bit)는 어떤 용도로 사용할까?
     
 **sticky bit(+t)**를 부여하는 경우 소유자(혹은 root)만 파일을 지울 수 있다는 것을 뜻한다. 사용자가 그룹 멤버십이나 오너십으로 이 파일에 쓰기 접근을 가지고 있음에도 불구하고 많은 사용자가 파일들에 쓰기 접근을 공유하고 있는 그룹이 소유하고 있는 파일이나 디렉토리의 경우에 유용하다.
 
@@ -194,7 +192,7 @@ tags: SetUp
 
 `chmod o+s /var/doc-store/`
     
-#### 4. 파일 소유권/그룹 바꾸기, Changing File Ownership 
+#### 4) 파일 소유권/그룹 바꾸기, Changing File Ownership 
 `chown user /path/to/file` and `chgrp [option] [group_name] /path/to/file`
 
 기본적으로 모든 파일은 그것을 만든 사용자와 그 사용자의 디폴트 그룹에 의해 “소유된다”. 파일의 소유권을 변경하려면 `chown user:group /path/to/file` 형식으로 `chown` 명령어를 사용한다. 다음 예제에서는, "text.txt” 파일의 소유권이 daniel로 변경된다.
@@ -224,7 +222,7 @@ tags: SetUp
 | --help | Displays the help file and exits. |
 | --version | Outputs version information and exits. |
 
-#### 5. 숫자를 이용해서 사용하는  Chmod Octal Format
+#### 5) 숫자를 이용해서 사용하는  Chmod Octal Format
 `chmod [octal or letters] [file/directory name]`
 
 팔진법 형식을 사용하려면 파일이나 디렉토리 각 부분에 대한 권한을 계산해야 한다. 위에서 언급 첫 10문자는 팔진법으로 네 개의 숫자에 해당한다. 실행 권한은 숫자 (1)과 같고, 쓰기 권한은 숫자 (2)와 같고, 읽기 권한은 숫자 (4)와 같다. 그러므로 팔진법 형식을 사용할 때는 0과 7 사이의 숫자를 계산할 필요가 있다.
@@ -264,8 +262,7 @@ chmod 명령어 이후의 `ls -al`의 출력은 다음과 같이 보일 것이�
 | rwxr-x--- | 400 |
 | … | … |
 
-#5 이외 명령어
-------------------------------------------
+### 5. 이외 명령어
 
 디렉토리 생성: `mkdir [directory_name]`
 
@@ -275,8 +272,7 @@ chmod 명령어 이후의 `ls -al`의 출력은 다음과 같이 보일 것이�
 
 디렉토리를 제거: `rm -r [directory_name]`
     
-Reference
-------------------------------------------
+### Reference
 
 - [https://www.commandlinux.com/man-page/man8/addgroup.8.html](https://www.commandlinux.com/man-page/man8/addgroup.8.html)
 - [https://nolboo.kim/blog/2015/08/18/linux-users-groups/](https://nolboo.kim/blog/2015/08/18/linux-users-groups/)

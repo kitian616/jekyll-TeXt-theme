@@ -16,9 +16,8 @@ tags: SetUp
     </p>
 </p>
 
-#1 현재 파티션 확인하기 `fdisk -l` `df -h`
-------------------------------------------
-    
+### 1. 현재 파티션 확인하기 `fdisk -l` `df -h`
+
 `fdisk -l` 를 이용하면 드라이브 목록을 확인할 수 있다.
 
 <p>
@@ -40,10 +39,9 @@ tags: SetUp
     </p>
 </p>
    
-#2-1 2TB이하 파티션 할당하기
-------------------------------------------
+### 2-1. 2TB이하 파티션 할당하기
 
-#### 1. fdisk/dev/[디스트명]
+#### 1) fdisk/dev/[디스트명]
 새로운 하드디스크를 추가한다.
 
 - primary partition
@@ -120,7 +118,7 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
     
-#### 2. mkfs -t [파일시스템] /dev/[디스크명]    
+#### 2) mkfs -t [파일시스템] /dev/[디스크명]    
 파일시스템 만들기!
 
 ```bash
@@ -149,10 +147,9 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 ```
         
-#2-2 2TB이상 파티션 할당하기
-------------------------------------------
+### 2-2. 2TB이상 파티션 할당하기
 
-#### 1. 2TB를 초과하는 파티션을 할당하기 위해선 `parted` 명령어를 사용하여 gpt 타입 파티션으로 만들어야 한다.  
+#### 1) 2TB를 초과하는 파티션을 할당하기 위해선 `parted` 명령어를 사용하여 gpt 타입 파티션으로 만들어야 한다.  
 ```bash
 # parted /dev/sdb
 GNU Parted 3.1
@@ -195,7 +192,7 @@ Number  Start   End     Size    File system  Name     Flags
 Information: You may need to update /etc/fstab.
 ```
     
-#### 2. 파일 시스템을 만든다. `mkfs -t ext4 /dev/sdb1`    
+#### 2) 파일 시스템을 만든다. `mkfs -t ext4 /dev/sdb1`    
 ```bash
 # mkfs -t ext4 /dev/sdb1
 mke2fs 1.42.9 (28-Dec-2013)
@@ -222,8 +219,8 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 ```
         
-#3 mount -t [파일시스템] /dev/[디스크명]
-------------------------------------------    
+### 3. mount -t [파일시스템] /dev/[디스크명]
+
 ```bash
 # mount -t ext4 /dev/sdb1 [path_dir_to_mount]
 
@@ -239,9 +236,9 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 이렇게 하면 4TB의 하드디스크 중에 2TB를 할당해서 사용할 수 있다.
     
-#4 fstab 파일 등록
-------------------------------------------
-#### 1. 먼저 자동마운트 등록할 디스크의 UUID를 확인해야한다.
+### 4. fstab 파일 등록
+
+#### 1) 먼저 자동마운트 등록할 디스크의 UUID를 확인해야한다.
 - Method 1. blkid    
     ```bash
     # blkid   # 먼저 자동마운트 등록할 디스크의 UUID를 알아내야 한다.
@@ -255,7 +252,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 - Method 2. (parted를 통해 등록한 경우) blkid에서 파티션한 디스크가 보이지 않음
     → `vi /dev/disk/by-uuid` 
     
-#### 2. `vi /etc/fstab`
+#### 2) `vi /etc/fstab`
     
 ```bash
 # vi /etc/fstab
@@ -275,7 +272,7 @@ UUID=1c407d96-e43b-4b52-af5f-b191560e8267 /                       ext4    defaul
 UUID=e001a7f9-1154-129e-a916-dad0b54116f2 /second              ext4    defaults        1 2  # 여기에 추가한다.
 ```
     
-#### 3. Detail `vi /etc/fstab`
+#### 3) Detail `vi /etc/fstab`
 <p>
     <img src="/assets/images/post/2022-07-01-os-setup/disk_3.png"> 
     <p align="center">
@@ -311,13 +308,10 @@ UUID=e001a7f9-1154-129e-a916-dad0b54116f2 /second              ext4    defaults 
 - fsck (file system check) : 0(검사 안함), 1(1순위로 검사), 2(1순위 다음 검사) 3개로 나타냅니다. fsck명령어를 통한 파일 시스템 체크 순서를 정하는 것입니다.
 - UUID (Universally Unique IDentifier) : 절대 겹치지 않는 식별자, 디스크 이름은 /dev/sdb1 같은 경우 언제든지 바뀔 수 있다.
 
-#### 4. 재부팅하지 않더라도 자동 마운트 된다. 확인해보고 싶으면 마운트 해제(`umount [path_dir]`)를 하고 `mount -a` 를 해보면 된다.
+#### 4) 재부팅하지 않더라도 자동 마운트 된다. 확인해보고 싶으면 마운트 해제(`umount [path_dir]`)를 하고 `mount -a` 를 해보면 된다.
 
-#5 마운트 해제시키는 방법 umount [path_dir]
-------------------------------------------
+### 5. 마운트 해제시키는 방법 umount [path_dir]
 
-
-Reference
-------------------------------------------
+### Reference
 
 - [https://zero-gravity.tistory.com/297](https://zero-gravity.tistory.com/297)
