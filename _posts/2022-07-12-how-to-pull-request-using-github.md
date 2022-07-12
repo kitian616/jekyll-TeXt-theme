@@ -63,6 +63,8 @@ title: 如何使用GitHub发表博客
 
 ###### 一、下载GitHub Desktop并登录账号
 
+下载地址：https://desktop.github.com/
+
 ###### 二、分支并克隆
 
 1. 进入https://github.com/HGPART/HGPART.github.io，点击Fork创建一个新的分支
