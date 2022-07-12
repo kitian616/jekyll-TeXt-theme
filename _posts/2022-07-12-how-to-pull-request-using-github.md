@@ -55,7 +55,7 @@ title: 如何使用GitHub发表博客
 
 7. 输入`git push`
 
-8. 进入https://github.com/HGPART/HGPART.github.io，点击Pull requests-New pull request
+8. 进入自己分支的项目，点击Pull requests-New pull request
 
    base repository选择HGPART/HGPART.github.io，head repository选择自己的分支项目，提交request
 
@@ -77,7 +77,7 @@ title: 如何使用GitHub发表博客
 
 6. 点击Pushing to origin
 
-7. 进入https://github.com/HGPART/HGPART.github.io，点击Pull requests-New pull request
+7. 进入自己分支的项目，点击Pull requests-New pull request
 
    base repository选择HGPART/HGPART.github.io，head repository选择自己的分支项目，提交request
 
