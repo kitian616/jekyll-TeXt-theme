@@ -66,8 +66,19 @@ title: 如何使用GitHub发表博客
 ###### 二、分支并克隆
 
 1. 进入https://github.com/HGPART/HGPART.github.io，点击Fork创建一个新的分支
+
 2. 打开自己新创建的分支，点击Code-Open with GitHub Desktop，将项目克隆到本地
+
 3. 将md文件放入_post文件夹中
-4. 
+
+4. 在左栏的change可以看到更改的文件及内容
+
+5. 在下方输入发布的相关信息后点击commit
+
+6. 点击Pushing to origin
+
+7. 进入https://github.com/HGPART/HGPART.github.io，点击Pull requests-New pull request
+
+   base repository选择HGPART/HGPART.github.io，head repository选择自己的分支项目，提交request
 
 <!--more-->
