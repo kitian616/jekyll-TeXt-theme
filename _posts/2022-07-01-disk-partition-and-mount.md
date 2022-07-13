@@ -1,7 +1,7 @@
 ---
 title: Disk Partition and Mount
 sidebar:
-    nav: docs-en
+    nav: os-setup-ko
 aside:
     toc: true
 key: 20220701

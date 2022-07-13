@@ -77,7 +77,7 @@ header:
       # @end locale config
     url: /whoami.html
 
-docs-en:
+os-setup-ko:
   - title: Setup Software for Machine Learning
     children:
       - title:  Overview

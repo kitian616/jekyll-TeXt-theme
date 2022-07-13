@@ -24,10 +24,6 @@ titles:
   fr-LU   : *FR
   # @end locale config
 key: page-about
-sidebar:
-    nav: docs-en
-aside:
-    toc: true
 ---
 
 한 번 시작해보죠 게임을!

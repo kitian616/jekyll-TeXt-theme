@@ -1,10 +1,6 @@
 ---
 title: Welcome to Web World
-tags: Hello
-sidebar:
-    nav: docs-en
-aside:
-    toc: true
+key: 20220618
 tags: Hello
 ---
 

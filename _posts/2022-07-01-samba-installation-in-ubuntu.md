@@ -1,7 +1,7 @@
 ---
 title: Installation Samba in Ubuntu 20.04 LTS
 sidebar:
-    nav: docs-en
+    nav: os-setup-ko
 aside:
     toc: true
 key: 20220701
