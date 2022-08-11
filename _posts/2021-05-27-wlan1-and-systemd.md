@@ -7,12 +7,14 @@ article_header:
   image:
     src: /assets/images/2021-05-27-wlan1-and-systemd/head.png
 tags: 
-- 树莓派
-- bash
-- Linux
-- systemd
-- 开机启动
-- WiFi
+  - 树莓派
+  - bash
+  - Linux
+  - systemd
+  - 开机启动
+  - WiFi
+author: Yu Xiaoyuan
+show_author_profile: true
 ---
 
 最近为了把机器学习项目部署到终端设备，又把树莓派捡起来。这次的内容与机器学习关系不大，只是摸鱼的工作。  
