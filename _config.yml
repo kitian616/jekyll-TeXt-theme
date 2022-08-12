@@ -131,7 +131,7 @@ comments:
     clientSecret: 028b0a76913a5c46c5b25c972c6a04bc3d5ecce5 # GitHub Application Client Secret
     repository  : yuxiaoyuan0406.github.io # GitHub repo
     owner       : yuxiaoyuan0406 # GitHub repo owner
-    proxy       : "http://pigass.cn/proxy/https://github.com/login/oauth/access_token"
+    proxy       : "https://pigass.cn/proxy/https://github.com/login/oauth/access_token"
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       - yuxiaoyuan0406 # - your GitHub Id
 
