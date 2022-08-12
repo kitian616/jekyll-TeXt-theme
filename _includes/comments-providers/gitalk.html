@@ -20,6 +20,7 @@
 		{%- assign _admin = _admin | append: ", '" | append: _admin_id | append: "'" -%}
 	{%- endfor -%}
 	{%- assign _last = _admin | size | minus: 1 -%}
+	{%- assign _proxy = _proxy | slice: 2, _last -%}
 	{%- assign _admin = _admin | slice: 2, _last -%}
 	<script>
 		window.Lazyload.css('{{ _sources.gitalk.css }}');
@@ -29,7 +30,7 @@
 				clientSecret: '{{ site.comments.gitalk.clientSecret }}',
 				repo: '{{ site.comments.gitalk.repository }}',
 				owner: '{{ site.comments.gitalk.owner }}',
-				proxy: '{{ site.comments.gitalk.proxy }}',
+				proxy: [{{ _proxy }}],
 				admin: [{{ _admin }}],
 				id: '{{ page.key }}'
 			});
