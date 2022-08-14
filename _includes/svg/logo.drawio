@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="4M5t6pHDosM0NVJx82I1" name="第 1 页">
-        <mxGraphModel dx="894" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1485" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;fontSize=12;verticalAlign=top;fontColor=#364149;shadow=0;dashed=0;image;image=img/lib/cumulus/container.svg;" vertex="1" parent="1">
-                    <mxGeometry x="310" y="220" width="168.75" height="150" as="geometry"/>
+                <mxCell id="2" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;fontSize=12;verticalAlign=top;fontColor=#364149;shadow=0;dashed=0;image;image=img/lib/cumulus/container.svg;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="40" width="760" height="675.55" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
