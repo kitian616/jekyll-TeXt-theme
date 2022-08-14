@@ -81,7 +81,7 @@ Illegal instruction (core dumped)
 
 上一步安装的torch包含了C++的库文件即libtorch。  
 使用指令`python -c 'import torch;print(torch.utils.cmake_prefix_path)'`可以查看目录。  
-`要在安装了torch的conda环境中执行这个指令👆`{:.info}。  
+`要在安装了torch的conda环境中执行这个指令👆`{:.info}  
 然后将输出的结果设置为CMake脚本的参数`CMAKE_PREFIX_PATH`。  
 
 这里给出一个[示例工程](https://github.com/yuxiaoyuan0406/JetsonInstruction/tree/main/example/libtorch)作为参考。  
@@ -196,6 +196,8 @@ OpenCV如果只需要在python上使用可以用conda安装，如果要用C++而
 
 这里给出一个libtorch+OpenCV的[示例工程](https://github.com/yuxiaoyuan0406/JetsonInstruction/tree/main/example/torchcv)作为参考。
 
-<!-- ## 其他
+## 拓展阅读
 
-__todo__ -->
+[原repo](https://github.com/yuxiaoyuan0406/JetsonInstruction)
+
+[更多配置问题](https://github.com/yuxiaoyuan0406/JetsonInstruction/issues)
