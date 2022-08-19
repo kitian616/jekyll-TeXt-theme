@@ -74,7 +74,7 @@ sudo touch /etc/clash/config.yaml
 首先创建各文件。
 
 ```bash
-sudo touch /usr/lib/systemd/system/clash.servic
+sudo touch /usr/lib/systemd/system/clash.service
 sudo touch /etc/clash/start-clash.sh
 sudo touch /etc/clash/stop-clash.sh
 ```
