@@ -135,7 +135,20 @@ rm /etc/clash/clash.pid
 使用上述的设置，服务启动时会调用`start-clash.sh`脚本，将进程的PID保存到文本文件中，并根据服务配置中的url进行`config.yaml`的更新；
 结束时调用`stop-clash.sh`，使用刚才的PID杀死进程。
 
-编辑完成之后设置启动。
+赋予执行权限。
+
+```bash
+sudo chmod a+x /etc/clash/st*.sh
+```
+
+这中间缺少一个`mmdb`文件，需要手动下载。
+
+```bash
+wget http://www.ideame.top/mmdb/lite/Country.mmdb
+sudo mv Country.mmdb /etc/clash/Country.mmdb
+```
+
+完成之后设置启动。
 
 ```bash
 sudo systemctl enable clash.service
