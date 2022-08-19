@@ -33,6 +33,55 @@ show_author_profile: true
 
 ![imager-settings](/assets/images/2022-08-19-goto-arm64-for-real/imager-settings.png "高级设置界面"){:.rounded}
 
+都设置完成之后开始烧录.
+
+![imager-downloading](/assets/images/2022-08-19-goto-arm64-for-real/imager-downloading.png "烧录中"){:.rounded}
+
+一切正常的话烧录完成之后就可以将sd卡插到树莓派上, 然后启动.
+
+## 基础配置
+
+笔者的树莓派接入了局域网路由器, 想要获得IP可以使用[Advanced IP Scanner](https://www.advanced-ip-scanner.com/)来扫描子网.  
+获得IP后就可以ssh接入.
+
+首先进行系统架构测试.
+
+```bash
+$ uname -a
+Linux raspberrypi 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux
+$ getconf LONG_BIT
+64
+```
+
+可以看到架构和长整型数的位宽都正确.
+
+### 替换软件源
+
+常规步骤更换软件源不再赘述, 参考[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)的[Raspbian 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/)
+
+### 安装必要组件
+
+```bash
+sudo apt install build-essential cmake tmux vim exfat-fuse
+```
+
+- `build-essential` 基础构建工具
+- `cmake`
+- `tmux` 会话管理工具
+- `vim` 文本编辑器
+- `exfat-fuse` exfat文件系统支持
+
+### conda
+
+树莓派上只能安装[Miniforge](https://github.com/conda-forge/miniforge)。
+
+```bash
+wget https://github.com/conda-forge/miniforge/releases/download/4.13.0-1/Miniforge3-4.13.0-1-Linux-aarch64.sh
+sh ./Miniforge3-4.13.0-1-Linux-aarch64.sh
+```
+
 ## 拓展阅读
 
 树莓派操作系统: [Raspberry Pi OS](https://www.raspberrypi.com/software/)
+
+清华大学开源软件镜像站: [Raspbian 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/)
