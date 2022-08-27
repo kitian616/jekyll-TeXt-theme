@@ -24,12 +24,15 @@ titles:
   fr-LU   : *FR
   # @end locale config
 key: page-about
+show_author_profile: true
 ---
 
-![404](https://http.cat/404)
+## 作者
 
-关于？
+DennisYu
 
-关于啥玩意啊关于，小破blog要啥自行车，有个网站不错了。
+硕士研究生在读
 
-凑合看吧嗷。
+## 语言
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuxiaoyuan0406&layout=compact">
