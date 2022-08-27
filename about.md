@@ -24,15 +24,14 @@ titles:
   fr-LU   : *FR
   # @end locale config
 key: page-about
+show_title: false
 show_author_profile: true
 ---
-
-## 作者
-
-DennisYu
-
-硕士研究生在读
 
 ## 语言
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yuxiaoyuan0406&layout=compact">
+
+## 作者
+
+硕士研究生在读
