@@ -1,9 +1,9 @@
 figure.highlight::before {
-  color: $highlight-comment !important;
+  color: $highlight-comment;
   background-color: $highlight-background;
 }
 pre.lineno {
-  color: $highlight-comment !important;
+  color: $highlight-comment;
 }
 .highlight > pre {
   color: $highlight-foreground;
