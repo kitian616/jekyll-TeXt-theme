@@ -63,12 +63,12 @@ public class w15p6 {
         w15p6(input);
     }
 
-    public static void w15p6(Scanner input) {				        
+    public static void w15p6(Scanner input) {                       
         // Map用于存放输入数据中不同的数及其出现的次数
-				Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
-				// 输入数据的过程
-				int n = input.nextInt();
+        // 输入数据的过程
+        int n = input.nextInt();
         for (int i = 0; i < n * n; i++) {
             int in = input.nextInt();
             if (map.containsKey(in))
@@ -77,24 +77,24 @@ public class w15p6 {
                 map.put(in, 1);
         }
 
-				// result数组用于存放计算过程中的最大公因数
-				// 由于result数组初始化为0，恰好
+        // result数组用于存放计算过程中的最大公因数
+        // 由于result数组初始化为0，恰好
         int[] result = new int[n];
         for (int i = 0; i < n; i++) {
-						// 从所有公因数中找到最大的作为当前最大公因数，放入result数组中
+            // 从所有公因数中找到最大的作为当前最大公因数，放入result数组中
             result[i] = getKey(map);
-						// 存放后，将这个数移除到所有出现的公因数中，表示移除这个数与自身进行的最大公因数计算结果
-						// 其他数与这个数的最大公因数计算结果在其他数被找到时计算并移除
-						// 仅移除1个，如果这个数出现次数为0，则将key从Map中清除
+            // 存放后，将这个数移除到所有出现的公因数中，表示移除这个数与自身进行的最大公因数计算结果
+            // 其他数与这个数的最大公因数计算结果在其他数被找到时计算并移除
+            // 仅移除1个，如果这个数出现次数为0，则将key从Map中清除
             map.put(result[i], map.get(result[i]) - 1);
             if (map.get(result[i]) == 0) {
                 map.remove(result[i]);
             }
             for (int j = 0; j < i; j++) {
-								// 遍历所有此前已找到的数
-								// 计算此前已找到的数与当前找到的数的公因数
+                // 遍历所有此前已找到的数
+                // 计算此前已找到的数与当前找到的数的公因数
                 int x = gcd(result[i], result[j]);
-								// 将这个公因数从Map中移除两次，因为一对数之间有两次最大公因数的计算
+                // 将这个公因数从Map中移除两次，因为一对数之间有两次最大公因数的计算
                 if (map.containsKey(x)) {
                     map.put(x, map.get(x) - 1);
                     if (map.get(x) == 0)
@@ -107,7 +107,7 @@ public class w15p6 {
                 }
             }
         }
-				// 倒序输出
+        // 倒序输出
         for (int i = n - 1; i >= 0 ; i--) {
             System.out.print(result[i]);
             if (i != 0)
@@ -117,7 +117,7 @@ public class w15p6 {
     }
 
     public static int getKey(Map<Integer, Integer> map) {
-				// 从存放最大公因数Map中找到最大的公因数，作为当前最大数
+        // 从存放最大公因数Map中找到最大的公因数，作为当前最大数
         Set<Integer> set = map.keySet();
         Object arr[] = set.toArray();
         Arrays.sort(arr);
