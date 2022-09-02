@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 【树莓派学习笔记】局域网代理服务器
-permalink: /article/local-proxy-server
+permalink: /article/local-proxy-server.html
 key: local-proxy-server
 tags: 
   - 树莓派
@@ -68,7 +68,7 @@ sudo touch /etc/clash/config.yaml
 
 ### 开机启动
 
-使用之前提到的[`systemd`方式](/article/wlan1-and-systemd#开机启动)执行一个系统服务守护。  
+使用之前提到的[`systemd`方式](/article/wlan1-and-systemd.html#开机启动)执行一个系统服务守护。  
 但是这里使用了稍微复杂一点但是可定制空间更大配置方式，不仅设置了`systemd`的守护配置，还分别提供了服务启动和结束的脚本。
 
 首先创建各文件。

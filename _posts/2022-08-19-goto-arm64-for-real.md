@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 【树莓派学习笔记】给树莓派刷64位系统
-permalink: /article/goto-arm64-for-real
+permalink: /article/goto-arm64-for-real.html
 key: goto-arm64-for-real
 tags: 
   - 树莓派
@@ -14,7 +14,7 @@ show_author_profile: true
 license: WTFPL
 ---
 
-[之前](/article/goto-arm64#切换)从32位迁移到64位的实践失败了。为了能升级，只能重刷系统。
+[之前](/article/goto-arm64.html#切换)从32位迁移到64位的实践失败了。为了能升级，只能重刷系统。
 
 <!--more-->
 

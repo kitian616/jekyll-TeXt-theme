@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 【码蹄集】Reverse GCD
-permalink: /article/reverse-gcd
+permalink: /article/reverse-gcd.html
 key: reverse-gcd
 tags: 
   - 数论
