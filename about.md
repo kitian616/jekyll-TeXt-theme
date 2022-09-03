@@ -25,6 +25,7 @@ titles:
   # @end locale config
 key: page-about
 show_title: false
+author: Yu Xiaoyuan
 show_author_profile: true
 ---
 
