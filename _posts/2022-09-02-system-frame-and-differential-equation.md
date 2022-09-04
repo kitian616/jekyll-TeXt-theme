@@ -12,6 +12,7 @@ tags:
   - 系统框图
 author: Yu Xiaoyuan
 show_author_profile: true
+license: WTFPL
 ---
 
 根据系统框图写出系统的方程是信号与系统课程中的一种常见题型。这类题往往能根据框图写出一个含有中间变量的常微分方程组。
