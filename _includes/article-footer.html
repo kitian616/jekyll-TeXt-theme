@@ -30,12 +30,19 @@
   {%- include article/footer/custom.html -%}
 
   {%- if _show_author_profile -%}
-    {%- if page.author -%}
-      {%- assign _author = site.data.authors[page.author] -%}
+    {%- if page.authors -%}
+      {%- for _author_name in page.authors -%}
+        {%- assign _author = site.data.authors[_author_name] -%}
+        {%- include article/footer/author-profile.html author=_author -%}
+      {%- endfor -%}
     {%- else -%}
-      {%- assign _author = site.author -%}
+      {%- if page.author -%}
+        {%- assign _author = site.data.authors[page.author] -%}
+      {%- else -%}
+        {%- assign _author = site.author -%}
+      {%- endif -%}
+      {%- include article/footer/author-profile.html author=_author -%}
     {%- endif -%}
-    {%- include article/footer/author-profile.html author=_author -%}
   {%- endif -%}
 
   {%- if _show_subscribe -%}
