@@ -11,6 +11,9 @@ tags:
   - 常微分方程
   - 系统框图
 author: Yu Xiaoyuan
+authors: 
+  - Yu Xiaoyuan
+  - Shao Mingyue
 show_author_profile: true
 license: WTFPL
 ---
