@@ -47,7 +47,7 @@ sudo apt install crossbuild-essential-arm64
 git clone --depth=1 https://github.com/raspberrypi/linux
 ```
 
-这里可以他嗯国`--branch`选项来明确需要拷贝的分支，笔者克隆时默认的分支是`rpi-5.15.y`。
+这里可以通过`--branch`选项来明确需要拷贝的分支，笔者克隆时默认的分支是`rpi-5.15.y`。
 
 ## 交叉编译
 
