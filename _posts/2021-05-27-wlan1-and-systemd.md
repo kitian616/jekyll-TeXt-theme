@@ -1,8 +1,8 @@
 ---
 layout: article
 title: 【树莓派学习笔记】额外的网卡和开机启动脚本
-permalink: /article/wlan1-and-systemd.html
 key: wlan1-and-systemd
+permalink: /article/:title.html
 article_header:
   type: cover
   image:

@@ -1,8 +1,8 @@
 ---
 layout: article
 title: 【树莓派学习笔记】编译Linux内核
-permalink: /article/cross-compiling-linux-kernel.html
 key: cross-compiling-linux-kernel
+permalink: /article/:title.html
 tags: 
   - 树莓派
   - bash

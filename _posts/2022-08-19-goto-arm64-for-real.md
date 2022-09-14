@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 【树莓派学习笔记】给树莓派刷64位系统
-permalink: /article/goto-arm64-for-real.html
+permalink: /article/:title.html
 key: goto-arm64-for-real
 tags: 
   - 树莓派

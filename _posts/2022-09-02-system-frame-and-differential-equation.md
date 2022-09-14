@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 【信号与系统】系统框图和微分方程
-permalink: /article/system-frame-and-differential-equation.html
+permalink: /article/:title.html
 key: system-frame-and-differential-equation
 tags: 
   - 数学

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 【杰森指南】Jetson Nano使用说明
-permalink: /article/new-jetson-nano.html
+permalink: /article/:title.html
 key: new-jetson-nano
 tags: 
   - Jetson Nano
