@@ -1,0 +1,54 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$base-font-family: 'EB Garamond', serif;
+$base-font-size:   large;
+$small-font-size:  0.875em;
+$vsmall-font-size: 0.66em;
+$base-line-height: 1.5;
+$spacing-unit:     1.5em;
+
+$grey-vlight:#eee;
+$grey-light: #ccc;
+$grey:       #888;
+$grey-dark:  #444;
+$grey-vdark: #222;
+$blue:       #0091ed;
+$orange:     #ca6c18;
+$red:        #b6321c;
+
+$background:        $grey-vlight;
+$dark-background:   darken($background, 5%);
+$text-color:        $grey-vdark;
+$text-light-color:  $grey;
+$url-color:         $red;
+$url-hover-color:   $orange;
+$header-text-color: $text-light-color;
+$header-hover-color:$text-color;
+$header-hover-url:  $url-color;
+$line-color:        $grey-light;
+
+// Width of the content area
+$content-width:    50em;
+$content-min-width:15em;
+$mobile:           32em;
+$desktop:          50em;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    "header",
+    "mobile-header",
+    "base",
+    "footer",
+    "page",
+    "syntax-highlighting",
+    "fancy-image"
+;

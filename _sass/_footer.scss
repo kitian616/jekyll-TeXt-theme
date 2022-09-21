@@ -1,0 +1,23 @@
+.site-footer {
+    font-size: $vsmall_font_size;
+    color: $text-light-color;
+    border-top: 1px solid $line-color;
+    padding-top: $spacing-unit;
+    float: none;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:  0;
+    margin-bottom:$spacing-unit;
+    text-align: center;
+    @extend %clearfix;
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: $url-hover-color;
+    text-decoration: underline;
+}

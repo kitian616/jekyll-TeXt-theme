@@ -1,0 +1,28 @@
+I"e<p>During my research of Bayesian Deep Models (integration of Bayesian graphical models with deep learning models), I found several handy tricks when dealing with sigmoid functions. Here, I summarize several for future use and also for other researchers who might find it useful.</p>
+
+<h3 id="variational-lower-bound-on-sigmoid-sigmax">Variational Lower Bound on Sigmoid $\sigma(x)$</h3>
+
+<h3 id="expectation-of-sigmoid-function-with-normal-distribution">Expectation of Sigmoid function with Normal distribution</h3>
+<p>Consider the following logistic-normal integral:</p>
+
+\[g=\int_{-\infty}^{\infty} \sigma(x)\mathcal{N}(x|\mu, \sigma^2) dx = \int_{-\infty}^{\infty} \frac{1}{1+e^{-x}} \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx.\]
+
+<p>The logistic-normal integral does not have analytic expression. However, for mathmatical simplicity, we can approximate the expectation. In the end, we will demonstrate that the integral is approximately a reparameterized logistic function.</p>
+
+<p>First, we can approximate the sigmoid function with a probit function.</p>
+
+\[\sigma(x)\approx \Phi(\xi x), \text{where } \Phi(x)=\int_{-\infty}^x \mathcal{N}(\theta|0,1)d\theta, \text{and } \xi^2=\frac{\pi}{8}\]
+
+<p>A little fact is that the probit-normal integral is just another probit function:</p>
+
+\[\int \Phi(x) \mathcal{N}(x|\mu,\sigma^2) dx = \Phi(\frac{\mu}{\sqrt{1+\sigma^2}})\]
+
+<p>Therefore,</p>
+
+\[g\approx \int_{-\infty}^{\infty} \Phi(\xi x)\mathcal{N}(\mu, \sigma^2) dx = \Phi(\frac{\xi \mu}{\sqrt{1+\xi^2\sigma^2}})\approx \sigma(\frac{\mu}{\sqrt{1+\xi^2\sigma^2}}) = \sigma(\frac{\mu}{\sqrt{1+\pi\sigma^2/8}})\]
+
+<p>It actually means, given a normally distributed random variable $x$, the sigmoid of $x$ is approximately the sigmoid of $\mathbb{E}[x]$ with some adjustment by the variance.</p>
+
+<h3 id="some-others">Some others</h3>
+<p>\(\tanh(x)=2\sigma(2x)-1\)</p>
+:ET

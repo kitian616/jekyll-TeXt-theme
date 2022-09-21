@@ -1,0 +1,75 @@
+I"w<h2 id="publications">Publications</h2>
+
+<p><a href=""><strong>Learning Latent Superstructures in Variational Autoencoders for Deep Multidimensional Clustering</strong></a><br />
+Xiaopeng Li, Zhourong Chen and Nevin L. Zhang<br />
+<em>International Conference on Learning Representations</em>
+ <em>2019</em> 
+<br />Media: [<a href="https://arxiv.org/abs/1803.05206">arXiv</a>]</p>
+
+<p><a href=""><strong>Building Sparse Deep Feedforward Networks using Tree Receptive Fields</strong></a><br />
+Xiaopeng Li, Zhourong Chen and Nevin L. Zhang<br />
+<em>International Joint Conference on Artificial Intelligence</em>
+ <em>2018</em> 
+<br />Media: [<a href="https://arxiv.org/abs/1803.05209">arXiv</a>][<a href="https://github.com/eelxpeng/TreeReceptiveFields">github</a>]</p>
+
+<p><a href=""><strong>Learning Sparse Deep Feedforward Networks via Tree Skeleton Expansion</strong></a><br />
+Zhourong Chen, Xiaopeng Li and Nevin L. Zhang<br />
+<em>arXiv</em>
+ <em>2018</em> 
+<br />Media: [<a href="http://arxiv.org/abs/1803.06120">arXiv</a>]</p>
+
+<p><a href=""><strong>Relational Variational Autoencoder for Link Prediction with Multimedia Data</strong></a><br />
+X. Li and J. She<br />
+<em>ACM SIGMM International Conference on Multimedia Thematic Workshop</em>
+ <em>2017</em> 
+<br />Media: [<a href="">paper</a>][<a href="https://github.com/eelxpeng/RVAE">github</a>]</p>
+
+<p><a href=""><strong>Collaborative Variational Autoencoder for Recommender Systems</strong></a><br />
+X. Li and J. She<br />
+<em>ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>
+ <em>2017</em> 
+<br />Media: [<a href="/assets/paper/Collaborative_Variational_Autoencoder.pdf">paper</a>][<a href="https://github.com/eelxpeng/CollaborativeVAE">github</a>]</p>
+
+<p><a href=""><strong>A Bayesian Neural Network for Deep Learning in Mobile Multimedia using Small Data</strong></a><br />
+X. Li, J. She and M. Cheung<br />
+<em>Submitted to ACM Trans. Multimedia Comput. Commun. Appl. (Under Review)</em>
+ <em>2016</em> 
+<br />Media: [<a href="">paper</a>]</p>
+
+<p><a href=""><strong>Connection Discovery using Shared Images by Gaussian Relational Topic Model</strong></a><br />
+X. Li, M. Cheung and J. She<br />
+<em>IEEE International Conference on Big Data</em>
+ <em>2016</em> 
+<br />Media: [<a href="/assets/paper/GRTM.pdf">paper</a>][<a href="https://github.com/eelxpeng/GRTM">github</a>]</p>
+
+<p><a href=""><strong>A Distributed Streaming Framework for Connection Discovery Using Shared Videos</strong></a><br />
+X. Li, M. Cheung and J. She<br />
+<em>ACM Trans. Multimedia Comput. Commun. Appl.</em>
+ <em>Sep. 18, 2017</em> 
+<br />Media: [<a href="">paper</a>]</p>
+
+<p><a href=""><strong>An Efficient Computation Framework for Connection Discovery using Shared Images</strong></a><br />
+M. Cheung, X. Li and J. She<br />
+<em>ACM Trans. Multimedia Comput. Commun. Appl.</em>
+ <em>Aug. 29, 2017</em> 
+<br />Media: [<a href="">paper</a>]</p>
+
+<p><a href=""><strong>Dance Background Image Recommendation with Deep Matrix Factorization</strong></a><br />
+J. Wen, J. She, X. Li and H. Mao<br />
+<em>ACM Trans. Multimedia Comput. Commun. Appl.</em>
+ <em>2018</em> 
+<br />Media: [<a href="">paper</a>]</p>
+
+<p><a href=""><strong>Visual Background Recommendation for Dance Performances Using Dancer-Shared Images</strong></a><br />
+J. Wen, X. Li, J. She, S. Park and M. Cheung<br />
+<em>IEEE International Conference on Cyber Physical and Social Computing</em>
+ <em>2016</em> 
+<br />Media: [<a href="/assets/paper/Visual_Background_Recommendation_for_Dance_Performances_Using_Dancer-Shared_Images.pdf">paper</a>]</p>
+
+<p><a href=""><strong>Non-user Generated Annotation on User Shared Images for Connection Discovery</strong></a><br />
+M. Cheung, J. She and X. Li<br />
+<em>IEEE International Conference on Cyber Physical and Social Computing</em>
+ <em>2015</em> 
+<br />Media: [<a href="http://ieeexplore.ieee.org/document/7396504/?arnumber=7396504&amp;tag=1">paper</a>]</p>
+
+:ET

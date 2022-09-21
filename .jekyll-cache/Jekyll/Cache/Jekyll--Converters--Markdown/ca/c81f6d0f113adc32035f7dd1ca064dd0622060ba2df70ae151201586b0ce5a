@@ -1,0 +1,8 @@
+I"Ð<h2 id="shared-code-for-final-project-in-comp5213-bayesian-networks">Shared code for final project in COMP5213 Bayesian Networks</h2>
+
+<p>Hierarchical Topic Detection for PMC005 dataset: <a href="/assets/comp5213/website/index.html">example</a></p>
+
+<p>Code for PMC005 dataset preprocessing: <a href="/assets/comp5213/preprocess.py">preprocess.py</a></p>
+
+<p>Code for computing coherence and compactness: <a href="/assets/comp5213/evaluate.py">evaluate.py</a></p>
+:ET

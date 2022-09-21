@@ -1,0 +1,11 @@
+<footer class="site-footer">
+    {{ site.description }}<br />
+
+    Using <a href="http://jekyllrb.com/">Jekyll</a>
+    {% if site.sourcecode %}
+     :: <a href="{{ site.sourcecode }}">Website source</a>
+    {% endif %}
+    {% if site.analytics.provider and page.analytics != false %}
+     :: Analytics by {{ site.analytics.provider }}
+    {% endif %}
+</footer>

@@ -1,0 +1,162 @@
+//  Reset some basic elements
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+// Basic styling
+body {
+    font-family: $base-font-family;
+    font-size:   $base-font-size;
+    line-height: $base-line-height;
+    color:       $text-color;
+    background-color: $background;
+    margin: 0 $spacing-unit/2;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+// Set `margin-bottom` to maintain vertical rhythm
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit/2;
+}
+
+hr {
+    display: block;
+    margin: 0.5em auto;
+    border-style: inset;
+    border-top: 1px solid $line-color;
+    border-bottom: none;
+
+}
+
+// Images
+img {
+    max-width: 100%;
+    margin: auto auto;
+    vertical-align: middle;
+}
+
+// Figures
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+//  Lists
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+//  Headings
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+// Links
+a {
+    color: $url-color;
+    text-decoration: none;
+    &:hover {
+        color: $url-hover-color;
+        text-decoration: none;
+    }
+}
+
+// Blockquotes
+blockquote {
+    background-color: $dark-background;
+    border-left: 4px solid darken($line-color, 66%);
+    padding-left:   1.0em;
+    padding-right:  0.8em;
+    padding-top:    0.8em;
+    padding-bottom: 0.001em;
+    font-style: italic;
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Code formatting
+pre, code {
+    border: 1px solid $line-color;
+    border-radius: 3px;
+    background-color: $dark-background;
+    font-family: monospace;
+    font-size: $small-font-size;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+// Icons
+.icon {
+    > svg {
+        display: inline-block;
+        width: 0.75em;
+        height: 0.75em;
+        vertical-align: middle;
+        path {
+            fill: $text-color;
+        }
+    }
+}
+
+.footnotes ol li {
+    list-style-type:decimal;
+}
+.footnotes ol {
+    font-size: $vsmall-font-size;
+    color: $text-light-color;
+}
+
+ul.listing {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+ul.listing li.listing-seperator {
+    padding-top: 0.75em;
+    font-size: 1.17em;
+}
+
+ul.listing li.listing-item time {
+    color: $text-light-color;
+    text-transform: uppercase;
+    padding-right: 0.5em;
+}
+
+ul.listing li.listing-item a {
+    color: $url-color;
+}

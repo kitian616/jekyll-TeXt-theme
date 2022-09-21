@@ -1,0 +1,18 @@
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project={{ site.analytics.statcounter.sc_project }};
+var sc_invisible={{ site.analytics.statcounter.sc_invisible }};
+var sc_security="{{ site.analytics.statcounter.sc_security }}";
+var sc_text={{ site.analytics.statcounter.sc_text }};
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics ecommerce" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/{{ site.analytics.statcounter.sc_project }}/0/{{ site.analytics.statcounter.sc_security }}/0/"
+alt="shopify analytics ecommerce"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->

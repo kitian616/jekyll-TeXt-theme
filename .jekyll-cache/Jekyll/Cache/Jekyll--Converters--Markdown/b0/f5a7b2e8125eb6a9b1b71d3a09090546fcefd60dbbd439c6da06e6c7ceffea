@@ -1,0 +1,71 @@
+I"Ø<p>As a journey towards PhD, this blog intends to record my research/project articles/activities. My research is related to Machine Learning, Artificial Intelligence, Social Media, etc.</p>
+
+<ul class="listing">
+
+  
+  
+    
+    <li class="listing-seperator">2018</li>
+  
+  <li class="listing-item">
+    <time datetime="2018-03-14">2018-03-14</time>
+    <a href="/blog/2018/03/14/Exponential-Family" title="Exponential Family">Exponential Family</a>
+  </li>
+
+  
+  
+    
+    <li class="listing-seperator">2017</li>
+  
+  <li class="listing-item">
+    <time datetime="2017-12-14">2017-12-14</time>
+    <a href="/blog/2017/12/14/EM-In-Depth" title="EM Algorithm In-depth">EM Algorithm In-depth</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2017-03-09">2017-03-09</time>
+    <a href="/blog/2017/03/09/Tricks-of-Sigmoid-Function" title="Tricks of Sigmoid Function">Tricks of Sigmoid Function</a>
+  </li>
+
+  
+  
+    
+    <li class="listing-seperator">2016</li>
+  
+  <li class="listing-item">
+    <time datetime="2016-11-18">2016-11-18</time>
+    <a href="/blog/2016/11/18/Variational-Autoencoder" title="Variational Autoencoder">Variational Autoencoder</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-09-06">2016-09-06</time>
+    <a href="/blog/2016/09/06/Stochastic-Gradient-Monte-Carlo" title="Stochastic Gradient Monte Carlo">Stochastic Gradient Monte Carlo</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-08-16">2016-08-16</time>
+    <a href="/blog/2016/08/16/Dirichlet-Process" title="Dirichlet Process">Dirichlet Process</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-08-08">2016-08-08</time>
+    <a href="/blog/2016/08/08/Markov-Chain-Monte-Carlo" title="Markov Chain Monte Carlo">Markov Chain Monte Carlo</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-05-13">2016-05-13</time>
+    <a href="/blog/2016/05/13/welcome-to-jekyll" title="Jekyll Cheetsheet">Jekyll Cheetsheet</a>
+  </li>
+
+</ul>
+:ET

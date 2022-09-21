@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaopeng LI</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 21 Sep 2022 01:32:10 -0400</pubDate>
+    <lastBuildDate>Wed, 21 Sep 2022 01:32:10 -0400</lastBuildDate>
+    <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Exponential Family</title>
+        <description>&lt;p&gt;The exponential family distributions are very important in graphical models and Bayesian learning. They have nice properties, like conjugacy and finite sufficient statistics, which enable the convenience and efficiency of the inference and learning process. Yet, I only almost know the details of exponential family distribution. The minor gap between “almost know” and “know” prevents me from understanding it completely. Here I try to close the gap.&lt;/p&gt;
+
+&lt;h2 id=&quot;basics&quot;&gt;Basics&lt;/h2&gt;
+
+&lt;p&gt;The canonical/natural form of exponential family distribution is of the form&lt;/p&gt;
+
+\[p(x|\theta) = \frac{1}{Z(\theta)}h(x)\exp[\theta^T \phi(x)] = h(x)\exp[\theta^T \phi(x) - A(\theta)]\]
+
+&lt;p&gt;where $\theta$ is the natural parameter, $\phi(x)$ is sufficient statistics, $Z(\theta)$ is the partition function, $A(\theta)$ is the log partition function. Let’s write the univariate Gaussian distribution in  exponential family form&lt;/p&gt;
+
+\[\mathcal{N}(x|\mu, \sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}}\exp[-\frac{1}{2\sigma^2}(x-\mu)^2] = \frac{1}{\sqrt{2\pi \sigma^2}}\exp[-\frac{1}{2\sigma^2}\mu^2]\exp[-\frac{1}{2\sigma^2}x^2 + \frac{\mu}{\sigma^2}x]\]
+
+&lt;p&gt;Therefore, it is easy to tell that&lt;/p&gt;
+
+\[\theta = \begin{pmatrix} \frac{\mu}{\sigma^2} \\ -\frac{1}{2\sigma^2}\end{pmatrix} \\
+\phi(x) = \begin{pmatrix}x \\ x^2\end{pmatrix}\\
+Z(\theta) = \sqrt{2\pi \sigma^2}\exp[-\frac{1}{2\sigma^2}\mu^2]\]
+
+&lt;p&gt;There is one beautiful property of the log partition function $\nabla_{\theta}A(\theta) = \mathbb{E}_{p(x)}[\phi(x)]$.&lt;/p&gt;
+
+&lt;h2 id=&quot;mle-estimation&quot;&gt;MLE Estimation&lt;/h2&gt;
+
+&lt;p&gt;Given dataset $\mathcal{D}={x_1, x_2,\cdots,x_N}$, the data likelihood of an exponential family model has the form&lt;/p&gt;
+
+\[p(\mathcal{D}|\theta) = [\prod_{i=1}^N h(x_i)] \frac{1}{Z(\theta)^N} \exp[\theta^T (\sum_{i=1}^N \phi(x_i))]\]
+
+&lt;p&gt;We see that the sufficient statistics are $N$ and $\sum_{i=1}^N \phi(x_i)$. The loglikelihood of the data $\log p(\mathcal{D}|\theta) = \theta^T \phi(\mathcal{D}) - N A(\theta)$ is concave since $-A(\theta)$ is concave in $\theta$, and $\theta^T \phi(\mathcal{D})$ is linear in $\theta$. To compute MLE for the model, we can compute the derivative of the log-likelihood:&lt;/p&gt;
+
+\[\nabla_{\theta} \log p(\mathcal{D}|\theta) = \phi(\mathcal{D}) - N \nabla_{\theta}A(\theta) = \phi(\mathcal{D}) - N \mathbb{E}_{p(X|\theta)}[\phi(X)]\]
+
+&lt;p&gt;Setting this gradient to zero, we see that the empirical average of the sufficient statistics must equal the model’s theoretical expected sufficient statistics, i.e. $\hat{\theta}$ must satiesfy&lt;/p&gt;
+
+\[\mathbb{E}_{p(X|\hat{\theta})}[\phi(X)] = \frac{1}{N}\sum_{i=1}^N \phi(x_i)\]
+
+&lt;p&gt;We need to solve this equation for specific type of distribution, which I will give some examples.&lt;/p&gt;
+
+&lt;h2 id=&quot;mle-for-gaussian-distribution&quot;&gt;MLE for Gaussian distribution&lt;/h2&gt;
+
+&lt;p&gt;For Gaussian distribution, following above, the MLE corresponds to solve&lt;/p&gt;
+
+\[\mathbb{E}[\begin{pmatrix} X \\ X^2 \end{pmatrix}] = \begin{pmatrix} \mu \\ \sigma^2 + \mu^2 \end{pmatrix} = \begin{pmatrix} \frac{1}{N}\sum_{i=1}^N x_i \\ \frac{1}{N}\sum_{i=1}^N x_i^2 \end{pmatrix}\]
+
+&lt;p&gt;Solving this, we have&lt;/p&gt;
+
+\[\mu = \frac{1}{N}\sum_{i=1}^N x_i, \quad \sigma^2 = \frac{1}{N}\sum_{i=1}^N x_i^2 - \mu^2\]
+
+&lt;h2 id=&quot;em-for-gaussian-mixture&quot;&gt;EM for Gaussian Mixture&lt;/h2&gt;
+
+&lt;p&gt;For Gaussian mixture, we can use EM to perform MLE. But first, we should identify the MLE under complete data situation. We know that $p(x|\theta) = \sum_k p(z_k, x) = \sum_k p(z^k=1|\pi) p(x|z^k=1,\mu,\Sigma) = \sum_k \pi_k\mathcal{N}(x|\mu_k, \Sigma_k))$. If we assume that all variables are observed, we can learn the parameters simply by using MLE. The data likelihood is&lt;/p&gt;
+
+\[p(x,z) = p(x|z,\mu, \sigma)p(z|\pi) = \prod_k \pi_k^{z^k} {\mathcal{N}(x|\mu_k,\sigma_k)}^{z^k} \\
+\log p(x,z) = \sum_k z^k \log \pi_k - z^k \frac{1}{2\sigma_k^2}(x-\mu_k)^2 + C\]
+
+&lt;p&gt;Obviously, the sufficient statistics and natural parameter can be identified:&lt;/p&gt;
+
+\[\phi(x, z) = \begin{pmatrix} z^k \\ z^kx \\ z^k x^2 \end{pmatrix}\\
+\theta_k = \begin{pmatrix} \log\pi_k \\ \frac{\mu_k}{\sigma_k^2} \\ -\frac{1}{2\sigma^2}\end{pmatrix}\]
+
+&lt;p&gt;Here we are also able to compute the expected sufficient statistics of the random variable $X$ and $Z$&lt;/p&gt;
+
+\[\mathbb{E}_{p(x,z)}[z^k] = \pi_k, \quad \mathbb{E}_{p(x,z)}[z^k x] = \pi_k\mu_k,\quad \mathbb{E}_{p(x,z)}[z^k x^2] = \pi_k(\sigma^2 + \mu_k^2)\]
+
+&lt;p&gt;Using the MLE rule, given the dataset $\mathcal{D}={x_1, x_2,\cdots,x_N}$, we need to set the $\mathbb{E}[\phi(X)] = \frac{1}{N}\sum_{i=1}^N\phi(x_i)$. This leads to&lt;/p&gt;
+
+\[\pi_k = \frac{1}{N}\sum_i z_i^k, \quad \pi_k\mu_k = \frac{1}{N}\sum_i z_i^k x_i, \quad \pi_k(\sigma_k^2 + \mu_k^2) = \frac{1}{N}\sum_i z_i^k x_i^2 \\
+\pi_k = \frac{1}{N}\sum_i z_i^k, \quad \mu_k = \frac{\sum_i z_i^k x_i}{\sum_i z_i^k}, \quad \sigma_k^2 = \frac{\sum_i z_i^k x_i^2}{\sum_i z_i^k} - \mu_k^2\]
+
+&lt;p&gt;Note that the derivation is different from P351 in Murphy’s book, where one has to enforce the constraints to derive the maximization of $\pi$. Here since we use the MLE property in exponential family, it simplifies the derivation a lot. The results are exactly the same. Now that we have identified the rule for converting the sufficient statistics to the MLE of the parameters, we can now use the EM. In the E-step, we complete the data by computing the posterior distribution of $z$ under current parameter setting $p(z_i^k=1|x_i,\theta^t)$&lt;/p&gt;
+
+\[r_{ik} = p(z_i^k=1|x_i,\theta^t) = \frac{\pi_k p(x_i|\theta_k^{t})}{\sum_{k'}\pi_{k'}p(x_i|\theta_{k'}^t)}\]
+
+&lt;p&gt;In the M-step, we compute optimize the expected complete data loglikelihood, i.e. MLE. This corresponds to take the expectation of the sufficient statistics over $p(z_i^k=1|x_i,\theta^t)$. Then we follow the MLE estimation using the expected sufficient statistics, i.e.&lt;/p&gt;
+
+\[\pi_k = \frac{1}{N}\sum_i r_{ik}, \quad \mu_k = \frac{\sum_i r_{ik} x_i}{\sum_i r_{ik}}, \quad \sigma_k^2 = \frac{\sum_i r_{ik} x_i^2}{\sum_i r_{ik}} - \mu_k^2\]
+
+&lt;h2 id=&quot;stepwise-em-for-gaussian-mixture&quot;&gt;Stepwise EM for Gaussian Mixture&lt;/h2&gt;
+
+&lt;p&gt;The reason why I tried to figure out the derivation of Gaussian mixture using sufficient statistics, instead of the one presented in the book, is that using sufficient statistics will lead to more general optimization method, such as stepwise EM and stochastic variational inference. Stepwise EM is computed as follows&lt;/p&gt;
+
+\[\text{While not converged} \\\text{for each example $i=1:N$ in a random order do}\\
+s_i = \sum_z p(z|x_i, \theta(\mu))\phi(x_i,z);\\
+\mu = (1-\eta_k)\mu + \eta_k s_i;\\
+t = t+1\]
+
+&lt;p&gt;Since we are able to convert sufficient statistics into the MLE of the parameters as above, we only need to update the sufficient statistics $\mu$. Therefore, the Stepwise EM for Gaussian Mixture is as follows&lt;/p&gt;
+
+\[\text{While not converged} \\
+\text{For each example $x_i$ and component $k$ do}\\
+\text{E-step:}\quad r_{ik} = p(z_i^k=1|x_i,\theta^t) \\
+\text{M-step:}\quad \hat{\omega}_k = \hat{\omega}_k + \eta_t (r_{ik} - \hat{\omega}_k) \\
+\hat{\mu}_k = \hat{\mu}_k + \eta_t (r_{ik} x_i - \hat{\mu}_k) \\
+\hat{S}_k = \hat{S}_k + \eta_t (r_{ik} x_ix_i^T - \hat{S}_k) \\
+\text{Update parameter}\quad \pi_k^{t+1} = \hat{\omega}_k, \quad \mu_k^{t+1} = \frac{\hat{\mu}_k}{\omega_k}, \quad \Sigma^{t+1} = \frac{\hat{S}_k}{\omega_k} - {\mu_k^{t+1}}^2 \\
+t = t+1\]
+
+&lt;p&gt;For Stepwise EM with minibatch of size $m$, the algorithm is as follows:&lt;/p&gt;
+
+\[\text{While not converged} \\
+\text{For each minibatch $X$ of size $M$ and component $k$ do}\\
+\text{E-step:}\quad r_{ik} = p(z_i^k=1|x_i,\theta^t) \\
+\text{M-step:}\quad \hat{\omega}_k = \hat{\omega}_k + \eta_t (\sum_{i=1}^M r_{ik} - \hat{\omega}_k) \\
+\hat{\mu}_k = \hat{\mu}_k + \eta_t (\sum_{i=1}^M r_{ik} x_i - \hat{\mu}_k) \\
+\hat{S}_k = \hat{S}_k + \eta_t (\sum_{i=1}^M r_{ik} x_ix_i^T - \hat{S}_k) \\
+\text{Update parameter}\quad \pi_k^{t+1} = \frac{1}{M}\hat{\omega}_k, \quad \mu_k^{t+1} = \frac{\hat{\mu}_k}{\hat{\omega}_k}, \quad \Sigma_k^{t+1} = \frac{\hat{S}_k}{\hat{\omega}_k} - \mu_k^{t+1}{\mu_k^{t+1}}^T \\
+t = t+1\]
+</description>
+        <pubDate>Wed, 14 Mar 2018 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/2018/03/14/Exponential-Family</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/03/14/Exponential-Family</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>EM Algorithm In-depth</title>
+        <description>&lt;p&gt;I find it necessary to understand EM more. As an optimization method for MLE/MAP, it is also related to variational bayes EM (VBEM), Gibbs sampling as well as Wake-sleep algorithm.&lt;/p&gt;
+
+&lt;h3 id=&quot;em-introduction&quot;&gt;EM Introduction&lt;/h3&gt;
+&lt;p&gt;EM algorithm is extremely useful to deal with models with latent variables. It can be used for MLE and MAP estimates. The center idea of EM is that since we have latent variables, which we do not know their value, we can first complete the data by estimating the latent variables with probability, and then maximize the complete data loglikelihood over the parameters.&lt;/p&gt;
+
+&lt;p&gt;Let $x_i$ be the observed variables in case $i$, and let $z_i$ be the hidden variables. The goal is to maximize the loglikelihood of the observed data:&lt;/p&gt;
+
+\[\mathcal{l}(\theta) = \sum_{i=1}^N \log p(x_i|\theta) = \sum_{i=1}^N \log [\sum_{z_i}p(x_i, z_i|\theta)].\]
+
+&lt;p&gt;This is hard to optimize since the log cannot be pushed inside. EM gets around this problem. If we complete the data by estimating the value of $z_i$, then we can get the complete data loglikelihood easily:&lt;/p&gt;
+
+\[\mathcal{l}_c(\theta) =\sum_{i=1}^N \log p(x_i, z_i|\theta).\]
+
+&lt;p&gt;We can estimate the value of $z_i$ using old parameters $\theta^{t}$. But since our estimate of $z$ is not certain, but rather with probability, what we actually get is the so-called expected complete data loglikelihood:&lt;/p&gt;
+
+\[Q(\theta, \theta^{t}) =\sum_{i=1}^N p(z_i|x_i,\theta^{t})\log p(x_i, z_i|\theta) = \mathbb{E}_{z|x,\theta^{t}}[\log p(x_i, z_i|\theta)].\]
+
+&lt;p&gt;This is exactly E-step. The goal of E-step is to compute $Q(\theta,\theta^{t})$, or rather, the terms inside of it which the MLE depends on (sufficient statistics). In the M-step, we optimize the Q function wrt $\theta$:&lt;/p&gt;
+
+\[\theta^{t+1} = \underset{\theta}{\arg\max}Q(\theta, \theta^t).\]
+
+&lt;p&gt;That is EM algorithm. To give an concrete example, let me show the derivation of GMM. The expected completed data loglikelihood is given by&lt;/p&gt;
+
+\[Q(\theta, \theta^{t}) =\sum_{i} \mathbb{E}_{z|x,\theta^t}[\log p(x_i, z_i|\theta)] = \sum_i \mathbb{E}[\log [\prod_{k=1}^K (\pi_k p(x_i|\theta_k))^\mathbb{I}(z_i=k)]]\\
+=\sum_i \sum_k \mathbb{E}[\mathbb{I}(z_i=k)]\log[\pi_k p(x_i|\theta_k)]\\
+=\sum_i \sum_k p(z_i=k|x_i,\theta_t)\log[\pi_k p(x_i|\theta_k)]\\
+=\sum_i \sum_k r_{ik}\log[\pi_k p(x_i|\theta_k)],\]
+
+&lt;p&gt;where $r_{ik} = p(z_i=k|x_i, \theta_t)$ is the responsibility that cluster k takes for data point i. This is computed in E-step. E-step:&lt;/p&gt;
+
+\[r_{ik}=\frac{\pi_k p(x_i|\theta_k^t)}{\sum_{k'}\pi_{k'}p(x_i|\theta_{k'}^t)}.\]
+
+&lt;p&gt;M-step, we optimize Q wrt $\pi$ and $\theta$. For $\pi$, we should remember the constraint that $\sum_k \pi_k = 1$. Taking the Langagian and set the derivatives wrt $\theta$ to zero, we can get $\lambda=\sum_i\sum_k r_{ik}=N$ and $\pi_k = \frac{1}{N}\sum_{i}r_{ik}$. Same for $\theta$:&lt;/p&gt;
+
+\[\mu_k = \frac{\sum_i r_{ik}x_i}{r_k}\\
+\Sigma_k = \frac{\sum_i r_{ik}(x_i - \mu_k)(x_i - \mu_k)^T}{r_k}.\]
+
+&lt;h3 id=&quot;generalized-em-tight-lower-bound-of-data-loglikelihood&quot;&gt;Generalized EM: tight lower bound of data loglikelihood&lt;/h3&gt;
+&lt;p&gt;As stated in Chapter 11 of Murphy’s book, EM actually achieves the tight lower bound of data loglikelihood. The lower bound (or free energy) is&lt;/p&gt;
+
+\[\mathcal{L}(\theta, q_i) = \sum_{z_i} q_i(z_i)\log \frac{p(x_i,z_i|\theta)}{q_i(z_i)}\\
+= \log p(x_i|\theta) - \mathbb{KL}(q_i(z_i)||p(z_i|x_i,\theta)).\]
+
+&lt;p&gt;$\mathcal{L}$ is the lower bound of the data loglikelihood $\log p(x_i|\theta)$, and the gap is $\mathbb{KL}(q_i(z_i)||p(z_i|x_i,\theta))$. We can maximize the lower bound by setting $q_i(z_i) = p(z_i|x_i,\theta))$. Of course, $\theta$ is unknown, so instead we use $q_i^t(z_i) = p(z_i|x_i,\theta^t)$, where $\theta^t$ is our estimate of the parameters at iteration t. With that, we plug back into the lower bound and get&lt;/p&gt;
+
+\[Q(\theta, \theta^t) = \sum_i \mathbb{E}_{z_i|x_i,\theta^t}[\log p(x_i, z_i\theta)] + \mathbb{H}(p(z_i|x_i,\theta^t)).\]
+
+&lt;p&gt;From above, we noticed that the first term is exactly the expected complete data loglikelihood in the EM algorithm. And since the second term is a constant wrt $\theta$, the M-step becomes&lt;/p&gt;
+
+\[\theta^{t+1} = \underset{\theta}{\arg\max}Q(\theta, \theta^t)=\underset{\theta}{\arg\max}\sum_i \mathbb{E}_{z_i|x_i,\theta^t}[\log p(x_i, z_i|\theta)],\]
+
+&lt;p&gt;as before. Therefore, the E-step is to optimize over the $q$ function so as to achieve the tight lower bound of the data loglikelihood of given current model (model parameters) and the M-step is optimizing the tight lower bound over the parameters.&lt;/p&gt;
+
+&lt;h3 id=&quot;vbem-em-using-variational-approximation&quot;&gt;VBEM: EM using variational approximation&lt;/h3&gt;
+&lt;p&gt;Without any constraint on the form of $q_i(z_i)$, of course, the tight lower bound is achievable by simply setting $q_i^t(z_i) = p(z_i|x_i,\theta^t)$. However, when the posterior has no closed form, is intractable and not easy to compute, the tight lower bound cannot be achieved. Variational Bayes makes mean-field assumption on the posterior in order to approximate the true posterior. That is, the constraint on $q_i(z_i)$ is factorial form: $q(z,\theta) = q(\theta)\prod_i q(z_i)$. Here, the full Bayesian inference is made, i.e. treating $\theta$ as a distribution like other variables instead of MAP estimate. The whole process then is exactly as EM, except integrating $\theta$ out in E-step and updating $q(\theta)$ in M-step. That’s why it is called VBEM:&lt;/p&gt;
+
+\[\text{Variational E-step:} \quad \log q(z) = \mathbb{E}_{q(\theta)}[\log p(x, z, \theta)] + \text{const} \\
+\text{Variational M-step:} \quad \log q(\theta) = \mathbb{E}_{q(z)}[\log p(x, z, \theta)] + \text{const},\]
+
+&lt;p&gt;where $\log q_j(x_j) = \mathbb{E}_{-q_j}[\log \tilde{p}(x)] + const$ is the form we usually deal with in variational inference and it is obtained by maximizing lower bound.&lt;/p&gt;
+
+&lt;h3 id=&quot;gibbs-sampling-em-using-monte-carlo-sampling&quot;&gt;Gibbs Sampling: EM using Monte Carlo sampling&lt;/h3&gt;
+&lt;p&gt;The steps of Gibbs sampling has surprising resemblance with EM. Gibbs sampling can be seen as the two sampling steps involving latent variable $z$ and parameter $\theta$:&lt;/p&gt;
+
+\[z^{t+1} \sim p(z|x, \theta^t) \\
+\theta^{t+1} \sim p(\theta|x, z^{t+1}).\]
+
+&lt;p&gt;The first step resembles E-step, and the second step resembles M-step. In EM, the E-step computes the exact posterior distribution $p(z|x, \theta^t)$ for $z$, while the M-step computes the MAP estimate of $\theta$. In Gibbs sampling, the first step instead samples from $p(z|x, \theta^t)$, while the second step instead samples from the distribution of $\theta$.&lt;/p&gt;
+
+&lt;h3 id=&quot;wake-sleep-em-for-probabilistic-deep-model&quot;&gt;Wake-sleep: EM for probabilistic deep model&lt;/h3&gt;
+&lt;p&gt;Wake-sleep is an algorithm proposed by Hinton for training DBN and DBM (unsupervisedly). The network has recognition weights, which convert the input into representations in successive hidden layers, and generative weights, which reconstruct the representation. In the “wake” phase, neurons are driven by recognition connections, and generative weights are adapted to increase the probability that the would reconstruct the correct activity vector in the layer below. In the “sleep” phase, neurons are driven by generative connections, and recognition weights are adapted to increase the probability that they would produce the correct activity vector in the layer above. Wake-sleep algorithm is also optimizing the free energy:&lt;/p&gt;
+
+\[\log P(d;G) \geq \log P(d;G) - \mathbb{KL}(Q(h|d;R), P(h|d;G))\\
+F(d;R,G) = -\log P(d;G) + \mathbb{KL}(Q(h|d;R), P(h|d;G)).\]
+
+&lt;p&gt;This exactly resembles the free energy of EM algorithm, and the “wake” phase corresponds to M-step, “sleep” phase corresponds to E-step. The distribution $Q(h|d)$ produced by the recognition weights is a factorial distribution in each hidden layer because the recognition weights produce stochastic states of units within a hidden layer that are conditional independent, given the states in the layer below. It is natural to use factorial distribution in neural net because it allows the probability distribution over the $2^n$ alternative hidden representations to be specified with $n$ numbers instead of $2^n-1$. During “wake” phase, minimizing the free energy wrt the generative weights will tend to favor the model whole posterior distribution is most similar to $Q(h|d)$. Thus, the effect of factorial distribution in $Q(h|d)$ is not severe.&lt;/p&gt;
+
+&lt;p&gt;Although generally considered as approximating the normalization constant, the contrastive divergence (CD) algorithm for training RBM is also similar to wake-sleep algorithm if considering only generating one sample.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, many good ideas in machine learning are remarkablely similar. One has to find the underlying connections in order to develop deep understanding of the algorithms. I read some of the points from online or books, and I am not at all fully understand all of them. But the subtle connections are really interesting. And I think that, although many people are interested in deep neural networks without probabilistic, there are indeed many ideas that are more straightforward and more promising under probabilistic framework, especially unsupervised deep learning.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 Dec 2017 23:00:00 -0500</pubDate>
+        <link>http://localhost:4000/blog/2017/12/14/EM-In-Depth</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/12/14/EM-In-Depth</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Tricks of Sigmoid Function</title>
+        <description>&lt;p&gt;During my research of Bayesian Deep Models (integration of Bayesian graphical models with deep learning models), I found several handy tricks when dealing with sigmoid functions. Here, I summarize several for future use and also for other researchers who might find it useful.&lt;/p&gt;
+
+&lt;h3 id=&quot;variational-lower-bound-on-sigmoid-sigmax&quot;&gt;Variational Lower Bound on Sigmoid $\sigma(x)$&lt;/h3&gt;
+
+&lt;h3 id=&quot;expectation-of-sigmoid-function-with-normal-distribution&quot;&gt;Expectation of Sigmoid function with Normal distribution&lt;/h3&gt;
+&lt;p&gt;Consider the following logistic-normal integral:&lt;/p&gt;
+
+\[g=\int_{-\infty}^{\infty} \sigma(x)\mathcal{N}(x|\mu, \sigma^2) dx = \int_{-\infty}^{\infty} \frac{1}{1+e^{-x}} \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx.\]
+
+&lt;p&gt;The logistic-normal integral does not have analytic expression. However, for mathmatical simplicity, we can approximate the expectation. In the end, we will demonstrate that the integral is approximately a reparameterized logistic function.&lt;/p&gt;
+
+&lt;p&gt;First, we can approximate the sigmoid function with a probit function.&lt;/p&gt;
+
+\[\sigma(x)\approx \Phi(\xi x), \text{where } \Phi(x)=\int_{-\infty}^x \mathcal{N}(\theta|0,1)d\theta, \text{and } \xi^2=\frac{\pi}{8}\]
+
+&lt;p&gt;A little fact is that the probit-normal integral is just another probit function:&lt;/p&gt;
+
+\[\int \Phi(x) \mathcal{N}(x|\mu,\sigma^2) dx = \Phi(\frac{\mu}{\sqrt{1+\sigma^2}})\]
+
+&lt;p&gt;Therefore,&lt;/p&gt;
+
+\[g\approx \int_{-\infty}^{\infty} \Phi(\xi x)\mathcal{N}(\mu, \sigma^2) dx = \Phi(\frac{\xi \mu}{\sqrt{1+\xi^2\sigma^2}})\approx \sigma(\frac{\mu}{\sqrt{1+\xi^2\sigma^2}}) = \sigma(\frac{\mu}{\sqrt{1+\pi\sigma^2/8}})\]
+
+&lt;p&gt;It actually means, given a normally distributed random variable $x$, the sigmoid of $x$ is approximately the sigmoid of $\mathbb{E}[x]$ with some adjustment by the variance.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-others&quot;&gt;Some others&lt;/h3&gt;
+&lt;p&gt;\(\tanh(x)=2\sigma(2x)-1\)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Mar 2017 23:00:00 -0500</pubDate>
+        <link>http://localhost:4000/blog/2017/03/09/Tricks-of-Sigmoid-Function</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/03/09/Tricks-of-Sigmoid-Function</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Variational Autoencoder</title>
+        <description>&lt;p&gt;Variational Autoencoder (VAE) has been proposed for two years. During the past two years, some good papers related variational autoencoder come up time to time. And I think it is a good tool worth investigating. Recently, I decide to do something about collaborative recommendation with cross-modality multimedia content using Bayesian deep learning. I think VAE could be a good help. In this post, I’ll investigate and explain VAE in my way.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Nov 2016 23:00:00 -0500</pubDate>
+        <link>http://localhost:4000/blog/2016/11/18/Variational-Autoencoder</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/11/18/Variational-Autoencoder</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Stochastic Gradient Monte Carlo</title>
+        <description>&lt;p&gt;Lately, I’m trying to investigate Bayesian Deep Learning and seriously considering it to be my PhD topic. Combining Bayesian with Deep Learning is current hot topic and with the current development of stochastic gradient monte carlo, I think it’s time for Bayesian Deep Learning to fly. And I could probably benefit from it a lot.&lt;/p&gt;
+
+&lt;h1 id=&quot;hamiltonian-monte-carlo&quot;&gt;Hamiltonian Monte Carlo&lt;/h1&gt;
+&lt;p&gt;A perfect tutorial for introduction of Hamiltonian Monte Carlo is &lt;a href=&quot;https://theclevermachine.wordpress.com/2012/11/18/mcmc-hamiltonian-monte-carlo-a-k-a-hybrid-monte-carlo/&quot;&gt;MCMC: Hamiltonian Monte Carlo (a.k.a. Hybrid Monte Carlo)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;stochastic-gradient-monte-carlo&quot;&gt;Stochastic Gradient Monte Carlo&lt;/h1&gt;
+
+&lt;p&gt;Here, I’m going to run some examples using Hamiltonian Monte Carlo, Stochastic Gradient Langevin Dynamics and Stochastic Gradient Hamiltonian Monte Carlo.&lt;/p&gt;
+
+&lt;p&gt;Suppose we are dealing with target distribution of&lt;/p&gt;
+
+\[U(\theta)=-2\theta^2 + \theta^4.\]
+
+&lt;p&gt;Think of it as the un-normalized log probability of&lt;/p&gt;
+
+\[U(\theta) = - \sum_{x \in \mathcal{D}} \log p(x|\theta) - \log p(\theta)\]
+
+&lt;p&gt;Then the un-normalized posterior of $\theta$ is given by:&lt;/p&gt;
+
+\[p(\theta | \mathcal{D}) \propto \exp(-U(\theta)).\]
+
+&lt;p&gt;And the true gradient is&lt;/p&gt;
+
+\[\nabla U(\theta) = -4\theta + 4\theta^3.\]
+
+&lt;p&gt;However, if stochastic gradient noise, the gradient we get by calculating stochastic gradient would have an additional noise term. Let’s define the noisy gradient as&lt;/p&gt;
+
+\[\nabla \tilde{U}(\theta) = -4\theta^2 + 4\theta^3 + \mathcal{N}(0,4).\]
+
+&lt;p&gt;Let’s see how we can approximate this target distribution with noisy gradient using monte carlo methods.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;%matplotlib inline
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+nsample = 80000;
+xStep = 0.1;
+m = 1;
+C = 3;
+dt = 0.1;
+nstep = 50;
+V = 4;
+
+#set random seed
+np.random.seed(10);
+
+def U(x):
+    return -2 * x**2+x**4
+def gradU(x):
+    return -4*x+4*x**3+np.random.randn()*2
+def gradUPerfect(x):
+    return -4*x+4*x**3
+#draw probability diagram
+xGrid = np.array(np.arange(-2,2,xStep));
+y = np.exp( - U(xGrid) ); # take exponential to convert from log to un-normalized probability
+y = y / sum(y) / xStep; # normalize, then divided by xStep to calculate the density
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# &quot;Gold Standard&quot; Hamiltonian Monte Carlo
+def hmc( U, gradU, m, dt, nstep, x, mhtest ):
+    # HMC using gradU, for nstep, starting at position x
+    p = np.random.randn() * np.sqrt( m );
+    oldX = x;
+    oldEnergy = p * m * p / 2 + U(x); 
+    # do leapfrog
+    for i in range(nstep):
+        p = p - gradU( x ) * dt / 2;
+        x = x + p/m * dt;
+        p = p - gradU( x ) * dt / 2;
+
+    p = -p;
+
+    # M-H test
+    if mhtest != 0:
+        newEnergy  = p * m * p / 2 + U(x);
+        if np.exp(oldEnergy- newEnergy) &amp;lt; np.random.rand():
+            # reject
+            x = oldX;
+    return x
+
+# HMC without noise with M-H
+samples = np.zeros(nsample);
+x = 0;
+for i in range(nsample):
+    x = hmc( U, gradUPerfect, m, dt, nstep, x, 1); # no stochastic gradient noise
+    samples[i] = x;
+    
+[yhmc,xhmc] = np.histogram(samples, xGrid);
+yhmc = 1.0 * yhmc / np.sum(yhmc) / xStep;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Stochastic Gradient Langevin Dynamics
+def sgld( U, gradU, m, dt, nstep, x, C, V ):
+    # vanilla SGLD using gradU, for L steps, starting at position x
+    sigma = np.sqrt( 2 * dt);
+    for t in range(nstep):
+        dx = - gradU( x ) * dt + np.random.randn() * sigma;
+        x = x + dx;
+# SGHMC with noise, no M-H
+samples = np.zeros(nsample);
+x = 0;
+for i in range(nsample):
+    x = sghmc( U, gradU, m, dt, nstep, x, C, V );
+    samples[i] = x;
+
+ysgld,xsgld = np.histogram(samples, xGrid);
+ysgld = 1.0 * ysgld / sum(ysgld) / xStep;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Stochastic Gradient Hamiltonian Monte Carlo
+def sghmc( U, gradU, m, dt, nstep, x, C, V ):
+    # SGHMC using gradU, for nstep, starting at position x
+    p = np.random.randn() * np.sqrt( m );
+    B = 0.5 * V * dt; 
+    D = np.sqrt( 2 * (C-B) * dt );
+
+    for i in range(nstep):
+        p = p - gradU( x ) * dt  - p * C * dt  + np.random.randn()*D;
+        x = x + p/m * dt;
+    return x
+
+# SGHMC with noise, no M-H
+samples = np.zeros(nsample);
+x = 0;
+for i in range(nsample):
+    x = sghmc( U, gradU, m, dt, nstep, x, C, V );
+    samples[i] = x;
+
+ysghmc,xsghmc = np.histogram(samples, xGrid);
+ysghmc = 1.0 * ysghmc / sum(ysghmc) / xStep;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# plot the approximated distribution
+plt.plot(xGrid,y,'-',xhmc[1:],yhmc,'g-v',xsgld[1:], ysgld, 'm-x', xsghmc[1:],ysghmc,'r')
+plt.legend( ('True Distribution', 'Standard HMC', 'SGLD', 'SGHMC'), loc='center left', bbox_to_anchor=(1, 0.5))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;matplotlib.legend.Legend at 0x1064ea110&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Stochastic-Gradient-Monte-Carlo/Stochastic-Gradient-Monte-Carlo_6_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s great. We now know that under stochastic gradient noise, we can still approximate the true posterior distribution using monte carlo methods, i.e. SGLD and SGHMC.&lt;/p&gt;
+
+&lt;h2 id=&quot;logistic-regression-using-stochastic-gradient-monte-carlo&quot;&gt;Logistic Regression using Stochastic Gradient Monte Carlo&lt;/h2&gt;
+
+&lt;p&gt;Now let’s do the simplest case, logistic regression. Hope we can see how stochastic gradient monte carlo actually can be applied to real machine learning problem.&lt;/p&gt;
+
+&lt;p&gt;First, let’s construct a toy dataset. We draw our $X$ data from a 2-D normal distribution, $\mathcal{N}(\mu,\Sigma)$.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+# Setting for data simulation
+N = 1000; # data size
+D = 3; # parameter size
+#betaTrue = np.random.randint(-1, 2, size=(D,1));
+betaTrue = np.array([2,3,1]).T
+
+# Add correlation to design matrix X
+muDesg = np.zeros(D-1);
+corrX = 0.2;
+SigmaDesg = np.zeros((D-1,D-1));
+for i in range(D-1):
+    for j in range(i,D-1):
+        SigmaDesg[i,j] = corrX ** (j-i);
+        SigmaDesg[j,i] = SigmaDesg[i,j];
+
+X = np.hstack((np.ones((N,1)),np.random.multivariate_normal(muDesg,SigmaDesg,N)));
+probTrue = np.exp(np.dot(X, betaTrue))/(1+np.exp(np.dot(X, betaTrue)));
+y = np.zeros(N);
+for j in range(N):
+    y[j] = np.random.binomial(1,probTrue[j]);
+
+NTest = 1000
+XTest = np.hstack((np.ones((NTest,1)),np.random.multivariate_normal(muDesg,SigmaDesg,NTest)));
+probTrueTest = np.exp(np.dot(XTest, betaTrue))/(1+np.exp(np.dot(XTest, betaTrue)));
+yTest = np.zeros(NTest);
+for j in range(NTest):
+    yTest[j] = np.random.binomial(1,probTrueTest[j]);
+    
+cmap, norm = matplotlib.colors.from_levels_and_colors([0, 1, 2], ['red', 'green'])
+plt.scatter(X[:,1], X[:,2], c=y, cmap=cmap)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;matplotlib.collections.PathCollection at 0x10cb79b50&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Stochastic-Gradient-Monte-Carlo/Stochastic-Gradient-Monte-Carlo_10_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, let’s see how each of the methods above can perform logistic regression on this dataset. Here we use prior of normal distribution for $\beta$:&lt;/p&gt;
+
+\[\beta \sim \mathcal{N}(0,\sigma I)\]
+
+&lt;p&gt;For logistic regression, we have following distribution:&lt;/p&gt;
+
+\[p(y_k=1|x_k,w) = \frac{e^{w^T x_k}}{1+e^{w^T x_k}}\]
+
+\[\mathcal{L}(w) = \sum_k y_k \log p(y_k=1|x_k,w) + (1-y_k) \log(1-p(y_k=1|x_k,w))\]
+
+\[\nabla \mathcal{L}(w) = \sum_k (y_k - p(y_k=1|x_k,w)) x_k\]
+
+&lt;p&gt;Let’s use SGD as baseline.&lt;/p&gt;
+
+&lt;h3 id=&quot;logistic-regression-with-sgd&quot;&gt;Logistic Regression with SGD&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# SGD
+def prob(w,X):
+    return 1.0/(1+np.exp(-X.dot(w)))
+ 
+def cost(w,X,y,r):
+    return -np.sum(y*np.log(prob(w,X))+(1-y)*np.log(1-prob(w,X))) + r * np.dot(w.T,w) /2
+ 
+def grad(w,X,y,r):
+    return -np.dot(X.T,y-prob(w,X)) + r * w
+
+w = np.random.rand(3)
+r = 0.1
+i = 0
+lr = 1e-3
+while np.linalg.norm(grad(w,X,y,r)) &amp;gt; 1e-6:
+    if i % 1000 == 0:
+        print('[Iter %d]: cost=%f' % (i,cost(w,X,y,r)))
+    w = w - lr*grad(w,X,y,r)
+    i += 1
+print &quot;weight: &quot;, w[0],w[1],w[2]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Iter 0]: cost=605.040794
+[Iter 1000]: cost=278.583159
+weight:  2.02798388293 3.42836274096 0.931072930232
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Prediction results for SGD
+accSGLD = np.mean((prob(w, XTest) &amp;gt; 0.5) == yTest);
+print('The test accuracy is %f' % accSGLD)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The test accuracy is 0.855000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;logistic-regression-with-sgld&quot;&gt;Logistic Regression with SGLD&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Stochastic Gradient Langevin Dynamics
+import scipy.special
+
+def logistic_function(x):
+    return .5 * (1 + np.tanh(.5 * x))
+
+def LR_SGLD(X,y):
+    maxIter = 10000;
+
+    # plot index
+    plotInd = 1;
+
+    N, D = X.shape; # data size
+
+    tau = int(np.floor(np.sqrt(N))); # size of minibatch
+
+    # step size
+    # a = 1;
+    # b = 1;
+    # gamma = 0.7;
+
+    # prior
+    muStar = np.zeros(D);
+    sigma = 0.1;
+    SigmaStar = np.eye(D)*sigma;
+    invSigmaStar = np.linalg.inv(SigmaStar);
+
+    # Initialize
+    beta0 = np.random.rand(D);
+    betaVec = np.zeros((maxIter,D));
+    betaVec[0,:] = beta0;
+
+    eta = np.zeros(maxIter);
+    z = np.zeros((maxIter,D));
+
+    eta0 = 0.01;
+
+    # sgld iteration
+    for t in range(maxIter-1):
+        # random sample a minibatch
+        S = np.random.choice(N,tau, replace=False);
+
+        # sample coordinates of z
+        # eta(t) = a*(b+t)^(-gamma);
+        eta[t] = max(1/(t+1),eta0);
+        zVar = eta[t] * 2;
+        z[t,:] = np.random.randn(D) * np.sqrt(zVar);
+        
+        gradR = np.dot(invSigmaStar,(betaVec[t,:]-muStar));
+        #print gradR
+        gradL = -np.dot(X[S,:].T,(y[S]-scipy.special.expit(np.dot(X[S,:],betaVec[t,:]))));
+        #print gradL
+
+        betaVec[t+1,:] = betaVec[t,:]-eta[t]*(gradR+N/tau*gradL)+z[t,:];
+        #print betaVec[t+1,:]
+
+    if plotInd == 1:
+        fig = plt.figure();
+        ax1 = fig.add_subplot(311)
+        ax1.plot(range(maxIter),betaVec[:,1]);
+        ax2 = fig.add_subplot(312)
+        ax2.plot(range(maxIter),betaVec[:,2]);
+        ax3 = fig.add_subplot(313)
+        ax3.plot(range(maxIter),betaVec[:,2]);
+
+    burnIn = int(0.5*maxIter);
+    samples = betaVec[burnIn+1:,:];
+    return samples
+
+samples = LR_SGLD(X,y)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Stochastic-Gradient-Monte-Carlo/Stochastic-Gradient-Monte-Carlo_16_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;np.mean(samples,0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array([ 1.51066479,  2.60689302,  0.77643745])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;plt.subplot(311)
+plt.hist(samples[:,0],20)
+plt.title(&quot;Dimension 1&quot;)
+plt.xlabel(&quot;Value&quot;)
+plt.ylabel(&quot;Frequency&quot;)
+plt.subplot(312)
+plt.hist(samples[:,1],20)
+plt.title(&quot;Dimension 1&quot;)
+plt.xlabel(&quot;Value&quot;)
+plt.ylabel(&quot;Frequency&quot;)
+plt.subplot(313)
+plt.hist(samples[:,2],20)
+plt.title(&quot;Dimension 1&quot;)
+plt.xlabel(&quot;Value&quot;)
+plt.ylabel(&quot;Frequency&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;matplotlib.text.Text at 0x10bc85f10&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Stochastic-Gradient-Monte-Carlo/Stochastic-Gradient-Monte-Carlo_18_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Prediction results for SGLD
+betaSamples = samples;
+probPred = np.mean(scipy.special.expit(np.dot(XTest,betaSamples.T)),1);
+#loglikSGLD(l) = sum(yTest.*log(probPred)+(1-yTest).*log(1-probPred));
+accSGLD = np.mean((probPred &amp;gt; 0.5) == yTest);
+print('Test accuracy is %f' %accSGLD)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test accuracy is 0.853000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As it can be seen, using SGLD with minibatch of only about 30, we can approximate the true posterior. Furthermore, as interested by many recent papers, from the posterior distribution of the parameters, we can obtain the uncertainty of the model about the prediction.&lt;/p&gt;
+
+&lt;h3 id=&quot;logistic-regression-with-sghmc&quot;&gt;Logistic Regression with SGHMC&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Stochastic Gradient Hamiltonian Monte Carlo
+import scipy.special
+
+def logistic_function(x):
+    return .5 * (1 + np.tanh(.5 * x))
+
+def LR_SGHMC(X,y):
+    maxIter = 10000;
+
+    # plot index
+    plotInd = 1;
+
+    N, D = X.shape; # data size
+
+    tau = int(np.floor(np.sqrt(N))); # size of minibatch
+
+    # step size
+    # a = 1;
+    # b = 1;
+    # gamma = 0.7;
+
+    # prior
+    muStar = np.zeros(D);
+    sigma = 0.1;
+    SigmaStar = np.eye(D)*sigma;
+    invSigmaStar = np.linalg.inv(SigmaStar);
+
+    # Initialize
+    beta0 = np.random.rand(D);
+    betaVec = np.zeros((maxIter,D));
+    betaVec[0,:] = beta0;
+
+    eta = np.zeros(maxIter);
+    z = np.zeros((maxIter,D));
+
+    eta0 = 0.01;
+
+    # sghmc iteration
+    for t in range(maxIter-1):
+        # random sample a minibatch
+        S = np.random.choice(N,tau, replace=False);
+
+        # parameters of sghmc
+        C = np.eye(D)
+        Bh = 0
+        
+        # eta(t) = a*(b+t)^(-gamma);
+        eta[t] = max(1/(t+1),eta0);
+        zCov = eta[t] * 2 * (C - Bh);
+        z[t,:] = np.random.multivariate_normal(np.zeros(D),zCov);
+        
+        gradR = np.dot(invSigmaStar,(betaVec[t,:]-muStar));
+        gradL = -np.dot(X[S,:].T,(y[S]-scipy.special.expit(np.dot(X[S,:],betaVec[t,:]))));
+
+        #betaVec[t+1,:] = betaVec[t,:]-eta[t]*(gradR+N/tau*gradL) - eta[t]*np.dot(C,betaVec[t,:]) + z[t,:];
+        #using momentum equaivalent update
+        # Wrong! update it
+        betaVec[t+1,:] = betaVec[t,:]-eta[t]*(gradR+N/tau*gradL) - eta[t]*np.dot(C,betaVec[t,:]) + z[t,:];
+
+    if plotInd == 1:
+        fig = plt.figure();
+        ax1 = fig.add_subplot(311)
+        ax1.plot(range(maxIter),betaVec[:,1]);
+        ax2 = fig.add_subplot(312)
+        ax2.plot(range(maxIter),betaVec[:,2]);
+        ax3 = fig.add_subplot(313)
+        ax3.plot(range(maxIter),betaVec[:,2]);
+
+    burnIn = int(0.5*maxIter);
+    samples = betaVec[burnIn+1:,:];
+    return samples
+
+samples_SGHMC = LR_SGHMC(X,y)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Stochastic-Gradient-Monte-Carlo/Stochastic-Gradient-Monte-Carlo_22_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;np.mean(samples_SGHMC,0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array([ 1.46368518,  2.5681857 ,  0.74677892])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;plt.subplot(311)
+plt.hist(samples_SGHMC[:,0],20)
+plt.title(&quot;Dimension 1&quot;)
+plt.xlabel(&quot;Value&quot;)
+plt.ylabel(&quot;Frequency&quot;)
+plt.subplot(312)
+plt.hist(samples_SGHMC[:,1],20)
+plt.title(&quot;Dimension 1&quot;)
+plt.xlabel(&quot;Value&quot;)
+plt.ylabel(&quot;Frequency&quot;)
+plt.subplot(313)
+plt.hist(samples_SGHMC[:,2],20)
+plt.title(&quot;Dimension 1&quot;)
+plt.xlabel(&quot;Value&quot;)
+plt.ylabel(&quot;Frequency&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;matplotlib.text.Text at 0x114e7d750&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Stochastic-Gradient-Monte-Carlo/Stochastic-Gradient-Monte-Carlo_24_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Prediction results for SGHMC
+betaSamples = samples_SGHMC;
+probPred = np.mean(scipy.special.expit(np.dot(XTest,betaSamples.T)),1);
+#loglikSGLD(l) = sum(yTest.*log(probPred)+(1-yTest).*log(1-probPred));
+accSGLD = np.mean((probPred &amp;gt; 0.5) == yTest);
+print('Test accuracy is %f' %accSGLD)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Test accuracy is 0.851000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I think this concludes my trial towards Stochastic Gradient Monte Carlo methods. It has been shown that both stochstic gradient monte carlo methods, i.e. Stochastic Gradient Langevin Dynamics and Stochastic Gradient Hamiltonian Monte Carlo, are effective using minibatch of data, showing the scalability towards big data. Some works even show the online algorithm, such as online LDA using stochastic gradient monte carlo. I think it is a big step in Bayesian history.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;[1] Welling, Max, and Yee W. Teh. “Bayesian learning via stochastic gradient Langevin dynamics.” Proceedings of the 28th International Conference on Machine Learning (ICML-11). 2011.&lt;/p&gt;
+
+&lt;p&gt;[2] Chen, Tianqi, Emily B. Fox, and Carlos Guestrin. “Stochastic Gradient Hamiltonian Monte Carlo.” ICML. 2014.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Sep 2016 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/2016/09/06/Stochastic-Gradient-Monte-Carlo</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/06/Stochastic-Gradient-Monte-Carlo</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Dirichlet Process</title>
+        <description>&lt;p&gt;Lately I’m dealing with Bayesian non-parametric in order for the praparation of my next paper. Therefore, I spent several days trying to learn and understand Dirichlet process. Dirichlet process is at first difficult to understand, mainly because it is very different from our previous parametric methods and it uses advanced mathmetical concepts. I struggled several days to finally understand Dirichlet process. Once you understand it, it becomes very easy.&lt;/p&gt;
+
+&lt;p&gt;$G$ is a random probability measure. We say $G$ is Dirichlet process distributed with base distribution $H$ and concentration parameter $\alpha$, written $G \sim DP(\alpha,H)$ if&lt;/p&gt;
+
+\[(G(A_1),...,G(A_r)) \sim Dir(\alpha H(A_1),...,\alpha H(A_r))\]
+
+&lt;p&gt;for every finite measure partition $A_1,…,A_r$ of $\Theta$.&lt;/p&gt;
+
+&lt;p&gt;In every tutorial and lecture, we are told that a sample from Dirichlet process is discrete and has point mass at atoms. In order to understand why this is that, it is important to know the posterior of Dirichlet process.
+Let $\theta_1,…,\theta_n$ be a sequence of independent draws from $G$. 
+Let $n_k = \sharp\{i: \theta_i \in A_k\}$ be the number of observed values in $A_k$. From the conjugacy between the Dirichlet and multinomial, we have&lt;/p&gt;
+
+\[(G(A_1),...,G(A_r))|\theta_1,...,\theta_n \sim Dir(\alpha H(A_1)+n_1,...,\alpha H(A_r)+n_r) \\
+G|\theta_1,...\theta_n \sim DP(\alpha+n,\frac{\alpha}{\alpha+n}H+\frac{n}{\alpha+n}\frac{\sum_{i=1}^n \delta_{\theta_i}}{n})\]
+
+&lt;p&gt;Therefore, the posterior predictive given first $n$ observations is given by posterior of $G$, integrating out (i.e. the base distribution of posterior Dirichlet process):&lt;/p&gt;
+
+\[\begin{aligned}
+P(\theta \in A | G,\theta_1,...,\theta_n) &amp;amp;= E[G(A)|\theta_1,...,\theta_n]\\
+&amp;amp;= \frac{1}{\alpha+n}(\alpha H(A)+\sum_{i=1}^n \delta_{\theta_i}(A))
+\end{aligned}\]
+
+&lt;p&gt;That is to say:&lt;/p&gt;
+
+\[\theta_{n+1}|\theta_1,...,\theta_n \sim \frac{1}{\alpha+n}(\alpha H + \sum_{i=1}^n \delta_{\theta_i})\]
+
+&lt;p&gt;This in fact show that a sample from Dirichlet process has point masses located at the previous draws $\theta_1,…,\theta_n$. With positive probability, draws from G will take on the same value as previous seen observations. While it also has probability to draw from prior distribution $H$, smooth or not. With long enough sequence of draws from G, the value of any draw will be repeated by another draw, implying that $G$ is composed only of a weighted sum of point masses, i.e. it is a discrete distribution.&lt;/p&gt;
+
+\[G = \sum_{k=1}^{\infty} \pi_k\delta_{\theta_k^*}\]
+
+&lt;p&gt;The above predictive in fact corresponds to MacQueen urn scheme and the above infinite sum corresponds to Stick-breaking construction. And the famous Chinese Restaurant Process is in fact very similar to MacQueen urn scheme except for different metaphor, both construction has rich-get-richer property. I don’t want to repeat the constructions here, but refer to &lt;a href=&quot;http://videolectures.net/mlss07_teh_dp/&quot;&gt;Yee Whye Teh’s tutorial&lt;/a&gt; if necessary.&lt;/p&gt;
+
+&lt;p&gt;However, I do want to state the stick-breaking construction here since it would be useful for susequent Dirichlet Process Mixture Model. The stick-breaking construction separates the construction of $\pi$ and $\theta$. The construction of $\pi$ follows stick-breaking process&lt;/p&gt;
+
+\[\beta_k \sim Beta(1,\alpha)\\
+\pi_k = \beta_k \prod_{l=1}^{k-1}(1-\beta_k)\]
+
+&lt;p&gt;also written as $\pi \sim GEM(\alpha)$. And the $\theta_k^*$ is sampled directly from the base distribution:&lt;/p&gt;
+
+\[\theta_k^* \sim H \\
+G = \sum_{k=1}^{\infty} \pi_k \delta_{\theta_k^*}\]
+
+&lt;h1 id=&quot;dp-mixture-model&quot;&gt;DP Mixture Model&lt;/h1&gt;
+&lt;p&gt;Intended to solve the $k$ selection problem for mixture model, LDA, etc, applying Dirichlet process to the problems serves to automatically select the number of mixture components or dimension of variables. Here, I’ll first investigate the application to DP Mixture model.&lt;/p&gt;
+
+&lt;p&gt;We model a set of observations $\{x_1,…,x_n\}$ using a set of latent parameters $\{\theta_1,…,\theta_n\}$. Each $\theta$ is drawn independently and identically from $G$, while each $x_i$ has distribution $F(\theta_i)$ parameterized by $\theta_i$:&lt;/p&gt;
+
+\[x_i|\theta_i \sim F(\theta_i)\\
+\theta_i|G \sim G\\
+G|\alpha,H \sim DP(\alpha,H)\]
+
+&lt;p&gt;And since $G$ is discrete, multiple $\theta_i$’s can take on the same value simutaneously, therefore it can be viewed that $x_i$ with the same value of $\theta_i$ belong to the same cluster. The mixture perspective can be made more in agreement with the usual representation of mixture models using the stick-breaking construction equaivalently:&lt;/p&gt;
+
+\[\pi|\alpha \sim GEM(\alpha)\\
+z_i|\pi \sim Multi(\pi)\\
+\theta_k^*|H \sim H\\
+x_i|z_i,\{\theta_k^*\} \sim F(\theta_{z_i}^*)\]
+
+&lt;p&gt;The model is shown as follows.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-08-16-DPMM.png&quot; alt=&quot;DP Mixture Model&quot; height=&quot;300px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Solving the model using collapsed Gibbs sampling turns out to be very easy, as described in Murphy’s book p.886 (Algorithm 25.1). Before going through the algorithms, one should convince himself that the posterior predictive and prior predictive is easy for Gaussian distribution with conjugate prior as also talked in Murphy’s book in Chpater 4 and it should be Student-t distribution with the updated parameters (if I didn’t remember wrong). The key point is to compute this one&lt;/p&gt;
+
+\[p(z_i=k|z_{-i},x,\alpha,\lambda) \propto p(z_i=k|z_{-i},\alpha)p(x_i|x_{-i},z_i=k,z_{-i},\lambda)\]
+
+&lt;pre&gt;&lt;code class=&quot;language-Matlab&quot;&gt;function dpm = dpm_gibbs(dpm,numiter);
+% run numiter number of iterations of gibbs sampling in the DP mixture
+
+KK = dpm.KK; % number of active clusters
+NN = dpm.NN; % number of data items
+aa = dpm.aa; % alpha parameter
+qq = dpm.qq; % row cell vector of mixture components
+xx = dpm.xx; % row cell vector of data items
+zz = dpm.zz; % row vector of cluster indicator variables
+nn = dpm.nn; % row vector of number of data items per cluster
+
+for iter = 1:numiter
+  % in each iteration, remove each data item from model, then add it back in
+  % according to the conditional probabilities.
+
+  for ii = 1:NN % iterate over data items ii
+
+    % remove data item xx{ii} from component qq{kk}
+    kk = zz(ii); % kk is current component that data item ii belongs to
+    nn(kk) = nn(kk) - 1; % subtract from number of data items in component kk
+    qq{kk} = delitem(qq{kk},xx{ii}); % subtract data item sufficient statistics
+
+    % delete active component if it has become empty
+    if nn(kk) == 0, 
+      %fprintf(1,'del component %3d. K=%3d\n',find(nn==0),KK-sum(nn==0));
+      KK = KK - 1;
+      qq(kk) = [];
+      nn(kk) = [];
+      idx = find(zz&amp;gt;kk);
+      zz(idx) = zz(idx) - 1;
+    end
+
+    % compute conditional probabilities pp(kk) of data item ii
+    % belonging to each component kk
+    % compute probabilities in log domain, then exponential
+    pp = log([nn aa]);
+    for kk = 1:KK+1
+      pp(kk) = pp(kk) + logpredictive(qq{kk},xx{ii});
+    end
+    pp = exp(pp - max(pp)); % -max(p) for numerical stability
+    pp = pp / sum(pp);
+
+    % choose component kk by sampling from conditional probabitilies
+    uu = rand;
+    kk = 1+sum(uu&amp;gt;cumsum(pp));
+
+    % instantiates a new active component if needed
+    if kk == KK+1
+      %fprintf(1,'add component %3d. K=%3d\n',kk,KK+1);
+      KK = KK + 1;
+      nn(kk) = 0;
+      qq(kk+1) = qq(kk);
+    end
+
+    % add data item xx{ii} back into model (component qq{kk})
+    zz(1,ii) = kk; 
+    nn(1,kk) = nn(1,kk) + 1; % increment number of data items in component kk
+    qq{1,kk} = additem(qq{1,kk},xx{ii}); % add sufficient stats of data item
+
+  end
+end
+
+% save variables into dpm struct
+dpm.qq = qq;
+dpm.zz = zz;
+dpm.nn = nn;
+dpm.KK = KK;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Tue, 16 Aug 2016 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/2016/08/16/Dirichlet-Process</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/08/16/Dirichlet-Process</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markov Chain Monte Carlo</title>
+        <description>&lt;p&gt;After learned variational inference and latent dirichlet allocation (LDA), I wrote a paper about &lt;a href=&quot;https://arxiv.org/abs/1612.03639&quot;&gt;Gaussian relational topic model&lt;/a&gt; to solve the problem of connection discovery using shared images. In order to continue solving more challenging problems and improving myself, I find it necessary to master Markov Chain Monte Carlo methods. Therefore, I put my hands on Gibbs sampling and Metropolis Hastings algorithm.&lt;/p&gt;
+
+&lt;h1 id=&quot;gibbs-sampling-and-collapsed-gibbs-sampling&quot;&gt;Gibbs Sampling and Collapsed Gibbs Sampling&lt;/h1&gt;
+&lt;p&gt;The basic idea is to sample each variable in turn, conditioned on the values of all the other variables:&lt;/p&gt;
+
+\[x_1^{s+1} \sim p(x_1|x_2^{s},x_3^{s}) \\
+x_2^{s+1} \sim p(x_2|x_1^{s+1},x_3^{s}) \\
+x_3^{s+1} \sim p(x_3|x_1^{s+1},x_2^{s+1}) \\\]
+
+&lt;p&gt;The ideal of collapsed Gibbs sampling is to integrate out all possible model parameters analytically, such that the sampling space is minimum, dramatically decrease sampling time.
+An example of collapsed Gibbs sampling for fitting a GMM can be found in Murphy’s book, p. 844.
+The example code of collapsed Gibbs sampling solving Bayesian Gaussian mixture model can be found in &lt;a href=&quot;https://github.com/eelxpeng/bayes_gmm&quot;&gt;here&lt;/a&gt;. The main logic of the collapsed Gibbs sampling is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# Loop over iterations
+for i_iter in range(n_iter):
+
+    # Loop over data items
+    for i in xrange(self.components.N):
+
+        # Cache some old values for possible future use
+        k_old = self.components.assignments[i]
+        K_old = self.components.K
+        stats_old = self.components.cache_component_stats(k_old)
+
+        # Remove data vector `X[i]` from its current component
+        self.components.del_item(i)
+
+        # Compute log probability of `X[i]` belonging to each component
+        # (24.26) in Murphy, p. 843
+        log_prob_z = (
+            np.ones(self.components.K_max)*np.log(
+                float(self.alpha)/self.components.K_max + self.components.counts
+                )
+            )
+        # (24.23) in Murphy, p. 842
+        log_prob_z[:self.components.K] += self.components.log_post_pred(i)
+        # Empty (unactive) components
+        log_prob_z[self.components.K:] += self.components.log_prior(i)
+        prob_z = np.exp(log_prob_z - logsumexp(log_prob_z))
+
+        # Sample the new component assignment for `X[i]`
+        k = utils.draw(prob_z)
+
+        # There could be several empty, unactive components at the end
+        if k &amp;gt; self.components.K:
+            k = self.components.K
+        # print prob_z, k, prob_z[k]
+
+        # Add data item X[i] into its component `k`
+        if k == k_old and self.components.K == K_old:
+            # Assignment same and no components have been removed
+            self.components.restore_component_from_stats(k_old, *stats_old)
+            self.components.assignments[i] = k_old
+        else:
+            # Add data item X[i] into its new component `k`
+            self.components.add_item(i, k)
+
+    # Update record
+    record_dict[&quot;sample_time&quot;].append(time.time() - start_time)
+    start_time = time.time()
+    record_dict[&quot;log_marg&quot;].append(self.log_marg())
+    record_dict[&quot;components&quot;].append(self.components.K - 1)
+
+    # Log info
+    info = &quot;iteration: &quot; + str(i_iter)
+    for key in sorted(record_dict):
+        info += &quot;, &quot; + key + &quot;: &quot; + str(record_dict[key][-1])
+    info += &quot;.&quot;
+    logger.info(info)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;metroplis-hastings-and-slice-sampling&quot;&gt;Metroplis Hastings and Slice Sampling&lt;/h1&gt;
+
+&lt;p&gt;As an experiment of Metroplis Hastings algorithm, I find &lt;a href=&quot;http://isaacslavitt.com/2013/12/30/metropolis-hastings-and-slice-sampling/&quot;&gt;this link&lt;/a&gt; useful. It also compares Metropolis Hastings with slice sampling, both are worth investigating. Following experiments are based on the post.&lt;/p&gt;
+
+&lt;p&gt;Anyway, first let’s describe the model we are going to MCMC with. It’s a two level hierachical model:&lt;/p&gt;
+
+\[v \sim \mathcal{N}(v|0,3^2)\\
+x_k|v \sim \mathcal{N}(x_k|0,e^v) \ \text{for} \  k=0,1,...,9\]
+
+&lt;p&gt;The joint distribution is obviously given by&lt;/p&gt;
+
+\[p(v,x_1,x_2,...,x_9) = \mathcal{N}(v|0,3^2) \prod_{k=1}^{9} \mathcal{N}(x_k|0,e^v)\]
+
+&lt;p&gt;The class defining the distribution for sampling and probability density evaluation is given:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;from __future__ import division
+
+import numpy as np
+import scipy.stats as ss
+
+
+class joint_dist(object):
+
+    def rvs(self, n=1):
+        &quot;&quot;&quot; sample a random variable from this distribution &quot;&quot;&quot;
+        sample = np.zeros((10, n))
+
+        for i in xrange(n):
+            # generate rvs
+            v = ss.norm(0, 3).rvs()
+            xs = ss.norm(0, np.sqrt(np.e**v)).rvs(9)
+            # place in sample array
+            sample[0, i] = v
+            sample[1:, i] = xs
+
+        return sample
+
+    def pdf(self, sample):
+        &quot;&quot;&quot; get the probability of a specific sample &quot;&quot;&quot;
+        v = sample[0]
+        pv = ss.norm(0, 3).pdf(v)
+        xs = sample[1:]
+        pxs = [ss.norm(0, np.sqrt(np.e**v)).pdf(x_k) for x_k in xs]
+        return np.array([pv] + pxs)
+
+    def loglike(self, sample):
+        &quot;&quot;&quot; log likelihood of a specific sample &quot;&quot;&quot;
+        return np.sum(np.log(self.pdf(sample)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The current state is defined as $w=[v,x_1,x_2,…,x_9]$. And the proposal funciton is defined as symmetric normal distribution with the current state as mean:&lt;/p&gt;
+
+\[q(w'|w)=\mathcal{N}(w,\mathbf{1}_{10})\]
+
+&lt;p&gt;The Metropolis-Hasting function is defined:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;def metropolis(init, iters):
+    &quot;&quot;&quot;
+    based on http://www.cs.toronto.edu/~asamir/cifar/rpa-tutorial.pdf
+    
+    can take several minutes to run with large sample sizes.
+    &quot;&quot;&quot;
+    dist = joint_dist()
+
+    # set up empty sample holder
+    D = len(init)
+    samples = np.zeros((D, iters))
+
+    # initialize state and log-likelihood
+    state = init.copy()
+    Lp_state = dist.loglike(state)
+
+    accepts = 0
+    for i in np.arange(0, iters):
+        
+        # propose a new state
+        prop = np.random.multivariate_normal(state.ravel(), np.eye(10)).reshape(D, 1)
+
+        Lp_prop = dist.loglike(prop)
+        rand = np.random.rand()
+        if np.log(rand) &amp;lt; (Lp_prop - Lp_state):
+            accepts += 1
+            state = prop.copy()
+            Lp_state = Lp_prop
+
+        samples[:, i] = state.copy().ravel()
+        
+        if i % 1000 == 0: print('[#iter: %d]' %i)
+
+    print 'Acceptance ratio', accepts/iters
+    return samples
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let’s start by taking 50,000 samples using Metropolis-Hastings.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# define our starting point
+w_0 = np.array([0., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+
+# actually do the sampling
+n = 50000
+samples = metropolis(w_0, n)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Acceptance ratio 0.24342
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;import matplotlib.pyplot as plt
+%matplotlib inline  
+from matplotlib import rcParams
+rcParams['font.size'] = 12
+rcParams['figure.figsize'] = (10, 6)
+
+burnin = 10000
+m = n-burnin
+v = samples[0, burnin:]
+fig = plt.figure()
+ax0 = fig.add_subplot(211)
+#fig, (ax0, ax1) = plt.subplots(2, 1)
+
+# show values of sampled v by iteration
+ax0.plot(np.arange(m), v)
+ax0.set_xlabel('iteration number')
+ax0.set_ylabel('value of sampled v')
+
+ax1 = fig.add_subplot(212)
+# plot a histogram of values of v
+ax1.hist(v, bins=80)
+ax1.set_xlabel('values of sampled v')
+ax1.set_ylabel('observations')
+
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-08-08-MH_7_0.png&quot; alt=&quot;MH&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As it should be noticed that the sampled $v$ is not Gaussian distributed, rather skewed. However, we know that $v$ is in fact zero-mean gaussian distributed. The skewed sampling is not good to estimate the true distribution of $v$. As discussed in the original post, it is because under the directed regime — any small or negative $v$ implies that every $x_k∼\mathcal{N}(0,e^v \approx 0)$, thus imposing a huge probability “penalty” on any non-zero $x_k$. Meanwhile, our Metropolis-Hastings is naively proposing a vector of $x_k$s which are probably not all zero, so we tend to reject any small or negative $v$.&lt;/p&gt;
+
+&lt;p&gt;So for slice sampling:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;def slice_sample(init, iters, sigma, step_out=True):
+    &quot;&quot;&quot;
+    based on http://homepages.inf.ed.ac.uk/imurray2/teaching/09mlss/
+    sigma is the step size of each coordinate
+    &quot;&quot;&quot;
+
+    dist = joint_dist()
+
+    # set up empty sample holder
+    D = len(init)
+    samples = np.zeros((D, iters))
+
+    # initialize
+    xx = init.copy()
+
+    for i in xrange(iters):
+        perm = range(D)
+        np.random.shuffle(perm)
+        last_llh = dist.loglike(xx)
+
+        # Sweep through axes (simplest thing)
+        for d in perm:
+            # u|x ~ [0,1]*p(x)
+            llh0 = last_llh + np.log(np.random.rand())
+            
+            # Create a horizontal interval (x_l, x_r) enclosing xx
+            rr = np.random.rand(1)
+            x_l = xx.copy()
+            x_l[d] = x_l[d] - rr * sigma[d]
+            x_r = xx.copy()
+            x_r[d] = x_r[d] + (1 - rr) * sigma[d]
+
+            # step out p(x)&amp;gt;u'
+            if step_out:
+                llh_l = dist.loglike(x_l)
+                while llh_l &amp;gt; llh0:
+                    x_l[d] = x_l[d] - sigma[d]
+                    llh_l = dist.loglike(x_l)
+                llh_r = dist.loglike(x_r)
+                while llh_r &amp;gt; llh0:
+                    x_r[d] = x_r[d] + sigma[d]
+                    llh_r = dist.loglike(x_r)
+
+            x_cur = xx.copy()
+            while True:
+                xd = np.random.rand() * (x_r[d] - x_l[d]) + x_l[d]
+                x_cur[d] = xd.copy()
+                last_llh = dist.loglike(x_cur)
+                if last_llh &amp;gt; llh0: #this is the only way to leave the while loop, satiesfy p(x)&amp;gt;u'
+                    xx[d] = xd.copy()
+                    break
+                elif xd &amp;gt; xx[d]:
+                    x_r[d] = xd
+                elif xd &amp;lt; xx[d]:
+                    x_l[d] = xd
+                else:
+                    raise RuntimeError('Slice sampler shrank too far.')
+
+        if i % 1000 == 0: print 'iteration', i
+
+        samples[:, i] = xx.copy().ravel()
+
+    return samples
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;# define our starting point
+w_0 = np.array([0., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+
+# actually do the sampling
+n = 10000
+sigma = np.ones(10)
+samples = slice_sample(w_0, iters=n, sigma=sigma)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;burnin = 0
+m = n-burnin
+v = samples[0, burnin:]
+fig = plt.figure()
+ax0 = fig.add_subplot(211)
+#fig, (ax0, ax1) = plt.subplots(2, 1)
+
+# show values of sampled v by iteration
+ax0.plot(np.arange(m), v)
+ax0.set_xlabel('iteration number')
+ax0.set_ylabel('value of sampled v')
+
+ax1 = fig.add_subplot(212)
+# plot a histogram of values of v
+ax1.hist(v, bins=80)
+ax1.set_xlabel('values of sampled v')
+ax1.set_ylabel('observations')
+
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+        <pubDate>Mon, 08 Aug 2016 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/blog/2016/08/08/Markov-Chain-Monte-Carlo</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/08/08/Markov-Chain-Monte-Carlo</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Jekyll Cheetsheet</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;In order to publish to github, run following commands:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nt&quot;&gt;--all&lt;/span&gt;
+~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Initial commit&quot;&lt;/span&gt;
+~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 13 May 2016 10:16:28 -0400</pubDate>
+        <link>http://localhost:4000/blog/2016/05/13/welcome-to-jekyll</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/05/13/welcome-to-jekyll</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

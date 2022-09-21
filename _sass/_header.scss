@@ -1,0 +1,157 @@
+.site-header {
+    border-bottom: 1px solid $line-color;
+    position: relative;
+    text-transform: uppercase;
+    font-size: $small-font-size;
+    @extend %clearfix;
+}
+
+.site-header, .site-header a {
+    color: $header-text-color;
+}
+.site-header a:hover {
+    color: $header-hover-color;
+    text-decoration: none;
+}
+
+.site-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    float: left;
+    letter-spacing: 1px;
+}
+
+.site-nav {
+    background: $background;
+}
+
+.site-nav ul {
+    text-align: right;
+    float: right;
+    letter-spacing: 1px;
+    list-style-type: none;
+}
+
+.site-nav .menu > li {
+    display: inline-block;
+    margin: 1em 0 0 0.75em;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+.site-nav a {
+    display: block;
+}
+
+// Sub Menu
+.site-nav .sub-menu a {
+    display: block;
+    line-height: 1.2em;
+    padding: 4px 10px;
+    color: $header-hover-color;
+}
+
+.site-nav .sub-menu a:hover {
+    color: $header-hover-url;
+}
+.site-nav .sub-menu {
+    border-color: $line-color;
+    z-index:2147483647;
+}
+.site-nav .sub-menu li.current-menu-item > a {
+    border-left: none;
+    border-right: none;
+}
+
+.sub-menu {
+    border: 1px solid $line-color;
+    background: $background;
+    display: none;
+    right: -10px;
+    padding: 4px 0 3px 0;
+    position: absolute;
+    text-align: left;
+    text-transform: none;
+    top: 28px;
+    min-width: 200px;
+    z-index:999;
+}
+
+.sub-menu li {
+    border-bottom: 0;
+    display: block;
+    height: auto;
+    margin: 3px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.site-nav li:hover > .sub-menu {
+    display: block;
+}
+
+.site-nav h1 {
+    position: absolute;
+    left: -999em;
+}
+
+.site-nav {
+    float: right;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $header-text-color;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    @include media-query($mobile) {
+        position: absolute;
+        top: 9px;
+        right: 20px;
+        border: 1px solid $line-color;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 1.5em;
+            height: 1.25em;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 1.25em;
+                height: 1em;
+                vertical-align: middle;
+                path {
+                    fill: $grey-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@include media-query($mobile) {
+    .site-nav h1 {
+        border-bottom: 1px solid $line-color;
+        cursor: pointer;
+        display: none; /* Standard. IE8+, Saf, FF3+ */
+        height: 23px;
+        left: auto;
+        margin-top: 10px;
+        position: static;
+        white-space: nowrap;
+    }
+
+    .site-nav .menu {
+        display: block;
+        left: -3px;
+        min-width: 215px;
+        padding: 4px 0;
+        position: relative;
+        right: -3px;
+        z-index: 999;
+    }
+
+    .site-nav .menu.open {
+        display: block;
+    }
+
+    .site-nav .menu li {
+        display: block;
+        margin: 0;
+        color: $header-hover-color;
+    }
+
+    .site-nav ul.menu a {
+        color: $header-hover-color;
+    }
+    .site-nav ul.menu a:hover {
+        color: $header-hover-url;
+    }
+
+    .site-nav a,
+    .site-nav li.current-menu-item > a {
+        padding: 4px 10px;
+    }
+
+    .site-nav .menu > li {
+        height: auto;
+        text-align: left;
+    }
+
+    .site-nav .sub-menu {
+        border: 0;
+        display: block;
+        position: relative;
+        min-width: 215px;
+        max-width: 215px;
+        top: auto;
+        right: auto;
+        width: auto;
+    }
+
+    .site-nav .sub-menu {
+        padding-left: 16px;
+    }
+    .site-nav .sub-menu li.current-menu-item > a {
+    }
+}

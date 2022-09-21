@@ -1,0 +1,18 @@
+- title: "Research"
+  href: "/research/"
+
+- title: "CV"
+  href: "/cv/"
+
+- title: "Misc"
+  href: "/misc/"
+
+- title: "Submenu"
+  subcategories:
+    - subtitle: "Item 1"
+      subhref: "/misc/item-1/"
+    - subtitle: "Item 2"
+      subhref: "/misc/item-2/"
+
+- title: "Blog"
+  href: "/blog/"

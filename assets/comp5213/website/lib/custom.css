@@ -1,0 +1,22 @@
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+div#jstree {
+  font-size: 18px;
+}
+
+.jstree-default .jstree-anchor {
+  line-height: 28px;
+  height: 28px;
+}

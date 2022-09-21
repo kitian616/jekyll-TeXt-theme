@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<script type="text/x-mathjax-config">
+	    MathJax.Hub.Config({
+	      TeX: {
+	        equationNumbers: {
+	          autoNumber: "AMS"
+	        }
+	      },
+	      tex2jax: {
+	        inlineMath: [ ['$','$']],
+	        displayMath: [ ['$$','$$'] ],
+	        processEscapes: true,
+	      }
+	    });
+  	</script>
+  <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Xiaopeng LI :: EM Algorithm In-depth</title>
+    <meta name="description" content="I find it necessary to understand EM more. As an optimization method for MLE/MAP, it is also related to variational bayes EM (VBEM), Gibbs sampling as well a...">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/blog/2017/12/14/EM-In-Depth">
+    <link rel="alternate" type="application/rss+xml" title="Xiaopeng LI" href="http://localhost:4000/feed.xml" />
+
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+</head>
+
+
+  <body>
+  <div class="page">
+    <header class="site-header">
+    <a class="site-title" href="/">Xiaopeng LI</a>
+    <nav class="site-nav">
+        <a href="#" class="menu-icon menu.open">
+            <svg viewBox="0 0 18 15">
+                <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+        </a>
+        <div class="trigger"><h1>Main Navigation</h1>
+            <ul class="menu">
+    
+    
+     <li><a href="/research/" class="page-link">Research</a>
+    
+    </li>
+    
+    
+     <li><a href="/cv/" class="page-link">CV</a>
+    
+    </li>
+    
+    
+     <li><a href="/misc/" class="page-link">Misc</a>
+    
+    </li>
+    
+    
+     <li><a href="/blog/" class="page-link">Blog</a>
+    
+    </li>
+    
+</ul>
+
+        </div>
+    </nav>
+</header>
+
+
+    <div class="post">
+    <header class="post-header">
+    <h1>EM Algorithm In-depth</h1>
+    <p class="post-meta">Posted on December 14, 2017 )</p>
+
+    
+
+    
+    <p class="post-meta">Categories:
+    
+
+    </p>
+    
+    </header>
+
+    <p>I find it necessary to understand EM more. As an optimization method for MLE/MAP, it is also related to variational bayes EM (VBEM), Gibbs sampling as well as Wake-sleep algorithm.</p>
+
+<h3 id="em-introduction">EM Introduction</h3>
+<p>EM algorithm is extremely useful to deal with models with latent variables. It can be used for MLE and MAP estimates. The center idea of EM is that since we have latent variables, which we do not know their value, we can first complete the data by estimating the latent variables with probability, and then maximize the complete data loglikelihood over the parameters.</p>
+
+<p>Let $x_i$ be the observed variables in case $i$, and let $z_i$ be the hidden variables. The goal is to maximize the loglikelihood of the observed data:</p>
+
+\[\mathcal{l}(\theta) = \sum_{i=1}^N \log p(x_i|\theta) = \sum_{i=1}^N \log [\sum_{z_i}p(x_i, z_i|\theta)].\]
+
+<p>This is hard to optimize since the log cannot be pushed inside. EM gets around this problem. If we complete the data by estimating the value of $z_i$, then we can get the complete data loglikelihood easily:</p>
+
+\[\mathcal{l}_c(\theta) =\sum_{i=1}^N \log p(x_i, z_i|\theta).\]
+
+<p>We can estimate the value of $z_i$ using old parameters $\theta^{t}$. But since our estimate of $z$ is not certain, but rather with probability, what we actually get is the so-called expected complete data loglikelihood:</p>
+
+\[Q(\theta, \theta^{t}) =\sum_{i=1}^N p(z_i|x_i,\theta^{t})\log p(x_i, z_i|\theta) = \mathbb{E}_{z|x,\theta^{t}}[\log p(x_i, z_i|\theta)].\]
+
+<p>This is exactly E-step. The goal of E-step is to compute $Q(\theta,\theta^{t})$, or rather, the terms inside of it which the MLE depends on (sufficient statistics). In the M-step, we optimize the Q function wrt $\theta$:</p>
+
+\[\theta^{t+1} = \underset{\theta}{\arg\max}Q(\theta, \theta^t).\]
+
+<p>That is EM algorithm. To give an concrete example, let me show the derivation of GMM. The expected completed data loglikelihood is given by</p>
+
+\[Q(\theta, \theta^{t}) =\sum_{i} \mathbb{E}_{z|x,\theta^t}[\log p(x_i, z_i|\theta)] = \sum_i \mathbb{E}[\log [\prod_{k=1}^K (\pi_k p(x_i|\theta_k))^\mathbb{I}(z_i=k)]]\\
+=\sum_i \sum_k \mathbb{E}[\mathbb{I}(z_i=k)]\log[\pi_k p(x_i|\theta_k)]\\
+=\sum_i \sum_k p(z_i=k|x_i,\theta_t)\log[\pi_k p(x_i|\theta_k)]\\
+=\sum_i \sum_k r_{ik}\log[\pi_k p(x_i|\theta_k)],\]
+
+<p>where $r_{ik} = p(z_i=k|x_i, \theta_t)$ is the responsibility that cluster k takes for data point i. This is computed in E-step. E-step:</p>
+
+\[r_{ik}=\frac{\pi_k p(x_i|\theta_k^t)}{\sum_{k'}\pi_{k'}p(x_i|\theta_{k'}^t)}.\]
+
+<p>M-step, we optimize Q wrt $\pi$ and $\theta$. For $\pi$, we should remember the constraint that $\sum_k \pi_k = 1$. Taking the Langagian and set the derivatives wrt $\theta$ to zero, we can get $\lambda=\sum_i\sum_k r_{ik}=N$ and $\pi_k = \frac{1}{N}\sum_{i}r_{ik}$. Same for $\theta$:</p>
+
+\[\mu_k = \frac{\sum_i r_{ik}x_i}{r_k}\\
+\Sigma_k = \frac{\sum_i r_{ik}(x_i - \mu_k)(x_i - \mu_k)^T}{r_k}.\]
+
+<h3 id="generalized-em-tight-lower-bound-of-data-loglikelihood">Generalized EM: tight lower bound of data loglikelihood</h3>
+<p>As stated in Chapter 11 of Murphy’s book, EM actually achieves the tight lower bound of data loglikelihood. The lower bound (or free energy) is</p>
+
+\[\mathcal{L}(\theta, q_i) = \sum_{z_i} q_i(z_i)\log \frac{p(x_i,z_i|\theta)}{q_i(z_i)}\\
+= \log p(x_i|\theta) - \mathbb{KL}(q_i(z_i)||p(z_i|x_i,\theta)).\]
+
+<p>$\mathcal{L}$ is the lower bound of the data loglikelihood $\log p(x_i|\theta)$, and the gap is $\mathbb{KL}(q_i(z_i)||p(z_i|x_i,\theta))$. We can maximize the lower bound by setting $q_i(z_i) = p(z_i|x_i,\theta))$. Of course, $\theta$ is unknown, so instead we use $q_i^t(z_i) = p(z_i|x_i,\theta^t)$, where $\theta^t$ is our estimate of the parameters at iteration t. With that, we plug back into the lower bound and get</p>
+
+\[Q(\theta, \theta^t) = \sum_i \mathbb{E}_{z_i|x_i,\theta^t}[\log p(x_i, z_i\theta)] + \mathbb{H}(p(z_i|x_i,\theta^t)).\]
+
+<p>From above, we noticed that the first term is exactly the expected complete data loglikelihood in the EM algorithm. And since the second term is a constant wrt $\theta$, the M-step becomes</p>
+
+\[\theta^{t+1} = \underset{\theta}{\arg\max}Q(\theta, \theta^t)=\underset{\theta}{\arg\max}\sum_i \mathbb{E}_{z_i|x_i,\theta^t}[\log p(x_i, z_i|\theta)],\]
+
+<p>as before. Therefore, the E-step is to optimize over the $q$ function so as to achieve the tight lower bound of the data loglikelihood of given current model (model parameters) and the M-step is optimizing the tight lower bound over the parameters.</p>
+
+<h3 id="vbem-em-using-variational-approximation">VBEM: EM using variational approximation</h3>
+<p>Without any constraint on the form of $q_i(z_i)$, of course, the tight lower bound is achievable by simply setting $q_i^t(z_i) = p(z_i|x_i,\theta^t)$. However, when the posterior has no closed form, is intractable and not easy to compute, the tight lower bound cannot be achieved. Variational Bayes makes mean-field assumption on the posterior in order to approximate the true posterior. That is, the constraint on $q_i(z_i)$ is factorial form: $q(z,\theta) = q(\theta)\prod_i q(z_i)$. Here, the full Bayesian inference is made, i.e. treating $\theta$ as a distribution like other variables instead of MAP estimate. The whole process then is exactly as EM, except integrating $\theta$ out in E-step and updating $q(\theta)$ in M-step. That’s why it is called VBEM:</p>
+
+\[\text{Variational E-step:} \quad \log q(z) = \mathbb{E}_{q(\theta)}[\log p(x, z, \theta)] + \text{const} \\
+\text{Variational M-step:} \quad \log q(\theta) = \mathbb{E}_{q(z)}[\log p(x, z, \theta)] + \text{const},\]
+
+<p>where $\log q_j(x_j) = \mathbb{E}_{-q_j}[\log \tilde{p}(x)] + const$ is the form we usually deal with in variational inference and it is obtained by maximizing lower bound.</p>
+
+<h3 id="gibbs-sampling-em-using-monte-carlo-sampling">Gibbs Sampling: EM using Monte Carlo sampling</h3>
+<p>The steps of Gibbs sampling has surprising resemblance with EM. Gibbs sampling can be seen as the two sampling steps involving latent variable $z$ and parameter $\theta$:</p>
+
+\[z^{t+1} \sim p(z|x, \theta^t) \\
+\theta^{t+1} \sim p(\theta|x, z^{t+1}).\]
+
+<p>The first step resembles E-step, and the second step resembles M-step. In EM, the E-step computes the exact posterior distribution $p(z|x, \theta^t)$ for $z$, while the M-step computes the MAP estimate of $\theta$. In Gibbs sampling, the first step instead samples from $p(z|x, \theta^t)$, while the second step instead samples from the distribution of $\theta$.</p>
+
+<h3 id="wake-sleep-em-for-probabilistic-deep-model">Wake-sleep: EM for probabilistic deep model</h3>
+<p>Wake-sleep is an algorithm proposed by Hinton for training DBN and DBM (unsupervisedly). The network has recognition weights, which convert the input into representations in successive hidden layers, and generative weights, which reconstruct the representation. In the “wake” phase, neurons are driven by recognition connections, and generative weights are adapted to increase the probability that the would reconstruct the correct activity vector in the layer below. In the “sleep” phase, neurons are driven by generative connections, and recognition weights are adapted to increase the probability that they would produce the correct activity vector in the layer above. Wake-sleep algorithm is also optimizing the free energy:</p>
+
+\[\log P(d;G) \geq \log P(d;G) - \mathbb{KL}(Q(h|d;R), P(h|d;G))\\
+F(d;R,G) = -\log P(d;G) + \mathbb{KL}(Q(h|d;R), P(h|d;G)).\]
+
+<p>This exactly resembles the free energy of EM algorithm, and the “wake” phase corresponds to M-step, “sleep” phase corresponds to E-step. The distribution $Q(h|d)$ produced by the recognition weights is a factorial distribution in each hidden layer because the recognition weights produce stochastic states of units within a hidden layer that are conditional independent, given the states in the layer below. It is natural to use factorial distribution in neural net because it allows the probability distribution over the $2^n$ alternative hidden representations to be specified with $n$ numbers instead of $2^n-1$. During “wake” phase, minimizing the free energy wrt the generative weights will tend to favor the model whole posterior distribution is most similar to $Q(h|d)$. Thus, the effect of factorial distribution in $Q(h|d)$ is not severe.</p>
+
+<p>Although generally considered as approximating the normalization constant, the contrastive divergence (CD) algorithm for training RBM is also similar to wake-sleep algorithm if considering only generating one sample.</p>
+
+<p>In conclusion, many good ideas in machine learning are remarkablely similar. One has to find the underlying connections in order to develop deep understanding of the algorithms. I read some of the points from online or books, and I am not at all fully understand all of them. But the subtle connections are really interesting. And I think that, although many people are interested in deep neural networks without probabilistic, there are indeed many ideas that are more straightforward and more promising under probabilistic framework, especially unsupervised deep learning.</p>
+
+
+    
+
+</div>
+
+
+    <footer class="site-footer">
+    <br />
+
+    Using <a href="http://jekyllrb.com/">Jekyll</a>
+    
+     :: <a href="https://github.com/gchauras/much-worse-jekyll-theme">Website source</a>
+    
+    
+</footer>
+
+
+    
+
+    </div>
+  </body>
+
+</html>
