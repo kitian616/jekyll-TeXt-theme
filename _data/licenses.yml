@@ -18,3 +18,7 @@ WTFPL:
   name: Do What The Fuck You Want To Public License
   url: http://www.wtfpl.net/about/
   image: /assets/images/WTFPL/wtfpl-badge-1.png
+GPL-3.0:
+  name: GNU General Public License v3.0
+  url: https://www.gnu.org/licenses/gpl-3.0.html
+  image: https://www.gnu.org/graphics/gplv3-127x51.png
