@@ -1,0 +1,136 @@
+1. 객체의 배열
+    클래스 이름 참조변수 = new 클래스이름[요소의 갯수];
+    int[] arr = new int[3];
+    arr[0]  = 10;
+
+    // 아직 객체화는 아니고 배열을 만든것일 뿐
+    Student[] arr = new Student[3];
+    arr[0]  = new Student();  //student 객체를 arr[]에 0번방에 저장하게 된다.
+    arr[0].setNo(1);
+    arr[0].setName("song");
+    ....
+
+    arr[1]  = new Student();// 주소마다 객체를 다시 선언해줘야 한다.
+    arr[1].setNo(2);
+    arr[1].setName("hun");
+    ....
+
+   @ arr[0] = student[0];//잘못된 입력
+
+
+2. object 클래스
+-java.lang.object 에 있다.
+- 모든 클래스이 최상위 클래스
+- 모든 클래스는 Object 클래스의 메소드를 사용할 수 있고, 일부 메소드를 오버라이딩해서 사용
+- Object 클래스가 들어있는 java.lang 패키지는 컴파일러에 의해 자동으로 impot 됨
+
+    toString()
+    - 객체의 해시코드(주소) 출력
+    - 패키지명.클래스명@해시코드
+    - getClass().getName() : 패키지명 + 클래스명  가저오기
+    - Integer.toHexString(hashcode) : 해시코드
+    - 객체의 정보를 문자열 형태로 표현하고자 할 때 오버라이딩을 자주 하는 편
+
+    equals()
+    - 객체의 값이 같은지 연산(주소가 같은지는 판별하지 않는다. 주소가 같을경우 String 오류)
+
+    clone()
+    - 객체의 복사본을 만듬
+    - clone()은 객체를 복제할 때 private 필드도 복제하기 때문에 객체지향 프로그래밍 은낙화에 위배되기 때문메 잘 사용하지 않는다.
+
+
+3. 👀 상속 👀
+- 특정 클래스를 구성할 때 기존 클래스의 데이터와 메소드를 부모 클래스에서
+그대로 물려받아 중복적인 코드를 줄이는 것
+- 하나의 변수 타입으로 여러 종류의 객체를 의미하는 추상화된 방식의 프로그램을 가능하게 해줌
+- 자식클래스(subclass) : 상속을 받는 클래스
+- 부모클래스(parent, super class): 상속을 해주는 클래스
+
+    접근제어자 class 클래스명 extends 부모클래스명 {
+
+    }
+
+4. 업캐스팅과 다운캐스팅
+- 캐스팅(casting) : (형변환) 타입을 변환하는 것 -> 형변환
+- 자바의 상속관계에 있는 부모와 자식 클래스 간에는 서로 간의 형변환이 가능
+- 업캐스팅 : 자식 클래스가 부모 클래스로 형변환되는 것
+- 다운캐슽팅 : 부모 클래스가 다시 자식클래스로 복구시키는 것 (원상태로 돌리는 것)
+
+    class Person{
+    String name;
+    Person(){}
+    Person(String name){
+        this.name =name
+        }
+    }
+
+    class Student extends Person{
+        String no;
+
+    }
+
+    public class Main{
+        public static void main(String[] args){
+            Student student = new Student(); // name, no 사용가능하다.
+            Person person = student;//student가 person class 형태로 업캐스팅이 된다.
+            // 결국 자식클래스인 스투던트는 네임만 사용이 가능하고 no는 업캐스팅이 되어 사용이 불가능하다.
+            person.name = '김사과';(O)
+            person.no = 10;(X)
+        }
+    }
+
+       public class Main{
+            public static void main(String[] args){
+
+               Person person = new Student();
+               // student 객체를 부모객체인 Person class로 업캐스팅 한번에 변경한다.
+
+                Student student = new Person(); (x, 사용불가하다.)
+                //부모 클래스인 Person은 자식클래스인 Student class로 형변환은 불가능하다.
+                // 부모 클래스는 자식클래스가 무엇인지 무슨 기능을 가진지 알지몬한다.
+                // 오버라이딩 통해 기능을 바꿔준다.
+                *다운캐스팅
+                Student student = (Student)person;
+                student.name = "김사과"; (O)
+                student.no = 1; (O)
+
+            }
+        }
+
+5. instanceof 연산자
+- 부모를 상속해서 만들어진 자식 객체가 여러 타입인 경우에 특정 클래스가 맞는지 확인하기 위해 사용하는 메서드
+- 참조변수가 참조하고 있는 인스턴스(객체)의 실제 타입을 알아보기 위해 사용
+- 연산 결과는 boolean 값으로 변환
+
+    참조변수 instanceof 클래스명 - 클래스랑 참조변수가 관련이 있으면 True 틀리면 False
+    // 자기자신의 참조변수, 부모클래스, 조상클래스이면  True
+    // 업캐스팅이 가능하면 True
+    * 자바에서 자식클래스는 다중상속 즉 여러 부모 클래스를 가질 수 없다.
+
+과제.
+Student 클래스를 만들어 아래와 같은 프로그램을 만들어보자.
+단, 출력은 toString()을 오버라이딩해서 작성
+
+몇명의 학생을 등록할까요? 3
+
+1번쨰 학생의 번호를 입력하세요 .1
+1번째 학생의 이름을 입력하세요 . 김사과
+1번째 학생의 국어점수를 입력하세요 . 100
+1번째 학생의 수학점수를 입력하세요 . 80
+1번째 학생의 영어점수를 입력하세요 . 90
+2번쨰 학생의 번호를 입력하세요 .2
+...
+3번쨰 학생의 번호를 입력하세요 .2
+
+학생리스트
+번호 : 1, 이름 : 김사과, 국어점수 :100 , 영어점수 :80, 수학점수 : 70, 총점 : 250점, 평균 :82
+.....
+
+
+
+
+
+
+
+
+
