@@ -118,7 +118,7 @@
 
 ## 2.0.0 (2018-07-01)
 
-Breaking changes, please check [Update from 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-from-1-to-2) for details
+Breaking changes, please check [Update from 1.x to 2.x](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/update-from-1-to-2) for details
 
 ### Enhancements
 

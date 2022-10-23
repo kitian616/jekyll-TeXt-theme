@@ -10,7 +10,7 @@ With the help of extensions, you can easily add **audios**, **videos**, **slides
 
 <!--more-->
 
-[Documentation](https://tianqi.name/jekyll-TeXt-theme/docs/en/extensions)
+[Documentation](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/extensions)
 
 ## Audio
 
