@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그</title>
+</head>
+<body>
+    
+<H2>폼 태그</H2>
+    <form action="#" method = "#">
+
+        <p>아이디 : <input type="text" name="userid" id="userid" maxlength="20" placeholder="     아이디를 입력하세요"  required></p>
+
+
+        <p>비밀번호 : <input type="password" name="userpw" id="userpw" maxlength="20" placeholder="    비밀번호를 입력하세요" required></p>
+
+
+        <p>성별 : 
+            <label for="male">남자</label> <input id = 'male' type="radio" name = "gender" value="남자" checked>
+            <label for="female">여자</label> <input id ='female' type="radio" name = "gender" value="여자"></p>
+
+        <p>취미 :
+            <label for="h1">운동</label><input id ="h1" type="checkbox" name = "hobby" value = "운동"> 
+            <label for="h2">드라이브</label><input id ="h2" type="checkbox"name = "hobby" value = "드라이브"> 
+            <label for="h3">게임</label> <input id ="h3" type="checkbox"name = "hobby" value = "게임"> 
+             <label for="h4">등산</label> <input id ="h4" type="checkbox"name = "hobby" value = "등산">
+             <label for="h5">영화</label> <input id ="h5" type="checkbox"name = "hobby" value = "영화"></p>
+
+      
+        <p>첨부파일 : <input type="file" name ="file"></p>
+        
+        <p>이메일 : <input type="email" name = "email" placeholder="이메일을 입력하세요"></p>
+
+        <p>웹사이트 : <input type="url" name ="url" placeholder="사이트 입력"></p>
+
+        <p>휴대폰번호 : <input type="tel" name = "tel" placeholder="휴댜폰번호 입력"></p>
+
+        <p>생년월일 : <input type="date" name="date" id=""></p>
+
+        <p>좋아하는 숫자 : <input type="number" min ="0" max ="100" step ="1"></p>
+
+        <p>좋아하는 색상 : <input type="color" name ="color"></p>
+
+        <p>검색어 : <input type="search"name="search" placeholder="검색어를 입력하세요"></p>
+
+        <p>프로그램 능력치 : <input type="range" min="0" max ="5" value ="3"></p>
+
+        <input type="hidden" name ="idx" value="10">
+
+        <p>우편번호 : <input type="text" name = "zipcode" value = "123" readonly></p>
+
+        <p>주소 : <input type="text" nmae="addrress1"  disabled></p>
+
+            <p>직업:
+                <select name = "job">
+                    <option value="1">경찰</option>
+                    <option value="2">개발자</option>
+                    <option value="3">강사</option>
+                    <option value="4">의사</option>
+                    <option value="5">변호사</option>
+                    <option value="6">선생님</option>
+
+                </select>
+            </p>
+
+            <p>자기소개</p>
+            <p><textarea name="content" id="content" cols="30" rows="10" placeholder="자기소개 입력하세요"></textarea></p>
+
+        <p><input type="submit" value ="전송"> <input type="reset" value = "초기화"> <input type="button" value ="눌러보세여" onclick="alert('하이!')"> </p>
+
+
+
+       
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+FTP(File Transfer Protocol)
+- 클라이언트-서버(c/s)용 프로토콜
+- 클라이언트가 파일을 요청하면 서버가 요청된 파일을 제공
+- 클라이언트가 서버로 파일을 전달
+- 주로 대량의 파일을 처리할 때 사용
+- 기본포트 : 21
+
+
+✔ 호스팅
+서버 컴퓨터의 전체 또는 일정 공간을 이용할 수 있도록 임대해주는 서비스
+https://www.dothome.co.kr/ // 호스팅 무료 사이트
+https://filezilla-project.org/ // 기업에서 많이 활용하는 사이트 
+-> Download FileZilla Client for Windows (64bit x86) 선택
+
+✔ 닷홈 호스팅 주의사항
+- html 디렉토리에 저장할 파일을 업로드
+- 첫 페이지는 항상 index.html 로 업로드 (소문자!!)
+
+✔ ftp=simple
+비주얼 스튜디오 코드에 설치하여 FTP 프로그램으로 사용
+- f1 -> ftp-simple : config - FTP connection setting 을 선택
+
+[
+	{
+		"name": "song 홈페이지",
+		"host": "112.175.184.61",
+		"port": 21,
+		"type": "ftp",
+		"username": "gnstjq2772",
+		"password": "song8384!",
+		"path": "/",
+		"autosave": true,
+		"confirm": flase
+	}
+]
+
+- f1 -> ftp-simple : Remote directory open to workspace
+
+아이프레임
+- inline frame의 약자
+- 웹사이트 안에 또 다른 웹사이트를 삽입
+
+	<iframe src ="삽입할 페이지의 주소 또는 문서위치" style = " 크디를 설정할 xss 코드"></iframe>
+
+
+폼 태그
+- 웹 페이지에서 사용자로부터 입력을 받을 때 사용하는 태그
+- 사용자가 입력한 데이터를 서버로 보낼 때 form 요소를 사용
+- 데이터를 묶어 보낸다.
+
+	<form action="서버에게 전달할 파일위치" method="전송방법">
+		form 태그 안에  form 요소를 통해 데이터를 서버로 전달
+	</form>
+
+
+입력 상자 <input>
+type 속성
+text : 문자를 입력받는 글상자
+
+password : 비밀번호를 입력받는 글상자
+
+radio : 여러개의 옵션 중에서 단 하나의 옵션만을 입력받을 수 있도록 하는 버튼
+	- 그룹을 맺기 위해서 name 속성의 값이 동일해야 함
+
+checkbox : 여러개의 옵션 중에서 다수의 옵션을 입력받을 수 있도록 하는 버튼
+
+file : 원하는 파일을 서버로 전송하기 위한 글상자
+
+email : 이메일을 입력받는 글상자(@필요)
+
+url : 웹사이트를 입력받는 글상자(http 필요)
+
+tel : 전화번호를 입력받는 글상자(모바일에 숫자 키페드 사용)
+
+date : 원하는 날짜를 입력받는 글상자
+
+number : 원하는 숫자를 입력받는 글상자
+	<input type = "number" min ="최솟값" max="최대값" step="증가값">
+
+color : 원하는 색상을 입력받는 요소
+	- 선택한 색상은 16진수 RGB컬러값으로 서버에 전달
+
+search : 검색어를 입력받는 글상자
+
+range : 일정 범위안에 값만을 입력하는 조절바
+	<input type ="range" min="최솟값" max="최대값" value="현재값">
+
+hidden : 보이지는 않으나 서버에 값을 전달하고 싶을 떄 사용하는 요소
+
+button : 이벤트가 없는 일반버튼
+
+reset : 입력받은 데이터를 초기화 하는 버튼
+
+submit : 입력받은 데이터를 서버에 제출하는 버튼
+
+
+
+
+속성
+name : 요소의 이름을 설정, 서버에서 값을 전달 받을 때 키로 사용
+
+id :  요소의 유일한 이름을 설정, HTML문서에서 해당 요소의 스타일을 주거나 동적인 프로그래밍을 할 때 사용(하나의 HTML 문서에서 다른 요소와 값이 같을 수 없음) - 사이즈, 색상, 여러가지 컨트롤을 원할 떄 사용하는 속성을 의미한다.(CSS,JSP에서 많이 사용)
+
+// name, id는 서로 다른 속성이기 때문에 동일한 이름을 사용가능하나 같은 속성끼리 id가 같으면 안된다.
+
+maxlength : 값의 최대 길이를 설정하는 속성
+
+placeholder : 입력 전 특정 데이터를 입력하도록 안내하는 값을 설정
+
+value : 서버로 전달될 입력양식의 값을 설정
+
+checked : 라디오 또는 체크박스 중에서 미리 선택하는 옵션을 설정
+
+readonly : 데이터를 볼 수 있으나 수정할 수 없게 설정
+	- 서버로 데이터가 전달
+
+disabled : 입력필드를 사용할 수 없게 설정
+	- 서버로 데이터가 전달되지 않음
+
+required : 데이터를 필수로 입력하도록 강제하는 설정
+
+
+
+라벨
+- 폼 양식에 이름을 붙이는 요소
+- 다른 요소를 연결하면 해당 영역이 넓어짐
+- radio, checkbox의 스타일을 설정
+
+	<label for = "요소의 id">택스트 또는 이지밎</label> 
+
+
+버튼 
+- <button> 버튼에 쓰일 텍스트 </button>
+- 기본 기능은 <input type ="submit">
+- 일반 버튼으로 사용하려면 <button type ="button"></button>
+
+
+선택상자
+여러개의 옵션이 드롭다운 리스트로 되어 있으며 그 중에서 단 하나의 옵션만을 선택
+
+	<select name ="">
+		<option value = "" >아이템1</option>
+		<option value = "" >아이템2</option>
+		<option value = "" >아이템3</option>
+	</select>
+
+
+여러 줄 글상자
+여러줄의 택스트를 입력받는 글상자
+
+	<textarea = name ="">value</textarea>
+
+
+
+
+HTML의 디스플레이
+1. inline
+	- content 크기 만큼 자리를 차지하는 요소
+	- 텍스트, img, span
+	- 문자(텍스트)의 특딩을 가지고 있음
+
+2. block
+	- 라인을 모두 차지하는 요소
+	- p, h ul, li, div ......
+	- 면의 특징을 가지고 있음
+
+span 태그
+- 줄 단위로 영역이 설정
+- 인라인 특징을 가지고 있음
+
+div 태그
+- 면 단위로 영역이 설정
+- block 특징으 가지고 있음
+
+
+
+
+시맨틱 태그
+- Semantic : 의미론적인
+- 의미가 있는 태그를 사용
+
+시맨틱 태그의 장점
+- 검색엔진 최적화
+- 스크린 리더를 사용하여 페이지를 탐색할 때 도움
+- div>div>div>div>div>....  끝없는 div를 탐색하는 것보다 효율적
+- 개발자에게 명확한 의미를 전달
+
+<header></header>
+페이지의 제목과 같은 소개 내용을 포함
+heading 태그나 로고 저작권정보, 검색양식, 작성자 이름등을 포함
+
+<nav></nav>
+메뉴, 목차등에 사용
+
+<main></main>
+지배적인 컨텐츠 영역을 나타내는 태그
+
+<section></section>
+구체적인 시맨틱 태그가 없는 문서의 독립적인 영역을 나타냄
+섹션에는 항상 제목이 있는 것이 일반적
+
+<article></article>
+자체적으로 의미가 있는 웹사이트 부분이며, 독립적으로 배포 또는 재사용되도록 의도된 문서
+게시물, 잡지 또는 신문기사
+
+
+<footer></footer>
+작성자에 대한 정보, 저작권 데이터 또는 관련 문서에 대한 링크, 카피라이트를 포함
+
+<aside></aside>
+간접적으로 문서와 관련된 내용
+사이드바 또는 콜아웃 상자
+
+
+
+과제.
+본인의 홈페이지에 아래와 같이 적용
+
+index.html : 대문
+index.html 메뉴 [홈(index.html) 인터넷기사(news.html) 이력서(resume.html)  즐겨찾기(favorite) ]
+
+즐겨찾기
+본인이 자주가는 웹사이트 3개이사 소개하는 페이지(iframe 적용)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
