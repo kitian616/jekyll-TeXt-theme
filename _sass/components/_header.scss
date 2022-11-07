@@ -106,6 +106,7 @@
 }
 
 .navigation__item {
+  white-space: nowrap;
   &::after {
     display: block;
     margin-bottom: -4px;
