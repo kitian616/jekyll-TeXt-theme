@@ -14,6 +14,10 @@ CC-BY-ND-4.0:
   name: Attribution-NoDerivatives 4.0 International
   url: https://creativecommons.org/licenses/by-nd/4.0/
   image: https://i.creativecommons.org/l/by-nd/4.0/88x31.png
+CC-BY-NC-ND-4.0:
+  name: Attribution-NonCommercial-NoDerivatives 4.0 International
+  url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+  image: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
 WTFPL:
   name: Do What The Fuck You Want To Public License
   url: http://www.wtfpl.net/about/
