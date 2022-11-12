@@ -1,0 +1,102 @@
+.hidden{
+  display: none;
+}
+
+img {
+  position:absolute;
+  width:100%;
+  height:100%;
+  left: 0px;
+  top: 0px;
+  right:0px;
+  bottom:0px;
+  z-index: -1;
+  opacity:95%;
+  }
+
+body{
+  color: white;
+  border: 100px;
+  align-items: center;
+  overflow: hidden;
+  display: flex; 
+   flex-direction: column; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+.center{
+position: absolute;
+left: 2%;
+top: 2%;
+/* font-size: 30px; */
+}
+
+
+#clock{
+  font-size: 70px;
+  position: absolute;
+  top: 1px
+  
+}
+
+#greeting{
+  position: relative;
+  font-size: 45px;
+}
+
+#quote{
+  position: absolute;
+  /* left: 33%; */
+  bottom: 5%;
+   margin: 0 auto;
+  text-align: center;
+  /* text-align: center; */
+}
+
+#todo-list{
+  position: fixed;
+  top: 28%;
+  text-align: center;
+  list-style: none;
+  margin: 0 auto;
+} 
+#todo-form{
+  position: absolute;
+  padding: 10px;
+}
+
+
+
+
+@media screen and (max-width : 768px) {
+  body{
+    flex-direction: column;
+  }
+
+  #clock{
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    
+  }
+
+  #todo-form{
+    left: 80px;
+    font-size: 2px;
+    text-align: center;
+    margin: 0 auto;
+    top: 100px;
+  }
+ 
+  #todo-list{
+    left: 120px;
+  }
+  #greeting{
+    top: 550px;
+    font-size: 30px;
+    left: 130px;
+      
+  }
+
+}
