@@ -6,7 +6,7 @@ permalink: /article/:title.html
 article_header:
   type: cover
   image:
-    src: /assets/images/2021-05-27-wlan1-and-systemd/head.png
+    src: /assets/images/posts/wlan1-and-systemd/head.png
 tags: 
   - 树莓派
   - bash
@@ -23,35 +23,37 @@ show_author_profile: true
 
 <!--more-->
 
-![usb无线网卡](/assets/images/2021-05-27-wlan1-and-systemd/wlan1.jpg){:.rounded}
+{% assign image_dir = "/assets/images/posts/" | append: page.key %}
+
+![usb无线网卡]({{ image_dir }}/wlan1.jpg){:.rounded}
 网卡搞定了，我们希望自动接入无线网，下面就进入正题
 
 ## 无线网卡配置
 
 在没有额外的无线网卡的时候，使用指令`ifconfig`应当是这个结果。
 
-![网络设备](/assets/images/2021-05-27-wlan1-and-systemd/no_wlan1.png){:.border}
+![网络设备]({{ image_dir }}/no_wlan1.png){:.border}
 
 `eth0`是以太网，就是插网线的；`lo`是回环；`wlan0`是板载无线网卡，[之前](/article/new-pi-4b.html#ap模式-wifi基站)被我们配置到`create_ap`作为基站了。
 
 可以看到以太网是没有接入的，这里我们通过`wlan0`的ap连接到树莓派进行配置。
 接入新的无线网卡之后再运行`ifconfig`指令，看到这样的结果。
 
-![接入无线网卡](/assets/images/2021-05-27-wlan1-and-systemd/with_wlan1.png){:.border}
+![接入无线网卡]({{ image_dir }}/with_wlan1.png){:.border}
 
 这时出现了一个新的设备`wlan1`，这就是我们的无线网卡。
 如果看不到，可能是被关闭了，可以用指令`ifconfig wlan1`查看。
 
-![down](/assets/images/2021-05-27-wlan1-and-systemd/wlan1_down.png){:.border}
+![down]({{ image_dir }}/wlan1_down.png){:.border}
 
 与前面的图进行比较，可以发现flags字段后面的尖括号里少了个up，这就说明是被关闭了。
 使用指令`sudo ifconfig wlan1 up`可以启动它。启动之后再执行`ifconfig wlan1`可以看到变化。
 
-![up](/assets/images/2021-05-27-wlan1-and-systemd/wlan1_up.png){:.border}
+![up]({{ image_dir }}/wlan1_up.png){:.border}
 
 下一步扫描你的wifi环境，执行指令`sudo iwlist wlan1 scan`。
 
-![scan](/assets/images/2021-05-27-wlan1-and-systemd/scan.jpg){:.border}
+![scan]({{ image_dir }}/scan.jpg){:.border}
 
 从这里面找到你的WiFi，如果找不到，可能是你家的WiFi是5GHz，而你的网卡不支持，那就挺难受的。
 
@@ -70,11 +72,11 @@ network={
 其他配置都是默认值。下一步进行测试。
 执行指令`sudo wpa_supplicant -B -i wlan1 -c /etc/my_wpa_supplicant.conf`。
 
-![wpa_supplicant](/assets/images/2021-05-27-wlan1-and-systemd/wpa_supplicant.png){:.border}
+![wpa_supplicant]({{ image_dir }}/wpa_supplicant.png){:.border}
 
 显示这个就是成功了，再次使用`ifconfig`查看。
 
-![connected](/assets/images/2021-05-27-wlan1-and-systemd/successfully_connected.png){:.border}
+![connected]({{ image_dir }}/successfully_connected.png){:.border}
 
 注意到`wlan1`有了ip地址，说明接入成功。下一步把这个加入开机启动。这里介绍两种开机启动方法。
 

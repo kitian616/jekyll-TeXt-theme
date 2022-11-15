@@ -22,11 +22,13 @@ license: WTFPL
 
 <!--more-->
 
+{% assign image_dir = "/assets/images/posts/" | append: page.key %}
+
 ## 问题引入
 
 已知系统框图如下图所示。
 
-![系统框图](/assets/images/2022-09-02-system-frame-and-differential-equation/question.png)
+![系统框图]({{ image_dir }}/question.png)
 
 要求写出系统的方程。
 
@@ -34,7 +36,7 @@ license: WTFPL
 
 系统中存在反馈，直接写方程非常不直观，因此设计中间变量，如下图所示。
 
-![中间变量](/assets/images/2022-09-02-system-frame-and-differential-equation/question-x.png)
+![中间变量]({{ image_dir }}/question-x.png)
 
 有了这个框图，就能很轻易地写出系统方程。
 
@@ -185,11 +187,11 @@ $$
 
 如果将$x(t)$看作激励，$f(t)$和$y(t)$看作两个系统$F$和$Y$的响应，不难发现系统$Y$和$F$是线性时不变的。
 
-![系统F和Y](/assets/images/2022-09-02-system-frame-and-differential-equation/magic-1.svg)
+![系统F和Y]({{ image_dir }}/magic-1.svg)
 
 如果将信号$f(t)$和$y(t)$再作为激励输入到系统$Y$和$F$中，如下图所示。
 
-![oho](/assets/images/2022-09-02-system-frame-and-differential-equation/magic-2.svg)
+![oho]({{ image_dir }}/magic-2.svg)
 
 这时会很自然地认为，最后两个响应应该是相等的，毕竟他们经过的系统是一样的。
 

@@ -18,25 +18,27 @@ license: WTFPL
 
 <!--more-->
 
+{% assign image_dir = "/assets/images/posts/" | append: page.key %}
+
 ## rpi-imager
 
 `rpi-imager`是[树莓派官方](https://www.raspberrypi.com/software/)推出的镜像烧写工具, 自带汉语界面, 下载烧写一条龙服务.
 
-![imager-main](/assets/images/2022-08-19-goto-arm64-for-real/imager-main.png "imager主界面"){:.rounded}
+![imager-main]({{ image_dir }}/imager-main.png "imager主界面"){:.rounded}
 
 选择好系统和烧录介质之后可以点击右下角的齿轮进行一些其他的配置.
 {:.info}
 
-![imager-main-selected](/assets/images/2022-08-19-goto-arm64-for-real/imager-main-2.png "点击右下角的齿轮进行额外配置"){:.rounded}
+![imager-main-selected]({{ image_dir }}/imager-main-2.png "点击右下角的齿轮进行额外配置"){:.rounded}
 
 注意这里可以选择打开ssh服务.
 {:.warning}
 
-![imager-settings](/assets/images/2022-08-19-goto-arm64-for-real/imager-settings.png "高级设置界面"){:.rounded}
+![imager-settings]({{ image_dir }}/imager-settings.png "高级设置界面"){:.rounded}
 
 都设置完成之后开始烧录.
 
-![imager-downloading](/assets/images/2022-08-19-goto-arm64-for-real/imager-downloading.png "烧录中"){:.rounded}
+![imager-downloading]({{ image_dir }}/imager-downloading.png "烧录中"){:.rounded}
 
 一切正常的话烧录完成之后就可以将sd卡插到树莓派上, 然后启动.
 
