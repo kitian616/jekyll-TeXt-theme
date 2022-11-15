@@ -18,6 +18,14 @@ show_author_profile: true
 
 <!--more-->
 
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
+
 ## [clash](https://github.com/Dreamacro/clash)
 
 > A rule-based tunnel in Go.

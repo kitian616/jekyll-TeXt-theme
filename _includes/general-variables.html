@@ -1,0 +1,9 @@
+{%- assign _assets_root_dir = "/assets" -%}
+{%- assign _assets_img_dir = _assets_root_dir | append: "/images" -%}
+{%- assign _post_img_dir = _assets_img_dir | append: "/posts" -%}
+
+{%- if page.key -%}
+    {%- assign image_dir = _post_img_dir | append: '/' | append: page.key -%}
+{%- else -%}
+    {%- assign image_dir = _post_img_dir -%}
+{%- endif -%}

@@ -19,6 +19,14 @@ license: WTFPL
 
 <!--more-->
 
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
+
 ## 准备工作
 
 > 工欲善其事，必先利其器

@@ -39,7 +39,7 @@ Success!
 
 <!--more-->
 
-[Documentation](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
+[Documentation](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/additional-styles)
 
 ## Alert
 
@@ -89,12 +89,12 @@ Error Text.
 
 | Name | Description |
 | ---- | ---- |
-| Spacing | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/spacing) |
-| Grid | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/grid) |
-| Icons | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/icons) |
-| Image | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/image) |
-| Button | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/button) |
-| Item | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/item) |
-| Card | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/card) |
-| Hero | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/hero) |
-| Swiper | [Doc](https://tianqi.name/jekyll-TeXt-theme/docs/en/swiper) |
+| Spacing | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/spacing) |
+| Grid | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/grid) |
+| Icons | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/icons) |
+| Image | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/image) |
+| Button | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/button) |
+| Item | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/item) |
+| Card | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/card) |
+| Hero | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/hero) |
+| Swiper | [Doc](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/swiper) |
