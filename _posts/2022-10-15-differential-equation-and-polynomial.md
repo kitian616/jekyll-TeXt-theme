@@ -18,6 +18,14 @@ license: WTFPL
 
 <!--more-->
 
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
+
 ## 原题
 
 原题摘录如下。

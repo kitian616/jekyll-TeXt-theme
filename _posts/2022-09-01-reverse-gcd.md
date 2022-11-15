@@ -17,6 +17,14 @@ id: 1
 
 <!--more-->
 
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
+
 ## Problem
 
 有$n$个数，给出他们两两的gcd（包括自己和自己）$n^2$个，求这$n$个数。

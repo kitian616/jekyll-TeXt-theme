@@ -23,7 +23,13 @@ show_author_profile: true
 
 <!--more-->
 
-{% assign image_dir = "/assets/images/posts/" | append: page.key %}
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
 
 ![usb无线网卡]({{ image_dir }}/wlan1.jpg){:.rounded}
 网卡搞定了，我们希望自动接入无线网，下面就进入正题

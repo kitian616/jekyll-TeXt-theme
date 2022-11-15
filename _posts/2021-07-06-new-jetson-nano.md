@@ -20,6 +20,14 @@ show_author_profile: true
 
 <!--more-->
 
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
+
 ## 系统烧录和SSD启动
 
 前往[英伟达开发者网站](https://developer.nvidia.com/embedded/downloads)下载系统镜像。  

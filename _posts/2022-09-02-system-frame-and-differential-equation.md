@@ -22,7 +22,13 @@ license: WTFPL
 
 <!--more-->
 
-{% assign image_dir = "/assets/images/posts/" | append: page.key %}
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
 
 ## 问题引入
 

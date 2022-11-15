@@ -18,6 +18,14 @@ license: WTFPL
 
 <!--more-->
 
+<!-- begin include -->
+{%- include general-variables.html -%}
+<!-- end include -->
+
+<!-- begin private variable of Liquid -->
+
+<!-- end private variable of Liquid -->
+
 ## [ALSA](https://www.alsa-project.org/wiki/Main_Page)
 
 [ALSA](https://www.alsa-project.org/wiki/Main_Page)(Advanced Linux Sound Architecture)为Linux提供了音频和MIDI功能，具有如下特点(笔者手动翻译欢迎勘误)。
