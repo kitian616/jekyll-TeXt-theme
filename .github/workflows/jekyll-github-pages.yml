@@ -22,15 +22,17 @@ jobs:
         with:
           ruby-version: 2.7
           
-      - name: Generate Gemfile.lock
-        run: bundle install --path vendor/bundle
+      # - name: Generate Gemfile.lock
+      - run: bundle config set --local path 'vendor/bundle'
+      - run: bundle install
+      - run: ls
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
           jekyll_src: /
-          gem_src: /
+          gem_src: ./
 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
