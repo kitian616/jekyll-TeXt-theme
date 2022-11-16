@@ -31,7 +31,7 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-          jekyll_src: /
+          jekyll_src: ./
           gem_src: ./
 
       - name: 🚀 deploy
