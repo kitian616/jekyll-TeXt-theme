@@ -12,7 +12,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~>0.12"
   gem "jekyll-paginate", "~>1.0.0"
   gem "jekyll-sitemap", "~>1.0.0"
-  gem "jmoji", ">=0.12.0"
+  gem "jemoji", ">=0.12.0"
 end
 
 gemspec
