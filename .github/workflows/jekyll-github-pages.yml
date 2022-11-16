@@ -1,0 +1,37 @@
+name: Build and Deploy a Jekyll Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 setup
+        uses: actions/checkout@v2
+
+        # include the lines below if you are using jekyll-last-modified-at
+        # or if you would otherwise need to fetch the full commit history
+        # however this may be very slow for large repositories!
+        # with:
+        # fetch-depth: '0'
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          # if the repo you are deploying to is <username>.github.io, uncomment the line below.
+          # if you are including the line below, make sure your source files are NOT in the "main" branch:
+          # publish_branch: main
