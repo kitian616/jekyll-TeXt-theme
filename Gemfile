@@ -15,4 +15,4 @@ group :jekyll_plugins do
   gem "jmoji", ">=0.12.0"
 end
 
-gemsepc
+gemspec
