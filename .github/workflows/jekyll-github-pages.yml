@@ -21,6 +21,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
+          
+      - name: Generate Gemfile.lock
+        run: bundle install --path vendor/bundle
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
