@@ -24,8 +24,8 @@ jobs:
           
       # - name: Generate Gemfile.lock
       - run: bundle config set --local path 'vendor/bundle'
-      - run: bundle install
-      - run: ls
+      - run: bundle install --jobs=4 --retry=3 --gemfile=./Gemfile
+      - run: ls -al
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
