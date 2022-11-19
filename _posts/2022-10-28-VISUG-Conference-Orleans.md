@@ -7,7 +7,7 @@ aside:
     toc: true
 ---
 
-During VisugXL, there was a talk about Orleans. This is the summary of my notes during that talk.
+During [VisugXL][6], there was a talk about Orleans by Johnny Hooyberghs. This is the summary of my notes during that talk.
 
 <!--more-->
 
@@ -57,13 +57,13 @@ end
 ```
 
 The **Identity** can be a name, guid, number, ...
-Anything goes. The only requirement is that it should be unique within the cluster. [Source][3]
+Anything goes. The only requirement is that it should be unique for each grain within the cluster. [Source][3]
 
 The **Behavior** identifies the business logic that the actor should handle.
 
 The **State** can be persisted to a database, or can be kept in memory for test projects as well.
 Multiple implementations exist to persist a grain state, ranging from SQL server to postgres. 
-You can also write your own implementation.
+You can also write your own implementations.
 
 Important to note is that a grain is always **single-threaded**. This is to prevent conflicting state changes.
 
@@ -74,12 +74,12 @@ Each silo can contain one or more grains.
 
 All grains can talk to each other, regardless of which silo they are in.
 
-> Keep in mind, when a lot of communication exists between grains of a certain type, they preferrably exist in the same container.
+> Keep in mind, when a lot of communication exists between certain grains, they preferrably exist in the same silo.
 This is because communication between grains in the same silo is more performant.
-We can determine in which silo a grain will be created.
-In other words, the **grain placement** in Orleans is fully configurable. The grain placement can also be determined by the framework itself.
+The Orleans framework allows us to configure in which silo a grain will be created. 
+However, we are not required to configure this. The framework can take care of the **grain placement** as well.
 
-Below, the previous example of the card game is illustrated, with the actors being placed in different silos. Actors can communicate with one another, regardless of the silo they are in.
+Below, the previous example of the game is illustrated, with the actors being placed in different silos. Actors can communicate with one another, regardless of which silo they are in.
 
 ```mermaid
 graph TD;
@@ -107,8 +107,8 @@ To allow for easier monitoring of our Orleans cluster, an open [source project h
 We can simply add the dashboard to our middleware by using `UseOrleansDashboard`.
 Then, when running our project, we can open the browser and navigate to the dashboard.
 
-On linux, we also need to add `UseLinuxEnvironmentStatistics` to the middleware.
-If we do this, we can also monitor the CPU and ram usage in the dashboard.
+On linux, we can also add `UseLinuxEnvironmentStatistics` to the middleware.
+If we do this, we can monitor the CPU and ram usage of the silo(s) in the dashboard.
 
 > The dashboard should only be used in testing environments.
 
@@ -122,15 +122,15 @@ When you add the `UseOrleans` extension to the middleware, this interface will b
 ### Grain-to-backend
 
 Grain-to-backend communication is a bit trickier. In previous versions, we had a `grain client` available.
-This allowed us to communicate to the Orleans cluster from external sources.
+This allowed us to communicate with the Orleans cluster from external sources.
 However, it is not recommended to let client apps talk with a grain directly.
 Rather, a backend should be used to serve as the middleman between a client, and the Orleans cluster.
-For this reason, the `grain` client is deprecated, starting from version 7.
+For this reason, the grain client is deprecated, starting from version 7.
 
 The recommended way to set up backend-to-grain communication, is by putting your backend in a silo.
 `UseOrleans` can be called in the backend middleware. This way, we can also use the `IGrainFactory`,
 as discussed in [grain-to-grain communication](#grain-to-grain)
-This is called a `heterogenous silo`: the silo contains not only grains, but also the entry to our Orleans cluster (i.e. our backend).
+This is called a `heterogenous silo`: the silo contains not only grains, but serves also as the entry point to our Orleans cluster (i.e. our backend).
 
 ```mermaid
 graph TD;
@@ -161,12 +161,12 @@ G<-->H
 
 ## When to use
 
-Orleans is a very useful tool for writing applications with complicated business logic in an environment that should be scalable.
-It is less useful when your application only contains simple CRUD logic.
+Orleans is a very useful tool for writing applications with complicated business logic, and scaling requirements.
+It is less useful when your application will only contain simple CRUD logic. In that case, a REST API will be easier to set up and maintain.
 
 ## Hosting
 
-Orleans projects can be hosted on multiple platforms, in multiple configurations.
+Orleans projects can be hosted on [multiple platforms, in multiple configurations.][7]
 To me, [kubernetes hosting][5] seems the most interesting, because it is very scalable, and provider-agnostic.
 
 ## Conclusion
@@ -175,8 +175,13 @@ Orleans is Microsoft's implementation of the `virtual actor pattern`.
 Through [easy-to-grasp concepts](#definitions), it becomes relatively easy to write scalable .NET applications, without much boilerplate code.
 Debugging becomes easy with the [open-source dashboard project][2].
 
+Use Orleans when there is complex business logic in your application and performance is important.
+Do not use Orleans for simple applications that mainly consist of CRUD operations.
+
 [1]: <https://learn.microsoft.com/en-us/dotnet/orleans/overview>
 [2]: <https://github.com/OrleansContrib/OrleansDashboard>
 [3]: <https://learn.microsoft.com/en-us/dotnet/orleans/overview#what-are-grains>
 [4]: <https://learn.microsoft.com/en-us/dotnet/orleans/>
 [5]: <https://learn.microsoft.com/en-us/dotnet/orleans/deployment/kubernetes>
+[6]: <https://www.visug.be/Events/80>
+[7]: <https://learn.microsoft.com/en-us/dotnet/orleans/deployment/>
