@@ -76,7 +76,7 @@ sudo touch /etc/clash/config.yaml
 
 ### 开机启动
 
-使用之前提到的[`systemd`方式](/article/wlan1-and-systemd.html#开机启动)执行一个系统服务守护。  
+使用之前提到的[`systemd`方式]({% post_url 2021-05-27-wlan1-and-systemd %}#开机启动)执行一个系统服务守护。  
 但是这里使用了稍微复杂一点但是可定制空间更大配置方式，不仅设置了`systemd`的守护配置，还分别提供了服务启动和结束的脚本。
 
 首先创建各文件。

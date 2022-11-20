@@ -14,7 +14,7 @@ show_author_profile: true
 license: WTFPL
 ---
 
-[之前](/article/goto-arm64.html#切换)从32位迁移到64位的实践失败了。为了能升级，只能重刷系统。
+[之前]({% post_url 2022-08-17-goto-arm64 %}#切换)从32位迁移到64位的实践失败了。为了能升级，只能重刷系统。
 
 <!--more-->
 

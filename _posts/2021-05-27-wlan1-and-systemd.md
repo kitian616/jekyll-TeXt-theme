@@ -40,7 +40,7 @@ show_author_profile: true
 
 ![网络设备]({{ image_dir }}/no_wlan1.png){:.border}
 
-`eth0`是以太网，就是插网线的；`lo`是回环；`wlan0`是板载无线网卡，[之前](/article/new-pi-4b.html#ap模式-wifi基站)被我们配置到`create_ap`作为基站了。
+`eth0`是以太网，就是插网线的；`lo`是回环；`wlan0`是板载无线网卡，[之前]({% post_url 2019-11-02-new-pi-4b %}#ap模式-wifi基站)被我们配置到`create_ap`作为基站了。
 
 可以看到以太网是没有接入的，这里我们通过`wlan0`的ap连接到树莓派进行配置。
 接入新的无线网卡之后再运行`ifconfig`指令，看到这样的结果。
@@ -88,7 +88,7 @@ network={
 
 ## 开机启动
 
-在[之前的笔记](/article/new-pi-4b.html#ap模式-wifi基站)中，我们为了让`create_ap`开机启动，将一段bash指令添加到了`/etc/rc.local`。
+在[之前的笔记]({% post_url 2019-11-02-new-pi-4b %}#ap模式-wifi基站)中，我们为了让`create_ap`开机启动，将一段bash指令添加到了`/etc/rc.local`。
 
 Linux系统在启动的时候，各项服务都是由`systemd`进行管理的，`rc.local`只是其中的一片服务。
 对于比较简单的启动指令，可以放在这里面进行。
