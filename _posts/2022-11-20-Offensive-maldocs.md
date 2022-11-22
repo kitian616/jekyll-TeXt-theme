@@ -1,5 +1,5 @@
 ---
-title:  "Building Offensive Malicious Documents and Detection"
+title:  "Building Offensive Malicious Documents"
 tags: Malicious-Document
 ---
 
@@ -190,7 +190,8 @@ Open the document and click `Enable Content`:
 Click `yes`, and our code will executed:
 ![image](https://user-images.githubusercontent.com/56353946/203391832-f491e15b-acfb-4df6-891f-2bf9a3686c5d.png)
 
-# Word Template injection
+# Template injection
+## Word Template Injection
 This part will shows us how to create a non-macro document that uses a template that contains VBA macros, which is loaded from a remote server when the document is executed.
 
 When the maldoc is opened, it will attempt to retrieve and execute template document define at `word/_rels/settings.xml.rels`.
@@ -227,7 +228,7 @@ Now, compressed back all the files to a zip. Then change the `.zip` format to `.
 Now this document has contain the malicious remote template injection. Upon opening and Enabling Content of the document, the code will executed:
 ![image](https://user-images.githubusercontent.com/56353946/203393423-0460fab1-45de-48ea-8e25-3218a1a741ac.png)
 
-# RTF Template injection
+## RTF Template injection
 First, create a malicious `.dotm` document like we discussed in section Word Template injection above. Serve the file on the internet.
 
 Then, create a microsoft word file and save it as `.rtf`.
