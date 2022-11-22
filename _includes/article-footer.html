@@ -37,19 +37,4 @@
     {%- endif -%}
     {%- include article/footer/author-profile.html author=_author -%}
   {%- endif -%}
-
-  {%- if _show_subscribe -%}
-    <div class="article__subscribe">{%- include article/footer/subscribe.html -%}</div>
-  {%- endif -%}
-
-  {%- if _license != false -%}
-    {%- assign _data_license = site.data.licenses-%}
-    {%- if site.license -%}
-      {%- assign _license_data = _data_license[site.license] -%}
-    {%- endif -%}
-    {%- if _license != true -%}
-      {%- assign _license_data = _data_license[_license] -%}
-    {%- endif -%}
-    <div class="article__license">{%- include article/footer/license.html license=_license_data -%}</div>
-  {%- endif -%}
 </footer>

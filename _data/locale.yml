@@ -164,6 +164,6 @@ tr: &TR
   FOLLOW_US               : "Bizi [NAME] üzerinden takip edin."
   EMAIL_ME                : "Bana email ile ulaşın."
   EMAIL_US                : "Bize email ile ulaşın."
-  COPYRIGHT_DATES         : "2021"
+  COPYRIGHT_DATES         : "2022"
 
 # @end locale config
