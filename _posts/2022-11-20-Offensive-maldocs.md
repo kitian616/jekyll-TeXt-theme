@@ -231,7 +231,8 @@ Now this document has contain the malicious remote template injection. Upon open
 ## RTF Template injection
 First, create a malicious `.dotm` document like we discussed in section Word Template injection above. Serve the file on the internet.
 
-Then, create a microsoft word file and save it as `.rtf`.
+Then, create a microsoft word file and save it as `.rtf`:
+
 ![image](https://user-images.githubusercontent.com/56353946/203395416-92f0610a-41d4-44e7-8e67-df2eee27c08d.png)
 
 
@@ -270,6 +271,7 @@ Also, we can hide our macro sheet by right click on the `Macro1` tab and select 
 ![image](https://user-images.githubusercontent.com/56353946/203396444-dcdac9cb-5f2e-42ff-b003-ba831e866af1.png)
 
 Our macro sheet will be gone from the sight:
+
 ![image](https://user-images.githubusercontent.com/56353946/203396509-9b121d35-fcf8-49b6-bf47-2f61d131ecca.png)
 
 Save the malicious document either as .xls or .xlsm format. Once user open the workbook and click `Enable Content`, our XLM macro will be execute successfully:
