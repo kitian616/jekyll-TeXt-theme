@@ -408,3 +408,4 @@ Refer https://github.com/embedi/CVE-2017-11882 and alternatively, we can use met
   - Hiding XLM macro with very hidden
   - SLK Excel
   - Excel 4.0 DCOM
+5. https://github.com/decalage2/oletools/wiki/formats_vs_techniques
