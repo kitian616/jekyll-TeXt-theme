@@ -6,6 +6,8 @@ default:
     root: /
     home: /
     archive:  /archive.html
+    articles: /articles.html
+    ex280: /ex280.html
     rss:  /feed.xml
   mathjax: false
   mathjax_autoNumber: false

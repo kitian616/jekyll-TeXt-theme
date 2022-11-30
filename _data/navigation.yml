@@ -1,9 +1,16 @@
 header:
+
   - titles:
       # @start locale config
-      en      : &EN       Catergories
+      en      : &EN       EX 280
       # @end locale config
-    url: /articles.html
+    url: /ex280.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Categories
+      # @end locale config
+    url: /categories.html
 
   - titles:
       # @start locale config

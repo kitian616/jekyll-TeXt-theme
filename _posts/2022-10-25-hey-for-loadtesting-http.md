@@ -4,7 +4,10 @@ date: 2022-10-25
 toc: true
 mermaid: true
 categories: [Commandline]
-tags: [cli, macos, devops] # TAG names should always be lowercase
+tags: 
+  - cli
+  - macos
+  - devops
 ---
 
 **short**
