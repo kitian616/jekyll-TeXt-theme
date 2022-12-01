@@ -52,6 +52,7 @@ Next up I created a page in `_tabs` with some content explaining what the page w
 Last up was creating the overview of my [EX280](/categories/ex280/) posts on this new page. 
 I did this using and modifying the following code:
 
+{% raw %}
 ```js
 <div id="page-category">
   <h1 class="pl-lg-2">
@@ -73,6 +74,7 @@ I did this using and modifying the following code:
   </ul>
 </div>
 ```
+{% endraw %}
 
 The most important this is the selector of the category: `site.categories["EX280"]`. if you wanted to simply list a blog of you custom category (let's call the example category `foo`) you could use:
 

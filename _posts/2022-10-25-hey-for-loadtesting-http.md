@@ -74,7 +74,7 @@ All options can be found on [Hey Usage](https://github.com/rakyll/hey#usage)
 
 I'll be showing some common usages
 
-### Example 1: 100 requests
+### Example 1: One hundred (100) requests
 
 Let's fire up some requests. First up, 100 request using 5 concurrent workers:
 
@@ -129,7 +129,7 @@ Status code distribution:
   [200]	100 responses
 ```
 
-### Example 2: 5 requests with csv output
+### Example 2: Five (5) requests with csv output
 
 Dump the results to `csv` output:
 
@@ -144,7 +144,7 @@ response-time,DNS+dialup,DNS,Request-write,Response-delay,Response-read,status-c
 0.0087,0.0047,0.0042,0.0001,0.0019,0.0001,200,0.0016
 ```
 
-### Example 3:  30 seconds of requests
+### Example 3: Thirty (30) seconds of requests
 
 Now we are going to use the duration (`-z`) option:
 
