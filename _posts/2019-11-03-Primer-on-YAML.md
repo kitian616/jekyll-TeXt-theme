@@ -35,15 +35,11 @@ myCar:
 
 No we created a car object `myCar` . All child items that are indented (meaning they are 2 spaces to the right under `myCar` ) are part of the `myCar` object. You can use a lot of different datatype in YAML. In the `myCar` object we are using:
 
-`STRING` —> `name`
-
-`INT` —> `wheels`
-
-`BOOL` —> `APK`
-
-`DATE` —> `buildDate`
-
-`FLOAT` —> `gallonPerMile`
+- `STRING` —> `name`
+- `INT` —> `wheels`
+- `BOOL` —> `APK`
+- `DATE` —> `buildDate`
+- `FLOAT` —> `gallonPerMile`
 
 # Making a list, checking it once
 
@@ -93,6 +89,7 @@ YAML has been built to be readable and to take up a small space on you screen. T
 ## Rendering text to a single line
 
 Example. What if one of our drivers has a complicated backstory. One of lipsum's and lorems. In YAML you can break up this blok to make it more readable for you (human):
+
 ```yaml
 - name: "Margret"
     age: 33
