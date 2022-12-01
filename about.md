@@ -7,8 +7,6 @@ titles:
 key: page-about
 ---
 
-**Hey**
-
 Welcom to my personal blog called `/dev/null`. My name is Christian Benstein and I write about macOS based workflow's, Obsidian and Things3. My philosophy is that your mind was not created to store information but to act on it and create. We have great tools at our disposal, it's up to you to use the. On of my favoriet analogies to this is "The computer should be a [bicycle 🚲 for your mind](https://www.youtube.com/watch?v=L40B08nWoMk)". 
 
 **Some info about this blog**
