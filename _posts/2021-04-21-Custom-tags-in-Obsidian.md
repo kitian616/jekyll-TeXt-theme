@@ -27,7 +27,52 @@ You can easily add custom CSS to Obsidian using CSS Snippets. These are located 
 
 Using the following CSS code we can easily create the custom Tag's:
 
-<script src="https://gist.github.com/KingOfSpades/a7e38c6ebe8c291a559fbdc1418ef053.js"></script>
+```css
+.tag[href="#Evergreen/Seedling"] {
+  font-size: 0;
+  padding: 0;
+}
+.tag[href="#Evergreen/Seedling"]:after {
+  font-size: 8pt;
+  font-weight: 700;
+  background-color: rgb(165, 29, 42);
+  color: rgb(232, 230, 227);
+  padding: 3px 3px;
+  border-radius: 3px;
+  letter-spacing: -0.00ch;
+  content: "🌱 SEEDLING";
+}
+
+.tag[href="#Evergreen/Sapling"] {
+  font-size: 0;
+  padding: 0;
+}
+.tag[href="#Evergreen/Sapling"]:after {
+  font-size: 8pt;
+  font-weight: 700;
+  background-color: rgb(200, 150, 0);
+  color: rgb(232, 230, 227);
+  padding: 3px 3px;
+  border-radius: 3px;
+  content: "🪵 SAPLING";
+}
+
+.tag[href="#Evergreen/Evergreen"] {
+  font-size: 0;
+  padding: 0;
+}
+.tag[href="#Evergreen/Evergreen"]:after {
+  font-size: 8pt;
+  font-weight: 700;
+  background-color: rgb(32, 134, 55);
+  color: rgb(232, 230, 227);
+  padding: 3px 3px;
+  border-radius: 3px;
+  content: "🌲 EVERGREEN";
+}
+```
+
+Get a copy at [GitHub](https://gist.github.com/KingOfSpades/a7e38c6ebe8c291a559fbdc1418ef053) 
 
 This will map the CSS to the tag's and will create the following output:
 ![Example Tags](/assets/images/20210421193541.png)
