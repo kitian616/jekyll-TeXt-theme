@@ -11,3 +11,7 @@
   border-top-width: 1px;
   margin-top: 3rem;
 }
+
+.body {
+  background-color: #000 !important;
+}
