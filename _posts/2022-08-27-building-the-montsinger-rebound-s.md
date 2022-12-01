@@ -4,7 +4,10 @@ date: 2022-08-27
 toc: true
 mermaid: true
 categories: [Keyboard]
-tags: []
+tags:
+  - zmk
+  - keyboard
+  - nice!nano
 ---
 
 [The Rebound-S by Montsinger](https://store.montsinger.net/products/rebound-s) is a 60% case compatible ~40% keyboard ortholinear keyboard with an ergonomically-friendly 7° typing angle. It differs from the [Rebound](https://store.montsinger.net/products/rebound) because it has a  staggered contour. The Rebound's have some great customisation options like spot for a dedicated for an EC12 encoder and some extra keys located between the two halves of the keyboard. The PCB also allows you to build the keyboard with a choice of switches (Choc or MX style) and microcontrollers letting you choose which controller to use.
