@@ -2,6 +2,12 @@ header:
 
   - titles:
       # @start locale config
+      en      : &EN       Home
+      # @end locale config
+    url: /
+
+  - titles:
+      # @start locale config
       en      : &EN       EX 280
       # @end locale config
     url: /ex280.html
