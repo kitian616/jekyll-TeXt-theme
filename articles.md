@@ -1,5 +1,0 @@
----
-layout: articles
----
-
-Something

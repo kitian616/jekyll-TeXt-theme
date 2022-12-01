@@ -18,8 +18,8 @@ tags:
 
 Today we will be taking a look at a small utility called `hey`. You can use `hey` to load test HTTP applications or generate load for a web application. This comes in handy when you want to simulate use or check what your app does when it receives 1000s of requests.
 
-<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning: </b>Using a load test on website that you do not own or have permission to test can result in you being banned or blocked
-</div>
+**Warning**: Using a load test on website that you do not own or have permission to test can result in you being banned or blocked
+{:.error}
 
 # Installation
 
