@@ -5,3 +5,9 @@
 .search-box > input {
   border-radius: 0.2rem;
 }
+
+.coffee {
+  border: 0 solid #2a2a2a;
+  border-top-width: 1px;
+  margin-top: 3rem;
+}

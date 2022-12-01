@@ -33,7 +33,3 @@ This will map the CSS to the tag's and will create the following output:
 ![Example Tags](/assets/images/20210421193541.png)
 
 Feel free to play around with your own CSS hacks! Obsidian.md is a great tool that's easily customized.
-
-Found this help-full? Checkout my [GitHub](https://github.com/KingOfSpades) or buy me a Coffee over at [BuyMeACoffee](https://www.buymeacoffee.com/cabenstein)
-
-[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="BuyMeACoffee" width="120">](https://www.buymeacoffee.com/cabenstein)

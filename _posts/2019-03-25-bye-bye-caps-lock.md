@@ -22,3 +22,4 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 After that a quick reboot loads up the new defaults.
 
 And hey, if you still need some text in ALL CAPS. Use [Shoutcloud](http://shoutcloud.io/).
+
