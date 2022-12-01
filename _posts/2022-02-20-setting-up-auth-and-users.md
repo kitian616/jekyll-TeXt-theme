@@ -50,7 +50,9 @@ $ htpasswd -B -b htpasswd-file Pam secret01
 $ htpasswd -B -b htpasswd-file Dwight secret02
 $ htpasswd -B -b htpasswd-file Jim secret03
 ```
-<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Important:</b> Usernames and passwords are case sensitive</div>
+
+**Warning**: Usernames and passwords are case sensitive
+{:.error}
 
 And let's have a look at our file:
 

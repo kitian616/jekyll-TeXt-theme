@@ -172,8 +172,9 @@ our_prefix_KEY=a_value
 ```
 
 ### Secret as file
-<div markdown="span" class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> Mounting a volume on path that already exists on a pod  will make all files in that directory inaccessible
-</div>
+
+**Warning**: Mounting a volume on path that already exists on a pod  will make all files in that directory inaccessible
+{:.error}
 
 To create a volume that will hold the secret we use the `oc set volume` command:
 ```bash

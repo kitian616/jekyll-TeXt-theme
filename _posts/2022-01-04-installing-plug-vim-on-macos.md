@@ -46,9 +46,5 @@ colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
 ```
 
-<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info"></i> 
-<b>Note:</b> When using and installing new plug's you might need to update plug from vim commando mode with:
-```bash
-:PlugUpdate
-```
-</div>
+**Info**: When using and installing new plug's you might need to update plug from vim commando mode with: `:PlugUpdate`
+{:.info}

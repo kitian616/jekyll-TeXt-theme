@@ -196,8 +196,8 @@ As I wrote before. Scaling can also be done automatically. Normally this is done
 
 [^OpenshiftAutoScaling]: https://docs.openshift.com/container-platform/4.9/nodes/pods/nodes-pods-autoscaling.html
 
-<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Info:</b> The `autoscaler` uses the Openshift metric server to check the CPU usage of a pod. If you do not have a running metric server (like when using CRC) you can create autoscalers but they wont do anything
-</div>
+**Info**: The `autoscaler` uses the Openshift metric server to check the CPU usage of a pod. If you do not have a running metric server (like when using CRC) you can create autoscalers but they wont do anything
+{:.info}
 
 ## Creating a auto-scaler
 To create the autoscale we will use `oc autoscaler`. We will set it to scale to minimum of 5 pods and a max of 10. We will use 60% as the target CPU usage:
