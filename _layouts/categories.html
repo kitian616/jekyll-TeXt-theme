@@ -1,0 +1,31 @@
+---
+layout: page
+titles:
+  # @start locale config
+  en      : &EN       Categories
+  # @end locale config
+---
+
+{% assign group_index = 0 %}
+
+{% assign sort_categories = site.categories | sort %}
+
+{% for category in sort_categories %}
+  {% assign category_name = category | first %}
+  {% assign posts_of_category = category | last %}
+  {% assign first_post = posts_of_category | first %}
+
+  <div class="article-list items">
+  <span>
+    <h2 class="article-list__group-header">{{ category_name }}
+      <span class="item__meta">{{ site.categories[category_name] | size }}</span></h2>
+  </span>
+
+    {% for post in site.categories[category_name] %}
+    <div class="item__content">
+      <span class="item__meta">{{ post.date | date: "%d %b %Y" }}</span>
+        <a itemprop="headline" class="item__header" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
