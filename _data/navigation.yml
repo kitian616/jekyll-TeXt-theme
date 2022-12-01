@@ -10,24 +10,24 @@ header:
       # @start locale config
       en      : &EN       EX 280
       # @end locale config
-    url: /ex280
+    url: /ex280.html
 
   - titles:
       # @start locale config
       en      : &EN       Categories
       # @end locale config
-    url: /categories
+    url: /categories.html
 
   - titles:
       # @start locale config
       en      : &EN       Archive
       # @end locale config
-    url: /archive
+    url: /archive.html
 
   - titles:
       # @start locale config
       en      : &EN       About
       # @end locale config
-    url: /about
+    url: /about.html
 
   
