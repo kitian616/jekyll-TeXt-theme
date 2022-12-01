@@ -217,6 +217,7 @@ defaults:
       permalink: /posts/:title/
 
 
+
 ## => Plugins
 ##############################
 plugins:
