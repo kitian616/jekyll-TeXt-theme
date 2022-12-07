@@ -1,13 +1,7 @@
 ---
 title: "i-Hack 2018 Qualification: Reverse and Pwn Write-up"
-date: "2018-12-31"
-layout: single
 tags:
-- CTF
-- RE
-- Pwn
-categories:
-- Write-Up
+- Reverse-Engineering
 ---
 
 This write-up are focus on reverse engineering and pwn category for i-Hack 2018 Qualification.
