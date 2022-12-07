@@ -118,9 +118,6 @@ Now double click on your help file to check it worked!
 
 Now, our code is successfully execute. It download our binary and then start our malicious binary.
 
-
-
-
 So, from here you can get a big picture on how chm file could be another hackers weapon to execute their code.
 
-Orite, goodbye! (and Assalamualaikum)
+Orite, goodbye!
