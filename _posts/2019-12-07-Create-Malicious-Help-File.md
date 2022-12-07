@@ -1,11 +1,7 @@
 ---
-title: "Malicious CHM (Help) file"
-date: "2019-12-07"
-layout: single
+title: "Build Malicious CHM (Help) file"
 tags:
-- Malicious
-categories:
-- Blog-post
+- Malicious-CHM
 ---
 
 
