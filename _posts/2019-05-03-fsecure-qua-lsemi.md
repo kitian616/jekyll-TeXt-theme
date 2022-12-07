@@ -1,12 +1,7 @@
 ---
 title: "F-Secure 2019 Qualification and Semi Final: Write-up"
-date: "2019-04-19"
-layout: single
 tags:
 - CTF
-- RE
-categories:
-- Write-Up
 ---
 
 Welcome back guys. Today I'm gonna do reverse engineering and steganograpy challenges from FSecure2019. Here the contents :-
