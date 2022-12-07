@@ -1,12 +1,7 @@
 ---
-title: "Backdoor CTF Practice Arena - RE Challenges Walktrough"
-date: "2019-04-02"
-layout: single
+title: "Backdoor CTF Practice Arena: RE Challenges Walktrough"
 tags:
-- CTF
-- RE
-categories:
-- Write-Up
+- Reverse-Engineering
 ---
 
 
