@@ -1,8 +1,8 @@
----
+
 title: "F-Secure 2019 Qualification and Semi Final: Write-up"
 tags:
 - Reverse-Engineering
----
+
 
 Welcome back guys. Today I'm gonna do reverse engineering and steganograpy challenges from FSecure2019.
 
@@ -22,14 +22,14 @@ Okay first question. We need to decode this image and get "something" from it. T
 Using this [online steganography tool](https://manytools.org/hacker-tools/steganography-encode-text-into-image/).  I managed to get morse code from the image.
 
 ```
-..-. ... ··--·- .. -- .- --. . ··--·- ... - ...-- --. .- -. --- --. .-. .- .--. .... -.-- ··--·- -- --- .-. ... . -.-. --- -.. . ··--·- -.-. -.-- -... . .-.
+..-. ... ··--·- .. -- .- --. . ··--·- ... - ...-- --. .- -.  --. .-. .- .--. .... -.-- ··--·- --  .-. ... . -.-.  -.. . ··--·- -.-. -.-- -... . .-.
 ```
 
 Decode the morse code using [this online tool converter](https://cryptii.com/pipes/morse-code-to-text) and we get the flag.
 
 The flag is `fsoimageost3ganographyomorsecodeocyber`
 
----
+
 
 ## Challenge 5
 
@@ -80,7 +80,7 @@ Investigate it using Sublime text, one by one of the files and we managed to get
 
 The flag is `fssUPERhIdDEncyber`
 
----
+
 
 
 ## Challenge 8
@@ -101,7 +101,7 @@ I use this online [tool](https://cryptii.com/pipes/ascii85-encoding), and we got
 
 The flag is `fsbase85enc0dedcyber`
 
----
+
 
 ## Challenge 9
 
@@ -155,7 +155,7 @@ Try 1337 as the PIN and we got the flag.
 
 The flag is `fs4NT1D3BUGIZCOMM0Ncyber`
 
----
+
 
 # Semi-Final 
 
@@ -213,7 +213,7 @@ Execute the command and it will print a hexadecimal value. Convert it to ASCII w
 
 The flag is `fsx0rjav@cyber`
 
----
+
 ## Challenge 2
 ![26](https://user-images.githubusercontent.com/56353946/206093414-efc9e007-4546-4a36-8ff6-401fca1cb572.PNG)
 
@@ -227,7 +227,7 @@ Run the python program and then it print a hexa strings. Decode the hexadecimal 
 
 The flag is `fsx0r3dpythoncyber`
 
----
+
 ## Challenge 3
 This challenge was tough for me. My debugging skill was so bad. I think I was so lucky to get the flag by patching randomly the conditional jump using IDA Pro.
 
@@ -253,7 +253,7 @@ After patch the program.. I executed the patched binary and it print the flag.
 
 The flag is `fsRICKR0LLEDcyber`
 
----
+
 ## Challenge 4
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
 
@@ -281,7 +281,7 @@ Then, `unzip` the file with cracked password and it will extracting a file calle
 
 The flag is `fs_compr3ss10n_w1th_unknOwn_p@ssw0rd_cyber`
 
----
+
 ## Challenge 5
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
 
@@ -304,7 +304,7 @@ There we see the flag of this challenge.
 
 The flag is `fsThIngsVDO4cyber`.
 
----
+
 ## Challenge 7
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
 
@@ -335,7 +335,7 @@ The answer is
 
 The flag is `fswh@tw@sth@tcyber`.
 
----
+
 ## Challenge 10
 ![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
   
@@ -346,7 +346,7 @@ Issuing `binwalk -e` command to the file will extract us the files embedded in t
     binwalk -e 1124.doc 
     
     DECIMAL       HEXADECIMAL     DESCRIPTION
-    --------------------------------------------------------------------------------
+    --
     6034          0x1792          Zip archive data, at least v2.0 to extract, compressed size: 255, uncompressed size: 540, name: [Content_Types].xml
     6338          0x18C2          Zip archive data, at least v2.0 to extract, compressed size: 192, uncompressed size: 310, name: _rels/.rels
     6571          0x19AB          Zip archive data, at least v2.0 to extract, compressed size: 131, uncompressed size: 138, name: theme/theme/themeManager.xml
