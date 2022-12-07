@@ -1,8 +1,8 @@
-
+---
 title: "F-Secure 2019 Qualification and Semi Final: Write-up"
 tags:
 - Reverse-Engineering
-
+---
 
 Welcome back guys. Today I'm gonna do reverse engineering and steganograpy challenges from FSecure2019.
 
@@ -247,23 +247,26 @@ From the graph view above, I decided to patch a few conditional jump to make the
 
 I really don't know how this program work actually.  The assembly code and  decompiled code are also looks messy to me. I was really lazy to dive in into the assembly code deeply.
 
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/31.PNG)
+
 After patch the program.. I executed the patched binary and it print the flag.
 
-
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/32.PNG)
 
 The flag is `fsRICKR0LLEDcyber`
 
 
 ## Challenge 4
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/33.PNG)
 
 Soon get the binary, unzip it recursively four times until you get two files called `almost_there` (encrypted zip file) and `rockyou.txt` (dictionary for bruteforcing the encrypted zip file).
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/34.PNG)
 
 Crack the encrypted zip file using *rockyou.txt dictionary* with fcrackzip.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/35.PNG)
 
     fcrackzip -u -D -p rockyou.txt almost_there
     
@@ -277,46 +280,48 @@ Crack the encrypted zip file using *rockyou.txt dictionary* with fcrackzip.
 
 Then, `unzip` the file with cracked password and it will extracting a file called flag. `cat` command the flag gave us the flag.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/36.PNG)
 
 The flag is `fs_compr3ss10n_w1th_unknOwn_p@ssw0rd_cyber`
 
-
 ## Challenge 5
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/37.PNG)
 
 This challenge require knowledge in powershell obfuscation. 
 
 We try to execute the powershell and it printed "`No, this is not the answer!`".
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/38.PNG)
 
 Okay now let's open the .ps1 file with your text editor. Remove this line.
 
     |&( $enV:cOMSpEC[4,26,25]-JOIN'')
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/39.PNG)
 
 Then, execute the .ps1 file back will print us the real text of obfuscated script. 
 
 There we see the flag of this challenge.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/40.PNG)
 
 The flag is `fsThIngsVDO4cyber`.
 
 
 ## Challenge 7
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/41.PNG)
 
 Execute the program and it ask us for a true/false question. Giving a wrong answer will make the program terminate.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/42.PNG)
 
 After doing static analysis on the application, this binary was packed using UPX packer. So, we need to unpack it to reverse the program. You can unpack it using upx tool. I use [this](http://www.pazera-software.com/download.php?id=0022&ft=i32&f=FUPX_Setup.exe).
 
 Open it using IDA gave us the answer of each of the question in the main function.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/43.PNG)
 
 The answer is
 
@@ -337,7 +342,8 @@ The flag is `fswh@tw@sth@tcyber`.
 
 
 ## Challenge 10
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/44.PNG)
   
 The file is a document file by Microsoft Word.
 
@@ -368,10 +374,10 @@ Issuing `binwalk -e` command to the file will extract us the files embedded in t
 
 Go to `_1124.doc.extracted\drs`, open the `e2oDoc.xml` using your text editor.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/45.PNG)
 
 From the display above, the characters with "`&#xA;`" looks suspicious to me. Remove it one by one will give us the clear text of the flag.
 
-![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/1.PNG){: .align-center}
+![enter image description here](https://raw.githubusercontent.com/fareedfauzi/fareedfauzi.github.io/master/assets/images/fsecure19/46.PNG)
 
 The flag is `fsHideInAltTextcyber`.
