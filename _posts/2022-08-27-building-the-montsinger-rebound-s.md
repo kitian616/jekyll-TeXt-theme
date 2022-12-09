@@ -3,7 +3,7 @@ title:  "Build-log: Montsinger Rebound-S"
 date: 2022-08-27
 toc: true
 mermaid: true
-categories: [Keyboard]
+categories: [Keyboards]
 tags:
   - zmk
   - keyboard
