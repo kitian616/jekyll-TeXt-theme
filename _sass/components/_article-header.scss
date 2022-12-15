@@ -30,7 +30,7 @@
     }
   }
   .overlay__excerpt {
-    font-size: map-get($base, font-size-h3-xl);
+    font-size: map-get($base, font-size-h3-lg);
     @include media-breakpoint-down(lg) {
       font-size: map-get($base, font-size-h3-lg);
     }

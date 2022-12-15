@@ -1,5 +1,5 @@
 ---
-title: Operating System Setup for Machine Learning
+title: OS Setup for Machine Learning
 sidebar:
     nav: os-setup-ko
 aside:

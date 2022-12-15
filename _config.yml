@@ -20,9 +20,9 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : My awesome websites
+title   : Seunghyun Oh
 description: > # this means to ignore newlines until "Language & timezone"
-  Test in local server
+  Machine Learning for Speech
 
 
 ## => Language and Timezone
@@ -37,8 +37,8 @@ author:
   type      : # "person" (default), "organization"
   name      : Seunghyun Oh
   url       : https://ooshyun.github.io
-  avatar    : _img/avatar.jpg # path or url of avatar image (square)
-  bio       : I am an amazing person.
+  avatar    : assets/favicon-32x32.png # path or url of avatar image (square)
+  bio       : I am digital signal processing engineer
   email     : daniel.ohsj@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
@@ -84,7 +84,7 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: # false (default), true
+mathjax: true # false (default), true
 mathjax_autoNumber: # false (default), true
 
 ## Mermaid

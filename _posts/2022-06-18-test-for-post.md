@@ -1,9 +1,9 @@
 ---
-title: Welcome to Web World
+title: Welcome to My World
 key: 20220618
-tags: Hello
+tags: 
 ---
 
 If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:
 
-This is for test! I'm ooshyun :)
+I'm Seunghyun Oh! :)

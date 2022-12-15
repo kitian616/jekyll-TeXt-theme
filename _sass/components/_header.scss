@@ -64,8 +64,8 @@
   @include flexbox();
   @include align-items(center);
   & > svg {
-    width: map-get($base, font-size-h4) * 1.6;
-    height: map-get($base, font-size-h4) * 1.6;
+    width: map-get($base, font-size-h4) * 3; // 1.6;
+    height: map-get($base, font-size-h4) * 3; // 1.6;
     margin-right: map-get($spacers, 3);
     vertical-align: middle;
     @include media-breakpoint-down(md) {
@@ -76,10 +76,20 @@
   & > a {
     display: inline-block;
     font-size: map-get($base, font-size-h4);
+    line-height: map-get($base, font-size-h4) * 1.3;
     @include media-breakpoint-down(md) {
       font-size: map-get($base, font-size-h4-small);
     }
   }
+}
+
+.title__stype {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.subtitle__stype {
+  font-size: 0.8em;
 }
 
 .navigation {

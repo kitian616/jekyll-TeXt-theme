@@ -1,3 +1,239 @@
 /* start custom scss snippet */
+.about__font{
+    line-height: map-get($base, font-size-h4) * 1.2;
+    color: black;
+    vertical-align: middle;
+}
+.about__link__font{
+    text-align: center;
+}
+.about__edu__font {
+    line-height: map-get($base, font-size-h4) * 1.1;
+    color: black;
+    vertical-align: middle;
+}
+.name__font{
+    font-weight: bold;
+    font-size: map-get($base, font-size-h4) * 0.9;
+    // color: cadetblue;
+}
+.activities__writing__font{
+    color: black;
+}
+.activities__title__font{
+    color: black;
+    font-weight: bold;
+}
+.degree__font{
+    font-size: map-get($base, font-size-h4) * 0.75;
+    // color: blueviolet;
+}
+.advisor__font{
+    font-size: map-get($base, font-size-h4) * 0.75;
+    // color:aquamarine ;
+}
+.duration__font{
+    font-size: map-get($base, font-size-h4) * 0.65;
+    font-style: oblique;
+    font-weight: 300;
+    // color:aqua ;
+}
+.project__font{
+    font-size: map-get($base, font-size-h4) * 0.8;
+    line-height: map-get($base, font-size-h4) * 0.9;
+    font-weight: 500;
+    color: black;
+    vertical-align: middle;
+}
+.about__project__font{
+    line-height: map-get($base, font-size-h4) * 1.1;
+ }
+
+.projects__img__block{
+    line-height: map-get($base, font-size-h4) * 0.9;
+}
+
+.projects__img {
+    width: 400px;
+    height: 220px;
+ }
+
+ .projects__img__center {
+    width: 600px;
+ }
+
+ .projects__img__caption {
+    width: 400px;
+    text-align: left;
+    line-height: map-get($base, font-size-h4) * 1.1;
+    font-size: .8rem;
+    color: black;
+ }
+
+.projects__img__caption__title{
+    color: black;
+    font-weight: bold;
+}
+.projects__img__caption__descrption{
+    color: black;
+}
+.projects__img__caption__date{
+    color: black;
+    font-size: .70rem;
+    font-style: oblique;
+}
+
+.projects__block__left{
+    width: 400px;
+    height: 400px;
+    object-fit:cover;
+    float: left;  // with other component
+    // padding: 30px; // padding around
+}
+
+.projects__block__right{
+    width: 400px;
+    height: 400px;
+    object-fit:cover;
+    float: right;  // with other component
+    // padding: 30px; // padding around
+} 
+
+.activities__block__left{
+    width: 400px;
+    height: 100px;
+    object-fit:cover;
+    float: left;  // with other component
+    // padding: 30px; // padding around
+}
+
+.projects__article__right{
+    width: 400px;
+    height: 300px;
+    object-fit:cover;
+    float: right;  // with other component
+    padding: 30px; // padding around
+} 
+
+
+.projects__article__left{
+    width: 400px;
+    height: 300px;
+    object-fit:cover;
+    float: left;  // with other component
+    padding: 30px; // padding around
+} 
+
+.projects__article__center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+} 
+
+
+.projects__article__img__center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+} 
+
+.projects__article__img__center_small{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+} 
+
+// Image slider
+/* hid input */
+.section [id*="slide"] {
+    display:none;
+}
+
+/* the area of slider - adjust max-width*/
+.section .slidewrap {
+  max-width:250px;
+  margin:0 auto;
+  overflow:hidden;
+  position:relative;
+  }
+
+.section .slidelist {
+  white-space:nowrap;
+  font-size:0;
+  }
+
+.section .slidelist > li {
+  display:inline-block;
+  vertical-align:middle;
+  width:100%;
+  transition:all .5s;}
+
+.section .slidelist > li > a {
+  display:block;
+  position:relative;
+  }
+
+/* the style left and right button */
+.section .slide-control {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:10;
+  width:100%;
+  height:100%;
+  }
+
+.section .slide-control label {
+  position:absolute;
+  z-index:1;
+  top:50%;
+  transform:translateY(-50%);
+  padding:30px;
+  cursor:pointer;
+  }
+
+.section .slide-control .left {
+  left:20px;
+  background:url("./left.png") center center / 70% no-repeat;
+  }
+
+.section .slide-control .right {
+  right:1px;
+  background:url("./right.png") center center / 70% no-repeat;
+  }
+
+.section .slide-control [class*="control"] {display:none;}
+
+/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+.section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.section [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.section [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+/*  INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+.section [id="slide01"]:checked ~ .slidewrap .control01 {display:block;}
+.section [id="slide02"]:checked ~ .slidewrap .control02 {display:block;}
+.section [id="slide03"]:checked ~ .slidewrap .control03 {display:block;}
+
+.section [id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.section [id="slide05"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.section [id="slide06"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+.section [id="slide04"]:checked ~ .slidewrap .control01 {display:block;}
+.section [id="slide05"]:checked ~ .slidewrap .control02 {display:block;}
+.section [id="slide06"]:checked ~ .slidewrap .control03 {display:block;}
+
+/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+.section [id="slide07"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.section [id="slide08"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.section [id="slide09"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+.section [id="slide10"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+
+/*  INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+.section [id="slide07"]:checked ~ .slidewrap .control01 {display:block;}
+.section [id="slide08"]:checked ~ .slidewrap .control02 {display:block;}
+.section [id="slide09"]:checked ~ .slidewrap .control03 {display:block;}
+.section [id="slide10"]:checked ~ .slidewrap .control04 {display:block;}
 
 /* end custom scss snippet */

@@ -1,0 +1,43 @@
+<figure class="image">
+    <div class="projects__img__block">
+        {%- if include.custom__conf -%}
+        <div class={{include.custom__conf}}>
+        {%- else -%}
+        <div class="projects__img">
+        {%- endif -%}
+        {%- if include.description -%}
+            <a href="{% link {{ include.link }} %}">    
+                <img src="{{ include.url }}" 
+                    alt="{{ include.title }}
+                        {{ include.description }}
+                        {{ include.date }}
+                        {{ inlcude.link }}">
+            </a>
+        {%- else -%}
+            <img src="{{ include.url }}" 
+                alt="{{ include.title }}
+                    {{ include.description }}
+                    {{ include.date }}
+                    {{ inlcude.link }}">
+        {%- endif -%} 
+        </div>
+        <div class="projects__img__caption">
+            {%- if include.title -%}
+                <figcaption>
+                    <div class="projects__img__caption__title">
+                        {{ include.title }} <br>
+                    </div>
+                    {%- if include.description -%}
+                        <div class="projects__img__caption__descrption">
+                            {{ include.description}} <br>
+                        </div>
+                        <a href="{% link {{ include.link }} %}"> Read more</a><br>
+                        <div class="projects__img__caption__date">
+                            {{ include.date}} <br>
+                        </div>
+                    {%- endif -%}        
+                </figcaption>
+            {%- endif -%}
+        </div>
+    </div>
+</figure>

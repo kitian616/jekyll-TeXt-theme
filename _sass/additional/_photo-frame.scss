@@ -14,4 +14,33 @@
   img.circle, .circle > img {
     border-radius: 50%;
   }
+  img.profile, .profile > img {
+    width: 280px;
+    height: 280px;
+    object-fit:cover;
+    float: left;  // with other component
+    padding: 30px; // padding around
+    border-radius: 50%;
+  }
+  img.logo, .logo > img {
+    width: 65px;
+    height: 65px;
+    object-fit:cover;
+    float: left;  // with other component
+    padding: 10px; // padding around
+  }
+  img.project__logo__left, .project__logo__left > img {
+    width: 400px;
+    height: 250px;
+    object-fit:cover;
+    float: left;  // with other component
+    padding: 30px; // padding around
+  }
+  img.project__logo__right, .project__logo__right > img {
+    width: 400px;
+    height: 250px;
+    object-fit:cover;
+    float: right;  // with other component
+    padding: 30px; // padding around
+  }
 }
