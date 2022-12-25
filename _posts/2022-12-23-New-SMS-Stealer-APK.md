@@ -163,15 +163,15 @@ The code also starts an activity to change the default SMS app to the current ap
 
 Here some of the application during my testing of the app such as viewing items/services, booking items/services, adding items/services to a shopping cart, and checkout.
 
-![Snipaste_2022-12-23_20-55-50-removebg-preview](https://user-images.githubusercontent.com/56353946/209341218-3910f52d-de6c-4100-b6e1-6c07470f98ee.png)
+![Snipaste_2022-12-23_20-55-50-removebg-preview](https://user-images.githubusercontent.com/56353946/209341218-3910f52d-de6c-4100-b6e1-6c07470f98ee.png){ width="800" height="600" style="display: block; margin: 0 auto" }
 
-![Snipaste_2022-12-23_20-56-34-removebg-preview](https://user-images.githubusercontent.com/56353946/209341219-88303f48-b1b7-497b-b805-25f2b01b7b40.png)
+![Snipaste_2022-12-23_20-56-34-removebg-preview](https://user-images.githubusercontent.com/56353946/209341219-88303f48-b1b7-497b-b805-25f2b01b7b40.png){ width="800" height="600" style="display: block; margin: 0 auto" }
 
-![Snipaste_2022-12-23_20-56-46-removebg-preview](https://user-images.githubusercontent.com/56353946/209341221-65413276-36df-468b-9ff6-b4571c2d859a.png)
+![Snipaste_2022-12-23_20-56-46-removebg-preview](https://user-images.githubusercontent.com/56353946/209341221-65413276-36df-468b-9ff6-b4571c2d859a.png){ width="800" height="600" style="display: block; margin: 0 auto" }
 
-![Snipaste_2022-12-23_20-56-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341223-bccc5e82-819e-4c56-854c-8d1a2732f10b.png)
+![Snipaste_2022-12-23_20-56-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341223-bccc5e82-819e-4c56-854c-8d1a2732f10b.png){ width="800" height="600" style="display: block; margin: 0 auto" }
 
-![Snipaste_2022-12-23_20-57-08-removebg-preview](https://user-images.githubusercontent.com/56353946/209341226-90d3bb9e-dd37-419b-abc6-4e80da8348be.png)
+![Snipaste_2022-12-23_20-57-08-removebg-preview](https://user-images.githubusercontent.com/56353946/209341226-90d3bb9e-dd37-419b-abc6-4e80da8348be.png){ width="800" height="600" style="display: block; margin: 0 auto" }
 
 
 ## Fake payment gateway for phishing
@@ -193,11 +193,15 @@ The list of bank include:
 10. Hong Leong Bank
 11. Bank Muamalat
 
-![Snipaste_2022-12-23_20-58-18-removebg-preview](https://user-images.githubusercontent.com/56353946/209341232-e782d486-3230-4430-a083-c469aed60dd2.png)
-![Snipaste_2022-12-23_20-58-26-removebg-preview](https://user-images.githubusercontent.com/56353946/209341234-691f0e11-26f8-4231-8c62-973507ca0cea.png)
-![Snipaste_2022-12-23_20-58-48-removebg-preview](https://user-images.githubusercontent.com/56353946/209341201-c225d807-49dc-49ea-a31e-bb8a6144dfce.png)
-![Snipaste_2022-12-23_20-59-25-removebg-preview (1)](https://user-images.githubusercontent.com/56353946/209341207-2b15dbc4-8c6c-4d5d-83b9-051cf4531ee0.png)
-![Snipaste_2022-12-23_20-59-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341208-ad263834-b79a-4fc7-a86f-5521a7ae04fa.png)
+![Snipaste_2022-12-23_20-58-18-removebg-preview](https://user-images.githubusercontent.com/56353946/209341232-e782d486-3230-4430-a083-c469aed60dd2.png){ width="800" height="600" style="display: block; margin: 0 auto" }
+
+![Snipaste_2022-12-23_20-58-26-removebg-preview](https://user-images.githubusercontent.com/56353946/209341234-691f0e11-26f8-4231-8c62-973507ca0cea.png){ width="800" height="600" style="display: block; margin: 0 auto" }
+
+![Snipaste_2022-12-23_20-58-48-removebg-preview](https://user-images.githubusercontent.com/56353946/209341201-c225d807-49dc-49ea-a31e-bb8a6144dfce.png){ width="800" height="600" style="display: block; margin: 0 auto" }
+
+![Snipaste_2022-12-23_20-59-25-removebg-preview (1)](https://user-images.githubusercontent.com/56353946/209341207-2b15dbc4-8c6c-4d5d-83b9-051cf4531ee0.png){ width="800" height="600" style="display: block; margin: 0 auto" }
+
+![Snipaste_2022-12-23_20-59-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341208-ad263834-b79a-4fc7-a86f-5521a7ae04fa.png){ width="800" height="600" style="display: block; margin: 0 auto" }
 
 ## SMS stealer
 
