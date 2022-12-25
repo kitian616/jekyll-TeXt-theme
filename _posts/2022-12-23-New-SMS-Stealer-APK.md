@@ -348,6 +348,7 @@ Finally, the method sets the static JSONObject a to the JSONObject it created an
 The blog discusses the use of a lure application by a scammer to steal sensitive information from users. The lure application serves as a decoy, tricking users into providing their SMS data and online banking credentials, as well as credit card information. Once the scammer has obtained the SMS information, it is submitted to the attacker's Command and Control (C2) server using an API located at the domain sg1[.]mall-base-app[.]com. While, for banking credential phishing kit, the data are sends to u138-paymobile7731[.]pay-director[.]com The attacker can then use the stolen information, such as banking credentials and credit card information, to obtain the Transaction Authorization Code (TAC) for illegal transactions. Essentially, the scammer is using the lure application to phish for sensitive information and use it for fraudulent purposes.
 
 # Indicator of Compromises
+
 | C2 Server |
 | --- |
 | https://sg1.mall-base-app.com |
