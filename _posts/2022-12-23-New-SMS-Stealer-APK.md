@@ -202,7 +202,6 @@ Upon entering our banking credential, the app will POST the data to the API serv
 After send the data, the application will either shows this screen to the user.
 
 ![Snipaste_2022-12-23_20-59-25-removebg-preview (1)](https://user-images.githubusercontent.com/56353946/209341207-2b15dbc4-8c6c-4d5d-83b9-051cf4531ee0.png)
-
 ![Snipaste_2022-12-23_20-59-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341208-ad263834-b79a-4fc7-a86f-5521a7ae04fa.png)
 
 ## SMS stealer
