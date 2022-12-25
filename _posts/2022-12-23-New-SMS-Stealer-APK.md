@@ -164,40 +164,42 @@ The code also starts an activity to change the default SMS app to the current ap
 Here some of the application during my testing of the app such as viewing items/services, booking items/services, adding items/services to a shopping cart, and checkout.
 
 ![Snipaste_2022-12-23_20-55-50-removebg-preview](https://user-images.githubusercontent.com/56353946/209341218-3910f52d-de6c-4100-b6e1-6c07470f98ee.png)
-
 ![Snipaste_2022-12-23_20-56-34-removebg-preview](https://user-images.githubusercontent.com/56353946/209341219-88303f48-b1b7-497b-b805-25f2b01b7b40.png)
-
-![Snipaste_2022-12-23_20-56-46-removebg-preview](https://user-images.githubusercontent.com/56353946/209341221-65413276-36df-468b-9ff6-b4571c2d859a.png)
-
 ![Snipaste_2022-12-23_20-56-57-removebg-preview](https://user-images.githubusercontent.com/56353946/209341223-bccc5e82-819e-4c56-854c-8d1a2732f10b.png)
-
 ![Snipaste_2022-12-23_20-57-08-removebg-preview](https://user-images.githubusercontent.com/56353946/209341226-90d3bb9e-dd37-419b-abc6-4e80da8348be.png)
 
 
 ## Fake payment gateway for phishing
 
-Upon checkout the items, the app will navigate to fake payment gateaway for the payment options.
+Upon checkout the items, the app will navigate to fake payment gateaway for the payment options. The payment also can be made using Debit and Credit Card.
 
 ![Snipaste_2022-12-23_20-57-56-removebg-preview](https://user-images.githubusercontent.com/56353946/209341229-4f26da73-b2ea-48fc-9dcd-d6b123945be7.png)
 
-The list of bank include:
+The list of banks include:
 1. Maybank
-2. Affin Bank
-3. Public Bank
-4. CIMB
-5. BSN
-6. RHB
-7. UOB
-8. Ambank
-9. Bank Islam
-10. Hong Leong Bank
-11. Bank Muamalat
+2. Hong Leong Bank
+3. CIMB
+4. Public Bank
+5. Affin
+6. BSN
+7. Bank Islam
+8. AmBank
+9. OCBC
+10. HSBC
+11. HUOB
+12. AGRO
+
+For example, figure below shows fake Maybank2u page and lure debit/credit card payment page:
 
 ![Snipaste_2022-12-23_20-58-18-removebg-preview](https://user-images.githubusercontent.com/56353946/209341232-e782d486-3230-4430-a083-c469aed60dd2.png)
-
 ![Snipaste_2022-12-23_20-58-26-removebg-preview](https://user-images.githubusercontent.com/56353946/209341234-691f0e11-26f8-4231-8c62-973507ca0cea.png)
-
 ![Snipaste_2022-12-23_20-58-48-removebg-preview](https://user-images.githubusercontent.com/56353946/209341201-c225d807-49dc-49ea-a31e-bb8a6144dfce.png)
+
+Upon entering our banking credential, the app will POST the data to the API server reside in `https://u138-paymobile7731.pay-director.com/common/save.php`
+
+![image](https://user-images.githubusercontent.com/56353946/209454017-4a2eda97-d559-4ee1-b436-45ab0ca826c8.png)
+
+After send the data, the application will either shows this screen to the user.
 
 ![Snipaste_2022-12-23_20-59-25-removebg-preview (1)](https://user-images.githubusercontent.com/56353946/209341207-2b15dbc4-8c6c-4d5d-83b9-051cf4531ee0.png)
 
@@ -346,7 +348,8 @@ The blog discusses the use of a lure application by a scammer to steal sensitive
 # Indicator of Compromises
 | C2 Server |
 | --- |
-| https://sg1.mall-base-app.com | 
+| https://sg1.mall-base-app.com |
+| https://u138-paymobile7731.pay-director.com |
 
 | URLs |
 | --- |
@@ -355,6 +358,12 @@ The blog discusses the use of a lure application by a scammer to steal sensitive
 | https://sg1.mall-base-app.com/app/api/action/smsMessagePushAction/ |
 | https://sg1.mall-base-app.com/app/api/action/smsPermissionPushAction/ |
 | https://u138-paymobile7731.pay-director.com/maybank/pay.html |
+| https://u138-paymobile7731.pay-director.com/cimb/pay.html |
+| https://u138-paymobile7731.pay-director.com/affin/pay.html |
+| https://u138-paymobile7731.pay-director.com/ocbc/pay.html |
+| https://u138-paymobile7731.pay-director.com/hsbc/pay.html |
+| https://u138-paymobile7731.pay-director.com/uob/pay.html |
+| https://u138-paymobile7731.pay-director.com/common/save.php |
 
 | MD5 Hash | Filename |
 | --- | --- |
