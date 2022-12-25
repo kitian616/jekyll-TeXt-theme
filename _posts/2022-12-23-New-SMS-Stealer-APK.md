@@ -155,13 +155,13 @@ This code defines an requestPermission method that requests several SMS-related 
 - `android.permission.RECEIVE_SMS`: Allows an application to receive SMS messages.
 - `android.permission.SEND_SMS`: Allows an application to send SMS messages.
 - `android.permission.RECEIVE_MMS`: Allows an application to receive MMS messages.
-- android.permission.RECEIVE_WAP_PUSH`: Allows an application to receive WAP push messages.
+- `android.permission.RECEIVE_WAP_PUSH`: Allows an application to receive WAP push messages.
 
-These permissions are requested using the requestPermissions method of the Activity class, which displays a system dialog to the user asking for permission. The requestPermissions method takes two arguments: an array of strings representing the permissions being requested, and an integer request code that is used to identify the request when the result is received in the onRequestPermissionsResult method.
+These permissions are requested using the `requestPermissions` method of the Activity class, which displays a system dialog to the user asking for permission. The `requestPermissions` method takes two arguments: an array of strings representing the permissions being requested, and an integer request code that is used to identify the request when the result is received in the onRequestPermissionsResult method.
 
 The code also starts an activity to change the default SMS app to the current app by creating an Intent object with the action "android.provider.Telephony.ACTION_CHANGE_DEFAULT" and setting the package name of the current app as an extra. The activity is started using the startActivity method of the Activity class.
 
-Here some of the application during my testing of the app such as viewing items/services, booking items/services, adding items/services to a shopping cart, and checkout.
+Here some of the application interface during my testing of the app such as viewing items/services, booking items/services, adding items/services to a shopping cart, and checkout.
 
 ![Snipaste_2022-12-23_20-55-50-removebg-preview](https://user-images.githubusercontent.com/56353946/209341218-3910f52d-de6c-4100-b6e1-6c07470f98ee.png)
 ![Snipaste_2022-12-23_20-56-34-removebg-preview](https://user-images.githubusercontent.com/56353946/209341219-88303f48-b1b7-497b-b805-25f2b01b7b40.png)
@@ -343,7 +343,7 @@ If a location is found, the method uses reflection to get the longitude, latitud
 Finally, the method sets the static JSONObject a to the JSONObject it created and sets the static boolean variable b to true, and returns the JSONObject.
 
 # Summary
-The blog discusses the use of a lure application by a scammer to steal sensitive information from users. The lure application serves as a decoy, tricking users into providing their SMS data and online banking credentials, as well as credit card information. Once the scammer has obtained this information, it is submitted to the attacker's Command and Control (C2) server using an API located at the domain sg1[.]mall-base-app[.]com. The attacker can then use the stolen information, such as banking credentials and credit card information, to obtain the Transaction Authorization Code (TAC) for illegal transactions. Essentially, the scammer is using the lure application to phish for sensitive information and use it for fraudulent purposes.
+The blog discusses the use of a lure application by a scammer to steal sensitive information from users. The lure application serves as a decoy, tricking users into providing their SMS data and online banking credentials, as well as credit card information. Once the scammer has obtained the SMS information, it is submitted to the attacker's Command and Control (C2) server using an API located at the domain sg1[.]mall-base-app[.]com. While, for banking credential phishing kit, the data are sends to u138-paymobile7731[.]pay-director[.]com The attacker can then use the stolen information, such as banking credentials and credit card information, to obtain the Transaction Authorization Code (TAC) for illegal transactions. Essentially, the scammer is using the lure application to phish for sensitive information and use it for fraudulent purposes.
 
 # Indicator of Compromises
 | C2 Server |
