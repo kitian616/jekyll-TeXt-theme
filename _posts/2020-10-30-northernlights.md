@@ -8,7 +8,7 @@ mathjax: true
 #### **TRAVELOGUE**
 In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis
 
-<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG"/>
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" width="100" />
 
 Having lived in Stockholm for over 5 years, I was yet to see the fabled Northern lights. It has been quite elusive to me in my previous visits to the North. So five of us decided to embark on a journey above the Arctic circle and hunt it down.
 
@@ -22,7 +22,7 @@ As evident from the picture above, Norrbotten is already experiencing winter whe
 We started from Stockholm at 18:00 hrs to reach Boden early morning the next day at 06:00. Then Pajala was a further 3.5 hours drive towards the north.
 
 ## Scouting for the Northern lights
-Ye northern lights *kidhar hai? Peepal ped ke aagey left le lo*
+##### Ye northern lights *kidhar hai? Peepal ped ke aagey left le lo*
 (Transl. Where is this northern lights? Take a left from the banyan tree.)
 
 Here is the thing about Northern lights. You cant drive up to a local and ask him/her which way to go see Northern lights like you would for the Eiffel tower or the Taj Mahal. At the same time you shouldn’t necessarily decide to ‘wing’ it either. You get to see them with some patience and following weather updates.
@@ -36,3 +36,8 @@ http://www.aurora-service.eu/
 https://www.smhi.se/q/Stockholm/2673730
 
 Aurora activity is a general measure of the probability and/or the intensity of the appearance of the Northern lights. It goes on a scale between kp 0 to kp 8. Anything above 3 is considered good above the Arctic circle, provided you are out of city limits where there is a lot of light pollution, rendering the Northern lights invisible. The website updates prediction for every 3 hour window, guided by NASA’s satellites. This measure varied between 1 to 5 during our stay in Pajala. kp 5 is considered really intense, so much that it might be visible from southern latitudes as well. See here
+
+> all the talk about Aurora is pointless if the cloud spoils the party
+
+Coming to the second point, all the talk about Aurora is pointless if the cloud spoils the party which exactly happened in our case for two days. Our cottage stood at the right latitude and the right level of Aurora activity. BUT it got densely clouded in the night. That is where we used the cloud cover prediction website which worked reasonably well and provided us locations on the map within a driving distance of 100–200 kms that had clear skies. And to give credit where it is due: *Climate prediction works!*
+
