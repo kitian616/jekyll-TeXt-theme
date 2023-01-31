@@ -8,7 +8,7 @@ mathjax: true
 #### **TRAVELOGUE**
 In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis
 
-<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" width="1000"/>
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" width="50%" height="50%"/>
 
 Having lived in Stockholm for over 5 years, I was yet to see the fabled Northern lights. It has been quite elusive to me in my previous visits to the North. So five of us decided to embark on a journey above the Arctic circle and hunt it down.
 
@@ -39,5 +39,5 @@ Aurora activity is a general measure of the probability and/or the intensity of 
 
 > all the talk about Aurora is pointless if the cloud spoils the party
 
-Coming to the second point, all the talk about Aurora is pointless if the cloud spoils the party which exactly happened in our case for two days. Our cottage stood at the right latitude and the right level of Aurora activity. BUT it got densely clouded in the night. That is where we used the cloud cover prediction website which worked reasonably well and provided us locations on the map within a driving distance of 100–200 kms that had clear skies. And to give credit where it is due: *Climate prediction works!*
+Coming to the second point, all the talk about Aurora is pointless if the cloud spoils the party which exactly happened in our case for two days. Our cottage stood at the right latitude and the right level of Aurora activity. BUT it got densely clouded in the night. That is where we used the cloud cover prediction website which worked reasonably well and provided us locations on the map within a driving distance of 100–200 kms that had clear skies. And to give credit where it is due: *Climate prediction works!* w
 
