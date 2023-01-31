@@ -49,5 +49,5 @@ Aurora activity is a general measure of the probability and/or the intensity of 
 
 > all the talk about Aurora is pointless if the cloud spoils the party
 
-Coming to the second point, all the talk about Aurora is pointless if the cloud spoils the party which exactly happened in our case for two days. Our cottage stood at the right latitude and the right level of Aurora activity. BUT it got densely clouded in the night. That is where we used the cloud cover prediction website which worked reasonably well and provided us locations on the map within a driving distance of 100–200 kms that had clear skies. And to give credit where it is due: *Climate prediction works!* w
+Coming to the second point, all the talk about Aurora is pointless if the cloud spoils the party which exactly happened in our case for two days. Our cottage stood at the right latitude and the right level of Aurora activity. BUT it got densely clouded in the night. That is where we used the cloud cover prediction website which worked reasonably well and provided us locations on the map within a driving distance of 100–200 kms that had clear skies. And to give credit where it is due: *Climate prediction works!* wv
 
