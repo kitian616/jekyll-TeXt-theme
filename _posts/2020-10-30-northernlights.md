@@ -58,3 +58,53 @@ The time it took for me to ponder all the above was enough for my toe nails to s
 Here is the funny thing about sun rise in the Arctic. The Sun ‘teases’ you for a long time (about 1 hour probably) staying just behind the horizon, flooding enough light to drown out the darkness but yet maintaining a dusky sky. However, it does kill any possibilities of seeing the Northern lights. The sun officially rose at 07:23. Go figure!
 
 We did see a beautiful star-filled sky but with no sign of Aurora. We go home now to fight the next night.
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+## Day 2: Patience is a virtue
+
+We started Day 2 with a more relaxing manner. In the cottages up north here in Sweden, it is very common to have a Sauna annex attached to your cottage. This is basically a closed room walled with wooden planks and filled with steam for people to go in sweat and relax. Something really to try in the winters up here. You usually use a paddle to pour water on the heated rocks to generate the steam and lie there.
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+After enough relaxation, we decided to take a different destination tonight. We drove a bit south towards the Swedish town of Överkalix since the cloud prediction website suggested here for clear sky. Upon reaching there at 23:00, it felt that this is gonna be another night of no lights and just stars. But we still picked a nice spot overlooking the town from the banks of Kalix river with hope.
+
+After about an hour, my friend pointed out to what seemingly looked like a faint cloud that this maybe the northern lights. I dismissed him because I had seen the images on Google. But then, this guy has seen the real thing so that must be something! So hesitantly, we brought in our camera, fixed it on a tripod and with an exposure time of 15 seconds, my friend captured it:
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+It turned out that my friend was right. This is definitely it! That was quite not what I was expecting. I was expecting bright green like RGB [0 255 0] green. But those photos on google are mostly taken after being accumulated with longer exposure periods with DSLR cameras, something my stupid eyes cannot fathom.
+
+> photos on google are mostly taken after being clicked with longer exposure periods with DSLR cameras
+
+But then this had given us hope. an hour ago, we were like, ‘If we can see stars again that itself is a victory’. Right now, we wanted to take National geographic level photos of the northern lights. My friend whizzes through his smart phone and finds an abandoned mine in the middle of a forest! — far away from the town. This meant clear sky, zero light pollution, a road that can allow vehicles. All after 3 hours of wandering and preparing for the possibility of not seeing the Aurora. Patience is a virtue.
+
+It only got better here. The now abandoned mine had cleared a huge patch of the forest cover in the middle of nowhere. And in that flat piece of land between huge snow+dirt mounds we parked our car. And then the Northern Lights only intensified further!
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+When was the last time you spent an hour with 4 people without saying a word and not seeing your smartphone? Smartphones and any ‘man-made’ sources of light were put out to adjust our eyes w.r.t the darkness outside so that you see the Aurora more clearly.
+
+>When was the last time you spent an hour with 4 people without saying a word and not seeing your smartphone?
+
+The northern lights dont necessarily stay constant. They tend to ‘dance’ around the sky taking different forms and shapes. U was a very common shape. It was very similar to the shape evolution you observe when you pour oil on a jar of water.
+
+The activity was quite intense here and we enjoyed the sights for another couple of hours and by the time we reached home it was 5 in the morning. We had won tonight.
+
+## Day 3–4: Home delivery and Bonus
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+Now we had see the main thing we had ventured out for. We decided to spend sometime exploring the surrounding areas. We spent some time in an abandoned smelting plant and visited a Moose farm. Moose/Elk is the national animal of Sweden. Apparently they survive in these unforgiving climate just by eating bark off the trees. They shed their antlers once every winter which weighed about 20–25 kg. This particular one in the picture is Oscar and apparently is a ladies’ man or so we are told. The ones in the north are taller with long legs to navigate the snow it seems.
+
+> they survive in this unforgiving climate just by eating bark off the trees
+
+The man running the Moose farm explained to us the relationship between the Swedish Government and animal husbandry in the north. Apparently this gentleman has the rights on hundreds of acres of land up here to run his farm without any involvement from the government, something very foreign to me as an Indian. Reminded me of Leo Tolsoy’s short story on the same.
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+On the final night, the clouds cleared up above our cottage as well. We were no longer required to drive searching for clear skies anymore. We just walked with tea outside our cottage to the banks of river Torne to see the northern lights one final time. For all the running around from the previous nights, on our last night,we received a home delivery from the sky.
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+We took the same train back from Boden at 22:00 hrs and reached Stockholm the next day at 10:00. In all this, we were social-distanced pretty well. Apart from each other in the group, we interacted only with two other people in the entire trip. I guess that makes it a COVID19-proof trip!
