@@ -8,6 +8,8 @@ mathjax: true
 #### **TRAVELOGUE**
 In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis
 
+<img class="image image--sm" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/image1.JPG"/>
+
 <img class="image image--sm" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/docs/assets/images/image1.svg"/>
 
 <img class="image image--sm" src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg"/>
