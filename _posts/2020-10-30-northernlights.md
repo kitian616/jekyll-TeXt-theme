@@ -8,7 +8,7 @@ mathjax: true
 #### **TRAVELOGUE**
 In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis
 
-<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" style="width:30px;height:auto;" />
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" style="width:1000px;height:auto;" />
 
 ![This is an image](https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG)
 
