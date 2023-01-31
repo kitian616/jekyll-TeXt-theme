@@ -8,16 +8,14 @@ mathjax: true
 #### **TRAVELOGUE**
 In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis
 
-<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" style="width:1000px;height:auto;" />
-
-![This is an image](https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG)
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG" style="width:1000px;height:auto;" />
 
 Having lived in Stockholm for over 5 years, I was yet to see the fabled Northern lights. It has been quite elusive to me in my previous visits to the North. So five of us decided to embark on a journey above the Arctic circle and hunt it down.
 
 ## The Journey:
 From Stockholm, we had to travel about 1200 km north to maximize our chances of finding Northern lights. In the COVID19 era, it did not feel right to fly out to the nearest airport at Luleå or Kiruna, both situated in Sweden’s largest and the northern-most province- Norrbotten. So we booked a coupe for six in SJ’s overnight train to Boden from Stockholm Central. Normally the train is supposed to proceed towards the northern-most mining town of Kiruna but due to track maintenance work stopped at Boden. Here SJ could do a better job notifying route changes to their passengers in advance! From Boden we booked a car rental to further travel up north. Something I realized here is that a driving license is an absolute necessity. For our stay up in the North, we booked a nice cottage via AirBnB on the banks of the Torne river in Pajala.
 
-<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG"/>
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
 
 As evident from the picture above, Norrbotten is already experiencing winter when 1200 kms south, the trees have just decided to start shedding their leaves. So you need to prepare for a -12 to -15 degrees C when you embark upon this trip. Remember, it is even more important since you will be scouting for the lights out in the cold when it is dark and wont necessarily be staying indoors.
 
@@ -43,3 +41,20 @@ Aurora activity is a general measure of the probability and/or the intensity of 
 
 Coming to the second point, all the talk about Aurora is pointless if the cloud spoils the party which exactly happened in our case for two days. Our cottage stood at the right latitude and the right level of Aurora activity. BUT it got densely clouded in the night. That is where we used the cloud cover prediction website which worked reasonably well and provided us locations on the map within a driving distance of 100–200 kms that had clear skies. And to give credit where it is due: *Climate prediction works!* wvg
 
+## Day 1 and a half: You win some, you lose some
+
+So we hopped on to our car to drive towards clear skies in the middle of the night to the middle of nowhere. Something I never thought I would be doing.
+
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG"/>
+
+We reached a hill about 150 kms far from our house at about 1 in the morning, guided by the cloud cover map. We got out to admire the clear sky…. and immediately went back into the car. It was freezing -12 degrees out there. But nevertheless we warmed ourselves by turning on the heater in the car every half hour and continued venturing out to just gaze at the stars.
+
+> I had never really seen the sky filled up with so many stars and their clusters.
+
+Having lived in cities (some really polluted ones in that), I had never really seen the sky filled up with so many stars and their clusters. It really made me understand why Astrology was such a big thing in the ancient times. I always thought they were ‘over-imagining’ shapes (or tripping) since I hadn’t seen so many stars before. But here, for a short (and very cold) duration I too was able to see what the ancient Indians, Greeks and the Egyptians saw. A clear glance at the endless patterns and shapes of stars before me.
+
+The time it took for me to ponder all the above was enough for my toe nails to start biting from the knee-deep snow I was standing on. So I went inside the car and heated myself up. Coming to the northern lights however, unfortunately this night wasn’t it. We huddled back into our car when the sun rose at 6:00 and went off to sleep in our cottage.
+
+Here is the funny thing about sun rise in the Arctic. The Sun ‘teases’ you for a long time (about 1 hour probably) staying just behind the horizon, flooding enough light to drown out the darkness but yet maintaining a dusky sky. However, it does kill any possibilities of seeing the Northern lights. The sun officially rose at 07:23. Go figure!
+
+We did see a beautiful star-filled sky but with no sign of Aurora. We go home now to fight the next night.
