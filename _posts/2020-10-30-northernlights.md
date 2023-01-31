@@ -8,7 +8,17 @@ mathjax: true
 #### **TRAVELOGUE**
 In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis
 
-<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" width="50%" height="50%"/>
+<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG" />
+
+![This is an image](https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/_posts/images/image1.JPG">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+</picture>
+
+
 
 Having lived in Stockholm for over 5 years, I was yet to see the fabled Northern lights. It has been quite elusive to me in my previous visits to the North. So five of us decided to embark on a journey above the Arctic circle and hunt it down.
 
