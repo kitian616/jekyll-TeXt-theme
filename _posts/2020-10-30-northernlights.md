@@ -49,7 +49,7 @@ https://www.smhi.se/q/Stockholm/2673730
 
 Aurora activity is a general measure of the probability and/or the intensity of the appearance of the Northern lights. It goes on a scale between kp 0 to kp 8. Anything above 3 is considered good above the Arctic circle, provided you are out of city limits where there is a lot of light pollution, rendering the Northern lights invisible. The website updates prediction for every 3 hour window, guided by NASA’s satellites. This measure varied between 1 to 5 during our stay in Pajala. kp 5 is considered really intense, so much that it might be visible from southern latitudes as well.
 
-> all the talk about Aurora is pointless if the cloud spoils the party
+> <font size="5"> *all the talk about Aurora is pointless if the cloud spoils the party* <\font>
 
 Coming to the second point, all the talk about Aurora is pointless if the cloud spoils the party which exactly happened in our case for two days. Our cottage stood at the right latitude and the right level of Aurora activity. BUT it got densely clouded in the night. That is where we used the cloud cover prediction website which worked reasonably well and provided us locations on the map within a driving distance of 100–200 kms that had clear skies. And to give credit where it is due: *Climate prediction works!*
 
