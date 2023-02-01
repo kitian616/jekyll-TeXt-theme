@@ -1,6 +1,10 @@
 ---
 layout: article
 title: An October journey to the white north
+aside:
+  toc: true
+sidebar:
+  nav: layouts
 mathjax: true
 ---
 ### A COVID19-proof travelogue up to Swedish Lappland for the Northern Lights
