@@ -13,17 +13,12 @@ article_header:
     src: /assets/images/northern-lights/image1.JPG
 mathjax: true
 ---
+
 A COVID19-proof travelogue up to Swedish Lappland for the Northern Lights
+<!--more-->
 
 #### **TRAVELOGUE**
-In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis
-
-<p>
-<img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image1.JPG" style="width:1000px;height:auto;" />
-<em>Northern lights (Norrsken) from Norrbotten province in Sweden.</em>
-</p>
-
-Having lived in Stockholm for over 5 years, I was yet to see the fabled Northern lights. It has been quite elusive to me in my previous visits to the North. So five of us decided to embark on a journey above the Arctic circle and hunt it down.
+In this travelogue, I cover my journey up to the white north and my experience hunting down the fabled Northern Lights or Aurora Boreolis. Having lived in Stockholm for over 5 years, I was yet to see the fabled Northern lights. It has been quite elusive to me in my previous visits to the North. So five of us decided to embark on a journey above the Arctic circle and hunt it down.
 
 ## The Journey:
 From Stockholm, we had to travel about 1200 km north to maximize our chances of finding Northern lights. In the COVID19 era, it did not feel right to fly out to the nearest airport at Luleå or Kiruna, both situated in Sweden’s largest and the northern-most province- [Norrbotten](https://www.google.com/maps/place/Norrbotten+County/@67.0595578,19.7663299,6z/data=!3m1!4b1!4m5!3m4!1s0x44e18982d998e6f5:0x7207a2f27b8ce110!8m2!3d66.8309216!4d20.3991966). So we booked a coupe for six in [SJ](https://www.sj.se/en/#/)’s overnight train to Boden from Stockholm Central. Normally the train is supposed to proceed towards the northern-most mining town of Kiruna but due to track maintenance work stopped at Boden. Here SJ could do a better job notifying route changes to their passengers in advance! From Boden we booked a car rental to further travel up north. Something I realized here is that a driving license is an absolute necessity. For our stay up in the North, we booked a nice cottage via [AirBnB](https://www.airbnb.com/s/Pajala--Sweden/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&place_id=ChIJxQbI2B5W0UUR8IWM3gZFAwQ&query=Pajala%2C%20Sweden&checkin=2020-11-05&checkout=2020-11-12&source=structured_search_input_header&search_type=autocomplete_click) on the banks of the Torne river in Pajala.
