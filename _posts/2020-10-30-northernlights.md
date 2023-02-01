@@ -63,7 +63,7 @@ So we hopped on to our car to drive towards clear skies in the middle of the nig
 
 We reached a hill about 150 kms far from our house at about 1 in the morning, guided by the cloud cover map. We got out to admire the clear sky…. and immediately went back into the car. It was freezing -12 degrees out there. But nevertheless we warmed ourselves by turning on the heater in the car every half hour and continued venturing out to just gaze at the stars.
 
-> I had never really seen the sky filled up with so many stars and their clusters.
+> <font size="5"> <i> I had never really seen the sky filled up with so many stars and their clusters. </i> </font>
 
 Having lived in cities (some really polluted ones in that), I had never really seen the sky filled up with so many stars and their clusters. It really made me understand why Astrology was such a big thing in the ancient times. I always thought they were ‘over-imagining’ shapes (or tripping) since I hadn’t seen so many stars before. But here, for a short (and very cold) duration I too was able to see what the ancient Indians, Greeks and the Egyptians saw. A clear glance at the endless patterns and shapes of stars before me.
 
@@ -98,7 +98,7 @@ After about an hour, my friend pointed out to what seemingly looked like a faint
 
 It turned out that my friend was right. This is definitely it! That was quite not what I was expecting. I was expecting bright green like RGB [0 255 0] green. But those photos on google are mostly taken after being accumulated with longer exposure periods with DSLR cameras, something my stupid eyes cannot fathom.
 
-> photos on google are mostly taken after being clicked with longer exposure periods with DSLR cameras
+> <font size="5"> <i> photos on google are mostly taken after being clicked with longer exposure periods with DSLR cameras </i> </font>
 
 But then this had given us hope. an hour ago, we were like, ‘If we can see stars again that itself is a victory’. Right now, we wanted to take National geographic level photos of the northern lights. My friend whizzes through his smart phone and finds an abandoned mine in the middle of a forest! — far away from the town. This meant clear sky, zero light pollution, a road that can allow vehicles. All after 3 hours of wandering and preparing for the possibility of not seeing the Aurora. Patience is a virtue.
 
@@ -111,7 +111,7 @@ It only got better here. The now abandoned mine had cleared a huge patch of the 
 
 When was the last time you spent an hour with 4 people without saying a word and not seeing your smartphone? Smartphones and any ‘man-made’ sources of light were put out to adjust our eyes w.r.t the darkness outside so that you see the Aurora more clearly.
 
->When was the last time you spent an hour with 4 people without saying a word and not seeing your smartphone?
+> <font size="5"> <i> When was the last time you spent an hour with 4 people without saying a word and not seeing your smartphone? </i> </font>
 
 The northern lights dont necessarily stay constant. They tend to ‘dance’ around the sky taking different forms and shapes. U was a very common shape. It was very similar to the shape evolution you observe when you pour oil on a jar of water.
 
@@ -126,7 +126,7 @@ The activity was quite intense here and we enjoyed the sights for another couple
 
 Now we had see the main thing we had ventured out for. We decided to spend sometime exploring the surrounding areas. We spent some time in an abandoned smelting plant and visited a Moose farm. Moose/Elk is the national animal of Sweden. Apparently they survive in these unforgiving climate just by eating bark off the trees. They shed their antlers once every winter which weighed about 20–25 kg. This particular one in the picture is Oscar and apparently is a ladies’ man or so we are told. The ones in the north are taller with long legs to navigate the snow it seems.
 
-> they survive in this unforgiving climate just by eating bark off the trees
+> <font size="5"> <i> they survive in this unforgiving climate just by eating bark off the trees </i> </font>
 
 The man running the Moose farm explained to us the relationship between the Swedish Government and animal husbandry in the north. Apparently this gentleman has the rights on hundreds of acres of land up here to run his farm without any involvement from the government, something very foreign to me as an Indian. Reminded me of [Leo Tolsoy’s short story on the same](https://en.wikipedia.org/wiki/How_Much_Land_Does_a_Man_Need%3F).
 
