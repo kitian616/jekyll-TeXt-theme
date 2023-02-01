@@ -1,12 +1,20 @@
 ---
 layout: article
-title: An October journey to the white north
-aside:
-  toc: true
-sidebar:
-  nav: layouts
+title:  An October journey to the white north
+header:
+  theme: dark
+  background: 'linear-gradient(135deg, rgb(34, 139, 87), rgb(139, 34, 139))'
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/images/northern-lights/image1.JPG
 mathjax: true
 ---
+
+
 ### A COVID19-proof travelogue up to Swedish Lappland for the Northern Lights
 
 #### **TRAVELOGUE**
