@@ -13,7 +13,7 @@ In this travelogue, I cover my journey up to the white north and my experience h
 Having lived in Stockholm for over 5 years, I was yet to see the fabled Northern lights. It has been quite elusive to me in my previous visits to the North. So five of us decided to embark on a journey above the Arctic circle and hunt it down.
 
 ## The Journey:
-From Stockholm, we had to travel about 1200 km north to maximize our chances of finding Northern lights. In the COVID19 era, it did not feel right to fly out to the nearest airport at Luleå or Kiruna, both situated in Sweden’s largest and the northern-most province- Norrbotten. So we booked a coupe for six in SJ’s overnight train to Boden from Stockholm Central. Normally the train is supposed to proceed towards the northern-most mining town of Kiruna but due to track maintenance work stopped at Boden. Here SJ could do a better job notifying route changes to their passengers in advance! From Boden we booked a car rental to further travel up north. Something I realized here is that a driving license is an absolute necessity. For our stay up in the North, we booked a nice cottage via AirBnB on the banks of the Torne river in Pajala.
+From Stockholm, we had to travel about 1200 km north to maximize our chances of finding Northern lights. In the COVID19 era, it did not feel right to fly out to the nearest airport at Luleå or Kiruna, both situated in Sweden’s largest and the northern-most province- [Norrbotten](https://www.google.com/maps/place/Norrbotten+County/@67.0595578,19.7663299,6z/data=!3m1!4b1!4m5!3m4!1s0x44e18982d998e6f5:0x7207a2f27b8ce110!8m2!3d66.8309216!4d20.3991966). So we booked a coupe for six in [SJ](https://www.sj.se/en/#/)’s overnight train to Boden from Stockholm Central. Normally the train is supposed to proceed towards the northern-most mining town of Kiruna but due to track maintenance work stopped at Boden. Here SJ could do a better job notifying route changes to their passengers in advance! From Boden we booked a car rental to further travel up north. Something I realized here is that a driving license is an absolute necessity. For our stay up in the North, we booked a nice cottage via [AirBnB](https://www.airbnb.com/s/Pajala--Sweden/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&place_id=ChIJxQbI2B5W0UUR8IWM3gZFAwQ&query=Pajala%2C%20Sweden&checkin=2020-11-05&checkout=2020-11-12&source=structured_search_input_header&search_type=autocomplete_click) on the banks of the Torne river in Pajala.
 
 <img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image2.JPG" style="width:1000px;height:auto;" />
 
@@ -24,7 +24,7 @@ We started from Stockholm at 18:00 hrs to reach Boden early morning the next day
 <img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image3.JPG" style="width:1000px;height:auto;" />
 
 ## Scouting for the Northern lights
-##### Ye northern lights *kidhar hai? Peepal ped ke aagey left le lo*
+##### *Ye northern lights kidhar hai? Peepal ped ke aagey left le lo*
 (Transl. Where is this northern lights? Take a left from the banyan tree.)
 
 Here is the thing about Northern lights. You cant drive up to a local and ask him/her which way to go see Northern lights like you would for the Eiffel tower or the Taj Mahal. At the same time you shouldn’t necessarily decide to ‘wing’ it either. You get to see them with some patience and following weather updates.
@@ -32,12 +32,13 @@ Here is the thing about Northern lights. You cant drive up to a local and ask hi
 We kept track on the two main aspects on our smart phones:
 
 #### Aurora activity:
-http://www.aurora-service.eu/
+[http://www.aurora-service.eu/](https://www.aurora-service.eu/)
 
 #### Cloud cover:
 https://www.smhi.se/q/Stockholm/2673730
+[https://www.smhi.se/q/Stockholm/2673730](https://www.smhi.se/q/Stockholm/2673730)
 
-Aurora activity is a general measure of the probability and/or the intensity of the appearance of the Northern lights. It goes on a scale between kp 0 to kp 8. Anything above 3 is considered good above the Arctic circle, provided you are out of city limits where there is a lot of light pollution, rendering the Northern lights invisible. The website updates prediction for every 3 hour window, guided by NASA’s satellites. This measure varied between 1 to 5 during our stay in Pajala. kp 5 is considered really intense, so much that it might be visible from southern latitudes as well. See here
+Aurora activity is a general measure of the probability and/or the intensity of the appearance of the Northern lights. It goes on a scale between kp 0 to kp 8. Anything above 3 is considered good above the Arctic circle, provided you are out of city limits where there is a lot of light pollution, rendering the Northern lights invisible. The website updates prediction for every 3 hour window, guided by NASA’s satellites. This measure varied between 1 to 5 during our stay in Pajala. kp 5 is considered really intense, so much that it might be visible from southern latitudes as well.
 
 > all the talk about Aurora is pointless if the cloud spoils the party
 
@@ -47,7 +48,10 @@ Coming to the second point, all the talk about Aurora is pointless if the cloud 
 
 So we hopped on to our car to drive towards clear skies in the middle of the night to the middle of nowhere. Something I never thought I would be doing.
 
+<p>
 <img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image4.JPG" style="width:1000px;height:auto;" />
+<em>image_caption</em>
+</p>
 
 We reached a hill about 150 kms far from our house at about 1 in the morning, guided by the cloud cover map. We got out to admire the clear sky…. and immediately went back into the car. It was freezing -12 degrees out there. But nevertheless we warmed ourselves by turning on the heater in the car every half hour and continued venturing out to just gaze at the stars.
 
@@ -69,7 +73,7 @@ We started Day 2 with a more relaxing manner. In the cottages up north here in S
 
 <img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image6.JPG" style="width:1000px;height:auto;" />
 
-After enough relaxation, we decided to take a different destination tonight. We drove a bit south towards the Swedish town of Överkalix since the cloud prediction website suggested here for clear sky. Upon reaching there at 23:00, it felt that this is gonna be another night of no lights and just stars. But we still picked a nice spot overlooking the town from the banks of Kalix river with hope.
+After enough relaxation, we decided to take a different destination tonight. We drove a bit south towards the Swedish town of [Överkalix](https://www.google.com/maps/place/956+31+%C3%96verkalix/@66.7944329,22.0487596,8z/data=!4m5!3m4!1s0x45d5b0e767f8fc61:0x86d8966d5e195635!8m2!3d66.3271757!4d22.8427524) since the cloud prediction website suggested here for clear sky. Upon reaching there at 23:00, it felt that this is gonna be another night of no lights and just stars. But we still picked a nice spot overlooking the town from the banks of Kalix river with hope.
 
 After about an hour, my friend pointed out to what seemingly looked like a faint cloud that this maybe the northern lights. I dismissed him because I had seen the images on Google. But then, this guy has seen the real thing so that must be something! So hesitantly, we brought in our camera, fixed it on a tripod and with an exposure time of 15 seconds, my friend captured it:
 
@@ -101,7 +105,7 @@ Now we had see the main thing we had ventured out for. We decided to spend somet
 
 > they survive in this unforgiving climate just by eating bark off the trees
 
-The man running the Moose farm explained to us the relationship between the Swedish Government and animal husbandry in the north. Apparently this gentleman has the rights on hundreds of acres of land up here to run his farm without any involvement from the government, something very foreign to me as an Indian. Reminded me of Leo Tolsoy’s short story on the same.
+The man running the Moose farm explained to us the relationship between the Swedish Government and animal husbandry in the north. Apparently this gentleman has the rights on hundreds of acres of land up here to run his farm without any involvement from the government, something very foreign to me as an Indian. Reminded me of [Leo Tolsoy’s short story on the same](https://en.wikipedia.org/wiki/How_Much_Land_Does_a_Man_Need%3F).
 
 <img class="image image--lg" src="https://raw.githubusercontent.com/visakhvkrishna/visakhvkrishna.github.io/main/assets/images/northern-lights/image10.JPG" style="width:1000px;height:auto;" />
 
