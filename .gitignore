@@ -10,6 +10,7 @@
 *.log.*
 
 /.vscode/
+*.code-workspace
 
 node_modules/
 .sass-cache/
