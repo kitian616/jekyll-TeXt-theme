@@ -39,15 +39,15 @@ $ sudo ufw status
 Status: inactive
 ```
 
-### 安装
+## 安装
 
-如果没有安装`ufw`可以使用包管理工具进行安装。
+如果没有安装`ufw`可以使用包管理工具进行安装，以Debian为例可以使用如下指令。
 
 ```bash
 sudo apt install ufw
 ```
 
-### 允许ssh通过
+## 允许ssh通过
 
 由于笔者的树莓派没有显示器，所有操作都基于ssh。所以在打开防火墙之前先允许ssh通过。
 
@@ -76,7 +76,7 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 22/tcp (v6)                ALLOW       Anywhere (v6)
 ```
 
-### 端口转发
+## 端口转发
 
 端口转发需要编辑文件`/etc/ufw/before.rules`。在`*filter`字段前插入`*nat`字段。端口转发的模板如下。
 
@@ -119,7 +119,7 @@ COMMIT
 sudo ufw reload
 ```
 
-### 允许特定服务通过防火墙
+## 允许特定服务通过防火墙
 
 `ufw`从`/etc/services`读取服务列表，这样可以直接从这里面允许或禁用服务。
 
@@ -137,7 +137,7 @@ sudo ufw allow https
 注意：不在`/etc/services`中的服务不能作为服务名传递给`ufw`。
 {:.info}
 
-### 允许特定端口通过防火墙
+## 允许特定端口通过防火墙
 
 笔者在树莓派上搭建了代理服务，该服务要求开放7890端口。
 
@@ -147,7 +147,7 @@ sudo ufw allow from any to any port 7890
 
 该指令允许任意ip到任意ip对7890端口的访问。
 
-### 其他功能
+## 其他功能
 
 `ufw`的其他功能包括阻止特定ip等可以查看[Ubuntu文档][1]，或者在命令行输入指令`man ufw`来查看本地手册。
 
