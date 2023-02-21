@@ -136,6 +136,16 @@ Host github.com
 
 这样就能顺利通过ssh走proxy控制GitHub的repo。
 
+### Windows
+
+Win用户也可以使用`nc`作为代理指令，只不过系统一般不预装，需要去[官网](https://nmap.org/)手动安装。
+
+```config
+Host github.com
+    HostName github.com
+    ProxyCommand ncat.exe --verbose --proxy-type http --proxy 192.168.1.2:7890 %h %p
+```
+
 ## 总结
 
 命令行中走代理的操作大致上分为这三种，git、ssh和其他指令。分别从各自的配置文件中进行配置即可。  
