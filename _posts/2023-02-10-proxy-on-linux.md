@@ -153,3 +153,8 @@ Host github.com
 
 注意：本文中的一些IP地址和域名需要根据使用者的网络环境进行配置，切不可直接拷贝。
 {:.warning}
+
+## 参考
+
+[OpenSSH config file on Windows - ProxyCommand not working](https://superuser.com/questions/1283560/openssh-config-file-on-windows-proxycommand-not-working)  
+[Nmap.org](https://nmap.org/)
