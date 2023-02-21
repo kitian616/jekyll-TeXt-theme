@@ -138,7 +138,7 @@ Host github.com
 
 ### Windows
 
-Win用户也可以使用`nc`作为代理指令，只不过系统一般不预装，需要去[官网](https://nmap.org/)手动安装。
+Win用户也可以使用`nc`作为代理指令，只不过系统一般不预装，需要去[官网](https://nmap.org/)手动下载安装。
 
 ```config
 Host github.com
