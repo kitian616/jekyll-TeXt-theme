@@ -3,6 +3,83 @@ title: "Cheat-Sheet: Malicious Document Analysis"
 tags: Malicious-Document
 ---
 
+# OneNote Analysis
+
+Download the OneNoteAnalyzer from the release page in [GitHub](https://github.com/knight0x07/OneNoteAnalyzer/releases/tag/OneNoteAnalyzer).
+
+Run `OneNoteAnalyzer.exe --file malware.one` then it will extract the malicious script from the OneNote file.
+
+```
+D:\OneNoteAnalyzer>OneNoteAnalyzer.exe --file "AgreementCancelation_395076(Feb08).one"
+
+________                 _______          __            _____                .__
+\_____  \   ____   ____  \      \   _____/  |_  ____   /  _  \   ____ _____  |  | ___.__.________ ___________
+ /   |   \ /    \_/ __ \ /   |   \ /  _ \   __\/ __ \ /  /_\  \ /    \\__  \ |  |<   |  |\___   // __ \_  __ \
+/    |    \   |  \  ___//    |    (  <_> )  | \  ___//    |    \   |  \/ __ \|  |_\___  | /    /\  ___/|  | \/
+\_______  /___|  /\___  >____|__  /\____/|__|  \___  >____|__  /___|  (____  /____/ ____|/_____ \\___  >__|
+        \/     \/     \/        \/                 \/        \/     \/     \/     \/           \/    \/
+                                        Author: @knight0x07
+
+
+[+] OneNote Document Path: AgreementCancelation_395076(Feb08).one
+[+] OneNote Document File Format: OneNote2010
+[+] Extracting Attachments from OneNote Document
+
+      -> Extracted OneNote Document Attachments:
+
+             -> Extracted Actual Attachment Path: Z:\build\one | FileName: Open.cmd | Size: 1426
+
+      -> OneNote Document Attachments Extraction Path: \AgreementCancelation_395076(Feb08)_content\OneNoteAttachments
+
+[+] Extracting Page MetaData from OneNote Document
+
+       -> Page Count: 1
+       -> Page MetaData:
+
+
+       ---------------------------------------------
+
+             -> Title:
+             -> Author: admin
+             -> CreationTime: 8/2/2023 8:54:29 AM
+             -> LastModifiedTime: 8/2/2023 2:04:43 PM
+
+       ---------------------------------------------
+
+
+[+] Extracting Images from OneNote Document
+
+      -> Extracted OneNote Document Images:
+
+             -> Extracted Image FileName: 1_?????????? ???????.png | HyperLinkURL: Null
+             -> Extracted Image FileName: 2_?????????? ???????.png | HyperLinkURL: Null
+
+      -> Image Extraction Path: \AgreementCancelation_395076(Feb08)_content\OneNoteImages
+
+[+] Extracting Text from OneNote Document
+
+      -> Extracted OneNote Document Text:
+
+             -> Page:  | Extraction Path: \AgreementCancelation_395076(Feb08)_content\OneNoteText\1_.txt
+
+[+] Extracting HyperLinks from OneNote Document
+
+      -> Extracted OneNote Document HyperLinks:  (Note: Text might contain hyperlink if no overlay)
+
+             -> Page:
+
+                 -> Text:
+                 -> Text:
+
+      -> HyperLink Extraction Path: \AgreementCancelation_395076(Feb08)_content\OneNoteHyperLinks\onenote_hyperlinks.txt
+
+[+] Converting OneNote Document to Image
+
+         -> Saved Path: \AgreementCancelation_395076(Feb08)_content\ConvertImage_AgreementCancelation_395076(Feb08).png
+```
+
+Reviewing the extract files, such as `OneNoteAttachments` folder... shows the batch file that contains a malicious payload.
+
 # MS-MSDT scheme aka Follina Exploit
 
 A sample shared by nao_sec that abusing ms-msdt to execute code. Refer [here](https://mobile.twitter.com/nao_sec/status/1530196847679401984).
