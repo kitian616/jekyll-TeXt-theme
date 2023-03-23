@@ -455,6 +455,7 @@ Use **msodde** to detect and extract DDE/DDEAUTO links from MS Office documents,
 **XLMMacroDeobfuscator** can be used to extract or decode obfuscated XLM macros (also known as Excel 4.0 macros)
 
 Extract: `xlmdeobfuscator -f Book1.xlsm -x`
+
 Extract, emulate and deobfuscate: `xlmdeobfuscator -f Book1.xlsm`
 
 ```
