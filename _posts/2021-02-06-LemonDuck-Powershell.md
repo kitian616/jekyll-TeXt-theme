@@ -210,3 +210,55 @@ netsh advfirewall firewall add rule name="deny135" dir=in protocol=tcp localport
 schtasks /delete /tn Rtsa1 /F
 schtasks /delete /tn Rtsa /F
 ```
+
+# Bonus tips
+Sometimes we as analyst might lazy doing this repetitive task which consist of decoding the multiple stages. Another cheat tips for analyst (also logging detection best practice concern) is enable the Powershell Module Logging, Script Block Logging and Trasncription.
+
+Even though we had useful artifact of `ConsoleHost_History` located at `%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`, which saves all of the commands that you type in the PowerShell console or in easy term, view the history of the PowerShell... the log does not have full visibility of the Powershell activity. Figure below shows the history command we ran:
+
+![image](https://user-images.githubusercontent.com/56353946/227678337-d613e21d-bbc4-453d-9c5e-febc9df9eb3a.png)
+
+Looking in the above figure, the visibility of this log only shows the history of command. Thus you might want to configure Powershell Logs properly and leverage full potential of the logging capabilities.
+
+Under `Computer Configuration` > `Policies` > `Administrative Settings` > `Windows Components` > `Windows PowerShell` you will find the settings for enabling logging:
+
+![image](https://user-images.githubusercontent.com/56353946/227671102-5a7a7451-081c-4ea4-b08b-af3b91539f90.png)
+
+For details, you can refer [https://www.mandiant.com/resources/blog/greater-visibility](https://www.mandiant.com/resources/blog/greater-visibility) for more information.
+
+Also, you might wanted to record all sessions of the Powershell transcript in a text file which can be useful reviewing the recorded log after executing your malware, or to track Powershell activities by the attacker.
+
+Open Powershell as Administrator and execute this command:
+```
+$psLoggingPath = 'HKLM:\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\Transcription'
+New-ItemProperty -Path $psLoggingPath -Name "OutputDirectory" -Value (Join-Path ${Env:UserProfile} "Desktop\PS_Transcripts") -PropertyType String -Force | Out-Null
+```
+
+As a result of enabling the script block, our lemon duck script block is recorded:
+
+![image](https://user-images.githubusercontent.com/56353946/227674861-87eea181-8575-4850-9e9c-e0a68bb0e7e4.png)
+
+![image](https://user-images.githubusercontent.com/56353946/227674881-4b532f95-3832-4bcb-8a54-e6ded286a115.png)
+
+![image](https://user-images.githubusercontent.com/56353946/227674904-a3f410fa-53de-4788-a7e6-e39cfca1fd2f.png)
+
+![image](https://user-images.githubusercontent.com/56353946/227674967-7176a001-708e-4a09-8e1a-26a0164cbac1.png)
+
+![image](https://user-images.githubusercontent.com/56353946/227675388-67c1daa7-2ef1-4fcf-963b-6f13c33dee34.png)
+
+For Powershell transcript, this logs in text files were generated after the execution happens:
+
+![image](https://user-images.githubusercontent.com/56353946/227677899-fcb36bdb-1820-4e28-a77e-32e0c590aaa5.png)
+
+Hidden Powershell command also can be seen:
+
+![image](https://user-images.githubusercontent.com/56353946/227678028-53560345-c936-4d2c-b4d9-3ffc844f6c94.png)
+
+Now you have full visibility of the Powershell activities located at:
+1. Console history: `%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`
+2. Script block: `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-PowerShell%4Operational.evtx`
+3. Transcript: `%HOMEPATH%\Desktop\PS_Transcripts`
+
+
+
+
