@@ -14,7 +14,7 @@ author: Yu Xiaoyuan
 show_author_profile: true
 ---
 
-由于笔者经常需要连接GitHub获取代码，而没有代理同步会非常慢。所以笔者用树莓派搭建一个局域网的代理服务器，并设置静态IP，给局域网内所有设备提供代理转发服务。
+由于笔者经常需要连接GitHub获取代码，而没有代理同步会非常慢甚至完全不可用。所以笔者用树莓派搭建一个局域网的代理服务器，并设置静态IP，给局域网内所有设备提供代理转发服务。
 
 <!--more-->
 
@@ -51,13 +51,15 @@ $ file clash-linux-armv7-v1.11.4
 clash-linux-armv7-v1.11.4: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, stripped
 ```
 
+可以看到这是一个32位ARM架构可执行文件。
+
 为了能在系统指令内直接调用`clash`，将上面的可执行文件拷贝(或移动)到系统的`PATH`中，并赋予执行权限。
 
 ```bash
+# 执行权限
+chmod a+x clash-linux-armv7-v1.11.4
 # 拷贝
 sudo cp clash-linux-armv7-v1.11.4 /usr/local/bin/clash
-# 执行权限
-sudo chmod a+x /usr/local/bin/clash
 ```
 
 然后尝试调用一下。
@@ -95,10 +97,10 @@ Description=Clash daemon, A rule-based proxy in Go.
 After=network.target
 
 [Service]
-Type=simple
 User=root
-# Restart=always
-# ExecStart=/usr/local/bin/clash -d /etc/clash
+Type=simple
+Restart=always
+RuntimeMaxSec=259200
 ExecStart=/etc/clash/start-clash.sh
 ExecStop=/etc/clash/stop-clash.sh
 Environment="CLASH_URL=https://your.clash-config.url"
@@ -107,26 +109,47 @@ Environment="CLASH_URL=https://your.clash-config.url"
 WantedBy=multi-user.target
 ```
 
+上面的配置定义了一个`root`用户的简单类型守护，并且通过设置最长运行时间来自动重启。
+
+注意：请在[`Enviroment`]({% post_url 2022-08-18-local-proxy-server %}#:~:text=Environment%3D%22CLASH_URL%3Dhttps%3A//your.clash%2Dconfig.url%22)行插入你的代理服务商提供的clash配置更新链接。
+{:.warning}
+
 启动脚本。
 
-```bash
+{% highlight bash linenos %}
 #!/bin/bash
-# file: /etc/clash/start-clash.sh
+# save this file to ${HOME}/.config/clash/start-clash.sh
 
 # save pid file
 echo $$ > /etc/clash/clash.pid
-
-diff /etc/clash/config.yaml <(curl -s ${CLASH_URL})
-if [ "$?" == 0 ]
-then
-    echo "nothing changed"
-else
-    echo "updating config.yaml"
-    # uncomment next line if you wish to update config.yaml on each start up
-    # curl -L -o /etc/clash/config.yaml ${CLASH_URL}
+config=/etc/clash/config.yaml
+diff $config <(curl -s ${CLASH_URL})
+if [ $? != 0 ]; then
+    curl -L -o $config ${CLASH_URL}
 fi
+
+allow_lan=`sed -n '/allow-lan/=' ${config}`
+sed -i "${allow_lan}a allow-lan: true" ${config}
+sed -i "${allow_lan}d" ${config}
+
+log_level=`sed -n '/log-level/=' ${config}`
+sed -i "${log_level}a log-level: debug" ${config}
+sed -i "${log_level}d" ${config}
+
 /usr/local/bin/clash -d /etc/clash/
-```
+{% endhighlight %}
+
+上面的启动脚本的主要功能是记录当前进程PID用于后面的结束脚本杀死进程。  
+辅助功能包括下面几个方面：
+
+* 通过链接更新clash配置
+* 修改clash配置文件的某些字段
+
+其中第7行是对比本地配置和链接指向的配置，若不一致则在后面三行进行更新。  
+这里进行判断其实是冗余的，因为如果每次更新配置文件后都进行修改，那不管链接指向的是否更新了，本地与云端对比总是不一样的。
+
+后面12到14行和16到18行都是通过`sed`指令匹配某个字符串找到目标行所在位置，然后在目标行后插入修改后的内容，最后删除之前找到的目标行。  
+这里修改了`allow-lan`字段允许LAN口其他设备访问，修改了`log-level`字段使其输入debug级别的日志。
 
 结束脚本。
 
@@ -143,7 +166,7 @@ rm /etc/clash/clash.pid
 使用上述的设置，服务启动时会调用`start-clash.sh`脚本，将进程的PID保存到文本文件中，并根据服务配置中的url进行`config.yaml`的更新；
 结束时调用`stop-clash.sh`，使用刚才的PID杀死进程。
 
-赋予执行权限。
+之后给各脚本赋予执行权限。
 
 ```bash
 sudo chmod a+x /etc/clash/st*.sh
@@ -190,3 +213,5 @@ static domain_name_servers=192.168.1.1
 clash：[clash](https://github.com/Dreamacro/clash)
 
 静态IP：[树莓派设置静态IP地址](https://zhuanlan.zhihu.com/p/435714438)
+
+树莓派防火墙：[【树莓派学习笔记】给树莓派安装防火墙]( {% post_url 2022-12-08-firewall-on-pi %})
