@@ -12,15 +12,15 @@ header:
       # @end locale config
     url: /archive.html
 
-  - titles: 
+  - titles:
       # @start locale config
-      en      : &EN       About me
+      en      : &EN       Home
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      it      : &IT       Chi sono
+      it      : &IT       Home
       it-IT   : *IT
       it-CH   : *IT
       # @end locale config
-    url: /about.html
+    url: /index.html
