@@ -20,9 +20,9 @@ text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : http://loop-btc.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : loop_btc 
+title   : La tana di Loop - Risorse Bitcoin
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Il mio angolino nella profonda tana del Bianconiglio di Bitcoin.
 
 
 ## => Language and Timezone
@@ -38,7 +38,7 @@ author:
   name      : loop_btc
   url       :
   avatar    : # path or url of avatar image (square)
-  bio       : A Bitcoin only plebeius
+  bio       : un plebeo Bitcoin only
   email     :
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : loop_btc # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
@@ -74,7 +74,7 @@ paths:
 excerpt_separator: <!--more-->
 
 ## license
-license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
+license: CC-BY-SA-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 
 ## TOC
 toc:
