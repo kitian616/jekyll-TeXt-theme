@@ -20,9 +20,9 @@ text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : http://loop-btc.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : La tana di Loop - Risorse Bitcoin
+title   : La tana di Loop - Appunti e risorse Bitcoin
 description: > # this means to ignore newlines until "Language & timezone"
-  Il mio angolino nella profonda tana del Bianconiglio di Bitcoin.
+  Una collezione di risorse Bitcoin-only, sulle tracce del Bianconiglio.
 
 
 ## => Language and Timezone
