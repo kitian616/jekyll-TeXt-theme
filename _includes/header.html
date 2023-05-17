@@ -1,6 +1,6 @@
 {%- if include.theme == 'dark' -%}
   <header class="header header--dark" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-{%- elsif include.theme == 'light' -%}
+{%- elsif include.theme == 'dark' -%}
   <header class="header header--light" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
 {%- else -%}
   <header class="header" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
