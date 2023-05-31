@@ -4,8 +4,8 @@ title: 【信号与系统】齐次常微分方程与多项式
 permalink: /article/:title.html
 key: differential-equation-and-polynomial
 tags: 
-  - 数学
   - 信号与系统
+  - 数学
   - 微分方程
   - 常微分方程
   - 多项式

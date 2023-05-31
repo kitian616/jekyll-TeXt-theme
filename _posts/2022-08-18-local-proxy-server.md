@@ -4,6 +4,7 @@ title: 【树莓派学习笔记】局域网代理服务器
 permalink: /article/:title.html
 key: local-proxy-server
 tags: 
+  - 树莓派学习笔记
   - 树莓派
   - bash
   - Linux

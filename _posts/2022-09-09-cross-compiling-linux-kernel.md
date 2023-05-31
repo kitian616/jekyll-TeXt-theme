@@ -4,6 +4,7 @@ title: 【树莓派学习笔记】编译Linux内核
 key: cross-compiling-linux-kernel
 permalink: /article/:title.html
 tags: 
+  - 树莓派学习笔记
   - 树莓派
   - bash
   - Linux

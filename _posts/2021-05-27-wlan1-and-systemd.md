@@ -8,6 +8,7 @@ article_header:
   image:
     src: /assets/images/posts/wlan1-and-systemd/head.png
 tags: 
+  - 树莓派学习笔记
   - 树莓派
   - bash
   - Linux

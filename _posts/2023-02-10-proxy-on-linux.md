@@ -4,6 +4,7 @@ title: 【一点点Linux】在Linux上设置Proxy代理
 permalink: /article/:title.html
 key: proxy-on-linux
 tags: 
+  - 一点点Linux
   - Linux
   - git
   - proxy

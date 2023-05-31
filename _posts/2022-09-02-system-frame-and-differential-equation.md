@@ -4,8 +4,8 @@ title: 【信号与系统】系统框图和微分方程
 permalink: /article/:title.html
 key: system-frame-and-differential-equation
 tags: 
-  - 数学
   - 信号与系统
+  - 数学
   - 拉普拉斯变换
   - 微分方程
   - 常微分方程
