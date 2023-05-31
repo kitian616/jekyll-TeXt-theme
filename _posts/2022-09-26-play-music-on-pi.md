@@ -4,6 +4,7 @@ title: 【树莓派学习笔记】在树莓派上播放音乐
 key: play-music-on-pi
 permalink: /article/:title.html
 tags: 
+  - 树莓派学习笔记
   - 树莓派
   - bash
   - Linux

@@ -4,8 +4,8 @@ title: 【信号与系统】连续时间周期信号的傅里叶级数
 permalink: /article/:title.html
 key: continuous-time-periodic-signal-fourier-series
 tags: 
-  - 数学
   - 信号与系统
+  - 数学
   - 傅里叶级数
 author: Yu Xiaoyuan
 show_author_profile: true

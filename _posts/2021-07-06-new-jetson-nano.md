@@ -4,6 +4,7 @@ title: 【杰森指南】Jetson Nano使用说明
 permalink: /article/:title.html
 key: new-jetson-nano
 tags: 
+  - 杰森指南
   - Jetson Nano
   - Nvidia
   - bash

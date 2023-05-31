@@ -4,6 +4,7 @@ title: 【码蹄集】Reverse GCD
 permalink: /article/:title.html
 key: reverse-gcd
 tags: 
+  - 码蹄集
   - 数论
   - 码蹄集
 author: Shao Mingyue

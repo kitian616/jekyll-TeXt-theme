@@ -4,6 +4,7 @@ title: 【树莓派学习笔记】局域网代理服务器
 permalink: /article/:title.html
 key: local-proxy-server
 tags: 
+  - 树莓派学习笔记
   - 树莓派
   - bash
   - Linux
@@ -116,7 +117,7 @@ WantedBy=multi-user.target
 
 启动脚本。
 
-{% highlight bash linenos %}
+```bash
 #!/bin/bash
 # save this file to ${HOME}/.config/clash/start-clash.sh
 
@@ -137,7 +138,7 @@ sed -i "${log_level}a log-level: debug" ${config}
 sed -i "${log_level}d" ${config}
 
 /usr/local/bin/clash -d /etc/clash/
-{% endhighlight %}
+```
 
 上面的启动脚本的主要功能是记录当前进程PID用于后面的结束脚本杀死进程。  
 辅助功能包括下面几个方面：

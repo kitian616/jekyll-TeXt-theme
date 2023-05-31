@@ -4,6 +4,7 @@ title: 【一点点Linux】管理员权限的更多命令行提示
 permalink: /article/:title.html
 key: linux-sudoer-hints
 tags: 
+  - 一点点Linux
   - Linux
   - 管理员
 author: Yu Xiaoyuan

@@ -4,6 +4,7 @@ title: 【树莓派学习笔记】给树莓派安装防火墙
 permalink: /article/:title.html
 key: firewall-on-pi
 tags: 
+  - 树莓派学习笔记
   - 树莓派
   - Linux
   - bash
