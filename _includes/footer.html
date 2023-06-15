@@ -32,6 +32,11 @@
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
+      {%- if site.icp_record -%}
+      <div>
+        ICP主体备案号：<a href="https://beian.miit.gov.cn/" target="_blank">{{ site.icp_record }}</a>
+      </div>
+      {%- endif -%}
     </div>
   </div>
 </footer>
