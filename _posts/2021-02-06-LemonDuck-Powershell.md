@@ -212,13 +212,13 @@ schtasks /delete /tn Rtsa /F
 ```
 
 # Bonus tips
-Sometimes we as analyst might lazy doing this repetitive task which consist of decoding the multiple stages. Another cheat tips for analyst (also logging detection best practice concern) is enable the Powershell Module Logging, Script Block Logging and Trasncription.
+Sometimes we as an analyst might be lazy to do this repetitive task which consists of decoding the multiple stages. Another cheat tip for analysts (also logging detection best practice concern) is to enable the Powershell Module Logging, Script Block Logging, and Transcription.
 
-Even though we had useful artifact of `ConsoleHost_History` located at `%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`, which saves all of the commands that you type in the PowerShell console or in easy term, view the history of the PowerShell... the log does not have full visibility of the Powershell activity. Figure below shows the history command we ran:
+Even though we had a useful artifact of `ConsoleHost_History` located at `%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`, which saves all of the commands that you type in the PowerShell console or in easy terms, view the history of the PowerShell... the log does not have full visibility of the Powershell activity. The figure below shows the history command we ran:
 
 ![image](https://user-images.githubusercontent.com/56353946/227678337-d613e21d-bbc4-453d-9c5e-febc9df9eb3a.png)
 
-Looking in the above figure, the visibility of this log only shows the history of command. Thus you might want to configure Powershell Logs properly and leverage full potential of the logging capabilities.
+Looking at the above figure, the visibility of this log only shows the history of the command. Thus you might want to configure Powershell Logs properly and leverage the full potential of the logging capabilities.
 
 Under `Computer Configuration` > `Policies` > `Administrative Settings` > `Windows Components` > `Windows PowerShell` you will find the settings for enabling logging:
 
@@ -226,7 +226,7 @@ Under `Computer Configuration` > `Policies` > `Administrative Settings` > `Windo
 
 For details, you can refer [https://www.mandiant.com/resources/blog/greater-visibility](https://www.mandiant.com/resources/blog/greater-visibility) for more information.
 
-Also, you might wanted to record all sessions of the Powershell transcript in a text file which can be useful reviewing the recorded log after executing your malware, or to track Powershell activities by the attacker.
+Also, you might want to record all sessions of the Powershell transcript in a text file which can be useful in reviewing the recorded log after executing your malware or tracking Powershell activities by the attacker.
 
 Open Powershell as Administrator and execute this command:
 ```
@@ -246,7 +246,7 @@ As a result of enabling the script block, our lemon duck script block is recorde
 
 ![image](https://user-images.githubusercontent.com/56353946/227675388-67c1daa7-2ef1-4fcf-963b-6f13c33dee34.png)
 
-For Powershell transcript, this logs in text files were generated after the execution happens:
+For Powershell transcript, these logs in text files were generated after the execution happens:
 
 ![image](https://user-images.githubusercontent.com/56353946/227677899-fcb36bdb-1820-4e28-a77e-32e0c590aaa5.png)
 
@@ -258,6 +258,17 @@ Now you have full visibility of the Powershell activities located at:
 1. Console history: `%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`
 2. Script block: `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-PowerShell%4Operational.evtx`
 3. Transcript: `%HOMEPATH%\Desktop\PS_Transcripts`
+
+# Automate the deobfuscation!
+I mentioned a tool named `PSUnveil` in my Twitter where this tool can automate all this decoding process in just 3 seconds!
+
+![image](https://github.com/fareedfauzi/fareedfauzi.github.io/assets/56353946/ed29d9f5-8691-4a89-bd25-d9d1c3b037b1)
+
+PSUnveil is a tool you can use to analyze obfuscated PowerShell scripts. This tool will ease our job and save us a lot of time.
+
+Tutorial by author's tool: https://www.kahusecurity.com/posts/introducing_psunveil.html
+
+Link download: https://www.kahusecurity.com/tools.html
 
 
 
