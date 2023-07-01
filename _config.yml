@@ -20,23 +20,22 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : test
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: ko # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
-
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
-  url       :
+  name      : taehyeon kim
+  url       : https://taehye0nkim.github.io/
   avatar    : # path or url of avatar image (square)
   bio       : I am an amazing person.
   email     :
@@ -55,7 +54,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: taehye0nkim/taehye0nkim.github.io
 repository_tree: master
 
 
