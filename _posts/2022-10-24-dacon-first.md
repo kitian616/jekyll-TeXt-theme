@@ -1,5 +1,5 @@
 ---
-#layout: single
+#layout: article
 title:  "[Dacon] 구내식당 식수 예측"
 categories: Dacon
 tag: [python, Dacon, ml]

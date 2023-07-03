@@ -1,5 +1,5 @@
 ---
-layout: single
+#layout: single
 title:  "[Programmers] 네트워크"
 categories: Programmers
 tag: [python, algorithm, dfs/bfs]

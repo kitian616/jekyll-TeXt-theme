@@ -1,5 +1,5 @@
 ---
-layout: single
+#layout: single
 title:  "[Programmers] 이모티콘 할인행사"
 categories: Programmers
 tag: [python, algorithm]

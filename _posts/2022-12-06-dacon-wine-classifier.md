@@ -1,5 +1,5 @@
 ---
-layout: single
+#layout: single
 title:  "[Dacon] 와인 품질 분류 경진대회"
 categories: Dacon
 tag: [python, Dacon, ml]

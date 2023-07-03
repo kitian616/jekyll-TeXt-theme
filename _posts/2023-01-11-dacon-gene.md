@@ -1,5 +1,5 @@
 ---
-layout: single
+#layout: single
 title:  "[Dacon] 유전체 정보 분류 경진대회"
 categories: Dacon
 tag: [python, Dacon, ml]

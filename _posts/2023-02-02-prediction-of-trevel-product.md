@@ -1,5 +1,5 @@
 ---
-layout: single
+#layout: single
 title:  "[Dacon] 여행상품 신청예측"
 categories: Dacon
 tag: [python, Dacon, ml]
