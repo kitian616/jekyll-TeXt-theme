@@ -23,7 +23,7 @@ baseurl : / # does not include hostname
 title   : Dennis的主页
 description: > # this means to ignore newlines until "Language & timezone"
   咹? 看不懂? 看不懂百度啊. 
-icp_record: 京ICP备19018193号
+icp_record: 京ICP备19018193号-1
 
 ## => Language and Timezone
 ##############################
