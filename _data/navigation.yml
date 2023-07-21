@@ -52,4 +52,4 @@ header:
     url: /about.html
 
   - title:      Docs
-    url:        /docs/en/quick-start
+    url:        docs/_docs/en/1.1-quick-start.md
