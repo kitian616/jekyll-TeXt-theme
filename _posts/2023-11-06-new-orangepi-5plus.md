@@ -229,8 +229,6 @@ sudo systemctl enable gitea.service
 sudo systemctl start 
 ```
 
-## GPT
-
 ## 参考
 
 Orange Pi 5 Plus官方介绍界面：[Orange Pi 5 Plus](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-5-plus.html)
@@ -241,7 +239,7 @@ Orange Pi 5 Plus官方介绍界面：[Orange Pi 5 Plus](http://www.orangepi.cn/h
 
 docker-compose开机启动：[How to run docker-compose up -d at system start up?](https://stackoverflow.com/questions/43671482/how-to-run-docker-compose-up-d-at-system-start-up)
 
-## section 1
+<!-- ## section 1
 
 {{ image_dir }}
 
@@ -281,4 +279,4 @@ int main() {
 
 ## reference
 
-[Liquid: Safe, customer-facing template language for flexible web apps.](https://shopify.github.io/liquid/)
+[Liquid: Safe, customer-facing template language for flexible web apps.](https://shopify.github.io/liquid/) -->
