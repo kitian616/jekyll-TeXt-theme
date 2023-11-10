@@ -139,6 +139,96 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 
 ## Gitea
 
+为了方便迁移和维护，这里选用docker来部署Gitea。  
+这里需要额外安装docker-compose。
+
+安装好依赖之后参考官网的教程编写如下的`docker-compose.yml`，放在`/etc/gitea`目录下。
+
+{% highlight yml linenos %}
+version: "3"
+
+networks:
+  gitea:
+    external: false
+
+services:
+  server:
+    image: gitea/gitea:1.20.5
+    container_name: gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - GITEA__database__DB_TYPE=mysql
+      - GITEA__database__HOST=db:3306
+      - GITEA__database__NAME=gitea
+      - GITEA__database__USER=gitea
+      - GITEA__database__PASSWD=gitea
+    restart: always
+    networks:
+      - gitea
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8080:3000"
+      - "2222:22"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=gitea
+      - MYSQL_USER=gitea
+      - MYSQL_PASSWORD=gitea
+      - MYSQL_DATABASE=gitea
+    networks:
+      - gitea
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+{% endhighlight %}
+
+其中关键点如下：
+
+1. 使用MYSQL数据库作为Gitea的数据库实现，所以在32行定义了`db`字段，并在30行设置为`server`实例的依赖；
+2. 转发主机端口`8080`到docker端口`3000`、`2222`到`22`，这样从主机的`8080`端口可以访问Gitea的页面，并在`2222`端口通过ssh访问；
+3. `docker-compose.yml`文件所在目录下的`gitea`目录被映射到容器内的`/data`目录，docker数据可以从主机的该目录下直接访问。
+
+为了该服务能够开机启动，编写systemd service文件。
+
+```systemd
+# /etc/systemd/system/gitea.service
+
+[Unit]
+Description=Docker Compose Application Service for Gitea
+Requires=docker.service
+After=docker.service
+StartLimitIntervalSec=60
+
+[Service]
+WorkingDirectory=/etc/gitea
+ExecStart=/usr/bin/docker compose up
+ExecStop=/usr/bin/docker compose down
+TimeoutStartSec=30
+Restart=on-failure
+StartLimitBurst=3
+
+[Install]
+WantedBy=multi-user.target
+```
+
+逻辑上gitea依赖于docker服务，工作目录位于`/etc/gitea`，这些内容都体现在service文件中了。
+
+保存后设置服务为开机启动。
+
+```bash
+sudo systemctl enable gitea.service
+sudo systemctl start 
+```
+
 ## GPT
 
 ## 参考
@@ -146,6 +236,10 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 Orange Pi 5 Plus官方介绍界面：[Orange Pi 5 Plus](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-5-plus.html)
 
 安装omz和插件：[Raspberry Pi 安装 oh-my-zsh](https://www.likecs.com/show-307328694.html#sc=900)
+
+使用 Docker 部署Gitea：[Gitea-使用 Docker 安装](https://docs.gitea.com/zh-cn/installation/install-with-docker)
+
+docker-compose开机启动：[How to run docker-compose up -d at system start up?](https://stackoverflow.com/questions/43671482/how-to-run-docker-compose-up-d-at-system-start-up)
 
 ## section 1
 
