@@ -13,4 +13,4 @@ show_author_profile: true
 
 ## 作者
 
-硕士研究生在读
+研究生在读
