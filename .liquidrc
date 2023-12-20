@@ -1,0 +1,48 @@
+{
+  "engine": "shopify",
+  "files": {
+    "settings": "",
+    "locales": "",
+    "sections": [],
+    "snippets": []
+  },
+  "format": {
+    "ignore": [],
+    "wrap": 80,
+    "indentSize": 2,
+    "preserveLine": 2,
+    "endNewline": true,
+    "liquid": {
+      "indentAttribute": true,
+      "lineBreakSeparator": "before",
+      "normalizeSpacing": true,
+      "quoteConvert": "single",
+      "ignoreTagList": []
+    },
+    "markup": {
+      "quoteConvert": "double",
+      "selfCloseSpace": true,
+      "delimiterTerminus": "inline",
+      "stripAttributeLines": true,
+      "commentNewline": false,
+      "forceIndent": true,
+      "commentIndent": true,
+      "ignoreJS": true,
+      "ignoreCSS": false,
+      "ignoreJSON": false,
+      "forceAttribute": 3
+    },
+    "json": {
+      "bracePadding": false,
+      "braceAllman": true,
+      "arrayFormat": "indent",
+      "objectIndent": "indent",
+      "objectSort": false
+    },
+    "style": {
+      "noLeadZero": true,
+      "quoteConvert": "single",
+      "atRuleSpace": true
+    }
+  }
+}
