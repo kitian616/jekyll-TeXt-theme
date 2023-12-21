@@ -1,0 +1,34 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="tiktoken" />
+            <item index="1" class="java.lang.String" itemvalue="gradio" />
+            <item index="2" class="java.lang.String" itemvalue="duckduckgo_search" />
+            <item index="3" class="java.lang.String" itemvalue="socksio" />
+            <item index="4" class="java.lang.String" itemvalue="tqdm" />
+            <item index="5" class="java.lang.String" itemvalue="llama_index" />
+            <item index="6" class="java.lang.String" itemvalue="Pygments" />
+            <item index="7" class="java.lang.String" itemvalue="colorama" />
+            <item index="8" class="java.lang.String" itemvalue="langchain" />
+            <item index="9" class="java.lang.String" itemvalue="mdtex2html" />
+            <item index="10" class="java.lang.String" itemvalue="markdown" />
+            <item index="11" class="java.lang.String" itemvalue="pypinyin" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+          <option value="E231" />
+          <option value="E225" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
