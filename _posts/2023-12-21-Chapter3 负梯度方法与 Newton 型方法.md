@@ -1,6 +1,7 @@
 - 本章的重点在于对方向的寻找,步长的寻找都假设已知了,那么我们也就一般写作 $\alpha$从而使得我们更加关注与对方向的寻找.
 # 知识补充
 [潘老师数值分析讲义](https://math.ecnu.edu.cn/~jypan/Teaching/NA/main_na_202308.pdf)  [[数值分析(施工中)]]
+[完整项目代码](https://github.com/HariLogicSeldon/2023_Fall_Optimization)
 
 -  矩阵范数
 ![[Pasted image 20231019081934.png]]
@@ -747,6 +748,4 @@ yy = result.T[1]
 plfunc(func, result, [-6, 6], [-6, 6])
 ```
 
-$$
-\min \sum_{{i=1}}^m\left\{ -x_{i}+\left[ \sum_{j=1}^n(1+x_{i})\frac{v_{j}}{1+e^{\theta_{j}-w_{j}x_{i}}}+x_{i} \frac{v_{j}w_{j}e^{\theta_{j}-w_{j}x_{i}}}{(1+e^{\theta_{j}-w_{j}x_{i}})^2}^2 \right] \right\}
-$$
+
