@@ -25,12 +25,21 @@ titles:
   # @end locale config
 key: page-about
 ---
-I am regular student from Mathematical in ECNU.
 
-Now I am learning DL and ML. And I am also interested in CV also.
+# About Me
 
-I will share some note on this website. And maybe I will write some music review also. Hope you like this!
+## Introduction
 
-You can contact me via my mail box z13769851197@gmail.com
+I am a regular student majoring in Mathematics at East China Normal University (ECNU).
+
+Currently, I am delving into the realms of Deep Learning (DL) and Machine Learning (ML), with a keen interest in Computer Vision (CV) as well.
+
+## Content Sharing
+
+I will be posting some of my study notes on this website. Additionally, I might delve into writing music reviews. I hope you find them enjoyable!
+
+## Contact Information
+
+Feel free to reach out to me via my email at z13769851197@gmail.com.
 
 
