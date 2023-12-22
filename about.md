@@ -25,5 +25,12 @@ titles:
   # @end locale config
 key: page-about
 ---
-Hi Welcom To my blog
+I am regular student from Mathematical in ECNU.
+
+Now I am learning DL and ML. And I am also interested in CV also.
+
+I will share some note on this website. And maybe I will write some music review also. Hope you like this!
+
+You can contact me via my mail box z13769851197@gmail.com
+
 
