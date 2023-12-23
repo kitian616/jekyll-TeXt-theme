@@ -1,7 +1,6 @@
 ---
 layout: article
-title: PINN reconstruct
-
+title: PINN-reconstruct-Optimization-Method-sideproject
 ---
 # Abstract
 - **Supervised learning tasks**
