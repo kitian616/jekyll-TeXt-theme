@@ -1,7 +1,7 @@
 ---
 layout: article
 title: PINN reconstruct
-mathjax: " true"
+
 ---
 # Abstract
 - **Supervised learning tasks**
