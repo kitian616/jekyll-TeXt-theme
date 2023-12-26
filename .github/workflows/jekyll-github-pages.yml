@@ -3,7 +3,7 @@ name: Build and Deploy a Jekyll Site to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - actions
 
 jobs:
   setup:
@@ -26,7 +26,7 @@ jobs:
 
       - run: bundle config set --local path 'vendor/bundle'
       - run: bundle install --jobs=8 --retry=3 --gemfile=./Gemfile
-#      - run: ls -al
+      - run: ls -al
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
@@ -36,7 +36,7 @@ jobs:
           gem_src: ./
           
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v1.0.4
+        uses: actions/upload-pages-artifact@v2
         with:
           # Path of the directory containing the static assets.
           path: ./_site
