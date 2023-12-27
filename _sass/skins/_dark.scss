@@ -6,16 +6,16 @@
 
 // main colors
 $main-color-1:     #ff9500;
-$text-color-1:     rgba(#fff, .8);
+$text-color-1:     rgba(#fff, 1);
 
 $main-color-2:     #ff006a;
-$text-color-2:     rgba(#fff, .8);
+$text-color-2:     rgba(#fff, 1);
 
 $main-color-3:     #202020;
-$text-color-3:     rgba(#fff, .8);
+$text-color-3:     rgba(#fff, 1);
 
-$main-color-theme-light: rgba(#000, .8);
-$main-color-theme-dark:  rgba(#fff, .8);
+$main-color-theme-light: rgba(#000, 1);
+$main-color-theme-dark:  rgba(#fff, 1);
 
 // page background
 $background-color: #121212;
@@ -25,9 +25,9 @@ $text-color-theme-light-d: #000;
 $text-color-theme-light:   #222;
 $text-color-theme-light-l: #888;
 
-$text-color-theme-dark-d:  rgba(#fff, .8);
-$text-color-theme-dark:    rgba(#fff, .7);
-$text-color-theme-dark-l:  rgba(#fff, .5);
+$text-color-theme-dark-d:  rgba(#fff, 1);
+$text-color-theme-dark:    rgba(#fff, 1);
+$text-color-theme-dark-l:  rgba(#fff, 1);
 
 $text-color-d:     $text-color-theme-dark-d;
 $text-color:       $text-color-theme-dark;
@@ -54,7 +54,7 @@ $green:           #5baa34;
 $blue:            #1c7cd4;
 $yellow:          #c9771f;
 $red:             #da3d45;
-$text-color-function: rgba(#fff, .8);
+$text-color-function: rgba(#fff, 1);
 
 // logo colors
 $mail-color:       #0072c5;
