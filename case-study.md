@@ -139,16 +139,6 @@ The image below explains each field's meaning.
 It’s easy to accidentally write the wrong schedule, leading to jobs running at unexpected times. Additionally, a user must manually edit the crontab. When numerous other cron jobs exist, it’s easy to edit the wrong one mistakenly.
 
 
-#### 1.3.4 Summary
-
-
-To review the problems users encounter while using cron:
-
-
-* jobs fail silently
-* logging is not centralized
-* writing cron jobs is error-prone
-
 
 ### 1.4 Existing Solutions
 
@@ -588,6 +578,8 @@ New jobs or job updates written to the UI are referred to as **management data**
 4. Linking Client `update` script
 5. crontab
 
+In this section, we refer to interactions between the UI and the Monitoring Service's database and the Linking Client and the Monitoring Service's database. The UI and the Linking Client perform these interactions using HTTP requests to the API exposed by the Monitoring Service's Application Server. However, for the sake of simplicity, we do not make further reference to this and treat the discussion as if the UI and Linking Client can interact with the database directly.
+
 Recall:
 * The Monitoring Service runs in a Docker container on one node, the hub node.
 * The user installs the Linking Client on each node with a crontab they want to integrate with Sundial. 
@@ -598,7 +590,7 @@ As shown, the UI and database are part of the Monitoring Service. When the user 
 
 Next, the management data must travel from the Monitoring Service’s database to the appropriate crontab. Since the crontab and the Monitoring Service might reside on different nodes, the management data may have to travel over the network. Even in the single-node architecture, editing the crontab of the host machine directly from the Monitoring Service poses difficulties because the Monitoring Service runs in a Docker container. 
 
-To address this issue, the Linking Client’s `update` script fetches management data from the Monitoring Service’s database and writes it to the crontab. 
+To address this issue, the Linking Client includes an `update` script that fetches management data from the Monitoring Service’s database and writes it to the crontab. 
 
 [update script sending request and getting data and writing to crontab video]
 
@@ -709,10 +701,8 @@ To resolve this issue, we moved the responsibility of updating or inserting a ru
 Additionally, the database returns the run indicating whether an INSERT or UPDATE operation occurred, which allows the Monitoring Service to determine if subsequent actions concerning the Task Queue and user notifications need to be executed.
 
 
-#### 3.1.4 Trade-offs: notifications
 
-
-##### 3.1.4.1 Architecture for missed pings
+#### 3.1.4 Trade-offs: Architecture for missed pings
 
 Designing the logic for handling missed pings revolved around tracking the next expected start time and the next expected end time. We ended up deciding between two different implementation options: one that used database attributes and another that used task queues.
 
@@ -732,7 +722,7 @@ Instead, we chose to implement **task queues**. At the expense of adding complex
 The task queues approach was to break out information about the next expected times into a separate data structure (task queue) and then further break that out into two separate queues (start & end). Separated queues meant that the execution of tasks on each queue could be controlled more directly.
 
 
-##### 3.1.4.2 Trade-off: Cache-based vs. Database-based queues
+#### 3.1.5 Trade-offs: Cache-based vs. Database-based queues
 
 Once we had settled on using task queues, we had to decide on whether to use a database-based or a cache-based queue. 
 
@@ -754,7 +744,7 @@ We chose **pg-boss**, a database-based job queue, to implement our start and end
 * It gave us an easy way to implement a task queue without complicating our architecture
 
 
-##### 3.1.4.3 Sending out notifications
+#### 3.1.6 Trade-offs: Sending out notifications
 
 Notifications, in general, are difficult because when they should be sent out can vary depending on the user. We identified two alternative notification methods:
 1. Sending notifications each time a job fails.
@@ -774,9 +764,9 @@ For a more comprehensive solution, future work could involve allowing users to c
 
 
 
-#### 3.1.5 Trade-offs: runs rotation
+#### 3.1.7 Challenge: runs rotation
 
-With monitoring, there is an ever-increasing amount of data related to runs. Thus, we decided to limit the number of runs (on a per-monitor basis). We implemented a rows rotation mechanism (similar to log [ENSURE CORRECT CITATION NUMBER] rotations [[4]](https://en.wikipedia.org/wiki/Log_rotation)) to our Runs table to ensure that the table did not keep growing infinitely. We implemented a stored procedure that runs once weekly and reduces the amount of runs by deleting all runs except the 100 most current for each monitor.
+With monitoring, there is an ever-increasing amount of data related to runs. Thus, we decided to limit the number of runs (on a per-monitor basis). We implemented a rows rotation mechanism (similar to log [ENSURE CORRECT CITATION NUMBER] rotations [[4]](https://en.wikipedia.org/wiki/Log_rotation)) to our runs table to ensure that the table did not keep growing infinitely. We implemented a stored procedure that runs once weekly and reduces the amount of runs by deleting all runs except the 100 most current for each monitor.
 
 A stored procedure [ENSURE CORRECT CITATION NUMBER] [[5]](https://www.postgresql.org/docs/current/xproc.html) is a feature available in many RDBMS and is a grouping of SQL statements. Stored procedures have names used to call them and execute the group of statements, similar in function to a batch script. An additional job queue (called the **maintenance queue**) was created with pg-boss, and the stored procedure is scheduled using a deferred job to be processed at the time mentioned.
 
