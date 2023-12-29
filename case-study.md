@@ -578,7 +578,7 @@ New jobs or job updates written to the UI are referred to as **management data**
 4. Linking Client `update` script
 5. crontab
 
-In this section, we refer to interactions between the UI and the Monitoring Service's database and the Linking Client and the Monitoring Service's database. The UI and the Linking Client perform these interactions using HTTP requests to the API exposed by the Monitoring Service's Application Server. However, for the sake of simplicity, we do not make further reference to this and treat the discussion as if the UI and Linking Client can interact with the database directly.
+In this section, we refer to interactions between the UI and the Monitoring Service's database and the Linking Client and the Monitoring Service's database. The UI and the Linking Client perform these interactions using HTTP requests to the API exposed by the Monitoring Service's application server. However, for the sake of simplicity, we do not make further reference to this and treat the discussion as if the UI and Linking Client can interact with the database directly.
 
 Recall:
 * The Monitoring Service runs in a Docker container on one node, the hub node.
@@ -666,7 +666,7 @@ To address this issue, we engineered the Monitoring Service to always check for 
 
 #### 3.1.3 Challenge: Race Condition
 
-As mentioned, when the Monitoring Service receives a ping, it must update or create a run. A chain of subsequent actions follows this. The state of a run dictates these subsequent actions, which include Task Queue operations, user notifications, and database operations. The Monitoring Service’s Application Server housed all of this in our initial implementation.
+As mentioned, when the Monitoring Service receives a ping, it must update or create a run. A chain of subsequent actions follows this. The state of a run dictates these subsequent actions, which include Task Queue operations, user notifications, and database operations. The Monitoring Service’s application server housed all of this in our initial implementation.
 
 However, we discovered that this approach led to race conditions, occasionally creating duplicate run entities. These race conditions arose in scenarios where the job duration was extremely brief, spanning only a fraction of a second, and the start and end pings arrived in quick succession.
 
@@ -676,10 +676,10 @@ To understand this, let's first look over how our initial implementation handled
 
 
 
-1. Upon the arrival of a start ping at the Application Server, the server initiates a SELECT query to retrieve a run using the run token present in the start ping.
-2. The Application Server verifies if any rows were returned from the database.
-3. With the database returning no rows, the Application Server executes an INSERT query to create a new run.
-4. Finally, the Application Server appends a new task to the end queue, awaiting the arrival of an end ping.
+1. Upon the arrival of a start ping at the application server, the server initiates a SELECT query to retrieve a run using the run token present in the start ping.
+2. The application server verifies if any rows were returned from the database.
+3. With the database returning no rows, the application server executes an INSERT query to create a new run.
+4. Finally, the application server appends a new task to the end queue, awaiting the arrival of an end ping.
 
 Let's look at how this translates when the start and end ping arrive almost simultaneously.
 
@@ -687,16 +687,16 @@ Let's look at how this translates when the start and end ping arrive almost simu
 
 
 
-1. Upon the arrival of the start ping at the Application Server, it initiates a SELECT query to the database.
-2. An end ping arrives almost immediately. Due to the asynchronous nature of the database calls, the Application Server proceeds to handle this request without waiting for the completion of the start ping’s SELECT query. It triggers another SELECT query to check for an existing run in the database.
-3. As the start ping's SELECT query yields no rows, the Application Server executes an INSERT operation into the database.
-4. Simultaneously, the end ping's SELECT query, initiated before the beginning of the start ping’s INSERT, also returns no rows. Consequently, the Application Server executes an additional INSERT into the database.
-5. After the start ping’s INSERT is complete, the Application Server adds a task to the end queue.
+1. Upon the arrival of the start ping at the application server, it initiates a SELECT query to the database.
+2. An end ping arrives almost immediately. Due to the asynchronous nature of the database calls, the application server proceeds to handle this request without waiting for the completion of the start ping’s SELECT query. It triggers another SELECT query to check for an existing run in the database.
+3. As the start ping's SELECT query yields no rows, the application server executes an INSERT operation into the database.
+4. Simultaneously, the end ping's SELECT query, initiated before the beginning of the start ping’s INSERT, also returns no rows. Consequently, the application server executes an additional INSERT into the database.
+5. After the start ping’s INSERT is complete, the application server adds a task to the end queue.
 6. Upon surpassing the tolerable runtime, the task triggers, and the Monitoring Service inaccurately notifies the user that their job was not completed.
 
 This leads to the database containing duplicate runs with incorrect states in their respective entries. Furthermore, the Monitoring Service erroneously informs the user of job failure.
 
-To resolve this issue, we moved the responsibility of updating or inserting a run to the database layer. Our approach used PostgreSQL’s UPSERT operation, which either updates existing rows or inserts new rows otherwise and guarantees that when the Application Server receives a ping, it can always retrieve an associated run, mitigating the chance of race conditions.
+To resolve this issue, we moved the responsibility of updating or inserting a run to the database layer. Our approach used PostgreSQL’s UPSERT operation, which either updates existing rows or inserts new rows otherwise and guarantees that when the application server receives a ping, it can always retrieve an associated run, mitigating the chance of race conditions.
 
 Additionally, the database returns the run indicating whether an INSERT or UPDATE operation occurred, which allows the Monitoring Service to determine if subsequent actions concerning the Task Queue and user notifications need to be executed.
 
@@ -800,10 +800,6 @@ We chose option 2 for its reduced complexity and network load; the Monitoring Se
 
 [4.7]*** Polling gif ***
 
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image11.gif "image_tooltip")
 
 
 We had two options to send management data to the Linking Client: use the Linking Client Scripts to poll the Monitoring Service for new management data or have the Monitoring Service push modification notifications to the Linking Client.
@@ -821,22 +817,11 @@ This section examines our options for managing data flow to the crontab.
 
 [4.8]
 
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image12.gif "image_tooltip")
 
 
 The simplest option was to have the Monitoring Service directly transmit updated cron job information to the Listening Service. This request to the Listening Service notified the Service of the existence of management data and delivered it. 
 
 This approach worked fine in the locally hosted version of our application. Still, it introduced a notable vulnerability over multiple nodes: if not appropriately secured, each Listening Service would become a potential entry point for malicious actors to inject unauthorized cron jobs.
-
-
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.gif). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image13.gif "image_tooltip")
 
 
 [4.9]
@@ -846,7 +831,7 @@ This vulnerability led us to an alternative set of steps:
 
 
 1. The Monitoring Service would send a request to the Listening Service notifying it that there were new modified jobs (but would not include the management data itself)
-2. The server would trigger the `sundial update` script to request those job modifications from the Monitoring Service
+2. The Listening Service would trigger the `sundial update` script to request those job modifications from the Monitoring Service
 
 While more complex, this decoupling isolates the notification of new job modifications from the actual job modifications. Management data is transmitted only as a response to a request to the monitoring services API.
 
@@ -857,11 +842,11 @@ As long as the Monitoring Service and remote server remain secure, this approach
 
 When framing this section’s decision, we had one primary concern: what if there's an error when transferring management data to the crontab? 
 
-Consider this scenario: the Monitoring Service removes a job from the database and updates the Linking Client accordingly. However, attempts by the Linking Client to delete the job result in an error, leaving the job to persist within the crontab. While the job won't exist in the database, it will keep running on the node, invisible and unmanageable through Sundial’s UI. That’s a big issue!
+Consider this scenario: the Monitoring Service removes a job from the database and notifies the Linking Client accordingly. However, attempts by the Linking Client to delete the job result in an error, leaving the job to persist within the crontab. While the job won't exist in the database, it will keep running on the node, invisible and unmanageable through Sundial’s UI. That’s a big issue!
 
 To account for this concern, we had to ensure that each sync would not only update the crontab with new management data but also remove any previous inconsistencies.
 
-With this in mind, we had to decide what the Monitoring Services API should respond to the Linking Client sync requests with:
+With this in mind, we had to decide what the Monitoring Service's API should respond with to the Linking Client's sync requests:
 
 
 
@@ -908,14 +893,11 @@ API keys are distributed individually to remote nodes. Users must obtain a new k
 [4.14 vid of API keys]
 
 
----
-
-
 ## 4 Load Testing
 
-We conducted load testing on our application to ascertain the** maximum number of concurrent cron jobs** the Monitoring Service can handle effectively. 
+We conducted load testing on our application to ascertain the **maximum number of concurrent cron jobs** the Monitoring Service can handle effectively. 
 
-When interpreting the outcomes, we consider the **worst-case scenario**, assuming the jobs operate at the minimum interval provided by the cron utility every minute.
+When interpreting the outcomes, we consider the **worst-case scenario**, assuming the jobs operate at the minimum interval provided by the cron utility - every minute.
 
 Since our application is self-hosted, we must carefully select the appropriate hardware for conducting our tests. We opted for the minimum available Digital Ocean droplet, characterized by the following specifications:
 
@@ -924,7 +906,7 @@ Since our application is self-hosted, we must carefully select the appropriate h
 * CPU Type: Regular Intel
 * vCPUs: 1
 * Memory: 1GB
-* Cost: $6/month
+* Cost: <span>$</span>6/month
 
 
 ### 4.1 Utilizing Grafana k6
@@ -953,8 +935,6 @@ This section defines clear and measurable performance goals in load testing. Est
 
 Our two primary objectives are to:
 
-
-
 * Maintain a failure rate of 0%
 * Ensure that no jobs overlap
 
@@ -964,9 +944,9 @@ Jobs overlap when they aren't completed before their subsequent scheduled execut
 
 For jobs set to run every minute, we determine this restriction using the formula:
 
-$$ d + r &lt; 60 $$
+$$ d + r < 60 $$
 
-Where _d_ is the duration of the job, modeled by the waiting period, and _r_ is the response time of the end ping. For example, if a job lasts 55 seconds, rearranging this equation yields a maximum acceptable response time of 5 seconds.
+Where $d$ is the duration of the job, modeled by the waiting period, and $r$ is the response time of the end ping. For example, if a job lasts 55 seconds, rearranging this equation yields a maximum acceptable response time of 5 seconds.
 
 Rephrasing our core objectives more explicitly:
 
@@ -989,12 +969,6 @@ The 200-millisecond job duration was the shortest among our tests. Its quick sta
 
 
 
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image14.png "image_tooltip")
-
-
 We conducted tests up to 200 concurrent jobs. In the graph, the green line illustrates the average response durations per request, while the yellow line represents the 95th percentile.
 
 In line with our objectives, here's what we discovered:
@@ -1009,14 +983,8 @@ In line with our objectives, here's what we discovered:
 
 The 55-second job duration was the lengthiest we examined. Its extended interval between start and end pings lessened the load on the Monitoring Service, leading to the shortest response times.
 
-[4.17
+[4.17]
 
-
-
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image15.png "image_tooltip")
 
 
 Following our objectives, here's what we found:
@@ -1029,7 +997,7 @@ Following our objectives, here's what we found:
 
 ### 4.4 Benchmarking
 
-Using the 30 job limit imposed in the context of the 55-second job as a benchmark, we can compare prices with another monitoring provider. Cronitor, for instance, offers cron job monitoring at a base rate of $2 per monitor per month. Considering our tests were conducted with Sundial deployed on the minimum $6/month Digital Ocean droplet, we derive a cost of 20 cents per monitor per month. This signifies a 90% decrease in expenses.
+Using the 30 job limit imposed in the context of the 55-second job as a benchmark, we can compare prices with another monitoring provider. Cronitor, for instance, offers cron job monitoring at a base rate of <span>$</span>2 per monitor per month. Considering our tests were conducted with Sundial deployed on the minimum <span>$</span>6 per month Digital Ocean droplet, we derive a cost of 20 cents per monitor per month. This signifies a 90% decrease in expenses.
 
 
 ## 4.5 Future Work
@@ -1038,7 +1006,7 @@ As with any project, there are always ways to improve or extend it. Here are a c
 
 
 
-* Historical data & choice (date/time) of Run rotations
+* Historical data & choice (date/time) of run rotations
 * User settings for notifications
 * Allow use of all crontabs on a server, not just the crontab of an individual user
 * Provide the option to daemonize the Listening Service for additional non-Linux OS’s
