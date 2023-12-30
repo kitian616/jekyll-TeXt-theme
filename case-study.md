@@ -22,8 +22,9 @@ Cron is a time-based job scheduler found in Unix and Unix-like operating systems
 
 #### 1.2.1 Use Cases
 
+<span class="larger-text">Some common use cases of the cron utility are:</span>
 
-Some common use cases of the cron utility are:
+![cron schedule syntax explanation](/assets/images/0.1.svg){:class="resizable xx-s centered"} 
 
 
 1. **Database Backups** \
@@ -41,13 +42,13 @@ Cron jobs can be used to generate and send regular reports, such as sales figure
 5. **Time-Based Scaling** \
 Organizations with predictable traffic hours can use cron to scale their applications based on predefined schedules. Cron jobs can deploy additional server instances during peak hours and then remove them again later. This aids the efficient use of resources and conserves costs without requiring manual adjustments.
 
+
 #### 1.2.2 Cron Job
 
 
 A cron job is a command or shell script executed periodically according to a fixed schedule, such as a specific time, date, or interval. Cron jobs comprise a schedule and a script; below is an example.
 
-
-[cron job pic]
+![monitoring services components](/assets/images/2.10.svg){:class="resizable small centered"}
 
 
 The schedule is articulated in a cron-specific syntax, detailed further in the Limitations [LINK TO LIMIATIONS???] section. The script denotes the specific executable to be run by cron at the scheduled intervals.
@@ -58,10 +59,13 @@ The schedule is articulated in a cron-specific syntax, detailed further in the L
 The term ‘crontab’ refers to _both_ a **configuration file** used for managing cron jobs and a **command-line tool** to interact with said configuration file. Subsequent references in this document pertain to the configuration file.
 
 
-See how the command crontab -l displays the contents of the crontab configuration file.
+See how the command crontab -e displays the contents of the crontab configuration file in a text editor.
 
+<video autoplay loop muted playsinline class="resizable medium" aria-label="linking client links monitoring service and cron">
+    <source src="/assets/videos/0.3.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
-[crontab -l opening vid]
 
 
 Each user on a machine has an individual crontab, and there is also a system-wide crontab.
@@ -72,7 +76,10 @@ Each user on a machine has an individual crontab, and there is also a system-wid
 Crond functions as a background process, also called a daemon. It regularly scans crontab files for scheduled jobs. When crond identifies a job scheduled to run, it initiates a child process dedicated to executing the job, as shown below. 
 
 
-[crond launching process]
+<video autoplay loop muted playsinline class="resizable xx-s" aria-label="crond launching rotate-log script as child process">
+    <source src="/assets/videos/2.11.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
 
 Crond configures the environment to match the user's specifications, and the child process inherits the environment from crond, ensuring access to essential file paths and permissions while operating independently from both crond and the user shell.
@@ -125,16 +132,24 @@ Users must review these logs manually to determine if the job encountered any is
 
 The cron scheduling syntax can be unintuitive, especially for new users. 
 
+<div class="flex-container">
+  <figure>
+    <img src="/assets/images/1.3.svg" alt="Cron Schedule Syntax Explanation 1.2" class="resizable x-s">
+    <figcaption>Figure 1</figcaption>
+  </figure>
 
-Figure 1 (left) is an example of a schedule that indicates once a year, and Figure 2 (right) [ADJUST DESCRIPTIONS ONCE IMAGES ARE IN] indicates once a month.
 
+  <figure>
+    <img src="/assets/images/1.2.svg" alt="Cron Schedule Syntax Explanation 1.2" class="resizable x-s">
+    <figcaption>Figure 2</figcaption>
+  </figure>
+</div>
 
-[once a month and once a year figures]
-
+To illustrate how easy it is to make a mistake, Figure 1 is an example of a schedule that indicates once a year, and Figure 2 indicates once a month.
 
 The image below explains each field's meaning.
 
-[image of cron scheduling syntax meanings]
+![cron schedule syntax explanation](/assets/images/1.5.svg){:class="resizable small centered"}
 
 It’s easy to accidentally write the wrong schedule, leading to jobs running at unexpected times. Additionally, a user must manually edit the crontab. When numerous other cron jobs exist, it’s easy to edit the wrong one mistakenly.
 
@@ -242,7 +257,8 @@ The Sundial system consists of two main components:
 1. The Monitoring Service
 2. The Linking Client
 
-X[2.1pic of both big boxes] 
+![monitoring service and linking client](/assets/images/2.1.svg){:class="resizable xx-s centered"}
+
 
 The following sections will give a general outline of the Monitoring Service and the Linking Client. We’ll explain the details of individual components, their roles, and the monitoring or management concepts where they apply.
 
@@ -260,7 +276,7 @@ The Service consists of four components:
 * Task Queues
 * a PostgreSQL database
 
-X[2.2pic of monitoring service with components in docker]
+![monitoring services components](/assets/images/2.2.svg){:class="resizable medium centered"}
 
 We’ve containerized the Monitoring Service for straightforward deployment. The UI, database, and application server (including the Task Queues) are each encapsulated into a Docker image. A Docker Compose script runs them collectively as a single package.
 
@@ -269,16 +285,19 @@ We’ve containerized the Monitoring Service for straightforward deployment. The
 
 The **Linking Client** serves as a link between the Monitoring Service and the crontab.
 
-X[2.3pic of linking them together]
+<video autoplay loop muted playsinline class="resizable medium" aria-label="linking client links monitoring service and cron">
+    <source src="/assets/videos/2.3.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
+
 
 It consists of: 
-
-
 
 * a lightweight HTTP server known as the **Listening Service**
 * a binary executable containing a collection of scripts
 
-X[pic of LC and its components]
+
+![linking client components](/assets/images/2.3.5.svg){:class="resizable x-s centered"}
 
 The Linking Client is packaged as a standalone binary executable. Users can install the Linking Client on any Linux server without additional dependencies. 
 
@@ -293,20 +312,25 @@ Sundial accommodates both single and multi-node setups.
 
 In a **single-node configuration**, the Monitoring Service and the Linking Client coexist on the same node.
 
-X[2.4“vid” of single node]
+<video autoplay loop muted playsinline class="resizable x-large" aria-label="single node architecture">
+    <source src="/assets/videos/2.4.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
 For **multi-node scenarios**, additional nodes - termed **remote nodes** - are integrated through the installation of the Linking Client. The Monitoring Service, on the other hand, only runs on one designated node, referred to as the **hub node**. 
 
 If desired, the hub node can exclusively host the Monitoring Service, monitoring the crontabs of remote nodes across a distributed network.
 
-X[2.5“vid” of multi node]
-
+<video autoplay loop muted playsinline class="resizable xx-large" aria-label="multi node architecture">
+    <source src="/assets/videos/2.5.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
 ### 2.2 Job Monitoring
 
 Monitoring aims to detect issues promptly, such as errors during job execution or jobs failing to run. Sundial conveys this information through its UI, using color to highlight potential faults during job execution.
 
-[IMAGE OF JOB PAGE]
+![all monitored jobs listed page in UI](/assets/images/2.6.svg){:class="resizable large centered screenshot"}
 
 The Monitoring Service creates a **monitor** entity for every monitored cron job.
 
@@ -320,8 +344,7 @@ This section focuses on how the Monitoring Service documents job execution. To d
 
 The Linking Client provides both requirements to the Monitoring Service. Next, we explain the two scripts that enable the Linking Client to do so.  
 
-X[3.1pic of linking client box with scripts box inside ]
-
+![monitoring services components](/assets/images/2.7.svg){:class="resizable small centered"}
 
 ##### 2.2.1.1 Prior Knowledge - `discover`
 
@@ -329,11 +352,14 @@ The Linking Client uses its `discover` script to provide the Monitoring Service 
 
 The `discover` script sends information about each job in the crontab file, such as the schedule and command, to the Monitoring Service. The Monitoring Service stores this information in its database.
 
-X[3.2crontab and matching monitors]
+<video autoplay loop muted playsinline class="resizable xx-large" aria-label="monitor created in db for each cronjob in crontab">
+    <source src="/assets/videos/2.8.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
 Additionally, the `discover` script sets up the real-time notifications of job execution that the Monitoring Service requires through a process called “**wrapping**”.
 
-X[3.3pic of prewrapped and wrapped crontabs]
+![pre-wrapped crontab](/assets/images/2.9.5.svg){:class="resizable medium centered"}
 
 As shown above, cron jobs are considered “**wrapped**” when the text `sundial run`, followed by a string of letters and numbers, has been inserted in between the schedule and the command.
 
@@ -347,11 +373,6 @@ The following section will go over the `run` script in detail.
 Once the Linking Client has wrapped a job, it can send notifications about its execution via the Linking Client’s `run` script.
 
 The `run` script sends information to the Monitoring Service via requests to the Monitoring Services API; these requests are called **pings**.
-
-
-
-??[vid of run script from LS sending ping to Monitoring Service]
-
 
 There are **three** types of pings:
 
@@ -367,41 +388,90 @@ These pings give the Monitoring Service real-time notification of when jobs star
 
 The remainder of this section is a detailed explanation of how the `run` script sends pings.
 
-First, a refresher on how the cron utility executes cron jobs: the cron daemon executes anything following the schedule string. In the example below, crond executes the `rotate-log` script.
+First, a refresher on how the cron utility executes cron jobs: the cron daemon executes anything following the schedule string. In the example cron job below, crond executes the `rotate-log` script directyl .
 
-[3.4 rotatee log pre-wrapped]
-
-
-X[3.5vid of launching rotate-log]
-
-When a job is “wrapped”, the schedule string is followed by `sundial run`, an endpoint key, and the original job script. With this setup, the cron daemon executes `sundial run` with two arguments. Recall that `sundial run` is simply a script installed as part of the Linking Client.
+![monitoring services components](/assets/images/2.10.svg){:class="resizable small centered"}
 
 
-X[3.6sundial run process running vid]
+When a job is “wrapped”, the schedule string is followed by `sundial run`, an endpoint key, and the original job script.
 
-[3.7 roate log wrapped]
+![monitoring services components](/assets/images/2.12.svg){:class="resizable xx-large centered screenshot"}
 
-When launched, the `run` process sends a start ping to the Monitoring Service to notify the Service that the job has begun.
+<div class="flex-container">
 
+  <div style="flex: 1;">
+    With this setup, the cron daemon executes `sundial run` with two arguments. Recall that `sundial run` is simply a script installed as part of the Linking Client.
+  </div>
 
-X[3.8vid of start ping]
+  <div style="flex: 1;">
+    <video autoplay loop muted playsinline class="resizable medium-large" aria-label="crond launching sundial run script as child process">
+      <source src="/assets/videos/2.13.mp4" type="video/mp4" />
+      Your browser does not support the HTML5 Video element.
+    </video>
+  </div>
+</div>
 
-Next, the `run` process spawns a child process that executes the actual job script.
+<div class="flex-container">
 
+  <div style="flex: 1;">
+    When launched, the `run` process sends a start ping to the Monitoring Service to notify the Service that the job has begun.
+  </div>
 
-X[3.9vid of launching  job process]
+  <div style="flex: 2;">
+    <video autoplay loop muted playsinline class="resizable xx-large" aria-label="sundial run script sending start ping to monitoring service">
+      <source src="/assets/videos/2.14.mp4" type="video/mp4" />
+      Your browser does not support the HTML5 Video element.
+    </video>
+  </div>
+
+</div>
+
+<div class="flex-container">
+
+  <div style="flex: 1;">
+    Next, the `run` process spawns a child process that executes the actual job script.
+  </div>
+
+  <div style="flex: 3;">
+    <video autoplay loop muted playsinline class="resizable xxx-large" aria-label="sundial run script launching rotate-log script">
+      <source src="/assets/videos/2.15.mp4" type="video/mp4" />
+      Your browser does not support the HTML5 Video element.
+    </video>
+  </div>
+
+</div>
 
 Since child processes inherit the environmental variables of their parent processes, the `run` process inherits the user context set up by _crond_ and passes that on to the job process. This means the job is executed in the same environment as if it were run directly by _crond_.
 
-Once the job finishes executing, the job process returns with an exit code. The `run` process has access to this exit code because the job process is run as a child of the `run` process. The `run` process sends an end ping to the Monitoring Service.
+<div class="flex-container">
+  <div style="flex: 1;">
+   Once the job finishes executing, the job process returns with an exit code. The `run` process has access to this exit code because the job process is run as a child of the `run` process. The `run` process sends an end ping to the Monitoring Service.
+  </div>
+
+  <div style="flex: 3;">
+    <video autoplay loop muted playsinline class="resizable xxx-large" aria-label="sundial run script sending end ping to monitoring service">
+        <source src="/assets/videos/2.16.mp4" type="video/mp4" />
+        Your browser does not support the HTML5 Video element.
+    </video>
+  </div>
+</div>
 
 
-X[3.10vid of end ping]
+<div class="flex-container">
+  <div style="flex: 1;">
+   Additionally, if the exit code provided by the job process signifies an error occurred, the `run` process sends the Monitoring Service an error ping. This ping is different from an end ping in that it contains the error log, if one is available, returned by the job process.
+  </div>
 
-Additionally, if the exit code provided by the job process signifies an error occurred, the `run` process sends the Monitoring Service an error ping. This ping is different from an end ping in that it contains the error log, if one is available, returned by the job process.
+  <div style="flex: 3;">
+    <video autoplay loop muted playsinline class="resizable xxx-large" aria-label="sundial run script sending error ping to monitoring service">
+        <source src="/assets/videos/2.17.mp4" type="video/mp4" />
+        Your browser does not support the HTML5 Video element.
+    </video>
+  </div>
+</div>
 
 
-X[3.11vid of error process plus ping]
+
 
 Finally, the `run` process exits.
 
@@ -425,13 +495,16 @@ When a job fails to execute, the Linking Client doesn't send any pings to the Mo
 
 The Monitoring Service uses **Task Queues** to deal with missed pings.
 
+![monitoring services components](/assets/images/2.19.svg){:class="resizable small centered"}
+
 Task Queues are implemented with **pg-boss** [[3]](https://github.com/timgit/pg-boss) [ENSURE CITATION NUMBER CORRECT], an npm package built on PostgreSQL. Specifically, we leverage the **deferred tasks** feature, where tasks are added with a specified delay and are processed by a worker only after that delay has passed.
 
-X[3.12bg boss worker pull off vid]
+<video autoplay loop muted playsinline class="resizable large" aria-label="sundial run script sending end ping to monitoring service">
+    <source src="/assets/videos/2.18.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
 Above is an example of a deferred task in action: there are three tasks on a queue, and as time elapses, the delay eventually reaches zero, and the worker processes the task.
-
-X[3.13pic of task queue box in monitoring service]
 
 The Task Queues component consists of a Start Queue and an End Queue. The Monitoring Service uses tasks on these queues to keep track of the expected arrival times of each cron job’s start and end pings.
 
@@ -445,10 +518,6 @@ In the examples, we will elaborate on a few items the worker is responsible for.
 Start and End Queues use tasks to recognize the absence of start and end pings, respectively. 
 
 A task exists in the Start Queue for every job in the Monitoring Service at all times. This is because, by definition, there is always a next expected start time for any given cron job. 
-
-
-
-??[pic of monitors to tasks in queue to cron jobs]
 
 A task is added to the End Queue only after a job’s start ping arrives. If the Monitoring Service does not receive a job's start ping, the Service’s logic dictates that an end ping should not be expected, and the End Queue is not used.
 
@@ -480,7 +549,7 @@ Through the methods discussed above, the Monitoring Service can record data abou
 
 Execution data is organized as database entities called **runs**. For each expected execution of a cron job, Sundial creates a new run. Runs contain information regarding the existence or absence of start and end pings captured in the run’s **state**. The UI displays this data to the user.
 
-[more variety of runs in screenshot]
+![runs log](/assets/images/2.20.svg){:class="resizable xx-large centered screenshot"}
 
 The system accounts for seven various **run states**. Each state provides insight into the execution status, occurrences of errors and irregularities, and, taken together with other listed runs, the overall health of the cron job. 
 
@@ -513,18 +582,20 @@ Pings contain:
 1. The Linking Client sends a start ping before the job starts.
 2. The Monitoring Service creates and stores a run. The run contains the supplied run token and is given a state: `started`. 
 3. The Monitoring Service displays information derived from the run state to any user viewing the UI using Server-Sent Events (SSE).  
-[IMAGE OF STARTED RUN IN UI]
+![started run displayed in UI](/assets/images/2.21.svg){:class="resizable xx-large centered screenshot"}
 4. To ensure that the Task Queues are constantly keeping track of when a job’s start or end pings are expected to arrive _next_, the Monitoring Service makes changes in **both** the Start and End Queues:
     * _Update_ task in Start Queue:
       1. The Services uses the ID (in this case, 7) to find the task in the start queue that is associated with the correct monitor
       2. The Service updates the delay to reflect the next expected arrival of a start ping (12 hours)  
-        X[3.14 UPDATE START QUEUE]
+      <video autoplay loop muted playsinline class="resizable large" aria-label="update start queue task when start ping comes in">
+          <source src="/assets/videos/2.22.mp4" type="video/mp4" />
+          Your browser does not support the HTML5 Video element.
+      </video>
 
     * _Create_ task in End Queue:
       1. The Service adds a task with the **run token** provided by the ping. The worker that processes this task uses the run token to ensure it alters the correct run entity in the database.
       2. The Service sets the delay using the **tolerable runtime** (1 minute)  
-        X[3.15 ADD TO END QUEUE]
-
+      ![started run displayed in UI](/assets/images/2.23.5.svg){:class="resizable small centered screenshot"}
 
 **End Ping Arrives:**
 
@@ -532,9 +603,13 @@ Pings contain:
 
 1. The Linking Client sends an end ping once the job ends.
 2. The Monitoring Service retrieves the run created by the start ping and updates its state to `completed`.
+![run complete displayed in UI](/assets/images/2.24.svg){:class="resizable xx-large centered screenshot"}
 3. The Service removes the associated End Queue task because the end ping came within the tolerable runtime.
     * _Remove_ task from End Queue:  
-X[3.16remove from end queue]
+    <video autoplay loop muted playsinline class="resizable large" aria-label="end queue task removed when ping arrives">
+        <source src="/assets/videos/2.25.mp4" type="video/mp4" />
+        Your browser does not support the HTML5 Video element.
+    </video>
 
 
 
@@ -546,9 +621,15 @@ X[3.16remove from end queue]
 
 1. The Linking Client does not send a start ping when the Monitoring Service expects one.
 2. The delay on the task in the Start Queue elapses, and a worker processes the task.  
-X[3.17worker at  start queue]
+
+    <video autoplay loop muted playsinline class="resizable small" aria-label="start queue task removed by worker">
+        <source src="/assets/videos/2.26.mp4" type="video/mp4" />
+        Your browser does not support the HTML5 Video element.
+    </video>
+
 3. The worker creates a new run with the state `missed`.  
-X[IMAGE OF MISSED RUN UI]
+
+![start ping missed displayed in UI](/assets/images/2.27.svg){:class="resizable xx-large centered screenshot"}
 4. The worker creates a new task in the Start Queue to recognize the next expected start ping.
 
 **No End Ping Arrives:**
@@ -557,9 +638,12 @@ X[IMAGE OF MISSED RUN UI]
 
 1. The Linking Client does not send an end ping when the Monitoring Service expects one.
 2. The delay on the task in the End Queue elapses, and a worker processes the task.  
-X[3.18worker at end queue]
+    <video autoplay loop muted playsinline class="resizable small" aria-label="end queue task removed by worker">
+        <source src="/assets/videos/2.28.mp4" type="video/mp4" />
+        Your browser does not support the HTML5 Video element.
+    </video>
 3. The worker retrieves the run created by the start ping and updates the state to `unresolved`.  
-X[IMAGE OF UNRESOLVED RUN IN UI]  
+![missed end ping displayed in UI](/assets/images/2.29.svg){:class="resizable xx-large centered screenshot"}
 
 ### 2.3 Job Management
 
@@ -567,11 +651,11 @@ The third and final service Sundial provides is cron job management. This is the
 
 Each cron job is added or edited from its form, like the one shown here.
 
-X[FORM IN UI IMAGE]
+![new job form](/assets/images/3.1.svg){:class="resizable xx-large centered screenshot"}
 
 The form allows the user to see the schedule and command of a job clearly at a glance and makes it harder to modify the wrong cron job. Additionally, the schedule field includes an automatic Schedule Translator. It translates the schedule string to text in real time as a user enters data into the form. The Translator confirms the accuracy of the schedule, clarifying the cryptic cron schedule syntax.
 
-X[IMAGE OF SCHEDULE TRANSLATION]
+![syntax helper in UI](/assets/images/3.2.svg){:class="resizable medium centered screenshot"}
 
 The Monitoring Service automatically synchronizes changes made to jobs from the UI with the crontab. In a multi-node setup, the user must specify the node when adding new jobs.
 
@@ -580,7 +664,7 @@ The Monitoring Service automatically synchronizes changes made to jobs from the 
 
 New jobs or job updates written to the UI are referred to as **management data**. This section explains how management data travels to its intended crontab. The components involved in management are: 
 
-[image of components, with numbers]
+![componenets involed in management](/assets/images/3.3.svg){:class="resizable x-large centered screenshot"}
 
 1. UI
 2. Database
@@ -594,23 +678,40 @@ Recall:
 
 As shown, the UI and database are part of the Monitoring Service. When the user inputs new management data to the UI, the data is saved to the first persistent data store it encounters: the database. 
 
-[vid ui to database]
+<video autoplay loop muted playsinline class="resizable small" aria-label="in monitoring service, data travels from UI through app servers API to database">
+    <source src="/assets/videos/3.4.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
 Next, the management data must travel from the Monitoring Service’s database to the appropriate crontab. Since the crontab and the Monitoring Service might reside on different nodes, the management data may have to travel over the network. Even in the single-node architecture, editing the crontab of the host machine directly from the Monitoring Service poses difficulties because the Monitoring Service runs in a Docker container. 
 
 To address this issue, the Linking Client’s `update` script fetches management data from the Monitoring Service’s database and writes it to the crontab. 
 
-[update script sending request and getting data and writing to crontab video]
+<video autoplay loop muted playsinline class="resizable medium-large" aria-label="update script sending request to moniotring service for data writes that to crontab">
+    <source src="/assets/videos/3.5.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
 
 The **Listening Service**, a simple HTTP server integrated into the Linking Client, executes the Linking Client’s `update` script.  
 
-[ping sent to listening service launches update script video]
+<div class="flex-container">
+    <div class="text-container">
+          The Listening Service has one role: to await requests from the Monitoring Service. A request signals new management data is available in the Monitoring Service's database. When the Listening Service receives this request, it initiates the execution of the `update` script. Note that the `update` script is idempotent, guaranteeing consistent and predictable outcomes with each execution.
+    </div>
 
-The Listening Service has one role: to await requests from the Monitoring Service. A request signals new management data is available in the Monitoring Service's database. When the Listening Service receives this request, it initiates the execution of the `update` script. Note that the `update` script is idempotent, guaranteeing consistent and predictable outcomes with each execution.
+    <video autoplay loop muted playsinline class="resizable small" aria-label="monitroing service send a ping to listening services API, which launches the update script">
+          <source src="/assets/videos/3.6.mp4" type="video/mp4" />
+          Your browser does not support the HTML5 Video element.
+    </video>
+</div>
 
 Below is a diagram of the complete management data flow.
 
-[video]
+<video autoplay loop muted playsinline class="resizable medium-large" aria-label="monitoring service sends request to listening service, twhich launches the update script, which requests new data from monitroring service and writes that to crontab.">
+    <source src="/assets/videos/3.7.mp4" type="video/mp4" />
+    Your browser does not support the HTML5 Video element.
+</video>
+
 
 While this process may seem circuitous, deliberately routing management data through the Linking Client’s `update` script is intentional. We will explain our design considerations in the Engineering Decisions section.
 
@@ -627,7 +728,7 @@ To get information about the execution of the job, we used the same pattern we s
 
 We considered two options to send these pings: insert cURL GET requests to all jobs in the crontab or write a ‘wrapping’ script that included the ping logic and the user’s command and have cron run it. We initially chose to use cURL requests for simplicity.
 
-[4.1 0 2 * * * curl http… && test-job.sh && curl http…] [IMAGE?]
+![curl wrapped cron job](/assets/images/4.1.svg){:class="resizable xx-large centered"}
 
 The first cURL executes before the start of a job. The second cURL only executes if the script test-job.sh completes successfully. 
 
@@ -639,7 +740,7 @@ The final implementation of our Monitoring Service uses this ‘wrapping’ opti
 
 Recall the `discover` and `run` scripts from the Linking Client: the user runs `sundial discover` to wrap their cron jobs, which involves adding `sundial run`. The `run` script invokes a child process to run the user’s specified script, which makes it possible for the script to send a ping when a job errors out and send error logs from that aborted process.
 
-[??4.2 sundial run ‘wrapped’ example]
+![sundial run wrapped cron job](/assets/images/2.12.svg){:class="resizable x-large centered"}
 
 
 #### 3.1.2 Challenge: Unordered Pings
