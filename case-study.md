@@ -194,18 +194,13 @@ Two open-source solutions are **Uptime Kuma** and **Cronicle**.
 
 **Cronicle** is a cron-like service that handles the scheduling and execution of jobs internally without any help from the cron utility. Its main downside is that a user needs to transition any existing cron jobs to the service, which could be time-consuming and error-prone. Users may also be more comfortable relying on the cron utility instead of a system that claims to function like it.
 
-[comparison table just paid + open source]
-
 
 #### 1.4.3 DIY
 
 A developer can also choose to build their own solution by copying the pattern used by the existing solutions. The pattern is to use HTTP requests for monitoring: a request will be sent before and after a job has been executed. The requests indicate if a job started and ended, and can be used to gather other details, like error messages.
 
-[curls pic]
 
 Users don’t get a monitoring interface or other features like the named services offer, and setup and maintenance would require additional work. Still, it is customizable and contained wholly on their system.
-
-[comparison table just paid + open source + DYI]
 
 
 ### 1.5 Sundial
@@ -230,8 +225,6 @@ Our monitoring system focuses on the cron utility. Sundial's oversight of cron j
 3. **Cron-Based Management** \
 Sundial offers a centralized platform for monitoring and managing all your cron jobs. Any modifications made to jobs within the user interface (UI) will update the crontab automatically.
 
-[comparison table just paid + open source + DYI +  Sundial]
-
 In summary, Sundial is an open-source, self-hosted solution that focuses specifically on the cron utility and provides:
 
 
@@ -239,6 +232,8 @@ In summary, Sundial is an open-source, self-hosted solution that focuses specifi
 * reliable monitoring
 * centralized error logging
 * convenient job management from a UI
+
+![monitoring services components](/assets/images/0.8.svg){:class="resizable large centered screenshot"}
 
 ## 2 The Sundial System
 
@@ -469,8 +464,6 @@ Since child processes inherit the environmental variables of their parent proces
     </video>
   </div>
 </div>
-
-
 
 
 Finally, the `run` process exits.
