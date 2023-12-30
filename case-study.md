@@ -352,7 +352,6 @@ There are **three** types of pings:
 
 These pings give the Monitoring Service real-time notification of when jobs start, end, or encounter errors.
 
-
 ---
 
 The remainder of this section is a detailed explanation of how the `run` script sends pings.
