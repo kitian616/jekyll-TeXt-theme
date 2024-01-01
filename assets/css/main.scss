@@ -159,4 +159,19 @@ video.left {
 
 .larger-text {
     font-size: larger;
+=======
+.page__main .col-aside > aside {
+    width: 500px;
+}
+
+.toc-aside {
+    width: auto;
+}
+
+.toc-h4 {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
