@@ -22,7 +22,7 @@ Cron is a time-based job scheduler found in Unix and Unix-like operating systems
 
 #### 1.2.1 Use Cases
 
-<span class="larger-text">Some common use cases of the cron utility are:</span>
+Some common use cases of the cron utility are:
 
 ![cron schedule syntax explanation](/assets/images/0.1.svg){:class="resizable xx-s centered"} 
 
@@ -245,7 +245,7 @@ The Sundial system consists of two main components:
 ![monitoring service and linking client](/assets/images/2.1.svg){:class="resizable xx-s centered"}
 
 
-The following sections will give a general outline of the Monitoring Service and the Linking Client. We’ll explain the details of individual components, their roles, and the monitoring or management concepts where they apply.
+The following sections will give a general outline of the Monitoring Service and the Linking Client. We’ll explain the details of individual components and provide a high level overview of their roles.
 
 
 ##### 2.1.1.1 Monitoring Service
@@ -302,9 +302,11 @@ In a **single-node configuration**, the Monitoring Service and the Linking Clien
     Your browser does not support the HTML5 Video element.
 </video>
 
-For **multi-node scenarios**, additional nodes - termed **remote nodes** - are integrated through the installation of the Linking Client. The Monitoring Service, on the other hand, only runs on one designated node, referred to as the **hub node**. 
+For **multi-node scenarios**, additional nodes - termed **remote nodes** - are integrated through the installation of the Linking Client. The Monitoring Service, on the other hand, only runs on one designated node, referred to as the **hub node**.
 
-If desired, the hub node can exclusively host the Monitoring Service, monitoring the crontabs of remote nodes across a distributed network.
+When adding new remote nodes, the `sundial register` command is passed the IP addresses of both the hub node and remote node as arguments. These addresses are stored on both nodes and used to facilitate future communication.
+
+If desired, the hub node can exclusively host the Monitoring Service, monitoring the cron jobs of remote nodes across a distributed network.
 
 <video autoplay loop muted playsinline class="resizable xx-large" aria-label="multi node architecture">
     <source src="/assets/videos/2.5.mp4" type="video/mp4" />
@@ -384,7 +386,7 @@ When a job is “wrapped”, the schedule string is followed by `sundial run`, a
 <div class="flex-container">
 
   <div style="flex: 1;">
-    With this setup, the cron daemon executes `sundial run` with two arguments. Recall that `sundial run` is simply a script installed as part of the Linking Client.
+    With this setup, the cron daemon executes <code class="language-plaintext highlighter-rouge">sundial run</code> with two arguments. Recall that <code class="language-plaintext highlighter-rouge">sundial run</code> is simply a script installed as part of the Linking Client.
   </div>
 
   <div style="flex: 1;">
@@ -398,7 +400,7 @@ When a job is “wrapped”, the schedule string is followed by `sundial run`, a
 <div class="flex-container">
 
   <div style="flex: 1;">
-    When launched, the `run` process sends a start ping to the Monitoring Service to notify the Service that the job has begun.
+    When launched, the <code class="language-plaintext highlighter-rouge">run</code> process sends a start ping to the Monitoring Service to notify the Service that the job has begun.
   </div>
 
   <div style="flex: 2;">
@@ -413,7 +415,7 @@ When a job is “wrapped”, the schedule string is followed by `sundial run`, a
 <div class="flex-container">
 
   <div style="flex: 1;">
-    Next, the `run` process spawns a child process that executes the actual job script.
+    Next, the <code class="language-plaintext highlighter-rouge">run</code> process spawns a child process that executes the actual job script.
   </div>
 
   <div style="flex: 3;">
@@ -429,7 +431,7 @@ Since child processes inherit the environmental variables of their parent proces
 
 <div class="flex-container">
   <div style="flex: 1;">
-   Once the job finishes executing, the job process returns with an exit code. The `run` process has access to this exit code because the job process is run as a child of the `run` process. The `run` process sends an end ping to the Monitoring Service.
+   Once the job finishes executing, the job process returns with an exit code. The <code class="language-plaintext highlighter-rouge">run</code> process has access to this exit code because the job process is run as a child of the <code class="language-plaintext highlighter-rouge">run</code> process. The <code class="language-plaintext highlighter-rouge">run</code> process sends an end ping to the Monitoring Service.
   </div>
 
   <div style="flex: 3;">
@@ -443,7 +445,7 @@ Since child processes inherit the environmental variables of their parent proces
 
 <div class="flex-container">
   <div style="flex: 1;">
-   Additionally, if the exit code provided by the job process signifies an error occurred, the `run` process sends the Monitoring Service an error ping. This ping is different from an end ping in that it contains the error log, if one is available, returned by the job process.
+   Additionally, if the exit code provided by the job process signifies an error occurred, the <code class="language-plaintext highlighter-rouge">run</code> process sends the Monitoring Service an error ping. This ping is different from an end ping in that it contains the error log, if one is available, returned by the job process.
   </div>
 
   <div style="flex: 3;">
@@ -480,6 +482,8 @@ The Monitoring Service uses **Task Queues** to deal with missed pings.
 ![monitoring services components](/assets/images/2.19.svg){:class="resizable small centered"}
 
 Task Queues are implemented with **pg-boss** [[3]](https://github.com/timgit/pg-boss) [ENSURE CITATION NUMBER CORRECT], an npm package built on PostgreSQL. Specifically, we leverage the **deferred tasks** feature, where tasks are added with a specified delay and are processed by a worker only after that delay has passed.
+
+A **worker** is a function assigned to a queue. The Monitoring Service executes this function when 'processing' a task, passing in any additional data included in the task.
 
 <video autoplay loop muted playsinline class="resizable large" aria-label="sundial run script sending end ping to monitoring service">
     <source src="/assets/videos/2.18.mp4" type="video/mp4" />
@@ -629,7 +633,9 @@ Pings contain:
 
 ### 2.3 Job Management
 
-The third and final service Sundial provides is cron job management. This is the ability for users to add, edit, and delete jobs across one or multiple nodes from the UI. Managing jobs through the UI reduces the risk of errors associated with manual crontab changes. It also adds user convenience by providing a centralized platform for interacting with one or multiple crontabs.
+Sundial also provides cron job management. Management refers to the ability for users to add, edit, and delete jobs across one or multiple nodes from the UI. 
+
+Managing jobs through the UI reduces the risk of errors associated with manual crontab changes. It also adds user convenience by providing a centralized platform for interacting with one or multiple crontabs.
 
 Each cron job is added or edited from its form, like the one shown here.
 
@@ -669,7 +675,7 @@ As shown, the UI and database are part of the Monitoring Service. When the user 
 
 Next, the management data must travel from the Monitoring Service’s database to the appropriate crontab. Since the crontab and the Monitoring Service might reside on different nodes, the management data may have to travel over the network. Even in the single-node architecture, editing the crontab of the host machine directly from the Monitoring Service poses difficulties because the Monitoring Service runs in a Docker container. 
 
-To address this issue, the Linking Client includes an `update` script that fetches management data from the Monitoring Service’s database and writes it to the crontab. 
+To address this issue, the Linking Client includes an `update` script that fetches management data from the Monitoring Service’s database and writes it to the crontab. In the below diagram, arrows represent HTTP requests and responses.
 
 <video autoplay loop muted playsinline class="resizable medium-large" aria-label="update script sending request to moniotring service for data writes that to crontab">
     <source src="/assets/videos/3.5.mp4" type="video/mp4" />
@@ -680,7 +686,7 @@ The **Listening Service**, a simple HTTP server integrated into the Linking Clie
 
 <div class="flex-container">
     <div class="text-container">
-          The Listening Service has one role: to await requests from the Monitoring Service. A request signals new management data is available in the Monitoring Service's database. When the Listening Service receives this request, it initiates the execution of the `update` script. Note that the `update` script is idempotent, guaranteeing consistent and predictable outcomes with each execution.
+          The Listening Service has one role: to await requests from the Monitoring Service. A request signals new management data is available in the Monitoring Service's database. When the Listening Service receives this request, it initiates the execution of the <code class="language-plaintext highlighter-rouge">update</code> script. Note that the <code class="language-plaintext highlighter-rouge">update</code> script is idempotent, guaranteeing consistent and predictable outcomes with each execution.
     </div>
 
     <video autoplay loop muted playsinline class="resizable small" aria-label="monitroing service send a ping to listening services API, which launches the update script">
@@ -812,7 +818,7 @@ The benefit of using this first approach is that it was lightweight – it did n
 
 Instead, we chose to implement **task queues**. At the expense of adding complexity to the Monitoring Service’s architecture by introducing a new component, it provided separation of logic between missed pings and monitors, and the missed ping tasks would be decoupled from their execution.
 
-The task queues approach was to break out information about the next expected times into a separate data structure (task queue) and then further break that out into two separate queues (start & end). Separated queues meant that the execution of tasks on each queue could be controlled more directly.
+The task queues approach was to break out information about the next expected times into a separate data structure (task queue) and then further break that out into two separate queues (start & end). Separated queues allowed distinct workers to be assigned to each queue, resulting in less complex worker logic.
 
 
 #### 3.1.5 Trade-offs: Cache-based vs. Database-based queues
@@ -839,21 +845,16 @@ We chose **pg-boss**, a database-based job queue, to implement our start and end
 
 #### 3.1.6 Trade-offs: Sending out notifications
 
-Notifications, in general, are difficult because when they should be sent out can vary depending on the user. We identified two alternative notification methods:
+Notifications, in general, are challenging because when they should be sent out can vary depending on the user. We identified two alternative notification methods:
 1. Sending notifications each time a job fails.
-2. Triggering notifications on a state change, i.e. when a job starts failing or, after repeated failures, begins succeeding.
+2. Triggering notifications on a state change, i.e., when a job starts failing or, after repeated failures, begins succeeding.
 
+The first method is more straightforward and reduces the risk of users missing crucial notifications for continuously failing jobs. However, jobs running at short intervals (e.g., every minute) could flood users with excessive notifications. Additionally, this approach doesn't inform users when a previously failing job recovers, which can be valuable information.
 
-The first method is simpler and reduces the risk of users missing crucial notifications for continuously failing jobs. However, for jobs running at short intervals (e.g. every minute), it could flood users with excessive notifications. Additionally, it doesn't inform users when a previously failing job recovers, which can be valuable information.
-
-
-We opted for the second method to prevent overwhelming users with repeated notifications and to include alerts when a job recovers. However, a drawback is that if a job fails multiple times, users will only receive a notification for the initial failure.
-
-
+We opted for the second method to prevent overwhelming users with repeated notifications and to include alerts when a job recovers. However, a drawback is that users will only receive a notification for the initial failure if a job fails multiple times.
 To address this, we utilized the Task Queues to schedule a task at 9 AM every weekday. This task will alert the user to all their failing jobs, reducing the chance of missing a failure alert.
 
-
-For a more comprehensive solution, future work could involve allowing users to customize their notification preferences via the UI. For example, including a setting that lets the Monitoring Service ignore initial job failures up to a certain count before triggering notifications, or turn off notifications entirely for specific jobs.
+For a more comprehensive solution, future work could involve allowing users to customize their notification preferences via the UI. For example, the next version could include a setting that lets the Monitoring Service ignore initial job failures up to a specific count before triggering notifications or turn off notifications entirely for specific jobs.
 
 
 
