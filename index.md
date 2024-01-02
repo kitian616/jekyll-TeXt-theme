@@ -24,10 +24,15 @@ data:
       
       theme: dark
     - title: Effortless management
-      excerpt: Quickly and easily add, edit, or delete cron jobs, even on remote nodes.
-      image:
-        src: /assets/videos/2.5.mp4
       theme: dark
+      excerpt: >
+        Quickly and easily add, edit, or delete cron jobs, even on remote nodes.
+        <br>
+        <div class="video-container">
+        <video autoplay loop muted playsinline class="resizable xx-large" aria-label="multi node architecture" width="100%">
+            <source src="/assets/videos/2.5.mp4" type="video/mp4" />
+            Your browser does not support the HTML5 Video element.
+        </video>
     - title: Team
       excerpt: >
         Sundial was built by a remote team of software developers.
