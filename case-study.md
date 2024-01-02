@@ -898,9 +898,9 @@ We chose option 2 for its reduced complexity and network load; the Monitoring Se
 
 We had two options to send management data to the Linking Client: use the Linking Client Scripts to poll the Monitoring Service for new management data or have the Monitoring Service push modification notifications to the Linking Client.
 
-The first option used a cron job to have a Linking Client Script repeatedly poll the Monitoring Service API for new cron job data. 
+The first option, polling, used a cron job to repeatedly send requests to the Monitoring Service's API for new job data.
 
-We opted for the second option and built out the Listening Service.
+We opted for the second option, the Monitoring Service pushing data only when available, and built out the Listening Service.
 
 The downside of this decision was that we needed to add additional infrastructure on each remote server. On the other hand, frequent polling suffers from potential delays and increased server load. The Listening Client approach offers faster updates from UI to crontab and minimal network load. 
 
@@ -913,21 +913,21 @@ This section examines our options for managing data flow to the crontab.
 
 
 
-The simplest option was to have the Monitoring Service directly transmit updated cron job information to the Listening Service. This request to the Listening Service notified the Service of the existence of management data and delivered it. 
+The simplest option was to have the Monitoring Service directly transmit updated cron job information to the Listening Service. As shown below, the Monitoring Service makes an HTTP request to the Listening Service containing the data, triggering the Listening Service to invoke a Linking Client script that writes the data from the request body to the crontab.
 
 This approach worked fine in the locally hosted version of our application. Still, it introduced a notable vulnerability over multiple nodes: if not appropriately secured, each Listening Service would become a potential entry point for malicious actors to inject unauthorized cron jobs.
 
 
 [4.9]
 
-This vulnerability led us to an alternative set of steps: 
+As seen in the Management section, this vulnerability led us to an alternative set of steps: 
 
 
 
 1. The Monitoring Service would send a request to the Listening Service notifying it that there were new modified jobs (but would not include the management data itself)
 2. The Listening Service would trigger the `sundial update` script to request those job modifications from the Monitoring Service
 
-While more complex, this decoupling isolates the notification of new job modifications from the actual job modifications. Management data is transmitted only as a response to a request to the monitoring services API.
+While more complex, this decoupling isolates the notification of new job modifications from the actual job modifications. Management data is transmitted only as a response to a request to the Monitoring Service's API, which is secured using API Keys (discussed in the Security Considerations section).
 
 As long as the Monitoring Service and remote server remain secure, this approach hinders malicious actors from altering our crontabs via requests to the Listening Service. 
 
