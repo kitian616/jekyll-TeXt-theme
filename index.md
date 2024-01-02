@@ -10,10 +10,11 @@ article_header:
       url: /case-study
       type: outline-theme-dark
     - text: Tech Talk
+      url: https://www.youtube.com/watch?v=O-mJKlJGk6w
       type: outline-theme-dark
   theme: dark
   background_image:
-    src: /assets/images/true_sunset.png
+    gradient: "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(254,232,56,1) 100%)"
 data:
   sections:
     - title: Intuitive monitoring for all your cron jobs
@@ -32,6 +33,14 @@ data:
         Sundial was built by a remote team of software developers.
         <br>
         We are currently looking for opportunities, so please feel free to reach out!
-
       theme: dark
+      children:
+        - title: Sofia Alere
+          excerpt: Chicago, US
+        - title: Jacob Clark
+          excerpt: London, UK
+        - title: Mary McDonald
+          excerpt: Montreal, Canada
+        - title: David Perez
+          excerpt: New York, US
 ---
