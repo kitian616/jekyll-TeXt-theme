@@ -78,10 +78,12 @@ The document has moved
 
 ```bash
 # filename: ~/.proxy
-proxy_server="raspberrypi.local"  # 代理服务器域名或者地址
-proxy_port="7890"                 # 代理服务器监听端口
-export {http,https,all}_proxy="http://${proxy_server}:${proxy_port}"
-export no_proxy="localhost,127.0.0.1/8,192.168.0.0/23,*.local"
+proxy_server="192.168.1.2"      # 代理服务器域名或者地址
+proxy_port="7890"               # 代理服务器监听端口
+proxy="http://${proxy_server}:${proxy_port}"
+export http_proxy=$proxy
+export https_proxy=$proxy
+export no_proxy="localhost,127.0.0.1/8,::1,192.168.0.0/23,*.local"
 ```
 
 最后一行的`no_proxy`需要根据自身网络环境进行配置，比如笔者的子网网段是`192.168.0.0/23`，则子网内的各设备不需要代理访问。
