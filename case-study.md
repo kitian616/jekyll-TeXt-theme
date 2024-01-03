@@ -24,7 +24,7 @@ Cron is a time-based job scheduler found in Unix and Unix-like operating systems
 
 Some common use cases of the cron utility are:
 
-![cron schedule syntax explanation](/assets/images/0.1.svg){:class="resizable xx-s centered"} 
+![common cron use cases](/assets/images/1.1.svg){:class="resizable x-large centered"} 
 
 
 1. **Database Backups** \
@@ -48,7 +48,7 @@ Organizations with predictable traffic hours can use cron to scale their applica
 
 A cron job is a command or shell script executed periodically according to a fixed schedule, such as a specific time, date, or interval. Cron jobs comprise a schedule and a script; below is an example.
 
-![monitoring services components](/assets/images/2.10.svg){:class="resizable small centered"}
+![monitoring services components](/assets/images/1.2.svg){:class="resizable small centered"}
 
 
 The schedule is articulated in a cron-specific syntax, detailed further in the Limitations [LINK TO LIMIATIONS???] section. The script denotes the specific executable to be run by cron at the scheduled intervals.
@@ -61,7 +61,7 @@ The term ‘crontab’ refers to _both_ a **configuration file** used for managi
 
 See how the command crontab -e displays the contents of the crontab configuration file in a text editor.
 
-<video autoplay loop muted playsinline class="resizable medium" aria-label="linking client links monitoring service and cron">
+<video autoplay loop muted playsinline class="resizable medium" aria-label="crontab -e screencapture">
     <source src="/assets/videos/0.3.mp4" type="video/mp4" />
     Your browser does not support the HTML5 Video element.
 </video>
@@ -111,10 +111,6 @@ A failure to complete often suggests an issue inherent to the job itself. It cou
 
 A particularly problematic scenario of job failure arises when the scheduled interval for a job is shorter than the duration of the job itself. This results in concurrent execution, known as **overlapping jobs,** and can potentially deplete system resources.
 
-
-[graphic of overlapping jobs example]
-
-
 The impact of a job failing to run can vary from being merely inconvenient to severely detrimental. While the inconvenience of a marketing email not being sent might be manageable, the absence of essential database backups and the lack of crucial security updates can leave the system vulnerable.
 
 #### 1.3.2 Cron logs are not centralized
@@ -134,13 +130,13 @@ The cron scheduling syntax can be unintuitive, especially for new users.
 
 <div class="flex-container">
   <figure>
-    <img src="/assets/images/1.3.svg" alt="Cron Schedule Syntax Explanation 1.2" class="resizable x-s">
+    <img src="/assets/images/1.3.svg" alt="once a month cron schedule: 0 0 1 * *" class="resizable large">
     <figcaption>Figure 1</figcaption>
   </figure>
 
 
   <figure>
-    <img src="/assets/images/1.2.svg" alt="Cron Schedule Syntax Explanation 1.2" class="resizable x-s">
+    <img src="/assets/images/1.4.svg" alt="once a year cron schedule: 0 0 1 1 *" class="resizable large">
     <figcaption>Figure 2</figcaption>
   </figure>
 </div>
@@ -149,7 +145,7 @@ To illustrate how easy it is to make a mistake, Figure 1 is an example of a sche
 
 The image below explains each field's meaning.
 
-![cron schedule syntax explanation](/assets/images/1.5.svg){:class="resizable small centered"}
+![cron schedule syntax explanation](/assets/images/1.6.svg){:class="resizable medium centered"}
 
 It’s easy to accidentally write the wrong schedule, leading to jobs running at unexpected times. Additionally, a user must manually edit the crontab. When numerous other cron jobs exist, it’s easy to edit the wrong one mistakenly.
 
@@ -223,7 +219,7 @@ In summary, Sundial is an open-source, self-hosted solution that focuses specifi
 * centralized error logging
 * convenient job management from a UI
 
-![monitoring services components](/assets/images/0.8.svg){:class="resizable large centered screenshot"}
+![monitoring services components](/assets/images/1.8.svg){:class="resizable xx-large centered"}
 
 ## 2 The Sundial System
 
@@ -376,12 +372,12 @@ The remainder of this section is a detailed explanation of how the `run` script 
 
 First, a refresher on how the cron utility executes cron jobs: the cron daemon executes anything following the schedule string. In the example cron job below, crond executes the `rotate-log` script directyl .
 
-![monitoring services components](/assets/images/2.10.svg){:class="resizable small centered"}
+![pre-wrapped cron job](/assets/images/1.2.svg){:class="resizable small centered"}
 
 
 When a job is “wrapped”, the schedule string is followed by `sundial run`, an endpoint key, and the original job script.
 
-![monitoring services components](/assets/images/2.12.svg){:class="resizable xx-large centered screenshot"}
+![wrapped cron job](/assets/images/2.12.svg){:class="resizable x-large centered"}
 
 <div class="flex-container">
 

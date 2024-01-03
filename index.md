@@ -22,23 +22,24 @@ data:
       image:
         src: /assets/images/2.6.svg
       
-      theme: dark
+      theme: orange
     - title: Effortless management
-      theme: dark
-      excerpt: >
-        Quickly and easily add, edit, or delete cron jobs, even on remote nodes.
-        <br>
-        <div class="video-container">
-        <video autoplay loop muted playsinline class="resizable xx-large" aria-label="multi node architecture" width="100%">
-            <source src="/assets/videos/2.5.mp4" type="video/mp4" />
-            Your browser does not support the HTML5 Video element.
-        </video>
+      theme: orange
+      excerpt: Quickly and easily add, edit, or delete cron jobs, even on remote nodes.
+      image:
+        src: /assets/images/2.5.svg
+        # <br>
+        # <div class="video-container">
+        # <video autoplay loop muted playsinline class="resizable xx-large" aria-label="multi node architecture" width="100%">
+        #     <source src="/assets/videos/2.5.mp4" type="video/mp4" />
+        #     Your browser does not support the HTML5 Video element.
+        # </video>
     - title: Team
       excerpt: >
         Sundial was built by a remote team of software developers.
         <br>
         We are currently looking for opportunities, so please feel free to reach out!
-      theme: dark
+      theme: orange
       children:
         - title: Sofia Alere
           excerpt: Chicago, US

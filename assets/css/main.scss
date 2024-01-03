@@ -84,7 +84,10 @@ img.centered {
 video {
     display: block;
     margin: 20px auto;
-    outline: none; 
+    outline: none;
+    border-radius: 30px;
+    overflow: hidden;  
+    padding: 20px; 
 }
 
 .resizable {
