@@ -40,7 +40,7 @@ license: WTFPL
 >\end{equation}\tag{P2.53-1}
 >$$
 >
->Show that if &s_0$ is a solution of the equation
+>Show that if $s_0$ is a solution of the equation
 >
 >$$
 >\begin{equation}
