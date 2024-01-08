@@ -6,7 +6,9 @@ key: fortune-bucket
 tags: 
   - javascript
   - 卦桶
-author: Yu Xiaoyuan
+authors:
+  - Yu Xiaoyuan
+  - ChatGPT
 show_author_profile: true
 license: WTFPL
 ---
