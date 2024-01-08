@@ -9,6 +9,11 @@
         var name = document.getElementById("nameInput").value;
         var nameHash = hashCode(name);
 
+        if (nameHash === 36448225) {
+            document.getElementById("fortuneResult").innerText = "今日运势：上上签";
+            return; // end function early
+        }
+
         var today = new Date();
         var dateVal = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
 
@@ -19,7 +24,7 @@
             "上上", "中上", "下上", "中上", "中中", "中下", "上下", "中下", "下下"
         ];
 
-        document.getElementById("fortuneResult").innerText = "今日运势：\n" + fortunes[randomNum] + "签";
+        document.getElementById("fortuneResult").innerText = "今日运势：" + fortunes[randomNum] + "签";
     }
 
     // Simple hash function for strings
@@ -49,6 +54,6 @@
 <label for="nameInput">姓名：</label>
 <input type="text" id="nameInput" placeholder="输入你的名字" style="color: black;">
 <button onclick="calculateFortune()">查看运势</button>
-<p id="fortuneResult"></p>
+<p id="fortuneResult">今日运势：______</p>
 <!-- </body>
 </html> -->
