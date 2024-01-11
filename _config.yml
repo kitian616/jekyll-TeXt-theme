@@ -201,6 +201,7 @@ exclude:
   - /screenshots
   - /test
   - /vendor
+  - _posts/1970-01-01-template.md
 
 defaults:
   - scope:
