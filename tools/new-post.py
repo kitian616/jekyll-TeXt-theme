@@ -1,30 +1,44 @@
 import argparse
 from datetime import datetime
-import os
+# import os
 
-def create_new_post(post_key, license, author, tags, date):
-    template_path = '_posts/1970-01-01-template.md'
-    new_post_path = f'_posts/{date}-{post_key}.md'
-    title = f"【some topic】{post_key}"
+def create_post_header(post_key, license, author, tags, date):
+    # 创建一个字典来保存头部信息
+    header = {
+        'layout': 'article',
+        'title': f'【Topic】Main Title',
+        'permalink': f'/article/:title.html',
+        'key': post_key,
+        'tags': tags.split(","),
+        'author': author,
+        'show_author_profile': 'true',
+        'license': license,
+    }
 
-    # 读取模板文件
+    # 将字典转换为 YAML 格式的字符串
+    header_yaml = '---\n'
+    for key, value in header.items():
+        if isinstance(value, list):
+            header_yaml += f'{key}:\n'
+            for item in value:
+                header_yaml += f'  - {item}\n'
+        else:
+            header_yaml += f'{key}: {value}\n'
+    header_yaml += '---\n\n'
+
+    return header_yaml
+
+def create_new_post(post_key, license, author, tags, date, template_path, new_post_path):
+    # 生成头部
+    post_header = create_post_header(post_key, license, author, tags, date)
+
+    # 读取模板文件的其余部分
     with open(template_path, 'r') as file:
-        content = file.read()
-
-    formatted_tags = "\n  - ".join(tags.split(","))
-    
-    # 替换字段
-    content = content.replace('key: template-key', f'key: {post_key}')
-    content = content.replace('author: Yu Xiaoyuan', f'author: {author}')
-    content = content.replace('license: WTFPL', f'license: {license}')
-    content = content.replace('tags:\n  - template\n  - blog\n  - Liquid\n  - jekyll', f'tags:\n  - {formatted_tags}')
-    content = content.replace('【some topic】main title', title)
+        content = file.read().split('---', 2)[-1]
 
     # 保存为新的文件
     with open(new_post_path, 'w') as file:
-        file.write(content)
-
-    print(f"Post created at {new_post_path}")
+        file.write(post_header + content)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Create a new Jekyll post.')
@@ -36,4 +50,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    create_new_post(args.post_key, args.license, args.author, args.tags, args.date)
+    template_path = '_posts/1970-01-01-template.md'
+    new_post_path = f'_posts/{args.date}-{args.post_key}.md'
+
+    create_new_post(args.post_key, args.license, args.author, args.tags, args.date, template_path, new_post_path)
