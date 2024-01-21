@@ -55,7 +55,7 @@ author:
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
 repository: quillpusher/quillpusher.github.io
-repository_tree: light
+repository_tree: master
 
 
 ## => Paths
