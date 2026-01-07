@@ -1,5 +1,284 @@
----
-layout: home
-# articles:
-#   excerpt_type: html
----
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Laboratorio de Investigación - Institute in Argentina</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display flex flex-col min-h-screen">
+<header class="bg-white dark:bg-[#111318] border-b border-[#f0f2f4] dark:border-[#222] sticky top-0 z-50">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 py-3 flex items-center justify-between flex-wrap gap-4">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">science</span>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">LCC - CONICET</h2>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Laboratorio de Ciencias de la Computación</p>
+</div>
+</div>
+<nav class="hidden md:flex flex-1 justify-end items-center gap-6 lg:gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home / Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About us / Sobre nosotros</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Projects / Proyectos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="docencia.html">Teaching / Docencia</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="publications.html">Publications / Publicaciones</a>
+<div class="h-6 w-px bg-gray-200 dark:bg-gray-700"></div>
+<div class="relative group">
+<button class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-white/5 border border-gray-200 dark:border-gray-700 hover:border-primary hover:text-primary dark:hover:border-primary transition-all px-3 py-2 rounded-lg shadow-sm focus:outline-none">
+<span class="material-symbols-outlined text-[20px]">language</span>
+<span>English</span>
+<span class="material-symbols-outlined text-[18px] text-gray-400 transition-transform duration-200 group-hover:-rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-right">
+<div class="bg-white dark:bg-[#1a202c] border border-gray-100 dark:border-gray-700 rounded-lg shadow-xl overflow-hidden ring-1 ring-black/5">
+<a class="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-primary bg-gray-50 dark:bg-white/5" href="#">
+<span>English</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</a>
+<a class="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-gray-50 dark:hover:bg-white/5 transition-colors" href="#">
+<span>Español</span>
+<span class="text-[10px] font-bold text-gray-400 border border-gray-200 dark:border-gray-600 rounded px-1.5 py-0.5 ml-2">AR</span>
+</a>
+</div>
+</div>
+</div>
+</nav>
+<button class="md:hidden p-2 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative bg-white dark:bg-[#111318]">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 py-8 md:py-12">
+<div class="relative overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat min-h-[480px] flex items-center justify-center text-center p-8" data-alt="Modern university campus building with students walking" style='background-image: linear-gradient(rgba(16, 22, 34, 0.7), rgba(16, 22, 34, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjl-i7Yy-wBKJ_l5c3lHAh12kARBxmnx4sSmOEEJFd-lPxr5lYLEdV3rMfIn0PZSnCo6NSPjBVFuotQNQ_8_QUMI3wUzmjq3IMxDZzjVwOqIo5RwqSOXcHwG5-wecAixecha1yP4sy70NUD-chXqIW5i5z2lKIoWS4O_W3YiS3vDw4z7TO7bEe95N6u_z8DWDTWD4B82ANyzsbXTjQkEpUB6WcqGk04Allrl96FtlBGSxDqX4i_0t-mKIzvyILlEenFtcV8Nd31iz7");'>
+<div class="relative z-10 max-w-3xl flex flex-col gap-6 items-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-medium uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-green-400"></span>
+                            Active Research Group
+                        </div>
+<h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em]">
+                            Advancing Computer Science in Argentina
+                        </h1>
+<p class="text-gray-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl">
+                            We develop novel algorithms for complex systems, bridging the gap between theoretical computer science and practical applications.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<a class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold transition-colors" href="#research">
+                                Our Research
+                            </a>
+<a class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold border border-white/30 transition-colors" href="#publications">
+                                Recent Publications
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-[#111318] py-12 md:py-16">
+<div class="max-w-[960px] mx-auto px-4 md:px-8 text-center">
+<h2 class="text-3xl font-bold tracking-tight mb-6">About the Lab</h2>
+<div class="w-16 h-1 bg-primary mx-auto mb-8 rounded-full"></div>
+<p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                    Founded in 2010 at the <strong>National University</strong>, our group focuses on the intersection of Artificial Intelligence and High-Performance Computing. We are a diverse team of researchers, PhD students, and undergraduates committed to scientific excellence and open-source contribution. Our work is supported by national grants from CONICET and international collaborations.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-left">
+<div class="p-6 rounded-lg bg-background-light dark:bg-[#1a202c] border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">groups</span>
+<h3 class="text-xl font-bold mb-2">People</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Meet our principal investigators, postdocs, and students.</p>
+<a class="text-primary font-semibold text-sm hover:underline" href="#">View Team →</a>
+</div>
+<div class="p-6 rounded-lg bg-background-light dark:bg-[#1a202c] border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">library_books</span>
+<h3 class="text-xl font-bold mb-2">Publications</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Explore our latest papers in top-tier conferences and journals.</p>
+<a class="text-primary font-semibold text-sm hover:underline" href="#">Browse Library →</a>
+</div>
+<div class="p-6 rounded-lg bg-background-light dark:bg-[#1a202c] border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">handshake</span>
+<h3 class="text-xl font-bold mb-2">Partners</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm mb-4">We collaborate with industry leaders and academic peers worldwide.</p>
+<a class="text-primary font-semibold text-sm hover:underline" href="#">See Collaborations →</a>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-background-light dark:bg-[#0d121c] py-16">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="flex items-center justify-between mb-10">
+<div>
+<h2 class="text-2xl md:text-3xl font-bold tracking-tight">Recent Highlights</h2>
+<p class="text-gray-500 dark:text-gray-400 mt-2">Latest updates from our research activities.</p>
+</div>
+<a class="hidden sm:flex items-center gap-1 text-primary font-semibold hover:underline" href="#">
+                        View Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<article class="group bg-white dark:bg-[#111318] rounded-lg overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all">
+<div class="h-48 bg-gray-200 bg-cover bg-center" data-alt="Computer screen showing code editor with syntax highlighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC47Wuw1Z65L8RulNABJzS6UwZL6Xc9he51CngMNpsJMFjkiCaGO1mbl2VoZscQA3QurUMYr4ioja3gzXIfUmRwJdtftTWJChVLj1flQhVgtIXBaQFO4XJu2Fj7ZmufG9k1cWVb3xnKt6y4yRWhDseLvkBRZ4FuGWyfwKYXPQB1bAfDSnGgLK0KV0opFzAKk2Na3E3Kn0Jxh2J5xnbPy6ZNq3rqM4dCc1GntdcxUANJ0ofLbCpmdxBmWPs_8aK5hJwMII_6jrB7tKRO");'></div>
+<div class="p-6 flex flex-col gap-3">
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Publication</span>
+<h3 class="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2">
+                                New paper accepted at NeurIPS 2023 on Deep Learning efficiency
+                            </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+                                Our team proposes a novel method for pruning neural networks that reduces inference time by 40% without accuracy loss.
+                            </p>
+<div class="mt-auto pt-4 flex items-center gap-2 text-xs text-gray-400 border-t border-gray-100 dark:border-gray-800">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<time datetime="2023-10-15">Oct 15, 2023</time>
+</div>
+</div>
+</article>
+<article class="group bg-white dark:bg-[#111318] rounded-lg overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all">
+<div class="h-48 bg-gray-200 bg-cover bg-center" data-alt="Close up of a person holding a certificate award" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCej2IPcwdX_NL8bXPoz65fBr5c_XRJDTUr3_hv2vuL1NRR7_Zbf2Ra34uY9Oicm2M1aNORG20di4oCGo9YhvuQFoTMF6NcSBxVBzXoXhJxk2nht5joxFwT5Xq6pdtGEgMVZg9ypwh7od59eohCdUc8HrXGuRHa3kiIwMqIZ2B4Jc-OdabEolZYiK6C-rcUa_nacNDaIu_oZW8-I0mbVO2zIFO6KLC6Twdoozd1pK1x_priz5bhGNJHMf044Kt86OyFNHiT5RBcqd2k");'></div>
+<div class="p-6 flex flex-col gap-3">
+<span class="text-xs font-bold text-green-600 uppercase tracking-wider">Award</span>
+<h3 class="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2">
+                                Dr. Maria González receives prestigious CONICET Grant
+                            </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+                                The National Scientific and Technical Research Council has awarded Dr. González for her contributions to distributed systems.
+                            </p>
+<div class="mt-auto pt-4 flex items-center gap-2 text-xs text-gray-400 border-t border-gray-100 dark:border-gray-800">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<time datetime="2023-09-22">Sep 22, 2023</time>
+</div>
+</div>
+</article>
+<article class="group bg-white dark:bg-[#111318] rounded-lg overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all">
+<div class="h-48 bg-gray-200 bg-cover bg-center" data-alt="Group of students and professors working together around a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBn-8S1WwVfOgAmJ6gLMIPqjSNZPAgRSot-LTi3qXUEjBo6mDr1i7kjQbvL4O65AsPj719xOenMwDfhVwwLCgBJ1nvYqKre61N9BxHAUKxl33AoxjZ07cP3HaH9DJkPfOpgUBHm_E4cLYlihqhXWkiZFXa78oVXq2eeb6NoY7XCfqbiFNoMzXliK19l0mjVVxa2zQSD22MxCnw_fODJpuTtqlLP1CSeJz4Thi_xcJQaJoCc6TZvFvXu3lu7wMpJYBGMnShBJoi6S95x");'></div>
+<div class="p-6 flex flex-col gap-3">
+<span class="text-xs font-bold text-orange-600 uppercase tracking-wider">Opportunity</span>
+<h3 class="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2">
+                                Open PhD Position: Machine Learning for Healthcare
+                            </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+                                We are looking for a motivated doctoral student to join our ongoing project in collaboration with the Medical School.
+                            </p>
+<div class="mt-auto pt-4 flex items-center gap-2 text-xs text-gray-400 border-t border-gray-100 dark:border-gray-800">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<time datetime="2023-08-30">Aug 30, 2023</time>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-8 text-center sm:hidden">
+<a class="inline-flex items-center gap-1 text-primary font-semibold hover:underline" href="#">
+                        View Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<section class="bg-primary py-12 text-white">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/20">
+<div class="p-2">
+<div class="text-4xl font-black mb-1">12</div>
+<div class="text-sm font-medium opacity-80">Researchers</div>
+</div>
+<div class="p-2">
+<div class="text-4xl font-black mb-1">45+</div>
+<div class="text-sm font-medium opacity-80">Publications</div>
+</div>
+<div class="p-2">
+<div class="text-4xl font-black mb-1">5</div>
+<div class="text-sm font-medium opacity-80">Active Grants</div>
+</div>
+<div class="p-2">
+<div class="text-4xl font-black mb-1">2010</div>
+<div class="text-sm font-medium opacity-80">Established</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-[#111318] border-t border-gray-200 dark:border-[#222] py-12">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">science</span>
+<h3 class="font-bold text-lg">LCC Research Group</h3>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
+                        An academic research laboratory dedicated to advancing the state of the art in Computer Science. Affiliated with the National Institute and CONICET.
+                    </p>
+<div class="flex gap-4">
+<a aria-label="Twitter" class="text-gray-400 hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a aria-label="GitHub" class="text-gray-400 hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="text-gray-400 hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-4">Quick Links</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Research Projects</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Publications</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Software &amp; Datasets</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-4">Contact</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+<span>Pellegrini 250, Rosario,<br/>Santa Fe, Argentina</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">mail</span>
+<a class="hover:text-primary transition-colors" href="mailto:info@lcc-research.ar">info@lcc-research.ar</a>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">call</span>
+<span>+54 341 123-4567</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-100 dark:border-[#222] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+<p>© 2023 LCC Research Group. All rights reserved.</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">code</span>
+<span>Built with GitHub Pages</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
