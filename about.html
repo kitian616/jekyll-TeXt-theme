@@ -3,12 +3,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Research Group - About Us</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/x-icon" href="assets/images/BBC_solo.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -18,10 +18,6 @@
                         "primary": "#1152d4",
                         "background-light": "#f6f6f8",
                         "background-dark": "#101622",
-                        "card-light": "#ffffff",
-                        "card-dark": "#1a2233",
-                        "text-main": "#111318",
-                        "text-muted": "#616f89",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
@@ -31,232 +27,320 @@
             },
         }
     </script>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-gray-100 font-display transition-colors duration-200">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<header class="sticky top-0 z-50 w-full bg-card-light dark:bg-card-dark border-b border-gray-200 dark:border-gray-800">
-<div class="mx-auto max-w-[960px] px-4 sm:px-10 py-3">
-<div class="flex items-center justify-between whitespace-nowrap">
-<div class="flex items-center gap-4 text-text-main dark:text-white">
-<div class="size-8 text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-3xl">science</span>
+<style>html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<link rel="stylesheet" href="assets/css/main.css">
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display flex flex-col min-h-screen">
+<header class="bg-white dark:bg-[#111318] border-b border-[#f0f2f4] dark:border-[#222] sticky top-0 z-50">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 py-3 flex items-center justify-between flex-wrap gap-4">
+<div class="flex items-center gap-3">
+<div class="text-primary size-16 flex items-center justify-center">
+<img src="assets/images/BBC_solo.png" alt="BBC Logo" class="h-18 w-18 object-contain"/>
 </div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">BioLab Argentina</h2>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">BBC (IIB-UNMdP-CONICET)</h2>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium" data-es="Laboratorio de Bioinformática y Biología Computacional" data-en="Bioinformatics and BioComputation Lab">Laboratorio de Bioinformática y Biología Computacional</p>
 </div>
-<div class="hidden md:flex flex-1 items-center justify-end gap-6">
-<nav class="flex items-center gap-6">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home / Inicio</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Research / Proyectos</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="publications.html">Publications / Publicaciones</a>
-<a class="text-sm font-medium text-primary font-bold" href="about.html">About Us / Sobre nosotros</a>
+</div>
+<nav class="hidden md:flex flex-1 justify-end items-center gap-6 lg:gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html" data-en="Home" data-es="Inicio">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="about.html" data-en="About us" data-es="Quiénes somos">About us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html" data-en="Projects" data-es="Proyectos">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="docencia.html" data-en="Teaching" data-es="Docencia">Teaching</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="publications.html" data-en="Publications" data-es="Publicaciones">Publications</a>
+<div class="h-6 w-px bg-gray-200 dark:bg-gray-700"></div>
+<div class="hidden md:flex items-center bg-[#f0f2f4] dark:bg-[#2d3748] rounded-lg p-1">
+    <button class="lang-btn flex items-center gap-2 px-3 py-1.5 rounded-md bg-white dark:bg-[#1a202c] shadow-sm text-sm font-bold text-[#111318] dark:text-white transition-all ring-1 ring-black/5 dark:ring-white/10" data-lang="en">
+        <span class="text-base">🇬🇧</span>
+        <span>EN</span>
+    </button>
+    <button class="lang-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium text-[#616f89] dark:text-gray-400 hover:text-[#111318] dark:hover:text-white transition-all" data-lang="es">
+        <span class="text-base">🇦🇷</span>
+        <span>ES</span>
+    </button>
+</div>
 </nav>
-<div class="flex h-10 items-center rounded-lg bg-gray-100 p-1 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-<button aria-label="English" aria-pressed="true" class="flex h-full items-center justify-center rounded-md bg-white px-3 text-xs font-bold text-primary shadow-sm transition-all dark:bg-gray-700 dark:text-white w-12" title="Switch to English">EN</button>
-<button aria-label="Español (Argentina)" aria-pressed="false" class="flex h-full items-center justify-center rounded-md px-3 text-xs font-bold text-text-muted transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-white w-12 hover:bg-gray-200 dark:hover:bg-gray-600" title="Cambiar a Español">ES</button>
-</div>
-<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-blue-700 transition-colors">
-<span class="truncate">Contact Us</span>
-</button>
-</div>
-<button class="md:hidden p-2 text-text-main dark:text-white">
+<button class="md:hidden p-2 text-gray-600 dark:text-gray-300">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-</div>
 </header>
-<main class="flex-1">
-<section class="w-full bg-card-light dark:bg-card-dark py-12 md:py-20">
+<main class="flex-grow">
+
+</section>
+<section class="w-full py-12 bg-gray-50 dark:bg-[#151b28]">
 <div class="mx-auto max-w-[960px] px-4 sm:px-10">
-<div class="relative overflow-hidden rounded-xl bg-gray-900 text-white shadow-xl">
-<div class="absolute inset-0 z-0">
-<img alt="Laboratory glassware" class="h-full w-full object-cover opacity-40" data-alt="Laboratory glassware with blue liquid in a modern research facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0lsDnzuFSSCPOTBoW7HrmUl0N2tf2-aE4BtThn5ltapjL9I-VeNSq4tTfukWa9QxAU05eOsFCNPumaeAmFnb84kRIMzhAdVklNCGT5dGrnLRcxBPtcdUAgzEaO6IncZ3xYjWqMewCaG-R3HaPXASdhe-rMzmLXY_BRiZP6Azcn32gV75dfrbxyojINRiaQY0-c8GmlS6YfwcBgaYy1CuQidooAMf_kY1ffOqmo4W0CnzdLfXM4P7AyDfevYFlutZDAKSH-o14dYOE"/>
+<div class="mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+<div>
+<h2 class="text-[28px] font-bold leading-tight tracking-[-0.015em] text-text-main dark:text-white" data-en="Our Team" data-es="Nuestro Equipo">Our Team</h2>
+<p class="mt-2 text-text-muted dark:text-gray-400" data-en="Meet the minds behind our research." data-es="Conocé a las personas detrás de nuestra investigación.">Meet the minds behind our research.</p>
 </div>
-<div class="relative z-10 flex flex-col items-center justify-center gap-6 px-4 py-20 text-center md:px-20 md:py-32">
-<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl">
-                            Advancing Scientific Inquiry in Argentina
-                        </h1>
-<p class="max-w-2xl text-lg font-medium text-gray-200">
-                            We are a dedicated group of researchers at the National Institute, focused on solving complex biological problems through rigorous experimentation and open collaboration.
-                        </p>
-<a class="mt-4 flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-gray-900 shadow-lg transition-transform hover:scale-105 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900" href="https://github.com/biolab-argentina" rel="noopener noreferrer" target="_blank">
-<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
-</svg>
-<span>Explore Code &amp; Data</span>
+</div>
+<div class="mb-8 rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 md:p-8">
+<div class="flex flex-col gap-6 md:flex-row md:items-center">
+<div class="shrink-0">
+<img alt="Dr. Arjen ten Have" class="h-32 w-32 rounded-full object-cover border-4 border-primary/10" src="assets/images/arjen-ten-have-150x150.png"/>
+</div>
+<div class="flex-1">
+<div class="flex flex-col md:flex-row md:items-start md:justify-between">
+<div>
+<h3 class="text-xl font-bold text-text-main dark:text-white">Dr. Arjen ten Have</h3>
+<p class="font-medium text-primary" data-en="Principal Researcher" data-es="Investigador Principal">Principal Researcher</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">CONICET</p>
+</div>
+<div class="mt-4 flex gap-3 md:mt-0">
+<a class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="mailto:ten.have@gmail.com" title="Email">
+<span class="material-symbols-outlined text-sm">mail</span>
 </a>
+<a class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="https://www.conicet.gov.ar/new_scp/detalle.php?id=42302&keywords=Arjen%2Bten%2BHave&datos_academicos=yes" target="_blank" rel="noopener noreferrer" title="CONICET Profile">
+<span class="material-symbols-outlined text-sm">description</span>
+</a>
+</div>
+</div>
+<p class="mt-4 text-sm leading-relaxed text-text-muted dark:text-gray-400" data-en="Dr. ten Have is a principal researcher with extensive expertise in computational biology and systems biology approaches to study specialized metabolism." data-es="Dr. ten Have es un investigador principal con amplia experiencia en biología computacional y enfoques de biología de sistemas para estudiar el metabolismo especializado.">
+Dr. ten Have is a principal researcher with extensive expertise in computational biology and systems biology approaches to study specialized metabolism.
+</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col items-center rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 text-center shadow-sm">
+<img alt="Dr. Fernando Villarreal" class="mb-4 h-24 w-24 rounded-full object-cover" src="assets/images/fernando-villareal2-150x150.png"/>
+<h4 class="text-base font-bold text-text-main dark:text-white">Dr. Fernando Villarreal</h4>
+<p class="text-sm text-primary" data-en="Adjunct Researcher" data-es="Investigador Adjunto">Adjunct Researcher</p>
+<p class="text-xs text-gray-600 dark:text-gray-400 mt-1">CONICET</p>
+<div class="mt-4 flex gap-3 justify-center">
+<a class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="mailto:fernandovillarreal@mdp.edu.ar" title="Email">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+<a class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="https://www.conicet.gov.ar/new_scp/detalle.php?id=54448&keywords=Fernando%2BVillarreal&datos_academicos=yes" target="_blank" rel="noopener noreferrer" title="CONICET Profile">
+<span class="material-symbols-outlined text-sm">description</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 text-center shadow-sm">
+<img alt="Lic. Martin Carboni" class="mb-4 h-24 w-24 rounded-full object-cover" src="assets/images/martin-carboni-1-150x150.png"/>
+<h4 class="text-base font-bold text-text-main dark:text-white">Lic. Martin Carboni</h4>
+<p class="text-sm text-primary" data-en="Assistant Professional" data-es="Profesional Asistente">Assistant Professional</p>
+<p class="text-xs text-gray-600 dark:text-gray-400 mt-1">CONICET</p>
+<div class="mt-4 flex gap-3 justify-center">
+<a class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="mailto:martin81@gmail.com" title="Email">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+<a class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="https://www.conicet.gov.ar/new_scp/detalle.php?id=45521&keywords=martin%2Bcarboni&datos_academicos=yes" target="_blank" rel="noopener noreferrer" title="CONICET Profile">
+<span class="material-symbols-outlined text-sm">description</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col items-center rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 text-center shadow-sm">
+<div class="mb-4 h-24 w-24 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-400">
+<span class="material-symbols-outlined text-4xl">person</span>
+</div>
+<h4 class="text-base font-bold text-text-main dark:text-white">Lucas Micheli</h4>
+<p class="text-sm text-primary" data-en="Biology Student" data-es="Estudiante de Biología">Biology Student</p>
+<p class="text-xs text-gray-600 dark:text-gray-400 mt-1">UNMdP</p>
+<div class="mt-4 flex gap-3 justify-center">
+<a class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="mailto:lmicheli@mdp.edu.ar" title="Email">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section class="w-full py-12">
 <div class="mx-auto max-w-[960px] px-4 sm:px-10">
+<div class="mb-10">
+<h2 class="text-[28px] font-bold leading-tight tracking-[-0.015em] text-text-main dark:text-white" data-en="Collaborators" data-es="Colaboradores">Collaborators</h2>
+<p class="mt-2 text-text-muted dark:text-gray-400" data-en="We work with talented researchers and institutions around the world." data-es="Trabajamos con investigadores e instituciones talentosas de todo el mundo.">We work with talented researchers and institutions around the world.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md transition-shadow">
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2" data-en="Research Institutions" data-es="Instituciones de Investigación">Research Institutions</h3>
+<p class="text-sm text-text-muted dark:text-gray-400" data-en="Partnerships with leading universities and research centers across Argentina and internationally." data-es="Asociaciones con universidades líderes y centros de investigación en Argentina e internacionalmente.">Partnerships with leading universities and research centers across Argentina and internationally.</p>
+<div class="mt-4 flex gap-2 flex-wrap">
+<span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary">IIB-CONICET</span>
+<span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary">UNMdP</span>
+</div>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md transition-shadow">
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2" data-en="International Partners" data-es="Socios Internacionales">International Partners</h3>
+<p class="text-sm text-text-muted dark:text-gray-400" data-en="Collaborative projects with research groups from Europe, Asia, and the Americas." data-es="Proyectos colaborativos con grupos de investigación de Europa, Asia y las Américas.">Collaborative projects with research groups from Europe, Asia, and the Americas.</p>
+<div class="mt-4 flex gap-2 flex-wrap">
+<span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400" data-en="Coming Soon" data-es="Próximamente">Coming Soon</span>
+</div>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a202c] p-6 shadow-sm hover:shadow-md transition-shadow">
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2" data-en="Join Our Network" data-es="Únete a Nuestra Red">Join Our Network</h3>
+<p class="text-sm text-text-muted dark:text-gray-400" data-en="Interested in collaboration? Contact us to explore research opportunities together." data-es="¿Interesado en colaborar? Contáctenos para explorar oportunidades de investigación juntas.">Interested in collaboration? Contact us to explore research opportunities together.</p>
+<a class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline" href="mailto:fernandovillarreal@mdp.edu.ar">
+<span data-en="Get in Touch" data-es="Contáctanos">Get in Touch</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full py-12 bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/20 dark:to-primary/10">
+<div class="mx-auto max-w-[960px] px-4 sm:px-10">
+<div class="rounded-xl bg-white dark:bg-[#1a2230] p-8 md:p-12 shadow-lg border border-primary/20 dark:border-primary/30">
 <div class="mb-8">
-<h2 class="text-[28px] font-bold leading-tight tracking-[-0.015em] text-text-main dark:text-white">Our Mission &amp; Values</h2>
-<p class="mt-2 text-text-muted dark:text-gray-400 max-w-2xl">
-                        Our work is guided by a commitment to excellence, transparency, and social impact within the Latin American scientific community.
+<h2 class="text-[28px] font-bold leading-tight tracking-[-0.015em] text-text-main dark:text-white mb-3" data-en="Join Our Team" data-es="Unite a Nuestro Equipo">Join Our Team</h2>
+<div class="w-16 h-1 bg-primary rounded-full"></div>
+</div>
+<p class="text-lg text-text-muted dark:text-gray-300 mb-8 leading-relaxed" data-en="We are always looking for talented and motivated researchers, students, and professionals to join our dynamic group. Whether you're interested in pursuing an undergraduate thesis, participating in internships, conducting PhD research, or joining us as a postdoctoral fellow, we welcome you to explore opportunities with us." data-es="Siempre estamos buscando investigadores, estudiantes y profesionales talentosos y motivados para unirse a nuestro grupo. Ya sea que estés interesado en realizar una tesis de grado, participar en pasantías, realizar investigación de doctorado o unirse a nosotros como postdoc, te invitamos a explorar oportunidades con nosotros.">
+We are always looking for talented and motivated researchers, students, and professionals to join our dynamic group. Whether you're interested in pursuing an undergraduate thesis, participating in internships, conducting PhD research, or joining us as a postdoctoral fellow, we welcome you to explore opportunities with us.
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+<div class="flex flex-col items-center text-center p-4 rounded-lg bg-background-light dark:bg-[#111318] border border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">school</span>
+<h4 class="font-bold text-sm text-text-main dark:text-white" data-en="Undergraduate" data-es="Pregrado">Undergraduate</h4>
+<p class="text-xs text-text-muted dark:text-gray-400 mt-2" data-en="Thesis & Research" data-es="Tesis e Investigación">Thesis & Research</p>
+</div>
+<div class="flex flex-col items-center text-center p-4 rounded-lg bg-background-light dark:bg-[#111318] border border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">work</span>
+<h4 class="font-bold text-sm text-text-main dark:text-white" data-en="Internships" data-es="Pasantías">Internships</h4>
+<p class="text-xs text-text-muted dark:text-gray-400 mt-2" data-en="" data-es="1er o 2do Cuatrimestre">Summer & Semester</p>
+</div>
+<div class="flex flex-col items-center text-center p-4 rounded-lg bg-background-light dark:bg-[#111318] border border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">menu_book</span>
+<h4 class="font-bold text-sm text-text-main dark:text-white" data-en="PhD Programs" data-es="Programa de Doctorado">PhD Programs</h4>
+<p class="text-xs text-text-muted dark:text-gray-400 mt-2" data-en="Doctoral Research" data-es="Investigación Doctoral">Doctoral Research</p>
+</div>
+<div class="flex flex-col items-center text-center p-4 rounded-lg bg-background-light dark:bg-[#111318] border border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined text-3xl text-primary mb-2">badge</span>
+<h4 class="font-bold text-sm text-text-main dark:text-white" data-en="Postdoctoral" data-es="Postdoctoral">Postdoctoral</h4>
+<p class="text-xs text-text-muted dark:text-gray-400 mt-2" data-en="Research Fellows" data-es="Investigadores Postdoc">Research Fellows</p>
+</div>
+</div>
+
+<div class="bg-gradient-to-r from-primary/10 to-transparent dark:from-primary/20 p-6 rounded-lg mb-8 border border-primary/20 dark:border-primary/30">
+<h4 class="text-lg font-bold text-text-main dark:text-white mb-4" data-en="What We're Looking For" data-es="Qué Estamos Buscando">What We're Looking For</h4>
+<ul class="space-y-2 text-sm text-text-muted dark:text-gray-300">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check</span>
+<span data-en="Passion for computational biology and bioinformatics research" data-es="Pasión por la investigación en biología computacional y bioinformática">Passion for computational biology and bioinformatics research</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check</span>
+<span data-en="Strong analytical and problem-solving skills" data-es="Fuertes habilidades analíticas y de resolución de problemas">Strong analytical and problem-solving skills</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check</span>
+<span data-en="Excellent communication and teamwork abilities" data-es="Excelentes habilidades de comunicación y trabajo en equipo">Excellent communication and teamwork abilities</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check</span>
+<span data-en="Initiative and commitment to excellence in research" data-es="Iniciativa y compromiso con la excelencia en investigación">Initiative and commitment to excellence in research</span>
+</li>
+</ul>
+</div>
+
+<div class="flex flex-col sm:flex-row gap-4 items-center">
+<a class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold transition-colors shadow-md" href="mailto:fernandovillarreal@mdp.edu.ar?subject=Interest%20in%20Joining%20BBC%20Research%20Lab">
+<span class="material-symbols-outlined text-lg mr-2">mail</span>
+<span data-en="Send Us Your Interest" data-es="¡Contactanos!">Send Us Your Interest</span>
+</a>
+<div class="text-center sm:text-left">
+<p class="text-sm text-text-muted dark:text-gray-400" data-en="Contact us directly to discuss opportunities that match your interests and career goals." data-es="Contáctanos directamente para discutir oportunidades que se adapten a tus intereses y objetivos profesionales.">Contact us directly to discuss opportunities that match your interests and career goals.</p>
+<p class="text-xs text-gray-500 dark:text-gray-500 mt-2"><strong data-en="Email:" data-es="Correo:">Email:</strong> <a class="text-primary hover:underline" href="mailto:fernandovillarreal@mdp.edu.ar">fernandovillarreal@mdp.edu.ar</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-white dark:bg-[#111318] border-t border-gray-200 dark:border-[#222] py-12">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">science</span>
+<h3 class="font-bold text-lg">BBC Research Lab</h3>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-sm mb-6" data-en="An academic research laboratory dedicated to advancing the state of the art in Bioinformatics and BioComputation. Affiliated with the Institute of Biological Research, National University of Mar del Plata-CONICET." data-es="Un laboratorio de investigación académica dedicado a avanzar en el desarrollo de vanguardia en Bioinformática y Biología Computacional. Afiliado al Instituto de Investigaciones Biológicas, Universidad Nacional de Mar del Plata - CONICET.">
+                        An academic research laboratory dedicated to advancing the state of the art in Computer Science. Affiliated with the National University of Mar del Plata and CONICET.
                     </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 shadow-sm transition-shadow hover:shadow-md">
-<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-<span class="material-symbols-outlined text-3xl">biotech</span>
-</div>
-<div>
-<h3 class="text-lg font-bold text-text-main dark:text-white">Scientific Rigor</h3>
-<p class="mt-2 text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                Upholding the highest standards of methodology, data integrity, and peer review in every project we undertake.
-                            </p>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 shadow-sm transition-shadow hover:shadow-md">
-<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-<span class="material-symbols-outlined text-3xl">groups</span>
-</div>
-<div>
-<h3 class="text-lg font-bold text-text-main dark:text-white">Open Collaboration</h3>
-<p class="mt-2 text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                Fostering partnerships across institutions and borders to accelerate discovery and share knowledge freely.
-                            </p>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 shadow-sm transition-shadow hover:shadow-md">
-<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-<span class="material-symbols-outlined text-3xl">public</span>
-</div>
-<div>
-<h3 class="text-lg font-bold text-text-main dark:text-white">Social Impact</h3>
-<p class="mt-2 text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                Ensuring our findings contribute tangibly to the well-being of our local community and the global environment.
-                            </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="w-full py-12 bg-gray-50 dark:bg-[#151b28]">
-<div class="mx-auto max-w-[960px] px-4 sm:px-10">
-<div class="mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-<div>
-<h2 class="text-[28px] font-bold leading-tight tracking-[-0.015em] text-text-main dark:text-white">Our Team</h2>
-<p class="mt-2 text-text-muted dark:text-gray-400">Meet the minds behind our research.</p>
-</div>
-<a class="flex items-center gap-1 text-sm font-bold text-primary hover:underline" href="#">
-                        View Alumni <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="mb-8 rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 md:p-8">
-<div class="flex flex-col gap-6 md:flex-row md:items-center">
-<div class="shrink-0">
-<img alt="Dr. Elena Rodriguez" class="h-32 w-32 rounded-full object-cover border-4 border-primary/10" data-alt="Portrait of Dr. Elena Rodriguez smiling in professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWqeopi-GI7HlGrU8OGPWmuLBmzrvDNbXFqU9d8KTO5_jlcJ26kIUIpgh9iXkDf-BXHn5Xj8jgKpNieiP4j-UxCNhvG0GScN_B2NrXOKVmdikZNvlRXL63GHq7ODIofC0XTtJ002ZNz_gf6hJGfiBQKLds-1gDYZSVG-023FD4gns4ZD11X7ZRFxmS4DrrPXRZ1QUfATiwCm3A2f6PGMrsJJFcaMoCulnG10JFRzdjEbdguesC72MXg5yxPLTkFLbAoq1U_LiYiRpa"/>
-</div>
-<div class="flex-1">
-<div class="flex flex-col md:flex-row md:items-start md:justify-between">
-<div>
-<h3 class="text-xl font-bold text-text-main dark:text-white">Dr. Elena Rodriguez</h3>
-<p class="font-medium text-primary">Principal Investigator</p>
-</div>
-<div class="mt-4 flex gap-3 md:mt-0">
-<a class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">mail</span>
-</a>
-<a class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">description</span>
-</a>
-</div>
-</div>
-<p class="mt-4 text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                Dr. Rodriguez leads the group with over 15 years of experience in bioinformatics and genomics. Her work focuses on the intersection of data science and molecular biology to uncover new pathways in disease resistance.
-                            </p>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<div class="flex flex-col items-center rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 text-center shadow-sm">
-<img alt="Juan Perez" class="mb-4 h-24 w-24 rounded-full object-cover" data-alt="Portrait of Juan Perez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrJ_XrgmXqi4XUwn4zkdGkSi2nIQnPrB7eWDQagae1U-qzUOkQU68g5XRyWlyhKYSFlv6zFSvNps46kTJ6IVYyBVeLuqYiEgSDSaLmcntZadHvcOrsN3AX0f1JXYXaIXwK4gd4GMu2Er214bWbNqkGINh3m4rB9IxErR42ovBf8Qu4BNz3Qot2eGUTvmWSuaNO1VgYgeazjY1O5pIe_YIgWumXHZzTv9R_D42StG2QZCKsbE-N1rfB28DJYwaVjHZLCtDO3cDT22zR"/>
-<h4 class="text-base font-bold text-text-main dark:text-white">Juan Perez</h4>
-<p class="text-sm text-primary">Postdoctoral Fellow</p>
-<p class="mt-3 text-xs text-text-muted dark:text-gray-400">Specializing in protein folding simulations and structural biology.</p>
-</div>
-<div class="flex flex-col items-center rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 text-center shadow-sm">
-<img alt="Sofia Martinez" class="mb-4 h-24 w-24 rounded-full object-cover" data-alt="Portrait of Sofia Martinez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-IGAGw5N-Tw6XC97J2y85bmR82_y1OU_VGjslj2CIkvOQW63zWa2r07aCuniiBHRFJ759QBJ4o32f59LuxkrbNqx8xjI7RlDfX7gCma55dCCGR_h6eQepFHWc4t3XlmzB6wKEmAR8H4nQKjUXM4gEhuIdttawC1ONlwocLHt4pDZc2TygtwHDHcK0-4uzSm_BHZG7eEsaptB4JhRT8g7qNr-YEsPDGyTiHC9X5EmMC7g9e-8k0dyKxe2d6z20dwYuneZjYDgZ9d-J"/>
-<h4 class="text-base font-bold text-text-main dark:text-white">Sofia Martinez</h4>
-<p class="text-sm text-primary">PhD Candidate</p>
-<p class="mt-3 text-xs text-text-muted dark:text-gray-400">Investigating environmental stressors on local crop varieties.</p>
-</div>
-<div class="flex flex-col items-center rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 text-center shadow-sm">
-<img alt="Lucas Gonzalez" class="mb-4 h-24 w-24 rounded-full object-cover" data-alt="Portrait of Lucas Gonzalez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyatrG321XeNk3XUFQKopHNSvdLcpk34Q5EhVNsYESDaCvm9k0tpvtTRwhh9i7NOxigXjfhX9n8YE6GYyEryEBzoQHWH4zGJVGdy7oKxEXgNroqsen2uCoPTrH1v9XkObS7ttJQQhlm9c9VVPFefFho325ev00Gmx1q_ye3xt9Q239yAPGyJcM9-iqahXFMZKDOYA_Rd7aTAXTM92eaiCpNlfm3fqaIxFY8QzmoYyeEpZ5IJ_gnP2emrdmGtwT-aHcl6eNYLvV11SD"/>
-<h4 class="text-base font-bold text-text-main dark:text-white">Lucas Gonzalez</h4>
-<p class="text-sm text-primary">Research Assistant</p>
-<p class="mt-3 text-xs text-text-muted dark:text-gray-400">Supporting data analysis and laboratory maintenance protocols.</p>
-</div>
-<div class="flex flex-col items-center rounded-xl border border-gray-200 dark:border-gray-800 bg-card-light dark:bg-card-dark p-6 text-center shadow-sm">
-<div class="mb-4 h-24 w-24 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-400">
-<span class="material-symbols-outlined text-4xl">person</span>
-</div>
-<h4 class="text-base font-bold text-text-main dark:text-white">Open Position</h4>
-<p class="text-sm text-primary">PhD Student</p>
-<p class="mt-3 text-xs text-text-muted dark:text-gray-400">We are looking for a motivated student to join our team.</p>
-</div>
-</div>
-</div>
-</section>
-<footer class="w-full bg-card-light dark:bg-card-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
-<div class="mx-auto max-w-[960px] px-4 sm:px-10">
-<div class="flex flex-col lg:flex-row gap-12">
-<div class="flex-1 flex flex-col gap-6">
-<div>
-<h3 class="text-lg font-bold text-text-main dark:text-white mb-4">Contact Us</h3>
-<div class="flex flex-col gap-3">
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary mt-1">location_on</span>
-<p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
-                                        Instituto de Investigaciones Biotecnológicas<br/>
-                                        Av. General Paz 5445<br/>
-                                        San Martín, Buenos Aires, Argentina
-                                    </p>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">mail</span>
-<a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary" href="mailto:contact@biolab-arg.edu.ar">
-                                        contact@biolab-arg.edu.ar
-                                    </a>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">call</span>
-<p class="text-sm text-text-muted dark:text-gray-400">
-                                        +54 11 1234-5678
-                                    </p>
-</div>
-</div>
-</div>
 <div class="flex gap-4">
-<a class="flex items-center justify-center h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="#">
-<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
-</a>
-<a class="flex items-center justify-center h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white transition-colors" href="#">
-<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<a aria-label="GitHub" class="text-gray-400 hover:text-primary transition-colors" href="https://github.com/BBCMdP">
+<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
 </a>
 </div>
 </div>
-<div class="flex-1 lg:flex-[1.5] h-64 w-full rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-800 relative">
-<img alt="Map Location" class="w-full h-full object-cover filter grayscale opacity-80 hover:opacity-100 transition-opacity" data-alt="Map view showing the location of the institute in Buenos Aires" data-location="Buenos Aires, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvsvrppKt_4hapuKo75xo-nOUk4RE3azkWkTT7DMBzry99KWFumNvmSm5QZ5Kc0v1VsePfBghNiIGMvc3H5A1cPrt7yrRlfm3-ZMGXY5ff2v6me1_-uiFyNXoSg97poUdOIFopFSQbyLxHAFUu2qyKhco6hDhQj_Ejela0ChbzBgfyoH11-Bwu9l8f9u_fdAO3eyUxZfLq8LBts4SeLXspliez47RA7M55ZAx1fJd9IoJEZ0_2yqR4nArXYzb64rK9XTkozkVcZBRZ"/>
-<div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-md text-xs font-bold shadow-sm">
-                            Buenos Aires, Argentina
-                        </div>
+<div>
+<h4 class="font-bold text-sm mb-4" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="about.html" data-en="Our Team" data-es="Nuestro Equipo">Our Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="projects.html" data-en="Research Projects" data-es="Proyectos de Investigación">Research Projects</a></li>
+<li><a class="hover:text-primary transition-colors" href="publications.html" data-en="Publications" data-es="Publicaciones">Publications</a></li>
+<li><a class="hover:text-primary transition-colors" href="#" data-en="Software &amp; Datasets" data-es="Software y Datos">Software &amp; Datasets</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-4" data-en="Contact" data-es="Contacto">Contact</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+<span data-en="Juan B. Justo 2550 (first floor), Mar del Plata, Buenos Aires, Argentina" data-es="Juan B. Justo 2550 (planta baja), Mar del Plata, Buenos Aires, Argentina"></span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">mail</span>
+<a class="hover:text-primary transition-colors" href="mailto:fernandovillarreal@mdp.edu.ar">fernandovillarreal@mdp.edu.ar</a>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">call</span>
+<span>+54 223 437-5107</span>
+</li>
+</ul>
 </div>
 </div>
-<div class="mt-16 border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-<p class="text-xs text-text-muted dark:text-gray-500">
-                        © 2023 BioLab Argentina. All rights reserved.
-                    </p>
-<div class="flex gap-6">
-<a class="text-xs text-text-muted dark:text-gray-500 hover:text-primary" href="#">Privacy Policy</a>
-<a class="text-xs text-text-muted dark:text-gray-500 hover:text-primary" href="#">Terms of Service</a>
+<div class="border-t border-gray-100 dark:border-[#222] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+<p data-en="© 2026 BBC Research Group. All rights reserved." data-es="© 2026 Grupo de Investigación BBC. Todos los derechos reservados.">© 2026 BBC Research Group. All rights reserved.</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">code</span>
+<span data-en="Built with GitHub Pages" data-es="Construido con GitHub Pages">Built with GitHub Pages</span>
 </div>
 </div>
 </div>
 </footer>
-</main>
-</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get saved language or default to English
+    const currentLang = localStorage.getItem('language') || 'en';
+    
+    // Set initial language
+    setLanguage(currentLang);
+    
+    // Add click handlers to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            setLanguage(lang);
+            localStorage.setItem('language', lang);
+        });
+    });
+    
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+            element.innerHTML = element.getAttribute('data-' + lang);
+        });
 
+        document.querySelectorAll('[data-' + lang + '-src]').forEach(img => {
+            img.src = img.getAttribute('data-' + lang + '-src');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('bg-white', 'dark:bg-[#1a202c]', 'shadow-sm', 'text-[#111318]', 'dark:text-white', 'font-bold', 'ring-1', 'ring-black/5', 'dark:ring-white/10');
+                btn.classList.remove('text-[#616f89]', 'dark:text-gray-400', 'font-medium');
+            } else {
+                btn.classList.remove('bg-white', 'dark:bg-[#1a202c]', 'shadow-sm', 'text-[#111318]', 'dark:text-white', 'font-bold', 'ring-1', 'ring-black/5', 'dark:ring-white/10');
+                btn.classList.add('text-[#616f89]', 'dark:text-gray-400', 'font-medium');
+            }
+        });
+    }
+});
+</script>
 </body></html>

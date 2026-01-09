@@ -4,10 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Research Projects - Institute Research Group</title>
+<link rel="icon" type="image/x-icon" href="assets/images/BBC_solo.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -26,46 +28,52 @@
             },
         }
     </script>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display">
-<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 bg-white dark:bg-[#1a2230] border-b border-[#f0f2f4] dark:border-[#2a3441] px-4 lg:px-10 py-3 shadow-sm">
-<div class="layout-container flex justify-center w-full">
-<div class="flex max-w-[1200px] w-full items-center justify-between">
-<div class="flex items-center gap-4">
-<div class="size-8 text-primary">
-<span class="material-symbols-outlined !text-[32px]">science</span>
+<style>html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<link rel="stylesheet" href="assets/css/main.css">
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display flex flex-col min-h-screen">
+<header class="bg-white dark:bg-[#111318] border-b border-[#f0f2f4] dark:border-[#222] sticky top-0 z-50">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8 py-3 flex items-center justify-between flex-wrap gap-4">
+<div class="flex items-center gap-3">
+<div class="text-primary size-16 flex items-center justify-center">
+<img src="assets/images/BBC_solo.png" alt="BBC Logo" class="h-18 w-18 object-contain"/>
 </div>
-<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Institute Research</h2>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">BBC (IIB-UNMdP-CONICET)</h2>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium" data-es="Laboratorio de Bioinformática y Biología Computacional" data-en="Bioinformatics and BioComputation Lab">Laboratorio de Bioinformática y Biología Computacional</p>
 </div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-[#111318] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="index.html">Home / Inicio</a>
-<a class="text-primary text-sm font-bold transition-colors" href="projects.html">Projects / Proyectos</a>
-<a class="text-[#111318] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="about.html">Team / Equipo</a>
-<a class="text-[#111318] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="publications.html">Publications / Publicaciones</a>
-<a class="text-[#111318] dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="about.html">About Us / Sobre nosotros</a>
+</div>
+<nav class="hidden md:flex flex-1 justify-end items-center gap-6 lg:gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html" data-en="Home" data-es="Inicio">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="about.html" data-en="About us" data-es="Quiénes somos">About us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html" data-en="Projects" data-es="Proyectos">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="docencia.html" data-en="Teaching" data-es="Docencia">Teaching</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="publications.html" data-en="Publications" data-es="Publicaciones">Publications</a>
+<div class="h-6 w-px bg-gray-200 dark:bg-gray-700"></div>
+<div class="hidden md:flex items-center bg-[#f0f2f4] dark:bg-[#2d3748] rounded-lg p-1">
+    <button class="lang-btn flex items-center gap-2 px-3 py-1.5 rounded-md bg-white dark:bg-[#1a202c] shadow-sm text-sm font-bold text-[#111318] dark:text-white transition-all ring-1 ring-black/5 dark:ring-white/10" data-lang="en">
+        <span class="text-base">🇬🇧</span>
+        <span>EN</span>
+    </button>
+    <button class="lang-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium text-[#616f89] dark:text-gray-400 hover:text-[#111318] dark:hover:text-white transition-all" data-lang="es">
+        <span class="text-base">🇦🇷</span>
+        <span>ES</span>
+    </button>
+</div>
 </nav>
-<div class="flex items-center gap-4">
-<button class="flex items-center justify-center overflow-hidden rounded-lg h-9 px-3 bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111318] dark:text-white text-xs font-bold tracking-[0.015em] border border-transparent hover:border-primary transition-all">
-<span class="truncate">ES</span>
-<span class="mx-1 text-gray-400">/</span>
-<span class="truncate text-primary">EN</span>
-</button>
-<button class="md:hidden text-[#111318] dark:text-white">
+<button class="md:hidden p-2 text-gray-600 dark:text-gray-300">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-</div>
-</div>
 </header>
-<!-- Main Content Wrapper -->
-<main class="flex-1 flex flex-col items-center w-full">
+<main class="flex-grow">
 <!-- Hero Section -->
 <section class="w-full bg-background-light dark:bg-background-dark py-8 md:py-12">
 <div class="w-full max-w-[1200px] px-4 mx-auto">
 <div class="@container">
-<div class="flex min-h-[320px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 relative overflow-hidden group shadow-lg" data-alt="Abstract blue digital network background illustrating research and connection" style='background-image: linear-gradient(rgba(17, 82, 212, 0.8) 0%, rgba(16, 22, 34, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3JEk7qXYMa56PWVqVcA6BidFG1PrlBgKgnDC-fASxVUTL7Dr9e96pdqmvyPHR1avcn9FoQAFWzgVrLEMFHmj834kHJuy7km55zhnWCnxMZ9gS4jwUwyqaiNPeROzuyhY-Av6cy9uzcc5sicubgaNzTzuS90ho0ehE6C6vLWvogN98_Ymp0W4AVozmhyCWpx6wULxhSNhzAzciVXE2twQnu6rc6nx61cWVg-zIfGbf1y1HX4Mz655gOi2ZjzUuDwLA953rt_3JRQ0Y");'>
+<div class="flex min-h-[320px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 relative overflow-hidden group shadow-lg" data-alt="Abstract blue digital network background illustrating research and connection" style='background-image: linear-gradient(rgba(17, 82, 212, 0.8) 0%, rgba(16, 22, 34, 0.9) 100%), url("assets/images/sealion_neo.png");'>
 <div class="relative z-10 flex flex-col gap-4 text-center max-w-2xl">
 <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
                                     Pioneering Research Projects
@@ -265,58 +273,95 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-white dark:bg-[#1a2230] border-t border-[#f0f2f4] dark:border-[#2a3441] py-10 px-4">
-<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-<div class="flex flex-col gap-4 max-w-sm">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined !text-[24px]">science</span>
-<h3 class="text-[#111318] dark:text-white text-base font-bold">Institute Research</h3>
+<footer class="bg-white dark:bg-[#111318] border-t border-gray-200 dark:border-[#222] py-12">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">science</span>
+<h3 class="font-bold text-lg">BBC Research Lab</h3>
 </div>
-<p class="text-sm text-[#616f89] dark:text-gray-400 leading-relaxed">
-                        A leading research group dedicated to advancing scientific discovery and technological innovation in Argentina.
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-sm mb-6" data-en="An academic research laboratory dedicated to advancing the state of the art in Bioinformatics and BioComputation. Affiliated with the Institute of Biological Research, National University of Mar del Plata-CONICET." data-es="Un laboratorio de investigación académica dedicado a avanzar en el desarrollo de vanguardia en Bioinformática y Biología Computacional. Afiliado al Instituto de Investigaciones Biológicas, Universidad Nacional de Mar del Plata - CONICET.">
+                        An academic research laboratory dedicated to advancing the state of the art in Computer Science. Affiliated with the National University of Mar del Plata and CONICET.
                     </p>
-<div class="flex gap-4 mt-2">
-<a class="text-[#616f89] dark:text-gray-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">GitHub</span>
-<span class="material-symbols-outlined">code</span> <!-- Placeholder for github icon -->
-</a>
-<a class="text-[#616f89] dark:text-gray-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">Twitter</span>
-<span class="material-symbols-outlined">rss_feed</span> <!-- Placeholder for social icon -->
-</a>
-<a class="text-[#616f89] dark:text-gray-400 hover:text-primary transition-colors" href="#">
-<span class="sr-only">Email</span>
-<span class="material-symbols-outlined">mail</span>
+<div class="flex gap-4">
+<a aria-label="GitHub" class="text-gray-400 hover:text-primary transition-colors" href="https://github.com/BBCMdP">
+<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
 </a>
 </div>
 </div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
-<div class="flex flex-col gap-3">
-<h4 class="text-sm font-bold text-[#111318] dark:text-white">Research</h4>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Projects</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Publications</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Open Data</a>
+<div>
+<h4 class="font-bold text-sm mb-4" data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="about.html" data-en="Our Team" data-es="Nuestro Equipo">Our Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="projects.html" data-en="Research Projects" data-es="Proyectos de Investigación">Research Projects</a></li>
+<li><a class="hover:text-primary transition-colors" href="publications.html" data-en="Publications" data-es="Publicaciones">Publications</a></li>
+<li><a class="hover:text-primary transition-colors" href="#" data-en="Software &amp; Datasets" data-es="Software y Datos">Software &amp; Datasets</a></li>
+</ul>
 </div>
-<div class="flex flex-col gap-3">
-<h4 class="text-sm font-bold text-[#111318] dark:text-white">Institute</h4>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">About Us</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Team</a>
-<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Careers</a>
+<div>
+<h4 class="font-bold text-sm mb-4" data-en="Contact" data-es="Contacto">Contact</h4>
+<ul class="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+<span data-en="Juan B. Justo 2550 (first floor), Mar del Plata, Buenos Aires, Argentina" data-es="Juan B. Justo 2550 (planta baja), Mar del Plata, Buenos Aires, Argentina"></span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">mail</span>
+<a class="hover:text-primary transition-colors" href="mailto:fernandovillarreal@mdp.edu.ar">fernandovillarreal@mdp.edu.ar</a>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base">call</span>
+<span>+54 223 437-5107</span>
+</li>
+</ul>
 </div>
-<div class="flex flex-col gap-3">
-<h4 class="text-sm font-bold text-[#111318] dark:text-white">Contact</h4>
-<p class="text-sm text-[#616f89] dark:text-gray-400">Buenos Aires, Argentina</p>
-<p class="text-sm text-[#616f89] dark:text-gray-400">+54 11 1234-5678</p>
 </div>
+<div class="border-t border-gray-100 dark:border-[#222] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+<p data-en="© 2026 BBC Research Group. All rights reserved." data-es="© 2026 Grupo de Investigación BBC. Todos los derechos reservados.">© 2026 BBC Research Group. All rights reserved.</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">code</span>
+<span data-en="Built with GitHub Pages" data-es="Construido con GitHub Pages">Built with GitHub Pages</span>
 </div>
-</div>
-<div class="max-w-[1200px] mx-auto mt-10 pt-6 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-<p class="text-xs text-gray-400">© 2024 Institute Research Group. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="text-xs text-gray-400 hover:text-primary" href="#">Privacy Policy</a>
-<a class="text-xs text-gray-400 hover:text-primary" href="#">Terms of Use</a>
 </div>
 </div>
 </footer>
-</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get saved language or default to English
+    const currentLang = localStorage.getItem('language') || 'en';
+    
+    // Set initial language
+    setLanguage(currentLang);
+    
+    // Add click handlers to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            setLanguage(lang);
+            localStorage.setItem('language', lang);
+        });
+    });
+    
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+            element.innerHTML = element.getAttribute('data-' + lang);
+        });
+
+        document.querySelectorAll('[data-' + lang + '-src]').forEach(img => {
+            img.src = img.getAttribute('data-' + lang + '-src');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('bg-white', 'dark:bg-[#1a202c]', 'shadow-sm', 'text-[#111318]', 'dark:text-white', 'font-bold', 'ring-1', 'ring-black/5', 'dark:ring-white/10');
+                btn.classList.remove('text-[#616f89]', 'dark:text-gray-400', 'font-medium');
+            } else {
+                btn.classList.remove('bg-white', 'dark:bg-[#1a202c]', 'shadow-sm', 'text-[#111318]', 'dark:text-white', 'font-bold', 'ring-1', 'ring-black/5', 'dark:ring-white/10');
+                btn.classList.add('text-[#616f89]', 'dark:text-gray-400', 'font-medium');
+            }
+        });
+    }
+});
+</script>
 </body></html>
