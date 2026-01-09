@@ -72,3 +72,21 @@
 
     "custom"
 ;
+
+/* Links inside rich text blocks */
+.rich-text a {
+  color: #2563eb; // Tailwind blue-600
+  text-decoration: underline;
+}
+
+.rich-text a:hover {
+  color: #1d4ed8; // Tailwind blue-700
+}
+
+.dark .rich-text a {
+  color: #60a5fa; // Tailwind blue-400
+}
+
+.dark .rich-text a:hover {
+  color: #93c5fd; // Tailwind blue-300
+}
