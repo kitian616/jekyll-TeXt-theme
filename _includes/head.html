@@ -1,6 +1,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+{%- if page.redirect -%}
+  {% include head/redirect.html delay=page.redirect.delay destination=page.redirect.destination  %}
+{%- endif -%}
 
 {%- include snippets/get-article-title.html article=page -%}
 <title>{%- if __return -%}{{ __return }} - {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
