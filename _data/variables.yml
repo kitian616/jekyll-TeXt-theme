@@ -1,64 +1,38 @@
-default:
-  text_skin: default
-  highlight_theme: default
-  lang: en
-  paths:
-    root: /
-    home: /
-    archive:  /archive.html
-    rss:  /feed.xml
-  mathjax: false
-  mathjax_autoNumber: false
-  mermaid: false
-  chart: false
-  toc:
-    selectors: 'h1,h2,h3'
-  sources: bootcdn
-
-  page:
-    mode: normal
-    type: webpage
-    article_header:
-      align: left
-      theme: light
-    articles:
-      show_cover: true
-      show_excerpt: false
-      show_readmore: false
-      show_info: false
-    show_title: true
-    show_edit_on_github: false
-    show_date: true
-    show_tags: true
-    show_author_profile: false
-    show_subscribe: false
-    full_width: false
-    sharing: false
-    comment: true
-    license: false
-    pageview: false
-    search: default
-
-sources:
-  bootcdn:
-    font_awesome: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css'
-    jquery: 'https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js'
-    leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js'
-    chart: 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'
-    gitalk:
-      js: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js'
-      css: 'https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css'
-    valine: 'https://unpkg.com/valine/dist/Valine.min.js' # bootcdn not available
-    mathjax: 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML'
-    mermaid: 'https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js'
-  unpkg:
-    font_awesome: 'https://use.fontawesome.com/releases/v5.15.1/css/all.css'
-    jquery: 'https://unpkg.com/jquery@3.3.1/dist/jquery.min.js'
-    leancloud_js_sdk: '//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js'
-    chart: 'https://unpkg.com/chart.js@2.7.2/dist/Chart.min.js'
-    gitalk:
-      js: 'https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js'
-      css: 'https://unpkg.com/gitalk@1.2.2/dist/gitalk.css'
-    valine: 'https//unpkg.com/valine/dist/Valine.min.js'
-    mathjax: 'https://unpkg.com/mathjax@2.7.4/unpacked/MathJax.js?config=TeX-MML-AM_CHTML'
-    mermaid: 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js'
+ZGVmYXVsdDoKICB0ZXh0X3NraW46IGRlZmF1bHQKICBoaWdobGlnaHRfdGhlbWU6IGRlZmF1bHQK
+ICBsYW5nOiBlbgogIHBhdGhzOgogICAgcm9vdDogLwogICAgaG9tZTogLwogICAgYXJjaGl2ZTog
+IC9hcmNoaXZlLmh0bWwKICAgIHJzczogIC9mZWVkLnhtbAogIG1hdGhqYXg6IGZhbHNlCiAgbWF0
+aGpheF9hdXRvTnVtYmVyOiBmYWxzZQogIG1lcm1haWQ6IGZhbHNlCiAgY2hhcnQ6IGZhbHNlCiAg
+dG9jOgogICAgc2VsZWN0b3JzOiAnaDEsaDIsaDMnCiAgc291cmNlczogdW5wa2cKCiAgcGFnZToK
+ICAgIG1vZGU6IG5vcm1hbAogICAgdHlwZTogd2VicGFnZQogICAgYXJ0aWNsZV9oZWFkZXI6CiAg
+ICAgIGFsaWduOiBsZWZ0CiAgICAgIHRoZW1lOiBsaWdodAogICAgYXJ0aWNsZXM6CiAgICAgIHNo
+b3dfY292ZXI6IHRydWUKICAgICAgc2hvd19leGNlcnB0OiBmYWxzZQogICAgICBzaG93X3JlYWRt
+b3JlOiBmYWxzZQogICAgICBzaG93X2luZm86IGZhbHNlCiAgICBzaG93X3RpdGxlOiB0cnVlCiAg
+ICBzaG93X2VkaXRfb25fZ2l0aHViOiBmYWxzZQogICAgc2hvd19kYXRlOiB0cnVlCiAgICBzaG93
+X3RhZ3M6IHRydWUKICAgIHNob3dfYXV0aG9yX3Byb2ZpbGU6IGZhbHNlCiAgICBzaG93X3N1YnNj
+cmliZTogZmFsc2UKICAgIGZ1bGxfd2lkdGg6IGZhbHNlCiAgICBzaGFyaW5nOiBmYWxzZQogICAg
+Y29tbWVudDogdHJ1ZQogICAgbGljZW5zZTogZmFsc2UKICAgIHBhZ2V2aWV3OiBmYWxzZQogICAg
+c2VhcmNoOiBkZWZhdWx0Cgpzb3VyY2VzOgogIGJvb3RjZG46CiAgICBmb250X2F3ZXNvbWU6ICdo
+dHRwczovL2Nkbi5ib290Y2RuLm5ldC9hamF4L2xpYnMvZm9udC1hd2Vzb21lLzUuMTUuMS9jc3Mv
+YWxsLmNzcycKICAgIGpxdWVyeTogJ2h0dHBzOi8vY2RuLmJvb3Rjc3MuY29tL2pxdWVyeS8zLjEu
+MS9qcXVlcnkubWluLmpzJwogICAgbGVhbmNsb3VkX2pzX3NkazogJy8vY2RuLmpzZGVsaXZyLm5l
+dC9ucG0vbGVhbmNsb3VkLXN0b3JhZ2VAMy4xMy4yL2Rpc3QvYXYtbWluLmpzJwogICAgY2hhcnQ6
+ICdodHRwczovL2Nkbi5ib290Y3NzLmNvbS9DaGFydC5qcy8yLjcuMi9DaGFydC5idW5kbGUubWlu
+LmpzJwogICAgZ2l0YWxrOgogICAgICBqczogJ2h0dHBzOi8vY2RuLmJvb3Rjc3MuY29tL2dpdGFs
+ay8xLjIuMi9naXRhbGsubWluLmpzJwogICAgICBjc3M6ICdodHRwczovL2Nkbi5ib290Y3NzLmNv
+bS9naXRhbGsvMS4yLjIvZ2l0YWxrLm1pbi5jc3MnCiAgICB2YWxpbmU6ICdodHRwczovL3VucGtn
+LmNvbS92YWxpbmUvZGlzdC9WYWxpbmUubWluLmpzJyAjIGJvb3RjZG4gbm90IGF2YWlsYWJsZQog
+ICAgbWF0aGpheDogJ2h0dHBzOi8vY2RuLmJvb3Rjc3MuY29tL21hdGhqYXgvMi43LjQvTWF0aEph
+eC5qcz9jb25maWc9VGVYLU1NTC1BTV9DSFRNTCcKICAgIG1lcm1haWQ6ICdodHRwczovL2Nkbi5i
+b290Y3NzLmNvbS9tZXJtYWlkLzguMC4wLXJjLjgvbWVybWFpZC5taW4uanMnCiAgdW5wa2c6CiAg
+ICBmb250X2F3ZXNvbWU6ICdodHRwczovL3VzZS5mb250YXdlc29tZS5jb20vcmVsZWFzZXMvdjUu
+MTUuMS9jc3MvYWxsLmNzcycKICAgIGpxdWVyeTogJ2h0dHBzOi8vdW5wa2cuY29tL2pxdWVyeUAz
+LjMuMS9kaXN0L2pxdWVyeS5taW4uanMnCiAgICBsZWFuY2xvdWRfanNfc2RrOiAnLy9jZG4uanNk
+ZWxpdnIubmV0L25wbS9sZWFuY2xvdWQtc3RvcmFnZUAzLjEzLjIvZGlzdC9hdi1taW4uanMnCiAg
+ICBjaGFydDogJ2h0dHBzOi8vdW5wa2cuY29tL2NoYXJ0LmpzQDIuNy4yL2Rpc3QvQ2hhcnQubWlu
+LmpzJwogICAgZ2l0YWxrOgogICAgICBqczogJ2h0dHBzOi8vdW5wa2cuY29tL2dpdGFsa0AxLjIu
+Mi9kaXN0L2dpdGFsay5taW4uanMnCiAgICAgIGNzczogJ2h0dHBzOi8vdW5wa2cuY29tL2dpdGFs
+a0AxLjIuMi9kaXN0L2dpdGFsay5jc3MnCiAgICB2YWxpbmU6ICdodHRwczovL3VucGtnLmNvbS92
+YWxpbmUvZGlzdC9WYWxpbmUubWluLmpzJwogICAgbWF0aGpheDogJ2h0dHBzOi8vdW5wa2cuY29t
+L21hdGhqYXhAMi43LjQvdW5wYWNrZWQvTWF0aEpheC5qcz9jb25maWc9VGVYLU1NTC1BTV9DSFRN
+TCcKICAgIG1lcm1haWQ6ICdodHRwczovL3VucGtnLmNvbS9tZXJtYWlkQDguMC4wLXJjLjgvZGlz
+dC9tZXJtYWlkLm1pbi5qcycK
