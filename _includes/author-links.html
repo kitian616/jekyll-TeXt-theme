@@ -23,7 +23,7 @@
     {%- if _author.email -%}
       <li title="{{ _locale_string_email }}">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:{{ _author.email }}" target="_blank">
-        <i class="fas fa-envelope"></i>
+        <div class="icon">{%- include svg/icon/social/mail.svg -%}</div>
       </a>
     {%- endif -%}
 
