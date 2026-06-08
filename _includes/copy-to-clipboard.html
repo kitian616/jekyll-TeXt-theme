@@ -1,0 +1,8 @@
+{%- include snippets/assign.html target=site.data.variables.default.clipboard
+  source0=site.clipboard source1=page.clipboard -%}
+{%- if __return == true -%}
+  {%- include clipboard.html -%}
+<script async>
+  {%- include scripts/lib/copy-to-clipboard.js -%}
+</script>
+{%- endif -%}

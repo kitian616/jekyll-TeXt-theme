@@ -176,6 +176,9 @@ analytics:
     tracking_id : # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
+## => Clipboard
+##############################
+clipboard: false
 
 ## => Build
 ##############################
