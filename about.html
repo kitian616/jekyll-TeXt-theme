@@ -14,7 +14,7 @@
 
 <meta name="description" content="A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 ">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/about.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
+<link rel="canonical" href="https://kitian616.github.io/jekyll-TeXt-theme/about.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
 
@@ -149,7 +149,7 @@
     var createNode = function(name, attrs) {
       var node = doc.createElement(name), attr;
       for (attr in attrs) {
-        if (attrs.hasOwnProperty(attr)) {
+        if (Object.prototype.hasOwnProperty.call(attrs, attr)) {
           node.setAttribute(attr, attrs[attr]);
         }
       }
@@ -295,7 +295,7 @@
 
 <p>TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello, World!</span><span class="dl">'</span><span class="p">))();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello, World!</span><span class="dl">'</span><span class="p">))();</span>
 </code></pre></div></div>
 
 <h2 id="features">Features</h2>
@@ -491,7 +491,7 @@
 </div>
 </div>
     </div><div class="site-info mt-2">
-      <div>© TeXt Theme 2021,
+      <div>© TeXt Theme 2026,
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
@@ -580,7 +580,7 @@
 
     var $searchBox = null;
     var $searchInput = null;
-    var $searchClear = null;
+    var $searchClear;
 
     function getModalVisible() {
       return modalVisible;

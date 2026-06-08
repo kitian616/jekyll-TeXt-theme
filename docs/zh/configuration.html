@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>配置 - TeXt Theme</title>
 
 <meta name="description" content="Jekyll 允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的  _config.yml 文件，也可以作为命令行的标记来配置。_config.yml 包括一些在运行时一次性读入的全局配置和变量定义， 在自动生成的过程中并不会重新加载，除非重新运行。注意 Data Fil...">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/configuration"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
+<link rel="canonical" href="https://kitian616.github.io/jekyll-TeXt-theme/docs/zh/configuration"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
 
@@ -148,7 +148,7 @@
     var createNode = function(name, attrs) {
       var node = doc.createElement(name), attr;
       for (attr in attrs) {
-        if (attrs.hasOwnProperty(attr)) {
+        if (Object.prototype.hasOwnProperty.call(attrs, attr)) {
           node.setAttribute(attr, attrs[attr]);
         }
       }
@@ -303,7 +303,7 @@
           <a class="edit-on-github"
             title="在 Github 上修改"
             href="https://github.com/kitian616/jekyll-TeXt-theme/tree/master/docs/_docs/zh/2.1-configuration.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2021-01-03T23:02:04+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="配置"><meta itemprop="author" content="TeXt"/><meta itemprop="datePublished" content="2026-06-08T22:57:34+08:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
 <div class="article__content" itemprop="articleBody"><p>Jekyll 允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的  <em>_config.yml</em> 文件，也可以作为命令行的标记来配置。</p>
@@ -396,13 +396,13 @@
 
 <p>网站的协议和域名。</p>
 
-<p>如果你的网站是搭建在 Github Pages 上的，这个只会被设置为 GitHub Pages 域名（CNAME 或个人域名）<sup id="fnref:gitHub_metadata" role="doc-noteref"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>. 举个例子, https://kitian616.github.io 或者 https://tianqi.name 如果设置了 CNAME。</p>
+<p>如果你的网站是搭建在 Github Pages 上的，这个只会被设置为 GitHub Pages 域名（CNAME 或个人域名）<sup id="fnref:gitHub_metadata"><a href="#fn:gitHub_metadata" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. 举个例子, https://kitian616.github.io 或者 https://kitian616.github.io 如果设置了 CNAME。</p>
 
 <p class="warning">在 3.3 及更高版本的 Jekyll 中运行 <code class="language-plaintext highlighter-rouge">jekyll serve</code> 命令会在开发模式时将其设置为 url: http://localhost:4000，你可以通过 <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=production</code> 设置生产环境。</p>
 
 <h3 id="base-url">Base URL</h3>
 
-<p>网站的根路径，不包含域名，其默认值为“/”。如果你的网站是搭建在 Github Pages 上的，那么这个值会默认设置为网站对应的项目名<sup id="fnref:gitHub_metadata:1" role="doc-noteref"><a href="#fn:gitHub_metadata" class="footnote">1</a></sup>。</p>
+<p>网站的根路径，不包含域名，其默认值为“/”。如果你的网站是搭建在 Github Pages 上的，那么这个值会默认设置为网站对应的项目名<sup id="fnref:gitHub_metadata:1"><a href="#fn:gitHub_metadata" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>。</p>
 
 <h3 id="网站标题">网站标题</h3>
 
@@ -423,14 +423,14 @@
 
 <h3 id="语言">语言</h3>
 
-<p>网站的语言，当然你可以在头信息<sup id="fnref:font_matter" role="doc-noteref"><a href="#fn:font_matter" class="footnote">2</a></sup>里指定特定的文章或页面的语言，你可以在<a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/i18n">国际化</a>找到更多信息。</p>
+<p>网站的语言，当然你可以在头信息<sup id="fnref:font_matter"><a href="#fn:font_matter" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>里指定特定的文章或页面的语言，你可以在<a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/zh/i18n">国际化</a>找到更多信息。</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">lang</span><span class="pi">:</span> <span class="s">en</span>
 </code></pre></div></div>
 
 <h3 id="时区">时区</h3>
 
-<p>设置时区，这个设置作用于 TZ 变量， Ruby 用它来处理日期和时间。使用 IANA Time Zone Database 标准，比如 America/New_York 。其默认值为操作系统的时区。详情请戳 <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">这里</a>。<sup id="fnref:jekyll_global_configuration" role="doc-noteref"><a href="#fn:jekyll_global_configuration" class="footnote">3</a></sup></p>
+<p>设置时区，这个设置作用于 TZ 变量， Ruby 用它来处理日期和时间。使用 IANA Time Zone Database 标准，比如 America/New_York 。其默认值为操作系统的时区。详情请戳 <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">这里</a>。<sup id="fnref:jekyll_global_configuration"><a href="#fn:jekyll_global_configuration" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">timezone</span><span class="pi">:</span> <span class="s">Asia/Shanghai</span>
 </code></pre></div></div>
@@ -501,7 +501,7 @@
 <span class="na">excerpt_type</span><span class="pi">:</span> <span class="s">text</span> <span class="c1"># text (default), html</span>
 </code></pre></div></div>
 
-<p class="error">该设置在 2.2.0 版中移到了 Articles 和 Home 布局的头信息中，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/cn/layouts#articles-layout">这里</a>。</p>
+<p class="error">该设置在 2.2.0 版中移到了 Articles 和 Home 布局的头信息中，详情请戳 <a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/cn/layouts#articles-layout">这里</a>。</p>
 
 <h3 id="许可协议">许可协议</h3>
 
@@ -553,17 +553,17 @@
 <p>为了增强文章的写作和阅读体验，TeXt 对 Jekyll 现有的 markdown 做了一些增强。当然这些增强都是默认禁止的，你需要设置相应的配置项为 true 来启动它们：</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Mathjax</span>
-<span class="na">mathjax</span><span class="pi">:</span> <span class="no">true</span>
-<span class="na">mathjax_autoNumber</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">mathjax</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">mathjax_autoNumber</span><span class="pi">:</span> <span class="kc">true</span>
 
 <span class="c1"># Mermaid</span>
-<span class="na">mermaid</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">mermaid</span><span class="pi">:</span> <span class="kc">true</span>
 
 <span class="c1"># Chart</span>
-<span class="na">chart</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">chart</span><span class="pi">:</span> <span class="kc">true</span>
 </code></pre></div></div>
 
-<p>当然你也可以为某一篇文章或页面通过头信息<sup id="fnref:font_matter:1" role="doc-noteref"><a href="#fn:font_matter" class="footnote">2</a></sup>来做单独的指定。</p>
+<p>当然你也可以为某一篇文章或页面通过头信息<sup id="fnref:font_matter:1"><a href="#fn:font_matter" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>来做单独的指定。</p>
 
 <p>在 <a href="/">撰写博客</a> 篇中有更详细的使用说明。</p>
 
@@ -585,7 +585,7 @@
 
 <h2 id="cdn-源">CDN 源</h2>
 
-<p>TeXt 使用 CDN<sup id="fnref:cdn" role="doc-noteref"><a href="#fn:cdn" class="footnote">4</a></sup> 来加快载入速度，你可以选择 <a href="http://www.bootcdn.cn/">BootCDN</a>（默认项）或者<a href="https://unpkg.com/">unpkg</a>作为网站的 CDN 源。它们都是开源而免费的。</p>
+<p>TeXt 使用 CDN<sup id="fnref:cdn"><a href="#fn:cdn" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> 来加快载入速度，你可以选择 <a href="http://www.bootcdn.cn/">BootCDN</a>（默认项）或者<a href="https://unpkg.com/">unpkg</a>作为网站的 CDN 源。它们都是开源而免费的。</p>
 
 <p>国内用户请优先使用 BootCDN。</p>
 
@@ -635,7 +635,7 @@
     <span class="na">id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-addthis-pubid"</span>
 </code></pre></div></div>
 
-<p class="warning">你需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">sharing</code> 属性为 <code class="language-plaintext highlighter-rouge">true</code> 来开启该页的评论，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#article-%E5%B8%83%E5%B1%80">这里</a>。</p>
+<p class="warning">你需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">sharing</code> 属性为 <code class="language-plaintext highlighter-rouge">true</code> 来开启该页的评论，详情请戳 <a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/zh/layouts#article-%E5%B8%83%E5%B1%80">这里</a>。</p>
 
 <h2 id="评论">评论</h2>
 
@@ -710,7 +710,7 @@
     <span class="na">app_key </span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-key"</span>
 </code></pre></div></div>
 
-<p class="warning">对于上面所有的评论系统, 你都需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">key</code> 属性来开启该页的评论，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
+<p class="warning">对于上面所有的评论系统, 你都需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">key</code> 属性来开启该页的评论，详情请戳 <a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
 
 <h2 id="文章点击量">文章点击量</h2>
 
@@ -765,7 +765,7 @@
     <span class="na">app_class </span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-leanCloud-app-class"</span>
 </code></pre></div></div>
 
-<p class="warning">对于上面所有的点击量统计, 你都需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">key</code> 属性来开启该页的统计功能，详情请戳 <a href="https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
+<p class="warning">对于上面所有的点击量统计, 你都需要在页面的头信息里设置 <code class="language-plaintext highlighter-rouge">key</code> 属性来开启该页的统计功能，详情请戳 <a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/zh/layouts#page-%E5%B8%83%E5%B1%80">这里</a>。</p>
 
 <h2 id="站点统计">站点统计</h2>
 
@@ -796,25 +796,25 @@
   <span class="na">provider</span><span class="pi">:</span> <span class="s">google</span>
   <span class="na">google</span><span class="pi">:</span>
     <span class="na">tracking_id</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-google-analytics-tracking-code"</span>
-    <span class="na">anonymize_ip</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">anonymize_ip</span><span class="pi">:</span> <span class="kc">true</span>
 </code></pre></div></div>
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:gitHub_metadata" role="doc-endnote">
+    <li id="fn:gitHub_metadata">
       <p><a href="https://github.com/jekyll/github-metadata#what-it-does">GitHub Metadata, a.k.a. site.github</a> <a href="#fnref:gitHub_metadata" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:gitHub_metadata:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:font_matter" role="doc-endnote">
+    <li id="fn:font_matter">
       <p><a href="https://jekyllrb.com/docs/frontmatter/">Front Matter</a> <a href="#fnref:font_matter" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:font_matter:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
-    <li id="fn:jekyll_global_configuration" role="doc-endnote">
+    <li id="fn:jekyll_global_configuration">
       <p><a href="https://jekyllrb.com/docs/configuration/#global-configuration">Configuration#Global Configuration</a> <a href="#fnref:jekyll_global_configuration" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:cdn" role="doc-endnote">
+    <li id="fn:cdn">
       <p><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content delivery network</a> <a href="#fnref:cdn" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-01-03T23:02:04+08:00"><!-- start custom article footer snippet -->
+</div><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2026-06-08T22:57:34+08:00"><!-- start custom article footer snippet -->
 
 <div class="article__content my-3">
       <hr />
@@ -953,7 +953,7 @@
 </div>
 </div>
     </div><div class="site-info mt-2">
-      <div>© TeXt Theme 2021,
+      <div>© TeXt Theme 2026,
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
@@ -1042,7 +1042,7 @@
 
     var $searchBox = null;
     var $searchInput = null;
-    var $searchClear = null;
+    var $searchClear;
 
     function getModalVisible() {
       return modalVisible;

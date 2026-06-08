@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>TeXt - Author - TeXt Theme</title>
 
 <meta name="description" content="Article with specified author.">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/post/2017/04/15/author.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
+<link rel="canonical" href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/04/15/author.html"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
 
@@ -148,7 +148,7 @@
     var createNode = function(name, attrs) {
       var node = doc.createElement(name), attr;
       for (attr in attrs) {
-        if (attrs.hasOwnProperty(attr)) {
+        if (Object.prototype.hasOwnProperty.call(attrs, attr)) {
           node.setAttribute(attr, attrs[attr]);
         }
       }
@@ -322,10 +322,10 @@ show_author_profile: true
     </span><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
-<div itemscope itemtype="http://schema.org/Person" class="author-profile card card--flat item"><a href="https://tianqi.name" class="item__image"><img class="author-profile__avatar" itemprop="image" src="https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg" /></a><div class="item__content"><meta itemprop="name" content="Tian Qi">
-        <p class="author-profile__name"><meta itemprop="url" content="https://tianqi.name">
-            <a href="https://tianqi.name">Tian Qi</a></p><p itemprop="description">The Creator of TeXt.</p><div class="author-profile__links"><div class="author-links">
-  <ul class="menu menu--nowrap menu--inline"><link itemprop="url" href="https://tianqi.name"><li title="Send me an Email.">
+<div itemscope itemtype="http://schema.org/Person" class="author-profile card card--flat item"><a href="https://kitian616.github.io" class="item__image"><img class="author-profile__avatar" itemprop="image" src="https://wx3.sinaimg.cn/large/73bd9e13ly1fjkqy66hl8j208c08c0td.jpg" /></a><div class="item__content"><meta itemprop="name" content="Tian Qi">
+        <p class="author-profile__name"><meta itemprop="url" content="https://kitian616.github.io">
+            <a href="https://kitian616.github.io">Tian Qi</a></p><p itemprop="description">The Creator of TeXt.</p><div class="author-profile__links"><div class="author-links">
+  <ul class="menu menu--nowrap menu--inline"><link itemprop="url" href="https://kitian616.github.io"><li title="Send me an Email.">
       <a class="button button--circle mail-button" itemprop="email" href="mailto:kitian616@outlook.com" target="_blank">
         <i class="fas fa-envelope"></i>
       </a><li title="Follow me on Twitter.">
@@ -479,7 +479,7 @@ show_author_profile: true
 </div>
 </div>
     </div><div class="site-info mt-2">
-      <div>© TeXt Theme 2021,
+      <div>© TeXt Theme 2026,
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
@@ -568,7 +568,7 @@ show_author_profile: true
 
     var $searchBox = null;
     var $searchInput = null;
-    var $searchClear = null;
+    var $searchClear;
 
     function getModalVisible() {
       return modalVisible;

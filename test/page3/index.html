@@ -14,7 +14,7 @@
 
 <meta name="description" content="A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
 ">
-<link rel="canonical" href="https://tianqi.name/jekyll-TeXt-theme/test/page3/"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
+<link rel="canonical" href="https://kitian616.github.io/jekyll-TeXt-theme/test/page3/"><link rel="alternate" type="application/rss+xml" title="TeXt Theme" href="/jekyll-TeXt-theme/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/jekyll-TeXt-theme/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/jekyll-TeXt-theme/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/jekyll-TeXt-theme/assets/favicon-16x16.png"><link rel="manifest" href="/jekyll-TeXt-theme/assets/site.webmanifest"><link rel="mask-icon" href="/jekyll-TeXt-theme/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/jekyll-TeXt-theme/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/jekyll-TeXt-theme/assets/browserconfig.xml">
 
@@ -149,7 +149,7 @@
     var createNode = function(name, attrs) {
       var node = doc.createElement(name), attr;
       for (attr in attrs) {
-        if (attrs.hasOwnProperty(attr)) {
+        if (Object.prototype.hasOwnProperty.call(attrs, attr)) {
           node.setAttribute(attr, attrs[attr]);
         }
       }
@@ -319,14 +319,14 @@
     <meta itemprop="keywords" content="Jekyll"></div>
       </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/jekyll-TeXt-theme/post/2016/05/04/footnote.html"><h2 itemprop="headline" class="item__header">Jekyll - Footnote</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody"><p>Here is a footnote reference,<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and another.<sup id="fnref:longnote" role="doc-noteref"><a href="#fn:longnote" class="footnote">2</a></sup></p>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody"><p>Here is a footnote reference,<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> and another.<sup id="fnref:longnote"><a href="#fn:longnote" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p>Here is the footnote. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:longnote" role="doc-endnote">
+    <li id="fn:longnote">
       <p>Here’s one with multiple blocks.</p>
 
       <p>Subsequent paragraphs are indented to show that they
@@ -371,7 +371,7 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
                 href="/jekyll-TeXt-theme/archive.html?tag=S+P+A+C+E">S P A C E</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/jekyll-TeXt-theme/archive.html?tag=%7E%60%21%40">~`!@</a>
+                href="/jekyll-TeXt-theme/archive.html?tag=~%60%21%40">~`!@</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
                 href="/jekyll-TeXt-theme/archive.html?tag=%23%24%25%5E">#$%^</a>
@@ -512,7 +512,7 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
 </div>
 </div>
     </div><div class="site-info mt-2">
-      <div>© TeXt Theme 2021,
+      <div>© TeXt Theme 2026,
         Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
         title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
@@ -601,7 +601,7 @@ belong to the previous footnote. <a href="#fnref:longnote" class="reversefootno
 
     var $searchBox = null;
     var $searchInput = null;
-    var $searchClear = null;
+    var $searchClear;
 
     function getModalVisible() {
       return modalVisible;

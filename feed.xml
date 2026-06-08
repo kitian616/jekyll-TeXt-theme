@@ -1,355 +1,355 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://tianqi.name/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://tianqi.name/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-01-03T23:02:04+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
-</subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">Blog - What’s NEXT</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next.html" rel="alternate" type="text/html" title="Blog - What’s NEXT" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2019/10/09/what-next.html">&lt;p&gt;Dark Mode is cool, and TeXt is supporting it.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://kitian616.github.io/jekyll-TeXt-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kitian616.github.io/jekyll-TeXt-theme/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-06-08T22:57:34+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/feed.xml</id><title type="html">TeXt Theme</title><subtitle>A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
+</subtitle><author><name>TeXt</name><email>kitian616@outlook.com</email></author><entry><title type="html">Blog - What’s NEXT</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2019/10/09/what-next.html" rel="alternate" type="text/html" title="Blog - What’s NEXT" /><published>2019-10-09T00:00:00+08:00</published><updated>2019-10-09T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2019/10/09/what-next</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2019/10/09/what-next.html"><![CDATA[<p>Dark Mode is cool, and TeXt is supporting it.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/blog/dark-mode.gif&quot; alt=&quot;Dark Mode&quot; /&gt;&lt;/p&gt;
+<p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/blog/dark-mode.gif" alt="Dark Mode" /></p>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p class=&quot;info&quot;&gt;Trying to use &lt;a href=&quot;https://github.com/postcss/postcss&quot;&gt;PostCSS&lt;/a&gt; for CSS Variable Polyfill and Auto Prefix.&lt;/p&gt;
+<p class="info">Trying to use <a href="https://github.com/postcss/postcss">PostCSS</a> for CSS Variable Polyfill and Auto Prefix.</p>
 
-&lt;p&gt;It is developing on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dev&lt;/code&gt; branch, you can run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout dev&lt;/code&gt; to switch to this branch.&lt;/p&gt;
+<p>It is developing on <code class="language-plaintext highlighter-rouge">dev</code> branch, you can run <code class="language-plaintext highlighter-rouge">git checkout dev</code> to switch to this branch.</p>
 
-&lt;p&gt;For now, ONLY &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default&lt;/code&gt; skin supports Dark Mode.&lt;/p&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Blog" /><summary type="html">Dark Mode is cool, and TeXt is supporting it.</summary></entry><entry><title type="html">TeXt - Additional Styles</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html">&lt;p class=&quot;success&quot;&gt;Success!&lt;/p&gt;
+<p>For now, ONLY <code class="language-plaintext highlighter-rouge">default</code> skin supports Dark Mode.</p>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Blog" /><summary type="html"><![CDATA[Dark Mode is cool, and TeXt is supporting it.]]></summary></entry><entry><title type="html">TeXt - Additional Styles</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html" rel="alternate" type="text/html" title="TeXt - Additional Styles" /><published>2017-08-08T00:00:00+08:00</published><updated>2017-08-08T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2017/08/08/additional-styles</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/08/08/additional-styles.html"><![CDATA[<p class="success">Success!</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext success highlighter-rouge&quot;&gt;success&lt;/code&gt; &lt;code class=&quot;language-plaintext info highlighter-rouge&quot;&gt;info&lt;/code&gt; &lt;code class=&quot;language-plaintext warning highlighter-rouge&quot;&gt;warning&lt;/code&gt; &lt;code class=&quot;language-plaintext error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext success highlighter-rouge">success</code> <code class="language-plaintext info highlighter-rouge">info</code> <code class="language-plaintext warning highlighter-rouge">warning</code> <code class="language-plaintext error highlighter-rouge">error</code></p>
 
-&lt;div class=&quot;grid-container&quot;&gt;
-&lt;div class=&quot;grid grid--p-3&quot;&gt;
-&lt;div class=&quot;cell cell--12 cell--md-5 cell--lg-4&quot;&gt;
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;cell cell--12 cell--md-5 cell--lg-4&quot;&gt;
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<div class="grid-container">
+<div class="grid grid--p-3">
+<div class="cell cell--12 cell--md-5 cell--lg-4">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_rounded" class="rounded" /></p>
+    </div>
+<div class="cell cell--12 cell--md-5 cell--lg-4">
+      <p><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_circle+shadow" class="circle shadow" /></p>
+    </div>
+</div>
+</div>
 
-&lt;div class=&quot;grid-container&quot;&gt;
-&lt;div class=&quot;grid grid--p-1&quot;&gt;
-&lt;div class=&quot;cell cell--6 cell--md-4 cell--lg-2&quot;&gt;
-&lt;div class=&quot;button button--success button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;cell cell--6 cell--md-4 cell--lg-2&quot;&gt;
-&lt;div class=&quot;button button--outline-info button--pill my-2&quot;&gt;&lt;i class=&quot;fas fa-space-shuttle&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;cell cell--6 cell--md-4 cell--lg-2&quot;&gt;
-&lt;div class=&quot;button button--warning button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;cell cell--6 cell--md-4 cell--lg-2&quot;&gt;
-&lt;div class=&quot;button button--outline-error button--rounded my-2&quot;&gt;&lt;i class=&quot;fas fa-user-astronaut&quot;&gt;&lt;/i&gt; CLICK ME&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<div class="grid-container">
+<div class="grid grid--p-1">
+<div class="cell cell--6 cell--md-4 cell--lg-2">
+<div class="button button--success button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
+</div>
+<div class="cell cell--6 cell--md-4 cell--lg-2">
+<div class="button button--outline-info button--pill my-2"><i class="fas fa-space-shuttle"></i> CLICK ME</div>
+</div>
+<div class="cell cell--6 cell--md-4 cell--lg-2">
+<div class="button button--warning button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
+</div>
+<div class="cell cell--6 cell--md-4 cell--lg-2">
+<div class="button button--outline-error button--rounded my-2"><i class="fas fa-user-astronaut"></i> CLICK ME</div>
+</div>
+</div>
+</div>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/additional-styles">Documentation</a></p>
 
-&lt;h2 id=&quot;alert&quot;&gt;Alert&lt;/h2&gt;
+<h2 id="alert">Alert</h2>
 
-&lt;p class=&quot;success&quot;&gt;Success Text.&lt;/p&gt;
+<p class="success">Success Text.</p>
 
-&lt;p class=&quot;info&quot;&gt;Info Text.&lt;/p&gt;
+<p class="info">Info Text.</p>
 
-&lt;p class=&quot;warning&quot;&gt;Warning Text.&lt;/p&gt;
+<p class="warning">Warning Text.</p>
 
-&lt;p class=&quot;error&quot;&gt;Error Text.&lt;/p&gt;
+<p class="error">Error Text.</p>
 
-&lt;h2 id=&quot;tag&quot;&gt;Tag&lt;/h2&gt;
+<h2 id="tag">Tag</h2>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext success highlighter-rouge&quot;&gt;success&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext success highlighter-rouge">success</code></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext info highlighter-rouge&quot;&gt;info&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext info highlighter-rouge">info</code></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext warning highlighter-rouge&quot;&gt;warning&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext warning highlighter-rouge">warning</code></p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext error highlighter-rouge&quot;&gt;error&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext error highlighter-rouge">error</code></p>
 
-&lt;h2 id=&quot;image&quot;&gt;Image&lt;/h2&gt;
+<h2 id="image">Image</h2>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Border&lt;/code&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Shadow&lt;/code&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_border&quot; class=&quot;border&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_shadow&quot; class=&quot;shadow&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">Border</code></th>
+      <th><code class="language-plaintext highlighter-rouge">Shadow</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_border" class="border" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_shadow" class="shadow" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rounded&lt;/code&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Circle&lt;/code&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_rounded&quot; class=&quot;rounded&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_circle&quot; class=&quot;circle&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">Rounded</code></th>
+      <th><code class="language-plaintext highlighter-rouge">Circle</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_rounded" class="rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_circle" class="circle" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;h3 id=&quot;mixture&quot;&gt;Mixture&lt;/h3&gt;
+<h3 id="mixture">Mixture</h3>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Border+Rounded&lt;/code&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Circle+Shadow&lt;/code&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_border+rounded&quot; class=&quot;border rounded&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_circle+shadow&quot; class=&quot;circle shadow&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">Border+Rounded</code></th>
+      <th><code class="language-plaintext highlighter-rouge">Circle+Shadow</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_border+rounded" class="border rounded" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_circle+shadow" class="circle shadow" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rounded+Shadow&lt;/code&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Circle+Border+Shadow&lt;/code&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_rounded+shadow&quot; class=&quot;circle rounded shadow&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg&quot; alt=&quot;Image&quot; title=&quot;Image_circle+border+shadow&quot; class=&quot;circle border shadow&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">Rounded+Shadow</code></th>
+      <th><code class="language-plaintext highlighter-rouge">Circle+Border+Shadow</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_rounded+shadow" class="circle rounded shadow" /></td>
+      <td><img src="https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/image.jpg" alt="Image" title="Image_circle+border+shadow" class="circle border shadow" /></td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;h2 id=&quot;extra&quot;&gt;Extra&lt;/h2&gt;
+<h2 id="extra">Extra</h2>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spacing&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/spacing&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Grid&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/grid&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Icons&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/icons&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Image&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/image&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Button&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/button&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Item&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/item&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Card&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/card&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Hero&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/hero&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Swiper&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/swiper&quot;&gt;Doc&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">Success! success info warning error CLICK ME CLICK ME CLICK ME CLICK ME</summary></entry><entry><title type="html">TeXt - Extensions</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/02/extensions.html" rel="alternate" type="text/html" title="TeXt - Extensions" /><published>2017-08-02T00:00:00+08:00</published><updated>2017-08-02T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/08/02/extensions</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/08/02/extensions.html">&lt;p&gt;With the help of extensions, you can easily add &lt;strong&gt;audios&lt;/strong&gt;, &lt;strong&gt;videos&lt;/strong&gt;, &lt;strong&gt;slides&lt;/strong&gt; and &lt;strong&gt;demos&lt;/strong&gt; in your posts.&lt;/p&gt;
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spacing</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/spacing">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Grid</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/grid">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Icons</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/icons">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/image">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Button</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/button">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Item</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/item">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Card</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/card">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Hero</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/hero">Doc</a></td>
+    </tr>
+    <tr>
+      <td>Swiper</td>
+      <td><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/swiper">Doc</a></td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html"><![CDATA[Success! success info warning error CLICK ME CLICK ME CLICK ME CLICK ME]]></summary></entry><entry><title type="html">TeXt - Extensions</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/08/02/extensions.html" rel="alternate" type="text/html" title="TeXt - Extensions" /><published>2017-08-02T00:00:00+08:00</published><updated>2017-08-02T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2017/08/02/extensions</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/08/02/extensions.html"><![CDATA[<p>With the help of extensions, you can easily add <strong>audios</strong>, <strong>videos</strong>, <strong>slides</strong> and <strong>demos</strong> in your posts.</p>
 
-&lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
-  &lt;iframe src=&quot;https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;
-  &lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<div><div class="extensions extensions--video">
+  <iframe src="https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy" frameborder="0" scrolling="no" allowfullscreen="">
+  </iframe>
+</div>
+</div>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/extensions&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/extensions">Documentation</a></p>
 
-&lt;h2 id=&quot;audio&quot;&gt;Audio&lt;/h2&gt;
+<h2 id="audio">Audio</h2>
 
-&lt;h3 id=&quot;soundcloud&quot;&gt;SoundCloud&lt;/h3&gt;
+<h3 id="soundcloud">SoundCloud</h3>
 
-&lt;div&gt;&lt;iframe class=&quot;extensions extensions--audio&quot; width=&quot;100%&quot; height=&quot;166&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/313627932&amp;amp;color=%23ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;show_teaser=true&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allow=&quot;autoplay&quot;&gt;
-&lt;/iframe&gt;&lt;/div&gt;
+<div><iframe class="extensions extensions--audio" width="100%" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/313627932&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" scrolling="no" frameborder="no" allow="autoplay">
+</iframe></div>
 
-&lt;h3 id=&quot;netease-cloud-music-网易云音乐&quot;&gt;Netease Cloud Music (网易云音乐)&lt;/h3&gt;
+<h3 id="netease-cloud-music-网易云音乐">Netease Cloud Music (网易云音乐)</h3>
 
-&lt;p&gt;Available in Chinese mainland.&lt;/p&gt;
+<p>Available in Chinese mainland.</p>
 
-&lt;div&gt;&lt;iframe class=&quot;extensions extensions--audio&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;amp;id=413812448&amp;amp;auto=1&amp;amp;height=66&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
+<div><iframe class="extensions extensions--audio" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=413812448&amp;auto=1&amp;height=66" frameborder="no" border="0" marginwidth="0" marginheight="0">
+</iframe>
+</div>
 
-&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+<h2 id="video">Video</h2>
 
-&lt;h3 id=&quot;youtube&quot;&gt;YouTube&lt;/h3&gt;
+<h3 id="youtube">YouTube</h3>
 
-&lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
-  &lt;iframe src=&quot;https://www.youtube.com/embed/wbY97-hdD5c?rel=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<div><div class="extensions extensions--video">
+  <iframe src="https://www.youtube.com/embed/wbY97-hdD5c?rel=0&amp;showinfo=0" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+</div>
+</div>
 
-&lt;h3 id=&quot;ted&quot;&gt;TED&lt;/h3&gt;
+<h3 id="ted">TED</h3>
 
-&lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
-  &lt;iframe src=&quot;https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;
-  &lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<div><div class="extensions extensions--video">
+  <iframe src="https://embed.ted.com/talks/emily_esfahani_smith_there_s_more_to_life_than_being_happy" frameborder="0" scrolling="no" allowfullscreen="">
+  </iframe>
+</div>
+</div>
 
-&lt;h3 id=&quot;bilibili-哔哩哔哩&quot;&gt;bilibili (哔哩哔哩)&lt;/h3&gt;
+<h3 id="bilibili-哔哩哔哩">bilibili (哔哩哔哩)</h3>
 
-&lt;div&gt;&lt;div class=&quot;extensions extensions--video&quot;&gt;
-  &lt;iframe src=&quot;//player.bilibili.com/player.html?aid=11091080&amp;amp;page=1&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
-  &lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<div><div class="extensions extensions--video">
+  <iframe src="//player.bilibili.com/player.html?aid=11091080&amp;page=1" frameborder="no" scrolling="no" allowfullscreen="true">
+  </iframe>
+</div>
+</div>
 
-&lt;h2 id=&quot;slide&quot;&gt;Slide&lt;/h2&gt;
+<h2 id="slide">Slide</h2>
 
-&lt;h3 id=&quot;slideshare&quot;&gt;SlideShare&lt;/h3&gt;
+<h3 id="slideshare">SlideShare</h3>
 
-&lt;div&gt;&lt;div class=&quot;extensions extensions--slide&quot;&gt;
-  &lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/u9L9zDsqEWNKE1&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt;
-  &lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<div><div class="extensions extensions--slide">
+  <iframe src="//www.slideshare.net/slideshow/embed_code/key/u9L9zDsqEWNKE1" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="">
+  </iframe>
+</div>
+</div>
 
-&lt;h2 id=&quot;demos&quot;&gt;Demos&lt;/h2&gt;
+<h2 id="demos">Demos</h2>
 
-&lt;h3 id=&quot;codepen&quot;&gt;CodePen&lt;/h3&gt;
+<h3 id="codepen">CodePen</h3>
 
-&lt;div&gt;&lt;div class=&quot;extensions extensions--demo&quot;&gt;
-&lt;iframe src=&quot;//codepen.io/kitian616/embed/aQmWZG/?theme-id=0&amp;amp;default-tab=html,result&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">With the help of extensions, you can easily add audios, videos, slides and demos in your posts.</summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html">&lt;p&gt;When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are&lt;/p&gt;
+<div><div class="extensions extensions--demo">
+<iframe src="//codepen.io/kitian616/embed/aQmWZG/?theme-id=0&amp;default-tab=html,result" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+</div>
+</div>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html"><![CDATA[With the help of extensions, you can easily add audios, videos, slides and demos in your posts.]]></summary></entry><entry><title type="html">TeXt - MathJax</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/07/07/mathjax.html" rel="alternate" type="text/html" title="TeXt - MathJax" /><published>2017-07-07T00:00:00+08:00</published><updated>2017-07-07T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2017/07/07/mathjax</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/07/07/mathjax.html"><![CDATA[<p>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are</p>
 
 \[x_1 = {-b + \sqrt{b^2-4ac} \over 2a}\]
 
 \[x_2 = {-b - \sqrt{b^2-4ac} \over 2a} \notag\]
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mathjax: true&lt;/code&gt; in the &lt;em&gt;_config.yml&lt;/em&gt; or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
+<p class="warning">You need set <code class="language-plaintext highlighter-rouge">mathjax: true</code> in the <em>_config.yml</em> or the markdown’s front matter to <strong>enable</strong> it.</p>
 
-&lt;p class=&quot;info&quot;&gt;&lt;strong&gt;After MathJax enabled&lt;/strong&gt;, you can set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mathjax_autoNumber: true&lt;/code&gt; to have equations be numbered automatically, You can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\notag&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\nonumber&lt;/code&gt; to prevent individual equations from being numbered.&lt;/p&gt;
+<p class="info"><strong>After MathJax enabled</strong>, you can set <code class="language-plaintext highlighter-rouge">mathjax_autoNumber: true</code> to have equations be numbered automatically, You can use <code class="language-plaintext highlighter-rouge">\notag</code> or <code class="language-plaintext highlighter-rouge">\nonumber</code> to prevent individual equations from being numbered.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements#mathjax&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/markdown-enhancements#mathjax">Documentation</a></p>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-tex highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;When &lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;a &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\ne&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;, there are two solutions to &lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; bx &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; c &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt; and they are
-&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;b &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\over&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}$$&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;b &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\over&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;\notag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>When <span class="p">$$</span><span class="nb">a </span><span class="nv">\ne</span><span class="nb"> </span><span class="m">0</span><span class="p">$$</span>, there are two solutions to <span class="p">$$</span><span class="nb">ax</span><span class="p">^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> bx </span><span class="o">+</span><span class="nb"> c </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="p">$$</span> and they are
+<span class="p">$$</span><span class="nb">x</span><span class="p">_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="p">{</span><span class="o">-</span><span class="nb">b </span><span class="o">+</span><span class="nb"> </span><span class="nv">\sqrt</span><span class="p">{</span><span class="nb">b</span><span class="p">^</span><span class="m">2</span><span class="o">-</span><span class="m">4</span><span class="nb">ac</span><span class="p">}</span><span class="nb"> </span><span class="nv">\over</span><span class="nb"> </span><span class="m">2</span><span class="nb">a</span><span class="p">}$$</span>
+<span class="p">$$</span><span class="nb">x</span><span class="p">_</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="p">{</span><span class="o">-</span><span class="nb">b </span><span class="o">-</span><span class="nb"> </span><span class="nv">\sqrt</span><span class="p">{</span><span class="nb">b</span><span class="p">^</span><span class="m">2</span><span class="o">-</span><span class="m">4</span><span class="nb">ac</span><span class="p">}</span><span class="nb"> </span><span class="nv">\over</span><span class="nb"> </span><span class="m">2</span><span class="nb">a</span><span class="p">}</span><span class="nb"> </span><span class="nv">\notag</span><span class="p">$$</span>
+</code></pre></div></div>
 
-&lt;p&gt;&lt;strong&gt;front matter:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>front matter:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 ...
 mathjax: true
 mathjax_autoNumber: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x_1 = {-b + \sqrt{b^2-4ac} \over 2a}\] \[x_2 = {-b - \sqrt{b^2-4ac} \over 2a} \notag\]</summary></entry><entry><title type="html">TeXt - Mermaid</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/06/06/mermaid.html" rel="alternate" type="text/html" title="TeXt - Mermaid" /><published>2017-06-06T00:00:00+08:00</published><updated>2017-06-06T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/06/06/mermaid</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/06/06/mermaid.html">&lt;pre&gt;&lt;code class=&quot;language-mermaid&quot;&gt;graph TB;
+</code></pre></div></div>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html"><![CDATA[When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x_1 = {-b + \sqrt{b^2-4ac} \over 2a}\] \[x_2 = {-b - \sqrt{b^2-4ac} \over 2a} \notag\]]]></summary></entry><entry><title type="html">TeXt - Mermaid</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/06/06/mermaid.html" rel="alternate" type="text/html" title="TeXt - Mermaid" /><published>2017-06-06T00:00:00+08:00</published><updated>2017-06-06T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2017/06/06/mermaid</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/06/06/mermaid.html"><![CDATA[<pre><code class="language-mermaid">graph TB;
     A[Do you have a problem in your life?]
     B[Then don't worry]
     C[Can you do something about it?]
-    A--no--&amp;gt;B;
-    A--yes--&amp;gt;C;
-    C--no--&amp;gt;B;
-    C--yes--&amp;gt;B;
-&lt;/code&gt;&lt;/pre&gt;
+    A--no--&gt;B;
+    A--yes--&gt;C;
+    C--no--&gt;B;
+    C--yes--&gt;B;
+</code></pre>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mermaid: true&lt;/code&gt; in the &lt;em&gt;_config.yml&lt;/em&gt; or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
+<p class="warning">You need set <code class="language-plaintext highlighter-rouge">mermaid: true</code> in the <em>_config.yml</em> or the markdown’s front matter to <strong>enable</strong> it.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements#mermaid&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/markdown-enhancements#mermaid">Documentation</a></p>
 
-&lt;p&gt;Generation of diagrams and flowcharts from text in a similar manner as markdown.&lt;/p&gt;
+<p>Generation of diagrams and flowcharts from text in a similar manner as markdown.</p>
 
-&lt;p&gt;Ever wanted to simplify documentation and avoid heavy tools like Visio when explaining your code?&lt;/p&gt;
+<p>Ever wanted to simplify documentation and avoid heavy tools like Visio when explaining your code?</p>
 
-&lt;p&gt;This is why &lt;a href=&quot;https://mermaidjs.github.io/&quot;&gt;mermaid&lt;/a&gt; was born, a simple markdown-like script language for generating charts from text via javascript.&lt;/p&gt;
+<p>This is why <a href="https://mermaidjs.github.io/">mermaid</a> was born, a simple markdown-like script language for generating charts from text via javascript.</p>
 
-&lt;h2 id=&quot;flowchart&quot;&gt;Flowchart&lt;/h2&gt;
+<h2 id="flowchart">Flowchart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-mermaid&quot;&gt;graph TD;
-    A--&amp;gt;B;
-    A--&amp;gt;C;
-    B--&amp;gt;D;
-    C--&amp;gt;D;
-&lt;/code&gt;&lt;/pre&gt;
+<pre><code class="language-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```mermaid
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```mermaid
 graph TD;
-    A--&amp;gt;B;
-    A--&amp;gt;C;
-    B--&amp;gt;D;
-    C--&amp;gt;D;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;sequence-diagram&quot;&gt;Sequence Diagram&lt;/h2&gt;
+<h2 id="sequence-diagram">Sequence Diagram</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-mermaid&quot;&gt;sequenceDiagram
+<pre><code class="language-mermaid">sequenceDiagram
     participant Alice
     participant Bob
-    Alice-&amp;gt;John: Hello John, how are you?
+    Alice-&gt;John: Hello John, how are you?
     loop Healthcheck
-        John-&amp;gt;John: Fight against hypochondria
+        John-&gt;John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail...
-    John--&amp;gt;Alice: Great!
-    John-&amp;gt;Bob: How about you?
-    Bob--&amp;gt;John: Jolly good!
-&lt;/code&gt;&lt;/pre&gt;
+    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+    John--&gt;Alice: Great!
+    John-&gt;Bob: How about you?
+    Bob--&gt;John: Jolly good!
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```mermaid
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice-&amp;gt;John: Hello John, how are you?
+    Alice-&gt;John: Hello John, how are you?
     loop Healthcheck
-        John-&amp;gt;John: Fight against hypochondria
+        John-&gt;John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail...
-    John--&amp;gt;Alice: Great!
-    John-&amp;gt;Bob: How about you?
-    Bob--&amp;gt;John: Jolly good!
+    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+    John--&gt;Alice: Great!
+    John-&gt;Bob: How about you?
+    Bob--&gt;John: Jolly good!
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;gant-diagrams&quot;&gt;Gant Diagrams&lt;/h2&gt;
+<h2 id="gant-diagrams">Gant Diagrams</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-mermaid&quot;&gt;gantt
+<pre><code class="language-mermaid">gantt
     dateFormat  YYYY-MM-DD
     title Adding GANTT diagram functionality to mermaid
     section A section
@@ -364,11 +364,11 @@ sequenceDiagram
     Future task in critical line        :crit, 5d
     Create tests for renderer           :2d
     Add to mermaid                      :1d
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```mermaid
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```mermaid
 gantt
     dateFormat  YYYY-MM-DD
     title Adding GANTT diagram functionality to mermaid
@@ -385,39 +385,39 @@ gantt
     Create tests for renderer           :2d
     Add to mermaid
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">graph TB; A[Do you have a problem in your life?] B[Then don't worry] C[Can you do something about it?] A--no--&amp;gt;B; A--yes--&amp;gt;C; C--no--&amp;gt;B; C--yes--&amp;gt;B;</summary></entry><entry><title type="html">TeXt - Chart</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/05/05/chart.html" rel="alternate" type="text/html" title="TeXt - Chart" /><published>2017-05-05T00:00:00+08:00</published><updated>2017-05-05T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/05/05/chart</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/05/05/chart.html">&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;line&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;January&quot;,
-      &quot;February&quot;,
-      &quot;March&quot;,
-      &quot;April&quot;,
-      &quot;May&quot;,
-      &quot;June&quot;,
-      &quot;July&quot;
+</code></pre></div></div>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html"><![CDATA[graph TB; A[Do you have a problem in your life?] B[Then don't worry] C[Can you do something about it?] A--no--&gt;B; A--yes--&gt;C; C--no--&gt;B; C--yes--&gt;B;]]></summary></entry><entry><title type="html">TeXt - Chart</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/05/05/chart.html" rel="alternate" type="text/html" title="TeXt - Chart" /><published>2017-05-05T00:00:00+08:00</published><updated>2017-05-05T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2017/05/05/chart</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/05/05/chart.html"><![CDATA[<pre><code class="language-chart">{
+  "type": "line",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;label&quot;: &quot;# of bugs&quot;,
-        &quot;fill&quot;: false,
-        &quot;lineTension&quot;: 0.1,
-        &quot;backgroundColor&quot;: &quot;rgba(75,192,192,0.4)&quot;,
-        &quot;borderColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;borderCapStyle&quot;: &quot;butt&quot;,
-        &quot;borderDash&quot;: [],
-        &quot;borderDashOffset&quot;: 0,
-        &quot;borderJoinStyle&quot;: &quot;miter&quot;,
-        &quot;pointBorderColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;pointBackgroundColor&quot;: &quot;#fff&quot;,
-        &quot;pointBorderWidth&quot;: 1,
-        &quot;pointHoverRadius&quot;: 5,
-        &quot;pointHoverBackgroundColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;pointHoverBorderColor&quot;: &quot;rgba(220,220,220,1)&quot;,
-        &quot;pointHoverBorderWidth&quot;: 2,
-        &quot;pointRadius&quot;: 1,
-        &quot;pointHitRadius&quot;: 10,
-        &quot;data&quot;: [
+        "label": "# of bugs",
+        "fill": false,
+        "lineTension": 0.1,
+        "backgroundColor": "rgba(75,192,192,0.4)",
+        "borderColor": "rgba(75,192,192,1)",
+        "borderCapStyle": "butt",
+        "borderDash": [],
+        "borderDashOffset": 0,
+        "borderJoinStyle": "miter",
+        "pointBorderColor": "rgba(75,192,192,1)",
+        "pointBackgroundColor": "#fff",
+        "pointBorderWidth": 1,
+        "pointHoverRadius": 5,
+        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
+        "pointHoverBorderColor": "rgba(220,220,220,1)",
+        "pointHoverBorderWidth": 2,
+        "pointRadius": 1,
+        "pointHitRadius": 10,
+        "data": [
           65,
           59,
           80,
@@ -426,55 +426,55 @@ gantt
           55,
           40
         ],
-        &quot;spanGaps&quot;: false
+        "spanGaps": false
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p class=&quot;warning&quot;&gt;You need set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chart: true&lt;/code&gt; in the &lt;em&gt;_config.yml&lt;/em&gt; or the markdown’s front matter to &lt;strong&gt;enable&lt;/strong&gt; it.&lt;/p&gt;
+<p class="warning">You need set <code class="language-plaintext highlighter-rouge">chart: true</code> in the <em>_config.yml</em> or the markdown’s front matter to <strong>enable</strong> it.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements#chart&quot;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://kitian616.github.io/jekyll-TeXt-theme/docs/en/markdown-enhancements#chart">Documentation</a></p>
 
-&lt;h2 id=&quot;line-chart&quot;&gt;Line Chart&lt;/h2&gt;
+<h2 id="line-chart">Line Chart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;line&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;January&quot;,
-      &quot;February&quot;,
-      &quot;March&quot;,
-      &quot;April&quot;,
-      &quot;May&quot;,
-      &quot;June&quot;,
-      &quot;July&quot;
+<pre><code class="language-chart">{
+  "type": "line",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;label&quot;: &quot;# of bugs&quot;,
-        &quot;fill&quot;: false,
-        &quot;lineTension&quot;: 0.1,
-        &quot;backgroundColor&quot;: &quot;rgba(75,192,192,0.4)&quot;,
-        &quot;borderColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;borderCapStyle&quot;: &quot;butt&quot;,
-        &quot;borderDash&quot;: [],
-        &quot;borderDashOffset&quot;: 0,
-        &quot;borderJoinStyle&quot;: &quot;miter&quot;,
-        &quot;pointBorderColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;pointBackgroundColor&quot;: &quot;#fff&quot;,
-        &quot;pointBorderWidth&quot;: 1,
-        &quot;pointHoverRadius&quot;: 5,
-        &quot;pointHoverBackgroundColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;pointHoverBorderColor&quot;: &quot;rgba(220,220,220,1)&quot;,
-        &quot;pointHoverBorderWidth&quot;: 2,
-        &quot;pointRadius&quot;: 1,
-        &quot;pointHitRadius&quot;: 10,
-        &quot;data&quot;: [
+        "label": "# of bugs",
+        "fill": false,
+        "lineTension": 0.1,
+        "backgroundColor": "rgba(75,192,192,0.4)",
+        "borderColor": "rgba(75,192,192,1)",
+        "borderCapStyle": "butt",
+        "borderDash": [],
+        "borderDashOffset": 0,
+        "borderJoinStyle": "miter",
+        "pointBorderColor": "rgba(75,192,192,1)",
+        "pointBackgroundColor": "#fff",
+        "pointBorderWidth": 1,
+        "pointHoverRadius": 5,
+        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
+        "pointHoverBorderColor": "rgba(220,220,220,1)",
+        "pointHoverBorderWidth": 2,
+        "pointRadius": 1,
+        "pointHitRadius": 10,
+        "data": [
           65,
           59,
           80,
@@ -483,50 +483,50 @@ gantt
           55,
           40
         ],
-        &quot;spanGaps&quot;: false
+        "spanGaps": false
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
 {
-  &quot;type&quot;: &quot;line&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;January&quot;,
-      &quot;February&quot;,
-      &quot;March&quot;,
-      &quot;April&quot;,
-      &quot;May&quot;,
-      &quot;June&quot;,
-      &quot;July&quot;
+  "type": "line",
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;label&quot;: &quot;# of bugs&quot;,
-        &quot;fill&quot;: false,
-        &quot;lineTension&quot;: 0.1,
-        &quot;backgroundColor&quot;: &quot;rgba(75,192,192,0.4)&quot;,
-        &quot;borderColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;borderCapStyle&quot;: &quot;butt&quot;,
-        &quot;borderDash&quot;: [],
-        &quot;borderDashOffset&quot;: 0,
-        &quot;borderJoinStyle&quot;: &quot;miter&quot;,
-        &quot;pointBorderColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;pointBackgroundColor&quot;: &quot;#fff&quot;,
-        &quot;pointBorderWidth&quot;: 1,
-        &quot;pointHoverRadius&quot;: 5,
-        &quot;pointHoverBackgroundColor&quot;: &quot;rgba(75,192,192,1)&quot;,
-        &quot;pointHoverBorderColor&quot;: &quot;rgba(220,220,220,1)&quot;,
-        &quot;pointHoverBorderWidth&quot;: 2,
-        &quot;pointRadius&quot;: 1,
-        &quot;pointHitRadius&quot;: 10,
-        &quot;data&quot;: [
+        "label": "# of bugs",
+        "fill": false,
+        "lineTension": 0.1,
+        "backgroundColor": "rgba(75,192,192,0.4)",
+        "borderColor": "rgba(75,192,192,1)",
+        "borderCapStyle": "butt",
+        "borderDash": [],
+        "borderDashOffset": 0,
+        "borderJoinStyle": "miter",
+        "pointBorderColor": "rgba(75,192,192,1)",
+        "pointBackgroundColor": "#fff",
+        "pointBorderWidth": 1,
+        "pointHoverRadius": 5,
+        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
+        "pointHoverBorderColor": "rgba(220,220,220,1)",
+        "pointHoverBorderWidth": 2,
+        "pointRadius": 1,
+        "pointHitRadius": 10,
+        "data": [
           65,
           59,
           80,
@@ -535,32 +535,32 @@ gantt
           55,
           40
         ],
-        &quot;spanGaps&quot;: false
+        "spanGaps": false
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;bar-chart&quot;&gt;Bar Chart&lt;/h2&gt;
+<h2 id="bar-chart">Bar Chart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;bar&quot;,
-  &quot;data&quot;: {
-  &quot;labels&quot;: [
-    &quot;Red&quot;,
-    &quot;Blue&quot;,
-    &quot;Yellow&quot;,
-    &quot;Green&quot;,
-    &quot;Purple&quot;,
-    &quot;Orange&quot;
+<pre><code class="language-chart">{
+  "type": "bar",
+  "data": {
+  "labels": [
+    "Red",
+    "Blue",
+    "Yellow",
+    "Green",
+    "Purple",
+    "Orange"
   ],
-  &quot;datasets&quot;: [
+  "datasets": [
     {
-    &quot;label&quot;: &quot;# of Votes&quot;,
-    &quot;data&quot;: [
+    "label": "# of Votes",
+    "data": [
       12,
       19,
       3,
@@ -568,48 +568,48 @@ gantt
       2,
       3
     ],
-    &quot;backgroundColor&quot;: [
-      &quot;rgba(255, 99, 132, 0.2)&quot;,
-      &quot;rgba(54, 162, 235, 0.2)&quot;,
-      &quot;rgba(255, 206, 86, 0.2)&quot;,
-      &quot;rgba(75, 192, 192, 0.2)&quot;,
-      &quot;rgba(153, 102, 255, 0.2)&quot;,
-      &quot;rgba(255, 159, 64, 0.2)&quot;
+    "backgroundColor": [
+      "rgba(255, 99, 132, 0.2)",
+      "rgba(54, 162, 235, 0.2)",
+      "rgba(255, 206, 86, 0.2)",
+      "rgba(75, 192, 192, 0.2)",
+      "rgba(153, 102, 255, 0.2)",
+      "rgba(255, 159, 64, 0.2)"
     ],
-    &quot;borderColor&quot;: [
-      &quot;rgba(255,99,132,1)&quot;,
-      &quot;rgba(54, 162, 235, 1)&quot;,
-      &quot;rgba(255, 206, 86, 1)&quot;,
-      &quot;rgba(75, 192, 192, 1)&quot;,
-      &quot;rgba(153, 102, 255, 1)&quot;,
-      &quot;rgba(255, 159, 64, 1)&quot;
+    "borderColor": [
+      "rgba(255,99,132,1)",
+      "rgba(54, 162, 235, 1)",
+      "rgba(255, 206, 86, 1)",
+      "rgba(75, 192, 192, 1)",
+      "rgba(153, 102, 255, 1)",
+      "rgba(255, 159, 64, 1)"
     ],
-    &quot;borderWidth&quot;: 1
+    "borderWidth": 1
     }
   ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
 {
-  &quot;type&quot;: &quot;bar&quot;,
-  &quot;data&quot;: {
-  &quot;labels&quot;: [
-    &quot;Red&quot;,
-    &quot;Blue&quot;,
-    &quot;Yellow&quot;,
-    &quot;Green&quot;,
-    &quot;Purple&quot;,
-    &quot;Orange&quot;
+  "type": "bar",
+  "data": {
+  "labels": [
+    "Red",
+    "Blue",
+    "Yellow",
+    "Green",
+    "Purple",
+    "Orange"
   ],
-  &quot;datasets&quot;: [
+  "datasets": [
     {
-    &quot;label&quot;: &quot;# of Votes&quot;,
-    &quot;data&quot;: [
+    "label": "# of Votes",
+    "data": [
       12,
       19,
       3,
@@ -617,55 +617,55 @@ gantt
       2,
       3
     ],
-    &quot;backgroundColor&quot;: [
-      &quot;rgba(255, 99, 132, 0.2)&quot;,
-      &quot;rgba(54, 162, 235, 0.2)&quot;,
-      &quot;rgba(255, 206, 86, 0.2)&quot;,
-      &quot;rgba(75, 192, 192, 0.2)&quot;,
-      &quot;rgba(153, 102, 255, 0.2)&quot;,
-      &quot;rgba(255, 159, 64, 0.2)&quot;
+    "backgroundColor": [
+      "rgba(255, 99, 132, 0.2)",
+      "rgba(54, 162, 235, 0.2)",
+      "rgba(255, 206, 86, 0.2)",
+      "rgba(75, 192, 192, 0.2)",
+      "rgba(153, 102, 255, 0.2)",
+      "rgba(255, 159, 64, 0.2)"
     ],
-    &quot;borderColor&quot;: [
-      &quot;rgba(255,99,132,1)&quot;,
-      &quot;rgba(54, 162, 235, 1)&quot;,
-      &quot;rgba(255, 206, 86, 1)&quot;,
-      &quot;rgba(75, 192, 192, 1)&quot;,
-      &quot;rgba(153, 102, 255, 1)&quot;,
-      &quot;rgba(255, 159, 64, 1)&quot;
+    "borderColor": [
+      "rgba(255,99,132,1)",
+      "rgba(54, 162, 235, 1)",
+      "rgba(255, 206, 86, 1)",
+      "rgba(75, 192, 192, 1)",
+      "rgba(153, 102, 255, 1)",
+      "rgba(255, 159, 64, 1)"
     ],
-    &quot;borderWidth&quot;: 1
+    "borderWidth": 1
     }
   ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;radar-chart&quot;&gt;Radar Chart&lt;/h2&gt;
+<h2 id="radar-chart">Radar Chart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;radar&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;Eating&quot;,
-      &quot;Drinking&quot;,
-      &quot;Sleeping&quot;,
-      &quot;Designing&quot;,
-      &quot;Coding&quot;,
-      &quot;Cycling&quot;,
-      &quot;Running&quot;
+<pre><code class="language-chart">{
+  "type": "radar",
+  "data": {
+    "labels": [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;label&quot;: &quot;My First dataset&quot;,
-        &quot;backgroundColor&quot;: &quot;rgba(179,181,198,0.2)&quot;,
-        &quot;borderColor&quot;: &quot;rgba(179,181,198,1)&quot;,
-        &quot;pointBackgroundColor&quot;: &quot;rgba(179,181,198,1)&quot;,
-        &quot;pointBorderColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBackgroundColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBorderColor&quot;: &quot;rgba(179,181,198,1)&quot;,
-        &quot;data&quot;: [
+        "label": "My First dataset",
+        "backgroundColor": "rgba(179,181,198,0.2)",
+        "borderColor": "rgba(179,181,198,1)",
+        "pointBackgroundColor": "rgba(179,181,198,1)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgba(179,181,198,1)",
+        "data": [
           65,
           59,
           90,
@@ -676,14 +676,14 @@ gantt
         ]
       },
       {
-        &quot;label&quot;: &quot;My Second dataset&quot;,
-        &quot;backgroundColor&quot;: &quot;rgba(255,99,132,0.2)&quot;,
-        &quot;borderColor&quot;: &quot;rgba(255,99,132,1)&quot;,
-        &quot;pointBackgroundColor&quot;: &quot;rgba(255,99,132,1)&quot;,
-        &quot;pointBorderColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBackgroundColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBorderColor&quot;: &quot;rgba(255,99,132,1)&quot;,
-        &quot;data&quot;: [
+        "label": "My Second dataset",
+        "backgroundColor": "rgba(255,99,132,0.2)",
+        "borderColor": "rgba(255,99,132,1)",
+        "pointBackgroundColor": "rgba(255,99,132,1)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgba(255,99,132,1)",
+        "data": [
           28,
           48,
           40,
@@ -695,35 +695,35 @@ gantt
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
 {
-  &quot;type&quot;: &quot;radar&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;Eating&quot;,
-      &quot;Drinking&quot;,
-      &quot;Sleeping&quot;,
-      &quot;Designing&quot;,
-      &quot;Coding&quot;,
-      &quot;Cycling&quot;,
-      &quot;Running&quot;
+  "type": "radar",
+  "data": {
+    "labels": [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;label&quot;: &quot;My First dataset&quot;,
-        &quot;backgroundColor&quot;: &quot;rgba(179,181,198,0.2)&quot;,
-        &quot;borderColor&quot;: &quot;rgba(179,181,198,1)&quot;,
-        &quot;pointBackgroundColor&quot;: &quot;rgba(179,181,198,1)&quot;,
-        &quot;pointBorderColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBackgroundColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBorderColor&quot;: &quot;rgba(179,181,198,1)&quot;,
-        &quot;data&quot;: [
+        "label": "My First dataset",
+        "backgroundColor": "rgba(179,181,198,0.2)",
+        "borderColor": "rgba(179,181,198,1)",
+        "pointBackgroundColor": "rgba(179,181,198,1)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgba(179,181,198,1)",
+        "data": [
           65,
           59,
           90,
@@ -734,14 +734,14 @@ gantt
         ]
       },
       {
-        &quot;label&quot;: &quot;My Second dataset&quot;,
-        &quot;backgroundColor&quot;: &quot;rgba(255,99,132,0.2)&quot;,
-        &quot;borderColor&quot;: &quot;rgba(255,99,132,1)&quot;,
-        &quot;pointBackgroundColor&quot;: &quot;rgba(255,99,132,1)&quot;,
-        &quot;pointBorderColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBackgroundColor&quot;: &quot;#fff&quot;,
-        &quot;pointHoverBorderColor&quot;: &quot;rgba(255,99,132,1)&quot;,
-        &quot;data&quot;: [
+        "label": "My Second dataset",
+        "backgroundColor": "rgba(255,99,132,0.2)",
+        "borderColor": "rgba(255,99,132,1)",
+        "pointBackgroundColor": "rgba(255,99,132,1)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgba(255,99,132,1)",
+        "data": [
           28,
           48,
           40,
@@ -753,353 +753,353 @@ gantt
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;polar-area-chart&quot;&gt;Polar Area Chart&lt;/h2&gt;
+<h2 id="polar-area-chart">Polar Area Chart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;polarArea&quot;,
-  &quot;data&quot;: {
-    &quot;datasets&quot;: [
+<pre><code class="language-chart">{
+  "type": "polarArea",
+  "data": {
+    "datasets": [
       {
-        &quot;data&quot;: [
+        "data": [
           11,
           16,
           7,
           3,
           14
         ],
-        &quot;backgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#4BC0C0&quot;,
-          &quot;#FFCE56&quot;,
-          &quot;#E7E9ED&quot;,
-          &quot;#36A2EB&quot;
+        "backgroundColor": [
+          "#FF6384",
+          "#4BC0C0",
+          "#FFCE56",
+          "#E7E9ED",
+          "#36A2EB"
         ],
-        &quot;label&quot;: &quot;My dataset&quot;
+        "label": "My dataset"
       }
     ],
-    &quot;labels&quot;: [
-      &quot;Red&quot;,
-      &quot;Green&quot;,
-      &quot;Yellow&quot;,
-      &quot;Grey&quot;,
-      &quot;Blue&quot;
+    "labels": [
+      "Red",
+      "Green",
+      "Yellow",
+      "Grey",
+      "Blue"
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
 {
-  &quot;type&quot;: &quot;polarArea&quot;,
-  &quot;data&quot;: {
-    &quot;datasets&quot;: [
+  "type": "polarArea",
+  "data": {
+    "datasets": [
       {
-        &quot;data&quot;: [
+        "data": [
           11,
           16,
           7,
           3,
           14
         ],
-        &quot;backgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#4BC0C0&quot;,
-          &quot;#FFCE56&quot;,
-          &quot;#E7E9ED&quot;,
-          &quot;#36A2EB&quot;
+        "backgroundColor": [
+          "#FF6384",
+          "#4BC0C0",
+          "#FFCE56",
+          "#E7E9ED",
+          "#36A2EB"
         ],
-        &quot;label&quot;: &quot;My dataset&quot;
+        "label": "My dataset"
       }
     ],
-    &quot;labels&quot;: [
-      &quot;Red&quot;,
-      &quot;Green&quot;,
-      &quot;Yellow&quot;,
-      &quot;Grey&quot;,
-      &quot;Blue&quot;
+    "labels": [
+      "Red",
+      "Green",
+      "Yellow",
+      "Grey",
+      "Blue"
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;pie-chart&quot;&gt;Pie Chart&lt;/h2&gt;
+<h2 id="pie-chart">Pie Chart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;pie&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;Red&quot;,
-      &quot;Blue&quot;,
-      &quot;Yellow&quot;
+<pre><code class="language-chart">{
+  "type": "pie",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;data&quot;: [
+        "data": [
           300,
           50,
           100
         ],
-        &quot;backgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ],
-        &quot;hoverBackgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ]
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
 {
-  &quot;type&quot;: &quot;pie&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;Red&quot;,
-      &quot;Blue&quot;,
-      &quot;Yellow&quot;
+  "type": "pie",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;data&quot;: [
+        "data": [
           300,
           50,
           100
         ],
-        &quot;backgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ],
-        &quot;hoverBackgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ]
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;doughnut-chart&quot;&gt;Doughnut Chart&lt;/h2&gt;
+<h2 id="doughnut-chart">Doughnut Chart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;doughnut&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;Red&quot;,
-      &quot;Blue&quot;,
-      &quot;Yellow&quot;
+<pre><code class="language-chart">{
+  "type": "doughnut",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;data&quot;: [
+        "data": [
           300,
           50,
           100
         ],
-        &quot;backgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ],
-        &quot;hoverBackgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ]
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
 {
-  &quot;type&quot;: &quot;doughnut&quot;,
-  &quot;data&quot;: {
-    &quot;labels&quot;: [
-      &quot;Red&quot;,
-      &quot;Blue&quot;,
-      &quot;Yellow&quot;
+  "type": "doughnut",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
     ],
-    &quot;datasets&quot;: [
+    "datasets": [
       {
-        &quot;data&quot;: [
+        "data": [
           300,
           50,
           100
         ],
-        &quot;backgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ],
-        &quot;hoverBackgroundColor&quot;: [
-          &quot;#FF6384&quot;,
-          &quot;#36A2EB&quot;,
-          &quot;#FFCE56&quot;
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
         ]
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h2 id=&quot;bubble-chart&quot;&gt;Bubble Chart&lt;/h2&gt;
+<h2 id="bubble-chart">Bubble Chart</h2>
 
-&lt;pre&gt;&lt;code class=&quot;language-chart&quot;&gt;{
-  &quot;type&quot;: &quot;bubble&quot;,
-  &quot;data&quot;: {
-    &quot;datasets&quot;: [
+<pre><code class="language-chart">{
+  "type": "bubble",
+  "data": {
+    "datasets": [
       {
-        &quot;label&quot;: &quot;First Dataset&quot;,
-        &quot;data&quot;: [
+        "label": "First Dataset",
+        "data": [
           {
-            &quot;x&quot;: 20,
-            &quot;y&quot;: 30,
-            &quot;r&quot;: 15
+            "x": 20,
+            "y": 30,
+            "r": 15
           },
           {
-            &quot;x&quot;: 40,
-            &quot;y&quot;: 10,
-            &quot;r&quot;: 10
+            "x": 40,
+            "y": 10,
+            "r": 10
           }
         ],
-        &quot;backgroundColor&quot;: &quot;#FF6384&quot;,
-        &quot;hoverBackgroundColor&quot;: &quot;#FF6384&quot;
+        "backgroundColor": "#FF6384",
+        "hoverBackgroundColor": "#FF6384"
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```chart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```chart
 {
-  &quot;type&quot;: &quot;bubble&quot;,
-  &quot;data&quot;: {
-    &quot;datasets&quot;: [
+  "type": "bubble",
+  "data": {
+    "datasets": [
       {
-        &quot;label&quot;: &quot;First Dataset&quot;,
-        &quot;data&quot;: [
+        "label": "First Dataset",
+        "data": [
           {
-            &quot;x&quot;: 20,
-            &quot;y&quot;: 30,
-            &quot;r&quot;: 15
+            "x": 20,
+            "y": 30,
+            "r": 15
           },
           {
-            &quot;x&quot;: 40,
-            &quot;y&quot;: 10,
-            &quot;r&quot;: 10
+            "x": 40,
+            "y": 10,
+            "r": 10
           }
         ],
-        &quot;backgroundColor&quot;: &quot;#FF6384&quot;,
-        &quot;hoverBackgroundColor&quot;: &quot;#FF6384&quot;
+        "backgroundColor": "#FF6384",
+        "hoverBackgroundColor": "#FF6384"
       }
     ]
   },
-  &quot;options&quot;: {}
+  "options": {}
 }
 ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">{ &quot;type&quot;: &quot;line&quot;, &quot;data&quot;: { &quot;labels&quot;: [ &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot; ], &quot;datasets&quot;: [ { &quot;label&quot;: &quot;# of bugs&quot;, &quot;fill&quot;: false, &quot;lineTension&quot;: 0.1, &quot;backgroundColor&quot;: &quot;rgba(75,192,192,0.4)&quot;, &quot;borderColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;borderCapStyle&quot;: &quot;butt&quot;, &quot;borderDash&quot;: [], &quot;borderDashOffset&quot;: 0, &quot;borderJoinStyle&quot;: &quot;miter&quot;, &quot;pointBorderColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;pointBackgroundColor&quot;: &quot;#fff&quot;, &quot;pointBorderWidth&quot;: 1, &quot;pointHoverRadius&quot;: 5, &quot;pointHoverBackgroundColor&quot;: &quot;rgba(75,192,192,1)&quot;, &quot;pointHoverBorderColor&quot;: &quot;rgba(220,220,220,1)&quot;, &quot;pointHoverBorderWidth&quot;: 2, &quot;pointRadius&quot;: 1, &quot;pointHitRadius&quot;: 10, &quot;data&quot;: [ 65, 59, 80, 81, 56, 55, 40 ], &quot;spanGaps&quot;: false } ] }, &quot;options&quot;: {} }</summary></entry><entry><title type="html">TeXt - Modify Date</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/04/19/modify-date.html" rel="alternate" type="text/html" title="TeXt - Modify Date" /><published>2017-04-19T00:00:00+08:00</published><updated>2017-04-19T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/04/19/modify-date</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/04/19/modify-date.html">&lt;p&gt;Article with modify date.&lt;/p&gt;
+</code></pre></div></div>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html"><![CDATA[{ "type": "line", "data": { "labels": [ "January", "February", "March", "April", "May", "June", "July" ], "datasets": [ { "label": "# of bugs", "fill": false, "lineTension": 0.1, "backgroundColor": "rgba(75,192,192,0.4)", "borderColor": "rgba(75,192,192,1)", "borderCapStyle": "butt", "borderDash": [], "borderDashOffset": 0, "borderJoinStyle": "miter", "pointBorderColor": "rgba(75,192,192,1)", "pointBackgroundColor": "#fff", "pointBorderWidth": 1, "pointHoverRadius": 5, "pointHoverBackgroundColor": "rgba(75,192,192,1)", "pointHoverBorderColor": "rgba(220,220,220,1)", "pointHoverBorderWidth": 2, "pointRadius": 1, "pointHitRadius": 10, "data": [ 65, 59, 80, 81, 56, 55, 40 ], "spanGaps": false } ] }, "options": {} }]]></summary></entry><entry><title type="html">TeXt - Modify Date</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/04/19/modify-date.html" rel="alternate" type="text/html" title="TeXt - Modify Date" /><published>2017-04-19T00:00:00+08:00</published><updated>2017-04-19T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2017/04/19/modify-date</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/04/19/modify-date.html"><![CDATA[<p>Article with modify date.</p>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p&gt;&lt;strong&gt;front matter:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>front matter:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 ...
 modify_date: 2017-09-09
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">Article with modify date.</summary></entry><entry><title type="html">TeXt - Author</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2017/04/15/author.html" rel="alternate" type="text/html" title="TeXt - Author" /><published>2017-04-15T00:00:00+08:00</published><updated>2017-04-15T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2017/04/15/author</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2017/04/15/author.html">&lt;p&gt;Article with specified author.&lt;/p&gt;
+</code></pre></div></div>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html"><![CDATA[Article with modify date.]]></summary></entry><entry><title type="html">TeXt - Author</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/04/15/author.html" rel="alternate" type="text/html" title="TeXt - Author" /><published>2017-04-15T00:00:00+08:00</published><updated>2017-04-15T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2017/04/15/author</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2017/04/15/author.html"><![CDATA[<p>Article with specified author.</p>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p&gt;Set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;show_author_profile&lt;/code&gt; as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; to show author profile.&lt;/p&gt;
+<p>Set <code class="language-plaintext highlighter-rouge">show_author_profile</code> as <code class="language-plaintext highlighter-rouge">true</code> to show author profile.</p>
 
-&lt;p&gt;&lt;strong&gt;front matter:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>front matter:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 ...
 author: Tian Qi
 show_author_profile: true
 ---
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html">Article with specified author.</summary></entry><entry><title type="html">Jekyll - Paragraphs</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html" rel="alternate" type="text/html" title="Jekyll - Paragraphs" /><published>2016-10-10T00:00:00+08:00</published><updated>2016-10-10T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2016/10/10/paragraphs</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html">&lt;p&gt;Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.&lt;/p&gt;
+</code></pre></div></div>]]></content><author><name>Tian Qi</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="TeXt" /><summary type="html"><![CDATA[Article with specified author.]]></summary></entry><entry><title type="html">Jekyll - Paragraphs</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html" rel="alternate" type="text/html" title="Jekyll - Paragraphs" /><published>2016-10-10T00:00:00+08:00</published><updated>2016-10-10T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2016/10/10/paragraphs</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2016/10/10/paragraphs.html"><![CDATA[<p>Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.</p>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p&gt;EEG is most often used to diagnose epilepsy, which causes abnormalities in EEG readings. It is also used to diagnose sleep disorders, depth of anesthesia, coma, encephalopathies, and brain death. EEG used to be a first-line method of diagnosis for tumors, stroke and other focal brain disorders, but this use has decreased with the advent of high-resolution anatomical imaging techniques such as magnetic resonance imaging (MRI) and computed tomography (CT). Despite limited spatial resolution, EEG continues to be a valuable tool for research and diagnosis. It is one of the few mobile techniques available and offers millisecond-range temporal resolution which is not possible with CT, PET or MRI.&lt;/p&gt;
+<p>EEG is most often used to diagnose epilepsy, which causes abnormalities in EEG readings. It is also used to diagnose sleep disorders, depth of anesthesia, coma, encephalopathies, and brain death. EEG used to be a first-line method of diagnosis for tumors, stroke and other focal brain disorders, but this use has decreased with the advent of high-resolution anatomical imaging techniques such as magnetic resonance imaging (MRI) and computed tomography (CT). Despite limited spatial resolution, EEG continues to be a valuable tool for research and diagnosis. It is one of the few mobile techniques available and offers millisecond-range temporal resolution which is not possible with CT, PET or MRI.</p>
 
-&lt;p&gt;Derivatives of the EEG technique include evoked potentials (EP), which involves averaging the EEG activity time-locked to the presentation of a stimulus of some sort (visual, somatosensory, or auditory). Event-related potentials (ERPs) refer to averaged EEG responses that are time-locked to more complex processing of stimuli; this technique is used in cognitive science, cognitive psychology, and psychophysiological research.&lt;/p&gt;
+<p>Derivatives of the EEG technique include evoked potentials (EP), which involves averaging the EEG activity time-locked to the presentation of a stimulus of some sort (visual, somatosensory, or auditory). Event-related potentials (ERPs) refer to averaged EEG responses that are time-locked to more complex processing of stimuli; this technique is used in cognitive science, cognitive psychology, and psychophysiological research.</p>
 
-&lt;h2 id=&quot;very-long-word&quot;&gt;Very Long Word&lt;/h2&gt;
+<h2 id="very-long-word">Very Long Word</h2>
 
-&lt;p&gt;MethionylglutaminylarginyltyrosylglutamylserylleucylphenylalanylalanylglutaminylleucyllysylglutamylarginyllysylglutamylglycylalanylphenylalanylvalylprolyphenylalanYlvalythreonylleucylglycylaspartylprolylglycylisoleucylglutamylglutaminylsErylleucyllysylisoleucylaspartylthreonylleucylIsoleucylglutamylalanylglycylalanylasparthlalanylleucylglutamylleucylglycylisoleucylprolylphenylalanylseRylaspartylprolylleucylalanylaspartylglycylpRolylthreOnylisoleucylglutaminylasPfraginylalanylthreonylleucylarfinylalanylphenylalanylalanylalanylglycylvalythreonylprolylalanylglutaminylcysteinylphenylalanylglutamylmethionylleucylalanylleuOylisoleucylarginylglutaminyllysyhistidylprolylthreonylisoleucylprolylisoleucylglycylleucylmethionyltyrosylalanylasparaginylleucylvalylphenylalanylasparaginyllysyglycylisoleucylaspartylglutamylphenylalanylthrosylalanylglutaminylcysteinylglutamyllysylvalylglycylvalylaspartylserylvalylleucylvalylalnylaspartylvalylprolylvalylglUtaminylglutamylserylalanylprolylphenylalanylarginylglutaminylalanylalanylleucylarginylhistidylasparaginyvalylalanylprolylisoleucylprolylisoleucylphenylalanylisoleucylphenylalanylisoleucylcysteinylprolylprolylaspartylalanylaspartylaspartylaspartylleucylleucylarginylglutaminylisoleucylalanylseryltyrosylglycylarginylglycyltyrosylthreonyltyrOsylleucylleucylserylarginylalanylglycylvalylthreonylglycylalanylglutamYlasparainylarginylalanylalanylleucylprolylleucylasparaginylhistidylleucylValylalanyllysylleucyllysylglutamyltyrosylasparaginylalanylalanylprolylprolylleucylglutaminylglgycylphenylalanylglycylisoleucylserylalanylprolylaspartylglutaminylvalyllysylalanylalanylisoleucylaspartylalanylglycylalanylalanylglycylalanylisoleucylserylglycylserylalanylisoleucylvalyllysylisoIeucylisoleucylglutamylglutaminylHistidylasparaginyliSoleucylglutamylprolylglutamyllysylmethionylleucylalanylalanylleucyllysylvalylphenylalanylcalylglutaminylprolylmethionlysylalanylalanylthreonylarginylserine&lt;/p&gt;
+<p>MethionylglutaminylarginyltyrosylglutamylserylleucylphenylalanylalanylglutaminylleucyllysylglutamylarginyllysylglutamylglycylalanylphenylalanylvalylprolyphenylalanYlvalythreonylleucylglycylaspartylprolylglycylisoleucylglutamylglutaminylsErylleucyllysylisoleucylaspartylthreonylleucylIsoleucylglutamylalanylglycylalanylasparthlalanylleucylglutamylleucylglycylisoleucylprolylphenylalanylseRylaspartylprolylleucylalanylaspartylglycylpRolylthreOnylisoleucylglutaminylasPfraginylalanylthreonylleucylarfinylalanylphenylalanylalanylalanylglycylvalythreonylprolylalanylglutaminylcysteinylphenylalanylglutamylmethionylleucylalanylleuOylisoleucylarginylglutaminyllysyhistidylprolylthreonylisoleucylprolylisoleucylglycylleucylmethionyltyrosylalanylasparaginylleucylvalylphenylalanylasparaginyllysyglycylisoleucylaspartylglutamylphenylalanylthrosylalanylglutaminylcysteinylglutamyllysylvalylglycylvalylaspartylserylvalylleucylvalylalnylaspartylvalylprolylvalylglUtaminylglutamylserylalanylprolylphenylalanylarginylglutaminylalanylalanylleucylarginylhistidylasparaginyvalylalanylprolylisoleucylprolylisoleucylphenylalanylisoleucylphenylalanylisoleucylcysteinylprolylprolylaspartylalanylaspartylaspartylaspartylleucylleucylarginylglutaminylisoleucylalanylseryltyrosylglycylarginylglycyltyrosylthreonyltyrOsylleucylleucylserylarginylalanylglycylvalylthreonylglycylalanylglutamYlasparainylarginylalanylalanylleucylprolylleucylasparaginylhistidylleucylValylalanyllysylleucyllysylglutamyltyrosylasparaginylalanylalanylprolylprolylleucylglutaminylglgycylphenylalanylglycylisoleucylserylalanylprolylaspartylglutaminylvalyllysylalanylalanylisoleucylaspartylalanylglycylalanylalanylglycylalanylisoleucylserylglycylserylalanylisoleucylvalyllysylisoIeucylisoleucylglutamylglutaminylHistidylasparaginyliSoleucylglutamylprolylglutamyllysylmethionylleucylalanylalanylleucyllysylvalylphenylalanylcalylglutaminylprolylmethionlysylalanylalanylthreonylarginylserine</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;From Wikipedia, the free encyclopedia&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.</summary></entry><entry><title type="html">Jekyll - Headers</title><link href="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers.html" rel="alternate" type="text/html" title="Jekyll - Headers" /><published>2016-09-19T00:00:00+08:00</published><updated>2016-09-19T00:00:00+08:00</updated><id>https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers</id><content type="html" xml:base="https://tianqi.name/jekyll-TeXt-theme/post/2016/09/19/headers.html">&lt;h1 id=&quot;h1-text-heading&quot;&gt;H1. TeXt Heading&lt;/h1&gt;
+<blockquote>
+  <p>From Wikipedia, the free encyclopedia</p>
+</blockquote>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html"><![CDATA[Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain. It is typically noninvasive, with the electrodes placed along the scalp, although invasive electrodes are sometimes used such as in electrocorticography. EEG measures voltage fluctuations resulting from ionic current within the neurons of the brain. In clinical contexts, EEG refers to the recording of the brain’s spontaneous electrical activity over a period of time, as recorded from multiple electrodes placed on the scalp. Diagnostic applications generally focus either on event-related potentials or on the spectral content of EEG. The former investigates potential fluctuations time locked to an event like stimulus onset or button press. The latter analyses the type of neural oscillations (popularly called “brain waves”) that can be observed in EEG signals in the frequency domain.]]></summary></entry><entry><title type="html">Jekyll - Headers</title><link href="https://kitian616.github.io/jekyll-TeXt-theme/post/2016/09/19/headers.html" rel="alternate" type="text/html" title="Jekyll - Headers" /><published>2016-09-19T00:00:00+08:00</published><updated>2016-09-19T00:00:00+08:00</updated><id>https://kitian616.github.io/jekyll-TeXt-theme/post/2016/09/19/headers</id><content type="html" xml:base="https://kitian616.github.io/jekyll-TeXt-theme/post/2016/09/19/headers.html"><![CDATA[<h1 id="h1-text-heading">H1. TeXt Heading</h1>
 
-&lt;h2 id=&quot;h2-text-heading&quot;&gt;H2. TeXt Heading&lt;/h2&gt;
+<h2 id="h2-text-heading">H2. TeXt Heading</h2>
 
-&lt;h3 id=&quot;h3-text-heading&quot;&gt;H3. TeXt Heading&lt;/h3&gt;
+<h3 id="h3-text-heading">H3. TeXt Heading</h3>
 
-&lt;h4 id=&quot;h4-text-heading&quot;&gt;H4. TeXt Heading&lt;/h4&gt;
+<h4 id="h4-text-heading">H4. TeXt Heading</h4>
 
-&lt;h5 id=&quot;h5-text-heading&quot;&gt;H5. TeXt Heading&lt;/h5&gt;
+<h5 id="h5-text-heading">H5. TeXt Heading</h5>
 
-&lt;h6 id=&quot;h6-text-heading&quot;&gt;H6. TeXt Heading&lt;/h6&gt;
+<h6 id="h6-text-heading">H6. TeXt Heading</h6>
 
-&lt;!--more--&gt;
+<!--more-->
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# H1. TeXt Heading
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># H1. TeXt Heading
 ## H2. TeXt Heading
 ### H3. TeXt Heading
 #### H4. TeXt Heading
 ##### H5. TeXt Heading
 ###### H6. TeXt Heading
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h1 id=&quot;h1-text-heading-1&quot;&gt;H1. TeXt Heading&lt;/h1&gt;
+<h1 id="h1-text-heading-1">H1. TeXt Heading</h1>
 
-&lt;h2 id=&quot;h2-text-heading-1&quot;&gt;H2. TeXt Heading&lt;/h2&gt;
+<h2 id="h2-text-heading-1">H2. TeXt Heading</h2>
 
-&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+<p><strong>markdown:</strong></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;H1. TeXt Heading
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>H1. TeXt Heading
 ==================
 
 H2. TeXt Heading
 ------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html">H1. TeXt Heading H2. TeXt Heading H3. TeXt Heading H4. TeXt Heading H5. TeXt Heading H6. TeXt Heading</summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>TeXt</name><email>kitian616@outlook.com</email></author><category term="post" /><category term="Jekyll" /><summary type="html"><![CDATA[H1. TeXt Heading H2. TeXt Heading H3. TeXt Heading H4. TeXt Heading H5. TeXt Heading H6. TeXt Heading]]></summary></entry></feed>
